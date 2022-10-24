@@ -1,8 +1,9 @@
 <p align="center">
   <a href="https://ant.design">
-    <img width="200" src="https://user-images.githubusercontent.com/14307551/197440106-4987160b-523a-4b1b-8bdb-c2d07e715867.png">
+    <img width="300" src="https://user-images.githubusercontent.com/14307551/197440393-5389d131-1463-4ef9-abe8-842243347bac.png">
   </a>
 </p>
+
 
 <h1 align="center">Quark Design</h1>
 
