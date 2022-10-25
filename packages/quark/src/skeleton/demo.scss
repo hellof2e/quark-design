@@ -1,0 +1,34 @@
+.skeleton-demo {
+  .quark-cell {
+    display: flex;
+  }
+
+  quark-switch {
+    margin-bottom: 20px;
+  }
+
+  .demo-preview {
+    display: flex;
+  }
+
+  .demo-preview img {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+
+  .demo-preview .demo-content {
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    p {
+      margin: 13px 0 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

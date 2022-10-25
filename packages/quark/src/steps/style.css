@@ -1,0 +1,112 @@
+:host {
+  display: inline-block;
+  flex: 1;
+  font-size: 14px;
+  width: 100%;
+}
+
+:host([status="doing"]) .quark-step-icon.is-text {
+  color: #fff;
+  background: var(--quark-theme-color, quark-primaryColor);
+  border-color: var(--quark-theme-color, quark-primaryColor);
+}
+
+:host .quark-step {
+  display: flex;
+  flex: 1;
+}
+
+:host .quark-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+:host .quark-step-horizontal .quark-step {
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+
+:host .quark-step-head {
+  position: relative;
+}
+
+:host .quark-step-horizontal .quark-step-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+:host .quark-step-icon {
+  position: relative;
+  display: flex;
+  font-size: var(--steps-base-font-size, 13px);
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+:host .quark-step-icon.is-text {
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  background: #fff;
+}
+
+:host .quark-step-main {
+  display: inline-block;
+  padding-left: 12px;
+  text-align: left;
+  margin-bottom: var(--step-bottom, 30px);
+}
+
+:host .quark-step-horizontal .quark-step-main {
+  display: inline-block;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+:host .quark-step-title {
+  font-size: var(--step-title-font-size);
+  color: var(--step-title-color, #909ca4);
+  display: block;
+  margin-bottom: var(--step-title-bottom, 10px);
+}
+
+:host([status="done"]) .quark-step-title,
+:host([status="doing"]) .quark-step-title {
+  color: var(--quark-theme-color, quark-primaryColor);
+}
+
+:host([status="done"]) .quark-step-head .quark-step-icon.is-text {
+  color: var(--quark-theme-color, quark-primaryColor);
+  border-color: var(--quark-theme-color, quark-primaryColor);
+  background-color: #fff;
+}
+
+:host([status="doing"]) .quark-step-head .quark-step-icon.is-text {
+  color: #fff;
+  border-color: var(--quark-theme-color, quark-primaryColor);
+  background-color: var(--quark-theme-color, quark-primaryColor);
+}
+
+:host([status="todo"]) .quark-step-head {
+  color: #909ca4;
+  border-color: #909ca4;
+}
+
+:host .quark-step-content {
+  font-size: var(--step-content-font-size);
+  color: var(--step-content-color, #666);
+  display: block;
+}
+
+:host .quark-step-inner {
+  display: flex;
+  align-items: center;
+}

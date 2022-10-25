@@ -1,0 +1,46 @@
+:host {
+  position: relative;
+  overflow: hidden;
+  width: var(--swipe-width, 100%);
+  height: var(--swipe-height, auto);
+  border-radius: var(--swipe-border-radius, 0);
+  display: flex;
+  cursor: grab;
+}
+
+:host .container {
+  height: 100%;
+  width: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+:host .indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 3px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+:host .indicator {
+  width: 16px;
+  height: 3px;
+  background-color: var(--swipe-indicator-activecolor, quark-primaryColor);
+  border-radius: 2px;
+  margin: 0 var(--swipe-indicator-margin, 2px);
+}
+
+:host([type="round"]) .indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  opacity: 0.3;
+  margin: 0 var(--swipe-indicator-margin, 2px);
+}

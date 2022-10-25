@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  font-size: 18px;
+  height: 44px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: quark-textBaseColor;
+  text-align: center;
+}
+
+:host([safearea]) {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+:host .quark-navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  position: absolute;
+  left: var(--navbar-left-padding, 16px);
+}
+
+:host .quark-navbar-title {
+  width: 100%;
+  overflow: inherit;
+  font-weight: var(--navbar-title-font-weight, 600);
+  color: var(--navbar-title-color, inherit);
+}
+
+:host .quark-navbar-right {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  font-weight: var(--navbar-right-font-weight, 400);
+  font-size: var(--navbar-right-font-size, quark-fontSizeCaption);
+  color: var(--navbar-right-color, quark-textBaseColor);
+  right: var(--navbar-right-padding, 16px);
+}
+
+:host quark-icon-close {
+  position: absolute;
+  left: var(--navbar-close-left, 40px);
+}

@@ -1,0 +1,234 @@
+import BScroll from '@better-scroll/core';
+import Wheel from '@better-scroll/wheel';
+import QuarkElement, {
+  property,
+  createRef,
+  customElement,
+  state,
+} from '@quarkd/core';
+import '../popup';
+import '../button';
+import '@quarkd/icons/lib/close';
+import Locale from '../locale';
+import style from './style.css';
+
+BScroll.use(Wheel);
+type PickerColumn = {
+  text: string;
+  children: PickerColumn[];
+};
+@customElement({
+  tag: 'quark-cascade-picker',
+  style,
+})
+class QuarkCascadePicker extends QuarkElement {
+  constructor() {
+    super();
+  }
+
+  @property({ type: Boolean })
+  open: boolean = false;
+
+  @property()
+  title: string = '';
+
+  @property()
+  name: string = '';
+
+  @property({ type: Boolean })
+  bottomhidden: boolean = false;
+
+  @state()
+  pickerData: string[][] = [];
+
+  columns: PickerColumn[] = [];
+
+  wheels: any[] = [];
+
+  selectedIndexPair: number[] = [];
+
+  depth: number = 1;
+
+  wheelWrapper: any = createRef();
+
+  setColumns(columns: PickerColumn[]) {
+    if (!columns || columns.length < 1) {
+      return;
+    }
+    this.columns = columns;
+    const { current } = this.wheelWrapper;
+    if (!current) {
+      return;
+    }
+
+    // 对于级联选择器要求数据嵌套深度保持一致，因此取第一个计算深度
+    const firstColumn = this.columns[0];
+    this.depth = this.getDepths(firstColumn, 1);
+    this.selectedIndexPair = new Array(this.depth).fill(0);
+    if (this.depth <= 1) {
+      return;
+    }
+
+    this.loadInitPickerData();
+
+    for (let i = 0; i < this.depth; i += 1) {
+      this.createWheel(current, i);
+    }
+  }
+
+  loadInitPickerData() {
+    let cursor: PickerColumn[] = this.columns;
+    const tempPickerData = [...this.pickerData];
+    for (let i = 0; i < this.depth; i += 1) {
+      const values = cursor.map((item) => item.text);
+      tempPickerData.splice(i, 1, values);
+      cursor = cursor[0].children;
+    }
+    this.pickerData = tempPickerData;
+  }
+
+  getDepths(column: PickerColumn, depth: number): number {
+    if (!column.children || column.children.length <= 0) {
+      return depth;
+    }
+    depth += 1;
+    return this.getDepths(column.children[0], depth);
+  }
+
+  getValues(needRestore: boolean = true) {
+    if (needRestore) {
+      this.restorePosition();
+    }
+
+    const currentSelectedIndexPair = this.wheels.map((wheel) => wheel.getSelectedIndex());
+    const selectValues = this.pickerData.map((column, i) => {
+      const index = currentSelectedIndexPair[i];
+      return {
+        value: column[index],
+        index,
+      };
+    });
+
+    this.selectedIndexPair = currentSelectedIndexPair;
+    return selectValues;
+  }
+
+  restorePosition() {
+    this.wheels.forEach((wheel) => {
+      wheel.restorePosition();
+    });
+  }
+
+  changePickerData(newIndexPair: number[], oldIndexPair: number[]) {
+    const tempPickerData = [...this.pickerData];
+    let cursor: PickerColumn[] = this.columns;
+    for (let i = 0; i < this.depth - 1; i += 1) {
+      if (newIndexPair[i] !== oldIndexPair[i]) {
+        for (let j = 0; j < i; j += 1) {
+          cursor = cursor[newIndexPair[j]].children;
+        }
+        const chirdren = cursor[newIndexPair[i]].children;
+        const values = chirdren.map((item) => item.text);
+        tempPickerData.splice(i + 1, 1, values);
+        cursor = chirdren;
+        for (let j = i + 1; j < this.depth - 1; j += 1) {
+          cursor = cursor[0].children;
+          const value = cursor.map((item) => item.text);
+          tempPickerData.splice(j + 1, 1, value);
+        }
+        // 让后续 wheel 滚动到第一个位置
+        for (let j = i + 1; j < this.depth; j += 1) {
+          this.wheels[j].wheelTo(0, 10);
+        }
+        break;
+      }
+    }
+    this.pickerData = tempPickerData;
+  }
+
+  popupClose = () => {
+    this.restorePosition();
+    this.$emit('close');
+  };
+
+  confirm = () => {
+    const selectValues = this.getValues();
+    this.$emit('confirm', { detail: { value: selectValues } });
+  };
+
+  createWheel = (wheelWrapper: any, i: number) => {
+    if (!this.wheels[i]) {
+      this.wheels[i] = new BScroll(wheelWrapper.children[i], {
+        wheel: {
+          selectedIndex: this.selectedIndexPair[i] || 0,
+          wheelWrapperClass: 'quark-cascade-picker-wheel-scroll',
+          wheelItemClass: 'quark-cascade-picker-wheel-item',
+        },
+      });
+      // when any of wheels'scrolling ended , refresh data
+      this.wheels[i].on('scrollEnd', () => {
+        const currentSelectedIndexPair = this.wheels.map((wheel) => wheel.getSelectedIndex());
+        this.changePickerData(currentSelectedIndexPair, this.selectedIndexPair);
+        this.selectedIndexPair = currentSelectedIndexPair;
+        const selectValues = this.getValues(false);
+        this.$emit('change', { detail: { value: selectValues } });
+      });
+    } else {
+      this.wheels[i].refresh();
+    }
+    return this.wheels[i];
+  };
+
+  renderWheel = () => {
+    if (!this.pickerData || this.pickerData.length <= 0) {
+      return null;
+    }
+    const wheels = this.pickerData.map((column) => (
+        <div class="quark-cascade-picker-wheel">
+          <ul class="quark-cascade-picker-wheel-scroll">
+            {column.map((item: string) => <li class="quark-cascade-picker-wheel-item">{item}</li>)}
+          </ul>
+        </div>
+    ));
+    return wheels;
+  };
+
+  render() {
+    return (
+      <quark-popup
+        open={this.open}
+        position="bottom"
+        safearea
+        round
+        onclosed={this.popupClose}
+      >
+        <div class="quark-cascade-picker">
+          <div class="quark-cascade-picker-header">
+            <slot name="header">
+              <span class="quark-cascade-picker-title">{this.title}</span>
+              <div class="quark-cascade-picker-close-btn">
+                <quark-icon-close onclick={this.popupClose} />
+              </div>
+            </slot>
+          </div>
+          <div class="quark-cascade-picker-content">
+            <div class="quark-cascade-picker-mask-top"></div>
+            <div class="quark-cascade-picker-mask-bottom"></div>
+            <div class="quark-cascade-picker-wheel-wrapper" ref={this.wheelWrapper}>
+              {this.renderWheel()}
+            </div>
+          </div>
+          {!this.bottomhidden && (
+            <div class="quark-cascade-picker-bottom">
+              <quark-button type="primary" onclick={this.confirm}>
+               {Locale.current.confirm}
+              </quark-button>
+            </div>
+          )}
+        </div>
+      </quark-popup>
+    );
+  }
+}
+
+export default QuarkCascadePicker;

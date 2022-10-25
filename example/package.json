@@ -1,0 +1,145 @@
+{
+	"name": "example",
+	"version": "0.0.1",
+	"description": "Mobile UI Components built on Web Components.",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"private": true,
+	"scripts": {
+		"dev": "concurrently \"npm run watch\" \"npm run start\"",
+		"start": "vite --open --force",
+		"build": "vite build",
+		"postpublish": "node scripts/changeNameNpmToWeb.js",
+		"watch": "node scripts/watch.js",
+		"create": "node scripts/create.js",
+		"attrs": "node ./scripts/createAttributes.js"
+	},
+	"files": [
+		"lib/*",
+		"umd/*",
+		"README.md",
+		"package.json"
+	],
+	"sideEffects": [
+		"lib/**/*.js",
+		"*.css",
+		"*.js"
+	],
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [
+		"web components",
+		"quark",
+		"shadow dom",
+		"custom element"
+	],
+	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-decorators": "^7.16.5",
+		"@babel/plugin-transform-runtime": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-typescript": "^7.16.5",
+		"@babel/runtime": "^7.5.5",
+		"@commitlint/cli": "^13.2.1",
+		"@commitlint/config-conventional": "^13.2.0",
+		"@open-wc/testing": "^3.0.2",
+		"@open-wc/testing-karma": "^4.0.9",
+		"@rollup/plugin-babel": "^5.3.0",
+		"@rollup/plugin-commonjs": "^21.0.0",
+		"@rollup/plugin-node-resolve": "^13.0.5",
+		"@rollup/plugin-typescript": "^8.3.0",
+		"@types/body-scroll-lock": "^3.1.0",
+		"@types/lodash.assign": "^4.2.7",
+		"@types/node": "^14.14.31",
+		"@types/pinyin": "^2.8.3",
+		"@vitejs/plugin-legacy": "^1.4.0",
+		"@vitejs/plugin-react": "^1.1.4",
+		"@vitejs/plugin-vue": "^1.2.2",
+		"@vue/compiler-sfc": "^3.0.11",
+		"@vue/eslint-config-typescript": "^5.0.2",
+		"@vue/test-utils": "^2.0.0-rc.6",
+		"axios": "^0.27.2",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.0.6",
+		"chokidar": "^3.5.2",
+		"commitizen": "^4.2.4",
+		"concurrently": "^6.5.1",
+		"cross-env": "^5.2.0",
+		"css-loader": "^3.2.0",
+		"cz-conventional-changelog": "^3.3.0",
+		"deepmerge": "^3.2.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-node": "^4.1.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-vue": "^7.20.0",
+		"file-loader": "^4.2.0",
+		"front-matter": "^4.0.2",
+		"fs-extra": "^9.1.0",
+		"handlebars": "^4.7.7",
+		"highlight.js": "^10.3.1",
+		"husky": "^7.0.4",
+		"inquirer": "^8.2.0",
+		"install": "^0.13.0",
+		"lint-staged": "^10.5.4",
+		"npm": "^8.15.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-router-dom": "^6.2.1",
+		"@quarkd/rollup-plugin-css-variable": "file:../packages/quark-rollup-plugin-css-variable",
+		"rollup-plugin-import-css": "^3.0.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"sass": "^1.34.0",
+		"sinon": "^12.0.1",
+		"standard-version": "^9.3.0",
+		"stylelint": "^14.7.1",
+		"stylelint-config-standard": "^25.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.2.0",
+		"transliteration": "^2.2.0",
+		"typescript": "^4.1.5",
+		"vconsole": "^3.6.0",
+		"vite": "^2.3.4",
+		"vite-plugin-eslint": "^1.3.0",
+		"vite-plugin-md": "^0.12.4",
+		"vue-router": "^4.0.4",
+		"ws": "^8.3.0"
+	},
+	"lint-staged": {
+		"src/**/*.{vue, js,jsx,ts,tsx,json}": [
+			"git add"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"dependencies": {
+		"@better-scroll/core": "^2.4.2",
+		"@better-scroll/slide": "^2.4.2",
+		"@better-scroll/wheel": "^2.4.2",
+		"@quarkd/icons": "file:../packages/quark-icons",
+		"body-scroll-lock": "3.1.5",
+		"i": "^0.3.7",
+		"lodash.assign": "^4.2.0",
+		"preact": "^10.6.6"
+	},
+	"vetur": {
+		"tags": "dist/smartips/tags.json",
+		"attributes": "dist/smartips/attributes.json"
+	}
+}

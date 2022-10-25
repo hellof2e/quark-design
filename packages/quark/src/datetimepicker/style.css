@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
+:host .quark-date-picker-header {
+  position: relative;
+  height: 56px;
+  width: 100%;
+  padding: 0 16px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:host .quark-date-picker-title {
+  color: var(--picker-title-color, quark-textBaseColor);
+  font-weight: var(--picker-title-font-weight, 500);
+  font-family: var(--picker-title-font-family, quark-mFontFamily);
+  text-align: center;
+  font-size: var(--picker-title-font-size, 18px);
+}
+
+:host .quark-date-picker-close-btn {
+  color: #969799;
+  font-size: 14px;
+}
+
+:host .quark-date-picker-confirm-btn {
+  font-size: 14px;
+  color: #0088ff;
+}

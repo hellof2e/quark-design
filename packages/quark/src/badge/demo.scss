@@ -1,0 +1,43 @@
+.demo-badge {
+  .demo-cell {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 76px);
+    padding: 13px 16px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px #edeef1;
+    font-size: 14px;
+    color: #666;
+    align-items: self-end;
+  }
+
+  .custom-background {
+    --badge-background: #666;
+  }
+
+  .custom-color {
+    --badge-background: #fff;
+    --badge-text-color: #fb990f;
+  }
+
+  .badge-container {
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dark {
+    padding: 5px;
+    background: #08f;
+  }
+
+  .child {
+    height: 30px;
+    width: 30px;
+    background: #ccc;
+  }
+
+  .bg-color {
+    --badge-background: linear-gradient(90deg, blue, pink);
+  }
+}

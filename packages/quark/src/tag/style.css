@@ -1,0 +1,88 @@
+:host {
+    display: inline-flex;
+}
+
+:host .quark-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--tag-border-radius, quark-radiusSm);
+    padding-left: var(--tag-hspacing, quark-hSpacingS);
+    padding-right: var(--tag-hspacing, quark-hSpacingS);
+    padding-top: var(--tag-vspacing, quark-vSpacingXxs);
+    padding-bottom: var(--tag-vspacing, quark-vSpacingXxs);
+    font-size: var(--tag-font-size, quark-fontSizeCaptionSsm);
+    line-height: var(--tag-line-height, 12px);
+    font-weight: var(--tag-font-weight, 400);
+    font-family: var(--tag-font-family, quark-sFontFamily);
+    color: var(--tag-text-color, #fff);
+    background: var(--tag-background, quark-primaryColor);
+    width: auto;
+    height: auto;
+}
+
+:host([round]) .quark-tag {
+    border-radius: 999px;
+}
+
+:host([size="large"]) .quark-tag {
+    padding-left: var(--tag-hspacing, 6px);
+    padding-right: var(--tag-hspacing, 6px);
+    padding-top: var(--tag-vspacing, quark-vSpacingXxs);
+    padding-bottom: var(--tag-vspacing, quark-vSpacingXxs);
+    font-size: var(--tag-font-size, 14px);
+    line-height: var(--tag-line-height, 20px);
+    font-weight: var(--tag-font-weight, 500);
+    font-family: var(--tag-font-family, quark-mFontFamily);
+}
+
+:host([type="primary"]) .quark-tag {
+    background: var(--quark-theme-color, quark-primaryColor);
+}
+
+:host([type="warning"]) .quark-tag {
+    background: var(--quark-warning-color, quark-warningColor);
+}
+
+:host([type="danger"]) .quark-tag {
+    background: var(--quark-danger-color, quark-dangerColor);
+}
+
+:host([type="success"]) .quark-tag {
+    background: var(--quark-success-color, quark-successColor);
+}
+
+:host([plain]) .quark-tag {
+    background: white;
+    border: 1px solid;
+    border-color: var(--tag-border-color, quark-primaryColor);
+    color: var(--tag-text-color, quark-primaryColor);
+}
+
+:host([plain][type="primary"]) .quark-tag {
+    background: white;
+    border: 1px solid;
+    border-color: var(--tag-border-color, #B2DBFF);
+    color: var(--tag-text-color, quark-primaryColor);
+}
+
+:host([plain][type="warning"]) .quark-tag {
+    background: white;
+    border: 1px solid;
+    border-color: var(--tag-border-color, #FDE0B7);
+    color: var(--tag-text-color, quark-warningColor);
+}
+
+:host([plain][type="danger"]) .quark-tag {
+    background: white;
+    border: 1px solid;
+    border-color: var(--tag-border-color, #FCBDBD);
+    color: var(--tag-text-color, quark-dangerColor);
+}
+
+:host([plain][type="success"]) .quark-tag {
+    background: white;
+    border: 1px solid;
+    border-color: var(--tag-border-color, #B4ECCF);
+    color: var(--tag-text-color, quark-successColor);
+}

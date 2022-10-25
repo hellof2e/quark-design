@@ -1,0 +1,16 @@
+:host {
+  flex: 1 1;
+  overflow: hidden;
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  color: quark-textBaseColor;
+  font-size: quark-fontSizeBase;
+}
+
+:host .quark-marquee-title {
+  width: auto;
+  transition-timing-function: linear;
+  padding: 0 4px;
+  white-space: nowrap;
+}

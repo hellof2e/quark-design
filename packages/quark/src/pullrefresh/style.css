@@ -1,0 +1,49 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.quark-pull-refresh {
+  width: 100%;
+}
+
+.quark-pull-refresh-container {
+  position: relative;
+  transition-property: transform;
+  background-color: #FFF;
+}
+
+.quark-pull-refresh-head {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--pull-refresh-head-height);
+  overflow: hidden;
+  color: var(--pull-refresh-head-text-color);
+  font-size: var(--pull-refresh-head-font-size);
+  line-height: var(--pull-refresh-head-height);
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.quark-pull-refresh-text {
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 19px;
+  box-sizing: border-box;
+}
+
+:host([dark]) .quark-pull-refresh {
+  background-color: quark-primaryColor;
+}
+
+:host([dark]) .quark-pull-refresh-text {
+  --loading-text-color: #FFF;
+  color: #FFF;
+}

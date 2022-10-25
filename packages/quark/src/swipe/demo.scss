@@ -1,0 +1,27 @@
+.swipe-demo {
+  quark-swipe-item > div{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  quark-swipe-item:nth-child(odd)>div {
+    background-color: #66c6f2;
+  }
+  quark-swipe-item:nth-child(even)>div {
+    background-color: #39a9ed;
+  }
+  .custom-indicator {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    padding: 2px 5px;
+    color: #fff;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+}

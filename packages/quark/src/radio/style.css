@@ -1,0 +1,129 @@
+:host {
+  font-size: var(--radio-font-size, 12px);
+  color: var(--radio-color, #242729);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host .quark-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host label {
+  margin-left: 4px;
+  height: var(--radio-label-height, 100%);
+  display: inline-flex;
+  align-items: center;
+  line-height: var(--radio-label-height, 100%);
+}
+
+:host label.quark-radio-hide {
+  display: none;
+}
+
+:host .quark-radio-container {
+  position: relative;
+  display: inline-flex;
+  height: var(--radio-size, 16px);
+  width: var(--radio-size, 16px);
+}
+
+:host .quark-radio-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-property: visibility, opacity;
+}
+
+:host([size="big"]) .quark-radio-container {
+  height: var(--radio-size, 20px);
+  width: var(--radio-size, 20px);
+}
+
+:host .quark-radio-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+:host .quark-radio-container span {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:host .quark-radio-container .quark-radio-show {
+  background: #FFFFFF;
+  border: 1px solid quark-formPlaceholderColor;
+  border-radius: 50%;
+}
+
+:host([disabled]) * {
+  cursor: not-allowed;
+}
+
+:host([disabled]) .quark-radio-container .quark-radio-show {
+  background: #F0F3F5;
+}
+
+
+:host .quark-radio-container .quark-radio-disabled {
+  display: none;
+}
+
+:host([disabled][checked]) .quark-radio-container .quark-radio-disabled {
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+:host([shape="square"]) .quark-radio-container .quark-radio-show {
+  border-radius: 4px;
+}
+
+:host([disabled][checked][shape="square"]) .quark-radio-container .quark-radio-disabled {
+  border-radius: 4px;
+}
+
+:host([shape="square"][size="big"]) .quark-radio-container span {
+  border-radius: 5px;
+}
+
+:host([checked]) .quark-radio-container .quark-radio-show {
+  border: none;
+  background: var(--radio-background, quark-primaryColor);
+}
+
+:host([checked]) .quark-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 0.2s;
+  transition-property: visibility, opacity;
+}
+
+:host input[type="radio"i] {
+  margin: 0;
+}
+
+
+.quark-radio-group-wrapper {
+  display: flex;
+  flex-direction: row;
+}

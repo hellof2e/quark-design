@@ -1,0 +1,61 @@
+.field-demo {
+  .demo-inputs {
+    margin-bottom: 24px;
+  }
+
+  .sapce {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #909ca4;
+    padding: 0 10px;
+    font-weight: normal;
+  }
+
+  .type {
+    background: #fff;
+  }
+
+  .demo-inputs .line {
+    height: 1px;
+    width: calc(100% - 32px);
+    background: #ebedf0;
+    margin: auto;
+  }
+
+  .theme {
+    --field-label-width: 100px;
+    --field-label-text-color: green;
+    --field-label-font-size: 18px;
+    --field-label-margin-right: 10px;
+    --field-input-text-color: #999;
+    --field-input-font-size: 20px;
+    --field-placeholder-text-color: red;
+    --field-placeholder-font-size: 12px;
+    --field-disabled-text-color: #eee;
+  }
+
+  .oneLine {
+    --field-input-align: center;
+  }
+
+  .label {
+    font-size: 16px;
+    min-width: 119px;
+    margin-right: 12px;
+    font-weight: 500;
+    color: #242729;
+  }
+
+  .label span {
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #879099;
+  }
+}

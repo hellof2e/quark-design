@@ -1,0 +1,10 @@
+.search-demo {
+  .search-content {
+    background-color: #fff;
+    padding: 6px 12px;
+  }
+  .custom-color {
+    --search-background: linear-gradient(135deg, #667eea, #764ba2);
+    --search-action-text-color: aqua;
+  }
+}

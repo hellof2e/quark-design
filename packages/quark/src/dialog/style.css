@@ -1,0 +1,153 @@
+:host {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, .7);
+  visibility: hidden;
+  text-align: center;
+  font-size: 18px;
+  color: quark-textBaseColor;
+  opacity: 0;
+  transition: all.3s ease-out;
+}
+
+:host([open]) {
+  opacity: 1;
+  z-index: 999;
+  visibility: visible;
+}
+
+:host .quark-dialog {
+  position: relative;
+  padding: 28px 12px 24px;
+  margin: auto;
+  box-shadow: 0 2px 12px rgba(100, 101, 102, .12);
+  box-sizing: border-box;
+  max-height: calc(100vh - 20px);
+  border-radius: 12px;
+  background-color: #fff;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all .3s ease-in;
+  width: var(--dialog-width, 320px);
+}
+
+:host([open]) .quark-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.quark-dialog-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.quark-dialog-close-btn svg {
+  cursor: pointer;
+}
+
+:host .quark-dialog-title {
+  font-size: var(--dialog-title-font-size, 18px);
+  color: var(--dialog-title-color, #242729);
+  font-family: var(--dialog-title-font-family, PingFangSC-Medium, PingFang SC);
+  line-height: var(--dialog-title-line-height, 25px);
+  font-weight: var(--dialog-title-font-weight, 500);
+  padding: 0 14px;
+  margin: 0 0 16px;
+}
+
+:host(:not([content])) .quark-dialog-title {
+  margin-bottom: 20px;
+}
+
+:host .quark-dialog-content {
+  font-size: var(--dialog-content-font-size, 14px);
+  color: var(--dialog-content-color, '#5A6066');
+  font-weight: var(--dialog-content-font-weight, 400);
+  font-family: var(--dialog-content-font-family);
+  line-height: var(--dialog-content-line-height, 20px);
+}
+
+.quark-dialog-body-wrap{
+  padding: 0 12px;
+  color: #5A6066;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.quark-dialog-body {
+  text-align: left;
+  display: inline-block;
+}
+
+:host .quark-dialog-body slot:empty {
+  margin: 0;
+}
+
+:host .quark-dialog-footer {
+  display: flex;
+  align-items: center;
+}
+
+.quark-dialog-close-btn quark-icon-close {
+  color: #BCC4CC;
+  cursor: pointer;
+}
+
+.quark-dialog-footer quark-button {
+  display: flex;
+  flex: 1 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--dialog-btn-border-radius, 8px);
+  font-size: var(--dialog-btn, 16px);
+  height: var(--dialog-btn, 40px);
+}
+
+:host .quark-dialog-vertical {
+  display: block;
+}
+
+:host .quark-dialog-vertical quark-button {
+  margin-right: 0;
+}
+
+:host .quark-dialog-vertical .quark-dialog-cancel-btn {
+  margin-top: 8px;
+}
+
+:host .quark-dialog-cancel-btn {
+  color: #5A6066;
+  background: #F0F3F5;
+  margin-right: 8px;
+  border: none;
+}
+
+:host .quark-dialog-leave {
+  opacity: 0;
+  transition: all.3s ease-out;
+}
+
+@media screen and (max-width: 321px) {
+  :host .quark-dialog{
+    display: flex;
+    position: relative;
+    margin: auto;
+    box-shadow: 0 2px 12px rgba(100, 101, 102, .12);
+    box-sizing: border-box;
+    max-height: calc(100vh - 20px);
+    border-radius: 12px;
+    background-color: #fff;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all .3s ease-in;
+    width: var(--dialog-width, 90%);
+  }
+}

@@ -1,0 +1,21 @@
+.DS_Store
+node_modules
+yarn.lock
+/cache
+/.nyc_output
+/coverage
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/lib
+/es
+/umd
+/tsc
+/dist

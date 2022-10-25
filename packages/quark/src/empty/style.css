@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+:host .quark-empty {
+  width: 100%;
+}
+
+:host .quark-empty-container {
+  text-align: center;
+}
+
+:host .quark-empty-image {
+  max-width: 190px;
+}
+
+:host .quark-empty-title {
+  margin-top: 12px;
+  text-align: center;
+  font-size: var(--empty-title-font-size, 16px);
+  line-height: var(--empty-title-line-height, 22px);
+  width: var(--empty-title-width);
+  color: var(--empty-title-color, quark-textBaseColor);
+  white-space: var(--empty-white-space, pre-wrap);
+}
+
+:host .quark-empty-title:empty {
+  margin-top: 0;
+}
+
+:host .quark-empty-desc {
+  margin-top: 8px;
+  font-size: var(--empty-desc-font-size, 14px);
+  color: var(--empty-desc-color, quark-textSecondaryColor);
+  width: var(--empty-desc-width);
+  white-space: var(--empty-white-space, pre-wrap);
+  line-height: var(--empty-title-line-height, 20px);
+  text-align: center;
+}
+
+:host .quark-empty-desc:empty {
+  margin-top: 0;
+}

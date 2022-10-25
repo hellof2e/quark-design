@@ -1,0 +1,31 @@
+:host {
+  position: relative;
+  display: inline-flex;
+}
+
+:host .quark-grid-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: var(--grid-item-hspacing, 16px);
+  padding-right: var(--grid-item-hspacing, 16px);
+  padding-top: var(--grid-item-vspacing, 16px);
+  padding-bottom: var(--grid-item-vspacing, 16px);
+  background-color: var(--grid-item-background-color, white);
+}
+
+:host .quark-grid-text {
+  font-size: var(--grid-item-text-font-size, quark-fontSizeCaptionSm);
+  color: var(--grid-item-text-color, quark-textBaseColor);
+  line-height: 1.5;
+  word-break: break-all;
+  margin-top: var(--grid-item-text-margin-top, 8px);
+}
+
+:host .quark-grid-icon {
+  font-size: var(--grid-item-icon-font-size, 28px);
+  width: var(--grid-item-icon-font-size, 28px);
+  height: auto;
+}

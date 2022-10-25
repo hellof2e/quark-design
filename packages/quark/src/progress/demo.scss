@@ -1,0 +1,32 @@
+.scope-progress {
+  .tag-container {
+    padding: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .progress-wrap {
+    background: #fff;
+    padding-right: 32px;
+  }
+  
+  quark-progress {
+    width: 100%;
+    margin: 16px;
+    margin-right: 0;
+  }
+  .green {
+    --progress-box-background: yellowgreen;
+    --progress-margin-left: 6px;
+  }
+  .auto {
+    width: 95%;
+    height: 6px;
+  }
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+  .percent {
+    color: yellowgreen
+  }
+}

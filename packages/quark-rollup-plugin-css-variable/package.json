@@ -1,0 +1,17 @@
+{
+  "name": "@quarkd/rollup-plugin-css-variable",
+  "version": "1.0.0",
+  "description": "css变量替换插件",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo \"Error: no build specified\"",
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHead": "ed682a8b23cf9831613dc6a4b30b0b076d2a54ac"
+}

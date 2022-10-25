@@ -1,0 +1,546 @@
+{
+  "nav": [
+    {
+      "name": "基础组件",
+      "enName": "Basic Components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "Button",
+          "sort": 1,
+          "cName": "按钮",
+          "type": "component",
+          "show": true,
+          "desc": "按钮",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Cell",
+          "sort": 1,
+          "cName": "单元格",
+          "type": "component",
+          "show": true,
+          "desc": "单元格",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Icon",
+          "sort": 1,
+          "cName": "图标",
+          "type": "component",
+          "show": true,
+          "desc": "图标",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Image",
+          "sort": 1,
+          "cName": "图片",
+          "type": "component",
+          "show": true,
+          "desc": "图片容器",
+          "author": "zcl"
+        }
+      ]
+    },
+    {
+      "name": "数据展示",
+      "enName": "Display Components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "Badge",
+          "sort": 1,
+          "cName": "徽标",
+          "type": "component",
+          "show": true,
+          "desc": "徽标",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Grid",
+          "sort": 1,
+          "cName": "宫格",
+          "type": "component",
+          "show": true,
+          "desc": "宫格",
+          "author": "MrZhaoCn"
+        },
+        {
+          "version": "0.0.1",
+          "name": "ImagePreview",
+          "sort": 1,
+          "cName": "图片预览",
+          "type": "component",
+          "show": true,
+          "desc": "图片预览",
+          "author": ""
+        },
+        {
+          "version": "0.0.1",
+          "name": "List",
+          "sort": 1,
+          "cName": "列表",
+          "type": "component",
+          "show": true,
+          "desc": "列表",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Marquee",
+          "sort": 1,
+          "cName": "跑马灯",
+          "type": "component",
+          "show": true,
+          "desc": "动作面板",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Noticebar",
+          "sort": 1,
+          "cName": "通知栏",
+          "type": "component",
+          "show": true,
+          "desc": "动作面板",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Progress",
+          "sort": 1,
+          "cName": "进度条",
+          "type": "component",
+          "show": true,
+          "desc": "动作面板",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Skeleton",
+          "sort": 1,
+          "cName": "骨架屏",
+          "type": "component",
+          "show": true,
+          "desc": "骨架屏",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Steps",
+          "sort": 1,
+          "cName": "步骤条",
+          "type": "component",
+          "show": true,
+          "desc": "步骤条",
+          "author": "xsf"
+        },
+        {
+          "name": "Sticky",
+          "sort": 1,
+          "cName": "粘性布局",
+          "type": "component",
+          "show": true,
+          "desc": "粘性布局",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Swipe",
+          "sort": 1,
+          "cName": "轮播",
+          "type": "component",
+          "show": true,
+          "desc": "轮播开发中",
+          "author": "MrZhao"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Tag",
+          "sort": 1,
+          "cName": "标签",
+          "type": "component",
+          "show": true,
+          "desc": "标签",
+          "author": "MrZhao"
+        }
+      ]
+    },
+    {
+      "name": "导航组件",
+      "enName": "Navigation Components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "Navbar",
+          "sort": 1,
+          "cName": "头部组件",
+          "type": "component",
+          "show": true,
+          "desc": "头部组件",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Tab",
+          "sort": 1,
+          "cName": "标签",
+          "type": "component",
+          "show": true,
+          "desc": "标签",
+          "author": "guochaoren"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Tabbar",
+          "sort": 1,
+          "cName": "底部栏",
+          "type": "component",
+          "show": true,
+          "desc": "底部栏",
+          "author": "guochaoren"
+        }
+      ]
+    },
+    {
+      "name": "操作反馈",
+      "enName": "Action Components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "ActionSheet",
+          "sort": 1,
+          "cName": "动作面板",
+          "type": "component",
+          "show": true,
+          "desc": "动作面板",
+          "author": "MrZhao"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Dialog",
+          "sort": 1,
+          "cName": "模态框",
+          "type": "component",
+          "show": true,
+          "desc": "模态框",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Loading",
+          "sort": 1,
+          "cName": "加载动画",
+          "type": "component",
+          "show": true,
+          "desc": "加载动画",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Overlay",
+          "sort": 1,
+          "cName": "遮罩层",
+          "type": "component",
+          "show": true,
+          "desc": "遮罩层",
+          "author": "MrZhaoCn"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Popover",
+          "sort": 1,
+          "cName": "气泡弹出框",
+          "type": "component",
+          "show": true,
+          "desc": "气泡弹出框",
+          "author": "MrZhaoCn"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Popup",
+          "sort": 1,
+          "cName": "弹框",
+          "type": "component",
+          "show": true,
+          "desc": "弹框",
+          "author": "MrZhao"
+        },
+        {
+          "version": "0.0.1",
+          "name": "PullRefresh",
+          "sort": 1,
+          "cName": "下拉刷新",
+          "type": "component",
+          "show": true,
+          "desc": "this is a description.",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "ShareSheet",
+          "sort": 1,
+          "cName": "分享面板",
+          "type": "component",
+          "show": true,
+          "desc": "分享面板",
+          "author": "MrZhao"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Toast",
+          "sort": 1,
+          "cName": "轻提示",
+          "type": "component",
+          "show": true,
+          "desc": "轻提示",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Tooltip",
+          "sort": 1,
+          "cName": "文字提示",
+          "type": "component",
+          "show": true,
+          "desc": "文字提示",
+          "author": "allan"
+        }
+      ]
+    },
+    {
+      "name": "表单组件",
+      "enName": "Form Components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "CascadePicker",
+          "sort": 1,
+          "cName": "级联选择器",
+          "type": "component",
+          "show": true,
+          "desc": "级联选择器",
+          "author": "MrZhaoCn"
+        },
+        {
+          "version": "0.0.1",
+          "name": "CheckBox",
+          "sort": 1,
+          "cName": "复选框",
+          "type": "component",
+          "show": true,
+          "desc": "复选框",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Field",
+          "sort": 1,
+          "cName": "输入框",
+          "type": "component",
+          "show": true,
+          "desc": "输入框",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Form",
+          "sort": 1,
+          "cName": "表单",
+          "type": "component",
+          "show": true,
+          "desc": "表单",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "DatetimePicker",
+          "sort": 1,
+          "cName": "时间选择",
+          "type": "component",
+          "show": true,
+          "desc": "时间选择",
+          "author": "yx"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Picker",
+          "sort": 1,
+          "cName": "选择器",
+          "type": "component",
+          "show": true,
+          "desc": "选择器",
+          "author": "MrZhaoCn"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Radio",
+          "sort": 1,
+          "cName": "单选框",
+          "type": "component",
+          "show": true,
+          "desc": "单选框",
+          "author": "guoChaoRen"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Rate",
+          "sort": 1,
+          "cName": "评分",
+          "type": "component",
+          "show": true,
+          "desc": "步骤条",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Search",
+          "sort": 1,
+          "cName": "搜索",
+          "type": "component",
+          "show": true,
+          "desc": "搜索",
+          "author": "yx"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Stepper",
+          "sort": 1,
+          "cName": "步进器",
+          "type": "component",
+          "show": true,
+          "desc": "步进器由增加按钮、减少按钮和输入框组成，用于在一定范围内输入、调整数字。",
+          "author": "zcl"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Switch",
+          "sort": 1,
+          "cName": "开关",
+          "type": "component",
+          "show": true,
+          "desc": "开关",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "TextArea",
+          "sort": 1,
+          "cName": "文本域",
+          "type": "component",
+          "show": true,
+          "desc": "多行文本输入框",
+          "author": "zcl"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Uploader",
+          "sort": 1,
+          "cName": "上传",
+          "type": "component",
+          "show": true,
+          "desc": "上传",
+          "author": "yhy"
+        }
+      ]
+    },
+    {
+      "name": "业务组件",
+      "enName": "Business components",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "MarketDialog",
+          "sort": 1,
+          "cName": "营销弹窗",
+          "type": "component",
+          "show": true,
+          "desc": "营销弹窗",
+          "author": "yhy"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Empty",
+          "sort": 1,
+          "cName": "空状态",
+          "type": "component",
+          "show": true,
+          "desc": "空状态",
+          "author": "wjc"
+        },
+        {
+          "version": "0.0.1",
+          "name": "PopupExtra",
+          "sort": 1,
+          "cName": "浮层",
+          "type": "component",
+          "show": true,
+          "desc": "浮层",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Countdown",
+          "sort": 1,
+          "cName": "倒计时",
+          "type": "component",
+          "show": true,
+          "desc": "电商秒杀专用",
+          "author": "yhy"
+        }
+      ]
+    }
+  ],
+  "docs": {
+    "name": "指南",
+    "enName": "Essentials",
+    "packages": [
+      {
+        "name": "Introduction",
+        "cName": "介绍",
+        "show": true
+      },
+      {
+        "name": "Name",
+        "cName": "缘何此名？",
+        "show": true
+      },
+      {
+        "name": "QuickStart",
+        "cName": "快速上手",
+        "show": true
+      },
+      {
+        "name": "LoadDemand",
+        "cName": "按需加载",
+        "show": true
+      },
+      {
+        "name": "Internationalization",
+        "cName": "国际化",
+        "show": true
+      },
+      {
+        "name": "Theme",
+        "cName": "主题设置",
+        "show": true
+      },
+      {
+        "name": "Notice",
+        "cName": "常见问题",
+        "show": true
+      },
+      {
+        "name": "CHANGELOG",
+        "cName": "更新日志",
+        "show": true
+      }
+    ]
+  },
+  "demoUrl": ""
+}

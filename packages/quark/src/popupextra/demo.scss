@@ -1,0 +1,25 @@
+.popup-demo {
+  .demo-buttons quark-button {
+    margin-right: 6px;
+    margin-top: 6px;
+  }
+
+  .demo-buttons {
+    margin-bottom: 24px;
+  }
+
+  .popup-body {
+    flex: 1;
+    padding: 0 16px 32px;
+    // overflow-y: scroll;
+    h4{
+      font-size: 14px;
+      font-weight: 400;
+      color: #242629;
+    }
+    p{
+      font-size: 12px;
+      color: #879099;
+    }
+  }
+}

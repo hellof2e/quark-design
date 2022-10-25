@@ -1,0 +1,30 @@
+.navbar-demo {
+  quark-navbar {
+    margin-bottom: 20px;
+    background: #fff;
+  }
+  
+  .bg {
+    background: linear-gradient(to right, #7ec1ff, #2197ff);
+    color: #fff;
+    --navbar-right-color: #fff;
+  }
+
+  .bg2 {
+    background: purple;
+    color: #fff;
+    font-size: 14px;
+    --navbar-right-color: #fff;
+    --navbar-right-font-size: 14px;
+    --navbar-right-font-weight: 200;
+  }
+
+  span {
+    margin: 0;
+  }
+  .left {
+    text-align: left;
+    padding-left: 50px;
+  }
+}
+

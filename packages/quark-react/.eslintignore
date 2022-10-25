@@ -1,0 +1,6 @@
+/src/**/*.md
+/src/**/*.test.js
+/src/utils
+lib/
+es/
+umd/

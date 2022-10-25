@@ -1,0 +1,63 @@
+:host {
+  position: relative;
+  display: inline-flex;
+}
+
+:host .quark-badge-dealclass {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--badge-font-size, 10px);
+  line-height: var(--badge-font-size, 10px);
+  border-radius: 999px;
+  padding: var(--badge-padding-column, 2px) var(--badge-padding-row, 4px);
+  min-width: 14px;
+  font-weight: var(--badge-font-weight, 500);
+  color: var(--badge-text-color, #fff);
+  background: var(--badge-background, quark-dangerColor);
+  font-family: var(--badge-font-family);
+  box-sizing: border-box;
+}
+
+:host .quark-badge-fixed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: 1;
+}
+
+:host([type="dot"]) .quark-badge-dealclass {
+  height: var(--badge-dot-size, 6px);
+  width: var(--badge-dot-size, 6px);
+  border-radius: 50%;
+  min-width: 0;
+  padding: 0;
+}
+
+:host .quark-badge-dealclass.quark-badge-hide {
+  display: none;
+}
+
+:host([type="label"]) .quark-badge-dealclass {
+  border-radius: 999px 999px 999px 1px;
+}
+
+:host([size="big"]) .quark-badge-dealclass {
+  padding: var(--badge-padding-column, 4px) var(--badge-padding-row, 6px);
+  font-size: var(--badge-font-size, 12px);
+  line-height: var(--badge-text-size, 12px);
+  min-width: 20px;
+}
+
+:host([border]) .quark-badge-dealclass {
+  border: 0.5px solid var(--badge-border-color, #fff);
+}
+
+:host([size="big"][type="dot"]) .quark-badge-dealclass {
+  height: var(--badge-dot-size, 10px);
+  width: var(--badge-dot-size, 10px);
+  min-width: 0;
+  padding: 0;
+}

@@ -1,0 +1,2529 @@
+# 更新日志
+### [1.1.25](https://gitlab.hellobike.cn///compare/quark@1.1.24...quark@1.1.25) (2022-10-18)
+
+
+### 🎉 Features
+
+* TODO ([c2d487f](https://gitlab.hellobike.cn///commit/c2d487f6b796d15798f681151dfe9d0dd1a2d1b2))
+
+
+### 🐞 Bug Fixes
+
+* 关闭按钮大小 ([e544f36](https://gitlab.hellobike.cn///commit/e544f3640a675c6d98395f599667144efe9e3905))
+
+### [1.1.24](https://gitlab.hellobike.cn///compare/quark@1.1.23...quark@1.1.24) (2022-10-14)
+
+
+### 🎉 Features
+
+* 文档更新 ([d20cc82](https://gitlab.hellobike.cn///commit/d20cc82cf6fed5f942a8becad1108a669ecf9917))
+
+
+### 🐞 Bug Fixes
+
+* 刚开始需要显示下面的细线 ([834ed4a](https://gitlab.hellobike.cn///commit/834ed4a3bee76854177c4d954713bb708d5197ce))
+
+### [1.1.23](https://gitlab.hellobike.cn///compare/quark@1.1.22...quark@1.1.23) (2022-10-13)
+
+
+### 🐞 Bug Fixes
+
+* popupextra content细线 ([dbc3175](https://gitlab.hellobike.cn///commit/dbc31750207e8b6ea67e152807f31041fab28f70))
+
+### [1.1.22](https://gitlab.hellobike.cn///compare/quark@1.1.19...quark@1.1.22) (2022-10-13)
+
+
+### 🐞 Bug Fixes
+
+* iOS不能滚动 ([2e7b25c](https://gitlab.hellobike.cn///commit/2e7b25cfefafb01b3c319938929634bdd7971dfa))
+* popupextra iOS内容区无法滚动 ([8c36224](https://gitlab.hellobike.cn///commit/8c36224570ccae738093003bbc21ef6841a02735))
+* 修复图片点击问题 ([0e17454](https://gitlab.hellobike.cn///commit/0e174546f0c20c0a398786e12da6d447c01bac6f))
+
+
+### 🎉 Features
+
+* 1.1.18 ([a7816c7](https://gitlab.hellobike.cn///commit/a7816c786e56b47d799800131254e01f7fdbab92))
+* slot footer ([3e24307](https://gitlab.hellobike.cn///commit/3e24307dbc2531c354522fe787d13da1488d0dbd))
+* 图片预览增加关闭弹窗的方法 ([6b92a4d](https://gitlab.hellobike.cn///commit/6b92a4dcbe0d95447a6a2b9a934c03a8d3d6e21d))
+* 版本升级 1.1.20 ([fd21c69](https://gitlab.hellobike.cn///commit/fd21c69abaeb17d46918e6c069dc7646777e4caf))
+
+### [1.1.21](https://gitlab.hellobike.cn///compare/quark@1.1.20...quark@1.1.21) (2022-10-13)
+
+
+### 🎉 Features
+
+* 版本升级 1.1.20 ([fd21c69](https://gitlab.hellobike.cn///commit/fd21c69abaeb17d46918e6c069dc7646777e4caf))
+
+### [1.1.20](https://gitlab.hellobike.cn///compare/quark@1.1.19...quark@1.1.20) (2022-10-13)
+
+
+### 🎉 Features
+
+* 1.1.18 ([a7816c7](https://gitlab.hellobike.cn///commit/a7816c786e56b47d799800131254e01f7fdbab92))
+* 图片预览增加关闭弹窗的方法 ([6b92a4d](https://gitlab.hellobike.cn///commit/6b92a4dcbe0d95447a6a2b9a934c03a8d3d6e21d))
+
+### [1.1.19](https://gitlab.hellobike.cn///compare/quark@1.1.19...quark@1.1.19) (2022-10-12)
+
+
+### 🎉 Features
+
+* 1.1.18 ([a7816c7](https://gitlab.hellobike.cn///commit/a7816c786e56b47d799800131254e01f7fdbab92))
+* 图片预览增加关闭弹窗的方法 ([6b92a4d](https://gitlab.hellobike.cn///commit/6b92a4dcbe0d95447a6a2b9a934c03a8d3d6e21d))
+
+### [1.1.18](https://gitlab.hellobike.cn///compare/quark@1.1.19...quark@1.1.18) (2022-10-12)
+
+### [1.1.17](https://gitlab.hellobike.cn///compare/quark@1.1.16...quark@1.1.17) (2022-10-12)
+
+### [1.1.16](https://gitlab.hellobike.cn///compare/quark@1.1.16...quark@1.1.16) (2022-10-12)
+
+### [1.1.16](https://gitlab.hellobike.cn///compare/quark@1.1.14...quark@1.1.16) (2022-10-12)
+
+
+### 🐞 Bug Fixes
+
+* 修改弹窗关闭按钮位置 ([583094b](https://gitlab.hellobike.cn///commit/583094bbcd187f25f5684f7ac2dbf5bd18b8d4dd))
+
+
+### 🎉 Features
+
+* quark 1.1.14 ([a9bb119](https://gitlab.hellobike.cn///commit/a9bb119832b12504f1cf9691292ceeb9db0e9dbf))
+* release + quark@1.1.15 ([8b24194](https://gitlab.hellobike.cn///commit/8b2419488d14142581e967a7690986bde60b9d8e))
+* 添加diary.md ([57d942f](https://gitlab.hellobike.cn///commit/57d942f6b2c412469dd16a72304b2d26fc711ecd))
+
+### [1.1.15](https://gitlab.hellobike.cn///compare/quark@1.1.14...quark@1.1.15) (2022-10-11)
+
+
+### 🐞 Bug Fixes
+
+* 修改弹窗关闭按钮位置 ([583094b](https://gitlab.hellobike.cn///commit/583094bbcd187f25f5684f7ac2dbf5bd18b8d4dd))
+
+
+### 🎉 Features
+
+* 添加diary.md ([57d942f](https://gitlab.hellobike.cn///commit/57d942f6b2c412469dd16a72304b2d26fc711ecd))
+* quark 1.1.14 ([a9bb119](https://gitlab.hellobike.cn///commit/a9bb119832b12504f1cf9691292ceeb9db0e9dbf))
+
+### [1.1.14](https://gitlab.hellobike.cn///compare/quark@1.1.14...quark@1.1.14) (2022-10-11)
+
+### [1.1.14](https://gitlab.hellobike.cn///compare/quark@1.1.12...quark@1.1.14) (2022-10-11)
+
+
+### 🐞 Bug Fixes
+
+* 修复图片预览问题 ([33398f1](https://gitlab.hellobike.cn///commit/33398f101881f238b592fcaf2934e69f687f861c))
+
+
+### 🎉 Features
+
+* TODO 文档更新 ([c884571](https://gitlab.hellobike.cn///commit/c8845710be62f07841ad3bdbdf57bc9ad2a93fc9))
+* TODO 文档更新 ([0f17437](https://gitlab.hellobike.cn///commit/0f17437971effd9b6f539f5ea6e52c7e8eabd5a5))
+* TODO 文档更新 ([22de85f](https://gitlab.hellobike.cn///commit/22de85fc2d1daf635a61a4a22c9e17a0d2440532))
+* TODO 文档更新 ([93c870f](https://gitlab.hellobike.cn///commit/93c870f451107b48755706bcdb6f3bdfe59aacf3))
+* TODO 文档更新 ([0e1284c](https://gitlab.hellobike.cn///commit/0e1284c9db6ac1a45db455dfd3df4dbf321631c6))
+* 优化图片预览的事件 ([3406d6e](https://gitlab.hellobike.cn///commit/3406d6e334a8f02bba5d594459b0e13d95b96c41))
+* 图片预览组件设置最大高度 ([a04af56](https://gitlab.hellobike.cn///commit/a04af56f54a78c73782078a4aab21ace80a3c7d3))
+
+### [1.1.13](https://gitlab.hellobike.cn///compare/quark@1.1.12...quark@1.1.13) (2022-10-10)
+
+
+### 🐞 Bug Fixes
+
+* 修复图片预览问题 ([33398f1](https://gitlab.hellobike.cn///commit/33398f101881f238b592fcaf2934e69f687f861c))
+
+
+### 🎉 Features
+
+* 图片预览组件设置最大高度 ([a04af56](https://gitlab.hellobike.cn///commit/a04af56f54a78c73782078a4aab21ace80a3c7d3))
+* TODO 文档更新 ([c884571](https://gitlab.hellobike.cn///commit/c8845710be62f07841ad3bdbdf57bc9ad2a93fc9))
+* TODO 文档更新 ([0f17437](https://gitlab.hellobike.cn///commit/0f17437971effd9b6f539f5ea6e52c7e8eabd5a5))
+* TODO 文档更新 ([22de85f](https://gitlab.hellobike.cn///commit/22de85fc2d1daf635a61a4a22c9e17a0d2440532))
+* TODO 文档更新 ([93c870f](https://gitlab.hellobike.cn///commit/93c870f451107b48755706bcdb6f3bdfe59aacf3))
+* TODO 文档更新 ([0e1284c](https://gitlab.hellobike.cn///commit/0e1284c9db6ac1a45db455dfd3df4dbf321631c6))
+
+### [1.1.12](https://gitlab.hellobike.cn///compare/quark@1.1.11...quark@1.1.12) (2022-10-09)
+
+
+### 🎉 Features
+
+* dialog icon ([3d75b59](https://gitlab.hellobike.cn///commit/3d75b59e763516293d2bc0d71dd6cc9ca74ec323))
+* merge ([4b8de27](https://gitlab.hellobike.cn///commit/4b8de278c13d1b08de76cbfa693786c349eaf624))
+* release 1.1.7 ([8ec8aa8](https://gitlab.hellobike.cn///commit/8ec8aa87942700cb7c9a8f8a4da5a69b03c0e921))
+
+### [1.1.10](https://gitlab.hellobike.cn///compare/quark@1.1.9...quark@1.1.10) (2022-10-08)
+
+### [1.1.9](https://gitlab.hellobike.cn///compare/quark@1.1.7...quark@1.1.9) (2022-10-08)
+
+### [1.1.7](https://gitlab.hellobike.cn///compare/quark@1.1.6...quark@1.1.7) (2022-10-08)
+
+
+### 🐞 Bug Fixes
+
+* 修复上传组件只读问题 ([c409d9f](https://gitlab.hellobike.cn///commit/c409d9f1473cacd949ad6e113237f51936c0bd50))
+
+### [1.1.6](https://gitlab.hellobike.cn///compare/quark@1.1.5...quark@1.1.6) (2022-10-08)
+
+### [1.1.5](https://gitlab.hellobike.cn///compare/quark@1.1.4...quark@1.1.5) (2022-10-08)
+
+
+### 🐞 Bug Fixes
+
+* popupextra title gap ([dfec8cb](https://gitlab.hellobike.cn///commit/dfec8cbb800c5768aa42c378b0c86fe9007f3f79))
+
+
+### 🎉 Features
+
+* upload 组件支持预览只读模式 ([d08b901](https://gitlab.hellobike.cn///commit/d08b90114e1e8d97ab7b6e34fdb619bb2ac9b8bc))
+
+### [1.1.4](https://gitlab.hellobike.cn///compare/quark@1.1.2...quark@1.1.4) (2022-10-08)
+
+
+### 🎉 Features
+
+* 新增quark-element 包 ([d67f9bc](https://gitlab.hellobike.cn///commit/d67f9bc6488f3692402f03566f987b11a07098dc))
+* 修复dialog只有title，margin-bottom为20px ([b508d12](https://gitlab.hellobike.cn///commit/b508d12639e8c9fbc3437009c5032de021b3e556))
+* quark-element 生成 d.ts 文件 ([2c776b7](https://gitlab.hellobike.cn///commit/2c776b787535e51c35caa0948cce5c6b8fe67d2c))
+* uploader 优化 ([a09e0e7](https://gitlab.hellobike.cn///commit/a09e0e75d385c26d8238307f6a7ce383f15b63ce))
+
+### [1.1.3](https://gitlab.hellobike.cn///compare/quark@1.1.0...quark@1.1.3) (2022-09-30)
+
+
+### 🎉 Features
+
+* 新增quark-element 包 ([d67f9bc](https://gitlab.hellobike.cn///commit/d67f9bc6488f3692402f03566f987b11a07098dc))
+* quark-element 生成 d.ts 文件 ([2c776b7](https://gitlab.hellobike.cn///commit/2c776b787535e51c35caa0948cce5c6b8fe67d2c))
+* uploader 优化 ([a09e0e7](https://gitlab.hellobike.cn///commit/a09e0e75d385c26d8238307f6a7ce383f15b63ce))
+
+### [1.1.2](https://gitlab.hellobike.cn///compare/quark@1.1.1...quark@1.1.2) (2022-09-29)
+
+### [1.1.1](https://gitlab.hellobike.cn///compare/quark@1.1.0...quark@1.1.1) (2022-09-29)
+
+## [1.1.0](https://gitlab.hellobike.cn///compare/quark@1.0.39...quark@1.1.0) (2022-09-28)
+
+
+### 🐞 Bug Fixes
+
+* button margin ([7dd5a6d](https://gitlab.hellobike.cn///commit/7dd5a6dbef58c435d4d338dc2ef088eaf081030a))
+* dialog close btn android bug ([e6b929a](https://gitlab.hellobike.cn///commit/e6b929a05af5d15bd063f67ffba8ec1a1a4b0dd9))
+* Dialog demo ([4f2ed9e](https://gitlab.hellobike.cn///commit/4f2ed9e4739dbe3e24ee7ea4f6397c99044e73af))
+* 按钮样式修复 ([710dc2e](https://gitlab.hellobike.cn///commit/710dc2e0964abb2c77c616458e9923b784c46121))
+
+
+### 🎉 Features
+
+* change事件改 箭头函数 ([c3282d2](https://gitlab.hellobike.cn///commit/c3282d2210dbab0945b2f21619cebfad1dbf91d2))
+* change事件改箭头函数 ([767dc29](https://gitlab.hellobike.cn///commit/767dc29e6b91a36b5630377682fafcc40af07a2e))
+* datetime-picker 初版 ([c8bd50b](https://gitlab.hellobike.cn///commit/c8bd50bd4e9ebc5bf9ae0cb6cfff40d69be17fa1))
+* datetime-picker 提测 ([c422412](https://gitlab.hellobike.cn///commit/c42241247a3e0231a24c15d4d3d274bfb99773d0))
+* datetime-picker 组件开发 ([abf6784](https://gitlab.hellobike.cn///commit/abf67840786985f6580b6bce5ad6f67c3faba37b))
+* datetime-picker 组件问题修改 ([df7e48c](https://gitlab.hellobike.cn///commit/df7e48cd71a3282d4ce41788823e325f4424e62a))
+* datetime-picker开发 初版 ([31466d8](https://gitlab.hellobike.cn///commit/31466d8fcdadaab9990ab7c4e63a11c20b247f4f))
+* datetime-picker组件开发,未完成 ([47c146c](https://gitlab.hellobike.cn///commit/47c146cffd284093548c629ada49749236f03b0e))
+* demo 修改 ([12933c3](https://gitlab.hellobike.cn///commit/12933c3863bfc5f0d0c117cd1d76c0b1de87f1a8))
+* dialog 样式优化 ([787779c](https://gitlab.hellobike.cn///commit/787779c5efd4bd2350243f29859efaaa43dbc216))
+* doc ([b94a37f](https://gitlab.hellobike.cn///commit/b94a37f77671a099014b9da11dfa702bc404df4b))
+* quark-react export datetimepicker ([80493a6](https://gitlab.hellobike.cn///commit/80493a6deae6438e8e394163cce85abc60169012))
+* quark@1.0.42 release ([ad5f904](https://gitlab.hellobike.cn///commit/ad5f90481cff20422d0e356b345607e5c4cd2a0b))
+* release 1.0.45 ([38ddb1c](https://gitlab.hellobike.cn///commit/38ddb1c828509834c70f9dc10f45f6aae7e75e26))
+* release quarkui 1.0.40 ([803bc04](https://gitlab.hellobike.cn///commit/803bc047ba6da1d5f597bae7575e3945733ca06f))
+* update ([42eab9c](https://gitlab.hellobike.cn///commit/42eab9cb4507a5afcc7581b4af3f42e317a7d04e))
+* 代码整理 ([ccb4e62](https://gitlab.hellobike.cn///commit/ccb4e625ac623e5a0cb6db69bed14abde8f0bbc7))
+* 初始值设置 ([340744b](https://gitlab.hellobike.cn///commit/340744bc29324b8789080c501507ee8ec4e69e00))
+* 屏幕适配 ([7611973](https://gitlab.hellobike.cn///commit/7611973703996eee9e0c04febf6570b7a80f2260))
+* 支持关闭右上角按钮 ([aee5d42](https://gitlab.hellobike.cn///commit/aee5d42077aac887ad8bce07ad07a3d7c7b4d63b))
+* 支持关闭右上角按钮 ([1edfd61](https://gitlab.hellobike.cn///commit/1edfd61d0cbab4e9e67ae8a1aa48983a664972bb))
+* 文档修改 ([379a76e](https://gitlab.hellobike.cn///commit/379a76e730dbb27082c3044d519907223f008c7c))
+* 文档修改 ([128072c](https://gitlab.hellobike.cn///commit/128072ccece23c0c89f08ee8886ded5ae40cc80b))
+* 文档修改 ([94d7e1e](https://gitlab.hellobike.cn///commit/94d7e1eb5420bf223099aa69fa6fb390377c1f69))
+* 新增倒计时组件 ([b054816](https://gitlab.hellobike.cn///commit/b0548162a768bd39b2d6a6c3e58139fe2a55e876))
+* 日期选择开发 ([788caab](https://gitlab.hellobike.cn///commit/788caabeaf44ff7b5642bb374fbd1d9590bbe9c7))
+* 暂存文件 ([14b13cf](https://gitlab.hellobike.cn///commit/14b13cfe5ea477a5c6757fe238f1bcfaa17cf2b2))
+* 版本升级 ([87f0ac8](https://gitlab.hellobike.cn///commit/87f0ac8ed71c6ec0a6c24e6fea4e05c2fd894f15))
+* 组件引入开发 ([8ddb824](https://gitlab.hellobike.cn///commit/8ddb8248bc6b3f26d43ebc42dfd03db5ac87639e))
+* 选择完整时间bug修复, demo toast 值格式修改 ([803f0f7](https://gitlab.hellobike.cn///commit/803f0f7857e23a876861db5cb90ebe66fabc051d))
+
+### [1.0.45](https://gitlab.hellobike.cn///compare/quark@1.0.44...quark@1.0.45) (2022-09-27)
+
+
+### 🎉 Features
+
+* 版本升级 ([87f0ac8](https://gitlab.hellobike.cn///commit/87f0ac8ed71c6ec0a6c24e6fea4e05c2fd894f15))
+
+
+### 🐞 Bug Fixes
+
+* 按钮样式修复 ([710dc2e](https://gitlab.hellobike.cn///commit/710dc2e0964abb2c77c616458e9923b784c46121))
+* button margin ([7dd5a6d](https://gitlab.hellobike.cn///commit/7dd5a6dbef58c435d4d338dc2ef088eaf081030a))
+
+### [1.0.44](https://gitlab.hellobike.cn///compare/quark@1.0.39...quark@1.0.44) (2022-09-26)
+
+
+### 🐞 Bug Fixes
+
+* dialog close btn android bug ([e6b929a](https://gitlab.hellobike.cn///commit/e6b929a05af5d15bd063f67ffba8ec1a1a4b0dd9))
+* Dialog demo ([4f2ed9e](https://gitlab.hellobike.cn///commit/4f2ed9e4739dbe3e24ee7ea4f6397c99044e73af))
+
+
+### 🎉 Features
+
+* 屏幕适配 ([7611973](https://gitlab.hellobike.cn///commit/7611973703996eee9e0c04febf6570b7a80f2260))
+* 新增倒计时组件 ([b054816](https://gitlab.hellobike.cn///commit/b0548162a768bd39b2d6a6c3e58139fe2a55e876))
+* 暂存文件 ([14b13cf](https://gitlab.hellobike.cn///commit/14b13cfe5ea477a5c6757fe238f1bcfaa17cf2b2))
+* 支持关闭右上角按钮 ([aee5d42](https://gitlab.hellobike.cn///commit/aee5d42077aac887ad8bce07ad07a3d7c7b4d63b))
+* 支持关闭右上角按钮 ([1edfd61](https://gitlab.hellobike.cn///commit/1edfd61d0cbab4e9e67ae8a1aa48983a664972bb))
+* dialog 样式优化 ([787779c](https://gitlab.hellobike.cn///commit/787779c5efd4bd2350243f29859efaaa43dbc216))
+* doc ([b94a37f](https://gitlab.hellobike.cn///commit/b94a37f77671a099014b9da11dfa702bc404df4b))
+* quark@1.0.42 release ([ad5f904](https://gitlab.hellobike.cn///commit/ad5f90481cff20422d0e356b345607e5c4cd2a0b))
+* release quarkui 1.0.40 ([803bc04](https://gitlab.hellobike.cn///commit/803bc047ba6da1d5f597bae7575e3945733ca06f))
+* update ([42eab9c](https://gitlab.hellobike.cn///commit/42eab9cb4507a5afcc7581b4af3f42e317a7d04e))
+
+### [1.0.42](https://gitlab.hellobike.cn///compare/quark@1.0.41...quark@1.0.42) (2022-09-26)
+
+
+### 🐞 Bug Fixes
+
+* dialog close btn android bug ([e6b929a](https://gitlab.hellobike.cn///commit/e6b929a05af5d15bd063f67ffba8ec1a1a4b0dd9))
+* Dialog demo ([4f2ed9e](https://gitlab.hellobike.cn///commit/4f2ed9e4739dbe3e24ee7ea4f6397c99044e73af))
+
+
+### 🎉 Features
+
+* 新增倒计时组件 ([b054816](https://gitlab.hellobike.cn///commit/b0548162a768bd39b2d6a6c3e58139fe2a55e876))
+* 暂存文件 ([14b13cf](https://gitlab.hellobike.cn///commit/14b13cfe5ea477a5c6757fe238f1bcfaa17cf2b2))
+* 支持关闭右上角按钮 ([aee5d42](https://gitlab.hellobike.cn///commit/aee5d42077aac887ad8bce07ad07a3d7c7b4d63b))
+* 支持关闭右上角按钮 ([1edfd61](https://gitlab.hellobike.cn///commit/1edfd61d0cbab4e9e67ae8a1aa48983a664972bb))
+
+### [1.0.41](https://gitlab.hellobike.cn///compare/quark@1.0.40...quark@1.0.41) (2022-09-21)
+
+
+### 🎉 Features
+
+* doc ([b94a37f](https://gitlab.hellobike.cn///commit/b94a37f77671a099014b9da11dfa702bc404df4b))
+* release quarkui 1.0.40 ([803bc04](https://gitlab.hellobike.cn///commit/803bc047ba6da1d5f597bae7575e3945733ca06f))
+
+### [1.0.40](https://gitlab.hellobike.cn///compare/quark@1.0.39...quark@1.0.40) (2022-09-20)
+
+
+### 🎉 Features
+
+* 屏幕适配 ([7611973](https://gitlab.hellobike.cn///commit/7611973703996eee9e0c04febf6570b7a80f2260))
+* update ([42eab9c](https://gitlab.hellobike.cn///commit/42eab9cb4507a5afcc7581b4af3f42e317a7d04e))
+
+### [1.0.39](https://gitlab.hellobike.cn///compare/quark@1.0.39...quark@1.0.39) (2022-09-20)
+
+### [1.0.38](https://gitlab.hellobike.cn///compare/quark@1.0.36...quark@1.0.38) (2022-09-19)
+
+
+### 🐞 Bug Fixes
+
+* dialog slot ui fix ([6ed60af](https://gitlab.hellobike.cn///commit/6ed60af44852a12593b379aedf79240164afaf80))
+
+
+### 🎉 Features
+
+* 版本升级 1.0.37 ([0ff8fa0](https://gitlab.hellobike.cn///commit/0ff8fa0f75f7db97dc3633ca369a4ad65674a07c))
+* 版本同步 ([6e0f046](https://gitlab.hellobike.cn///commit/6e0f046eb1e9714ee2a4c024f4ef008f6b6dabde))
+* 更新发布脚本 ([3dd95e1](https://gitlab.hellobike.cn///commit/3dd95e10fe5be3ae0eed82673aa1a74888d842d8))
+* 修改dialog title样式和文档 & 优化浮层文档 ([f90a6ab](https://gitlab.hellobike.cn///commit/f90a6ab5476cf8741094c94b84dc3543d4367692))
+
+### [1.0.37](https://gitlab.hellobike.cn///compare/quark@1.0.36...quark@1.0.37) (2022-09-19)
+
+
+### 🎉 Features
+
+* 版本同步 ([6e0f046](https://gitlab.hellobike.cn///commit/6e0f046eb1e9714ee2a4c024f4ef008f6b6dabde))
+* 更新发布脚本 ([3dd95e1](https://gitlab.hellobike.cn///commit/3dd95e10fe5be3ae0eed82673aa1a74888d842d8))
+
+
+### 🐞 Bug Fixes
+
+* dialog slot ui fix ([6ed60af](https://gitlab.hellobike.cn///commit/6ed60af44852a12593b379aedf79240164afaf80))
+
+### [1.0.36](https://gitlab.hellobike.cn///compare/quark@1.0.32...quark@1.0.36) (2022-09-16)
+
+
+### 🐞 Bug Fixes
+
+* popupextra demo ([e0344d2](https://gitlab.hellobike.cn///commit/e0344d24c32156ec7c22a55eebc62d9d9bdd8d70))
+
+
+### 🎉 Features
+
+* dialog 兼容小手机 ([0da697e](https://gitlab.hellobike.cn///commit/0da697ecdefa045d6ab5e106fa89f91cb4162b3f))
+* dialog关闭按钮改为16px & 浮层自定义头部按钮修改 ([2ce3756](https://gitlab.hellobike.cn///commit/2ce3756736e661538200b302d46991f00018d83b))
+* feat: dialog 兼容小手机 ([6fa04fb](https://gitlab.hellobike.cn///commit/6fa04fb866c1d117259249d2a94bbc5792a8d426))
+* 优化发布脚本，自动同步最新 quark ([4d835f0](https://gitlab.hellobike.cn///commit/4d835f0e62fa3d68376b14b9922e631614ff10cd))
+
+### [1.0.35](https://gitlab.hellobike.cn///compare/quark@1.0.32...quark@1.0.35) (2022-09-16)
+
+
+### 🐞 Bug Fixes
+
+* popupextra demo ([e0344d2](https://gitlab.hellobike.cn///commit/e0344d24c32156ec7c22a55eebc62d9d9bdd8d70))
+
+
+### 🎉 Features
+
+* dialog 兼容小手机 ([0da697e](https://gitlab.hellobike.cn///commit/0da697ecdefa045d6ab5e106fa89f91cb4162b3f))
+* dialog关闭按钮改为16px & 浮层自定义头部按钮修改 ([2ce3756](https://gitlab.hellobike.cn///commit/2ce3756736e661538200b302d46991f00018d83b))
+* feat: dialog 兼容小手机 ([6fa04fb](https://gitlab.hellobike.cn///commit/6fa04fb866c1d117259249d2a94bbc5792a8d426))
+* 优化发布脚本，自动同步最新 quark ([4d835f0](https://gitlab.hellobike.cn///commit/4d835f0e62fa3d68376b14b9922e631614ff10cd))
+
+### [1.0.34](https://gitlab.hellobike.cn///compare/quark@1.0.32...quark@1.0.34) (2022-09-16)
+
+
+### 🐞 Bug Fixes
+
+* popupextra demo ([e0344d2](https://gitlab.hellobike.cn///commit/e0344d24c32156ec7c22a55eebc62d9d9bdd8d70))
+
+
+### 🎉 Features
+
+* dialog 兼容小手机 ([0da697e](https://gitlab.hellobike.cn///commit/0da697ecdefa045d6ab5e106fa89f91cb4162b3f))
+* dialog关闭按钮改为16px & 浮层自定义头部按钮修改 ([2ce3756](https://gitlab.hellobike.cn///commit/2ce3756736e661538200b302d46991f00018d83b))
+* feat: dialog 兼容小手机 ([6fa04fb](https://gitlab.hellobike.cn///commit/6fa04fb866c1d117259249d2a94bbc5792a8d426))
+* 优化发布脚本，自动同步最新 quark ([4d835f0](https://gitlab.hellobike.cn///commit/4d835f0e62fa3d68376b14b9922e631614ff10cd))
+
+### [1.0.33](https://gitlab.hellobike.cn///compare/quark@1.0.32...quark@1.0.33) (2022-09-16)
+
+
+### 🐞 Bug Fixes
+
+* popupextra demo ([e0344d2](https://gitlab.hellobike.cn///commit/e0344d24c32156ec7c22a55eebc62d9d9bdd8d70))
+
+
+### 🎉 Features
+
+* 优化发布脚本，自动同步最新 quark ([4d835f0](https://gitlab.hellobike.cn///commit/4d835f0e62fa3d68376b14b9922e631614ff10cd))
+* dialog 兼容小手机 ([0da697e](https://gitlab.hellobike.cn///commit/0da697ecdefa045d6ab5e106fa89f91cb4162b3f))
+* dialog关闭按钮改为16px & 浮层自定义头部按钮修改 ([2ce3756](https://gitlab.hellobike.cn///commit/2ce3756736e661538200b302d46991f00018d83b))
+
+### [1.0.32](https://gitlab.hellobike.cn///compare/quark@1.0.32...quark@1.0.32) (2022-09-16)
+
+
+### 🐞 Bug Fixes
+
+* popupextra demo ([e0344d2](https://gitlab.hellobike.cn///commit/e0344d24c32156ec7c22a55eebc62d9d9bdd8d70))
+
+
+### 🎉 Features
+
+* 优化发布脚本，自动同步最新 quark ([4d835f0](https://gitlab.hellobike.cn///commit/4d835f0e62fa3d68376b14b9922e631614ff10cd))
+
+### [1.0.31](https://gitlab.hellobike.cn///compare/quark@1.0.30...quark@1.0.31) (2022-09-15)
+
+
+### 🎉 Features
+
+* 优化popupextra组件 ([32edb89](https://gitlab.hellobike.cn///commit/32edb8966e325d21340af78b30fb98dfc395e716))
+* popupextra2react & fix  md ([f575efe](https://gitlab.hellobike.cn///commit/f575efedfb05564ed3b9f3e5e8fdafbb304ee49e))
+* popupextra2react & fix  md ([8eadeb8](https://gitlab.hellobike.cn///commit/8eadeb8380fa6c7b6f53796cbbaaa5b0f9ced4da))
+* popupextra2react & fix popupextra md ([e108526](https://gitlab.hellobike.cn///commit/e108526a02355b0aeb3fcef36d3b773d31522528))
+* updagte changelog ([f2bfb56](https://gitlab.hellobike.cn///commit/f2bfb5616c36ca2e8b4fe3415b879478552c2cc0))
+* update ([cad7b25](https://gitlab.hellobike.cn///commit/cad7b250e19d12523e19197a77e44df5801db220))
+
+### [1.0.30](https://gitlab.hellobike.cn///compare/quark@1.0.28...quark@1.0.30) (2022-09-15)
+
+
+### 🎉 Features
+
+* add popupextra ([b8285fd](https://gitlab.hellobike.cn///commit/b8285fd90ad0db2c60858a8331e2d5f38ead9d2a))
+* popup safe area top ([d0cbf4d](https://gitlab.hellobike.cn///commit/d0cbf4dae64bfb2f0ceea94031bc687b23be43ba))
+* release popupextra ([e05033c](https://gitlab.hellobike.cn///commit/e05033ca28d7f45e5bcc2dbe8add41a58e6d9b5a))
+* TODO ([a1afc83](https://gitlab.hellobike.cn///commit/a1afc83067e951eb558a42f420374452b0704a1f))
+* 日志删除 ([38c0d01](https://gitlab.hellobike.cn///commit/38c0d0185704b43ea0d6a58cf6f9098aa16342f2))
+
+### [1.0.29](https://gitlab.hellobike.cn///compare/quark@1.0.28...quark@1.0.29) (2022-09-15)
+
+
+### 🎉 Features
+
+* 日志删除 ([38c0d01](https://gitlab.hellobike.cn///commit/38c0d0185704b43ea0d6a58cf6f9098aa16342f2))
+* add popupextra ([b8285fd](https://gitlab.hellobike.cn///commit/b8285fd90ad0db2c60858a8331e2d5f38ead9d2a))
+* TODO ([a1afc83](https://gitlab.hellobike.cn///commit/a1afc83067e951eb558a42f420374452b0704a1f))
+
+### [1.0.28](https://gitlab.hellobike.cn///compare/quark@1.0.25...quark@1.0.28) (2022-09-13)
+
+
+### 🎉 Features
+
+* demo 样式修正 ([a237724](https://gitlab.hellobike.cn///commit/a2377244652da1e852f7e2ea62014098fc1ba084))
+* tab新增滑动跳过禁用tab,且允许循环滑动 ([56af7b8](https://gitlab.hellobike.cn///commit/56af7b8ec0ca0c69193703afc0a49aebd1a4526a))
+* type ([5ad1294](https://gitlab.hellobike.cn///commit/5ad1294a178850dfd60601f77549ae76d48772fe))
+* 通知栏更新 ([5cf2663](https://gitlab.hellobike.cn///commit/5cf2663519776cec6fa3828c45bd68c6ea605689))
+* 通知栏样式修复 ([ccf431e](https://gitlab.hellobike.cn///commit/ccf431edb66684cb70e7208b84a4157d62305f6c))
+
+### [1.0.27](https://gitlab.hellobike.cn///compare/quark@1.0.26...quark@1.0.27) (2022-09-06)
+
+
+### 🎉 Features
+
+* 通知栏样式修复 ([ccf431e](https://gitlab.hellobike.cn///commit/ccf431edb66684cb70e7208b84a4157d62305f6c))
+
+### [1.0.26](https://gitlab.hellobike.cn///compare/quark@1.0.25...quark@1.0.26) (2022-09-06)
+
+
+### 🎉 Features
+
+* type ([5ad1294](https://gitlab.hellobike.cn///commit/5ad1294a178850dfd60601f77549ae76d48772fe))
+
+### [1.0.25](https://gitlab.hellobike.cn///compare/quark@1.0.24...quark@1.0.25) (2022-08-27)
+
+
+### 🎉 Features
+
+* 版本更新 ([f7e7790](https://gitlab.hellobike.cn///commit/f7e7790b34d4c6c3cba88fddbdbdbb0cce327e44))
+
+### [1.0.24](https://gitlab.hellobike.cn///compare/quark@1.0.23...quark@1.0.24) (2022-08-27)
+
+
+### 🎉 Features
+
+* quark-react ([1909f8e](https://gitlab.hellobike.cn///commit/1909f8ed74bb797a0d3f9abba440765c87fd62a4))
+* 按需文件修改 ([4f3dfed](https://gitlab.hellobike.cn///commit/4f3dfedb5e4ea4f3d028ef63d6b99891c1954402))
+* 文档完善 ([3ab26e8](https://gitlab.hellobike.cn///commit/3ab26e8f50508ae69354c6291a0ef7baa1c9aea3))
+
+### [1.0.23](https://gitlab.hellobike.cn///compare/quark@1.0.22...quark@1.0.23) (2022-08-26)
+
+### [1.0.22](https://gitlab.hellobike.cn///compare/quark@1.0.21...quark@1.0.22) (2022-08-26)
+
+### [1.0.21](https://gitlab.hellobike.cn///compare/quark@1.0.20...quark@1.0.21) (2022-08-25)
+
+
+### 🎉 Features
+
+* postinstall 脚本发布 ([cc048f3](https://gitlab.hellobike.cn///commit/cc048f3049f1455835e67c0d8ddb02e0f662aa38))
+* 优化image demo 图片 ([f987122](https://gitlab.hellobike.cn///commit/f98712277b3743ccc1659a38ce3757be2fad878e))
+* 优化image demo 图片 ([67d41ab](https://gitlab.hellobike.cn///commit/67d41abea5bfcd24a79a7860373d9227ebba3f98))
+
+### [1.0.20](https://gitlab.hellobike.cn///compare/quark@1.0.19...quark@1.0.20) (2022-08-24)
+
+
+### 🐞 Bug Fixes
+
+* cell demo longlong title ([a3916d0](https://gitlab.hellobike.cn///commit/a3916d04bd4fd92d4587a61543751cabce16856e))
+
+
+### 🎉 Features
+
+* postinstall ([768c336](https://gitlab.hellobike.cn///commit/768c336017db0d75222e57d042b4ed72bba96fbb))
+* 使用统计脚本 ([3c5f524](https://gitlab.hellobike.cn///commit/3c5f5243b04bb51fa145492631976b5564dcccc1))
+* 增加体积插件 ([f0eed60](https://gitlab.hellobike.cn///commit/f0eed6042998b5791ce7df5e0ce5df449bdb4345))
+
+### [1.0.19](https://gitlab.hellobike.cn///compare/quark@1.0.18...quark@1.0.19) (2022-08-22)
+
+### [1.0.18](https://gitlab.hellobike.cn///compare/quark@1.0.17...quark@1.0.18) (2022-08-22)
+
+
+### 🎉 Features
+
+* quark react types 完善 ([4186372](https://gitlab.hellobike.cn///commit/4186372c8dcd64381526e39a3da6fccd2c4db0c4))
+* ref 类型申明 ([310ac7d](https://gitlab.hellobike.cn///commit/310ac7dfefef754b28e58e8374ca75a19ef83066))
+* type ([b425627](https://gitlab.hellobike.cn///commit/b425627ecbbc52a3c72e82b0b394ba6eb814aa3d))
+
+### [1.0.17](https://gitlab.hellobike.cn///compare/quark@1.0.16...quark@1.0.17) (2022-08-22)
+
+### [1.0.16](https://gitlab.hellobike.cn///compare/quark@1.0.15...quark@1.0.16) (2022-08-22)
+
+
+### 🎉 Features
+
+* quark react skeleton type ([4dfb2c8](https://gitlab.hellobike.cn///commit/4dfb2c8bbd2bba3234fcaf106f55aff2dff8c82b))
+
+### [1.0.15](https://gitlab.hellobike.cn///compare/quark@1.0.14...quark@1.0.15) (2022-08-22)
+
+### [1.0.14](https://gitlab.hellobike.cn///compare/quark@1.0.13...quark@1.0.14) (2022-08-22)
+
+
+### 🎉 Features
+
+* 优化popover react doc ([5aafd95](https://gitlab.hellobike.cn///commit/5aafd9503413f457a1283adf6303e1b221a872e6))
+* 优化popover react doc ([44214d9](https://gitlab.hellobike.cn///commit/44214d9bd986f9b1572110139efc45a6a74392c6))
+* 国际化增加印度尼西亚 & 泰语 ([91e02bf](https://gitlab.hellobike.cn///commit/91e02bfee814eaee3a64f52947f39931469b345b))
+* 国际化增加台湾 ([d99c455](https://gitlab.hellobike.cn///commit/d99c455b2abd5a017f27af81143b2d4a4dd9e194))
+
+### [1.0.13](https://gitlab.hellobike.cn///compare/quark@1.0.11...quark@1.0.13) (2022-08-18)
+
+
+### 🐞 Bug Fixes
+
+* fix: 修复dialog 受控组件无法打开问题 ([b649306](https://gitlab.hellobike.cn///commit/b64930613ae3b6c3627aa55107c669d92f991993))
+* 优化弹窗路由切换消失 ([015fabb](https://gitlab.hellobike.cn///commit/015fabbd72f6dbd7922dc92c58b8fb362c61666f))
+* 修复dialog 受控组件无法打开问题 ([027e7a3](https://gitlab.hellobike.cn///commit/027e7a3deaef9c8dd112e69e45cd2eb675fb50ee))
+* 修复响应式数据展示问题 ([881e52f](https://gitlab.hellobike.cn///commit/881e52ffe62bb3f04802ffcaaa24fda526047353))
+* 修复翻译的写法 ([9066763](https://gitlab.hellobike.cn///commit/90667633fe1bdc8877d0b3fcc51434e3abb6d26a))
+* 修复跑马灯高度问题 ([400917f](https://gitlab.hellobike.cn///commit/400917f5a063c786af76ad24fad3d71264b9afe3))
+
+
+### 🎉 Features
+
+* react field ([f44fc52](https://gitlab.hellobike.cn///commit/f44fc52f51bbb67d74a0fe4e156744cc16e837ed))
+* React 检测到Grid ([70fd89a](https://gitlab.hellobike.cn///commit/70fd89a22c70a63e03be26c47e05b707105ffaa1))
+* toast 文档更新 ([438bd5d](https://gitlab.hellobike.cn///commit/438bd5d98cd1a28cd19d99889fb921fb27016eea))
+* Toast 文档更新同时支持单、多例模式 ([fb7f847](https://gitlab.hellobike.cn///commit/fb7f84785769c861342a358f4563fddd333bc4fe))
+* tooltips 文档 ([e204195](https://gitlab.hellobike.cn///commit/e204195308f10409913df90e3f12070ff30eebf7))
+* uploader 文档完善 ([0b4d582](https://gitlab.hellobike.cn///commit/0b4d58225e3a39596715c65371fdbd5e0d08762b))
+* 增加 custom profills cdn ([f74975c](https://gitlab.hellobike.cn///commit/f74975c8637104e7830927ad882163b4deae8f82))
+* 完善实例化组件文档 ([69512ca](https://gitlab.hellobike.cn///commit/69512ca33d48cc2021167599e0e7a7e70ce98745))
+* 文档 ([be8a56b](https://gitlab.hellobike.cn///commit/be8a56b43ccbf24798650b6ce6d7387eea3a17e9))
+* 文档修正 ([de46145](https://gitlab.hellobike.cn///commit/de46145ccb98fff34c0e19ed133fa44c04c29975))
+* 文档修正 ([7bec185](https://gitlab.hellobike.cn///commit/7bec185512b82e269283cd10f8029a37b5da83ea))
+* 文档修正 ([ca13bd7](https://gitlab.hellobike.cn///commit/ca13bd742fba8baff7808eed1667cfaaa976aa04))
+* 文档变更 ([c1a5cbf](https://gitlab.hellobike.cn///commit/c1a5cbfe790d0852dddb186bb026e8850fdf732f))
+* 文档更新 ([ff5de99](https://gitlab.hellobike.cn///commit/ff5de99592a82e1e3db7f1dbab10d6137a1cc1d0))
+* 文档检查完成 ([6085d73](https://gitlab.hellobike.cn///commit/6085d735ecd72174941aaafd01a871f8999eefbb))
+* 移除无用cdn js ([2ed7ab6](https://gitlab.hellobike.cn///commit/2ed7ab6fa15669841ebdabeafe62c5e1d3b59958))
+
+### [1.0.12](https://gitlab.hellobike.cn///compare/quark@1.0.11...quark@1.0.12) (2022-08-11)
+
+
+### 🎉 Features
+
+* 完善实例化组件文档 ([69512ca](https://gitlab.hellobike.cn///commit/69512ca33d48cc2021167599e0e7a7e70ce98745))
+* toast 文档更新 ([438bd5d](https://gitlab.hellobike.cn///commit/438bd5d98cd1a28cd19d99889fb921fb27016eea))
+* Toast 文档更新同时支持单、多例模式 ([fb7f847](https://gitlab.hellobike.cn///commit/fb7f84785769c861342a358f4563fddd333bc4fe))
+* uploader 文档完善 ([0b4d582](https://gitlab.hellobike.cn///commit/0b4d58225e3a39596715c65371fdbd5e0d08762b))
+
+
+### 🐞 Bug Fixes
+
+* 修复dialog 受控组件无法打开问题 ([027e7a3](https://gitlab.hellobike.cn///commit/027e7a3deaef9c8dd112e69e45cd2eb675fb50ee))
+
+### [1.0.11](https://gitlab.hellobike.cn///compare/quark@1.0.10...quark@1.0.11) (2022-08-11)
+
+
+### 🐞 Bug Fixes
+
+* react路由切换bug ([4c97932](https://gitlab.hellobike.cn///commit/4c97932b5739352b2b20730ebf190e72f2d78dd6))
+* 修复 demo 背景，高度不够导致底部空白 ([19e568e](https://gitlab.hellobike.cn///commit/19e568e0076c2febfd875bb1c34726077e18fada))
+
+
+### 🎉 Features
+
+* popup scroll bar ([26210d9](https://gitlab.hellobike.cn///commit/26210d9e267e412af9ffe52325f4cc4a4f89b9d0))
+* tab demo ([ab1358f](https://gitlab.hellobike.cn///commit/ab1358f9b9228c67d4278d73e78f5b6f49edb4f4))
+* 先移除 html body height 100% ([0f0123f](https://gitlab.hellobike.cn///commit/0f0123f11c4a100a2f80628bc6ab634ec87b6166))
+* 先移除 html body height 100% ([cd694e2](https://gitlab.hellobike.cn///commit/cd694e21ec4e7e107639ff69d894389a284853e0))
+* 移除log ([af3f55d](https://gitlab.hellobike.cn///commit/af3f55d770b37e69f7edb46e6f4075c84369abc5))
+
+### [1.0.10](https://gitlab.hellobike.cn///compare/quark@1.0.8...quark@1.0.10) (2022-08-11)
+
+
+### 🐞 Bug Fixes
+
+* 按钮组件内部引入loading组件 ([1639567](https://gitlab.hellobike.cn///commit/1639567bb25886401ed03ed3289836f9896ca550))
+
+
+### 🎉 Features
+
+* quark version 1.0.8 ([a60df24](https://gitlab.hellobike.cn///commit/a60df249834e0517c612741f6f01bb21e3d2e6a7))
+* release 1.0.9 ([46f9a68](https://gitlab.hellobike.cn///commit/46f9a6857f380d7406dcc02119f31ef49ff39ba8))
+
+### [1.0.9](https://gitlab.hellobike.cn///compare/quark@1.0.8...quark@1.0.9) (2022-08-11)
+
+
+### 🎉 Features
+
+* quark version 1.0.8 ([a60df24](https://gitlab.hellobike.cn///commit/a60df249834e0517c612741f6f01bb21e3d2e6a7))
+
+
+### 🐞 Bug Fixes
+
+* 按钮组件内部引入loading组件 ([1639567](https://gitlab.hellobike.cn///commit/1639567bb25886401ed03ed3289836f9896ca550))
+
+### [1.0.8](https://gitlab.hellobike.cn///compare/quark@1.0.7...quark@1.0.8) (2022-08-10)
+
+
+### 🎉 Features
+
+* changlog 文档同步 ([b136f5f](https://gitlab.hellobike.cn///commit/b136f5f7e87a13e39ac00d6aa6f124c01a0014fb))
+* quark -react 1.0.7 ([5bb1b5d](https://gitlab.hellobike.cn///commit/5bb1b5d1da6f395eb6f1f5a68dfee68a2180ad4a))
+* quark 1.0.7 ([fce6dcc](https://gitlab.hellobike.cn///commit/fce6dccfedcefc6e9dde2f8aee6acae0588ad32e))
+* 翻译操作反馈组件 ([625bcf6](https://gitlab.hellobike.cn///commit/625bcf62a764f432caeddd5b56899e07ff0a47cc))
+
+
+### 🐞 Bug Fixes
+
+* tab ([ebea835](https://gitlab.hellobike.cn///commit/ebea835b8dfc5e09414e2fb84e4f5815ca9acfb7))
+* tabbar ([d24714a](https://gitlab.hellobike.cn///commit/d24714a547e67f36dfbf0624002594667accd323))
+
+### [1.0.7](https://gitlab.hellobike.cn///compare/quark@1.0.5...quark@1.0.7) (2022-08-09)
+
+
+### 🐞 Bug Fixes
+
+* Big title name ([6de28f3](https://gitlab.hellobike.cn///commit/6de28f384b93bc454d79d1139075130e0d285cff))
+* 本地开发h5url改为localhost ([fe7f81f](https://gitlab.hellobike.cn///commit/fe7f81fc5d71ec1838f556e1bf922a76904064af))
+
+
+### Documentation
+
+* 完善文档 ([17b1f33](https://gitlab.hellobike.cn///commit/17b1f33f0cc4c1f9a619a9a6fa7a76566aeba984))
+
+
+### 🎉 Features
+
+* add react h5 demo router ([76c202a](https://gitlab.hellobike.cn///commit/76c202afb1d302b9acc0011c29efbadbbd38f0bb))
+* dialog react doc done ([1396848](https://gitlab.hellobike.cn///commit/13968488c502a03d78b296319b49b99ecc97c61b))
+* doc ([ba26707](https://gitlab.hellobike.cn///commit/ba267074625ca1f5536d627a8935821688165886))
+* feat: marketDialog 组件完善 ([9d93871](https://gitlab.hellobike.cn///commit/9d93871c92270de9176bd8f6e36937b92fb07ebe))
+* field 组 新增 react 文档 ([c174b94](https://gitlab.hellobike.cn///commit/c174b940b69c5d4484e6e3353e5ebc284851ea31))
+* imagePreview 组件文档完善 ([dc2bbab](https://gitlab.hellobike.cn///commit/dc2bbabdbf6baabcc909906fb2cbf084a4fa5086))
+* list 组件完善、 ([8f26161](https://gitlab.hellobike.cn///commit/8f261618dee4530bd2dc89a56037fd52513f96a7))
+* marketDialog 组件完善 ([1b654c7](https://gitlab.hellobike.cn///commit/1b654c7857b2a237df14bb20a53c933f35b65f8d))
+* navbar react doc done ([c02e6ff](https://gitlab.hellobike.cn///commit/c02e6ffe0a698e5da64b7bf10228fffcd24a134a))
+* Popover ([c2bc6d1](https://gitlab.hellobike.cn///commit/c2bc6d1675baaa85b2cf01a5160a1ed3bc24e02b))
+* progress 进度条文档完善 ([4311882](https://gitlab.hellobike.cn///commit/4311882d2da01ab2abc36b23fccbd24480c57b5a))
+* quark reactify ts ([b0adca5](https://gitlab.hellobike.cn///commit/b0adca5befbcd6c03446facedb338fcb611a7988))
+* quark-react ts 申明 ([fc65b31](https://gitlab.hellobike.cn///commit/fc65b318ee033c6c07cd17d7fd9d1abf6b2a1375))
+* quark-react 支持类型申明 ([f13fc18](https://gitlab.hellobike.cn///commit/f13fc180e038fbd20c712c116198f92d0256a2c0))
+* react doc ([34fbcf3](https://gitlab.hellobike.cn///commit/34fbcf378d8107187041b3c9f5e6ae4cac009b91))
+* react doc done ([2618db8](https://gitlab.hellobike.cn///commit/2618db8fb8268e0643a36660bd0b64f7d25519af))
+* react 文档 ([8a6134b](https://gitlab.hellobike.cn///commit/8a6134b59b72e79556499d8559eb97660a88a2cd))
+* search 增加 react 文档 ([0c7aa1e](https://gitlab.hellobike.cn///commit/0c7aa1e09087b17ca4eda298c354da808b6c6bb3))
+* skeleton ([2bbb3a2](https://gitlab.hellobike.cn///commit/2bbb3a2af6c0cce6faffabd8c457cf94a1e7226d))
+* toast react done ([12d2dcb](https://gitlab.hellobike.cn///commit/12d2dcb502fca44981be140a32743f80e88111a2))
+* TODO 文档 ([366386e](https://gitlab.hellobike.cn///commit/366386e8ced2715ff5351386e08f654feca10d0d))
+* update ([0c411d3](https://gitlab.hellobike.cn///commit/0c411d3a748b86a34dac6440ab5b74180fa5309e))
+* update ([19fdc0b](https://gitlab.hellobike.cn///commit/19fdc0b301c2fd98c09f69b34c48e79731f7eee4))
+* update ([5a795c2](https://gitlab.hellobike.cn///commit/5a795c20b2ab3b6d88ece951000609fe7a56107f))
+* update ([04d2563](https://gitlab.hellobike.cn///commit/04d25639e0353a031b17dc25010fb07c106ac9d7))
+* update css变量加 ([5a43dc1](https://gitlab.hellobike.cn///commit/5a43dc106d08b5be2d259eb8bdf5238794e9a24a))
+* update doc ([c0a6218](https://gitlab.hellobike.cn///commit/c0a6218d5960082f2aa3b74634b7bdc2b9eae352))
+* update react doc ([85d22d0](https://gitlab.hellobike.cn///commit/85d22d01260d343dc744f848d010deb04926ed5f))
+* update react doc ([f9335ec](https://gitlab.hellobike.cn///commit/f9335ecb9445b64812d12ce36a3b8eb9fe63dccf))
+* update skeleton readme ([a505182](https://gitlab.hellobike.cn///commit/a505182162d4eac36e9d839146dc30bce971caa6))
+* uploader done ([e7d90ad](https://gitlab.hellobike.cn///commit/e7d90adeeb99b01eb9f07babb3e45968436d8420))
+* uploader的demo国际化 ([11f98a3](https://gitlab.hellobike.cn///commit/11f98a38073d96940b0fe6ba0f2143e976cc379f))
+* 完善 textarea ([4d2bd8f](https://gitlab.hellobike.cn///commit/4d2bd8f0d4ef7a3d76a9ec9041fbed60998fe117))
+* 完善 uploader ([4d83f7a](https://gitlab.hellobike.cn///commit/4d83f7a60c94238a04c91a3e84fb3783781ebbc7))
+* 完成 rate 、stepper react 文档 ([c54c147](https://gitlab.hellobike.cn///commit/c54c14764e723baed846340b3c044991cd5a86e8))
+* 支持按需加载 ([1b4cf32](https://gitlab.hellobike.cn///commit/1b4cf32f181ce2e66b565adae91b2f46d1be8093))
+* 支持类型声明 ([cb4e4b9](https://gitlab.hellobike.cn///commit/cb4e4b9fa8655078d3209970e0c7209577dfe125))
+* 移除无用代码 ([ac5e5e1](https://gitlab.hellobike.cn///commit/ac5e5e17bc428ad3a85442b1ad14751b8d47b994))
+* 类型申明 ([4c696f2](https://gitlab.hellobike.cn///commit/4c696f24313f71571afa4b37e054d1b149a44c68))
+* 统一css 变量命名 ([b372422](https://gitlab.hellobike.cn///commit/b37242249596ed86510c7bfee30e32d4954dd221))
+* 跑马灯文档完善 ([f75b61e](https://gitlab.hellobike.cn///commit/f75b61e76a1c83153c219334fd0dc23899969d3a))
+* 通知栏文档完善 ([cba56f1](https://gitlab.hellobike.cn///commit/cba56f110a6c5fbe9a32fca26b0b8bab2a0442e7))
+
+### [1.0.5](https://gitlab.hellobike.cn///compare/quark@1.0.3...quark@1.0.5) (2022-08-01)
+
+### [1.0.3](https://gitlab.hellobike.cn///compare/quark@1.0.2...quark@1.0.3) (2022-08-01)
+
+
+### 🎉 Features
+
+* .d.ts ([5d4c5cf](https://gitlab.hellobike.cn///commit/5d4c5cfe049cf294d1c0667bcec3a288dd2014f0))
+* feat: style: toast 代码优化 ([5e37c8d](https://gitlab.hellobike.cn///commit/5e37c8db290c187398ebc2c4f60d9be408405a9c))
+* quark react 修正 ([b1cbbf9](https://gitlab.hellobike.cn///commit/b1cbbf97641a926fe5e20d75c24d7726751bb929))
+* quark 发布 ([2d6f38e](https://gitlab.hellobike.cn///commit/2d6f38ec5459bd2f244fac9d8353da55273eb314))
+* quark-react 发布1.0.0 ([af7f6e8](https://gitlab.hellobike.cn///commit/af7f6e8984b78eb04ca4de8ab31fca982169881c))
+* toast 类型声明 ([6697ea1](https://gitlab.hellobike.cn///commit/6697ea19ec035047b7970ffa9530d0ac528be2ea))
+* 增加actionsheet imagePreview 类型申明 ([49a8061](https://gitlab.hellobike.cn///commit/49a8061c817be919482e0e6f4acb1a2491f7f307))
+* 类型申明 ([7b65db3](https://gitlab.hellobike.cn///commit/7b65db3803ff006241198d8aa352db2bccfee48f))
+
+### [1.0.2](https://gitlab.hellobike.cn///compare/quark@1.0.1...quark@1.0.2) (2022-07-28)
+
+### [1.0.1](https://gitlab.hellobike.cn///compare/quark@1.0.0...quark@1.0.1) (2022-07-28)
+
+## 1.0.0 (2022-07-28)
+
+
+### Merge
+
+*  master to doc ([d8d3afa](https://gitlab.hellobike.cn///commit/d8d3afa0563b0584badb73e170920c39acc31afd))
+
+
+### 🐞 Bug Fixes
+
+* build dist ([7f1416e](https://gitlab.hellobike.cn///commit/7f1416e487de5f6a9df6cb8cea234221544eef1c))
+* build dist ([e71a2be](https://gitlab.hellobike.cn///commit/e71a2bec0c8da5394e20a23b3f2a989fb1a27810))
+* demo url ([e851f9e](https://gitlab.hellobike.cn///commit/e851f9eb9d8e01e498e6f5c2cf65a8568639db43))
+* init ([967ebea](https://gitlab.hellobike.cn///commit/967ebea6af5c8441cd3a4ef7a0f228be8e8b1cbc))
+* package build init ([1a825df](https://gitlab.hellobike.cn///commit/1a825df431ae97c9be6f1190d2ab86252c20d344))
+* remove doc's theme ([86dd0d0](https://gitlab.hellobike.cn///commit/86dd0d0c41f5353c4765d152edf71179ae6f5bfa))
+* site publish update ([4d80705](https://gitlab.hellobike.cn///commit/4d80705b32d8594aed0a08c7077162746319dbeb))
+* site publish update ([fd5c2cf](https://gitlab.hellobike.cn///commit/fd5c2cf0b54e08de71863960d7d0f5b18b01b67e))
+* sitepublish ([e21aa7c](https://gitlab.hellobike.cn///commit/e21aa7c6199198bfe0b46c01fbdc4b3d53da154f))
+* skeleton ([1d97952](https://gitlab.hellobike.cn///commit/1d97952665bf927276ae71c44cadbfa999bdcf98))
+* sticky组件demo样式修复 ([dde5bc0](https://gitlab.hellobike.cn///commit/dde5bc0144789d11d38e28a170a411b0666a4158))
+* translate ([804dbc2](https://gitlab.hellobike.cn///commit/804dbc2fb116a4002ab660976c76173144748674))
+* update ([967e513](https://gitlab.hellobike.cn///commit/967e513b99d79174ee4c01743f6dfeb9a5c8d90a))
+* 修复 dialog 滚动 ([9a659d1](https://gitlab.hellobike.cn///commit/9a659d1ec0639314c62228f7ff15fc09e77923ab))
+* 修复 size 大小 ([6ebe0e2](https://gitlab.hellobike.cn///commit/6ebe0e28d1620ed513c330eb651c684222a4d7a6))
+* 修复 toast demo ([034b2d1](https://gitlab.hellobike.cn///commit/034b2d1f4f73684fa525651d94b814a44d6cdf90))
+* 修复别名问题 ([76bff46](https://gitlab.hellobike.cn///commit/76bff469de20609394a5add25bab52223a477962))
+* 修复轮播图单张图片问题 ([fd5d3ad](https://gitlab.hellobike.cn///commit/fd5d3ad3a0222a60826a6f9cf54d075ea5306c58))
+* 修打包问题 ([53cf5cb](https://gitlab.hellobike.cn///commit/53cf5cb86080efd7f7c527255e14982d29116daa))
+* 修改打包路径 ([fb24d6f](https://gitlab.hellobike.cn///commit/fb24d6f71edb3e83626850511db5081f0baf2f9f))
+* 补充发布脚本代码注释 ([2ac9f47](https://gitlab.hellobike.cn///commit/2ac9f4754d46832523f98c6b43eb8e20bc99a7b1))
+* 补充发布脚本代码注释 ([e47640c](https://gitlab.hellobike.cn///commit/e47640ce4f6d52d25ca51ba2212edd94739441a0))
+* 跨域获取iframe url ([16cf6f1](https://gitlab.hellobike.cn///commit/16cf6f17dd912341083947b437fda4243fe067fa))
+* 跨域获取iframe url ([e52ad64](https://gitlab.hellobike.cn///commit/e52ad64c9164d5d745d060fa7b424713e1afc1af))
+* 部署 ([35ce813](https://gitlab.hellobike.cn///commit/35ce813437d7f124e762853fb48075794858906c))
+* 部署 ([c812078](https://gitlab.hellobike.cn///commit/c812078f2b138d8185b21f9c6f486e31113f68e9))
+* 部署 ([a38320e](https://gitlab.hellobike.cn///commit/a38320ea38b78e253eb19b5305582922f57368da))
+* 部署 ([d34cbe2](https://gitlab.hellobike.cn///commit/d34cbe2faf3bd8ee3e803b05bbe62e91ec4236b8))
+
+
+### 🎉 Features
+
+*   完善单独发布脚本 ([eb3d73e](https://gitlab.hellobike.cn///commit/eb3d73e8b26e124ebc525d5a65fae6f7282c52df))
+* @hb/quark patch 版本升级 ([bd65ef3](https://gitlab.hellobike.cn///commit/bd65ef3c1a990a84f7cdcd32ab73d635d3d1e66c))
+* @quark/icons 发布 ([f8bf201](https://gitlab.hellobike.cn///commit/f8bf201f0d48f2a5be1a0ee99799022033a1c2bd))
+* add stopPropagation for diasbled button ([da55c47](https://gitlab.hellobike.cn///commit/da55c4736eededd7715660fa0d27bdf8daa676b5))
+* build site ([d48f88c](https://gitlab.hellobike.cn///commit/d48f88c137c349959b5b84648ddf8fa06f9b3001))
+* build website ([b216577](https://gitlab.hellobike.cn///commit/b2165773c0b56695d84ff8b96f46f336e7588af9))
+* build 调试 ([9bac826](https://gitlab.hellobike.cn///commit/9bac826f54210f2f57f362ffc66798a62eff8b49))
+* build 调试 ([737eb55](https://gitlab.hellobike.cn///commit/737eb5546d5bc76694f748625da6470f95662644))
+* build 调试 ([446c942](https://gitlab.hellobike.cn///commit/446c942c7bbe7c23d03356c4110983ae2a169887))
+* build 调试 ([66e3e02](https://gitlab.hellobike.cn///commit/66e3e022dc130a72c133037456bf43b768fb51b8))
+* build 调试 ([48a3332](https://gitlab.hellobike.cn///commit/48a3332291777f0933288c13931e91a4b455dee8))
+* build 调试 ([426e433](https://gitlab.hellobike.cn///commit/426e4339c791c2b2bf235d7516e56a7baea94719))
+* build 调试 ([cb3ceae](https://gitlab.hellobike.cn///commit/cb3ceae154a28d1c4e54261d0302fd1cc9931328))
+* build 调试 ([64fe9f8](https://gitlab.hellobike.cn///commit/64fe9f8f37e03333517f967e035789f4019e1ad9))
+* build 调试 ([351250c](https://gitlab.hellobike.cn///commit/351250c9c53138539be7e252100ec222c0098027))
+* build 调试 ([8fbe6cf](https://gitlab.hellobike.cn///commit/8fbe6cf68094f037372b5dfd52ac93ae7796379e))
+* build 调试 ([3615b3c](https://gitlab.hellobike.cn///commit/3615b3c18755b6e1cdf9b7bfb0860bf41746ff36))
+* build 调试 ([2bc6e99](https://gitlab.hellobike.cn///commit/2bc6e993441898fbdfdcd38fd28241e92d77084b))
+* buildsite ([759109f](https://gitlab.hellobike.cn///commit/759109f0daef8390f40f8192a1e92b06bd389144))
+* build前先npm install ([041a6bc](https://gitlab.hellobike.cn///commit/041a6bc6e46a557100a977bdb4f0e4d2042b1d75))
+* build前先npm install ([9e7704c](https://gitlab.hellobike.cn///commit/9e7704c475f072372f3e628eb2f473983dbb1baa))
+* build前先npm install ([88b8935](https://gitlab.hellobike.cn///commit/88b893535b8f973c737aa0d6a30e8dd4e5c8884d))
+* build前先npm install ([2b14cd0](https://gitlab.hellobike.cn///commit/2b14cd0bf3d44045b32ce4674c15f48a6f9724bb))
+* Cell组件修改：只有带isLink的才有cursor: pointer && 新增点击active效果 ([e651537](https://gitlab.hellobike.cn///commit/e6515377d9fce97a4f9a1c15524f8b43ec534edb))
+* docs 脚本 ([f769e4b](https://gitlab.hellobike.cn///commit/f769e4b6de02e048b7b461c035fd1c9f8cbd8c27))
+* example 统一 yarn ([4a3f398](https://gitlab.hellobike.cn///commit/4a3f398908f283f1c77bbd8e5cee5c9f08b8747d))
+* feat: feat: test: 测试打包命令 ([af74944](https://gitlab.hellobike.cn///commit/af7494455cb9ab21db3f5e83a45495c740fc8c08))
+* feat: test: 测试打包命令 ([858aaaa](https://gitlab.hellobike.cn///commit/858aaaadc8ab413877d3fca5677a94fcd25365d9))
+* feat: 删除无用quakr 包 ([343d5bb](https://gitlab.hellobike.cn///commit/343d5bbe7fe43c070f01260cb4683ea73afaf7b0))
+* feat: 增加 tag 前缀 ([01f3f18](https://gitlab.hellobike.cn///commit/01f3f18855f3f1e60816b4aa2d0723202ce354de))
+* grid ([82a0ae4](https://gitlab.hellobike.cn///commit/82a0ae405f12078334ee5a39e7f60e9d6bfc222b))
+* icon ([ca4fe54](https://gitlab.hellobike.cn///commit/ca4fe543ab62c818dd4af8488c40c61b44567f58))
+* icon 命名 ([97adfcb](https://gitlab.hellobike.cn///commit/97adfcb89b920c2b9978575ecb1eb102455339d8))
+* icon 路径替换 ([0a53fc3](https://gitlab.hellobike.cn///commit/0a53fc33243f7b80fc2d00ee50a42d94ee4c556f))
+* icon 采用平台标准 ([1e7b3d9](https://gitlab.hellobike.cn///commit/1e7b3d9892a17dfa91fc7ea55fb4738303f69e8b))
+* iframe通信 ([e04dc51](https://gitlab.hellobike.cn///commit/e04dc514f9c0c16bde4515b690b5961994ca6782))
+* iframe通信 ([51f7610](https://gitlab.hellobike.cn///commit/51f7610ab8f20ce53c9ea5d736370a1820a6e244))
+* imagView 预览 ([641c290](https://gitlab.hellobike.cn///commit/641c29043df88771fd9064e4b1de80ef9b2081c6))
+* init ([13851c0](https://gitlab.hellobike.cn///commit/13851c0c9ef5a9cfb9c5d26497ed16cd93e62328))
+* init lerna ([3190e12](https://gitlab.hellobike.cn///commit/3190e12b20b2e5ba1717cac1f08fd3f3ed678718))
+* init lerna ([63d94be](https://gitlab.hellobike.cn///commit/63d94beef619344f04b6f140a9b06a31113abb65))
+* merge conflicts with dialog bug fixed ([52db785](https://gitlab.hellobike.cn///commit/52db7856cb52088f74f8123d6097247e583c51e4))
+* merge master from zc ([31c9142](https://gitlab.hellobike.cn///commit/31c9142be0177023b09e326a84f6c56288a6a25d))
+* merge wkc088 ([10a163c](https://gitlab.hellobike.cn///commit/10a163c7484e11ae2d100b4e93b2e6f938c8b637))
+* navbar翻译 ([98a1ecf](https://gitlab.hellobike.cn///commit/98a1ecf95d48fecca4e1f36a9002fb16a03362a3))
+* optimize ([6701349](https://gitlab.hellobike.cn///commit/67013498875902d50911865e1b459d592a75f911))
+* optimize ([9097e2b](https://gitlab.hellobike.cn///commit/9097e2bdaf0c27e43d61a74cff7038ccc45a4dc3))
+* package name ([e074e0c](https://gitlab.hellobike.cn///commit/e074e0c00a6b163f25bfb7ad53381e0844208f9a))
+* packges 增加 rollup 插件 ([ae64f04](https://gitlab.hellobike.cn///commit/ae64f043d2d4b0526b5b203ae09529f459fbaebe))
+* postmessage ([ab5ddc9](https://gitlab.hellobike.cn///commit/ab5ddc95ef50013998ada777c548f3778b7e12eb))
+* postmessage ([5c61550](https://gitlab.hellobike.cn///commit/5c615509f03632bb42f06d51e42adf22dea585d9))
+* pro 理解 ([8363143](https://gitlab.hellobike.cn///commit/83631431687f7115a5de3285ab6c6f2acc953709))
+* radio ([ee209a8](https://gitlab.hellobike.cn///commit/ee209a8f6c1518ebd07105b2ead10b1fce12e177))
+* refactor icons ([cc5c6cc](https://gitlab.hellobike.cn///commit/cc5c6cc123bb756c7191387b0ba6ea6c47ea6944))
+* sharesheet 文档 ([10d234c](https://gitlab.hellobike.cn///commit/10d234c1b1d7af95c2a60b96d8136d42f38050da))
+* step 增加更多 slot ([53a6f97](https://gitlab.hellobike.cn///commit/53a6f97ea932a2d294c57ae74124008bc2f2c6c3))
+* style: toast 代码优化 ([1379fae](https://gitlab.hellobike.cn///commit/1379fae4703f84fa1ced7efab193c3e590208c21))
+* tabbar ([5a13ac4](https://gitlab.hellobike.cn///commit/5a13ac4aab7d586eed46887ec822fdbc202c4968))
+* tabbar文档翻译 ([0a30fe3](https://gitlab.hellobike.cn///commit/0a30fe304f703e67331767e41873ed0a6fe9ac82))
+* tab翻译 ([2cd8a75](https://gitlab.hellobike.cn///commit/2cd8a75b416bc11ad0fec183f9f9dbfd416f9066))
+* test: 测试打包命令 ([91df557](https://gitlab.hellobike.cn///commit/91df557ee7faa7bdfaa69c3d82295ba48ca3a3a7))
+* toast 非loading 可点击 ([b516249](https://gitlab.hellobike.cn///commit/b516249da25af8dae3379c4b8524c862a4e31477))
+* translate ([7b407e9](https://gitlab.hellobike.cn///commit/7b407e9caefe20688c6bbbfed78f30656c806179))
+* translate ([f9557ff](https://gitlab.hellobike.cn///commit/f9557fff1d8fd79f7c94cfb67b64892ce5934d1a))
+* update ([2b459cf](https://gitlab.hellobike.cn///commit/2b459cf99222ed6cfc0584d18bf87127b80549bf))
+* update ([b7e1ed5](https://gitlab.hellobike.cn///commit/b7e1ed55b2b2040f1c56492d7fd89efa720801fd))
+* update ([79b5317](https://gitlab.hellobike.cn///commit/79b5317cb76aa9b1d026e8b7ebde5904b2b3fc09))
+* update ([6e37324](https://gitlab.hellobike.cn///commit/6e37324bd6edeb5d7637b0f479a75d69cc972647))
+* update ([668eff1](https://gitlab.hellobike.cn///commit/668eff1796016abeaa9ec5e609228115d23c42fb))
+* update ([46c1d31](https://gitlab.hellobike.cn///commit/46c1d31cd1845e64b0a32f2eb4c444e408752c20))
+* update ([20b9b37](https://gitlab.hellobike.cn///commit/20b9b37b2a16796bfd0fcd2db672c8af30e79c59))
+* update ([63f3109](https://gitlab.hellobike.cn///commit/63f31095f3aef61ea8c34033ebd07bfd514c5127))
+* update ([a2cc5d3](https://gitlab.hellobike.cn///commit/a2cc5d3da3da08085eba0b3b8016d6ef1f6fdd89))
+* update ([3f040b7](https://gitlab.hellobike.cn///commit/3f040b78ab8077d607dcd9234a143bce10976321))
+* update icon css ([3a8c13f](https://gitlab.hellobike.cn///commit/3a8c13f1281420d253e27d90e206790fb8a2f877))
+* update readme ([f604842](https://gitlab.hellobike.cn///commit/f604842b79f593872bc190a9c6095a94c7a0c3ca))
+* update readme ([25c0be9](https://gitlab.hellobike.cn///commit/25c0be914f8ef08b6ded5f9ccda6f729a15774d7))
+* uploader ([3712e46](https://gitlab.hellobike.cn///commit/3712e46e8a556b2cc8e7ae4cc0dbddf570817138))
+* vite 基础架构调整 ([fc701b8](https://gitlab.hellobike.cn///commit/fc701b87435d6346fce52ee998d0810f692f009d))
+* 中英文切换调试 ([cdecdad](https://gitlab.hellobike.cn///commit/cdecdada2cbb989a9fcc656c952ffee2b29ee2a6))
+* 中英文切换调试 ([3139241](https://gitlab.hellobike.cn///commit/31392411a88d1339b4d5903fed09a8720c68a3ce))
+* 中英文切换调试 ([301865c](https://gitlab.hellobike.cn///commit/301865c481bdf669cd907637a648f7a2c8e9df9e))
+* 为radio和checkbox增加点击动画效果 ([96f8fa2](https://gitlab.hellobike.cn///commit/96f8fa229e607b6f0bac2e985afac67d15bb20c7))
+* 修改全局颜色命名 ([7f2ccf3](https://gitlab.hellobike.cn///commit/7f2ccf3d23cce2cd8eaf07c2b0a55cbc63a13a83))
+* 修改级联选择器样式 ([fbfde1d](https://gitlab.hellobike.cn///commit/fbfde1dfa42a4a33741e075bc1b0834d311d4dea))
+* 全局celldemo ([9fa9bed](https://gitlab.hellobike.cn///commit/9fa9bed6126b9fcf7311fc41646d97c9f78d61bb))
+* 删除无用文件 ([5347f73](https://gitlab.hellobike.cn///commit/5347f730bd4d8b55ed00ba1d1ecbeffae5616d62))
+* 删除无用文件 ([e096331](https://gitlab.hellobike.cn///commit/e09633128d5ea57a3384953d4ec7cae07147cc67))
+* 删除无用文件 ([81a2385](https://gitlab.hellobike.cn///commit/81a2385fcf8e42768a3553ea67854e3127828fd8))
+* 删除无用文件 ([32f8547](https://gitlab.hellobike.cn///commit/32f854797e8c9ada7b0b6f96b8b16a55e599227a))
+* 去除postinstall ([27c0f04](https://gitlab.hellobike.cn///commit/27c0f04aa88013d62df1aa461eb0c986d6e8cb49))
+* 回滚发布方案 ([ce0cb75](https://gitlab.hellobike.cn///commit/ce0cb7576bc39157dda9b2f1b0d7df382df85db1))
+* 国际化支持增加自定义翻译 ([9c4e069](https://gitlab.hellobike.cn///commit/9c4e06905a752a6e8391206fa7ba2830dcbef298))
+* 增加 catch ([503bcff](https://gitlab.hellobike.cn///commit/503bcff178d5da1e952db868464136f99967f687))
+* 增加 tag 前缀 ([2d7e783](https://gitlab.hellobike.cn///commit/2d7e783009f3914945f1ce756e34e5b765862a6d))
+* 增加国际化路由 ([c0f00c8](https://gitlab.hellobike.cn///commit/c0f00c8a7f47eab0632e9bda97bf04df602e9a98))
+* 增加局部 lerna ([8eb8bf5](https://gitlab.hellobike.cn///commit/8eb8bf5785c7523d9c9fd37da9b71e61cdb578fe))
+* 增加文档推送脚本 ([ad89f0c](https://gitlab.hellobike.cn///commit/ad89f0ce728edc0d8b9ed4301ec9ed33bca3b7d6))
+* 增加文档推送脚本 ([68bb99d](https://gitlab.hellobike.cn///commit/68bb99d9555e7fc415a7ac0ed394c2f095bba8fe))
+* 增加相关命令 ([7bb8e48](https://gitlab.hellobike.cn///commit/7bb8e4802e5f527dedb86abd47ce72ca1335bb6a))
+* 大修改-全局包名规范统一&版本集体设置为1。0。0 ([2392491](https://gitlab.hellobike.cn///commit/23924910e69dfdb053db04e1f2cd5a1621a37003))
+* 完成平台基础icon导入 ([19b6e31](https://gitlab.hellobike.cn///commit/19b6e3180d1d7dcec0f0cafd2630750caddff4b7))
+* 工程迁移初始代码 ([cd9ee5d](https://gitlab.hellobike.cn///commit/cd9ee5dbaff38bbff21283f86a708f969ac45dc2))
+* 平台 icon 补充 ([5ecab66](https://gitlab.hellobike.cn///commit/5ecab6679fd050d0dbc97657f184349a596ab10d))
+* 平台icons 完善 ([cf3e368](https://gitlab.hellobike.cn///commit/cf3e36828f23a6ae20c6868a05032a702aff558a))
+* 文档翻译 ([2659f41](https://gitlab.hellobike.cn///commit/2659f414f69164b631401c3969707fda05a933d9))
+* 新增 vite 配置 ([eb7d030](https://gitlab.hellobike.cn///commit/eb7d030c15e3cff773ea83f4cdadb5623b920d2f))
+* 新增quark-react包 ([9864bc2](https://gitlab.hellobike.cn///commit/9864bc2e60b55481cae05aa6d82705f8b8f8aeb7))
+* 新增发布方式 ([f803b35](https://gitlab.hellobike.cn///commit/f803b350d8ddbc60ec8ac40a079e727673cfdbda))
+* 新增空格 ([e4ab2c2](https://gitlab.hellobike.cn///commit/e4ab2c2133569e2de880058b59439c974a960745))
+* 智能提示 ([a8ae07f](https://gitlab.hellobike.cn///commit/a8ae07f34ee85b4bf601f473dfba6cac2c3314bf))
+* 智能提示 ([5a8dce3](https://gitlab.hellobike.cn///commit/5a8dce331fb465dc6f387eaebc1cba8951af4bb1))
+* 暂存文件 ([5e50c8f](https://gitlab.hellobike.cn///commit/5e50c8f0cbb37808517bfac8304391fe96dcc929))
+* 暂时更改ignore ([7f5521f](https://gitlab.hellobike.cn///commit/7f5521faacb8d7e33396d565eb9770e0db5ae5aa))
+* 更改 build 命令 ([11233b6](https://gitlab.hellobike.cn///commit/11233b63fe9f0556b2c77a61b3d9437711325101))
+* 更改 shell 脚本 ([c849177](https://gitlab.hellobike.cn///commit/c8491779f8dc596a262c810f9e14b635dd43cdd1))
+* 更新demo语言 ([a302a1e](https://gitlab.hellobike.cn///commit/a302a1efc98d0b5ecb77ec927548d9710421e7d9))
+* 更新sticky组件demo ([1143c12](https://gitlab.hellobike.cn///commit/1143c12ce31563e042ece0fb35c874affe9f80f1))
+* 更新swipe组件demo ([be22987](https://gitlab.hellobike.cn///commit/be229871f61ac09f71fb798348783d8df17ea244))
+* 更新swipe组件demo ([db8cd06](https://gitlab.hellobike.cn///commit/db8cd0656f173fb1324b9fd4c8f3be41f7b506e6))
+* 样式命名统一 ([2994525](https://gitlab.hellobike.cn///commit/29945250c1775126727490ef61fc9433beb76b0e))
+* 样式命名统一 ([2d2ac38](https://gitlab.hellobike.cn///commit/2d2ac3828cf044d91e29d0bfb6d2caac7b5bb685))
+* 样式命名规范修改 ([87db240](https://gitlab.hellobike.cn///commit/87db2405dcd2d2d5a7ba5673e3f69d6e602a2ea7))
+* 样式命名规范修改 ([bf6c0ad](https://gitlab.hellobike.cn///commit/bf6c0adc758bdd5ac780cdca4a4ff6b6156bd649))
+* 样式命名规范修改 ([f9597a7](https://gitlab.hellobike.cn///commit/f9597a74874cb8a664bc14cfe0f54e1fc83658ae))
+* 样式命名重写&优化弹窗dialog组件 ([41e95ec](https://gitlab.hellobike.cn///commit/41e95ec4ee64b01ff8847dc20559f131c4d7e3d6))
+* 样式格式化 ([3a399c8](https://gitlab.hellobike.cn///commit/3a399c876022299c06811dfe78a3396fcf79bbf1))
+* 测试发布 ([fc7c6be](https://gitlab.hellobike.cn///commit/fc7c6bea18ef1db970694d09fb184966c48f0939))
+* 测试打包 ([17ecc1c](https://gitlab.hellobike.cn///commit/17ecc1c56ce5759f1c0ab95b44df3f2efb90b922))
+* 测试打包 ([29f34ce](https://gitlab.hellobike.cn///commit/29f34ce645d780de30d6b3888185dabe0b24b682))
+* 测试打包 ([d5b53a5](https://gitlab.hellobike.cn///commit/d5b53a5a45ebbabe2e88d0d95603c0ce93ad4ad3))
+* 测试打包 ([a2419e6](https://gitlab.hellobike.cn///commit/a2419e6d1bd80282cf04c9c032993b4778640e2a))
+* 测试打包 ([19d00be](https://gitlab.hellobike.cn///commit/19d00beb77c1bba028da590b73656f86b0c876a8))
+* 测试打包 ([b8302c8](https://gitlab.hellobike.cn///commit/b8302c83201958c2fbcf1e6a3b00dbaa41c2ad8b))
+* 移除不用的变量 ([a975d70](https://gitlab.hellobike.cn///commit/a975d70799f0ac54fd1e65b52736fe2c62abb0f4))
+* 组件增加国际化支持 ([fc1cca7](https://gitlab.hellobike.cn///commit/fc1cca7fad94059d20672b80e9fbb61e32b5fb25))
+* 翻译card和marketdialog组件 ([c3c5e8e](https://gitlab.hellobike.cn///commit/c3c5e8e7f396caaa565fe18c78d7b92be923d910))
+* 翻译dialog组件文档 ([d521fa9](https://gitlab.hellobike.cn///commit/d521fa9d572917c1d6db1fd7f739c722a2595d3a))
+* 翻译popover组件 ([53d3f1a](https://gitlab.hellobike.cn///commit/53d3f1a90280a3776ed1f357a9b17ef33d550b5a))
+* 翻译popup和actionsheet组件文档 ([711e20a](https://gitlab.hellobike.cn///commit/711e20ac866a9ae784004824155004f7ba9f3511))
+* 翻译pullrefresh和overlay组件文档 ([35e9e2c](https://gitlab.hellobike.cn///commit/35e9e2c205c8413a1385cba62be411bf01bd14fa))
+* 翻译toast和loading组件文档 ([a5f0260](https://gitlab.hellobike.cn///commit/a5f02608ca821751546f497b41102c10ddb5b79e))
+* 翻译tooltip组件文档 ([5207c38](https://gitlab.hellobike.cn///commit/5207c386c44a661a70a24d2b1b2d3042f68cf2cc))
+* 翻译组件文档 ([32ff835](https://gitlab.hellobike.cn///commit/32ff835cb3299bd28409d05717fc2121483e6003))
+* 调整 package.json ([3c500f3](https://gitlab.hellobike.cn///commit/3c500f3e2b6f00b4c2c0f01015118cf786c01a20))
+* 调整h5 demo高度 ([8597254](https://gitlab.hellobike.cn///commit/859725401591529e5a914635c17d1bc1eb03035a))
+* 调整脚本 ([350d243](https://gitlab.hellobike.cn///commit/350d24311e25d7b0e9ffc8a1fa40cd82cd136d89))
+* 走发布系统打包 ([f93342b](https://gitlab.hellobike.cn///commit/f93342ba036b1d91d301831e39b826c9ad400f44))
+* 跨域通信 ([ff55ee9](https://gitlab.hellobike.cn///commit/ff55ee9e4d01ce97db34a6e190ec0dbb09bdd2b2))
+* 部署测试 ([bdcfd30](https://gitlab.hellobike.cn///commit/bdcfd30f197cb58d9e3039b95d971114b041406c))
+* 部署测试 ([3632146](https://gitlab.hellobike.cn///commit/3632146058bdf3f2cef741615d5530955b1af0b7))
+* 部署测试 ([b28347a](https://gitlab.hellobike.cn///commit/b28347aa47346a88ce407f17bb5bea7f71cc3d26))
+
+### [1.9.7](https://gitlab.hellobike.cn///compare/v0.1.0...v1.9.7) (2022-07-25)
+
+
+### 🎉 Features
+
+* quark-icons 发布 ([f8bf201](https://gitlab.hellobike.cn///commit/f8bf201f0d48f2a5be1a0ee99799022033a1c2bd))
+
+### [1.9.6](https://gitlab.hellobike.cn///compare/v1.9.5...v1.9.6) (2022-07-18)
+
+
+### 🎉 Features
+
+*   完善单独发布脚本 ([eb3d73e](https://gitlab.hellobike.cn///commit/eb3d73e8b26e124ebc525d5a65fae6f7282c52df))
+
+### [1.9.5](https://gitlab.hellobike.cn///compare/v1.9.4...v1.9.5) (2022-07-15)
+
+### [1.9.4](https://gitlab.hellobike.cn///compare/v1.9.3...v1.9.4) (2022-07-15)
+
+### [1.9.3](https://gitlab.hellobike.cn///compare/v1.9.1...v1.9.3) (2022-07-15)
+
+
+### Merge
+
+*  master to doc ([d8d3afa](https://gitlab.hellobike.cn///commit/d8d3afa0563b0584badb73e170920c39acc31afd))
+
+
+### 🎉 Features
+
+* 测试打包 ([17ecc1c](https://gitlab.hellobike.cn///commit/17ecc1c56ce5759f1c0ab95b44df3f2efb90b922))
+* 测试打包 ([29f34ce](https://gitlab.hellobike.cn///commit/29f34ce645d780de30d6b3888185dabe0b24b682))
+* 测试打包 ([d5b53a5](https://gitlab.hellobike.cn///commit/d5b53a5a45ebbabe2e88d0d95603c0ce93ad4ad3))
+* 测试打包 ([a2419e6](https://gitlab.hellobike.cn///commit/a2419e6d1bd80282cf04c9c032993b4778640e2a))
+* 测试打包 ([19d00be](https://gitlab.hellobike.cn///commit/19d00beb77c1bba028da590b73656f86b0c876a8))
+* 测试打包 ([b8302c8](https://gitlab.hellobike.cn///commit/b8302c83201958c2fbcf1e6a3b00dbaa41c2ad8b))
+* 测试发布 ([fc7c6be](https://gitlab.hellobike.cn///commit/fc7c6bea18ef1db970694d09fb184966c48f0939))
+* 调整 package.json ([3c500f3](https://gitlab.hellobike.cn///commit/3c500f3e2b6f00b4c2c0f01015118cf786c01a20))
+* 调整脚本 ([350d243](https://gitlab.hellobike.cn///commit/350d24311e25d7b0e9ffc8a1fa40cd82cd136d89))
+* 翻译组件文档 ([32ff835](https://gitlab.hellobike.cn///commit/32ff835cb3299bd28409d05717fc2121483e6003))
+* 更改 build 命令 ([11233b6](https://gitlab.hellobike.cn///commit/11233b63fe9f0556b2c77a61b3d9437711325101))
+* 更改 shell 脚本 ([c849177](https://gitlab.hellobike.cn///commit/c8491779f8dc596a262c810f9e14b635dd43cdd1))
+* 更新demo语言 ([a302a1e](https://gitlab.hellobike.cn///commit/a302a1efc98d0b5ecb77ec927548d9710421e7d9))
+* 回滚发布方案 ([ce0cb75](https://gitlab.hellobike.cn///commit/ce0cb7576bc39157dda9b2f1b0d7df382df85db1))
+* 跨域通信 ([ff55ee9](https://gitlab.hellobike.cn///commit/ff55ee9e4d01ce97db34a6e190ec0dbb09bdd2b2))
+* 去除postinstall ([27c0f04](https://gitlab.hellobike.cn///commit/27c0f04aa88013d62df1aa461eb0c986d6e8cb49))
+* 删除无用文件 ([5347f73](https://gitlab.hellobike.cn///commit/5347f730bd4d8b55ed00ba1d1ecbeffae5616d62))
+* 删除无用文件 ([e096331](https://gitlab.hellobike.cn///commit/e09633128d5ea57a3384953d4ec7cae07147cc67))
+* 删除无用文件 ([81a2385](https://gitlab.hellobike.cn///commit/81a2385fcf8e42768a3553ea67854e3127828fd8))
+* 删除无用文件 ([32f8547](https://gitlab.hellobike.cn///commit/32f854797e8c9ada7b0b6f96b8b16a55e599227a))
+* 新增 vite 配置 ([eb7d030](https://gitlab.hellobike.cn///commit/eb7d030c15e3cff773ea83f4cdadb5623b920d2f))
+* 新增发布方式 ([f803b35](https://gitlab.hellobike.cn///commit/f803b350d8ddbc60ec8ac40a079e727673cfdbda))
+* 新增空格 ([e4ab2c2](https://gitlab.hellobike.cn///commit/e4ab2c2133569e2de880058b59439c974a960745))
+* 暂存文件 ([5e50c8f](https://gitlab.hellobike.cn///commit/5e50c8f0cbb37808517bfac8304391fe96dcc929))
+* 暂时更改ignore ([7f5521f](https://gitlab.hellobike.cn///commit/7f5521faacb8d7e33396d565eb9770e0db5ae5aa))
+* 增加 catch ([503bcff](https://gitlab.hellobike.cn///commit/503bcff178d5da1e952db868464136f99967f687))
+* 增加局部 lerna ([8eb8bf5](https://gitlab.hellobike.cn///commit/8eb8bf5785c7523d9c9fd37da9b71e61cdb578fe))
+* 增加相关命令 ([7bb8e48](https://gitlab.hellobike.cn///commit/7bb8e4802e5f527dedb86abd47ce72ca1335bb6a))
+* 中英文切换调试 ([cdecdad](https://gitlab.hellobike.cn///commit/cdecdada2cbb989a9fcc656c952ffee2b29ee2a6))
+* 中英文切换调试 ([3139241](https://gitlab.hellobike.cn///commit/31392411a88d1339b4d5903fed09a8720c68a3ce))
+* 中英文切换调试 ([301865c](https://gitlab.hellobike.cn///commit/301865c481bdf669cd907637a648f7a2c8e9df9e))
+* build site ([d48f88c](https://gitlab.hellobike.cn///commit/d48f88c137c349959b5b84648ddf8fa06f9b3001))
+* build website ([b216577](https://gitlab.hellobike.cn///commit/b2165773c0b56695d84ff8b96f46f336e7588af9))
+* buildsite ([759109f](https://gitlab.hellobike.cn///commit/759109f0daef8390f40f8192a1e92b06bd389144))
+* example 统一 yarn ([4a3f398](https://gitlab.hellobike.cn///commit/4a3f398908f283f1c77bbd8e5cee5c9f08b8747d))
+* feat: 删除无用quakr 包 ([343d5bb](https://gitlab.hellobike.cn///commit/343d5bbe7fe43c070f01260cb4683ea73afaf7b0))
+* iframe通信 ([e04dc51](https://gitlab.hellobike.cn///commit/e04dc514f9c0c16bde4515b690b5961994ca6782))
+* iframe通信 ([51f7610](https://gitlab.hellobike.cn///commit/51f7610ab8f20ce53c9ea5d736370a1820a6e244))
+* imagView 预览 ([641c290](https://gitlab.hellobike.cn///commit/641c29043df88771fd9064e4b1de80ef9b2081c6))
+* init lerna ([3190e12](https://gitlab.hellobike.cn///commit/3190e12b20b2e5ba1717cac1f08fd3f3ed678718))
+* init lerna ([63d94be](https://gitlab.hellobike.cn///commit/63d94beef619344f04b6f140a9b06a31113abb65))
+* package name ([e074e0c](https://gitlab.hellobike.cn///commit/e074e0c00a6b163f25bfb7ad53381e0844208f9a))
+* packges 增加 rollup 插件 ([ae64f04](https://gitlab.hellobike.cn///commit/ae64f043d2d4b0526b5b203ae09529f459fbaebe))
+* postmessage ([ab5ddc9](https://gitlab.hellobike.cn///commit/ab5ddc95ef50013998ada777c548f3778b7e12eb))
+* postmessage ([5c61550](https://gitlab.hellobike.cn///commit/5c615509f03632bb42f06d51e42adf22dea585d9))
+* pro 理解 ([8363143](https://gitlab.hellobike.cn///commit/83631431687f7115a5de3285ab6c6f2acc953709))
+* sharesheet 文档 ([10d234c](https://gitlab.hellobike.cn///commit/10d234c1b1d7af95c2a60b96d8136d42f38050da))
+* translate ([7b407e9](https://gitlab.hellobike.cn///commit/7b407e9caefe20688c6bbbfed78f30656c806179))
+* translate ([f9557ff](https://gitlab.hellobike.cn///commit/f9557fff1d8fd79f7c94cfb67b64892ce5934d1a))
+* update readme ([f604842](https://gitlab.hellobike.cn///commit/f604842b79f593872bc190a9c6095a94c7a0c3ca))
+* vite 基础架构调整 ([fc701b8](https://gitlab.hellobike.cn///commit/fc701b87435d6346fce52ee998d0810f692f009d))
+
+
+### 🐞 Bug Fixes
+
+* 跨域获取iframe url ([16cf6f1](https://gitlab.hellobike.cn///commit/16cf6f17dd912341083947b437fda4243fe067fa))
+* 跨域获取iframe url ([e52ad64](https://gitlab.hellobike.cn///commit/e52ad64c9164d5d745d060fa7b424713e1afc1af))
+* 修打包问题 ([53cf5cb](https://gitlab.hellobike.cn///commit/53cf5cb86080efd7f7c527255e14982d29116daa))
+* 修复别名问题 ([76bff46](https://gitlab.hellobike.cn///commit/76bff469de20609394a5add25bab52223a477962))
+* 修改打包路径 ([fb24d6f](https://gitlab.hellobike.cn///commit/fb24d6f71edb3e83626850511db5081f0baf2f9f))
+
+### [1.9.1](https://gitlab.hellobike.cn///compare/v1.9.0...v1.9.1) (2022-06-29)
+
+
+### 🎉 Features
+
+* optimize ([6701349](https://gitlab.hellobike.cn///commit/67013498875902d50911865e1b459d592a75f911))
+* optimize ([9097e2b](https://gitlab.hellobike.cn///commit/9097e2bdaf0c27e43d61a74cff7038ccc45a4dc3))
+* update icon css ([3a8c13f](https://gitlab.hellobike.cn///commit/3a8c13f1281420d253e27d90e206790fb8a2f877))
+* 增加国际化路由 ([c0f00c8](https://gitlab.hellobike.cn///commit/c0f00c8a7f47eab0632e9bda97bf04df602e9a98))
+
+## [1.9.0](https://gitlab.hellobike.cn///compare/v1.8.0...v1.9.0) (2022-06-28)
+
+
+### 🎉 Features
+
+* icon ([ca4fe54](https://gitlab.hellobike.cn///commit/ca4fe543ab62c818dd4af8488c40c61b44567f58))
+* merge wkc088 ([10a163c](https://gitlab.hellobike.cn///commit/10a163c7484e11ae2d100b4e93b2e6f938c8b637))
+* navbar翻译 ([98a1ecf](https://gitlab.hellobike.cn///commit/98a1ecf95d48fecca4e1f36a9002fb16a03362a3))
+* radio ([ee209a8](https://gitlab.hellobike.cn///commit/ee209a8f6c1518ebd07105b2ead10b1fce12e177))
+* refactor icons ([cc5c6cc](https://gitlab.hellobike.cn///commit/cc5c6cc123bb756c7191387b0ba6ea6c47ea6944))
+* step 增加更多 slot ([53a6f97](https://gitlab.hellobike.cn///commit/53a6f97ea932a2d294c57ae74124008bc2f2c6c3))
+* tabbar ([5a13ac4](https://gitlab.hellobike.cn///commit/5a13ac4aab7d586eed46887ec822fdbc202c4968))
+* tabbar文档翻译 ([0a30fe3](https://gitlab.hellobike.cn///commit/0a30fe304f703e67331767e41873ed0a6fe9ac82))
+* tab翻译 ([2cd8a75](https://gitlab.hellobike.cn///commit/2cd8a75b416bc11ad0fec183f9f9dbfd416f9066))
+* uploader ([3712e46](https://gitlab.hellobike.cn///commit/3712e46e8a556b2cc8e7ae4cc0dbddf570817138))
+* 翻译card和marketdialog组件 ([c3c5e8e](https://gitlab.hellobike.cn///commit/c3c5e8e7f396caaa565fe18c78d7b92be923d910))
+* 翻译dialog组件文档 ([d521fa9](https://gitlab.hellobike.cn///commit/d521fa9d572917c1d6db1fd7f739c722a2595d3a))
+* 翻译popover组件 ([53d3f1a](https://gitlab.hellobike.cn///commit/53d3f1a90280a3776ed1f357a9b17ef33d550b5a))
+* 翻译popup和actionsheet组件文档 ([711e20a](https://gitlab.hellobike.cn///commit/711e20ac866a9ae784004824155004f7ba9f3511))
+* 翻译pullrefresh和overlay组件文档 ([35e9e2c](https://gitlab.hellobike.cn///commit/35e9e2c205c8413a1385cba62be411bf01bd14fa))
+* 翻译toast和loading组件文档 ([a5f0260](https://gitlab.hellobike.cn///commit/a5f02608ca821751546f497b41102c10ddb5b79e))
+* 翻译tooltip组件文档 ([5207c38](https://gitlab.hellobike.cn///commit/5207c386c44a661a70a24d2b1b2d3042f68cf2cc))
+
+
+### 🐞 Bug Fixes
+
+* demo url ([e851f9e](https://gitlab.hellobike.cn///commit/e851f9eb9d8e01e498e6f5c2cf65a8568639db43))
+
+## 1.8.0 (2022-06-13)
+
+
+### 🐞 Bug Fixes
+
+* build dist ([7f1416e](https://gitlab.hellobike.cn///commit/7f1416e487de5f6a9df6cb8cea234221544eef1c))
+* build dist ([e71a2be](https://gitlab.hellobike.cn///commit/e71a2bec0c8da5394e20a23b3f2a989fb1a27810))
+* init ([967ebea](https://gitlab.hellobike.cn///commit/967ebea6af5c8441cd3a4ef7a0f228be8e8b1cbc))
+* package build init ([1a825df](https://gitlab.hellobike.cn///commit/1a825df431ae97c9be6f1190d2ab86252c20d344))
+* remove doc's theme ([86dd0d0](https://gitlab.hellobike.cn///commit/86dd0d0c41f5353c4765d152edf71179ae6f5bfa))
+* site publish update ([4d80705](https://gitlab.hellobike.cn///commit/4d80705b32d8594aed0a08c7077162746319dbeb))
+* site publish update ([fd5c2cf](https://gitlab.hellobike.cn///commit/fd5c2cf0b54e08de71863960d7d0f5b18b01b67e))
+* sitepublish ([e21aa7c](https://gitlab.hellobike.cn///commit/e21aa7c6199198bfe0b46c01fbdc4b3d53da154f))
+* sticky组件demo样式修复 ([dde5bc0](https://gitlab.hellobike.cn///commit/dde5bc0144789d11d38e28a170a411b0666a4158))
+* update ([967e513](https://gitlab.hellobike.cn///commit/967e513b99d79174ee4c01743f6dfeb9a5c8d90a))
+* 修复轮播图单张图片问题 ([fd5d3ad](https://gitlab.hellobike.cn///commit/fd5d3ad3a0222a60826a6f9cf54d075ea5306c58))
+* 补充发布脚本代码注释 ([2ac9f47](https://gitlab.hellobike.cn///commit/2ac9f4754d46832523f98c6b43eb8e20bc99a7b1))
+* 补充发布脚本代码注释 ([e47640c](https://gitlab.hellobike.cn///commit/e47640ce4f6d52d25ca51ba2212edd94739441a0))
+* 部署 ([35ce813](https://gitlab.hellobike.cn///commit/35ce813437d7f124e762853fb48075794858906c))
+* 部署 ([c812078](https://gitlab.hellobike.cn///commit/c812078f2b138d8185b21f9c6f486e31113f68e9))
+* 部署 ([a38320e](https://gitlab.hellobike.cn///commit/a38320ea38b78e253eb19b5305582922f57368da))
+* 部署 ([d34cbe2](https://gitlab.hellobike.cn///commit/d34cbe2faf3bd8ee3e803b05bbe62e91ec4236b8))
+
+
+### 🎉 Features
+
+* docs 脚本 ([f769e4b](https://gitlab.hellobike.cn///commit/f769e4b6de02e048b7b461c035fd1c9f8cbd8c27))
+* grid ([82a0ae4](https://gitlab.hellobike.cn///commit/82a0ae405f12078334ee5a39e7f60e9d6bfc222b))
+* init ([13851c0](https://gitlab.hellobike.cn///commit/13851c0c9ef5a9cfb9c5d26497ed16cd93e62328))
+* update ([46c1d31](https://gitlab.hellobike.cn///commit/46c1d31cd1845e64b0a32f2eb4c444e408752c20))
+* update ([20b9b37](https://gitlab.hellobike.cn///commit/20b9b37b2a16796bfd0fcd2db672c8af30e79c59))
+* update ([63f3109](https://gitlab.hellobike.cn///commit/63f31095f3aef61ea8c34033ebd07bfd514c5127))
+* update ([a2cc5d3](https://gitlab.hellobike.cn///commit/a2cc5d3da3da08085eba0b3b8016d6ef1f6fdd89))
+* update ([3f040b7](https://gitlab.hellobike.cn///commit/3f040b78ab8077d607dcd9234a143bce10976321))
+* update readme ([25c0be9](https://gitlab.hellobike.cn///commit/25c0be914f8ef08b6ded5f9ccda6f729a15774d7))
+* 为radio和checkbox增加点击动画效果 ([96f8fa2](https://gitlab.hellobike.cn///commit/96f8fa229e607b6f0bac2e985afac67d15bb20c7))
+* 国际化支持增加自定义翻译 ([9c4e069](https://gitlab.hellobike.cn///commit/9c4e06905a752a6e8391206fa7ba2830dcbef298))
+* 工程迁移初始代码 ([cd9ee5d](https://gitlab.hellobike.cn///commit/cd9ee5dbaff38bbff21283f86a708f969ac45dc2))
+* 文档翻译 ([2659f41](https://gitlab.hellobike.cn///commit/2659f414f69164b631401c3969707fda05a933d9))
+* 智能提示 ([a8ae07f](https://gitlab.hellobike.cn///commit/a8ae07f34ee85b4bf601f473dfba6cac2c3314bf))
+* 智能提示 ([5a8dce3](https://gitlab.hellobike.cn///commit/5a8dce331fb465dc6f387eaebc1cba8951af4bb1))
+* 更新sticky组件demo ([1143c12](https://gitlab.hellobike.cn///commit/1143c12ce31563e042ece0fb35c874affe9f80f1))
+* 更新swipe组件demo ([be22987](https://gitlab.hellobike.cn///commit/be229871f61ac09f71fb798348783d8df17ea244))
+* 更新swipe组件demo ([db8cd06](https://gitlab.hellobike.cn///commit/db8cd0656f173fb1324b9fd4c8f3be41f7b506e6))
+* 组件增加国际化支持 ([fc1cca7](https://gitlab.hellobike.cn///commit/fc1cca7fad94059d20672b80e9fbb61e32b5fb25))
+
+## [1.7.0](https://gitlab.hellobike.cn///compare/v1.6.7...v1.7.0) (2022-04-29)
+
+
+### 🐞 Bug Fixes
+
+* code ([0ecb050](https://gitlab.hellobike.cn///commit/0ecb050c6e778a1672d7756b025ee55e5567c2eb))
+* css ([ba2e7e0](https://gitlab.hellobike.cn///commit/ba2e7e078bfc1838a01b9c7c9c6536afd70a7aaa))
+* css ([2ec5bd0](https://gitlab.hellobike.cn///commit/2ec5bd061f4e55ceec71769453b9fc305b5495a0))
+* image ([3cd7bd5](https://gitlab.hellobike.cn///commit/3cd7bd5943bc2b67950746f2ef8f055057a1165e))
+* image ([0dd5ef4](https://gitlab.hellobike.cn///commit/0dd5ef4574e3c3ea7589dc42264b40775155de71))
+* tab ([4555c11](https://gitlab.hellobike.cn///commit/4555c112c498c08196b346d7d221b102696dbc15))
+
+
+### 🎉 Features
+
+* 1 ([eb63aaa](https://gitlab.hellobike.cn///commit/eb63aaa35e0507a7ce83e9c8cbf7f25f6032e5dd))
+* 11 ([bc63e2f](https://gitlab.hellobike.cn///commit/bc63e2ffc5e3ec3fddfffe99611f0232cab0b541))
+* fix actionsheet ui ([a210941](https://gitlab.hellobike.cn///commit/a210941461e766e8362a4f676e0ee29020aa86f4))
+* lint ([9fc266c](https://gitlab.hellobike.cn///commit/9fc266c6f03c5eca7d74c7022eee4063d4a512db))
+* lock ([46179cf](https://gitlab.hellobike.cn///commit/46179cff2b8c7ba7b28671e7c65f4925c8df9eca))
+* stylelint value-keyword-case close ([c185a89](https://gitlab.hellobike.cn///commit/c185a897520a39f339d69cc04cb285d47795ab3b))
+* TODO ([d313ccd](https://gitlab.hellobike.cn///commit/d313ccd92b33d94d59245859baa9c8fd1e1ab767))
+* TODO ([6d43add](https://gitlab.hellobike.cn///commit/6d43add7650dedbbe8d556d14a88ea9097e9645d))
+* update ([327c37d](https://gitlab.hellobike.cn///commit/327c37db641c6322ab034ec49ec6bcf1137b08ee))
+* website update ([0b4fac8](https://gitlab.hellobike.cn///commit/0b4fac83cb5a4ba132dfaa21891863373067bbbe))
+* 完成sharesheet ([659c5ee](https://gitlab.hellobike.cn///commit/659c5ee0a06bc7e3ca446a0be522d0921363d557))
+
+### [1.6.7](https://gitlab.hellobike.cn///compare/v1.6.1...v1.6.7) (2022-04-08)
+
+
+### 🎉 Features
+
+* cell增加左侧图标显示 ([54f2318](https://gitlab.hellobike.cn///commit/54f231852e62af8930f00ea216978932735af266))
+* popover ([dbb52d3](https://gitlab.hellobike.cn///commit/dbb52d3980bed0e9c2525695f68a9dd4c30cc387))
+* popover ([cb4ca3e](https://gitlab.hellobike.cn///commit/cb4ca3e4fe1d1a4fc3fc229c8346c28ab2d5954e))
+* popover ([6856a40](https://gitlab.hellobike.cn///commit/6856a4022954a42b4951c76e17b8af4a4d79826b))
+* popover ([eea277b](https://gitlab.hellobike.cn///commit/eea277ba3bfcc2a73442ff5abf960bbd2af3a683))
+* popover ([b0a0751](https://gitlab.hellobike.cn///commit/b0a0751b9c2842107fa456a982ee6efd7989cbf3))
+* popover 完成 ([132bb48](https://gitlab.hellobike.cn///commit/132bb48c0ec8fdb90d169282a31d8c80b65ff738))
+* toast 组件更新，版本发布 ([954ab66](https://gitlab.hellobike.cn///commit/954ab6636135381849c11db7c95a68e51b36f1a6))
+* tooltip ([8293cb6](https://gitlab.hellobike.cn///commit/8293cb6be39823f2298d654eb5ae0602c6ae3b56))
+
+### [1.6.6](https://gitlab.hellobike.cn///compare/v1.6.5...v1.6.6) (2022-04-08)
+
+### [1.6.5](https://gitlab.hellobike.cn///compare/v1.6.4...v1.6.5) (2022-04-08)
+
+### [1.6.4](https://gitlab.hellobike.cn///compare/v1.6.3...v1.6.4) (2022-04-08)
+
+### [1.6.3](https://gitlab.hellobike.cn///compare/v1.6.2...v1.6.3) (2022-04-06)
+
+### [1.6.2](https://gitlab.hellobike.cn///compare/v1.6.1...v1.6.2) (2022-04-06)
+
+
+### 🎉 Features
+
+* cell增加左侧图标显示 ([54f2318](https://gitlab.hellobike.cn///commit/54f231852e62af8930f00ea216978932735af266))
+* popover ([dbb52d3](https://gitlab.hellobike.cn///commit/dbb52d3980bed0e9c2525695f68a9dd4c30cc387))
+* popover ([cb4ca3e](https://gitlab.hellobike.cn///commit/cb4ca3e4fe1d1a4fc3fc229c8346c28ab2d5954e))
+* popover ([6856a40](https://gitlab.hellobike.cn///commit/6856a4022954a42b4951c76e17b8af4a4d79826b))
+* popover ([eea277b](https://gitlab.hellobike.cn///commit/eea277ba3bfcc2a73442ff5abf960bbd2af3a683))
+* popover ([b0a0751](https://gitlab.hellobike.cn///commit/b0a0751b9c2842107fa456a982ee6efd7989cbf3))
+* popover 完成 ([132bb48](https://gitlab.hellobike.cn///commit/132bb48c0ec8fdb90d169282a31d8c80b65ff738))
+* tooltip ([8293cb6](https://gitlab.hellobike.cn///commit/8293cb6be39823f2298d654eb5ae0602c6ae3b56))
+
+### [1.6.1](https://gitlab.hellobike.cn///compare/v1.6.0...v1.6.1) (2022-03-29)
+
+
+### 🐞 Bug Fixes
+
+* 修复 field 校验问题 ([6c28b94](https://gitlab.hellobike.cn///commit/6c28b947616e8e15cac60fe58462c2cc2f0ef21d))
+
+
+### 🎉 Features
+
+* checkbox和radio修改 ([cf28733](https://gitlab.hellobike.cn///commit/cf28733b62225ad77fb3377ee1e1f4354b0e6fa8))
+* demo ([ab6461c](https://gitlab.hellobike.cn///commit/ab6461c3626e137c94c9c7bf5d6b0fbcb3999970))
+* demo ([077bece](https://gitlab.hellobike.cn///commit/077beced84fde66529727d250ee42ac445420224))
+* demo ([b59054e](https://gitlab.hellobike.cn///commit/b59054ec52b2c4dc2da888859952309ff6cbd05b))
+* website ([32735d2](https://gitlab.hellobike.cn///commit/32735d2f2e51e309b1dcfd74423d740afa95c502))
+
+## [1.6.0](https://gitlab.hellobike.cn///compare/v1.5.3...v1.6.0) (2022-03-23)
+
+
+### Documentation
+
+* swicth 文档更新 ([3caa394](https://gitlab.hellobike.cn///commit/3caa3946d752e66f1591b7c9e1fff3f8781d2e14))
+* 文档更新 ([d406d61](https://gitlab.hellobike.cn///commit/d406d61eee478ebd14e1feae5aad87b59b2de1a8))
+
+
+### 🐞 Bug Fixes
+
+*  修复颜色不展示问题 ([58d779a](https://gitlab.hellobike.cn///commit/58d779acbd72aff346a86b1cdc483ef4790e16d8))
+* add doc.en-US.md ([cf524ed](https://gitlab.hellobike.cn///commit/cf524ed0b26808735f9eb69c91b9db63b4cb10ab))
+* eslint ([d82e551](https://gitlab.hellobike.cn///commit/d82e551d984aff7952d4c614a601deaaaa329399))
+* ui fix ([df9acac](https://gitlab.hellobike.cn///commit/df9acacfc5da8e04cc49005bbbde7281b041a024))
+* update lang ([a9e0793](https://gitlab.hellobike.cn///commit/a9e0793e2e9d218ac6d5ed21ff0dd6794328bc12))
+* vite warning ([60cc89d](https://gitlab.hellobike.cn///commit/60cc89d63648f2626389ab0cecc682c19a24e7d2))
+* 优化事件分发监听逻辑，默认支持事件冒泡，$on支持省略element参数 ([7560ff5](https://gitlab.hellobike.cn///commit/7560ff54c1e79b2c50fbf1b863b8aa1da0fd9880))
+* 修复 imagePreview 逻辑 ([6f2ed20](https://gitlab.hellobike.cn///commit/6f2ed2068b26b41f3f434398e6c2e82c84c119ba))
+* 修复部分单测问题 ([272cfe8](https://gitlab.hellobike.cn///commit/272cfe86e2fc0a8f7d532e0490daf359bfccc458))
+* 样式修复 ([3f23087](https://gitlab.hellobike.cn///commit/3f23087c84d569efa6da59d6754b579c0d3ec3d3))
+* 解决分支冲突问题 ([410856b](https://gitlab.hellobike.cn///commit/410856ba01719209f8e774a3b34eb96aa8e2244a))
+* 解决测试脚本报错问题 ([db6a82c](https://gitlab.hellobike.cn///commit/db6a82cfd30109fba5622438c246ccb231ed10f8))
+
+
+### 🎉 Features
+
+*  完成 noticebar 重构 ([c0f7305](https://gitlab.hellobike.cn///commit/c0f7305c300246afc76f8ef6b5391f5769a11160))
+* add doc.zh-CN.md ([835914f](https://gitlab.hellobike.cn///commit/835914f31ed6d1018633bcdc1495eb322cec2f97))
+* add doc.zh-CN.md ([8014be5](https://gitlab.hellobike.cn///commit/8014be530ab29108527b20e6b907246d6f317e9a))
+* add language for md ([85e46e5](https://gitlab.hellobike.cn///commit/85e46e5fd26bda2961f55bd95844bb013edf9b4d))
+* add language for md ([e018098](https://gitlab.hellobike.cn///commit/e0180985a943c93e13851e95c09834169bcf51dd))
+* bindListener改为冒泡的方式监听，以便父组件选择性拦截子组件事件防止冒泡 ([130227f](https://gitlab.hellobike.cn///commit/130227f14461cbd38fb7d66b0e1a82a850b72110))
+* className本地化 ([b35833c](https://gitlab.hellobike.cn///commit/b35833c811550c3d63d8eaa880117fad99c0caec))
+* css样式调整 ([4590120](https://gitlab.hellobike.cn///commit/4590120cd6c65ac6fb6c4fd69f74fd12e605a1dc))
+* debug ([0d818f7](https://gitlab.hellobike.cn///commit/0d818f725e6986bad334764326291f760af8c9e5))
+* event name ([3a0750a](https://gitlab.hellobike.cn///commit/3a0750a8dddb191671663083e4269d0c90599efe))
+* i18n ([18fbc8a](https://gitlab.hellobike.cn///commit/18fbc8ac1f64377f1273d2a006b683dcace7dc7e))
+* icon ([e98a8f6](https://gitlab.hellobike.cn///commit/e98a8f6f73823c69e932e496bc6b8e581aa14d16))
+* **index:** init ([dc43070](https://gitlab.hellobike.cn///commit/dc43070f680dba21f1f3a5d2c02765335a8ae50b))
+* **index:** merge ([c2521ae](https://gitlab.hellobike.cn///commit/c2521ae47078043f1557e985f8b9da2b564d6f9a))
+* language ([0a0e7b0](https://gitlab.hellobike.cn///commit/0a0e7b0118c077c780d0f7ec2414f1536d450ee2))
+* merge ([cce921b](https://gitlab.hellobike.cn///commit/cce921b4e702cbdc63be13e4814a9e9d48061081))
+* merge master ([8b10f07](https://gitlab.hellobike.cn///commit/8b10f070e95fb39093be0c8943efe75e4e2a6b68))
+* merge master ([f60f29c](https://gitlab.hellobike.cn///commit/f60f29c9087ed151429175c0f3d54cd0a1dc64c2))
+* navbar 重构完成 ([36e307a](https://gitlab.hellobike.cn///commit/36e307a6bba8a6122747ea035f684b282afebed1))
+* package-lock ([dd9194a](https://gitlab.hellobike.cn///commit/dd9194ab6498c5aa2d7f0cfcfd22b72e324700c7))
+* radio和checkbox完工 ([36220a3](https://gitlab.hellobike.cn///commit/36220a3c16ce4898eade83bb79050dfeaaf0ccd0))
+* search组件修改 ([7e0d9a7](https://gitlab.hellobike.cn///commit/7e0d9a76cc3a312f9020a1b55af58f5b2d871b03))
+* tab样式 ([7c24914](https://gitlab.hellobike.cn///commit/7c2491469a6b0e1279e074ca82612579ce4afac0))
+* tab组件重构完成 ([4628411](https://gitlab.hellobike.cn///commit/4628411c4e21623e56b516ddd6cd2ca6eacefe21))
+* textarea md ([dc54fd1](https://gitlab.hellobike.cn///commit/dc54fd15e04510d8be85149a0b95eda40c5023c1))
+* **textarea:** change css name ([71b1537](https://gitlab.hellobike.cn///commit/71b15379be532d2b1bf4088ee9f82803f3d88338))
+* **textarea:** change css name ([54319a4](https://gitlab.hellobike.cn///commit/54319a4a4617d9c23b95c5c109c19706ee1b2548))
+* **textarea:** css event ([6d45068](https://gitlab.hellobike.cn///commit/6d4506827b25b31e23a3edf2f5f6502d237e7fda))
+* **textarea:** css event ([36ec971](https://gitlab.hellobike.cn///commit/36ec971cf3b5d0589baccd89676ed5444baca8d1))
+* **textarea:** fixed ([c7b07a9](https://gitlab.hellobike.cn///commit/c7b07a996e7ffa18cc2649466af9308256238cc6))
+* **textarea:** fixed ([d7d3db2](https://gitlab.hellobike.cn///commit/d7d3db281b6dba4044e228f74e8532181203a1d1))
+* **textarea:** init textarea ([d3d5a10](https://gitlab.hellobike.cn///commit/d3d5a10810cacc95c969c84baaf60076bd25081f))
+* **textarea:** merge css ([2746975](https://gitlab.hellobike.cn///commit/27469756e4cbdcbb7556ff7588b8dc15207ad14a))
+* **textarea:** merge css ([8f93335](https://gitlab.hellobike.cn///commit/8f93335e5673c0fecad0b8cdc293521ff32a56b1))
+* **textarea:** 修改css ([4ac3357](https://gitlab.hellobike.cn///commit/4ac3357d90f6e681992572400140ee1ef2b56004))
+* **textarea:** 修改css ([411bf95](https://gitlab.hellobike.cn///commit/411bf95ca0e7b56d943e13bd3450054d7b5814c9))
+* update css ([3d129b1](https://gitlab.hellobike.cn///commit/3d129b10ba163410ffe616bf3b708f420cf0cae5))
+* update website ([e9218c4](https://gitlab.hellobike.cn///commit/e9218c4d34a2729a41f99f10dc066806880f6d01))
+* vconsole ([4ada20d](https://gitlab.hellobike.cn///commit/4ada20d2db38b2580fd4f0b8821a90719b25b5a9))
+* website ([4eaba66](https://gitlab.hellobike.cn///commit/4eaba6682f580af5b11b30e8af96451ad647612c))
+* website update ([d048ab4](https://gitlab.hellobike.cn///commit/d048ab42669f15a45b3d750265ecdc7f895bceab))
+* 下拉刷新 ([6546fe0](https://gitlab.hellobike.cn///commit/6546fe006c4efd14a68aa2641708823f6f32d366))
+* 下拉刷新文案更改 ([a17511b](https://gitlab.hellobike.cn///commit/a17511b1327d8af76da8042a3a4d551f9a7cc6b1))
+* 下拉刷新文档修改 ([e623660](https://gitlab.hellobike.cn///commit/e623660470df4c5b03daad351d49a274a30cea7c))
+* 下拉刷新样式更改 ([b69d4d2](https://gitlab.hellobike.cn///commit/b69d4d235c24b052cda6ab10b29ac5c02e339c02))
+* 修复tab错误 ([0ba8688](https://gitlab.hellobike.cn///commit/0ba86886ac24132b9b172c25d429b6df4d79659e))
+* 修复问题 ([63a52a8](https://gitlab.hellobike.cn///commit/63a52a8ad8b5e22ba340f6f96d4c3182d15348c7))
+* 删除无用代码 ([dda6130](https://gitlab.hellobike.cn///commit/dda613090c47d0924a2df6eac3b224587ae7d624))
+* 删除无用代码 ([c945f7c](https://gitlab.hellobike.cn///commit/c945f7c54bd37e7419087dbed320935c2cef92a4))
+* 单测 ([0f97c4a](https://gitlab.hellobike.cn///commit/0f97c4a22819e1521072488f12a5c24102e2e610))
+* 增加路由映射 ([15f4107](https://gitlab.hellobike.cn///commit/15f4107da9ac6c8e5bf0cd3859965fee420fc4fd))
+* 完成 dialog 组重构 ([c8876ca](https://gitlab.hellobike.cn///commit/c8876ca87b1b43cb93c9e74257ca0d60be3c6b32))
+* 完成slotchange的问题 ([f490a54](https://gitlab.hellobike.cn///commit/f490a5464ac6c6882c570a936ef3d38b4f36ac3f))
+* 文档修改 ([f1c91f1](https://gitlab.hellobike.cn///commit/f1c91f15e57eeb2c5c52562d7a201b1919e68b52))
+* 新增营销弹窗组件 ([a72a3a4](https://gitlab.hellobike.cn///commit/a72a3a408da3ab400b97bc2d16ec50b827d1cb85))
+* 更改文档 ([8c1eb6a](https://gitlab.hellobike.cn///commit/8c1eb6aa745fc466e15754cdaa97a9008a5ec40f))
+* 更改样式 ([cc2ec5d](https://gitlab.hellobike.cn///commit/cc2ec5d22e4fd5ddfeabc93332f6c3ad1c96bc34))
+
+### [1.5.3](https://gitlab.hellobike.cn///compare/v1.5.2...v1.5.3) (2022-03-07)
+
+
+### 🐞 Bug Fixes
+
+* 修复接口问题 ([915843c](https://gitlab.hellobike.cn///commit/915843ccfc42c54702880ef1ed13f46219a15494))
+
+
+### 🎉 Features
+
+* tabbar开发完成 ([a248402](https://gitlab.hellobike.cn///commit/a248402f1d589a7f7df21d01a0e7575fd1e75de3))
+* update website ([b60fea7](https://gitlab.hellobike.cn///commit/b60fea7fa7fcfc500addba90d8c2e8645a0ee677))
+* 修复兼容问题 ([7d387da](https://gitlab.hellobike.cn///commit/7d387daeda107006795549b29ef949834fe1b77d))
+* 文档修改 ([ffc3e04](https://gitlab.hellobike.cn///commit/ffc3e04afe0d14793b276d08990bc771ee12f520))
+* 文档修改 ([d1233bc](https://gitlab.hellobike.cn///commit/d1233bca90e26a744ca4955d40a64c652f0da6a1))
+
+### [1.5.2](https://gitlab.hellobike.cn///compare/v1.5.1...v1.5.2) (2022-03-04)
+
+
+### 🐞 Bug Fixes
+
+* field readonly ([697cd07](https://gitlab.hellobike.cn///commit/697cd074a1cc17ed3f37a28f98348dad6622c203))
+
+
+### 🎉 Features
+
+* cascde picker ([e6f88cf](https://gitlab.hellobike.cn///commit/e6f88cf4078866a5119f40e9c5d9a919f0dd8628))
+* cascde picker ([e449def](https://gitlab.hellobike.cn///commit/e449def7515e0f5e7a2bd4704226024656127f82))
+* overlay ([ce257f7](https://gitlab.hellobike.cn///commit/ce257f716ad7bbc4acc6c47ecd5936400e96a2b5))
+* overlay 组件 ([22f8831](https://gitlab.hellobike.cn///commit/22f8831ff6e800214fbb4da41d5098097fa50854))
+* picker ([55891b6](https://gitlab.hellobike.cn///commit/55891b6c0c0409de4897f9aacfac0596ba52c283))
+* update website ([239ab98](https://gitlab.hellobike.cn///commit/239ab98d41ea767637decb4e50eac5c7a3fe3bd1))
+* 级联选择器开发 ([7a2a58e](https://gitlab.hellobike.cn///commit/7a2a58ec35aa95b7048eb5b64675d88f7f0a15ba))
+* 遮罩层 ([87009b1](https://gitlab.hellobike.cn///commit/87009b16e4808bad92dbdb1d0bc8e572d096533d))
+
+### [1.5.1](https://gitlab.hellobike.cn///compare/v1.5.0...v1.5.1) (2022-03-02)
+
+
+### 🎉 Features
+
+* picker ([17918a1](https://gitlab.hellobike.cn///commit/17918a132f7ec1f395b5576496de7013316d8b46))
+* picker ([11a6278](https://gitlab.hellobike.cn///commit/11a6278c25afc8bc64fce121c831811f371f0090))
+* picker ([2a788c0](https://gitlab.hellobike.cn///commit/2a788c0363d23164567ce83237c93f61232c0e91))
+* picker ([d3a95c4](https://gitlab.hellobike.cn///commit/d3a95c45383b868ff6a668dd73034418d2e03ab9))
+* picker ([ec37cb5](https://gitlab.hellobike.cn///commit/ec37cb55d4f939aeb4579b51d17f901fdd074b77))
+* picker ([da99eb5](https://gitlab.hellobike.cn///commit/da99eb5ce2ed4231b5f69abede758440dcbdb501))
+* update website ([6b7822f](https://gitlab.hellobike.cn///commit/6b7822fd4dff355054690922da8b19b2da8afe8c))
+
+## [1.5.0](https://gitlab.hellobike.cn///compare/v1.4.19...v1.5.0) (2022-03-01)
+
+
+### 🎉 Features
+
+*  imgpreview 优化 ([5514841](https://gitlab.hellobike.cn///commit/5514841ad75bf2818869c66bdfc8eb98203d5c62))
+
+### [1.4.19](https://gitlab.hellobike.cn///compare/v1.4.18...v1.4.19) (2022-02-28)
+
+
+### 🎉 Features
+
+* 修改复选框样式 ([311c0ca](https://gitlab.hellobike.cn///commit/311c0cac3aeb2ae8bfb68654c1fd2e7bf4328ba1))
+* 绕过ts对preact Fragment的检查 ([e08520c](https://gitlab.hellobike.cn///commit/e08520cb48980483645eb3a5bc2dff50f5dd6b79))
+
+### [1.4.18](https://gitlab.hellobike.cn///compare/v1.4.17...v1.4.18) (2022-02-28)
+
+
+### 🐞 Bug Fixes
+
+* site text ([a5dc04c](https://gitlab.hellobike.cn///commit/a5dc04c9f879604a671330eb24cbf8730a2f7e3e))
+
+
+### 🎉 Features
+
+* date change ([64d3db9](https://gitlab.hellobike.cn///commit/64d3db94df5fd8e2e14145e9e5fb326d34edec71))
+* update site ([255f4a5](https://gitlab.hellobike.cn///commit/255f4a52cdd5e08f7fa83d389800565247b67b72))
+* update website ([1594864](https://gitlab.hellobike.cn///commit/159486462ea160ac8e86b8d5ab69b07385bcf1f9))
+* 搜索组件修改 ([6dbbbfb](https://gitlab.hellobike.cn///commit/6dbbbfb0613859828f40b9b0986ee8194f0c807d))
+
+### [1.4.17](https://gitlab.hellobike.cn///compare/v1.4.16...v1.4.17) (2022-02-24)
+
+
+### 🎉 Features
+
+* update version ([807d7aa](https://gitlab.hellobike.cn///commit/807d7aaa4fea42fdb041c72249094b90dd865604))
+* 处理拼音选词阶段的input事件 ([05ff796](https://gitlab.hellobike.cn///commit/05ff796536ae3de1963bd7ec650b6775d4f32e06))
+
+### [1.4.16](https://gitlab.hellobike.cn///compare/v1.4.15...v1.4.16) (2022-02-24)
+
+
+### 🎉 Features
+
+* 删除vdom文件 ([22df0f3](https://gitlab.hellobike.cn///commit/22df0f37bd92d21e1a9cb16bbeda262c93bc2747))
+* 搜索框UI问题修改 ([82f3690](https://gitlab.hellobike.cn///commit/82f3690ecd548534ecf51a08b8cd7154b2b466de))
+* 更改文档 ([458a5c2](https://gitlab.hellobike.cn///commit/458a5c2a990f23edf48781cfb4ce628dc811d6f6))
+* 输入方式改变 ([d1b996e](https://gitlab.hellobike.cn///commit/d1b996ebfc4a72625e42c4a1fa946853e7c5715b))
+
+### [1.4.15](https://gitlab.hellobike.cn///compare/v1.4.14...v1.4.15) (2022-02-23)
+
+### [1.4.14](https://gitlab.hellobike.cn///compare/v1.4.13...v1.4.14) (2022-02-23)
+
+### [1.4.13](https://gitlab.hellobike.cn///compare/v1.4.12...v1.4.13) (2022-02-23)
+
+
+### 🎉 Features
+
+* search组件更改 ([bd72287](https://gitlab.hellobike.cn///commit/bd722879576959e15dddd7ae5b0fdd97e0fb3f23))
+* tab 增加样式 ([2daef2d](https://gitlab.hellobike.cn///commit/2daef2d4f697e24ac76d5432bbc3897fdb39b91f))
+
+### [1.4.12](https://gitlab.hellobike.cn///compare/v1.4.11...v1.4.12) (2022-02-21)
+
+
+### 🎉 Features
+
+* **image:** 修复图片不展示 ([6e9db33](https://gitlab.hellobike.cn///commit/6e9db3350f105efd4ed5afea7e2b44452d2e0165))
+* **image:** 修复图片不展示 ([bf4d31a](https://gitlab.hellobike.cn///commit/bf4d31a0859a302314d3b8b06d84fe155eabc42b))
+* **image:** 修复图片不展示 ([30a24bb](https://gitlab.hellobike.cn///commit/30a24bb1a1644c60fda4f9872fa57e31cb1e9def))
+* tab 增加左右手势 ([c5bf021](https://gitlab.hellobike.cn///commit/c5bf021eede3c4ef8bb3052b144de8f8cccfb316))
+* tab增加手势 ([db231e0](https://gitlab.hellobike.cn///commit/db231e003cac3c9d650d1912a7901144718f00c9))
+
+### [1.4.11](https://gitlab.hellobike.cn///compare/v1.4.10...v1.4.11) (2022-02-21)
+
+
+### 🎉 Features
+
+* 弹窗更改, 可隐藏关闭按钮, 内容支持左对齐 ([86c2328](https://gitlab.hellobike.cn///commit/86c23286715b031a19e898ae2b216f71f5b975e3))
+
+### [1.4.10](https://gitlab.hellobike.cn///compare/v1.4.9...v1.4.10) (2022-02-21)
+
+### [1.4.9](https://gitlab.hellobike.cn///compare/v1.4.8...v1.4.9) (2022-02-21)
+
+
+### 🎉 Features
+
+* optimize cell ([a1d0e38](https://gitlab.hellobike.cn///commit/a1d0e38e26afc78285c97c41773ac45977a30274))
+* update web site ([24a7638](https://gitlab.hellobike.cn///commit/24a763801c34a066cda2040421f76702f07de035))
+* 处理页面滚动下的下拉 ([e900db6](https://gitlab.hellobike.cn///commit/e900db6698f32d6eaf4371f429ed0638487fe560))
+
+### [1.4.8](https://gitlab.hellobike.cn///compare/v1.4.7...v1.4.8) (2022-02-18)
+
+
+### 🎉 Features
+
+* 修正boolean值处理问题 ([5cf6ef6](https://gitlab.hellobike.cn///commit/5cf6ef69992f1e87fbed3fd38dce8c239ad0b1d6))
+
+### [1.4.7](https://gitlab.hellobike.cn///compare/v1.4.6...v1.4.7) (2022-02-17)
+
+
+### Documentation
+
+* 完善上传组件文档与示例 ([2c74d86](https://gitlab.hellobike.cn///commit/2c74d860de71b35b23f2b90ce9305fe39b0f46cc))
+
+
+### 🐞 Bug Fixes
+
+* 修复图片预览 slot name 缺失问题 ([4598bff](https://gitlab.hellobike.cn///commit/4598bffd0be0dc14472670d48f1f00e1a84489b5))
+* 修正boolean属性默认值错误的问题 ([ddcdeeb](https://gitlab.hellobike.cn///commit/ddcdeebfc73cafe946b75a0942913e7165186131))
+
+
+### 🎉 Features
+
+* **image:** 修复image bug ([b30a7d3](https://gitlab.hellobike.cn///commit/b30a7d3bc4a786e19b95ba0308e748e5818692a6))
+* merge img ([a0aaa85](https://gitlab.hellobike.cn///commit/a0aaa85396f0eda7e3b14f23afd81c7c7cda9146))
+* upload 只能上传数量功能 ([7863712](https://gitlab.hellobike.cn///commit/7863712c7682611bf1f91c907af1e9abd3f0ae65))
+* upload 组件开发 ([e416061](https://gitlab.hellobike.cn///commit/e416061055eb8a09a194bdfa2aca9f0b0026bede))
+* 上传组件增加测试用例 ([5ff34d3](https://gitlab.hellobike.cn///commit/5ff34d3cd07d6e343caa49b76d3db8ad46d2caea))
+* 下拉刷新更行完成 ([39c3157](https://gitlab.hellobike.cn///commit/39c3157001f683fb1cb52e6205ce01d965edeecc))
+* 图片预览组件增加基础demo ([d87cacd](https://gitlab.hellobike.cn///commit/d87cacd9c4221161b07481fd6813ba7c275ed8bb))
+* 完成图片预览组件文档和DEMO ([8fef743](https://gitlab.hellobike.cn///commit/8fef743ca47ff922aafa226497a003b739eb1249))
+* 新增 uploader 组件文件夹 ([8a4756f](https://gitlab.hellobike.cn///commit/8a4756f61f379ff0716c131ca2bf2577bd0ba46d))
+* 新增基础上传组件 ([da54faf](https://gitlab.hellobike.cn///commit/da54faf3195445f324e3688bae83fed51c5c3dfb))
+* 新增预览组件的切换功能 ([6bd49c3](https://gitlab.hellobike.cn///commit/6bd49c3668fefc2c3a39cf8348b9f66146ca0745))
+
+### [1.4.6](https://gitlab.hellobike.cn///compare/v1.4.5...v1.4.6) (2022-02-17)
+
+### [1.4.5](https://gitlab.hellobike.cn///compare/v1.4.4...v1.4.5) (2022-02-17)
+
+
+### 🎉 Features
+
+* demo scrollbar ([14ab006](https://gitlab.hellobike.cn///commit/14ab00680f2c5257404ad79e710d78930e397b10))
+
+### [1.4.4](https://gitlab.hellobike.cn///compare/v1.4.3...v1.4.4) (2022-02-16)
+
+
+### 🐞 Bug Fixes
+
+* popup ([6516879](https://gitlab.hellobike.cn///commit/651687984a6c875b39bac3e457ee96f434da3bee))
+* 修正vdom对于jsx中循环逻辑的处理 ([519068d](https://gitlab.hellobike.cn///commit/519068d3ee8294b5df7ba7eb2159fe69ceeac0f5))
+
+
+### 🎉 Features
+
+* 虚拟dom改为preact ([3df47f8](https://gitlab.hellobike.cn///commit/3df47f833fc0e302e2a469b17198bce6bffd60e8))
+* 调整事件名大小写 ([c35d7fd](https://gitlab.hellobike.cn///commit/c35d7fd34485f08a5832f2b44fd83c1fa0ca3613))
+
+### [1.4.3](https://gitlab.hellobike.cn///compare/v1.4.2...v1.4.3) (2022-02-16)
+
+
+### 🎉 Features
+
+* 去掉高度限制 ([1bf00f5](https://gitlab.hellobike.cn///commit/1bf00f581a045ac5208e2b24383205e10de9dc4f))
+
+### [1.4.2](https://gitlab.hellobike.cn///compare/v1.4.1...v1.4.2) (2022-02-15)
+
+
+### 🎉 Features
+
+* 修复pull-refresh触顶bug ([f241962](https://gitlab.hellobike.cn///commit/f241962a5f938a2ba83f61de0ab6aa98e0d601a2))
+
+### [1.4.1](https://gitlab.hellobike.cn///compare/v1.4.0...v1.4.1) (2022-02-15)
+
+
+### 🎉 Features
+
+* list文档修改 ([2d1fd62](https://gitlab.hellobike.cn///commit/2d1fd6298b402e0432767d877dd7b2c6b3de89ee))
+* website ([5b5d712](https://gitlab.hellobike.cn///commit/5b5d712481b1363f8105b1ede303d69ad30a6bec))
+* 更改列表的说明文档 ([2788f3a](https://gitlab.hellobike.cn///commit/2788f3a7e533bfb11762a45dff98c19386ebfdb2))
+
+## [1.4.0](https://gitlab.hellobike.cn///compare/v1.3.29...v1.4.0) (2022-02-15)
+
+
+### 🐞 Bug Fixes
+
+* popup ([4a3bd54](https://gitlab.hellobike.cn///commit/4a3bd544ba7a90ce7cab43ea1697c751fd129d49))
+* 优化splitKeepDelimiter方法 ([f8152db](https://gitlab.hellobike.cn///commit/f8152dbc84838b3509e37601538ec713d69bee06))
+* 修正patch在一些特殊情况下的问题 ([fdfa9d3](https://gitlab.hellobike.cn///commit/fdfa9d33291e3aa50c5372c0a60ea329bc8a240b))
+* 修正state不支持默认值的问题；修正不正常渲染数值0的问题 ([f254405](https://gitlab.hellobike.cn///commit/f254405f565ada77f547ce66f19661cd81456bd7))
+
+
+### 🎉 Features
+
+* **image:** 图片数据修正 ([507e897](https://gitlab.hellobike.cn///commit/507e8975af281cf0123ffcc468269fa77c9ed208))
+* **image:** 添加图片组件 ([35f7bec](https://gitlab.hellobike.cn///commit/35f7bec4771cc3057923845c609b37062a3e4b8d))
+* **index:** 优化image逻辑 增加fit loading功能 ([2344012](https://gitlab.hellobike.cn///commit/2344012accee83c4de57cbfb83808e82aa6004e7))
+* **index:** 图片组件 ([3f75277](https://gitlab.hellobike.cn///commit/3f75277188fedd9eba01c103fb9554d0cc62029b))
+* **index:** 增加图片逻辑 ([521e1aa](https://gitlab.hellobike.cn///commit/521e1aadb78337e33763d500c40947bfb7be668b))
+* jsx ([4b3c0df](https://gitlab.hellobike.cn///commit/4b3c0df58af4d7dfc4b2d407d015ca1557ff73b4))
+* merge img ([2c77815](https://gitlab.hellobike.cn///commit/2c7781503017565432e06f6135655f4a465b4024))
+* popup 单测fix ([e946a58](https://gitlab.hellobike.cn///commit/e946a58fe3eca8b5e2813dcc150987a50f0a208e))
+* pull-refresh doc修改 ([f69567c](https://gitlab.hellobike.cn///commit/f69567caecf4203a7ecf3fb4b6941afde2314e5d))
+* pull-refresh更改 ([f7af38e](https://gitlab.hellobike.cn///commit/f7af38ee2b75306f8bd113a2e58540f509b7df98))
+* 下拉刷新和列表完工 ([1340fdd](https://gitlab.hellobike.cn///commit/1340fdd8f0eca99068234456d4253f8a2e5d55d8))
+* 下拉刷新和列表完成 ([4652dc1](https://gitlab.hellobike.cn///commit/4652dc1691d277390ed5c75edc2101ac8cd2ac7e))
+* 下拉刷新组件 ([51d13b5](https://gitlab.hellobike.cn///commit/51d13b5205c786209132b7472f81c0eb9b60534d))
+* 修正默认值不生效的问题 ([2139095](https://gitlab.hellobike.cn///commit/213909585c6a699e895227c8efae16fbb5c4a2ab))
+* 列表样式修改 ([f65c0e3](https://gitlab.hellobike.cn///commit/f65c0e30bcfbd50295282c95d00783410777bad4))
+* 增加一点调试台内容 ([6c3dc00](https://gitlab.hellobike.cn///commit/6c3dc009b4af1ff4cc2f6b75c9c0d6356431903d))
+* 处理popup 点击事件问题 ([ccc952d](https://gitlab.hellobike.cn///commit/ccc952d52504b8cc8cc5e2ff1a5014a00607b1b9))
+* 重写属性描述符覆盖以及其他相关逻辑 ([a6085e9](https://gitlab.hellobike.cn///commit/a6085e9ad581ed66d473ec8e8c2f4a9ea121edf1))
+* 重新提交 ([77d0442](https://gitlab.hellobike.cn///commit/77d04426fe7d003731b7f2fb24d76b35278b5f2f))
+
+### [1.3.29](https://gitlab.hellobike.cn///compare/v1.3.28...v1.3.29) (2022-02-10)
+
+
+### 🎉 Features
+
+* 修正Number类型属性转换错误的问题 ([bb4ea5d](https://gitlab.hellobike.cn///commit/bb4ea5dacd059ff4f2ae7025177dcfd91adf46b3))
+
+### [1.3.28](https://gitlab.hellobike.cn///compare/v1.3.27...v1.3.28) (2022-02-10)
+
+
+### 🐞 Bug Fixes
+
+* 将boolean类型属性在传入空字符串情况下的转换值改为true ([a5f5c04](https://gitlab.hellobike.cn///commit/a5f5c04088ec183c0bede28fe0a6632b8055f70a))
+
+### [1.3.27](https://gitlab.hellobike.cn///compare/v1.3.26...v1.3.27) (2022-02-10)
+
+### [1.3.26](https://gitlab.hellobike.cn///compare/v1.3.25...v1.3.26) (2022-02-09)
+
+
+### Reverts
+
+* Revert "feat: 优化QuarkElement属性描述符覆盖的实现机制" ([0b6c7c6](https://gitlab.hellobike.cn///commit/0b6c7c6a8be05ac464be607d460d0b4d0e95f69a))
+
+### [1.3.25](https://gitlab.hellobike.cn///compare/v1.3.24...v1.3.25) (2022-02-09)
+
+### [1.3.24](https://gitlab.hellobike.cn///compare/v1.3.22...v1.3.24) (2022-02-09)
+
+
+### 🐞 Bug Fixes
+
+* dialog type监听 ([f757ce6](https://gitlab.hellobike.cn///commit/f757ce60b0e8a515d44de7bcbcf7871006874f80))
+* optimize ([14a40e0](https://gitlab.hellobike.cn///commit/14a40e0e4fc06443b1b43f2a7a58086606d56d2f))
+* optimize ([9c3fc08](https://gitlab.hellobike.cn///commit/9c3fc083326d9d05fab08c24d4f94f83eaaf892b))
+
+
+### 🎉 Features
+
+* **swipe:** 修改swipe样式 ([f903694](https://gitlab.hellobike.cn///commit/f903694e614154a23009e8b92dbdbf3b959be649))
+* 优化QuarkElement属性描述符覆盖的实现机制 ([4b79071](https://gitlab.hellobike.cn///commit/4b7907130b0c325336aefb08da9df3c887b28919))
+
+### [1.3.23](https://gitlab.hellobike.cn///compare/v1.3.19...v1.3.23) (2022-01-27)
+
+
+### 🎉 Features
+
+* dialog增加content ([adfda39](https://gitlab.hellobike.cn///commit/adfda397f9e6525c258e8342eeff4e202034a58d))
+* update ([b692b48](https://gitlab.hellobike.cn///commit/b692b48f53bc2bef8e39e7509b76f9ed670cd471))
+
+
+### 🐞 Bug Fixes
+
+* dialog content ([6af61a2](https://gitlab.hellobike.cn///commit/6af61a2bf77cd25ae1a0e5561cabff57e5916b00))
+* dialog type监听 ([f757ce6](https://gitlab.hellobike.cn///commit/f757ce60b0e8a515d44de7bcbcf7871006874f80))
+* optimize ([9c3fc08](https://gitlab.hellobike.cn///commit/9c3fc083326d9d05fab08c24d4f94f83eaaf892b))
+
+### [1.3.22](https://gitlab.hellobike.cn///compare/v1.3.21...v1.3.22) (2022-01-25)
+
+
+### 🐞 Bug Fixes
+
+* dialog content ([6af61a2](https://gitlab.hellobike.cn///commit/6af61a2bf77cd25ae1a0e5561cabff57e5916b00))
+
+### [1.3.21](https://gitlab.hellobike.cn///compare/v1.3.20...v1.3.21) (2022-01-25)
+
+
+### 🎉 Features
+
+* dialog增加content ([adfda39](https://gitlab.hellobike.cn///commit/adfda397f9e6525c258e8342eeff4e202034a58d))
+
+### [1.3.20](https://gitlab.hellobike.cn///compare/v1.3.19...v1.3.20) (2022-01-25)
+
+
+### 🎉 Features
+
+* update ([b692b48](https://gitlab.hellobike.cn///commit/b692b48f53bc2bef8e39e7509b76f9ed670cd471))
+
+### [1.3.19](https://gitlab.hellobike.cn///compare/v1.3.15...v1.3.19) (2022-01-24)
+
+
+### 🐞 Bug Fixes
+
+* field ([a9a3e66](https://gitlab.hellobike.cn///commit/a9a3e66280b225fd428f7bf8cdd64dde946fe03f))
+* field ([63851be](https://gitlab.hellobike.cn///commit/63851be1c8454eca921e5c7e8f35ff87f0c70b05))
+
+
+### 🎉 Features
+
+* 更改checkbox和radio的单测 ([0663e9a](https://gitlab.hellobike.cn///commit/0663e9a21d31744b780b3ea4a8e9f8cc8b8b2f6c))
+* 增加粘性布局 ([ed9afd1](https://gitlab.hellobike.cn///commit/ed9afd1f865d72c6471a3ae98884dec8a755ce8f))
+* 粘性布局文档更改 ([76c1004](https://gitlab.hellobike.cn///commit/76c1004f90d524fe14b7e70e26dead6332202414))
+* add tips ([c5c9dc7](https://gitlab.hellobike.cn///commit/c5c9dc7f517561270ecc3fe6d0bc23482c5df328))
+* checkbox和radio触发事件改为click ([c4477ac](https://gitlab.hellobike.cn///commit/c4477acb9e32ce2cbf7c553e7d562fe96c904525))
+* checkbox事件触发改为click ([6ba8a06](https://gitlab.hellobike.cn///commit/6ba8a0632b506ba4a74f9d71482b8d698becf10c))
+* update website ([2704c24](https://gitlab.hellobike.cn///commit/2704c24f4090773625c4c14ccd74fa2e6240f24a))
+
+### [1.3.18](https://gitlab.hellobike.cn///compare/v1.3.17...v1.3.18) (2022-01-21)
+
+
+### 🎉 Features
+
+* checkbox事件触发改为click ([6ba8a06](https://gitlab.hellobike.cn///commit/6ba8a0632b506ba4a74f9d71482b8d698becf10c))
+* checkbox和radio触发事件改为click ([c4477ac](https://gitlab.hellobike.cn///commit/c4477acb9e32ce2cbf7c553e7d562fe96c904525))
+
+
+### 🐞 Bug Fixes
+
+* field ([a9a3e66](https://gitlab.hellobike.cn///commit/a9a3e66280b225fd428f7bf8cdd64dde946fe03f))
+* field ([63851be](https://gitlab.hellobike.cn///commit/63851be1c8454eca921e5c7e8f35ff87f0c70b05))
+
+### [1.3.17](https://gitlab.hellobike.cn///compare/v1.3.16...v1.3.17) (2022-01-21)
+
+### [1.3.16](https://gitlab.hellobike.cn///compare/v1.3.15...v1.3.16) (2022-01-21)
+
+
+### 🎉 Features
+
+* update website ([2704c24](https://gitlab.hellobike.cn///commit/2704c24f4090773625c4c14ccd74fa2e6240f24a))
+* 增加粘性布局 ([ed9afd1](https://gitlab.hellobike.cn///commit/ed9afd1f865d72c6471a3ae98884dec8a755ce8f))
+* 粘性布局文档更改 ([76c1004](https://gitlab.hellobike.cn///commit/76c1004f90d524fe14b7e70e26dead6332202414))
+
+### [1.3.15](https://gitlab.hellobike.cn///compare/v1.3.14...v1.3.15) (2022-01-21)
+
+
+### 🎉 Features
+
+* **quark-element:** 增加[@state](https://gitlab.hellobike.cn/state)装饰器；修正当vnode为number时展示错误的问题 ([8cf901c](https://gitlab.hellobike.cn///commit/8cf901c888cd67506e58bc9a04211cd474079e9b))
+
+### [1.3.14](https://gitlab.hellobike.cn///compare/v1.3.13...v1.3.14) (2022-01-21)
+
+
+### Documentation
+
+* 文档更新 ([9a8db8e](https://gitlab.hellobike.cn///commit/9a8db8e207bd7adb0a12998096d505386ee9df02))
+* 通知栏文档更新 ([917708d](https://gitlab.hellobike.cn///commit/917708d8d6e9af19165fab12dc8ffaa372402420))
+
+
+### 🎉 Features
+
+* update website ([b5578ea](https://gitlab.hellobike.cn///commit/b5578ea36e42d65d3bcd88b5ef54f2434d350022))
+* update website ([ac015e1](https://gitlab.hellobike.cn///commit/ac015e1867a19b607ebd59da4399b043a14f6320))
+
+### [1.3.13](https://gitlab.hellobike.cn///compare/v1.3.12...v1.3.13) (2022-01-20)
+
+
+### 🎉 Features
+
+* update website ([e9efbb9](https://gitlab.hellobike.cn///commit/e9efbb909bb698d97699228124d1b66bf524baa2))
+* update website ([dc2b1af](https://gitlab.hellobike.cn///commit/dc2b1afa373d0eb0a1c9709dea28fcdca3d40b1b))
+
+### [1.3.12](https://gitlab.hellobike.cn///compare/v1.3.11...v1.3.12) (2022-01-20)
+
+
+### 🎉 Features
+
+* update website ([ef52896](https://gitlab.hellobike.cn///commit/ef52896ae00a0f2430b947c11c5461a6b7a82e27))
+
+### [1.3.11](https://gitlab.hellobike.cn///compare/v1.3.10...v1.3.11) (2022-01-20)
+
+
+### 🎉 Features
+
+* checkbox和radio的change传值方式改变 ([ccde461](https://gitlab.hellobike.cn///commit/ccde46199b497e399a8ee71e4ab23a2746eddfc3))
+* field 单测补齐 ([60e3734](https://gitlab.hellobike.cn///commit/60e3734146e038efd39ef33d0b209ee068b57faa))
+* field 组件功能补齐 ([43166b1](https://gitlab.hellobike.cn///commit/43166b18e0aed2a70a33494c56eff84eb935bc93))
+* 删除无用文件 ([a4b56f9](https://gitlab.hellobike.cn///commit/a4b56f964587760c3c905e9fa66c2f5175c325e9))
+
+### [1.3.10](https://gitlab.hellobike.cn///compare/v1.3.9...v1.3.10) (2022-01-19)
+
+### [1.3.9](https://gitlab.hellobike.cn///compare/v1.3.8...v1.3.9) (2022-01-19)
+
+
+### Documentation
+
+* Noticebar 文档补全 ([879a541](https://gitlab.hellobike.cn///commit/879a54113e4e36e43001eb2551bfc956dee90c67))
+
+
+### 🎉 Features
+
+*  完成通知栏基础 ui ([cf564b1](https://gitlab.hellobike.cn///commit/cf564b1d032a11c87f20ac6b4b4060eadabe39e1))
+*  完成通知栏组件 ([6c6a5a5](https://gitlab.hellobike.cn///commit/6c6a5a5a50604c327be4bcd8941b7ba38627f561))
+* **index:** 增加创建组件的脚本 ([62943aa](https://gitlab.hellobike.cn///commit/62943aaf546341575e1e8b6c127317a0217e19a6))
+* **noticebar:** noticebar重构为jsx写法 ([ef79bb3](https://gitlab.hellobike.cn///commit/ef79bb388096e3a063dc82bb4e27aa36a67b10eb))
+* npm run build:site ([328745c](https://gitlab.hellobike.cn///commit/328745c44278b51c39699c015f1ecdc6a9ba2f2b))
+* **quark-element:** 修正vdom对style中样式名处理的逻辑 ([7349336](https://gitlab.hellobike.cn///commit/73493366144ac30fe14beb6b6ce1e053654e6ce3))
+* **quark-element:** 在组件销毁前移除dom ([3bc7e69](https://gitlab.hellobike.cn///commit/3bc7e69f24bdd105d352fcddd314f488e1197f3a))
+* search组件引入icon ([ae99c58](https://gitlab.hellobike.cn///commit/ae99c58909f704bfb730b5739afa5e6cda5848cf))
+* tab背景色支持设置 ([cb633fb](https://gitlab.hellobike.cn///commit/cb633fb7d0d9a93381a5c0cbdc5d76bfd4584f0d))
+* 修正根元素的获取逻辑，防止由于原根节点被移除导致引用丢失问题 ([29e2275](https://gitlab.hellobike.cn///commit/29e22755eaeb44c89ca79a75ecb13731502bc16e))
+* 升级tabs手动滑动功能 ([9584c14](https://gitlab.hellobike.cn///commit/9584c14c1b183889b397048c1fdd5d6bd3711533))
+* 完成跑马灯组件 ([f310387](https://gitlab.hellobike.cn///commit/f3103879d76e730dd1e537ec3d1668a46ce12b2e))
+* 新增跑马灯组件 ([a582b74](https://gitlab.hellobike.cn///commit/a582b747a34eea3adaa95dc4acae6285dac0b2e2))
+* 暂存文件 ([05b4886](https://gitlab.hellobike.cn///commit/05b4886bdc4b4fadde281a396d68a917fa48bc93))
+* 移除注释 ([168f544](https://gitlab.hellobike.cn///commit/168f5449abf6c08f12ec392617ae26281fa02146))
+
+### [1.3.8](https://gitlab.hellobike.cn///compare/v1.3.7...v1.3.8) (2022-01-14)
+
+
+### 🐞 Bug Fixes
+
+* badge ([9ac4645](https://gitlab.hellobike.cn///commit/9ac46459aca842b47aa6ccced4f3feb96b0cab95))
+
+### [1.3.7](https://gitlab.hellobike.cn///compare/v1.3.6...v1.3.7) (2022-01-14)
+
+
+### 🎉 Features
+
+* badge增加对内容的监听 ([96e7b90](https://gitlab.hellobike.cn///commit/96e7b9088bcaa6d26f4e44469e998306ef1fac7b))
+* cell 增加样式变量 ([54b7436](https://gitlab.hellobike.cn///commit/54b74367fbf07aa80863861ea76a3d0505ecc21c))
+* **quark-element:** 修正patch的el为数组但非fragment情况的处理 ([a85afd0](https://gitlab.hellobike.cn///commit/a85afd0c4b96828e9e4930bd9cca298450a6d159))
+* **quark-element:** 支持Fragment ([73cb1e7](https://gitlab.hellobike.cn///commit/73cb1e71272a3582828752078131d900db3615ca))
+* **quark-element:** 支持ref；observed改为默认true；支持在jsx中执行map ([ff0704c](https://gitlab.hellobike.cn///commit/ff0704c95902cf28c82409fd9706731c303b692b))
+* **quark-element:** 暂时移除延迟patch逻辑 ([2e2bf67](https://gitlab.hellobike.cn///commit/2e2bf672bad86c7389336ba9d4dca4121729e3ce))
+* **quark-element:** 调整文档及生命周期；shouldComponentUpdate默认值相等不更新 ([783c727](https://gitlab.hellobike.cn///commit/783c7278ec5b29b96519da298581eade8a27b1e7))
+* stepper 增加overlimit 事件 ([ca24a24](https://gitlab.hellobike.cn///commit/ca24a245119bdb32cce88ddde356fbd4a0ebe1af))
+* update 官网 ([02491d5](https://gitlab.hellobike.cn///commit/02491d54de05cefafcd7031dabb09e94099de34e))
+* 事件解绑逻辑改为与元素绑定 ([3df677f](https://gitlab.hellobike.cn///commit/3df677fa025171907f320eebc5bbd607dae2a166))
+* 优化渲染性能；移除旧的el+attrChangehandler逻辑 ([6ffe5c9](https://gitlab.hellobike.cn///commit/6ffe5c96c019d71660ca2f90c7c5ca0052b3acda))
+* 修正并优化延迟patch逻辑 ([6dc8f28](https://gitlab.hellobike.cn///commit/6dc8f286c5ce02b921fcab247c40064020f607de))
+* 删除无用代码 ([76284d9](https://gitlab.hellobike.cn///commit/76284d9bf9fe485fe79222ad3c1c983e07b014c9))
+* 增加style对象形式下驼峰命名的支持；增加typescript plugin支持打包tsx ([ee26af8](https://gitlab.hellobike.cn///commit/ee26af87c60b92abdda67d3e8769d2c097100d6d))
+* 支持tsx以及按需更新 ([602fbd8](https://gitlab.hellobike.cn///commit/602fbd8eb6c731e7ce31372a93707a4eb17935a5))
+* 调整声明；增加防空引用处理 ([0a4a2a3](https://gitlab.hellobike.cn///commit/0a4a2a34071c69ff89525d681642e202e91cc239))
+
+### [1.3.6](https://gitlab.hellobike.cn///compare/v1.3.5...v1.3.6) (2022-01-13)
+
+### [1.3.5](https://gitlab.hellobike.cn///compare/v1.3.1...v1.3.5) (2022-01-13)
+
+
+### Merge
+
+* 解决冲突 ([cac73fb](https://gitlab.hellobike.cn///commit/cac73fbec73ce4a3298aa24a2ffab4eea312f3ed))
+
+
+### Documentation
+
+*  修改了badge的文档 ([3fe2e33](https://gitlab.hellobike.cn///commit/3fe2e33ffcbde8277da7e0ec15d77c110a6b8410))
+* dialog 升级 ([2e5172c](https://gitlab.hellobike.cn///commit/2e5172cba4ad5ac28af0e92f541f9d4107a9fd99))
+* 文档优化 ([cafc942](https://gitlab.hellobike.cn///commit/cafc9422ae14bec9d7fdbb18e90824cdd6a6e078))
+
+
+### 🐞 Bug Fixes
+
+*  官网更新&demo优化 ([4db5fcc](https://gitlab.hellobike.cn///commit/4db5fccaf83a6e1d5715fffe9448b16192923b24))
+* popup ([465a1e0](https://gitlab.hellobike.cn///commit/465a1e0a1d7302a392023bd982761bfeda536746))
+* website bug ([393d073](https://gitlab.hellobike.cn///commit/393d07385940fd5b305f7edf403e4a468939e64a))
+* 优化 Search demo ([fb9f6ae](https://gitlab.hellobike.cn///commit/fb9f6aed6e920105e54cb44e5ff759d18a823869))
+* 优化code.md ([b39bf44](https://gitlab.hellobike.cn///commit/b39bf44b0da81152850091588f5daa969c71cd3c))
+* 优化代码 ([278472a](https://gitlab.hellobike.cn///commit/278472ad4cd0150fdb6ea54ab53a72d66c877cf3))
+* 优化代码 ([587c849](https://gitlab.hellobike.cn///commit/587c8499bae9c759073563637c04fce5b53c6391))
+* 优化代码 ([a48c297](https://gitlab.hellobike.cn///commit/a48c297c78e7c896c1f285a6d02e5f92061d6ad3))
+* 修复popup 滚动问题 ([1649821](https://gitlab.hellobike.cn///commit/16498216a1ff143d9630ff9114b5d21a9a92d978))
+* 修复swipe 默认indix 问题 ([7d01572](https://gitlab.hellobike.cn///commit/7d01572710f9c32dd10c422d1786b62b89ea4a3b))
+* 添加注释 ([fda6555](https://gitlab.hellobike.cn///commit/fda6555eac3ed9d31abc87bd50d49fb4f2873266))
+* 移除tsc文件夹 ([cf90600](https://gitlab.hellobike.cn///commit/cf90600d344a6a045612fb7d9b103cb7e3f5ea66))
+* 补充css 样式变量 ([e43c2fa](https://gitlab.hellobike.cn///commit/e43c2facfd947dfd1416b6290c7158a2493e6bb5))
+
+
+### 🎉 Features
+
+*  暂存文件 ([4e9475d](https://gitlab.hellobike.cn///commit/4e9475ded757c8ff2c5fabfa358058212a97c498))
+* add feedback ([9e8e8a1](https://gitlab.hellobike.cn///commit/9e8e8a149e54e9af27bb2bd42b72f55eedb77c15))
+* add react demo dev env ([50b52d7](https://gitlab.hellobike.cn///commit/50b52d72fb23abdcd6a7740b11e1008f67c14e4f))
+* add react demo dev env ([b9e064d](https://gitlab.hellobike.cn///commit/b9e064d496dfe38df9d5741b88d8f44b6f1db1c4))
+* add react demo view ([7883b52](https://gitlab.hellobike.cn///commit/7883b52692964b5117fb376a2159bb73d42609c7))
+* backup ([fc94338](https://gitlab.hellobike.cn///commit/fc943382b3bbbf85897542a6497cafaa42de0f5c))
+* badge的优化 ([189caf6](https://gitlab.hellobike.cn///commit/189caf6d16572e4c3d296ac7d4f74b3a0e4fd7ca))
+* **badge:** 调整badge组件的css书写方式 ([22a15da](https://gitlab.hellobike.cn///commit/22a15dab7272fd0b42bbbb4649b20710e825993c))
+* badge重构完成 ([1dae244](https://gitlab.hellobike.cn///commit/1dae2440f261c65685c56d824690879c25ab1e00))
+* checkbox和radio完工 ([2701639](https://gitlab.hellobike.cn///commit/270163977cfe6f0b3e7387ff8a56629b22cacf97))
+* checkbox和radio暂存 ([9587878](https://gitlab.hellobike.cn///commit/958787866986cab0fe7e56dbff0a4d625139a793))
+* checkbox增加对动态disable的处理 ([33ed554](https://gitlab.hellobike.cn///commit/33ed5549623a2a73513aeda4779af44f128950dd))
+* checkbox开发完成 ([28c0a50](https://gitlab.hellobike.cn///commit/28c0a50dcb5ad6d21d55c45dddd1fbeb319302ad))
+* checkbox开发完成 ([d8ba2ba](https://gitlab.hellobike.cn///commit/d8ba2ba96888811a41b8d1f0e6a52112aad3e0d1))
+* checkbox文档更改 ([f2c40e6](https://gitlab.hellobike.cn///commit/f2c40e661b516def5785443cfc13a8ebc68f737c))
+* checkbox暂存 ([89125f3](https://gitlab.hellobike.cn///commit/89125f33a555d2e8339c6f021f776a2cdbe688d4))
+* checkbox组件 ([d173adf](https://gitlab.hellobike.cn///commit/d173adf04222fe21c13fd8dc1458a56ee6a743d1))
+* dialog 按钮类型替换 ([e3cb2ce](https://gitlab.hellobike.cn///commit/e3cb2cedcb4c5f3b81e1028f4a05d010ee5f42fe))
+* eslint error ([6915f0c](https://gitlab.hellobike.cn///commit/6915f0cf5711d97da9c62d176936de93107f6412))
+* field 组件完成重构 ([2b955dd](https://gitlab.hellobike.cn///commit/2b955dd6a6d8d613da33c4065a8656787eca9af6))
+* **index:** cell button重构 ([ebd8f20](https://gitlab.hellobike.cn///commit/ebd8f2076933265c97e5f875271718a146278959))
+* **index:** init ([99e8863](https://gitlab.hellobike.cn///commit/99e886387d8355150488720ab76385676d2b97df))
+* **index:** init ([1db0e16](https://gitlab.hellobike.cn///commit/1db0e16cdbd417bfdc87f01e896552749adc5e24))
+* **index:** init ([4d22f98](https://gitlab.hellobike.cn///commit/4d22f9846b3f08384dbee51ec4e42bc5e579b6b9))
+* **index:** init ([2a5f0b9](https://gitlab.hellobike.cn///commit/2a5f0b92c61558e8b68c1a8d591ae6793e020d6a))
+* **index:** init ([1ba51bc](https://gitlab.hellobike.cn///commit/1ba51bc0cb41556ddccb5a37f01b16348bb752e0))
+* **index:** init ([6c2a5eb](https://gitlab.hellobike.cn///commit/6c2a5eb7193ebd56836ec1146faa86004b288a55))
+* **index:** init ([888c61e](https://gitlab.hellobike.cn///commit/888c61ef7ee51b5cd6d4fdb134393e689d395eac))
+* **index:** init button empty ([83b2955](https://gitlab.hellobike.cn///commit/83b295546cc65658df4c1ff39cb1423c29eddaf2))
+* **index:** init stepper ([8622e17](https://gitlab.hellobike.cn///commit/8622e1724a43fd6370316a147098827c3a70d8fa))
+* **index:** merge master ([f5fa6e4](https://gitlab.hellobike.cn///commit/f5fa6e4fb6221a789d1f4ec7dfc4bf592ab7e0b5))
+* **index:** stepper 优化 ([1d5573c](https://gitlab.hellobike.cn///commit/1d5573c026d7998541e433c4ac9367cf1bac84f1))
+* **index:** 优化stepper 内部逻辑 ([ec32cb8](https://gitlab.hellobike.cn///commit/ec32cb828697be7373e6bf6e1e2df9b91ef50fe2))
+* **index:** 优化stepper内部逻辑 增加plus minus focus blur events ([8ba8468](https://gitlab.hellobike.cn///commit/8ba846886d2eb2381ddcc3fcfec763cf30af4182))
+* **index:** 修改样式 ([977c38a](https://gitlab.hellobike.cn///commit/977c38af013a87fe1d2bf771f2f7c09111840c6b))
+* **index:** 增加测试用例 ([299c0ca](https://gitlab.hellobike.cn///commit/299c0ca3486b9d10cdbd135b976cdbf42e4f3234))
+* **index:** 打包新官网 ([0e86bca](https://gitlab.hellobike.cn///commit/0e86bca0537dd1f3342314bf45df7cc41b8d1b52))
+* **index:** 新增css attribute ([d20045c](https://gitlab.hellobike.cn///commit/d20045c72569fa6c45ed39f96d7ab7f8e257fa73))
+* merge badge ([ef96f5e](https://gitlab.hellobike.cn///commit/ef96f5e01c62ee9a3adf3e6c1d033f76f07e23c3))
+* merge master ([8bff11e](https://gitlab.hellobike.cn///commit/8bff11e0137a1e446034ee252916089652355977))
+* **quark-element:** 优化upgradeProperty获取响应式属性的逻辑 ([16afa3d](https://gitlab.hellobike.cn///commit/16afa3d9d24e40eda8189a59dc663d78a76a6c41))
+* **quark-element:** 将render放到构造函数中执行，增加onRendered、onMount生命周期。 ([288e05b](https://gitlab.hellobike.cn///commit/288e05bdccb79dc7d6d38da4856b65fe30fafc6c))
+* QuarkElement支持$on、$emit功能 ([d106949](https://gitlab.hellobike.cn///commit/d106949dddaa7e5554c8eb9b3e59336d47158a3f))
+* radio单测pass ([427c593](https://gitlab.hellobike.cn///commit/427c59332110b752e705a52f677bcaf78167aaef))
+* radio组件开发完成 ([57fbd25](https://gitlab.hellobike.cn///commit/57fbd258da8ce5f657e8aefdb761e358d10f0a21))
+* react-demo 样式隔离 ([1630e3f](https://gitlab.hellobike.cn///commit/1630e3fead26a267b925b603c7d4bdb1a5d98869))
+* react-demo 添加联动 ([4ba31aa](https://gitlab.hellobike.cn///commit/4ba31aa3bc1f05c70732a3ebe0966f685cb0a81e))
+* react-demo完工 ([6609ca0](https://gitlab.hellobike.cn///commit/6609ca0fe9cec121c4bf4b045587d2309a4bb885))
+* react样式文件重命名 ([3eaf22a](https://gitlab.hellobike.cn///commit/3eaf22a16cc904ff3d5ef5992e50f3e43593fb0a))
+* react组件重新命名 ([bb8d2a9](https://gitlab.hellobike.cn///commit/bb8d2a90909fbe9144fd0ce7f50e5dce010c56eb))
+* remove axios ([8a4118d](https://gitlab.hellobike.cn///commit/8a4118d782faf9221fa6a05bd1e05f4a51488f0c))
+* search组件重构完成 ([effd19e](https://gitlab.hellobike.cn///commit/effd19e7962aeea2cbf4465b66def78974982f69))
+* tab@1.1 ([ec36597](https://gitlab.hellobike.cn///commit/ec36597a1b319f90fa5127e9e1e0dd66fa4f03f9))
+* tab@1.1微调 ([4ef1937](https://gitlab.hellobike.cn///commit/4ef1937462db8d2fe68e8e8c13cab8aa4ccca76c))
+* tab1.1 ([2b81763](https://gitlab.hellobike.cn///commit/2b817639e318fb7ad8de7dda5d774e170cc92503))
+* tab1.1 ([200b8dc](https://gitlab.hellobike.cn///commit/200b8dc1c157f483969ffac0b844f43fe36d039f))
+* tab1.1 微调 ([a300933](https://gitlab.hellobike.cn///commit/a30093310d1d79057ea987563c156d454fb46f80))
+* tab1.1完工 ([d93613a](https://gitlab.hellobike.cn///commit/d93613a9f120a63db3c086ee9ebfde1298aa0522))
+* tab1.1完工 ([81b9f4e](https://gitlab.hellobike.cn///commit/81b9f4e24c21cfc0c8d221f5518f5ecac6a111d9))
+* update ([6f7bab0](https://gitlab.hellobike.cn///commit/6f7bab09ac69c43577784a068ea965de297e9bc8))
+* update website ([863c8c9](https://gitlab.hellobike.cn///commit/863c8c924f77f7351ef7ff48cf1aaed9a07538d7))
+* update website ([d7023d7](https://gitlab.hellobike.cn///commit/d7023d79bc4c6063b09e37fbf29d90e261ec3d9d))
+* update 官网 ([f577349](https://gitlab.hellobike.cn///commit/f57734938bc33b3c45a90f5515832808e7458e7d))
+* update 官网 ([5390d2b](https://gitlab.hellobike.cn///commit/5390d2b6e4c486512b58f871c432a7691ef66982))
+* 优化 dialog 组件 ([52b4ca8](https://gitlab.hellobike.cn///commit/52b4ca80610e394ae0a68464173d0866249d5bc7))
+* 修复react-demo打包问题 ([72b9421](https://gitlab.hellobike.cn///commit/72b9421eb41b13889eb52e95d5a9d5dcf36b0ef8))
+* 修复组件在react-demo上的报错 ([659e28a](https://gitlab.hellobike.cn///commit/659e28ab0db8925b3f4bd5b4bb37c2d7a28852f7))
+* 修正attrChangeHandler的this指向 ([7537c19](https://gitlab.hellobike.cn///commit/7537c196bea41fa8df10fb62267a77b03e1e7e8c))
+* 全部组件添加react-demo ([2f4c29a](https://gitlab.hellobike.cn///commit/2f4c29ad1dccbfe8585fd64ccffd895eca323512))
+* 完成 navbar 重构 ([d8005de](https://gitlab.hellobike.cn///commit/d8005deab9d62db3c67a9d5573f46babe637e56f))
+* 官网更新 ([76b47b6](https://gitlab.hellobike.cn///commit/76b47b64f4cdba76e58f81722151391a52ac7cfe))
+* 官网更新 ([63c225e](https://gitlab.hellobike.cn///commit/63c225e12c1935e1f6c22047d6e74dd78ebfcdde))
+* 官网更新 ([b2d3b43](https://gitlab.hellobike.cn///commit/b2d3b4393656ef357521268d6c215651c9b8d68c))
+* 官网更新 ([25417bd](https://gitlab.hellobike.cn///commit/25417bd6cf91a608da429c94eaa93519050354b4))
+* 将ElementProperties、PropertyDescriptors放到全局便于理解；补充removeAttribute逻辑 ([d44549b](https://gitlab.hellobike.cn///commit/d44549bcd1a8d7c05d570131054b4fa4b124d955))
+* 底层能力抽象，增加QuarkElement基类以及property、customElement装饰器 ([d2b8856](https://gitlab.hellobike.cn///commit/d2b8856d492da2866e16bef3ec49fca3854fbb29))
+* 徽标 badge开发完成 ([8597a1b](https://gitlab.hellobike.cn///commit/8597a1b552e86d253c72964d49bc5ca7b662c94a))
+* 打包脚本变更 ([c9ad20f](https://gitlab.hellobike.cn///commit/c9ad20f2f695c4290839896a27dc786a8999aac3))
+* 改造navbar组件 ([9b7b95b](https://gitlab.hellobike.cn///commit/9b7b95b8238f9d48e40a0a4f00d7d60f6773c46f))
+* 文档优化 ([2c08ba8](https://gitlab.hellobike.cn///commit/2c08ba8cd15389f799e6670062bf9f8452151ea7))
+* 暂存文件 ([9068b8c](https://gitlab.hellobike.cn///commit/9068b8c5f9a6fbcb0b307cffec91f11f748246d9))
+* 更改boolean属性的判断 ([d830d68](https://gitlab.hellobike.cn///commit/d830d68f6ed4bc1468b880520b2f15f56b1f6a15))
+* 添加react-demo地址 ([b89ce8f](https://gitlab.hellobike.cn///commit/b89ce8f11538080036718ca0dca38322008a37f1))
+* 解决build报错 ([8d118f5](https://gitlab.hellobike.cn///commit/8d118f531fd8e8772924f79b547a2ba7d904e189))
+* 调整dialog 用法增加 slot 和 close 函数 ([ae17118](https://gitlab.hellobike.cn///commit/ae1711853be6bbc507f0fc1d52260f45f2ebf71f))
+* 跳转  dialog css ([660e1f4](https://gitlab.hellobike.cn///commit/660e1f475363e192ed8ff6afa76d90a92a2ca055))
+* 适配 头部 ([2641ed8](https://gitlab.hellobike.cn///commit/2641ed86e7ef7babc0d3fabeed0703e5308ef89c))
+* 项目添加react demo ([77a33c0](https://gitlab.hellobike.cn///commit/77a33c02e1943d0876864a2a5dfce25606507075))
+
+### [1.3.2](https://gitlab.hellobike.cn///compare/v1.3.1...v1.3.2) (2021-12-27)
+
+
+### 🐞 Bug Fixes
+
+* 补充css 样式变量 ([e43c2fa](https://gitlab.hellobike.cn///commit/e43c2facfd947dfd1416b6290c7158a2493e6bb5))
+* 移除tsc文件夹 ([cf90600](https://gitlab.hellobike.cn///commit/cf90600d344a6a045612fb7d9b103cb7e3f5ea66))
+* 优化 Search demo ([fb9f6ae](https://gitlab.hellobike.cn///commit/fb9f6aed6e920105e54cb44e5ff759d18a823869))
+* 优化代码 ([278472a](https://gitlab.hellobike.cn///commit/278472ad4cd0150fdb6ea54ab53a72d66c877cf3))
+* 优化代码 ([587c849](https://gitlab.hellobike.cn///commit/587c8499bae9c759073563637c04fce5b53c6391))
+* 优化代码 ([a48c297](https://gitlab.hellobike.cn///commit/a48c297c78e7c896c1f285a6d02e5f92061d6ad3))
+* 优化code.md ([b39bf44](https://gitlab.hellobike.cn///commit/b39bf44b0da81152850091588f5daa969c71cd3c))
+
+
+### 🎉 Features
+
+* 打包脚本变更 ([c9ad20f](https://gitlab.hellobike.cn///commit/c9ad20f2f695c4290839896a27dc786a8999aac3))
+* 调整dialog 用法增加 slot 和 close 函数 ([ae17118](https://gitlab.hellobike.cn///commit/ae1711853be6bbc507f0fc1d52260f45f2ebf71f))
+* 官网更新 ([63c225e](https://gitlab.hellobike.cn///commit/63c225e12c1935e1f6c22047d6e74dd78ebfcdde))
+* 官网更新 ([b2d3b43](https://gitlab.hellobike.cn///commit/b2d3b4393656ef357521268d6c215651c9b8d68c))
+* 官网更新 ([25417bd](https://gitlab.hellobike.cn///commit/25417bd6cf91a608da429c94eaa93519050354b4))
+* 徽标 badge开发完成 ([8597a1b](https://gitlab.hellobike.cn///commit/8597a1b552e86d253c72964d49bc5ca7b662c94a))
+* **badge:** 调整badge组件的css书写方式 ([22a15da](https://gitlab.hellobike.cn///commit/22a15dab7272fd0b42bbbb4649b20710e825993c))
+* merge badge ([ef96f5e](https://gitlab.hellobike.cn///commit/ef96f5e01c62ee9a3adf3e6c1d033f76f07e23c3))
+* remove axios ([8a4118d](https://gitlab.hellobike.cn///commit/8a4118d782faf9221fa6a05bd1e05f4a51488f0c))
+* update 官网 ([5390d2b](https://gitlab.hellobike.cn///commit/5390d2b6e4c486512b58f871c432a7691ef66982))
+
+## [1.3.0](https://gitlab.hellobike.cn///compare/v1.2.13...v1.3.0) (2021-12-16)
+
+
+### 🎉 Features
+
+* pr问题修改, 测试用例补充 ([30cda67](https://gitlab.hellobike.cn///commit/30cda67e7593c724ad237bbf31c7997bb3d38c88))
+* search 组件完善开发 ([310954b](https://gitlab.hellobike.cn///commit/310954be346698fcd7007b93588e2b544f17517b))
+* search 组件开发 工具类 防抖 ([7c1674f](https://gitlab.hellobike.cn///commit/7c1674f26f353b7dda978ce8a6699366a1bed447))
+* **search:** search组件绑定值调试 ([f8f2df6](https://gitlab.hellobike.cn///commit/f8f2df628695ed07298c3555cc4823f97461bac5))
+* search组件 属性修改 ([00180a5](https://gitlab.hellobike.cn///commit/00180a5db9073baa80d7b5efb4def677e1f48b84))
+* **search组件:** search组件开发 ([c66e7d8](https://gitlab.hellobike.cn///commit/c66e7d88cbccbbbd6ca92414067e148832327a3e))
+* **search组件:** search组件开发 ([ff54e78](https://gitlab.hellobike.cn///commit/ff54e788152dbb5136a5d3a047ab7e89ec9df35f))
+* search组件开发 合并master ([c9f92da](https://gitlab.hellobike.cn///commit/c9f92daf545c49d0f3dd2756f7b070bf4dbe99be))
+* **search组件:** 问题修复, 单测 ([75f6425](https://gitlab.hellobike.cn///commit/75f64258c9689d5cc9a5490766bba7fe18c5fc5d))
+* update 官网 ([0cab55e](https://gitlab.hellobike.cn///commit/0cab55eae416a3d7afd8fd0de7b9d4b5a0434083))
+* 代码优化 ([7b5bcf6](https://gitlab.hellobike.cn///commit/7b5bcf6a99fe5ce89b70759a601508738b73de8e))
+* 代码优化 ([774fd33](https://gitlab.hellobike.cn///commit/774fd335806d31591b60a0039ab569d8565fd344))
+* 代码优化 ([aa2d630](https://gitlab.hellobike.cn///commit/aa2d63042c3022133eca76760fd3833c5262c302))
+
+### [1.2.13](https://gitlab.hellobike.cn///compare/v1.2.12...v1.2.13) (2021-12-14)
+
+
+### 🎉 Features
+
+* update 官网 ([c852621](https://gitlab.hellobike.cn///commit/c8526215f17f751287f1c009ae822174e47a4d96))
+
+### [1.2.12](https://gitlab.hellobike.cn///compare/v1.2.11...v1.2.12) (2021-12-10)
+
+### [1.2.11](https://gitlab.hellobike.cn///compare/v1.2.10...v1.2.11) (2021-12-08)
+
+### [1.2.10](https://gitlab.hellobike.cn///compare/v1.2.9...v1.2.10) (2021-12-08)
+
+### [1.2.9](https://gitlab.hellobike.cn///compare/v1.2.8...v1.2.9) (2021-12-08)
+
+### [1.2.8](https://gitlab.hellobike.cn///compare/v1.2.7...v1.2.8) (2021-12-08)
+
+
+### 🎉 Features
+
+* 官网更新 ([a65a560](https://gitlab.hellobike.cn///commit/a65a560e3ae537ae04066dc2e2b2e8ab68edefc8))
+
+### [1.2.7](https://gitlab.hellobike.cn///compare/v1.2.6...v1.2.7) (2021-12-07)
+
+
+### 🎉 Features
+
+* 官网更新 ([ad8ebd1](https://gitlab.hellobike.cn///commit/ad8ebd114121eb14b9b3ba84b9b828a4b0900ca4))
+
+### [1.2.6](https://gitlab.hellobike.cn///compare/v1.2.5...v1.2.6) (2021-12-07)
+
+
+### 🐞 Bug Fixes
+
+* 修复文件 ([d6d7541](https://gitlab.hellobike.cn///commit/d6d754164e33587d54efe1b1f6bbc8eea510a10f))
+
+
+### 🎉 Features
+
+* dialog 组件增加动态熟悉示例 ([28fdf8d](https://gitlab.hellobike.cn///commit/28fdf8db5e630621e5c430ccb851fee991002d28))
+* update官网 ([ab9c3ee](https://gitlab.hellobike.cn///commit/ab9c3ee57d6784fc728de6a630526719a38731b3))
+* update官网 ([286bfbe](https://gitlab.hellobike.cn///commit/286bfbe5aff14e073af1b4848e3c87a2ecfca35f))
+* 删掉tsc文件 & 更新diary.md ([b2a70da](https://gitlab.hellobike.cn///commit/b2a70da55c083713188b1f556bf3cef21ae0db87))
+* 增加官网埋点 ([63de4e6](https://gitlab.hellobike.cn///commit/63de4e6f7a13c2b33870fa907267ef6ccddc3cc4))
+* 增加官网埋点 ([59df1e0](https://gitlab.hellobike.cn///commit/59df1e03dae1f0ec64518e1d7c219fa51899c791))
+* 官网 Demo 更新 ([0e97560](https://gitlab.hellobike.cn///commit/0e97560efb7910e8ba8360a9c2ad409896819fb9))
+* 官网增加埋点 ([9647317](https://gitlab.hellobike.cn///commit/9647317d52d5a635255a85914daafa5f56a4c6f9))
+* 官网更新 ([5d2bad2](https://gitlab.hellobike.cn///commit/5d2bad235447cd7692d1f67aca612f8d965b2645))
+* 官网更新 ([b4fcb23](https://gitlab.hellobike.cn///commit/b4fcb23c97eeb3067113615c21919b1d0a9e08ef))
+* 官网更新 ([cdd9e70](https://gitlab.hellobike.cn///commit/cdd9e70a6effda59c26fa5e77373b24bc656600d))
+* 官网更新 ([5ffd896](https://gitlab.hellobike.cn///commit/5ffd8962ec4e93db79de0f6f2a31aeec8f7d1ab6))
+* 官网更新 ([b77ad27](https://gitlab.hellobike.cn///commit/b77ad274f57edf9db4de035ee2c9200be7b465e3))
+* 更新官网 ([cfa7a55](https://gitlab.hellobike.cn///commit/cfa7a55313cfd0d78298c6d0c8e7c9798136442a))
+* 更新官网 ([5e9e223](https://gitlab.hellobike.cn///commit/5e9e223479727d682e8493a91bf907dff8c3b463))
+* 更新官网 ([55bb67c](https://gitlab.hellobike.cn///commit/55bb67c5c93909cf46c8fe90ac6979c42affd2d3))
+* 组件页面增加埋点 ([9fcdc05](https://gitlab.hellobike.cn///commit/9fcdc05baa3708a9d3132bf4f22313eefa9053b9))
+
+### [1.2.5](https://gitlab.hellobike.cn///compare/v1.2.0...v1.2.5) (2021-11-26)
+
+
+### 🐞 Bug Fixes
+
+* cell isLink ([7929f6d](https://gitlab.hellobike.cn///commit/7929f6d3fc97090b6dd9abd4a05338dc29f462de))
+* cell isLink ([065e1f3](https://gitlab.hellobike.cn///commit/065e1f34f7a08303ba421f594e828933b8fcd708))
+
+
+### 🎉 Features
+
+* 完成进度条组件 ([9aa98fb](https://gitlab.hellobike.cn///commit/9aa98fb5eea312fe121dac9937022a4b6defdcb5))
+* 版本更新 ([66416f9](https://gitlab.hellobike.cn///commit/66416f9981cf2638aec93cdb13fa6131de0b32e0))
+
+### [1.2.4](https://gitlab.hellobike.cn///compare/v1.2.0...v1.2.4) (2021-11-25)
+
+
+### 🐞 Bug Fixes
+
+* cell isLink ([7929f6d](https://gitlab.hellobike.cn///commit/7929f6d3fc97090b6dd9abd4a05338dc29f462de))
+* cell isLink ([065e1f3](https://gitlab.hellobike.cn///commit/065e1f34f7a08303ba421f594e828933b8fcd708))
+
+
+### 🎉 Features
+
+* 完成进度条组件 ([9aa98fb](https://gitlab.hellobike.cn///commit/9aa98fb5eea312fe121dac9937022a4b6defdcb5))
+
+### [1.2.3](https://gitlab.hellobike.cn///compare/v1.2.2...v1.2.3) (2021-11-25)
+
+
+### 🐞 Bug Fixes
+
+* cell isLink ([065e1f3](https://gitlab.hellobike.cn///commit/065e1f34f7a08303ba421f594e828933b8fcd708))
+
+### [1.2.2](https://gitlab.hellobike.cn///compare/v1.2.1...v1.2.2) (2021-11-25)
+
+### [1.2.1](https://gitlab.hellobike.cn///compare/v1.2.0...v1.2.1) (2021-11-24)
+
+## [1.2.0](https://gitlab.hellobike.cn///compare/v1.1.18...v1.2.0) (2021-11-23)
+
+
+### Documentation
+
+* 更新踩坑记录 ([fb44b68](https://gitlab.hellobike.cn///commit/fb44b68fe0e80e34026f790d1d95c1e438aac688))
+
+
+### 🎉 Features
+
+* dialog demo update ([dbf9d4f](https://gitlab.hellobike.cn///commit/dbf9d4f03b5789140d1ba6a12c894011a882deb0))
+* field 组件增加 css 变量属性 ([4174170](https://gitlab.hellobike.cn///commit/4174170de7568c8f4532aa44eb82d4f7234661b8))
+* swipe ([bc94678](https://gitlab.hellobike.cn///commit/bc9467898fdd7203a300637ed2fc18ef7761f93a))
+* swipe ([b2743db](https://gitlab.hellobike.cn///commit/b2743db7a897f45c80e037c9bea45971c3863a53))
+* swipe ([b06b203](https://gitlab.hellobike.cn///commit/b06b203b2b4b9f7235b0c881bca93d3857a5c1a6))
+* swipe ([e59130a](https://gitlab.hellobike.cn///commit/e59130a8bdac04797a554be7d3f472844423b51e))
+* swipe ([b99d439](https://gitlab.hellobike.cn///commit/b99d439bb710e27b5a7d938ea59467540fdb9ffe))
+* swipe ([2553676](https://gitlab.hellobike.cn///commit/255367627c625102ff77ebcab6a92ff99ea35966))
+* swipe ([8883b73](https://gitlab.hellobike.cn///commit/8883b73d89712e854521cc867954e3bcfb30fb63))
+* swipe ([8ae8099](https://gitlab.hellobike.cn///commit/8ae809905abca59f7e5966a25b839f4d76637fb4))
+* swipe ([39398f7](https://gitlab.hellobike.cn///commit/39398f78e91355b527d7425ef7f8ebf0a9745eae))
+* swipe ([7b79b99](https://gitlab.hellobike.cn///commit/7b79b994c541b0d25c6e79cfdc41a881111e8236))
+* swipe 组件完成 ([b69040f](https://gitlab.hellobike.cn///commit/b69040f92dd2d410ffeafe6f1fa0a2c72ba47ee3))
+* swipe支持自定义指示器 ([0e48525](https://gitlab.hellobike.cn///commit/0e48525b77dc4416f3160d09bdd145d163b40fd7))
+* update官网 ([c47e9de](https://gitlab.hellobike.cn///commit/c47e9decdfbd526bab4064b7909602da625cedb4))
+* update官网 ([ddc2122](https://gitlab.hellobike.cn///commit/ddc2122e3f4017c642cce77a52b5adc6f91d8f10))
+
+### [1.1.18](https://gitlab.hellobike.cn///compare/v1.1.13...v1.1.18) (2021-11-17)
+
+
+### 🐞 Bug Fixes
+
+* code optimize ([caba14f](https://gitlab.hellobike.cn///commit/caba14f15370dd0adce19c54e3932bf6933eb19c))
+* merge ([38a8ba3](https://gitlab.hellobike.cn///commit/38a8ba3365ce1b6b2cf7a91f8bc330a708d73288))
+* quark-dialog ([946f25a](https://gitlab.hellobike.cn///commit/946f25aca190bca73b6c1a74bb4161333cb7c7a8))
+* quark-dialog ([1022af6](https://gitlab.hellobike.cn///commit/1022af6d0810cea563e382b53d645d18fce685de))
+
+
+### 🎉 Features
+
+*  完成 input ([fc81de8](https://gitlab.hellobike.cn///commit/fc81de88648a523025b36678ee65e206a6670222))
+* 补全测试用例 ([1cfbd8d](https://gitlab.hellobike.cn///commit/1cfbd8d98343362d5e4603ad57a94129969798af))
+* 初步完成 input 组件 ([23e178e](https://gitlab.hellobike.cn///commit/23e178e6899a18bf83ef11e95d45ce3510869281))
+* 官网优化 ([891e505](https://gitlab.hellobike.cn///commit/891e505274f1d53d6d43a4e536a1033de1320ead))
+* 合并 field 代码 ([2a923d9](https://gitlab.hellobike.cn///commit/2a923d9a87bec59d519f82f5432670be6e59df53))
+* 合并代码 ([895b922](https://gitlab.hellobike.cn///commit/895b92221c6a6268421a992413bb3d75a8e924ad))
+* 输入框新增截断效果 ([aab1b01](https://gitlab.hellobike.cn///commit/aab1b012175a4b484bd983d59097dc0c0a4af5ee))
+* 暂存文件 ([9a35e1c](https://gitlab.hellobike.cn///commit/9a35e1c587809e5caa6e085dccef0a8a1c7c6c9f))
+* 增加样式 ([cf13347](https://gitlab.hellobike.cn///commit/cf13347afd07921225757b7a0687f518429d2719))
+* 增加var() ([195cee4](https://gitlab.hellobike.cn///commit/195cee4b4a4be325359841768b078d3fc54f790e))
+* add css var() ([5301136](https://gitlab.hellobike.cn///commit/53011364b3769ebd94827bebed51e85d0cda7bec))
+* add var() for steps ([3bbb50c](https://gitlab.hellobike.cn///commit/3bbb50c76c7f89d0193d8677a2153ca70caff305))
+* input 组件增加事件 ([31eb14b](https://gitlab.hellobike.cn///commit/31eb14bebef795b4ed45b645ee3e1a38d51dbabe))
+* merge ([401aaaa](https://gitlab.hellobike.cn///commit/401aaaa9702f920e0155392af2813477f8c3dac8))
+
+### [1.1.17](https://gitlab.hellobike.cn///compare/v1.1.15...v1.1.17) (2021-11-16)
+
+
+### 🎉 Features
+
+*  完成 input ([fc81de8](https://gitlab.hellobike.cn///commit/fc81de88648a523025b36678ee65e206a6670222))
+* 补全测试用例 ([1cfbd8d](https://gitlab.hellobike.cn///commit/1cfbd8d98343362d5e4603ad57a94129969798af))
+* 初步完成 input 组件 ([23e178e](https://gitlab.hellobike.cn///commit/23e178e6899a18bf83ef11e95d45ce3510869281))
+* 合并 field 代码 ([2a923d9](https://gitlab.hellobike.cn///commit/2a923d9a87bec59d519f82f5432670be6e59df53))
+* 合并代码 ([895b922](https://gitlab.hellobike.cn///commit/895b92221c6a6268421a992413bb3d75a8e924ad))
+* 输入框新增截断效果 ([aab1b01](https://gitlab.hellobike.cn///commit/aab1b012175a4b484bd983d59097dc0c0a4af5ee))
+* 暂存文件 ([9a35e1c](https://gitlab.hellobike.cn///commit/9a35e1c587809e5caa6e085dccef0a8a1c7c6c9f))
+* 增加样式 ([cf13347](https://gitlab.hellobike.cn///commit/cf13347afd07921225757b7a0687f518429d2719))
+* add css var() ([5301136](https://gitlab.hellobike.cn///commit/53011364b3769ebd94827bebed51e85d0cda7bec))
+* input 组件增加事件 ([31eb14b](https://gitlab.hellobike.cn///commit/31eb14bebef795b4ed45b645ee3e1a38d51dbabe))
+* merge ([401aaaa](https://gitlab.hellobike.cn///commit/401aaaa9702f920e0155392af2813477f8c3dac8))
+
+### [1.1.15](https://gitlab.hellobike.cn///compare/v1.1.12...v1.1.15) (2021-11-16)
+
+
+### 🎉 Features
+
+* 官网优化 ([891e505](https://gitlab.hellobike.cn///commit/891e505274f1d53d6d43a4e536a1033de1320ead))
+* update home site ([9724485](https://gitlab.hellobike.cn///commit/972448599704454e83dcdca952146f954fa81cc9))
+
+
+### 🐞 Bug Fixes
+
+* merge ([38a8ba3](https://gitlab.hellobike.cn///commit/38a8ba3365ce1b6b2cf7a91f8bc330a708d73288))
+* popup 滚动穿透问题 ([ead102d](https://gitlab.hellobike.cn///commit/ead102dad7b0ce8c464d57c8d72a6b8d21125ad0))
+
+### [1.1.13](https://gitlab.hellobike.cn///compare/v1.1.12...v1.1.13) (2021-11-16)
+
+
+### 🐞 Bug Fixes
+
+* popup 滚动穿透问题 ([ead102d](https://gitlab.hellobike.cn///commit/ead102dad7b0ce8c464d57c8d72a6b8d21125ad0))
+
+
+### 🎉 Features
+
+* update home site ([9724485](https://gitlab.hellobike.cn///commit/972448599704454e83dcdca952146f954fa81cc9))
+
+### [1.1.12](https://gitlab.hellobike.cn///compare/v1.1.11...v1.1.12) (2021-11-15)
+
+### [1.1.11](https://gitlab.hellobike.cn///compare/v1.1.10...v1.1.11) (2021-11-15)
+
+
+### 🐞 Bug Fixes
+
+* popup 滚动穿透问题 ([ce4c84e](https://gitlab.hellobike.cn///commit/ce4c84ea29f97dc773de6dfae35e9064fa06e34f))
+
+### [1.1.10](https://gitlab.hellobike.cn///compare/v1.1.9...v1.1.10) (2021-11-15)
+
+
+### 🐞 Bug Fixes
+
+* popup 滚动穿透问题 ([e6eea7e](https://gitlab.hellobike.cn///commit/e6eea7e6d5540567380c5635a87ba3bccf79abab))
+
+### [1.1.9](https://gitlab.hellobike.cn///compare/v1.1.8...v1.1.9) (2021-11-15)
+
+
+### 🐞 Bug Fixes
+
+* popup scroll ([143811f](https://gitlab.hellobike.cn///commit/143811f78d63608d8ddf7461924fa328eb77a511))
+
+### [1.1.8](https://gitlab.hellobike.cn///compare/v1.1.7...v1.1.8) (2021-11-15)
+
+### [1.1.7](https://gitlab.hellobike.cn///compare/v1.1.6...v1.1.7) (2021-11-15)
+
+### [1.1.6](https://gitlab.hellobike.cn///compare/v1.1.5...v1.1.6) (2021-11-12)
+
+### [1.1.5](https://gitlab.hellobike.cn///compare/v1.1.3...v1.1.5) (2021-11-12)
+
+
+### Documentation
+
+* 更新 dialog  文档 ([2d4f1a3](https://gitlab.hellobike.cn///commit/2d4f1a31fa1b6cbd334bd20a3244e799a2f9f764))
+
+
+### 🐞 Bug Fixes
+
+* 删除 button 无用代码 ([f9c4b58](https://gitlab.hellobike.cn///commit/f9c4b584f681a6d83f892fae6fb42cd127f4c02a))
+* 文案修改 ([738e7a6](https://gitlab.hellobike.cn///commit/738e7a6751a98787b367dad0ffb9167f7fdb77fe))
+* 修复按钮禁用问题 ([e068b9d](https://gitlab.hellobike.cn///commit/e068b9d7d384d1095bbba7cb4daf3a5021980f3b))
+* 主题 ([8c07c65](https://gitlab.hellobike.cn///commit/8c07c65683a231d8649bf53444660342390e6b9b))
+* Dialog 函数调用动画问题 ([e1d333c](https://gitlab.hellobike.cn///commit/e1d333cb7305f02949b33772d2c42c1eeac74f51))
+* remove tsc file ([c60df3b](https://gitlab.hellobike.cn///commit/c60df3b081b20abead80de14ed500b9cf3581d27))
+* theme ([b116eec](https://gitlab.hellobike.cn///commit/b116eece79fd91b8940b89da7382caaa93c2dc69))
+* theme ([a8b0f61](https://gitlab.hellobike.cn///commit/a8b0f61229ca2789b814d50ad647095377b82f23))
+
+
+### 🎉 Features
+
+*  优化按钮 disabled 样式 ([a002c6f](https://gitlab.hellobike.cn///commit/a002c6fa0cc5bbb08ac6ed117053a690b75c4038))
+* 发布 1.1.4 版本 ([58165b2](https://gitlab.hellobike.cn///commit/58165b2c58a9b147de26b2d6f7ec23a014504d2d))
+* 官网更新 ([107a64e](https://gitlab.hellobike.cn///commit/107a64ece13a6fce162b2b66fadcaf4b4200fbd1))
+* 官网更新版 ([90a814a](https://gitlab.hellobike.cn///commit/90a814aee4af96e781a225766f5e0e875409e530))
+
+### [1.1.4](https://gitlab.hellobike.cn///compare/v1.1.0...v1.1.4) (2021-11-11)
+
+
+### Documentation
+
+* 补充代码规范文档 ([c5edb48](https://gitlab.hellobike.cn///commit/c5edb48eabc7f9fad70db07f65c7c5d4be77f266))
+* 优化 rate 说明文档 ([9aaff60](https://gitlab.hellobike.cn///commit/9aaff60d68abbc903a1bedb64ff796865b25b7d0))
+* feature icon 替换 ([48f760e](https://gitlab.hellobike.cn///commit/48f760effe04f34c348023b1d65e9cf5439fc8a5))
+
+
+### 🎉 Features
+
+*  补全 toast switch 单测 ([b855bd6](https://gitlab.hellobike.cn///commit/b855bd660a0471f7d2a6f22fd077c05273f10333))
+*  优化按钮 disabled 样式 ([a002c6f](https://gitlab.hellobike.cn///commit/a002c6fa0cc5bbb08ac6ed117053a690b75c4038))
+* 官网 ([37879c0](https://gitlab.hellobike.cn///commit/37879c0057ffa26992d91f1d57c5f4edd89035db))
+* 官网更新 ([1496621](https://gitlab.hellobike.cn///commit/1496621251efef6c6e2c93ac0aea5ed72f12a059))
+* 官网更新 ([65fe420](https://gitlab.hellobike.cn///commit/65fe420ca2f54bef63d6e8061fd6d67dfb40f336))
+* 官网更新 ([7f627bd](https://gitlab.hellobike.cn///commit/7f627bd9179e7a58eb29776c37255842c32b4a9a))
+* 官网更新 ([da61295](https://gitlab.hellobike.cn///commit/da61295f95a66365871bd1c759dc426ba74ef371))
+* 删除无用 css ([982f291](https://gitlab.hellobike.cn///commit/982f2916badebad12e383e90872668a133e0f1f2))
+* 完善 rate 组件 ([072ae6a](https://gitlab.hellobike.cn///commit/072ae6ab5a5f31bf9eade3238e1a3cfbebf0483d))
+* 新增评分组件 ([be1645e](https://gitlab.hellobike.cn///commit/be1645edc279a4ae5fed303e3c711eb0cb85e409))
+* 新增评分组件模型 ([44fae21](https://gitlab.hellobike.cn///commit/44fae2122fefa90b7ec76c12395e8314dad3503d))
+* 增加 hover 效果 ([4ee5394](https://gitlab.hellobike.cn///commit/4ee539446dc26ec8a324c075daa03245b3952d81))
+* radio ([b36865e](https://gitlab.hellobike.cn///commit/b36865e3d9cf39509eca844e3e7874722bc33560))
+
+
+### 🐞 Bug Fixes
+
+* 按钮禁用时禁止按钮事件 ([3248514](https://gitlab.hellobike.cn///commit/3248514ff553c17996918cbd9f736ec41e414b9c))
+* 删除 button 无用代码 ([f9c4b58](https://gitlab.hellobike.cn///commit/f9c4b584f681a6d83f892fae6fb42cd127f4c02a))
+* 修复按钮禁用问题 ([e068b9d](https://gitlab.hellobike.cn///commit/e068b9d7d384d1095bbba7cb4daf3a5021980f3b))
+* 修复toast单测名字 ([62f8bff](https://gitlab.hellobike.cn///commit/62f8bfff3c5bd4dd84f79d7591c8a5a94dfcfd14))
+* merge master ([c652087](https://gitlab.hellobike.cn///commit/c652087cbe2ce0396908412788d7e2b5ffce7daf))
+* remove useless code ([08c63bc](https://gitlab.hellobike.cn///commit/08c63bc8fc65b76e600c8e6784678e51bde0a7ed))
+* text 修改 ([a87066e](https://gitlab.hellobike.cn///commit/a87066e955d8faa3c54fa308056e9f67150e3ccf))
+
+### [1.1.3](https://gitlab.hellobike.cn///compare/v1.1.2...v1.1.3) (2021-11-10)
+
+
+### 🐞 Bug Fixes
+
+* 按钮禁用时禁止按钮事件 ([3248514](https://gitlab.hellobike.cn///commit/3248514ff553c17996918cbd9f736ec41e414b9c))
+
+### [1.1.2](https://gitlab.hellobike.cn///compare/v1.1.1...v1.1.2) (2021-11-10)
+
+
+### 🎉 Features
+
+* radio ([b36865e](https://gitlab.hellobike.cn///commit/b36865e3d9cf39509eca844e3e7874722bc33560))
+
+
+### 🐞 Bug Fixes
+
+* 修复toast单测名字 ([62f8bff](https://gitlab.hellobike.cn///commit/62f8bfff3c5bd4dd84f79d7591c8a5a94dfcfd14))
+* merge master ([c652087](https://gitlab.hellobike.cn///commit/c652087cbe2ce0396908412788d7e2b5ffce7daf))
+* remove useless code ([08c63bc](https://gitlab.hellobike.cn///commit/08c63bc8fc65b76e600c8e6784678e51bde0a7ed))
+* text 修改 ([a87066e](https://gitlab.hellobike.cn///commit/a87066e955d8faa3c54fa308056e9f67150e3ccf))
+
+### [1.1.1](https://gitlab.hellobike.cn///compare/v1.1.0...v1.1.1) (2021-11-10)
+
+
+### Documentation
+
+* 补充代码规范文档 ([c5edb48](https://gitlab.hellobike.cn///commit/c5edb48eabc7f9fad70db07f65c7c5d4be77f266))
+* 优化 rate 说明文档 ([9aaff60](https://gitlab.hellobike.cn///commit/9aaff60d68abbc903a1bedb64ff796865b25b7d0))
+* feature icon 替换 ([48f760e](https://gitlab.hellobike.cn///commit/48f760effe04f34c348023b1d65e9cf5439fc8a5))
+
+
+### 🎉 Features
+
+*  补全 toast switch 单测 ([b855bd6](https://gitlab.hellobike.cn///commit/b855bd660a0471f7d2a6f22fd077c05273f10333))
+* 官网 ([37879c0](https://gitlab.hellobike.cn///commit/37879c0057ffa26992d91f1d57c5f4edd89035db))
+* 官网更新 ([1496621](https://gitlab.hellobike.cn///commit/1496621251efef6c6e2c93ac0aea5ed72f12a059))
+* 官网更新 ([65fe420](https://gitlab.hellobike.cn///commit/65fe420ca2f54bef63d6e8061fd6d67dfb40f336))
+* 官网更新 ([7f627bd](https://gitlab.hellobike.cn///commit/7f627bd9179e7a58eb29776c37255842c32b4a9a))
+* 官网更新 ([da61295](https://gitlab.hellobike.cn///commit/da61295f95a66365871bd1c759dc426ba74ef371))
+* 删除无用 css ([982f291](https://gitlab.hellobike.cn///commit/982f2916badebad12e383e90872668a133e0f1f2))
+* 完善 rate 组件 ([072ae6a](https://gitlab.hellobike.cn///commit/072ae6ab5a5f31bf9eade3238e1a3cfbebf0483d))
+* 新增评分组件 ([be1645e](https://gitlab.hellobike.cn///commit/be1645edc279a4ae5fed303e3c711eb0cb85e409))
+* 新增评分组件模型 ([44fae21](https://gitlab.hellobike.cn///commit/44fae2122fefa90b7ec76c12395e8314dad3503d))
+* 增加 hover 效果 ([4ee5394](https://gitlab.hellobike.cn///commit/4ee539446dc26ec8a324c075daa03245b3952d81))
+
+## [1.1.0](https://gitlab.hellobike.cn///compare/v1.0.0...v1.1.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* 修复弹窗函数调用属性不生效问题 ([73e572d](https://gitlab.hellobike.cn///commit/73e572d2dd7236f8f22e65cc711def272c5b16a2))
+
+
+### 🐞 Features
+
+* 代码更新 ([54cfd5c](https://gitlab.hellobike.cn///commit/54cfd5cc6c531a96a77353d2306fdd3b6dcfd0b3))
+* 更新官网及组件代码 ([73b412d](https://gitlab.hellobike.cn///commit/73b412d00c8911f4b9ba1d34f12c592cbc83f7be))
+* 优化官网 ([45646d6](https://gitlab.hellobike.cn///commit/45646d64f60792f27203468948352abe839fcdc8))
+* actionsheet ([99718bb](https://gitlab.hellobike.cn///commit/99718bb76f4ee38908bac7858389d3c7aaaf3359))
+* actionsheet ([2555e05](https://gitlab.hellobike.cn///commit/2555e052dac2997fc659cf1c0967a555eb504f21))
+* actionsheet ([4c0bb1c](https://gitlab.hellobike.cn///commit/4c0bb1c00eb0ec7f254b57edb559129f4d7f2c5e))
+* actionsheet ([efadd1a](https://gitlab.hellobike.cn///commit/efadd1a0c14a1d6ff9a1fd07d758c6b438ba143b))
+* merge release/1109 ([281aa62](https://gitlab.hellobike.cn///commit/281aa6232b963b75b668907416b3776a860cc158))
+
+## [1.0.0](https://gitlab.hellobike.cn///compare/v0.3.0...v1.0.0) (2021-11-08)
+
+
+### Documentation
+
+* 官网更新 ([b500070](https://gitlab.hellobike.cn///commit/b50007022ea4a54c802df7e3a755f3fe7b2976e8))
+
+
+### 🐞 Features
+
+* 完成 dialog navbar loading 测试用例 ([fba11c1](https://gitlab.hellobike.cn///commit/fba11c193f8ec08c682a84b76c034d865dc22e7b))
+* 新增 navbar 单测 ([f34c68c](https://gitlab.hellobike.cn///commit/f34c68cd53de337e64a80078ec40b1c85b1f71e3))
+
+## [0.2.0](https://gitlab.hellobike.cn///compare/v0.1.15...v0.2.0) (2021-11-08)
+
+
+### Documentation
+
+* 增加发布说明 ([a0193c3](https://gitlab.hellobike.cn///commit/a0193c3c01237be3e045fcb8e23310df9c63b133))
+* 增加icon 示例 ([7b09eb9](https://gitlab.hellobike.cn///commit/7b09eb9f6e3e9cc511e95367e3f3911942c80b9a))
+* changlog ([0e6ed83](https://gitlab.hellobike.cn///commit/0e6ed831d4a09cb042964b4758c9ec4b4c125494))
+* delete no use file ([99b3c69](https://gitlab.hellobike.cn///commit/99b3c6983137922183c7bb96c74a13b68a6e1c9b))
+* popup ([8343b97](https://gitlab.hellobike.cn///commit/8343b97b4ccc9d9d1ad985642ebca37057a9a848))
+* popup ([8818103](https://gitlab.hellobike.cn///commit/881810306968e68452d08ec4786780db26e7a9c4))
+
+
+### 🐞 Features
+
+* 官网更新 ([d3ef8b7](https://gitlab.hellobike.cn///commit/d3ef8b72f10fd3854ae3ae27e15b72c9af4c16fa))
+* 官网更新 ([47aefec](https://gitlab.hellobike.cn///commit/47aefec4bd198e7af8dbd14d27311b801abe3ab6))
+* 官网更新 ([85b38ec](https://gitlab.hellobike.cn///commit/85b38ec83dc6ce05e36ae4291b78ac2522b28c59))
+* 项目优化 ([27b803c](https://gitlab.hellobike.cn///commit/27b803c8692a6bcc30e3e049463686902848682c))
+* merge master ([32852ca](https://gitlab.hellobike.cn///commit/32852caa778bf71c4fb42e97574eceb38e8f01a0))
+* popup ([be456be](https://gitlab.hellobike.cn///commit/be456be3517e593d95bd4b289bdae68f9e84635c))
+* popup ([cbdfbf2](https://gitlab.hellobike.cn///commit/cbdfbf28dd6004acc01ac50aed4c0d6ffff7804d))
+* popup 完善 ([47c6d50](https://gitlab.hellobike.cn///commit/47c6d5099ea19dfeff9889e133eb602d29cfaefb))
+* popup 完善 ([5f79819](https://gitlab.hellobike.cn///commit/5f79819910c2859d4a625a2b469748876e60e1e6))
+* update ([175d51c](https://gitlab.hellobike.cn///commit/175d51ccf3b49fc4e7191ee2a320b07bdfaed348))
+* update ([93dd8b9](https://gitlab.hellobike.cn///commit/93dd8b91785fbbf98a93486d8871c768965750ab))
+* update ([7052dce](https://gitlab.hellobike.cn///commit/7052dcef71d7d804bc788917dd5af03ce22efc51))
+* update code ([5f69772](https://gitlab.hellobike.cn///commit/5f69772886891fa2843fd84b27bdd975ddcc6688))
+* update readme.dev ([d47c1f8](https://gitlab.hellobike.cn///commit/d47c1f8325b1299d02bf6bb05a563064903bb259))
+* update readme.dev ([adbda35](https://gitlab.hellobike.cn///commit/adbda35f7770ecd7265d65645d5e77786e322ce2))
+
+### [0.1.19](https://gitlab.hellobike.cn///compare/v0.1.18...v0.1.19) (2021-11-02)
+
+### [0.1.18](https://gitlab.hellobike.cn///compare/v0.1.17...v0.1.18) (2021-11-02)
+
+### 0.1.17 (2021-11-02)
+
+
+### Bug Fixes
+
+* merge ([1619c94](https://gitlab.hellobike.cn///commit/1619c94782b5ad1c533edc90df0adc5afffccbaa))
+
+
+### 🐞 Features
+
+* 还原icon ([be97efb](https://gitlab.hellobike.cn///commit/be97efb6802bd3378719c3b15d7f18b642c5e7cc))
+* 去除install hook ([9c5d795](https://gitlab.hellobike.cn///commit/9c5d795eb3c47a960cd7afbab3493b0e001f4696))
+* 首次提交 ([8ff8f9f](https://gitlab.hellobike.cn///commit/8ff8f9fc6f23f7116aa309b4e06eefd88956340a))
+* 剔除无用文件 ([915744e](https://gitlab.hellobike.cn///commit/915744ec716298dab79bf3696260aef58d32076f))
+* 提交构建产物 ([e842ef0](https://gitlab.hellobike.cn///commit/e842ef0c97db4d4a52dc8c884f25b3c5644bea6e))
+* 完善icon ([4ff512e](https://gitlab.hellobike.cn///commit/4ff512e93a79aabcb5877a57039a0b13dc56483b))
+* 新增发布日志说明 ([36b2358](https://gitlab.hellobike.cn///commit/36b2358b9e79854bbf74980c13e75fb543d3d45b))
+* 增加发布日志脚本 ([dd6a3d2](https://gitlab.hellobike.cn///commit/dd6a3d2f9b66be46a4d4e5ae5a6a2cbe027015c7))
+* button 按钮内置居中 ([004511d](https://gitlab.hellobike.cn///commit/004511d64846801b36df098a70789bbcda16675a))
+* cell bug fix ([44e2409](https://gitlab.hellobike.cn///commit/44e2409769a4f5104e5b7ec8aa2b219e831aa462))
+* icon 方案 ([07cefe2](https://gitlab.hellobike.cn///commit/07cefe259d3e4b5a507178d35de19b887bae0697))
+* icon 完善 ([d4cccdf](https://gitlab.hellobike.cn///commit/d4cccdf09d0315cebbf3d6e99d47c9ff02f448a1))
+* icons ([c614c5c](https://gitlab.hellobike.cn///commit/c614c5cd0f6428de612f1a18c6383d4e06a8dc14))
+* merge icon ([bb2ac83](https://gitlab.hellobike.cn///commit/bb2ac837e4b1687b1103be75ac2d6988639ef8bc))
+* updat ([b878291](https://gitlab.hellobike.cn///commit/b878291acf717fd835301bcd7136057e2797ef1f))
+* update ([7052dce](https://gitlab.hellobike.cn///commit/7052dcef71d7d804bc788917dd5af03ce22efc51))
+* update ([96e3970](https://gitlab.hellobike.cn///commit/96e39701dbeb2826b1b52d6db2c6884945ad8c72))
+* update ([ae6008e](https://gitlab.hellobike.cn///commit/ae6008ee3c681000d973748562d1f870baf5e9c3))
+* update ([495c650](https://gitlab.hellobike.cn///commit/495c65094492b2693913244f225e4332638c9af8))
+* update ([63e61e6](https://gitlab.hellobike.cn///commit/63e61e68b56dcc9b2b08002fee651a90b5c9c332))
+* update ([57dc4ba](https://gitlab.hellobike.cn///commit/57dc4baa14cc28392d4ee1d3f408fff6cee1a6b8))
+* update ([4b8eb25](https://gitlab.hellobike.cn///commit/4b8eb2591a8f116273c349853d2eddf392b0bec4))
+* update ([efb731a](https://gitlab.hellobike.cn///commit/efb731a95ca19b3c1804447580ce2cd623ea9e4e))
+* update ([701b54c](https://gitlab.hellobike.cn///commit/701b54c71afe24d28fe95caa0190f0ab670b0a76))
+* update ([4c8482d](https://gitlab.hellobike.cn///commit/4c8482da08fbe28df51cf7540d8e4a370be31aa1))
+* update ([6edaf34](https://gitlab.hellobike.cn///commit/6edaf34cdc010a3f6b0c8eaab3759b4da3799ba1))
+* update ([4d55c8a](https://gitlab.hellobike.cn///commit/4d55c8a23ac0f8a4d5732a3a20ffa29131404426))
+* update ([4abd1dd](https://gitlab.hellobike.cn///commit/4abd1dda70e614de26144783f8bce73dfd0fc5ac))
+* update ([8c82745](https://gitlab.hellobike.cn///commit/8c827452c990b00456d12fb1f5f60adb0d2097d6))
+* update ([8e687fe](https://gitlab.hellobike.cn///commit/8e687fec21716dfbd6e6af3000acbcd7dc02d5d3))
+* update ([1ec234f](https://gitlab.hellobike.cn///commit/1ec234fb9e12a847c639911b4a3ee63bae18f978))
+* update ([af74689](https://gitlab.hellobike.cn///commit/af7468984ab6a6e89d0888eed3a3c820d863958c))
+* update ([39643b9](https://gitlab.hellobike.cn///commit/39643b93f254f567f586228a6bbcb9ba15b68366))
+* update ([1d9b507](https://gitlab.hellobike.cn///commit/1d9b507a1a99ae76030077bf519f6465c20c992f))
+* update ([d4e8f89](https://gitlab.hellobike.cn///commit/d4e8f895020f419b6cbed14b26ba6d1a8b98b287))
+* update ([9727a71](https://gitlab.hellobike.cn///commit/9727a710fe83fd2db5d964b7d2f849a9c7dc7ec3))
+* update ([64fd736](https://gitlab.hellobike.cn///commit/64fd736670228dc27cbcd9813e9c4ec61b2033aa))
+* update ([38e6ea3](https://gitlab.hellobike.cn///commit/38e6ea371e7ecc90f512c8f79d29a11e138ade7c))
+* update ([7df1afd](https://gitlab.hellobike.cn///commit/7df1afddbb59bc506edf91d6b4e622bc6b4d35f1))
+* update ([103c8ab](https://gitlab.hellobike.cn///commit/103c8ab81e4cc8db5f88924f163c443d171422d7))
+* update ([3f6f370](https://gitlab.hellobike.cn///commit/3f6f3702bc061dc518bec43d41971fef665ecc43))
+* update ([b4f824e](https://gitlab.hellobike.cn///commit/b4f824ece6a8cea11b2be17c97a206a97f100a2d))
+* update ([3537322](https://gitlab.hellobike.cn///commit/3537322ad3ed8d7b692b4615bb58031ef52e2c6d))
+* update ([c66bf59](https://gitlab.hellobike.cn///commit/c66bf59d5add95e739a46400fe6d392a2b01c93c))
+
+
+### Documentation
+
+* 增加发布说明 ([a0193c3](https://gitlab.hellobike.cn///commit/a0193c3c01237be3e045fcb8e23310df9c63b133))
+* 增加icon 示例 ([7b09eb9](https://gitlab.hellobike.cn///commit/7b09eb9f6e3e9cc511e95367e3f3911942c80b9a))
+* changlog ([0e6ed83](https://gitlab.hellobike.cn///commit/0e6ed831d4a09cb042964b4758c9ec4b4c125494))
+
+### [0.1.18](https://gitlab.hellobike.cn///compare/v0.1.15...v0.1.18) (2021-11-02)
+
+
+### 🐞 Features
+
+* update ([7052dce](https://gitlab.hellobike.cn///commit/7052dcef71d7d804bc788917dd5af03ce22efc51))
+
+
+### Documentation
+
+* 增加发布说明 ([a0193c3](https://gitlab.hellobike.cn///commit/a0193c3c01237be3e045fcb8e23310df9c63b133))
+* 增加icon 示例 ([7b09eb9](https://gitlab.hellobike.cn///commit/7b09eb9f6e3e9cc511e95367e3f3911942c80b9a))
+* changlog ([0e6ed83](https://gitlab.hellobike.cn///commit/0e6ed831d4a09cb042964b4758c9ec4b4c125494))
+
+### 0.1.15 (2021-11-02)
+
+
+### Bug Fixes
+
+* merge ([1619c94](https://gitlab.hellobike.cn///commit/1619c94782b5ad1c533edc90df0adc5afffccbaa))
+
+
+### 🐞 Features
+
+* 还原icon ([be97efb](https://gitlab.hellobike.cn///commit/be97efb6802bd3378719c3b15d7f18b642c5e7cc))
+* 去除install hook ([9c5d795](https://gitlab.hellobike.cn///commit/9c5d795eb3c47a960cd7afbab3493b0e001f4696))
+* 首次提交 ([8ff8f9f](https://gitlab.hellobike.cn///commit/8ff8f9fc6f23f7116aa309b4e06eefd88956340a))
+* 剔除无用文件 ([915744e](https://gitlab.hellobike.cn///commit/915744ec716298dab79bf3696260aef58d32076f))
+* 提交构建产物 ([e842ef0](https://gitlab.hellobike.cn///commit/e842ef0c97db4d4a52dc8c884f25b3c5644bea6e))
+* 完善icon ([4ff512e](https://gitlab.hellobike.cn///commit/4ff512e93a79aabcb5877a57039a0b13dc56483b))
+* 新增发布日志说明 ([36b2358](https://gitlab.hellobike.cn///commit/36b2358b9e79854bbf74980c13e75fb543d3d45b))
+* 增加发布日志脚本 ([dd6a3d2](https://gitlab.hellobike.cn///commit/dd6a3d2f9b66be46a4d4e5ae5a6a2cbe027015c7))
+* button 按钮内置居中 ([004511d](https://gitlab.hellobike.cn///commit/004511d64846801b36df098a70789bbcda16675a))
+* cell bug fix ([44e2409](https://gitlab.hellobike.cn///commit/44e2409769a4f5104e5b7ec8aa2b219e831aa462))
+* icon 方案 ([07cefe2](https://gitlab.hellobike.cn///commit/07cefe259d3e4b5a507178d35de19b887bae0697))
+* icon 完善 ([d4cccdf](https://gitlab.hellobike.cn///commit/d4cccdf09d0315cebbf3d6e99d47c9ff02f448a1))
+* icons ([c614c5c](https://gitlab.hellobike.cn///commit/c614c5cd0f6428de612f1a18c6383d4e06a8dc14))
+* merge icon ([bb2ac83](https://gitlab.hellobike.cn///commit/bb2ac837e4b1687b1103be75ac2d6988639ef8bc))
+* updat ([b878291](https://gitlab.hellobike.cn///commit/b878291acf717fd835301bcd7136057e2797ef1f))
+* update ([96e3970](https://gitlab.hellobike.cn///commit/96e39701dbeb2826b1b52d6db2c6884945ad8c72))
+* update ([ae6008e](https://gitlab.hellobike.cn///commit/ae6008ee3c681000d973748562d1f870baf5e9c3))
+* update ([495c650](https://gitlab.hellobike.cn///commit/495c65094492b2693913244f225e4332638c9af8))
+* update ([63e61e6](https://gitlab.hellobike.cn///commit/63e61e68b56dcc9b2b08002fee651a90b5c9c332))
+* update ([57dc4ba](https://gitlab.hellobike.cn///commit/57dc4baa14cc28392d4ee1d3f408fff6cee1a6b8))
+* update ([4b8eb25](https://gitlab.hellobike.cn///commit/4b8eb2591a8f116273c349853d2eddf392b0bec4))
+* update ([efb731a](https://gitlab.hellobike.cn///commit/efb731a95ca19b3c1804447580ce2cd623ea9e4e))
+* update ([701b54c](https://gitlab.hellobike.cn///commit/701b54c71afe24d28fe95caa0190f0ab670b0a76))
+* update ([4c8482d](https://gitlab.hellobike.cn///commit/4c8482da08fbe28df51cf7540d8e4a370be31aa1))
+* update ([6edaf34](https://gitlab.hellobike.cn///commit/6edaf34cdc010a3f6b0c8eaab3759b4da3799ba1))
+* update ([4d55c8a](https://gitlab.hellobike.cn///commit/4d55c8a23ac0f8a4d5732a3a20ffa29131404426))
+* update ([4abd1dd](https://gitlab.hellobike.cn///commit/4abd1dda70e614de26144783f8bce73dfd0fc5ac))
+* update ([8c82745](https://gitlab.hellobike.cn///commit/8c827452c990b00456d12fb1f5f60adb0d2097d6))
+* update ([8e687fe](https://gitlab.hellobike.cn///commit/8e687fec21716dfbd6e6af3000acbcd7dc02d5d3))
+* update ([1ec234f](https://gitlab.hellobike.cn///commit/1ec234fb9e12a847c639911b4a3ee63bae18f978))
+* update ([af74689](https://gitlab.hellobike.cn///commit/af7468984ab6a6e89d0888eed3a3c820d863958c))
+* update ([39643b9](https://gitlab.hellobike.cn///commit/39643b93f254f567f586228a6bbcb9ba15b68366))
+* update ([1d9b507](https://gitlab.hellobike.cn///commit/1d9b507a1a99ae76030077bf519f6465c20c992f))
+* update ([d4e8f89](https://gitlab.hellobike.cn///commit/d4e8f895020f419b6cbed14b26ba6d1a8b98b287))
+* update ([9727a71](https://gitlab.hellobike.cn///commit/9727a710fe83fd2db5d964b7d2f849a9c7dc7ec3))
+* update ([64fd736](https://gitlab.hellobike.cn///commit/64fd736670228dc27cbcd9813e9c4ec61b2033aa))
+* update ([38e6ea3](https://gitlab.hellobike.cn///commit/38e6ea371e7ecc90f512c8f79d29a11e138ade7c))
+* update ([7df1afd](https://gitlab.hellobike.cn///commit/7df1afddbb59bc506edf91d6b4e622bc6b4d35f1))
+* update ([103c8ab](https://gitlab.hellobike.cn///commit/103c8ab81e4cc8db5f88924f163c443d171422d7))
+* update ([3f6f370](https://gitlab.hellobike.cn///commit/3f6f3702bc061dc518bec43d41971fef665ecc43))
+* update ([b4f824e](https://gitlab.hellobike.cn///commit/b4f824ece6a8cea11b2be17c97a206a97f100a2d))
+* update ([3537322](https://gitlab.hellobike.cn///commit/3537322ad3ed8d7b692b4615bb58031ef52e2c6d))
+* update ([c66bf59](https://gitlab.hellobike.cn///commit/c66bf59d5add95e739a46400fe6d392a2b01c93c))
+
+## [1.0.0](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.2.0...v1.0.0) (2021-10-29)
+
+## [0.2.0](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.9...v0.2.0) (2021-10-29)
+
+### [0.1.13](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.9...v0.1.13) (2021-10-29)
+
+### [0.1.12](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.9...v0.1.12) (2021-10-29)
+
+### [0.1.11](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.9...v0.1.11) (2021-10-29)
+
+### [0.1.10](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.9...v0.1.10) (2021-10-29)
+
+### 0.1.9 (2021-10-29)
+
+
+### Bug Fixes
+
+* merge ([1619c94](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1619c94782b5ad1c533edc90df0adc5afffccbaa))
+
+
+### 🐞 Features
+
+* 首次提交 ([8ff8f9f](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8ff8f9fc6f23f7116aa309b4e06eefd88956340a))
+* 新增发布日志说明 ([36b2358](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/36b2358b9e79854bbf74980c13e75fb543d3d45b))
+* 增加发布日志脚本 ([dd6a3d2](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/dd6a3d2f9b66be46a4d4e5ae5a6a2cbe027015c7))
+* button 按钮内置居中 ([004511d](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/004511d64846801b36df098a70789bbcda16675a))
+* cell bug fix ([44e2409](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/44e2409769a4f5104e5b7ec8aa2b219e831aa462))
+* updat ([b878291](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/b878291acf717fd835301bcd7136057e2797ef1f))
+* update ([63e61e6](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/63e61e68b56dcc9b2b08002fee651a90b5c9c332))
+* update ([57dc4ba](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/57dc4baa14cc28392d4ee1d3f408fff6cee1a6b8))
+* update ([4b8eb25](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4b8eb2591a8f116273c349853d2eddf392b0bec4))
+* update ([efb731a](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/efb731a95ca19b3c1804447580ce2cd623ea9e4e))
+* update ([701b54c](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/701b54c71afe24d28fe95caa0190f0ab670b0a76))
+* update ([4c8482d](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4c8482da08fbe28df51cf7540d8e4a370be31aa1))
+* update ([6edaf34](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/6edaf34cdc010a3f6b0c8eaab3759b4da3799ba1))
+* update ([4d55c8a](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4d55c8a23ac0f8a4d5732a3a20ffa29131404426))
+* update ([4abd1dd](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4abd1dda70e614de26144783f8bce73dfd0fc5ac))
+* update ([8c82745](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8c827452c990b00456d12fb1f5f60adb0d2097d6))
+* update ([8e687fe](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8e687fec21716dfbd6e6af3000acbcd7dc02d5d3))
+* update ([1ec234f](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1ec234fb9e12a847c639911b4a3ee63bae18f978))
+* update ([af74689](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/af7468984ab6a6e89d0888eed3a3c820d863958c))
+* update ([39643b9](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/39643b93f254f567f586228a6bbcb9ba15b68366))
+* update ([1d9b507](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1d9b507a1a99ae76030077bf519f6465c20c992f))
+* update ([d4e8f89](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/d4e8f895020f419b6cbed14b26ba6d1a8b98b287))
+* update ([9727a71](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/9727a710fe83fd2db5d964b7d2f849a9c7dc7ec3))
+* update ([64fd736](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/64fd736670228dc27cbcd9813e9c4ec61b2033aa))
+* update ([38e6ea3](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/38e6ea371e7ecc90f512c8f79d29a11e138ade7c))
+* update ([7df1afd](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/7df1afddbb59bc506edf91d6b4e622bc6b4d35f1))
+* update ([103c8ab](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/103c8ab81e4cc8db5f88924f163c443d171422d7))
+* update ([3f6f370](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/3f6f3702bc061dc518bec43d41971fef665ecc43))
+* update ([b4f824e](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/b4f824ece6a8cea11b2be17c97a206a97f100a2d))
+* update ([3537322](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/3537322ad3ed8d7b692b4615bb58031ef52e2c6d))
+* update ([c66bf59](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/c66bf59d5add95e739a46400fe6d392a2b01c93c))
+
+### [0.1.8](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/compare/v0.1.7...v0.1.8) (2021-10-29)
+
+### 0.1.7 (2021-10-29)
+
+
+### Bug Fixes
+
+* merge ([1619c94](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1619c94782b5ad1c533edc90df0adc5afffccbaa))
+
+
+### 🐞 Features
+
+* 首次提交 ([8ff8f9f](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8ff8f9fc6f23f7116aa309b4e06eefd88956340a))
+* button 按钮内置居中 ([004511d](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/004511d64846801b36df098a70789bbcda16675a))
+* cell bug fix ([44e2409](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/44e2409769a4f5104e5b7ec8aa2b219e831aa462))
+* updat ([b878291](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/b878291acf717fd835301bcd7136057e2797ef1f))
+* update ([63e61e6](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/63e61e68b56dcc9b2b08002fee651a90b5c9c332))
+* update ([57dc4ba](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/57dc4baa14cc28392d4ee1d3f408fff6cee1a6b8))
+* update ([4b8eb25](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4b8eb2591a8f116273c349853d2eddf392b0bec4))
+* update ([efb731a](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/efb731a95ca19b3c1804447580ce2cd623ea9e4e))
+* update ([701b54c](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/701b54c71afe24d28fe95caa0190f0ab670b0a76))
+* update ([4c8482d](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4c8482da08fbe28df51cf7540d8e4a370be31aa1))
+* update ([6edaf34](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/6edaf34cdc010a3f6b0c8eaab3759b4da3799ba1))
+* update ([4d55c8a](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4d55c8a23ac0f8a4d5732a3a20ffa29131404426))
+* update ([4abd1dd](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/4abd1dda70e614de26144783f8bce73dfd0fc5ac))
+* update ([8c82745](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8c827452c990b00456d12fb1f5f60adb0d2097d6))
+* update ([8e687fe](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/8e687fec21716dfbd6e6af3000acbcd7dc02d5d3))
+* update ([1ec234f](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1ec234fb9e12a847c639911b4a3ee63bae18f978))
+* update ([af74689](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/af7468984ab6a6e89d0888eed3a3c820d863958c))
+* update ([39643b9](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/39643b93f254f567f586228a6bbcb9ba15b68366))
+* update ([1d9b507](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/1d9b507a1a99ae76030077bf519f6465c20c992f))
+* update ([d4e8f89](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/d4e8f895020f419b6cbed14b26ba6d1a8b98b287))
+* update ([9727a71](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/9727a710fe83fd2db5d964b7d2f849a9c7dc7ec3))
+* update ([64fd736](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/64fd736670228dc27cbcd9813e9c4ec61b2033aa))
+* update ([38e6ea3](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/38e6ea371e7ecc90f512c8f79d29a11e138ade7c))
+* update ([7df1afd](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/7df1afddbb59bc506edf91d6b4e622bc6b4d35f1))
+* update ([103c8ab](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/103c8ab81e4cc8db5f88924f163c443d171422d7))
+* update ([3f6f370](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/3f6f3702bc061dc518bec43d41971fef665ecc43))
+* update ([b4f824e](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/b4f824ece6a8cea11b2be17c97a206a97f100a2d))
+* update ([3537322](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/3537322ad3ed8d7b692b4615bb58031ef52e2c6d))
+* update ([c66bf59](https://gitlab.hellobike.cn/Yorozuya/AppQuarkui/commit/c66bf59d5add95e739a46400fe6d392a2b01c93c))

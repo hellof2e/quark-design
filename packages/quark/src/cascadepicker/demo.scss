@@ -1,0 +1,21 @@
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+}
+.cancel {
+  color: #969799;
+  font-size: 14px;
+}
+.ensure {
+  font-size: 14px;
+  color: #0088ff;
+}
+.picker-title {
+  font-size: 16px;
+  color: #242729;
+}

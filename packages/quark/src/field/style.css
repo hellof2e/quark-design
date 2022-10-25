@@ -1,0 +1,114 @@
+:host {
+  display: flex;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  box-sizing: border-box;
+  padding: 16px;
+  overflow: hidden;
+  background: #fff;
+  font-family: quark-sFontFamily;
+  color: quark-textBaseColor;
+  line-height: 24px;
+}
+
+:host label {
+  flex: none;
+  box-sizing: border-box;
+  width: var(--field-label-width, 119px);
+  flex-shrink: 0;
+  font-size: var(--field-label-font-size, 15px);
+  display: -webkit-box;
+  overflow: hidden;
+  text-align: left;
+  word-wrap: break-word;
+  margin-right: var(--field-label-margin-right, 12px);
+  color: var(--field-label-text-color, quark-textBaseColor);
+  font-weight: var(--field-label-font-weight);
+}
+
+:host([required]) .quark-field-label::before {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  color: quark-dangerColor;
+  font-size: 14px;
+  content: '*';
+  left: 8px;
+  overflow: visible;
+}
+
+:host input {
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  line-height: inherit;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  text-shadow: none;
+  cursor: text;
+  border: none;
+  outline: none;
+  font-size: var(--field-input-font-size, 15px);
+  color: var(--field-input-text-color, quark-textBaseColor);
+  text-align: var(--field-input-align, left);
+  resize: none;
+}
+
+:host label[disabled] {
+  opacity: .6;
+  cursor: not-allowed;
+  color: var(--field-disabled-text-color, quark-formDisabledColor);
+}
+
+:host input[disabled] {
+  opacity: .6;
+  cursor: not-allowed;
+  color: var(--field-disabled-text-color, quark-formDisabledColor);
+}
+
+:host input[readonly] {
+  cursor: not-allowed;
+}
+
+:host input::placeholder {
+  color: var(--field-placeholder-text-color, quark-formDisabledColor);
+  font-size: var(--field-placeholder-font-size, 15px);
+}
+
+:host input[type=number]::-webkit-inner-spin-button,
+:host input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:host input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:host .quark-field-input-container {
+  position: relative;
+  text-align: right;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow: visible;
+  width: 100%;
+}
+
+:host .quark-field-input-inner {
+  display: flex;
+  align-items: center;
+}
+
+:host .quark-field-error-msg {
+  display: none;
+  width: 100%;
+  color: var(--field-error-text-color, quark-dangerColor);
+  font-size: var(--field-error-font-size, 12px);
+  text-align: var(--field-error-text-align, left);
+}

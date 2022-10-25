@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "airbnb-base"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["off"],
+    "import/extensions": "off",
+    "max-classes-per-file": [
+      "error",
+      { "ignoreExpressions": true, "max": 2 }
+    ]
+  }
+}

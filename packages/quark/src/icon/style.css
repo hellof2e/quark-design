@@ -1,0 +1,14 @@
+:host {
+  font-size: inherit;
+  display: inline-block;
+  transition: .3s;
+}
+
+:host .quark-icon-svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  fill: currentColor;
+  overflow: hidden;
+}

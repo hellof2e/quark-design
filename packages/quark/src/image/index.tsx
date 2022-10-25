@@ -1,0 +1,134 @@
+import QuarkElement, {
+  customElement,
+  property,
+  state
+} from '@quarkd/core';
+import { addUnit } from '../../utils/public';
+import style from './style.css';
+import LazyLoad from '../../utils/lazy';
+import Locale from "../locale";
+
+type FitType = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+
+type Stauts = 'loading' | 'loaded' | 'error';
+
+@customElement({
+  tag: 'quark-image',
+  style
+})
+class QuarkImage extends QuarkElement {
+  @property()
+  src: string = '';
+
+  @property({
+    type: Boolean
+  })
+  lazy: boolean = false;
+
+  @property()
+  alt: string = '';
+
+  @property()
+  width: number | string = '';
+
+  @property()
+  height: number | string = '';
+
+  @property({
+    type: Boolean
+  })
+  round: boolean = false;
+
+  @property()
+  fit: FitType = 'fill';
+
+  @property()
+  radius: number | string = '';
+
+  lazyTarget: typeof LazyLoad | null = null;
+
+  @state()
+  status: Stauts = 'loading';
+
+  imgRef: HTMLImageElement | null = null;
+
+
+  handleClickImg = () => {
+    this.$emit('click');
+  };
+
+  handleLoad = () => {
+    this.status = 'loaded';
+    this.$emit('load');
+  };
+
+  handleError = () => {
+    this.status = 'error';
+    this.$emit('error');
+  };
+
+  componentDidMount(): void {
+    if (!this.shadowRoot) return;
+    this.imgRef = this.shadowRoot.getElementById('quark-img') as HTMLImageElement;
+
+    if (!this.imgRef) return;
+
+    // lazyload
+    if (this.lazy) {
+      this.lazyTarget = LazyLoad;
+      this.imgRef.src =
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWP4////fwAJ+wP9CNHoHgAAAABJRU5ErkJggg==';
+      this.lazyTarget.add(this.imgRef, this.src);
+    } else {
+      this.imgRef.src = this.src;
+    }
+  }
+
+  render() {
+    let attrs = this.alt
+      ? {
+        alt: this.alt,
+        class: 'quark-image-img',
+        style: {
+          width: addUnit(this.width),
+          height: addUnit(this.height),
+          'object-fit': this.fit,
+          'border-radius': this.round ? '50%' : this.radius ? 1 : 0
+        }
+      }
+      : {
+        class: 'quark-image-img',
+        style: {
+          width: addUnit(this.width),
+          height: addUnit(this.height),
+          'object-fit': this.fit,
+          'border-radius': this.round ? '50%' : this.radius ? 1 : 0
+        }
+      };
+
+    return (
+      <div class="quark-image">
+        {this.status === 'error' && (
+          <div class="quark-image-loading">
+            <slot name="error">{Locale.current.image.loadError}</slot>
+          </div>
+        )}
+        {this.status === 'loading' && (
+          <div class="quark-image-loading">
+            <slot name="loading">{Locale.current.image.loading}</slot>
+          </div>
+        )}
+        <img
+          id="quark-img"
+          {...attrs}
+          // @ts-ignore
+          onclick={this.handleClickImg}
+          onload={this.handleLoad}
+          onerror={this.handleError}
+        />
+      </div>
+    );
+  }
+}
+
+export default QuarkImage;

@@ -1,0 +1,28 @@
+.tab-demo {
+  &.demo {
+    padding: 70px 0 18px !important;
+    height: 3000px !important;
+  }
+
+  h2 {
+    margin-top: 0 !important;
+  }
+
+  .demo-item {
+    margin-bottom: 25px;
+  }
+
+  quark-tab-content {
+    padding: 30px;
+    min-height: 90px;
+  }
+
+  p {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  .height {
+    height: 700px;
+  }
+}

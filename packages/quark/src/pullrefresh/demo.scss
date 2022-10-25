@@ -1,0 +1,21 @@
+.scope-pull .pull-content {
+  padding: 16px;
+  height: 450px;
+}
+
+.scope-pull .refresh-text {
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  color: #879099;
+}
+
+.refresh-text img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}

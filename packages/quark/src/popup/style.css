@@ -1,0 +1,149 @@
+:host {
+    position: fixed;
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: var(--popup-mask-color, quark-fillMaskColor);
+    visibility: hidden;
+    opacity: 0;
+    transition: quark-animationDurationBase;
+}
+
+:host([open]) {
+    opacity: 1;
+    z-index: var(--popup-z-index, 999);
+    visibility: visible;
+}
+
+:host .quark-popup-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
+}
+
+:host .quark-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background-color: quark-fillBaseColor;
+    opacity: 1;
+    transition: transform quark-animationDurationBase;
+    transition-timing-function: quark-animationTimingEnter;
+}
+
+:host .leave {
+    transition: transform quark-animationDurationFast;
+    transition-timing-function: quark-animationTimingLeave;
+}
+
+:host .quark-popup::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}
+
+:host .quark-popup-close-btn {
+    position: absolute;
+    right: quark-hSpacingXs;
+    top: quark-vSpacingXs;
+    border: 0;
+    color: #BCC4CC;
+    font-size: 20px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+:host([safearea][position="bottom"]) .quark-popup {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+:host([safearea][position="top"]) .quark-popup {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+}
+
+:host([round][position="bottom"]) .quark-popup {
+    border-top-left-radius: var(--popup-border-radius, quark-radiusBg);
+    border-top-right-radius: var(--popup-border-radius, quark-radiusBg);
+}
+
+:host([position="center"]) .quark-popup {
+    position: relative;
+    margin: auto;
+    transform: scale(0.5);
+    max-width: var(--popup-max-width, 90%);
+    max-height: var(--popup-max-height, 90%);
+}
+
+:host([open][position="center"]) .quark-popup {
+    transform: scale(1);
+}
+
+:host([position="top"]) .quark-popup {
+    transform: translate(0px, -100%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-height: var(--popup-max-height, 90%);
+    min-height: var(--popup-min-height, 200px);
+}
+
+:host([open][position="top"]) .quark-popup {
+    transform: translate(0px, 0%);
+}
+
+:host([position="bottom"]) .quark-popup {
+    transform: translate(0px, 100%);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    max-height: var(--popup-max-height, 90%);
+    min-height: var(--popup-min-height, 200px);
+}
+
+:host([open][position="bottom"]) .quark-popup {
+    transform: translate(0px, 0%);
+}
+
+:host([position="left"]) .quark-popup {
+    position: fixed;
+    max-width: var(--popup-max-width, 90%);
+    transform: translate(-100%, 0px);
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+:host([open][position="left"]) .quark-popup {
+    transform: translate(0%, 0px);
+}
+
+:host([position="right"]) .quark-popup {
+    position: fixed;
+    max-width: var(--popup-max-width, 90%);
+    transform: translate(100%, 0px);
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+:host([open][position="right"]) .quark-popup {
+    transform: translate(0%, 0px);
+}

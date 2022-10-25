@@ -1,0 +1,19 @@
+.button-demo {
+  .demo-buttons {
+      margin: 8px;
+  }
+  .mgr-10 {
+    margin-right: 10px;
+  }
+  .css {
+    font-size: 20px;
+    color: #333;
+    letter-spacing: 2px;
+    --countdown-num-min-width: 20px;
+    --countdown-num-background: #fff;
+    --countdown-num-padding: 0 10px;
+    --countdown-num-border-radius: 6px;
+    --countdown-dot-color: #333;
+    --countdown-dot-margin: 6px;
+  }
+}

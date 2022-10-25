@@ -1,0 +1,129 @@
+:host {
+  font-size: var(--checkbox-font-size, 14px);
+  color: var(--checkbox-color, #242729);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host([disabled]) * {
+  cursor: not-allowed;
+}
+
+:host .quark-checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host label {
+  margin-left: 4px;
+  height: var(--checkbox-label-height, 100%);
+  display: inline-flex;
+  align-items: center;
+}
+
+:host label.quark-checkbox-hide {
+  display: none;
+}
+
+:host .quark-checkbox {
+  position: relative;
+  display: inline-flex;
+  height: var(--checkbox-size, 16px);
+  width: var(--checkbox-size, 16px);
+}
+
+:host .quark-checkbox-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-property: visibility, opacity;
+}
+
+:host([size="big"]) .quark-checkbox {
+  height: var(--checkbox-size, 20px);
+  width: var(--checkbox-size, 20px);
+}
+
+:host .quark-checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+:host .quark-checkbox span {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:host .quark-checkbox .quark-checkbox-show {
+  background: #FFFFFF;
+  border: 1px solid quark-formPlaceholderColor;
+  border-radius: 50%;
+}
+
+:host([disabled]) .quark-checkbox .quark-checkbox-show {
+  background: #F0F3F5;
+}
+
+
+:host .quark-checkbox .quark-checkbox-disabled {
+  display: none;
+}
+
+:host([disabled][checked]) .quark-checkbox .quark-checkbox-disabled {
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+:host([shape="square"]) .quark-checkbox .quark-checkbox-show {
+  border-radius: 4px;
+}
+
+:host([disabled][checked][shape="square"]) .quark-checkbox .quark-checkbox-disabled {
+  border-radius: 4px;
+}
+
+:host([shape="square"][size="big"]) .quark-checkbox span {
+  border-radius: 5px;
+}
+
+:host([checked]) .quark-checkbox .quark-checkbox-show {
+  border: none;
+  background: var(--checkbox-background, quark-primaryColor);
+}
+
+:host([checked]) .quark-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 0.2s;
+  transition-property: visibility, opacity;
+}
+
+:host input[type="checkbox"i] {
+  margin: 0;
+}
+
+
+:host .quark-checkbox-group-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

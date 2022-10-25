@@ -1,0 +1,57 @@
+.icon-demo {
+  .demo-cell {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 13px 16px;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #666;
+
+    quark-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    cursor: pointer;
+    margin-bottom: 18px;
+  }
+
+  .icon-item:active {
+    background-color: #f2f3f5;
+  }
+
+  .support-icons {
+    quark-icon {
+      margin-right: 0;
+    }
+  }
+
+  .h2-custom {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #909ca4;
+    padding: 0 10px;
+    font-weight: normal;
+  }
+
+  .icons-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,159 @@
+:host {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--popup-extra-mask-color, quark-fillMaskColor);
+  visibility: hidden;
+  opacity: 0;
+  transition: quark-animationDurationBase;
+}
+
+:host([open]) {
+  opacity: 1;
+  z-index: var(--popup-extra-z-index, 999);
+  visibility: visible;
+}
+
+:host .quark-popup-extra-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: -1;
+}
+
+:host .quark-popup-extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: quark-fillBaseColor;
+  opacity: 1;
+  transition: transform quark-animationDurationBase;
+  transition-timing-function: quark-animationTimingEnter;
+}
+
+:host .leave {
+  transition: transform quark-animationDurationFast;
+  transition-timing-function: quark-animationTimingLeave;
+}
+
+:host .quark-popup-extra::-webkit-scrollbar {
+  display: none;
+}
+
+:host .quark-popup-extra-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quark-popup-extra-close-btn quark-icon-close {
+  color: #879099;
+}
+
+:host([safearea]) .quark-popup-extra {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+:host([hideclose]) .quark-popup-extra-close-btn {
+  display: none;
+}
+
+:host .quark-popup-extra {
+  transform: translate(0px, 100%);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  max-height: var(--popup-extra-max-height, 80%);
+  min-height: var(--popup-extra-min-height, 200px);
+  border-top-left-radius: var(--popup-extra-border-radius, quark-radiusBg);
+  border-top-right-radius: var(--popup-extra-border-radius, quark-radiusBg);
+}
+:host .quark-popup-extra-body {
+  overflow-y: scroll;
+}
+
+:host([open]) .quark-popup-extra {
+  transform: translate(0px, 0%);
+}
+
+header {
+  padding: 16px;
+}
+
+.quark-popup-extra-toper {
+  margin-right: 36px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.quark-popup-extra-title {
+	font-size: 18px;
+	color: var(--popup-extra-title-color, #242729);
+	line-height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+  font-family: var(--popup-extra-title-font-family, PingFangSC-Medium, PingFang SC);
+  font-weight: 500;
+}
+
+.quark-popup-extra-subtitle {
+	font-size: 14px;
+	color: var(--popup-extra-subtitle-color, #879099);
+	line-height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+  font-family: var(--popup-extra-subtitle-font-family,  'PingFangSC-Regular, PingFang SC, sans-serif');
+  font-weight: 400;
+	margin-top: 4px;
+}
+
+.quark-popup-extra-body-with-topline {
+  border-top: 0.5px #f0f2f5 solid;
+}
+
+.quark-popup-extra-body-with-bottonline {
+  border-bottom: 0.5px #f0f2f5 solid;
+}
+
+.quark-popup-extra footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10px 10px 42px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.quark-popup-extra quark-button {
+  height: 56px;
+  color: #fff;
+  background: linear-gradient(270deg, #00D9FF 0%, #0098FE 100%);
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,14 @@
+:host {
+  font-size: inherit;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+:host .icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  fill: currentColor;
+  overflow: hidden;
+}

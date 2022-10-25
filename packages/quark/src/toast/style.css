@@ -1,0 +1,75 @@
+:host {
+  display: flex;
+  transition: quark-animationDurationBase;
+}
+
+:host quark-overlay {
+  background-color: transparent;
+}
+
+.quark-toast {
+  opacity: 0;
+  font-size: var(--toast-font-size, 14px);
+  padding: var(--toast-padding, 0);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: var(--toast-direction, column);
+  align-items: center;
+  justify-content: center;
+  color: var(--toast-color, #fff);
+  background: rgb(0 0 0 / 80%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  pointer-events: all;
+  width: var(--toast-width, 120px);
+  height: var(--toast-height, 120px);
+  text-align: center;
+  transition: transform opacity 3s ease-in;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+:host([show]) .quark-toast {
+  opacity: 1;
+}
+
+.quark-toast-failure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+:host([type="text"]) .quark-toast {
+  padding: var(--toast-text-padding, 16px 20px);
+  width: max-content;
+  height: auto;
+  min-width: var(--toast-min-width, 120px);
+  max-width: var(--toast-max-width, 240px);
+}
+
+:host quark-loading {
+  display: none;
+}
+
+:host([show][type="loading"]) quark-loading {
+  display: block;
+  margin-bottom: var(--toast-loading-bottom, 14px);
+  margin-right: var(--toast-loading-right, 0);
+}
+
+:host(:not([type="text"])) quark-icon-success,
+quark-icon-failure,
+quark-icon-warning {
+  margin-bottom: quark-vSpacingMd;
+}
+
+.quark-toast-leave {
+  opacity: 0;
+  transition: transform opacity 3s ease-out;
+}

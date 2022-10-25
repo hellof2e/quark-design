@@ -1,0 +1,33 @@
+:host {
+  width: 74px;
+  height: var(--tabbar-height, 56px);
+  background: #FFFFFF;
+  display: inline-flex;
+  padding-top: 9px;
+  box-sizing: border-box;
+}
+
+.quark-tabbar-item {
+  width: 74px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.quark-tabbar-slot {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quark-tabbar-slot .quark-tabbar-icon {
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.quark-tabbar-slot .quark-tabbar-text {
+  height: 14px;
+  font-size: var(--tabbar-font-size, 10px);
+  font-weight: 500;
+  line-height: 14px;
+}

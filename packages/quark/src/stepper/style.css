@@ -1,0 +1,90 @@
+:host .quark-stepper-container {
+  display: flex;
+}
+
+:host .quark-stepper-minus {
+  position: relative;
+  width: var(--stepper-button-width, 28px);
+  height: var(--stepper-button-height, 28px);
+  margin: 0;
+  padding: 0;
+  color: var(--stepper-minus-color, quark-textBaseColor);
+  vertical-align: middle;
+  background-color: var(--stepper-minus-background-color, #f2f3f5);
+  border: var(--stepper-button-border-width, 0) solid var(--stepper-minus-border-color, inherit);
+  border-radius: var(--stepper-button-border-radius, 0);
+  cursor: pointer;
+}
+
+:host .quark-stepper-minus::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: currentColor;
+  transform: translate(-50%);
+  content: '';
+  width: 45%;
+  height: 1px;
+}
+
+:host .quark-stepper-input {
+  width: var(--stepper-input-width, 32px);
+  height: var(--stepper-input-height, 28px);
+  margin: 0 2px;
+  padding: 0;
+  color: var(--stepper-input-text-color, quark-textBaseColor);
+  font-size: var(--stepper-input-font-size, 14px);
+  line-height: var(--stepper-input-line-height, normal);
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--stepper-input-background-color, #f2f3f5);
+  border: var(--stepper-input-border-width, 1) solid var(--stepper-input-border-color, inherit);
+  border-radius: var(--stepper-button-border-radius, 0);
+  border-radius: var(--stepper-input-border-radius, 0);
+  -webkit-appearance: none;
+  outline: none;
+}
+
+:host .quark-stepper-plus {
+  position: relative;
+  width: var(--stepper-button-width, 28px);
+  height: var(--stepper-button-height, 28px);
+  margin: 0;
+  padding: 0;
+  color: var(--stepper-plus-color, quark-textBaseColor);
+  vertical-align: middle;
+  background-color: var(--stepper-plus-background-color, #f2f3f5);
+  border: var(--stepper-button-border-width, 0) solid var(--stepper-plus-border-color, inherit);
+  border-radius: var(--stepper-button-border-radius, 0);
+  cursor: pointer;
+}
+
+:host .quark-stepper-plus::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: currentColor;
+  transform: translate(-50%);
+  content: '';
+  width: 45%;
+  height: 1px;
+}
+
+:host .quark-stepper-plus::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: currentColor;
+  transform: translate(0, -50%);
+  content: '';
+  width: 1px;
+  height: 45%;
+}
+
+:host .quark-stepper-disabled {
+  color: var(--stepper-button-disabled-color, quark-formDisabledColor);
+  background-color: #f7f8fa;
+  cursor: not-allowed;
+  pointer-events: none;
+  user-select: none;
+}

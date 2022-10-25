@@ -1,0 +1,36 @@
+.image-demo {
+  .quark-cell {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px #edeef1;
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .quark-cell-list {
+    quark-image {
+      min-width: 100px;
+      min-height: 100px;
+    }
+  }
+
+  .quark-cell-item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 33.33%;
+    padding: 4px;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .error-img {
+    height: 30px;
+    width: 30px;
+  }
+}

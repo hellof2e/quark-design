@@ -1,0 +1,30 @@
+.stepper-demo {
+  .demo {
+    width: 100%;
+  }
+
+  .quark-cell {
+    padding: 13px 16px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px #edeef1;
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .theme {
+    --stepper-input-text-color: black;
+    --stepper-input-background-color: white;
+    --stepper-input-font-size: 18px;
+    --stepper-button-border-radius: 50%;
+    --stepper-button-border-width: 1px;
+    --stepper-plus-background-color: red;
+    --stepper-plus-color: white;
+    --stepper-minus-background-color: white;
+    --stepper-minus-color: #ee0a24;
+    --stepper-minus-border-color: #ee0a24;
+  }
+}

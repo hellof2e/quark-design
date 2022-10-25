@@ -1,0 +1,14 @@
+{
+  "packages": ["packages/*"],
+  "private": true,
+  "version": "independent",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "workspaces": ["packages/*"],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": ["ignored-file, lerna.json", "*.md", "*.MD"]
+    }
+  }
+}

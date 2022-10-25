@@ -1,0 +1,64 @@
+:host {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  width: var(--switch-label-width, 3.125em);
+  height: 1.875em;
+  padding: 0.0625em;
+  border-radius: 1.2em;
+  background: #eee;
+  transition: 0.3s width, 0.3s height, 0.3s background-color;
+  box-sizing: border-box;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+:host([disabled]) label {
+  pointer-events: all;
+  cursor: not-allowed;
+}
+
+.quark-switch {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label::after {
+  content: "";
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 1em;
+  background: #fff;
+  transition: 0.3s background, 0.3s padding, 0.3s width, 0.3s height, 0.3s border-radius, 0.3s border;
+  box-shadow: 0 0.125em 0.25em 0 rgb(0 35 11 / 20%);
+}
+
+:host(:focus-within) #switch,
+:host(:active) .quark-switch {
+  z-index: 2;
+}
+
+label::before {
+  content: "";
+  flex: 0;
+  transition: 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) flex;
+}
+
+label:active::after {
+  padding: 0 0.3em;
+}
+
+:host([checked]) label {
+  background: var(--theme-color, var(--switch-inner-color, #08f));
+}
+
+:host([checked]) label::before {
+  flex: 1;
+}

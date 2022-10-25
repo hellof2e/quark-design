@@ -1,0 +1,5 @@
+/src/packages/**/*.md
+/src/packages/**/*.test.js
+lib/
+es/
+umd/

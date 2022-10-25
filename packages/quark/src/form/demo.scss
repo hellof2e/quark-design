@@ -1,0 +1,107 @@
+.scoped-form {
+  padding-top: 48px !important;
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #909ca4;
+    padding: 0 10px;
+    font-weight: norma
+  }
+  quark-form {
+    background: #fff;
+   
+  }
+  quark-field {
+    // padding-top: 8px;
+  }
+
+  .sapce {
+    margin-bottom: 10px;
+  }
+
+  .submit-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .submit {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+  }
+
+  .type {
+    background: #fff;
+  }
+
+ .line {
+    height: 1px;
+    width: calc(100% - 32px);
+    margin: auto;
+  }
+
+  .theme {
+    --field-label-width: 100px;
+    --field-label-text-color: green;
+    --field-label-font-size: 18px;
+    --field-label-margin-right: 10px;
+    --field-input-text-color: #999;
+    --field-input-font-size: 20px;
+    --field-placeholder-text-color: red;
+    --field-placeholder-font-size: 12px;
+    --field-disabled-text-color: #eee;
+  }
+
+  .oneLine {
+    --field-input-align: center;
+  }
+
+  .label {
+    font-size: 16px;
+    min-width: 119px;
+    margin-right: 12px;
+    font-weight: 500;
+    color: #242729;
+  }
+
+  .label span {
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #879099;
+  }
+  .form-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 8px 16px;
+    --uploader-width: 60px;
+    --uploader-height: 60px;
+    .right {
+      flex: 1;
+    }
+    span {
+      font-size: 15px;
+      text-align: left;
+      margin-right:  12px;
+      color: #242729;
+      display: inline-block;
+      width: 119px;
+    }
+    quark-checkbox {
+      font-size: 12px;
+      margin-right: 8px;
+    }
+    quark-radio {
+      margin-right: 8px;
+    }
+    quark-cell {
+      width: 200px;
+      flex: 1;
+    }
+    quark-picker {
+      width: auto;
+    }
+  }
+}

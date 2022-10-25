@@ -1,0 +1,21 @@
+.textarea-demo{
+	quark-button{
+		margin-right: 6px;
+		margin-top: 6px;
+	}
+	.quark-cell__title {
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column;
+		flex: 1;
+	}
+	.custom-style{
+		--textarea-border-color: red;
+		--textarea-color: red;
+		--textarea-count-color: red;
+		--textarea-placeholder-color: red;
+		--textarea-text-count-align: 'left';
+		margin-bottom: 40px;
+	}
+}

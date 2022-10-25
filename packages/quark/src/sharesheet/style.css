@@ -1,0 +1,119 @@
+:host {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: quark-fillMaskColor;
+  visibility: hidden;
+  opacity: 0;
+  transition: quark-animationDurationBase;
+}
+
+:host([open]) {
+  opacity: 1;
+  z-index: 999;
+  visibility: visible;
+}
+
+:host .quark-sharesheet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  max-height: 90%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top-left-radius: quark-radiusBg;
+  border-top-right-radius: quark-radiusBg;
+  transition: transform quark-animationDurationBase;
+  transition-timing-function: quark-animationTimingEnter;
+  transform: translate(0, 100%);
+}
+
+:host .quark-sharesheet-leave {
+  transition: transform quark-animationDurationFast;
+  transition-timing-function: quark-animationTimingLeave;
+}
+
+:host .quark-sharesheet-title {
+  color: quark-textSecondaryColor;
+  font-size: quark-fontSizeBase;
+  display: flex;
+  height: 52px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+:host .quark-sharesheet-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+:host .quark-sharesheet-cancel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:host .quark-sharesheet-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 60px;
+}
+
+:host .quark-sharesheet-item-text {
+  color: #666;
+  font-size: quark-fontSizeCaptionSm;
+  line-height: 17px;
+  margin-top: 8px;
+}
+
+:host .quark-sharesheet-item-icon {
+  width: 50px;
+  height: 50px;
+}
+
+:host .quark-sharesheet-cancel-text {
+  box-sizing: border-box;
+  color: #242729;
+  font-size: quark-fontSizeCaption;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+}
+
+:host .quark-sharesheet-cancel-gap {
+  display: block;
+  height: quark-vSpacingMd;
+  background-color: #f7f8fa;
+  width: 100%;
+}
+
+:host([open]) .quark-sharesheet {
+  transform: translate(0, 0%);
+}

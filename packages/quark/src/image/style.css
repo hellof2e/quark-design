@@ -1,0 +1,28 @@
+:host {
+  display: inline-block;
+}
+
+:host .quark-image {
+  display: inline-block;
+  position: relative;
+  height: var(--image-height, 100%);
+  width: var(--image-height, 100%);
+}
+
+:host .quark-image-img {
+  height: var(--image-height, 100%);
+  width: var(--image-height, 100%);
+}
+
+:host .quark-image-loading {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #969799;
+  font-size: 14px;
+  background: #f7f8fa;
+  width: 100%;
+  height: 100%;
+}

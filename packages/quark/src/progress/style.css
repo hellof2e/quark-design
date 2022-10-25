@@ -1,0 +1,28 @@
+:host {
+  height: 4px;
+  border-radius: 3px;
+  color: quark-textBaseColor;
+  font-size: 12px;
+  display: flex;
+  flex: 1 auto;
+  width: 100%;
+  align-items: center;
+}
+
+:host .wrap {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: var(--progress-box-background, #f0f3f5);
+}
+
+:host .progress {
+  height: inherit;
+  border-radius: inherit;
+}
+
+:host span {
+  margin-left: var(--progress-margin-left, quark-fontSizeCaptionSm);
+  background: transparent !important;
+  display: inline-block;
+}

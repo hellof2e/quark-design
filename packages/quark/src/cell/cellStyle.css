@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  font-size: 14px;
+  position: relative;
+  background: #fff;
+}
+
+:host .quark-cell {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-left: var(--cell-hspacing, 16px);
+  padding-right: var(--cell-hspacing, 16px);
+  padding-top: var(--cell-vspacing, 13px);
+  padding-bottom: var(--cell-vspacing, 13px);
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+}
+
+:host([islink]) {
+  cursor: pointer;
+}
+
+:host([islink])::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: inherit;
+  border-color: #000;
+  border-radius: inherit;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  content: " ";
+}
+:host([islink]:active)::before {
+  opacity: 0.1;
+}
+
+:host .quark-cell-title {
+  width: var(--cell-title-width);
+  white-space: var(--cell-title-white-space, wrap);
+  font-size: var(--cell-title-font-size, 14px);
+  font-weight: var(--cell-title-font-weight);
+  text-overflow: var(--cell-title-text-overflow);
+  display: block;
+  color: var(--cell-title-color, #666);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  margin-right: 4px;
+}
+
+:host .quark-cell-desc {
+  color: var(--cell-desc-color, #969799);
+  width: var(--cell-desc-width);
+  white-space: var(--cell-title-white-space, nowrap);
+  font-size: var(--cell-desc-font-size, 14px);
+  font-weight: var(--cell-desc-font-weight);
+  text-overflow: var(--cell-desc-text-overflow);
+  overflow: hidden;
+  text-align: right;
+}
+
+:host quark-icon-arrow-right {
+  font-size: var(--cell-icon-font-size, 16px);
+  color: var(--cell-quark-icon-color, #969799);
+}
+
+:host .quark-cell-icon {
+  width: var(--cell-icon-font-size, 16px);
+  height: auto;
+}

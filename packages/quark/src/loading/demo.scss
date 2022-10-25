@@ -1,0 +1,17 @@
+.loading-demo {
+  h2 {
+    padding-left: 0 !important;
+  }
+
+  quark-loading {
+    margin-right: 10px;
+  }
+
+  .demo-loadings {
+    margin-bottom: 24px;
+  }
+
+  .custom-text {
+    --loading-text-color: #08f;
+  }
+}

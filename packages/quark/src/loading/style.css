@@ -1,0 +1,47 @@
+:host {
+  font-size: 30px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+:host([vertical]) {
+  font-size: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:host .quark-loading-spinner {
+  display: block;
+  fill: currentcolor;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  animation: rotate 1.4s linear infinite;
+  color: #c8c9cc;
+}
+
+:host .quark-loading-text {
+  color: var(--loading-text-color, quark-textSecondaryColor);
+  font-size: var(--loading-text-font-size, quark-fontSizeBase);
+}
+
+:host([vertical]) .quark-loading-text {
+  margin-left: 0;
+  margin-top: 8px;
+}
+
+:host slot:empty .quark-loading-text {
+  font-size: 0;
+  margin: 0;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

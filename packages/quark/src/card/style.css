@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    height: var(--card-height, 138px);
+    background-color: #fff;
+    border-radius: var(--card-border-radius, 4px);
+    overflow: hidden;
+    padding-left: var(--card-hspacing, 20px);
+    padding-right: var(--card-hspacing, 20px);
+    padding-top: var(--card-vspacing, 20px);
+    padding-bottom: var(--card-vspacing, 20px);
+    box-sizing: border-box;
+  }
+  .card-container {
+    width: 100%;
+  }
+  .card-container .title {
+    font-size: var(--card-title-font-size, 14px);
+    color: var(--card-title-color, #999);
+    margin-bottom: var(--card-title-margin-bottom, 10px);
+  }
+  .card-body{
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: var(--card-body-padding-bottom, 20px);
+  }
+  .card-container .content {
+    color: var(--card-content-color, #666);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: var(--card-content-font-size, 14px);
+  }
+  .card-container .tips {
+    color: var(--card-tips-color, #333);
+    font-size: var(--card-tips-font-size, 15px);
+    text-align: right;
+  }
+  .card-container .desc {
+    color: var(--card-desc-color, #999);
+    font-size: var(--card-desc-font-size, 14px);
+    padding-top: var(--card-desc-padding-top, 14px);
+  }

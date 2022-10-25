@@ -1,0 +1,45 @@
+quark-noticebar {
+  margin-bottom: 10px;
+}
+
+quark-marquee {
+  color: inherit;
+}
+
+.noticebar-left-style-setting {
+  background: #f0fcf6;
+  color: #242729;
+}
+
+.noticebar-left-style-setting div {
+  font-weight: 600;
+  color: #f72626;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.noticebar-right-style-setting {
+  background: #fff2f2;
+  color: #242729;
+}
+
+.noticebar-right-style-setting span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f72626;
+  display: flex;
+  align-items: center;
+}
+
+.bg2 {
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.noticebar {
+  padding: 20px;
+  font-size: 12px;
+  border-radius: 20px;
+}
