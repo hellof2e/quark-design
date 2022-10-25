@@ -1,4 +1,4 @@
-# quark-rollup-plugin-css-variable
+# @quarkd/rollup-plugin-css-variable
 一个能够支持替换css中符合规则的变量的rollup插件。
 
 ---

@@ -72,7 +72,7 @@ npm run clean
 │   ├── quark-icons
 │   ├── quark-vscode-extension
 │   ├── quark-rollup-plugin-postcss
-│   └── quark-rollup-plugin-css-variable
+│   └── @quarkd/rollup-plugin-css-variable
 ├── scripts 脚本
 │   ├── build.js
 │   ├── build_demo.js
