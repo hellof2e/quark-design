@@ -7,7 +7,7 @@
 
 <h1 align="center">Quark Design</h1>
 
-<div align="center">
+<div>
 新一代跨技术栈前端组件库，它可以同时在任意框架或无框架中使用。
 <div>
 
