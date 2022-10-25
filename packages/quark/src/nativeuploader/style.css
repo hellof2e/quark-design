@@ -1,0 +1,100 @@
+:host {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+:host .quark-uploader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0 var(--uploader-margin, 6px) var(--uploader-margin, 6px) 0;
+}
+
+:host .quark-uploader-icon{
+  box-sizing: border-box;
+  width: var(--uploader-width, 93px);
+  height: var(--uploader-height, 93px);
+  background: var(--uploader-background);
+  border-width: var(--uploader-border-width, 1px);
+  border-color: var(--uploader-border-color, #e1e6eb);
+  border-style: var(--uploader-border-style, dashed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: var(--uploader-radius, 4px);
+}
+
+:host input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+:host .quark-uploader-uploader-text {
+  font-size: 10px;
+  color: #879099;
+}
+
+:host .quark-uploader-preview-item {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--uploader-width, 93px);
+  height: var(--uploader-height, 93px);
+  margin: 0 var(--uploader-margin, 6px) var(--uploader-margin, 6px) 0;
+  border-radius: var(--uploader-radius, 4px);
+}
+
+:host .quark-uploader-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+:host .quark-uploader-remove {
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: var(--uploader-delete-wrap-width, 14px);
+  height: var(--uploader-delete-wrap-height, 14px);
+  background: var(--uploader-delete-background, rgb(0 0 0));
+  border-bottom-left-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+:host .quark-uploader-preview-item quark-icon-close {
+  color: var(--uploader-delete-color, #fff);
+  font-size: var(--uploader-delete-size, 10px);
+}
+
+:host .uploading {
+  position: absolute;
+  width: var(--uploader-width, 93px);
+  height: var(--uploader-height, 93px);
+  border-radius: var(--uploader-radius, 4px);
+  background: var(--uploader-mask-background, rgba(50, 50, 51, .88));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+:host .uploading-text {
+  font-size: var(--van-uploader-mask-font-size, 10px);
+  color: var(--van-uploader-mask-color, #fff);
+}
