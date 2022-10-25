@@ -1,6 +1,6 @@
 {
 	"name": "quarkd",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Mobile UI Components built on Web Components.",
 	"main": "lib/index.js",
 	"module": "lib/index.js",
@@ -67,7 +67,6 @@
 		"fs-extra": "^9.1.0",
 		"husky": "^7.0.4",
 		"lint-staged": "^10.5.4",
-		
 		"rollup-plugin-import-css": "^3.0.2",
 		"rollup-plugin-terser": "^7.0.2",
 		"sinon": "^12.0.1",
