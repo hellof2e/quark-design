@@ -80,5 +80,8 @@
 	"engines": {
 		"node": ">=12.0.0"
 	},
-	"gitHead": "ed682a8b23cf9831613dc6a4b30b0b076d2a54ac"
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	}
 }

@@ -101,5 +101,9 @@
       "master",
       "next"
     ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

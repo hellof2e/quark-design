@@ -49,6 +49,10 @@
     "type": "git",
     "url": ""
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "",
   "license": "ISC"
 }

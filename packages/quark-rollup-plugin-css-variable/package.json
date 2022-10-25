@@ -12,6 +12,9 @@
     "url": ""
   },
   "author": "",
-  "license": "ISC",
-  "gitHead": "ed682a8b23cf9831613dc6a4b30b0b076d2a54ac"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
