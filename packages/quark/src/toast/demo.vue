@@ -6,19 +6,19 @@
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleSuccessClick">
-			<dive>Success {{ translate("successTip") }}</div>
+			<div>Success {{ translate("successTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleErrorClick">
-			<dive>Error {{ translate("errorTip") }}</div>
+			<div>Error {{ translate("errorTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleWarningClick">
-			<dive>Warning {{ translate("warningTip") }}</div>
+			<div>Warning {{ translate("warningTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleLoadingClick">
-			<dive>Loading {{ translate("loadingTip") }}</div>
+			<div>Loading {{ translate("loadingTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<h2>{{ translate("closeCallback") }}</h2>

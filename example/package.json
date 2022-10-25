@@ -134,7 +134,6 @@
 		"@better-scroll/wheel": "^2.4.2",
 		"@quarkd/icons": "file:../packages/quark-icons",
 		"body-scroll-lock": "3.1.5",
-		"i": "^0.3.7",
 		"lodash.assign": "^4.2.0",
 		"preact": "^10.6.6"
 	},

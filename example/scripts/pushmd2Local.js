@@ -1,7 +1,7 @@
 
 const fse = require('fs-extra');
 const path = require('path');
-const targetBaseUrl = path.resolve(__dirname, '../../AppQuarkDoc/src/docs_vue/');
+const targetBaseUrl = path.resolve(__dirname, '../../quark-design-docs/src/docs_vue/');
 
 const copyFile = (from, to) => {
   fse
