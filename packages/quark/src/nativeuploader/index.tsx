@@ -4,12 +4,12 @@ import QuarkElement, {
   createRef,
   customElement,
   state
-} from '../../utils/quarkElement';
+} from '@quarkd/core';
 import {
   UploaderFileListItem,
 } from './utils';
-import 'quark-icons/lib/camera-fill';
-import 'quark-icons/lib/close';
+import '@quarkd/icons/lib/camera-fill';
+import '@quarkd/icons/lib/close';
 import style from './style.css';
 import imagePreview from '../imagepreview/index';
 import '../loading'
