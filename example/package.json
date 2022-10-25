@@ -90,7 +90,7 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-router-dom": "^6.2.1",
-		"@quarkd/rollup-plugin-css-variable": "file:../packages/@quarkd/rollup-plugin-css-variable",
+		"@quarkd/rollup-plugin-css-variable": "file:../packages/quark-rollup-plugin-css-variable",
 		"rollup-plugin-import-css": "^3.0.2",
 		"rollup-plugin-terser": "^7.0.2",
 		"sass": "^1.34.0",
