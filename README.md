@@ -62,7 +62,7 @@ const App = () => (
 ```
 
 Angular
-```js
+```html
 import { Component } from '@angular/core
 import "quarkd/lib/button"
 
@@ -74,7 +74,7 @@ import "quarkd/lib/button"
 ```
 
 其它 H5 项目
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <body>
