@@ -2,28 +2,28 @@
 	<div class="demo toast-demo">
 		<h2>{{ translate("functionCall") }}</h2>
 		<div class="quark-cell" @click="handleTextClick">
-			<div class="nut-cell__title">Text {{ translate("textTip") }}</div>
+			<div>Text {{ translate("textTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleSuccessClick">
-			<div class="nut-cell__title">Success {{ translate("successTip") }}</div>
+			<dive>Success {{ translate("successTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleErrorClick">
-			<div class="nut-cell__title">Error {{ translate("errorTip") }}</div>
+			<dive>Error {{ translate("errorTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleWarningClick">
-			<div class="nut-cell__title">Warning {{ translate("warningTip") }}</div>
+			<dive>Warning {{ translate("warningTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<div class="quark-cell" @click="handleLoadingClick">
-			<div class="nut-cell__title">Loading {{ translate("loadingTip") }}</div>
+			<dive>Loading {{ translate("loadingTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 		<h2>{{ translate("closeCallback") }}</h2>
 		<div class="quark-cell" @click="cbClick">
-			<div class="nut-cell__title">{{ translate("closeCallback") }}</div>
+			<div>{{ translate("closeCallback") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
 	</div>
