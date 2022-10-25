@@ -17,7 +17,7 @@
 * 环境要求： `node >=14.15`, `yarn >=1.22`
 
 ## 开始
-```
+``` html
 1. yarn run bootstrap 安装子项目的依赖
 2. yarn run link 第一次执行需要，互相依赖的软链接
 3. yarn run dev 开始执行工程
