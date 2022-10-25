@@ -62,7 +62,7 @@ const App = () => (
 ```
 
 Angular
-```jsx
+```js
 import { Component } from '@angular/core
 import "quarkd/lib/button"
 
