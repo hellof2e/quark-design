@@ -96,7 +96,8 @@
 		"@quarkd/icons": "^1.0.0",
 		"@quarkd/core": "^1.0.0",
 		"body-scroll-lock": "3.1.5",
-		"lodash.assign": "^4.2.0"
+		"lodash.assign": "^4.2.0",
+		"preact": "10.6.6"
 	},
 	"vetur": {
 		"tags": "dist/smartips/tags.json",
