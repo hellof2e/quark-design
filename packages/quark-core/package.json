@@ -1,6 +1,6 @@
 {
   "name": "@quarkd/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web components quark-element",
   "main": "lib/index.js",
   "module": "lib/index.js",
