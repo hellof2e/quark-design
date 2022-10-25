@@ -91,7 +91,7 @@ import "quarkd/lib/button"
 </html>
 ```
 
-### 定制主题
+## 定制主题
 
 参考  [定制主题](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 文档。
 
