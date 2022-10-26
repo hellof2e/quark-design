@@ -2,11 +2,11 @@
 	<div class="demo uploader-demo">
 		<h2>{{ translate("basic") }}</h2>
 		<div class="flex">
-			<quark-native-uploader ref='preview' @click="afterRead" />
+			<quark-native-uploader ref='preview' @onread="afterRead" :maxcount='maxcount' />
 		</div>
     <h2>{{ translate("remove") }}</h2>
 		<div class="flex">
-			<quark-native-uploader ref='preview2' @click="afterRead" @onremove="onremove"/>
+			<quark-native-uploader ref='preview2' @onread="afterRead" @onremove="onremove"/>
 		</div>
     <h2>{{ translate("readonly") }}</h2>
 		<div class="flex">
@@ -29,6 +29,7 @@ export default createDemo({
 		const preview = ref(null);
     const preview2 = ref(null);
     const preview3 = ref(null);
+    const maxcount = ref(3)
 		const previewUrls = [
 			"https://img.yzcdn.cn/vant/leaf.jpg",
 			"https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
@@ -83,7 +84,7 @@ export default createDemo({
 
 		const afterRead = async({ detail: data }) => {
       const successData = await callNative();
-      const newData = data.concat(successData)
+      const newData = data.concat(successData);
       preview.value.setPreview(newData);
     }
 
@@ -103,7 +104,8 @@ export default createDemo({
       preview3,
 			afterRead,
 			translate,
-      onremove
+      onremove,
+      maxcount
 		};
 	},
 });

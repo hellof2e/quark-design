@@ -67,7 +67,8 @@ class QuarkNativeUploader extends QuarkElement {
 
   onAfterRead = () => {
     const urls = this.tasks.map(i => i.url)
-    this.$emit('click', { detail: urls });
+    console.log('click')
+    this.$emit('onread', { detail: urls });
   }
   // 设置初始化预览数据
   setPreview = (urls: string[]) => {
@@ -76,7 +77,7 @@ class QuarkNativeUploader extends QuarkElement {
       message: '',
       id: index,
       url: i
-    }));
+    })).slice(0, this.maxcount);
     this.tasks = data;
     this.values = data;
     this.fId = urls.length;
@@ -107,11 +108,11 @@ class QuarkNativeUploader extends QuarkElement {
   }
   
   render() {
-    const showTasks = this.tasks
-    console.log(showTasks, 'tasks')
+    const showUpload = this.tasks.length >= Number(this.maxcount);
+    const showTasks = this.tasks.slice(0, this.maxcount);
     return (
       <Fragment>
-        {!this.readonly && <div class="quark-uploader">
+        {!(this.readonly || showUpload) && <div class="quark-uploader">
           <slot
             name="uploader"
           >

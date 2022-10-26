@@ -47,6 +47,7 @@ import Locale from './locale';
 import Countdown from './countdown'
 //  业务组件
 import PopupExtra from './popupextra';
+import NativeUploader from './nativeuploader'
 
 export default {
   TextArea,
@@ -96,5 +97,6 @@ export default {
   Grid,
   Locale,
   PopupExtra,
-  Countdown
+  Countdown,
+  NativeUploader
 };
