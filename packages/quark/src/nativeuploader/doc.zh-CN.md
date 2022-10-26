@@ -10,7 +10,7 @@ import "quarkd/lib/nativeuploader";
 
 ### 基础用法
 ```html
-<quarkd-native-uploader ref='nativeUpload' />
+<quark-native-uploader ref='nativeUpload' />
 ```
 ```js
 mounted() {
@@ -20,7 +20,7 @@ mounted() {
 ```
 ### 只读预览模式
 ```html
-<quarkd-native-uploader  readonly />
+<quark-native-uploader  readonly />
 ```
 
 ## API
