@@ -51,7 +51,7 @@ import "quarkd/lib/button"
 
 React.x
 ```jsx
-import { Button } from 'quarkd';
+import { Button } from '@quarkd/quark-react';
 
 const App = () => (
   <>
@@ -80,7 +80,7 @@ import "quarkd/lib/button"
   <quark-button loading="false" id="btn">Button</quark-button>
 </body>
 
-<script src="./node_modules/quark/lib/button/index.js" /> // or cdn
+<script src="./node_modules/quarkd/lib/button/index.js" /> // or cdn
 <script>
   window.addEventListener(function() {
     const el = document.getElementById('btn')
