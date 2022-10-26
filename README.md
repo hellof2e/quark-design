@@ -32,7 +32,7 @@
 ## 安装
 
 ```bash
-// Vue1.x/Vue2.x/Vue3.x/Angular/无框架前端工程
+// Vue/Angular/无框架前端工程
 npm i quarkd --save
 ```
 
@@ -101,4 +101,9 @@ import "quarkd/lib/button"
 
 ## 参与共建
 参考 [本地开发文档](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md)
+
+## 特别说明
+- 由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件派发的事件需要使用addEventLisener接收。
+- Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用addEventLisener接收。
+- 针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。
 
