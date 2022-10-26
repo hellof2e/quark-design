@@ -1,13 +1,11 @@
 # NativeUploader 上传组件
 
-### 介绍
-
-提供给客户端的上传功能
+### 介绍提供给客户端的上传功能
 
 ### 安装使用
 
 ```tsx
-import "quark/lib/nativeuploader";
+import "quarkd/lib/nativeuploader";
 ```
 
 ### 基础用法

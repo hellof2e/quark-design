@@ -1,9 +1,4 @@
 <template>
-  <img
-    class="vue-logo"
-    src="https://m.hellobike.com/resource/helloyun/18625/ORLp5_WechatIMG2.png"
-  />
-
   <div v-if="isShow" id="nav">
     <div class="back" @click="goBack">
       <quark-icon-arrow-left name="left"></quark-icon-arrow-left>

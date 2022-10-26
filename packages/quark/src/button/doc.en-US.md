@@ -131,4 +131,5 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--button-font-size`    | font size on button                          |       `14px`| 
 | `--button-border-radius`        | Border-radius of button                          | `8px`      | 
 | `--button-color` | font color on button                      | `#fff`  |
+| `--button-icon-hspacing` | icon margin right                        | `6px`  |
 
