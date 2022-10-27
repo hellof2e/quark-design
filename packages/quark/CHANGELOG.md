@@ -1,4 +1,16 @@
 # 更新日志
+### [1.0.7](https://github.com/hellof2e/quark-design/compare/quark@1.0.6...quark@1.0.7) (2022-10-27)
+
+
+### 🎉 Features
+
+* update quarkd version ([70ec1e8](https://github.com/hellof2e/quark-design/commit/70ec1e816474db34ee6bc50a6e902c6410efbe80))
+
+
+### 🐞 Bug Fixes
+
+* readme url ([413b5f9](https://github.com/hellof2e/quark-design/commit/413b5f95aded333c59bda73123e205f7406c7437))
+
 ### [1.0.6](https://github.com/hellof2e/quark-design/compare/quark@1.0.5...quark@1.0.6) (2022-10-27)
 
 
