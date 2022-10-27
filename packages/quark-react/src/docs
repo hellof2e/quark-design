@@ -1,4 +1,14 @@
 # 更新日志
+### [1.0.3](https://github.com/hellof2e/quark-design/compare/quark-react@1.0.2...quark-react@1.0.3) (2022-10-27)
+
+
+### 🎉 Features
+
+* update @quarkd/quark-react depedence ([56d0946](https://github.com/hellof2e/quark-design/commit/56d09460e2924ecbba1aad57122b037709957da4))
+* update package.json ([d3d37de](https://github.com/hellof2e/quark-design/commit/d3d37de74b1f4dcd7d46b74d74bf61888c99263a))
+* update readme ([e5d8294](https://github.com/hellof2e/quark-design/commit/e5d829442ea42826523040aa0e808d641a9fbc0e))
+* update readme ([c847874](https://github.com/hellof2e/quark-design/commit/c8478744230c777da14bb9887c5af4d55542683b))
+
 ### [1.0.2](https://github.com/hellof2e/quark-design/compare/quark-react@1.0.1...quark-react@1.0.2) (2022-10-27)
 
 
