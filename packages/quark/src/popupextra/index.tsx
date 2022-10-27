@@ -130,7 +130,7 @@ class QuarkPopupExtra extends QuarkElement {
           <div class="quark-popup-extra-close-btn" onClick={this.handleCloseBtnClick}>
             <quark-icon-close  size="24" />
           </div>
-          <header>
+          <header className={ this.title || this.subtitle ? 'quark-popup-extra-header' : ''}>
             <div className="quark-popup-extra-toper">
               <slot name="title">
                 <div className="quark-popup-extra-title">

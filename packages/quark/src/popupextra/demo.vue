@@ -123,10 +123,9 @@
 		</quark-popupextra>
 
     <quark-popupextra
-			subtitle="副标题文案"
 			:open="open3"
 			@closed="open3 = false">
-      <div slot="title"> 
+      <div slot="title" style="margin: 20px">
         <span style="color: red">自定义</span>大标题文案
       </div>
 			<div class="popup-body">
