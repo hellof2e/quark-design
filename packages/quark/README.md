@@ -13,7 +13,7 @@
   
 </div>
 
-English | [简体中文](./README-zh_CN.md)
+English | [简体中文](./README.zh_CN.md)
 
 ## Motivation
 The emergence of the technical framework has improved the development experience and page performance, but the continuous iterative update of the technical framework has brought many challenges to the maintenance of the project, such as:
