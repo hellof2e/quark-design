@@ -66,9 +66,9 @@
     "typescript": "^4.1.5"
   },
   "repository": {
-    "type": "git",
-    "url": ""
-  },
+		"type": "git",
+		"url": "https://github.com/hellof2e/quark-design.git"
+	},
   "author": "",
   "license": "ISC",
   "publishConfig": {

@@ -12,9 +12,9 @@
     "release": "npm run build && standard-version"
   },
   "repository": {
-    "type": "git",
-    "url": ""
-  },
+		"type": "git",
+		"url": "https://github.com/hellof2e/quark-design.git"
+	},
   "peerDependencies": {
     "react": "*"
   },
