@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.5](https://github.com/hellof2e/quark-design/compare/quark@1.0.4...quark@1.0.5) (2022-10-27)
+
+
+### 🎉 Features
+
+* popupextra update ([1ea31d4](https://github.com/hellof2e/quark-design/commit/1ea31d49d4dd7d30e8b7296927ff3e9f09279521))
+
 ### [1.0.4](https://github.com/hellof2e/quark-design/compare/quark@1.0.2...quark@1.0.4) (2022-10-27)
 
 
