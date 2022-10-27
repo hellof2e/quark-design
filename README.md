@@ -9,50 +9,60 @@
 
 <div align="center">
   
-  一套企业级跨框架 UI 设计语言
+  An enterprise-class UI design language and cross-framework UI library, Based on web components.
   
 </div>
 
-## 特性
+English | [简体中文](./README-zh_CN.md)
 
-- 支持 Vue、React、Angular 等各类框架/无框架。
-- 完全覆盖您所需要的各种通用组件。
-- 支持按需引用。
-- 详尽的文档和示例。
-- 单元测试覆盖。
-- 支持 TypeScript。
-- 支持定制主题。
-- 国际化语言支持。
-- 支持服务端渲染（Bate）。
-  
-## 兼容环境
+## Motivation
+The emergence of the technical framework has improved the development experience and page performance, but the continuous iterative update of the technical framework has brought many challenges to the maintenance of the project, such as:
 
-现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
+- Visual components cannot be used across technical frameworks (React, Vue, etc.)
+- Once the technical framework is upgraded, visual components often have to be upgraded iteratively
+
+Therefore, we developed this UI framework to isolate it from the technology framework (no technology stack), so that visual components can avoid falling into the vicious circle of technology stack iteration and iteration.
+## Features
+
+- Support Vue, React, Angular, JQ and no framework project
+- 40+ High quality components
+- Support Tree Shaking
+- 90%+ Unit test coverage
+- Written in TypeScript
+- Support TypeScript
+- Support Custom Theme
+- Support i18n, built-in 20+ languages
   
-## 安装
+## Install
+Using `npm` to install:
 
 ```bash
-// Vue/Angular/无框架前端工程
-npm i quarkd --save
+# install for Vue/React/Angular/No framework project
+npm i quarkd
 ```
 
+
 ```bash
-// React 项目
+#  install for React project
 npm i @quarkd/quark-react --save
 ```
 
-## 示例
+## Quickstart
 Vue.x
 ```jsx
+// 1. Import the components you need
 import "quarkd/lib/button"
 
+// 2. Use it
 <quark-button type="primary">Button</quark-button>
 ```
 
 React.x
 ```jsx
+// 1. Import the components you need
 import { Button } from '@quarkd/quark-react';
 
+// 2. Use it
 const App = () => (
   <>
     <Button type="primary">Button</Button>
@@ -61,10 +71,11 @@ const App = () => (
 ```
 
 Angular
-```html
-import { Component } from '@angular/core
+```jsx
+// 1. Import the components you need
 import "quarkd/lib/button"
 
+// 2. Use it
 @Component({
   template: `<quark-button loading="{{loading}}"" (click)="handleClick()">
     Button
@@ -72,7 +83,7 @@ import "quarkd/lib/button"
 })
 ```
 
-其它 H5 项目
+No framework project
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -91,19 +102,66 @@ import "quarkd/lib/button"
 </html>
 ```
 
-## 定制主题
+## Custom theme
 
-参考  [定制主题](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 文档。
+See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 。
 
-## 国际化
+## Internationalization
 
-参考 [国际化文档](https://quark-design.hellobike.com/#/zh-CN/guide/internationalization)。
+Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization)。
 
-## 参与共建
-参考 [本地开发文档](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md)
+## Browser Support
 
-## 特别说明
-- 由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件派发的事件需要使用addEventLisener接收。
-- Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用addEventLisener接收。
-- 针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。
+Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills))。
 
+## Contribution Guide
+
+Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md) before making a pull request. 
+
+## Special Note
+
+- Since the components provided by `quarkd` are all native custom elements (analogous to div), the events dispatched by the components need to be received using addEventListener.
+- The Vue stack uses `@xx` to receive natively dispatched events, so there is no need to use addEventListener to receive them.
+- For the React technology stack, in order to avoid developers manually addingEventLisener to receive events, we rely on `quarkd` at the bottom and Reactify (Reactize) the upper layer! Therefore the React project recommends using `@quarkd/quark-react`.
+
+
+## Pay attention
+
+- Unknown custom element in Vue project:
+
+```html
+<!-- vue2: -->
+Unknown custom element: <quark-icon> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+<!-- vue3 -->
+[Vue warn]: Failed to resolve component: quark-icon 
+```
+
+This is because the syntax part of Vue components refers to custom elements. In order to avoid conflicts with Vue components, custom elements need to be ignored! Please inject the following code into the project:
+
+```tsx
+// VUE2.x
+Vue.config.ignoredElements = [/^quark-/]
+
+// VUE3.x
+// https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
+const app = createApp({})
+app.config.compilerOptions.isCustomElement = tag => tag.startsWith('quark-')
+```
+
+If you are using vite, modify vite.config.js:
+
+```tsx
+import vue from '@vitejs/plugin-vue'
+
+export default {
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('quark-')
+        }
+      }
+    })
+  ]
+}
+```
