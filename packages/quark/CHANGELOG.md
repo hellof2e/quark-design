@@ -1,4 +1,23 @@
 # 更新日志
+### [1.0.8](https://github.com/hellof2e/quark-design/compare/quark@1.0.5...quark@1.0.8) (2022-10-28)
+
+
+### 🐞 Bug Fixes
+
+* popupextra 自定义标题不需要内边距 ([4e9c555](https://github.com/hellof2e/quark-design/commit/4e9c555688098cd2ac36977c7927aa70a40293df))
+* readme url ([413b5f9](https://github.com/hellof2e/quark-design/commit/413b5f95aded333c59bda73123e205f7406c7437))
+
+
+### 🎉 Features
+
+* popupextra update ([1ea31d4](https://github.com/hellof2e/quark-design/commit/1ea31d49d4dd7d30e8b7296927ff3e9f09279521))
+* update @quarkd/quark-react depedence ([56d0946](https://github.com/hellof2e/quark-design/commit/56d09460e2924ecbba1aad57122b037709957da4))
+* update package.json ([d3d37de](https://github.com/hellof2e/quark-design/commit/d3d37de74b1f4dcd7d46b74d74bf61888c99263a))
+* update quark readme ([6a6401a](https://github.com/hellof2e/quark-design/commit/6a6401a3a9afe08033cf65017a502c934efdff33))
+* update quarkd version ([70ec1e8](https://github.com/hellof2e/quark-design/commit/70ec1e816474db34ee6bc50a6e902c6410efbe80))
+* update readme ([e5d8294](https://github.com/hellof2e/quark-design/commit/e5d829442ea42826523040aa0e808d641a9fbc0e))
+* update readme ([c847874](https://github.com/hellof2e/quark-design/commit/c8478744230c777da14bb9887c5af4d55542683b))
+
 ### [1.0.7](https://github.com/hellof2e/quark-design/compare/quark@1.0.6...quark@1.0.7) (2022-10-27)
 
 

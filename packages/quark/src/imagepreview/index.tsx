@@ -44,6 +44,8 @@ class QuarkImagePreview extends QuarkElement {
 
   endY: number | undefined = 0;
 
+  isFn: boolean = false;
+
 
   wrapRef = createRef() as any;
   init = async (open) => {
@@ -56,7 +58,7 @@ class QuarkImagePreview extends QuarkElement {
       console.log(error, 'error')
     }
     this.eventBind()
-    this.open = open
+   if(this.isFn) this.open = true
   };
   initSlide(index) {
     return new Promise((resolve) => {
@@ -229,6 +231,7 @@ export default function imagePreview(params: IImagePreview): QuarkImagePreview{
   document.body.appendChild(preview);
   console.log(preview, 'PRE1')
   const { images = [], startPosition, close, change, } = params;
+  preview.isFn = true;
   preview.setData({ images, startPosition, close, change, open: true });
   return preview;
 }
