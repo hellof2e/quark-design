@@ -104,15 +104,15 @@ No framework project
 
 ## Custom theme
 
-See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 。
+See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme).
 
 ## Internationalization
 
-Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization)。
+Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization).
 
 ## Browser Support
 
-Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills))。
+Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills)).
 
 ## Contribution Guide
 
