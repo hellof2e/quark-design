@@ -12,7 +12,6 @@
   An enterprise-class UI design language and cross-framework UI library, Based on web components.
   
 </div>
-![image](https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png)
 
 ## Contact us
 
