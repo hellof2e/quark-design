@@ -15,9 +15,11 @@
 
 ## Contact us
 
-Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～
-
-![image](https://user-images.githubusercontent.com/14307551/198917468-52f7b97c-3d5f-4510-a1e0-5215ba5836c0.png)
+Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群
+<figure class="half">
+<img src="https://user-images.githubusercontent.com/14307551/198917468-52f7b97c-3d5f-4510-a1e0-5215ba5836c0.png" width='230'/>
+<img src='https://m.hellobike.com/resource/helloyun/15697/nzwmP_WechatIMG107.jpeg' width='230'/>
+</figure>
 
 ## 特性
 
