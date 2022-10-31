@@ -78,7 +78,8 @@ class QuarkImagePreview extends QuarkElement {
           slide: {
             loop: true,
             threshold: 100,
-            autoplay: false
+            autoplay: false,
+            startPageXIndex: index
           }
         });
         this.slide.on('slideWillChange', (page: any) => {
@@ -87,7 +88,6 @@ class QuarkImagePreview extends QuarkElement {
           if (this.onChange) this.onChange(page.pageX);
           this.$emit('change', page.pageX);
         });
-        this.slide.goToPage(index, 0);
         resolve(true)
       }, 100)
     })
@@ -227,9 +227,7 @@ export default function imagePreview(params: IImagePreview): QuarkImagePreview{
   const preview = document.createElement(
     'quark-image-preview'
   ) as QuarkImagePreview;
-  console.log(preview, 'PRE0')
   document.body.appendChild(preview);
-  console.log(preview, 'PRE1')
   const { images = [], startPosition, close, change, } = params;
   preview.isFn = true;
   preview.setData({ images, startPosition, close, change, open: true });

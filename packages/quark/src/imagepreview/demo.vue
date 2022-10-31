@@ -57,7 +57,7 @@
 import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("imagePreview");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
-import { ref, onBeforeMount } from "vue";
+import { ref, onBeforeMount, onMounted } from "vue";
 import { onBeforeRouteLeave } from "vue-router"
 import imagePreview from "./index.tsx";
 import Toast from "../toast/index";
@@ -109,25 +109,11 @@ export default createDemo({
 		};
 
 		const componentsClick = () => {
-			const preview = preview1.value;
 			data.value.open1 = true;
-			preview.setData({
-				images: baseUrls,
-				startPosition: 2,
-				change: (index) =>
-					Toast.text(`${translate("dialog.move")}${index + 1}`),
-				close: () => (data.value.open1 = false),
-			});
 		};
 
 		const componentsClick2 = () => {
-			const preview = preview2.value;
 			data.value.open2 = true;
-			preview.setData({
-				images: baseUrls,
-				change: (index) => (data.value.index = index),
-				close: () => (data.value.open2 = false),
-			});
 		};
 		onBeforeMount(() => {
 			useTranslate({
@@ -183,6 +169,20 @@ export default createDemo({
 				},
 			});
 		});
+    onMounted(() => {
+			preview2.value.setData({
+				images: baseUrls,
+				change: (index) => (data.value.index = index),
+				close: () => (data.value.open2 = false),
+			});
+			preview1.value.setData({
+				images: baseUrls,
+				startPosition: 2,
+				change: (index) =>
+					Toast.text(`${translate("dialog.move")}${index + 1}`),
+				close: () => (data.value.open1 = false),
+			});
+    })
     onBeforeRouteLeave(() => {
       const nodes = document.querySelectorAll('quark-image-preview ')
       nodes.forEach(i => i.open = false )
