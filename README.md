@@ -17,7 +17,7 @@
 
 Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～
 
-![image](https://user-images.githubusercontent.com/14307551/198917290-f6acdea8-9a56-4a8d-8d0a-a5867bb66c13.png)
+![image](https://user-images.githubusercontent.com/14307551/198917468-52f7b97c-3d5f-4510-a1e0-5215ba5836c0.png)
 
 English | [简体中文](./README.zh-CN.md)
 
