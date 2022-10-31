@@ -33,7 +33,7 @@
 - 支持 TypeScript。
 - 支持定制主题。
 - 国际化语言支持。
-- 支持服务端渲染（Bate）。
+- 支持服务端渲染（Beta）。
 
 [English](./README.md) | 简体中文
 
