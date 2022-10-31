@@ -122,7 +122,7 @@ Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/
 
 ## Browser Support
 
-Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills)).
+Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
 
 ## Contribution Guide
 
