@@ -15,7 +15,7 @@
 
 ## Contact us
 
-~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加微信拉你入群~~
+~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右侧微信拉你入群~~
 
 微信群已满员，请添加下面管理员拉你入群谢谢～
 
@@ -202,6 +202,13 @@ export default {
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Er1c0">
+            <img src="https://avatars.githubusercontent.com/u/8493372?v=4" width="100;" alt="Er1c0"/>
+            <br />
+            <sub><b>Er1c0</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/hbf2e">
             <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
             <br />
@@ -213,6 +220,14 @@ export default {
             <img src="https://avatars.githubusercontent.com/u/19684376?v=4" width="100;" alt="houhoz"/>
             <br />
             <sub><b>Hyzhao</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/olivewind">
+            <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
+            <br />
+            <sub><b>olivewind</b></sub>
         </a>
     </td>
     <td align="center">
