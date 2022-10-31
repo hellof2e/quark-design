@@ -12,13 +12,15 @@
   An enterprise-class UI design language and cross-framework UI library, Based on web components.
   
 </div>
+![image](https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png)
 
 ## Contact us
 
-Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群
+～～Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群～～
+微信群已满员，请添加下面管理员拉你入群谢谢～
+
 <div style="display:flex;">
-  <img src="https://user-images.githubusercontent.com/14307551/198917468-52f7b97c-3d5f-4510-a1e0-5215ba5836c0.png" width='230'/>
-  <img src='https://m.hellobike.com/resource/helloyun/15697/nzwmP_WechatIMG107.jpeg' width='230'/>
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='230'/>
 </div>
 
 English | [简体中文](./README.zh-CN.md)
