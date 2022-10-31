@@ -205,7 +205,7 @@ export default {
         <a href="https://github.com/hbf2e">
             <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
             <br />
-            <sub><b>hbf2e</b></sub>
+            <sub><b>Hbf2e</b></sub>
         </a>
     </td>
     <td align="center">
@@ -219,7 +219,7 @@ export default {
         <a href="https://github.com/zhuokuang">
             <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
             <br />
-            <sub><b>zhuokuang</b></sub>
+            <sub><b>Zhuokuang</b></sub>
         </a>
     </td></tr>
 </table>
