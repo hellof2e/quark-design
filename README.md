@@ -178,6 +178,5 @@ export default {
 ```
 
 ## Contributors
-<a href="https://github.com/hellof2e/quark-design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hellof2e/quark-design" />
-</a>
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
