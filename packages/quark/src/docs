@@ -1,4 +1,19 @@
 # 更新日志
+### [1.0.11](https://github.com/hellof2e/quark-design/compare/quark@1.0.7...quark@1.0.11) (2022-10-31)
+
+
+### 🐞 Bug Fixes
+
+* rate default value is wrong ([9d08403](https://github.com/hellof2e/quark-design/commit/9d0840311ab94df777e7a10db81989bda340598f))
+* 修复图片预览组件标签式调用闪烁问题 ([a8ae116](https://github.com/hellof2e/quark-design/commit/a8ae116cbeae9ba48f8fb5683f3e6c10089471db))
+* 修复评分组件 ([8826eed](https://github.com/hellof2e/quark-design/commit/8826eed077432ce0192ffdda64f393268e05a84d))
+
+
+### 🎉 Features
+
+* update quark readme ([6a6401a](https://github.com/hellof2e/quark-design/commit/6a6401a3a9afe08033cf65017a502c934efdff33))
+* 修复cdn 打包问题 ([87a6987](https://github.com/hellof2e/quark-design/commit/87a698780a54362aa815c4eee886570d7853cfb5))
+
 ### [1.0.10](https://github.com/hellof2e/quark-design/compare/quark@1.0.9...quark@1.0.10) (2022-10-31)
 
 ### [1.0.9](https://github.com/hellof2e/quark-design/compare/quark@1.0.8...quark@1.0.9) (2022-10-31)
