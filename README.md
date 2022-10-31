@@ -15,7 +15,7 @@
 
 ## Contact us
 
-~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群~~
+~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加微信拉你入群~~
 
 微信群已满员，请添加下面管理员拉你入群谢谢～
 
@@ -122,7 +122,7 @@ Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/
 
 ## Browser Support
 
-Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills)).
+Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
 
 ## Contribution Guide
 
@@ -178,4 +178,49 @@ export default {
 
 ## Contributors
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/xxxsf">
+            <img src="https://avatars.githubusercontent.com/u/14307551?v=4" width="100;" alt="xxxsf"/>
+            <br />
+            <sub><b>Xsf</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sanqi-med">
+            <img src="https://avatars.githubusercontent.com/u/18179784?v=4" width="100;" alt="sanqi-med"/>
+            <br />
+            <sub><b>Sanqi</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/yuhaiyang1">
+            <img src="https://avatars.githubusercontent.com/u/23181320?v=4" width="100;" alt="yuhaiyang1"/>
+            <br />
+            <sub><b>Yhy</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/hbf2e">
+            <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
+            <br />
+            <sub><b>Hbf2e</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/houhoz">
+            <img src="https://avatars.githubusercontent.com/u/19684376?v=4" width="100;" alt="houhoz"/>
+            <br />
+            <sub><b>Hyzhao</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/zhuokuang">
+            <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
+            <br />
+            <sub><b>Zhuokuang</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
