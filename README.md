@@ -227,7 +227,7 @@ export default {
         <a href="https://github.com/olivewind">
             <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
             <br />
-            <sub><b>olivewind</b></sub>
+            <sub><b>Olivewind</b></sub>
         </a>
     </td>
     <td align="center">
