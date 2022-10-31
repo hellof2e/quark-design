@@ -31,6 +31,7 @@ import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("overlay");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onBeforeMount } from "vue";
+import { onBeforeRouteLeave } from "vue-router"
 
 export default createDemo({
 	setup() {
@@ -59,6 +60,10 @@ export default createDemo({
 					context: "Embedded Content",
 				},
 			});
+		});
+		onBeforeRouteLeave(() => {
+			const overlays = document.querySelectorAll('quark-overlay');
+			overlays.forEach(i => i.open = false)
 		});
 		return {
 			open,

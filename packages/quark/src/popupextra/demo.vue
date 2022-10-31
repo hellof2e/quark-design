@@ -159,7 +159,7 @@ import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("popupextra");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onMounted, onBeforeMount } from "vue";
-
+import { onBeforeRouteLeave } from "vue-router"
 export default createDemo({
 	setup() {
 		const open = ref("false");
@@ -184,7 +184,10 @@ export default createDemo({
 		});
 
 		onMounted(() => {});
-
+		onBeforeRouteLeave(() => {
+			const actionSheets = document.querySelectorAll('quark-popupextra');
+			actionSheets.forEach(i => i.open = false)
+		});
 		return {
 			open,
 			open2,
