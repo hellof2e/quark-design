@@ -188,17 +188,17 @@ export default {
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/sanqi-med">
-            <img src="https://avatars.githubusercontent.com/u/18179784?v=4" width="100;" alt="sanqi-med"/>
-            <br />
-            <sub><b>Sanqi</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/yuhaiyang1">
             <img src="https://avatars.githubusercontent.com/u/23181320?v=4" width="100;" alt="yuhaiyang1"/>
             <br />
             <sub><b>Yhy</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sanqi-med">
+            <img src="https://avatars.githubusercontent.com/u/18179784?v=4" width="100;" alt="sanqi-med"/>
+            <br />
+            <sub><b>Sanqi</b></sub>
         </a>
     </td>
     <td align="center">
@@ -223,6 +223,13 @@ export default {
         </a>
     </td></tr>
 <tr>
+    <td align="center">
+        <a href="https://github.com/novaalone">
+            <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
+            <br />
+            <sub><b>novaalone</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/olivewind">
             <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
