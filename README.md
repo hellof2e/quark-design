@@ -224,13 +224,6 @@ export default {
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/novaalone">
-            <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
-            <br />
-            <sub><b>novaalone</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/olivewind">
             <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
             <br />
