@@ -44,7 +44,7 @@ export default class QuarkIconArrowDown extends HTMLElement {
 
     getFontSize() {
         let fontSize = '';
-        if (this.size &&(this.size.includes('px') || this.size.includes('rem') || this.size.includes('em'))
+        if (this.size && /\d(px|rem|em|vh|vw)$/.test(this.size)
         ) {
             fontSize = this.size;
         } else {
