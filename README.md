@@ -210,6 +210,13 @@ export default {
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/amadeus711">
+            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
+            <br />
+            <sub><b>XieZongChen</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/zhuokuang">
             <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
             <br />
@@ -221,13 +228,6 @@ export default {
             <img src="https://avatars.githubusercontent.com/u/8493372?v=4" width="100;" alt="Er1c0"/>
             <br />
             <sub><b>Er1c0</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/amadeus711">
-            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
-            <br />
-            <sub><b>XieZongChen</b></sub>
         </a>
     </td></tr>
 <tr>
