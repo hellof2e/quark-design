@@ -126,7 +126,7 @@ Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcompon
 
 ## Contribution Guide
 
-Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md) before making a pull request. 
+Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) before making a pull request. 
 
 ## Special Note
 
