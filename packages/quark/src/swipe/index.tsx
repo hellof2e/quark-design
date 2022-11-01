@@ -200,7 +200,10 @@ class QuarkSwipe extends QuarkElement {
       // 从第一个右滑到最后一个
       if (style.transform === `translateX(${this.moveWidth}px)`) {
         this.changeLastNodeTranX(true);
-        this.changeContainerTranX(true);
+        this.changeContainerTranX(false);
+        this.currentIndex += 1;
+        this.changeFirstNodeTranX(false);
+        offset = this.getOffset();
       } else {
         // 正常的滑到最后一个
         this.currentIndex += 1;
