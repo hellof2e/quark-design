@@ -40,7 +40,8 @@
 | Quark      | 80.1kb  | Rollup         | √ | 2022 | Vue/React/Angular/JQ/Svelte/无框架 |
 | Vant       | 183kb   | Vite(Vant-cli) | √ | 2017 | Vue  
 | Nutui      | 275.5kb | Vite           | √ | 2018 | Vue  
-| TDesign Mobild | -   | Gulp           | √ | 2021 | React
+| TDesign Mobile | -   | Gulp           | √ | 2021 | React
+| Antd Mobile | -      | Gulp           | √ | 2016 | React
 
 [English](./README.md) | 简体中文
 
