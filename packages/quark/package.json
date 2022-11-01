@@ -1,6 +1,6 @@
 {
 	"name": "quarkd",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"description": "Mobile UI Components built on Web Components.",
 	"main": "lib/index.js",
 	"module": "lib/index.js",
