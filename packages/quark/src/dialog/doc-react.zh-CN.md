@@ -155,6 +155,7 @@ export default () => {
 | btnvertical | 按钮是否垂直，默认水平               | `boolean`                |      `false`       |
 | nofooter    | 是否显示底部                       | `boolean`                |      `false`       |
 | hideclose   | 是否隐藏右上角关闭按钮               |` boolean `               |      `false`      |
+| maskclosable | 点击蒙层是否允许关闭                 |` boolean `               |      `false`      |
 | autoclose   | 点击事件是否默认关闭                 | `boolean`                |   `true`          |
 | hide        | autoclose 为 false 时候函数式调用手动让弹窗消失, 满足灵活异步需求 dialog.hide()  |`() => void`|
 | onConfirm   | 确定回调函数                       | `() => void`  |

@@ -18,6 +18,7 @@
 | btnvertical         | Whether the button is vertical, the default is horizontal | `boolean`                |      `false`       |
 | nofooter         | Whether to show footer | `boolean`       |      `false`       |
 | hideclose         | Whether to hide the close button in the upper right corner | `boolean`                |      `false`      |
+| maskclosable         | Whether the click mask allow to close | `boolean`                |      `false`      |
 | autoclose         | Whether the click event is closed by default | `boolean`                |   `true`          |
 | hide| When autoclose is false, the function call manually makes the dialog disappear to meet flexible asynchronous requirements dialog.hide()  |`() => void`|
 

@@ -223,7 +223,7 @@ export default createDemo({
       const quarkDialogs = document.querySelectorAll('quark-dialog');
       quarkDialogs.forEach(i => i.open = false)
     })
-    
+
 		return {
 			open,
 			open2,
