@@ -40,10 +40,10 @@ type(ComponentName?)：commit message
 分支管理：
 
 例如：
-docs: fix type in quickstart
-build: optimize build speed
-fix(Button): incorrect style
-feat(Button): add color prop
+- docs: fix type in quickstart
+- build: optimize build speed
+- fix(Button): incorrect style
+- feat(Button): add color prop
 
 
 ## 常见问题
