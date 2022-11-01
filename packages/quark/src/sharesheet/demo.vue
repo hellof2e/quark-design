@@ -35,7 +35,6 @@ const { createDemo, translate } = createComponent("sharesheet");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import ActionSheet from "./index";
 import QuarkToast from "../toast/index.js";
-import { onBeforeRouteLeave } from "vue-router"
 
 export default createDemo({
 	setup() {
@@ -152,10 +151,6 @@ export default createDemo({
 			});
 		};
 
-		onBeforeRouteLeave(() => {
-			const actionSheets = document.querySelectorAll('quark-sharesheet');
-			actionSheets.forEach(i => i.open = false)
-		});
 		return {
 			showBase,
 			showTitleCustom,

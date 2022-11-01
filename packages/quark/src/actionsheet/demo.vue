@@ -46,7 +46,6 @@ import { createComponent } from "@/utils/create";
 import { onBeforeMount } from "vue";
 const { createDemo, translate } = createComponent("actionsheet");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
-import { onBeforeRouteLeave } from "vue-router"
 
 export default createDemo({
 	props: {},
@@ -184,12 +183,6 @@ export default createDemo({
 				},
 			});
 		};
-
-		onBeforeRouteLeave(() => {
-			const actionSheets = document.querySelectorAll('quark-actionsheet');
-			actionSheets.forEach(i => i.open = false)
-		});
-
 		return {
 			translate,
 			showBase,
