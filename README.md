@@ -210,17 +210,17 @@ export default {
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/amadeus711">
-            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
-            <br />
-            <sub><b>XieZongChen</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/zhuokuang">
             <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
             <br />
             <sub><b>Zhuokuang</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/amadeus711">
+            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
+            <br />
+            <sub><b>XieZongChen</b></sub>
         </a>
     </td>
     <td align="center">
@@ -231,6 +231,13 @@ export default {
         </a>
     </td></tr>
 <tr>
+    <td align="center">
+        <a href="https://github.com/gaoxiaoduan">
+            <img src="https://avatars.githubusercontent.com/u/69953511?v=4" width="100;" alt="gaoxiaoduan"/>
+            <br />
+            <sub><b>Coderduan</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/hbf2e">
             <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
