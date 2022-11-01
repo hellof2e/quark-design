@@ -220,6 +220,7 @@ export default createDemo({
 					error: {
 						timePicker: "请选择时间",
 						age: "不能小于18岁",
+            name: '请输入姓名',
 						phone: "请输入正确的手机号",
 						formItem: "请检查表单项",
 						items: "当前表单所有的值",
@@ -248,6 +249,7 @@ export default createDemo({
 						formItem: "Please check the form item",
 						items: "All values of the current form",
 						console: "Please check the form value in the console",
+            name: "Please input name"
 					},
 					time: ["a.m.", "p.m."],
 				},
@@ -259,7 +261,7 @@ export default createDemo({
 				.getValues()
 				.then((value) => {})
 				.catch((err) => {
-					Toast.text(err.message || `${translate("error.age")}`);
+					Toast.text(err.message || `${translate("error.name")}`);
 				});
 		};
 
