@@ -38,9 +38,9 @@
 | framework  | CDN | 打包/构建工具 | Typescript | 开源时间 | 支持技术栈/框架 |
 | --------- | ---------- | --------- | ----------------------- | ----------- | ----------- |
 | Quark      | 80.1kb  | Rollup         | √ | 2022 | Vue/React/Angular/JQ/Svelte/无框架 |
-| Vant       | 183kb   | Vite(Vant-cli) | √ | 2017 | Vue   ｜
-| Nutui      | 275.5kb | Vite           | √ | 2018 | Vue   ｜
-| TDesign Mobild | -   | Gulp           | √ | 2021 | React ｜
+| Vant       | 183kb   | Vite(Vant-cli) | √ | 2017 | Vue  
+| Nutui      | 275.5kb | Vite           | √ | 2018 | Vue  
+| TDesign Mobild | -   | Gulp           | √ | 2021 | React
 
 [English](./README.md) | 简体中文
 
