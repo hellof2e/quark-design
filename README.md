@@ -202,6 +202,13 @@ export default {
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/zhuokuang">
+            <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
+            <br />
+            <sub><b>Zhuokuang</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Er1c0">
             <img src="https://avatars.githubusercontent.com/u/8493372?v=4" width="100;" alt="Er1c0"/>
             <br />
@@ -214,20 +221,20 @@ export default {
             <br />
             <sub><b>Hbf2e</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/houhoz">
             <img src="https://avatars.githubusercontent.com/u/19684376?v=4" width="100;" alt="houhoz"/>
             <br />
             <sub><b>Hyzhao</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/novaalone">
             <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
             <br />
-            <sub><b>novaalone</b></sub>
+            <sub><b>Novaalone</b></sub>
         </a>
     </td>
     <td align="center">
@@ -235,13 +242,6 @@ export default {
             <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
             <br />
             <sub><b>Olivewind</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/zhuokuang">
-            <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
-            <br />
-            <sub><b>Zhuokuang</b></sub>
         </a>
     </td></tr>
 </table>
