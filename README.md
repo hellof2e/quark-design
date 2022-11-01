@@ -216,13 +216,20 @@ export default {
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/amadeus711">
+            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
+            <br />
+            <sub><b>XieZongChen</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/hbf2e">
             <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
             <br />
             <sub><b>Hbf2e</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/houhoz">
             <img src="https://avatars.githubusercontent.com/u/19684376?v=4" width="100;" alt="houhoz"/>
@@ -234,7 +241,7 @@ export default {
         <a href="https://github.com/novaalone">
             <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
             <br />
-            <sub><b>novaalone</b></sub>
+            <sub><b>Novaalone</b></sub>
         </a>
     </td>
     <td align="center">
