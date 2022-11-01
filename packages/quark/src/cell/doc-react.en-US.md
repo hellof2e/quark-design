@@ -57,7 +57,7 @@ export default () => {
 ### Inset Grouped
 
 ```tsx
-import { Cell, CellGroupl } from '@quarkd/quark-react';
+import { Cell, CellGroup } from '@quarkd/quark-react';
 
 export default () => {
   return (
