@@ -242,7 +242,7 @@ export default {
         <a href="https://github.com/novaalone">
             <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
             <br />
-            <sub><b>novaalone</b></sub>
+            <sub><b>Novaalone</b></sub>
         </a>
     </td>
     <td align="center">
