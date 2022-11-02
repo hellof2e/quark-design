@@ -1,67 +1,65 @@
-# 开发者贡献指南
+# Developer Contribution Guide
 
-我们非常欢迎社区的开发者向 Quark Design 做出贡献。在提交贡献之前，请花一些时间阅读以下内容，保证贡献是符合规范并且能帮助到社区。
+We are very welcome to the community developers to make contributions to Quark Design. Before submitting a contribution, please take some time to read the following content to ensure that the contribution is in line with the specifications and can help the community.
 
-## 开发配置
+## Development configuration
 
-* 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
+- Environment requirements: `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
 
-## 开始
+## Start
 
-第一次启动：
-
-```bash
-yarn 安装项目的依赖
-
-yarn bootstrap 安装子项目的依赖
-
-yarn link 第一次执行需要，互相依赖的软链接
-
-yarn dev 开始执行工程
-```
-
-之后直接运行下面命令即可：
+First start:
 
 ```bash
-yarn dev
+yarn run bootstrap // Install the dependencies of the sub-project
+
+yarn run link // First execution, mutual dependency soft link
+
+npm run dev // Start executing the project
 ```
 
-## 命令说明（核心维护者发包使用）
+After that, just run the following command:
 
-```
-release:patch: 发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
-release:minor: 发布所有子包的中间一位版本号如 0.0.1 -> 0.1.0,
-release:major: 发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
+```bash
+npm run dev
 ```
 
-## 提交 commit
+## Command description (core maintainer release package use)
 
-整个 Quark Design 仓库遵从 [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)，在输入 commit message 的时候请务必遵从此规范。
+```
+release:patch: Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
+release:minor: Publish the middle digit version number of all sub-packages, such as 0.0.1 -> 0.1.0,
+release:major: Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
+```
+
+## Submit commit
+
+The entire Quark Design repository follows [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153), please follow this specification when entering the commit message.
 
 Title Format
 type(ComponentName?)：commit message
 
-分支管理：
+Branch management:
 
-例如：
+For example:
 
 - docs: fix type in quickstart
 - build: optimize build speed
 - fix(Button): incorrect style
 - feat(Button): add color prop
 
-## 常见问题
+## Frequently asked questions
 
-如何清楚子项目的缓存？
-
-```
-yarn clean
-```
-
-## 结构
+How to clear the cache of the sub-project?
 
 ```
-├── README.MD 
+npm run clean
+```
+
+## Structure
+
+```
+├── README.MD
 ├── demo.html
 ├── dev.md
 ├── example
@@ -81,9 +79,9 @@ yarn clean
 │   ├── yarn-error.log
 │   └── yarn.lock
 ├── index.html
-├── lerna.json lerna的核心 配置
+├── lerna.json lerna's core configuration
 ├── package.json
-├── packages 所有子包
+├── packages All sub-packages
 │   ├── quark
 │   ├── quark-element
 │   ├── quark-react
@@ -92,7 +90,7 @@ yarn clean
 │   ├── quark-vscode-extension
 │   ├── quark-rollup-plugin-postcss
 │   └── quark-rollup-plugin-css-variable
-├── scripts 脚本
+├── scripts Scripts for the project
 │   ├── build.js
 │   ├── build_demo.js
 │   └── dev.js

@@ -131,7 +131,7 @@ import "quarkd/lib/button"
 
 ## 参与共建
 
-参考 [本地开发文档](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md)
+参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
 
 ## 特别说明
 

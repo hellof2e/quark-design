@@ -134,7 +134,7 @@ Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcompon
 
 ## Contribution Guide
 
-Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) before making a pull request. 
+Please make sure to read the [Contributing Guide](./CONTRIBUTING.md) before making a pull request. 
 
 ## Special Note
 
@@ -224,13 +224,20 @@ export default {
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/c0dedance">
+            <img src="https://avatars.githubusercontent.com/u/38075730?v=4" width="100;" alt="c0dedance"/>
+            <br />
+            <sub><b>C0dedance</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/Er1c0">
             <img src="https://avatars.githubusercontent.com/u/8493372?v=4" width="100;" alt="Er1c0"/>
             <br />
             <sub><b>Er1c0</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/gaoxiaoduan">
             <img src="https://avatars.githubusercontent.com/u/69953511?v=4" width="100;" alt="gaoxiaoduan"/>
