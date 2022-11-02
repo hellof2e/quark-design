@@ -1,13 +1,13 @@
-
 const fse = require('fs-extra');
 const path = require('path');
-const targetBaseUrl = path.resolve(__dirname, '../../quark-design-docs/src/docs_vue/');
+const targetBaseUrl = `${process.cwd()}/site_docs`;
 const changeLogUrl = path.resolve(__dirname, '../../quark-design-docs/src/docs/');
+
 const copyFile = (from, to) => {
   fse
     .copy(from, to)
     .then(() => {
-      console.log('success!>', to);
+      console.log('success!!!', to);
     })
     .catch((err) => {
       console.error(err);
@@ -35,12 +35,11 @@ const copy = async () => {
   // 判断 site_docs 文件是否存在根路径中
   const existsRoot = await fse.pathExists(targetBaseUrl);
 
-  if (existsRoot) await removeFile(`${targetBaseUrl}/docs/`);
-  
+  if (existsRoot) await removeFile(targetBaseUrl);
+
   // 复制所有组件
   const fromConfig = await fse.readJson(configPath);
   fromConfig.nav.forEach(({ packages }) => {
-    console.log(packages, "packages---------->")
     packages.forEach((item) => {
       if (item.show) {
         let cmpName = item.name.toLowerCase();
@@ -62,7 +61,7 @@ const copy = async () => {
             copyFile(docEnPath, `${targetBaseUrl}/docs/${cmpName}/doc.en-US.md`);
           }
         });
-
+        
         // react docs
         fse.readFile(reactDocpath, (err, data) => {
           if (!err) {
@@ -91,9 +90,7 @@ const copy = async () => {
     docsConfig.version = fromPkgConfig.version;
     docsConfig.nav = fromConfig.nav;
     docsConfig.docs = fromConfig.docs;
-    // for-test
-    // todo 开源地址
-    docsConfig.demoUrl = '/demo/demo.html#';
+    docsConfig.demoUrl = 'https://quark-design.hellobike.com/demo/demo.html#/';
     fse
       .writeJson(quarkuiDocsConfigPath, docsConfig, {
         spaces: 2
@@ -107,6 +104,5 @@ const copy = async () => {
   await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.zh-CN.md`);
   await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.en-US.md`);
 };
-
 
 copy();
