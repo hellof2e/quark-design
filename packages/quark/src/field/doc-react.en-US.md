@@ -54,7 +54,7 @@ import { Field, FieldRef } from '@quarkd/quark-react';
   --field-input-font-size: 20px;
   --field-placeholder-text-color: red;
   --field-placeholder-font-size: 12px;
-  --field-disabled-text-olor: #eee;
+  --field-disabled-text-color: #eee;
 }
 ```
 ### Event
@@ -133,7 +133,7 @@ export default () => {
 | onFocus       | Emitted when input is focused     | `(e:{detail:{value: string}}) => void`
 | onBlur        | Emitted when input is blurred     | `(e:{detail:{value: string}}) => void`
 
-### Methed
+### Method
 | Name         | Description                       | Type   |
 |--------------|-----------------------------------|--------|
 | setRules     | Used to set form validation rules | `(rule: Rule[]) => void`

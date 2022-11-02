@@ -7,7 +7,7 @@ When new content or pending information is available, a red dot, number or desc 
 ### Install
 
 ```tsx
-import { Bandge } from '@quarkd/quark-react';
+import { Badge } from '@quarkd/quark-react';
 ```
 
 ### Basic Usage

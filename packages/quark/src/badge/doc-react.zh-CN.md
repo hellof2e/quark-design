@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import { Bandge } from '@quarkd/quark-react';
+import { Badge } from '@quarkd/quark-react';
 ```
 
 ### 徽标独立使用
