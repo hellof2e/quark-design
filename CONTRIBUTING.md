@@ -11,17 +11,19 @@
 第一次启动：
 
 ```bash
-yarn run bootstrap 安装子项目的依赖
+yarn 安装项目的依赖
 
-yarn run link 第一次执行需要，互相依赖的软链接
+yarn bootstrap 安装子项目的依赖
 
-npm run dev 开始执行工程
+yarn link 第一次执行需要，互相依赖的软链接
+
+yarn dev 开始执行工程
 ```
 
 之后直接运行下面命令即可：
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## 命令说明（核心维护者发包使用）
@@ -53,7 +55,7 @@ type(ComponentName?)：commit message
 如何清楚子项目的缓存？
 
 ```
-npm run clean
+yarn clean
 ```
 
 ## 结构
