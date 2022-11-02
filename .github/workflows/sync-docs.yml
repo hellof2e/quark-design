@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install
+      - run: yarn run bootstrap
+      - run: yarn run link
       - run: yarn copydocs
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7
