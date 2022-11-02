@@ -232,6 +232,13 @@ export default {
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/c0dedance">
+            <img src="https://avatars.githubusercontent.com/u/38075730?v=4" width="100;" alt="c0dedance"/>
+            <br />
+            <sub><b>c0dedance</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/gaoxiaoduan">
             <img src="https://avatars.githubusercontent.com/u/69953511?v=4" width="100;" alt="gaoxiaoduan"/>
             <br />
