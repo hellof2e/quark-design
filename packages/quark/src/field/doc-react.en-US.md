@@ -54,7 +54,7 @@ import { Field, FieldRef } from '@quarkd/quark-react';
   --field-input-font-size: 20px;
   --field-placeholder-text-color: red;
   --field-placeholder-font-size: 12px;
-  --field-disabled-text-olor: #eee;
+  --field-disabled-text-color: #eee;
 }
 ```
 ### Event

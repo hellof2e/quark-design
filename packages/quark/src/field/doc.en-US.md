@@ -53,7 +53,7 @@ import 'quarkd/lib/field';
   --field-input-font-size: 20px;
   --field-placeholder-text-color: red;
   --field-placeholder-font-size: 12px;
-  --field-disabled-text-olor: #eee;
+  --field-disabled-text-color: #eee;
 }
 ```
 ### Event
