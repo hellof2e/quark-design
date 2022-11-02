@@ -3,6 +3,7 @@
  * Change to Adaptive QuarkElement
  * */
  import { Component, createRef, createElement, forwardRef } from 'react';
+ import { isNativeEvent } from './utils';
 
  const reactifyWebComponent = (WC: any) => {
    class Reactified extends Component {
@@ -31,7 +32,7 @@
            if (prop.match(/^on[A-Za-z]/)) {
              // 需要过滤掉原生支持的 click 事件
              const eventName = prop.substr(2).toLowerCase();
-             if (eventName !== 'click') {
+             if (!isNativeEvent(eventName)) {
                 return this.setEvent(eventName, val);
              }
            }
