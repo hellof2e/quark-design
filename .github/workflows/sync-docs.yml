@@ -16,7 +16,7 @@ jobs:
       - run: yarn install
       - run: yarn copydocs
       - name : Sync 
-        uses : JamesIves/github-pages-deploy-action@4.1.7
+        uses : JamesIves/github-pages-deploy-action@v4.4.1
         with :
           branch : main # action 应该部署到的分支。
           folder : site_docs # 操作应该部署的文件夹。
@@ -24,7 +24,3 @@ jobs:
           repository-name: hellof2e/quark-design-docs
           token: ${{ secrets.GIT_ACTION }}
           target-folder: src/docs_vue
-
-     
-
-          
