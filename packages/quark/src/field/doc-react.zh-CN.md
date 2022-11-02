@@ -124,6 +124,7 @@ export default () => {
 | onFocus         | 聚焦事件         | `（e:{detail:{value: string}}）=> void`    |   |
 | onBlur         | 失焦事件          | `（e:{detail:{value: string}}）=> void`              |  |
 
+
 ### Method
 | 名称         | 说明                             | 类型   |
 |--------------|----------------------------------|--------|
