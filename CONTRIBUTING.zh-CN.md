@@ -11,13 +11,11 @@
 第一次启动：
 
 ```bash
-yarn 安装项目的依赖
+yarn run bootstrap // 安装项目的依赖
 
-yarn bootstrap 安装子项目的依赖
+yarn run link // 第一次执行需要，互相依赖的软链接
 
-yarn link 第一次执行需要，互相依赖的软链接
-
-yarn dev 开始执行工程
+yarn dev // 开始执行工程
 ```
 
 之后直接运行下面命令即可：
