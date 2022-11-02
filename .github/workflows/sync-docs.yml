@@ -17,8 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: node -v
-    - run: yarn add fs-extra -W
+    - run: yarn run bootstrap
+    - run: yarn run link
     - run: yarn copydocs
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
