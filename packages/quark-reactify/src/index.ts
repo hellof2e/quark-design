@@ -28,11 +28,8 @@
        //@ts-ignore
        Object.entries(this.props).forEach(([prop, val]) => {
          if (typeof val === 'function') {
-           if (prop.match(/^on[A-Z]/)) {
-             return this.setEvent(prop[2].toLowerCase() + prop.substr(3), val);
-           }
-           if (prop.match(/^on[a-z]/)) {
-             return this.setEvent(prop[2] + prop.substr(3), val);
+           if (prop.match(/^on[A-Za-z]/)) {
+             return this.setEvent(prop.substr(2).toLowerCase(), val);
            }
          }
          return true;
