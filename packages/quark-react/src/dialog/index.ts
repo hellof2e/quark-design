@@ -1,24 +1,11 @@
 import { FC } from 'react';
+import type DialogFn from 'quarkd/lib/dialog'
 import reactify from "@quarkd/reactify";
 import 'quarkd/lib/dialog';
-import { componentBaseInterface } from '../type';
+import { ReactifyProps } from '../type';
 
-interface DialogProps extends componentBaseInterface{
-    title?: string
-    content?: string
-    oktext?: string;
-    canceltext?: string
-    open: boolean
-    zindex?: number
-    type?: 'modal' | 'confirm'
-    btnVertical?: boolean;
-    nofooter?: boolean
-    hideclose?: boolean
-    autoclose?: boolean
-    onConfirm: () => void
-    onCancel: () => void
-    onClose: () => void
-}
+
+type DialogProps = ReactifyProps<Parameters<typeof DialogFn>[0]>
 type DialogType =  FC<DialogProps>;
 
 const Dialog = reactify('quark-dialog') as DialogType;
