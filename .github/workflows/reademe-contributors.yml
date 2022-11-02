@@ -2,7 +2,7 @@
 on:
   push:
     branches:
-      - main
+      - test
 
 # action 名称
 name: Contributes
