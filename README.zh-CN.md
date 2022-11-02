@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://ant.design">
+  <a href="https://quark-design.hellobike.com/">
     <img width="200" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
   </a>
 </p>
@@ -13,6 +13,16 @@
   
 </div>
 
+## Contact us
+
+~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群~~
+
+微信群已满员，请添加下面管理员拉你入群谢谢～
+
+<div style="display:flex;">
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='230'/>
+</div>
+
 ## 特性
 
 - 支持 Vue、React、Angular 等各类框架/无框架。
@@ -23,7 +33,15 @@
 - 支持 TypeScript。
 - 支持定制主题。
 - 国际化语言支持。
-- 支持服务端渲染（Bate）。
+- 支持服务端渲染（Beta）。
+
+| framework  | CDN | 打包/构建工具 | Typescript | 开源时间 | 支持技术栈/框架 |
+| --------- | ---------- | --------- | ----------------------- | ----------- | ----------- |
+| Quark      | 80.1kb  | Rollup         | √ | 2022 | Vue/React/Angular/JQ/Svelte/无框架 |
+| Vant       | 183kb   | Vite(Vant-cli) | √ | 2017 | Vue  
+| Nutui      | 275.5kb | Vite           | √ | 2018 | Vue  
+| TDesign Mobile | -   | Gulp           | √ | 2021 | React
+| Antd Mobile | -      | Gulp           | √ | 2016 | React
 
 [English](./README.md) | 简体中文
 
@@ -113,7 +131,7 @@ import "quarkd/lib/button"
 
 ## 参与共建
 
-参考 [本地开发文档](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md)
+参考 [本地开发文档](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md)
 
 ## 特别说明
 
@@ -162,3 +180,7 @@ export default {
   ]
 }
 ```
+## 贡献者
+<a href="https://github.com/hellof2e/quark-design/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=hellof2e/quark-design" />
+</a>

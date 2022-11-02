@@ -68,7 +68,6 @@ module.exports = {
 		hidden: true
 	},
 	],
-  	"tagPrefix": 'quark@',
 	"skip": {
 		// "bump": true,
 		"commit": true,

@@ -150,6 +150,7 @@ export default createDemo({
 				},
 			});
 		};
+
 		return {
 			showBase,
 			showTitleCustom,

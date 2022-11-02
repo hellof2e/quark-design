@@ -3,7 +3,7 @@
 
   <doc-nav></doc-nav>
 
-  <div class="doc-content">
+  <div id="doc-content" class="doc-content">
     <div class="doc-title" v-if="isShow()">
       <div class="doc-title-position" :class="{ fixed: fixed, hidden: hidden }">
         <div class="title">{{ componentName.name }}&nbsp;{{ isZhLang ? componentName.cName : '' }}</div>
@@ -175,6 +175,7 @@ export default defineComponent({
       watchDemoUrl(to);
       data.curKey = isReact(to) ? "react" : "vue";
       componentTitle(to);
+      document.getElementById('doc-content')?.scrollTo({ top: 0 });
     });
     
 
@@ -191,12 +192,15 @@ export default defineComponent({
 <style lang="scss" scoped>
 .doc {
   &-content {
+    height: calc(100vh - 68px);
+    overflow: auto;
     margin-left: 290px;
     display: flex;
     flex-direction: column;
 
     &-document {
       min-height: 800px;
+      flex-shrink: 0;
     }
     
     &-tabs {

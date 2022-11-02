@@ -61,4 +61,24 @@ const router = createRouter({
   routes
 });
 
+router.beforeEach((to, from) => {
+  const actionSheets = document.querySelectorAll('quark-actionsheet');
+  // @ts-ignore
+  actionSheets.forEach(i => i.open = false)
+
+  const overlays = document.querySelectorAll('quark-overlay');
+  // @ts-ignore
+  overlays.forEach(i => i.open = false)
+
+  const popupExtras = document.querySelectorAll('quark-popupextra');
+  // @ts-ignore
+  popupExtras.forEach(i => i.open = false)
+
+  const shareSheets = document.querySelectorAll('quark-sharesheet');
+  // @ts-ignore
+  shareSheets.forEach(i => i.open = false)
+
+  return true
+})
+
 export default router;

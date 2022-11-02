@@ -183,7 +183,6 @@ export default createDemo({
 				},
 			});
 		};
-
 		return {
 			translate,
 			showBase,

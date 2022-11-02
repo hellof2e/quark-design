@@ -154,6 +154,7 @@ export default () => {
 | btnvertical | Whether the buttons are arranged vertically | `boolean` | `false` |
 | nofooter    | Whether to show footer           | `boolean` | `false` |
 | hideclose   | Whether to hide the close button in the upper-right corner |` boolean ` | `false` |
+| maskclosable   | Whether the click mask allow to close  |` boolean ` | `false` |
 | autoclose   | Whether to close click event     | `boolean` | `true` |
 | hide        | When autoclose is false, the functional call manually makes the pop-up window disappear to meet the flexible asynchronous requirements` dialog.hide()`  | `() => void` |
 | onConfirm   | Emitted when the confirm button is clicked | `() => void` |

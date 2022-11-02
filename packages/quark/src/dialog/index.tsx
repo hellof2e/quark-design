@@ -28,7 +28,8 @@ type DialogParams = {
   notitle?: boolean,
   nofooter?: boolean,
   type?: string,
-  hideclose?: boolean,
+	hideclose?: boolean,
+	maskclosable?: boolean,
   btnvertical?: boolean,
 }
 @customElement({
@@ -67,7 +68,10 @@ class QuarkDialog extends QuarkElement {
   nofooter: boolean = false;
 
   @property({ type: Boolean })
-  hideclose: boolean = false;
+	hideclose: boolean = false;
+
+  @property({ type: Boolean })
+  maskclosable: boolean = false;
 
 
   @property({ type: Boolean })
@@ -179,6 +183,13 @@ class QuarkDialog extends QuarkElement {
         </quark-button>
       </div>
     );
+	};
+
+	handleClickMask = () => {
+		if (this.maskclosable) {
+			this.$emit('close')
+			this.hide();
+		};
   };
 
   render() {
@@ -204,7 +215,7 @@ class QuarkDialog extends QuarkElement {
                     </g>
                   </svg>
                 </div>
-                
+
                 {/* <quark-icon-close
                   class="quark-dialog-close-btn"
                   size="16"
@@ -215,7 +226,7 @@ class QuarkDialog extends QuarkElement {
           )}
 
           <div class="quark-dialog-content">
-            {!this.notitle && 
+            {!this.notitle &&
               <slot name="title">
                 <p class="quark-dialog-title">
                   {this.title}
@@ -258,7 +269,8 @@ class QuarkDialog extends QuarkElement {
               </slot>
             )}
           </div>
-        </div>
+				</div>
+				<div class="quark-dialog-mask" onClick={this.handleClickMask} />
       </Fragment>
     );
   }
@@ -280,6 +292,7 @@ export default function Dialog(params: DialogParams): QuarkDialog {
     nofooter = false,
     type = '',
     hideclose = false,
+    maskclosable = false,
     btnvertical = false,
   } = params;
   dialog.dRemove = true;
@@ -296,6 +309,7 @@ export default function Dialog(params: DialogParams): QuarkDialog {
   dialog.zindex = zindex;
   dialog.type = type;
   dialog.hideclose = hideclose;
+  dialog.maskclosable = maskclosable;
   dialog.btnvertical = btnvertical;
   document.body.appendChild(dialog);
   setTimeout(() => {

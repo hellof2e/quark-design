@@ -72,7 +72,7 @@ module.exports = {
 	"skip": {
 		// "bump": true,
 		"commit": true,
-		// "tag": true
+		"tag": true
 	},
 	"scripts": {
 		"postchangelog": "cp -f CHANGELOG.md ./src/docs",

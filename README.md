@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://ant.design">
+  <a href="https://quark-design.hellobike.com/">
     <img width="200" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
   </a>
 </p>
@@ -11,6 +11,16 @@
   
   An enterprise-class UI design language and cross-framework UI library, Based on web components.
   
+</div>
+
+## Contact us
+
+~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右侧微信拉你入群~~
+
+微信群已满员，请添加下面管理员拉你入群谢谢～
+
+<div style="display:flex;">
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='230'/>
 </div>
 
 English | [简体中文](./README.zh-CN.md)
@@ -32,7 +42,15 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 - Support TypeScript
 - Support Custom Theme
 - Support i18n, built-in 20+ languages
-  
+
+| Component Library  | CDN | Import on demand | Build tools | Typescript | open source time | Support technology stack/framework |
+| --------- | ---------- | --------- | --------- | ----------------------- | ----------- | ----------- |
+| Quark      | 80.1kb    | √ | Rollup         | √ | 2022 | Vue/React/Angular/JQ/Svelte/no framework |
+| Vant       | 183kb     | √ | Vite(Vant-cli) | √ | 2017 | Vue only    |
+| Nutui      | 275.5kb   | √ | Vite           | √ | 2018 | Vue only    |
+| TDesign Mobile | -     | √ | Gulp           | √ | 2021 | React only  |
+| Antd Mobile | -        | √ | Gulp           | √ | 2016 | React only  |
+
 ## Install
 Using `npm` to install:
 
@@ -104,19 +122,19 @@ No framework project
 
 ## Custom theme
 
-See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 。
+See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme).
 
 ## Internationalization
 
-Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization)。
+Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization).
 
 ## Browser Support
 
-Modern browsers and Internet Explorer 11 (with[polyfills](https://www.webcomponents.org/polyfills))。
+Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
 
 ## Contribution Guide
 
-Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTORING.md) before making a pull request. 
+Please make sure to read the [Contributing Guide](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) before making a pull request. 
 
 ## Special Note
 
@@ -165,3 +183,88 @@ export default {
   ]
 }
 ```
+
+## Contributors
+<!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/xxxsf">
+            <img src="https://avatars.githubusercontent.com/u/14307551?v=4" width="100;" alt="xxxsf"/>
+            <br />
+            <sub><b>Xsf</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/yuhaiyang1">
+            <img src="https://avatars.githubusercontent.com/u/23181320?v=4" width="100;" alt="yuhaiyang1"/>
+            <br />
+            <sub><b>Yhy</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/sanqi-med">
+            <img src="https://avatars.githubusercontent.com/u/18179784?v=4" width="100;" alt="sanqi-med"/>
+            <br />
+            <sub><b>Sanqi</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/zhuokuang">
+            <img src="https://avatars.githubusercontent.com/u/58252152?v=4" width="100;" alt="zhuokuang"/>
+            <br />
+            <sub><b>Zhuokuang</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/amadeus711">
+            <img src="https://avatars.githubusercontent.com/u/46394163?v=4" width="100;" alt="amadeus711"/>
+            <br />
+            <sub><b>XieZongChen</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Er1c0">
+            <img src="https://avatars.githubusercontent.com/u/8493372?v=4" width="100;" alt="Er1c0"/>
+            <br />
+            <sub><b>Er1c0</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/gaoxiaoduan">
+            <img src="https://avatars.githubusercontent.com/u/69953511?v=4" width="100;" alt="gaoxiaoduan"/>
+            <br />
+            <sub><b>Coderduan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/hbf2e">
+            <img src="https://avatars.githubusercontent.com/u/114655901?v=4" width="100;" alt="hbf2e"/>
+            <br />
+            <sub><b>Hbf2e</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/houhoz">
+            <img src="https://avatars.githubusercontent.com/u/19684376?v=4" width="100;" alt="houhoz"/>
+            <br />
+            <sub><b>Hyzhao</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/novaalone">
+            <img src="https://avatars.githubusercontent.com/u/18064759?v=4" width="100;" alt="novaalone"/>
+            <br />
+            <sub><b>Novaalone</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/olivewind">
+            <img src="https://avatars.githubusercontent.com/u/17901361?v=4" width="100;" alt="olivewind"/>
+            <br />
+            <sub><b>Olivewind</b></sub>
+        </a>
+    </td></tr>
+</table>
+<!-- readme: collaborators,contributors -end -->

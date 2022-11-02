@@ -67,8 +67,7 @@ const options = [
       typescript(),
       commonjs(),
       nodeResolve({
-        extensions,
-        modulesOnly: true,
+        extensions
       }),
       babel({
         babelHelpers: 'runtime',

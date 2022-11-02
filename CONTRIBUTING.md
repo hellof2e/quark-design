@@ -2,14 +2,14 @@
 
 我们非常欢迎社区的开发者向 Quark Design 做出贡献。在提交贡献之前，请花一些时间阅读以下内容，保证贡献是符合规范并且能帮助到社区。
 
-
 ## 开发配置
 
-* 环境要求： `node >=14.15`, `yarn >=1.22`
+* 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
 
 ## 开始
 
 第一次启动：
+
 ```bash
 yarn run bootstrap 安装子项目的依赖
 
@@ -19,6 +19,7 @@ npm run dev 开始执行工程
 ```
 
 之后直接运行下面命令即可：
+
 ```bash
 npm run dev
 ```
@@ -32,6 +33,7 @@ release:major: 发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
 ```
 
 ## 提交 commit
+
 整个 Quark Design 仓库遵从 [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)，在输入 commit message 的时候请务必遵从此规范。
 
 Title Format
@@ -40,19 +42,22 @@ type(ComponentName?)：commit message
 分支管理：
 
 例如：
-docs: fix type in quickstart
-build: optimize build speed
-fix(Button): incorrect style
-feat(Button): add color prop
 
+- docs: fix type in quickstart
+- build: optimize build speed
+- fix(Button): incorrect style
+- feat(Button): add color prop
 
 ## 常见问题
+
 如何清楚子项目的缓存？
+
 ```
 npm run clean
 ```
 
 ## 结构
+
 ```
 ├── README.MD 
 ├── demo.html

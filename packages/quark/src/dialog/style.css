@@ -21,6 +21,16 @@
   visibility: visible;
 }
 
+:host .quark-dialog-mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #f00;
+	z-index: -1;
+}
+
 :host .quark-dialog {
   position: relative;
   padding: 28px 12px 24px;
