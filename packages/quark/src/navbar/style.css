@@ -1,5 +1,4 @@
 :host {
-  display: block;
   font-size: 18px;
   height: 44px;
   position: relative;
@@ -7,6 +6,8 @@
   align-items: center;
   color: quark-textBaseColor;
   text-align: center;
+  width: 100%;
+  background-color: white;
 }
 
 :host([safearea]) {

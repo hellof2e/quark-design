@@ -23,16 +23,17 @@
      }
  
      update() {
-       this.clearEventHandlers();
+       this.clearEventHandlers(); 
        if (!this.ref.current) return;
        //@ts-ignore
        Object.entries(this.props).forEach(([prop, val]) => {
          if (typeof val === 'function') {
-           if (prop.match(/^on[A-Z]/)) {
-             return this.setEvent(prop[2].toLowerCase() + prop.substr(3), val);
-           }
-           if (prop.match(/^on[a-z]/)) {
-             return this.setEvent(prop[2] + prop.substr(3), val);
+           if (prop.match(/^on[A-Za-z]/)) {
+             // 需要过滤掉原生支持的 click 事件
+             const eventName = prop.substr(2).toLowerCase();
+             if (eventName !== 'click') {
+                return this.setEvent(eventName, val);
+             }
            }
          }
          return true;

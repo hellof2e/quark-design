@@ -55,7 +55,8 @@ module.exports = {
     confirmCommit: '确定提交此说明吗？'
   },
   allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix'], // 当提交类型为feat、fix时才有破坏性修改选项
+  // 当提交类型为 feat、fix 时才有破坏性修改选项
+  allowBreakingChanges: ['feat', 'fix'],
   subjectLimit: 108,
   skipQuestions: ["scope", "body", "footer"]
 }

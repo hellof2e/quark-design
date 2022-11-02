@@ -73,8 +73,8 @@ export default () => {
     <Navbar
       right="share"
       title="Click left or right"
-      onLeftclick={onLeftClick}
-      onRightclick={onRightClick}
+      onLeftClick={onLeftClick}
+      onRightClick={onRightClick}
       onClose={close}
     />
   )

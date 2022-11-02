@@ -1,5 +1,5 @@
 {
-  "name": "QuarkDesign",
+  "name": "quark-design",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "link": "node ./scripts/link",
     "clean": "lerna clean -y",
     "prepare": "husky install",
-    "pushmd2AppQuarkDoc": "node ./scripts/pushmd2AppQuarkDoc",
+    "copydocs": "node ./scripts/copydocs",
     "push2GithubWebsite": "node ./scripts/push2GithubWebsite",
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
@@ -29,6 +29,7 @@
     "commitlint": "^17.0.3",
     "commitlint-config-cz": "^0.13.3",
     "cz-customizable": "^6.9.0",
+    "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
     "ora": "^5.1.2",
