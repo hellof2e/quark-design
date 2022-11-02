@@ -90,7 +90,7 @@ export default createDemo({
 						right: "右侧内容",
 						error: "当前网络不可用，请检查网络设置",
 						set: "去设置",
-						rightClick: "试着电击一下右箭头",
+						rightClick: "试着点击一下右箭头",
 						multiple:
 							"大学的目的，在于显明高尚的品德，在于使人们革除旧习，在于达到善的最高境界。大学的目的，在于显明高尚的品德，在于使人们革除旧习，在于达到善的最高境界。",
 						clickToast: "点击测试",
