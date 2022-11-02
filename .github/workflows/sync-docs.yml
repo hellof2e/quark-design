@@ -3,7 +3,7 @@ name: sync to docs
 on:
   push:
     branches:
-      - next # default branch
+      - main # default branch
     paths:
       - '.github/workflows/**'
       - 'src/**'
@@ -12,14 +12,14 @@ jobs:
   copy:
     runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn copydocs
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7
         with :
-          branch : main # action 应该部署到的分支 。
-          folder : site_docs #操作应该部署的文件夹 。
+          branch : main # action 应该部署到的分支。
+          folder : site_docs # 操作应该部署的文件夹。
           clean: false
           repository-name: hellof2e/quark-design-docs
           token: ${{ secrets.GIT_ACTION }}
