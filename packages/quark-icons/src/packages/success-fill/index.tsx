@@ -44,7 +44,7 @@ export default class QuarkIconSuccessFill extends HTMLElement {
     }
 
     getFontSize() {
-        getFontSize(this.size);
+        return getFontSize(this.size);
     }
 
     get size() {
