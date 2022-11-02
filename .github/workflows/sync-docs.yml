@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: node -v
-      - run: npm i fs-extra --force
-      - run: npm run copydocs
+      - run: yarn add fs-extra
+      - run: yarn copydocs
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7
         with :
