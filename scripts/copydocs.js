@@ -1,13 +1,13 @@
 const fse = require('fs-extra');
 const path = require('path');
 const targetBaseUrl = `${process.cwd()}/site_docs`;
-const changeLogUrl = path.resolve(__dirname, '../../quark-design-docs/src/docs/');
+// const changeLogUrl = `${process.cwd()}/changelog`;
 
 const copyFile = (from, to) => {
   fse
     .copy(from, to)
     .then(() => {
-      console.log('success!!!', to);
+      console.log('success >>>>', to);
     })
     .catch((err) => {
       console.error(err);
@@ -30,12 +30,14 @@ const copy = async () => {
   let configPath = path.resolve(__dirname, '../example/src/config.json');
   let configPkgPath = path.resolve(__dirname, `${quarkPath}/package.json`);
   let quarkuiDocsConfigPath = `${targetBaseUrl}/config.json`;
-  let changelogPath = path.resolve(__dirname, `${quarkPath}/CHANGELOG.md`);
+  // let changelogPath = `${changeLogUrl}/CHANGELOG.md`;
 
   // 判断 site_docs 文件是否存在根路径中
   const existsRoot = await fse.pathExists(targetBaseUrl);
+  // const changelogExistsRoot = await fse.pathExists(changeLogUrl);
 
   if (existsRoot) await removeFile(targetBaseUrl);
+  // if (changelogExistsRoot) await removeFile(changeLogUrl);
 
   // 复制所有组件
   const fromConfig = await fse.readJson(configPath);
@@ -100,9 +102,15 @@ const copy = async () => {
       });
   });
 
+
   // 复制changelog
-  await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.zh-CN.md`);
-  await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.en-US.md`);
+  // await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.md`);
+  // fse.readFile(changelogPath, (err, data) => {
+  //   if (!err) {
+  //     copyFile(changelogPath, `${changeLogUrl}/changelog.md`);
+  //   }
+  // });
+  // await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.en-US.md`);
 };
 
 copy();
