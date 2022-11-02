@@ -133,7 +133,7 @@ export default () => {
 | onFocus       | Emitted when input is focused     | `(e:{detail:{value: string}}) => void`
 | onBlur        | Emitted when input is blurred     | `(e:{detail:{value: string}}) => void`
 
-### Methed
+### Method
 | Name         | Description                       | Type   |
 |--------------|-----------------------------------|--------|
 | setRules     | Used to set form validation rules | `(rule: Rule[]) => void`

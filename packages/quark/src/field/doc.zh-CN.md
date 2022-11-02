@@ -124,7 +124,7 @@ import 'quarkd/lib/field';
 | focus         | 聚焦事件           | `（e:{detail:{value: string}}）=> void`   |
 | blur         | 失焦事件                      | `（e:{detail:{value: string}}）=> void`   |
 
-### Methed
+### Method
 | 名称         | 说明                             | 类型   |
 |--------------|----------------------------------|--------|
 | setRules         | 用于设置表单校验规则 |      `(rule: Rule[]) => void`   |
