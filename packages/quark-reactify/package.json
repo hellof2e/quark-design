@@ -1,6 +1,6 @@
 {
   "name": "@quarkd/reactify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "web components react util",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,9 +12,9 @@
     "release": "npm run build && standard-version"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/hellof2e/quark-design.git"
-	},
+    "type": "git",
+    "url": "https://github.com/hellof2e/quark-design.git"
+  },
   "peerDependencies": {
     "react": "*"
   },

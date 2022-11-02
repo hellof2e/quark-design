@@ -1,4 +1,42 @@
 # 更新日志
+### [1.0.13](https://github.com/hellof2e/quark-design/compare/v1.0.12...v1.0.13) (2022-11-02)
+
+
+### 🐞 Bug Fixes
+
+* **dialog:** fix dialog background-color is red ([39da3d0](https://github.com/hellof2e/quark-design/commit/39da3d02547b539fc7fca452bfe105d65fb45be1))
+* 修复表单错误提示信息 ([7825491](https://github.com/hellof2e/quark-design/commit/782549109ac48008cb627340ee68851def7b8211))
+
+
+### Documentation
+
+* **badge:** fix badge spelling error ([918ab7e](https://github.com/hellof2e/quark-design/commit/918ab7e13a5b2fffc18f17cf6b46361dd6a4fa4e))
+* **Badge:** fix spelling error ([5ed6198](https://github.com/hellof2e/quark-design/commit/5ed619807d498c787ae90f4fb7143aac2d087ca5))
+* **field:** css spelling error ([42c62a9](https://github.com/hellof2e/quark-design/commit/42c62a96661bff51ed667144369645c58abb587e))
+* **field:** fix field spelling error ([935778b](https://github.com/hellof2e/quark-design/commit/935778bac5ba3ecbbc829dbc013e5f821470b048))
+* **filed:** spelling error ([a26f31f](https://github.com/hellof2e/quark-design/commit/a26f31fb897573c9f6857a53b407572a93f44461))
+* use yarn to run scripts in unity ([ac199f9](https://github.com/hellof2e/quark-design/commit/ac199f98df2f2c4579e36444fa35eef85fd41722))
+
+
+### 🎉 Features
+
+* add developer contributions in english ([bc03326](https://github.com/hellof2e/quark-design/commit/bc03326158401678012770d92208fc3255bb17b5))
+* delete yarn lock ([fb46635](https://github.com/hellof2e/quark-design/commit/fb466359f34a141d00ba5d4400c19d251e264b1d))
+* improve reactify performance ([c1bb14d](https://github.com/hellof2e/quark-design/commit/c1bb14d616c5638c465aaed853b9bc527cc32c80))
+* merge ([d21de8e](https://github.com/hellof2e/quark-design/commit/d21de8ed28bfe488edcdf9a3625285facecf289f))
+* update ([1dc29a0](https://github.com/hellof2e/quark-design/commit/1dc29a003aeb6e916458eb61c2417e79f15ea027))
+* update quark version ([c473fad](https://github.com/hellof2e/quark-design/commit/c473fad4bfa4d7f036cc752df2fbe47e67920c1c))
+* update reactify ([2d76eb6](https://github.com/hellof2e/quark-design/commit/2d76eb6bb116f544de701b9126c8708654a7f030))
+* update workflow ([c1c0474](https://github.com/hellof2e/quark-design/commit/c1c0474da1a8323c2cf3bd5a990cae03031d2634))
+* update workflow ([f2c7f9e](https://github.com/hellof2e/quark-design/commit/f2c7f9e1c6f2e6a31484761ab5d0571d6168b61d))
+* update workflow test ([63c7c5c](https://github.com/hellof2e/quark-design/commit/63c7c5c7e2f8064d12ee1f64f0a05fed3b95eec9))
+* update yarn lock ([e73cff4](https://github.com/hellof2e/quark-design/commit/e73cff486a5eb10e3049a905b7c81d97b529a8f5))
+* workflow test ([59802cd](https://github.com/hellof2e/quark-design/commit/59802cdde856d09d5bdb96e1c7d5262109089178))
+* workflow test ([ced30f7](https://github.com/hellof2e/quark-design/commit/ced30f7a487a15fad387deabbc094fa8dd2986fe))
+* workflow test ([f3925ec](https://github.com/hellof2e/quark-design/commit/f3925ec068c568dac61af8686a959429e6764fe8))
+* workflow test ([9e88bc1](https://github.com/hellof2e/quark-design/commit/9e88bc15d392661c892c10b60298cc85efa835f6))
+* 修复 react 中 click 事件重复触发的问题 ([3480cd0](https://github.com/hellof2e/quark-design/commit/3480cd0aca168555c32399dc97ea1bbaeab0e59e))
+
 ### 1.0.12 (2022-11-01)
 
 
