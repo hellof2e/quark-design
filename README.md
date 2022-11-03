@@ -13,6 +13,12 @@
   
 </div>
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![Published on NPM](https://img.shields.io/npm/v/quarkd.svg)](https://www.npmjs.com/package/quarkd)
+[![contributors](https://img.shields.io/github/contributors/hellof2e/quark-design)](https://github.com/hellof2e/quark-design)
+[![issues](https://img.shields.io/github/issues-closed/hellof2e/quark-design)](https://github.com/hellof2e/quark-design)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/quarkd)
+
 ## Contact us
 
 ~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右侧微信拉你入群~~
@@ -109,7 +115,10 @@ No framework project
   <quark-button loading="false" id="btn">Button</quark-button>
 </body>
 
-<script src="./node_modules/quarkd/lib/button/index.js" /> // or cdn
+<!-- CDN -->
+<script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+<!-- or import what you need, like this -->
+<!-- <script src="./node_modules/quarkd/lib/button/index.js"></script>  -->
 <script>
   window.addEventListener(function() {
     const el = document.getElementById('btn')
