@@ -132,16 +132,16 @@ import "quarkd/lib/button"
 
 No framework project
 ```html
+```html
 <!DOCTYPE html>
 <html lang="en">
-<body>
-  <quark-button loading="false" id="btn">Button</quark-button>
-</body>
-
-<!-- CDN -->
+<!-- cdn -->
 <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
-<!-- or import what you need, like this -->
-<!-- <script src="./node_modules/quarkd/lib/button/index.js"></script>  -->
+<body>
+  
+  <quark-button loading="false" id="btn">Button</quark-button>
+
+</body>
 <script>
   window.addEventListener(function() {
     const el = document.getElementById('btn')
@@ -150,6 +150,7 @@ No framework project
   })
 </script>
 </html>
+```
 ```
 
 ## Custom theme
