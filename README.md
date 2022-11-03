@@ -85,9 +85,9 @@ Using `npm` to install:
 npm i quarkd
 ```
 
-**React usage notes**: Since the components provided by quarkd are all native custom elements (analogous to div), events dispatched in the component need to be received by addEventLisener, such as the custom close event close inside the dialog component. The Vue technology stack can directly use @xx to receive natively dispatched events, so there is no need to use addEventLisener to receive.
+**React usage notes**: Since the components provided by `quarkd` are all native custom elements (analogous to div), events dispatched in the component need to be received by `addEventLisener`, such as the custom close event close inside the `dialog` component. The `Vue` technology stack can directly use `@xx` to receive natively dispatched events, so there is no need to use `addEventLisener` to receive.
 
-In order to improve the development experience, we have Reactify (Reactify) for quarkd! So, we recommend that you use @quarkd/quark-react in your React/Preact projects!
+In order to improve the development experience, we have Reactify (Reactify) for `quarkd`! So, we recommend that you use `@quarkd/quark-react` in your React/Preact projects!
 
 ```bash
 # Recommended Use for React
