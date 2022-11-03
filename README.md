@@ -213,7 +213,7 @@ export default {
 }
 ```
 
-## Contribution Guide
+## Contributions
 
 👋 Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) before making a pull request. 
 
