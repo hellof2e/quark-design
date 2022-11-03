@@ -1,4 +1,5 @@
 
+```
 src
 ├── README.md
 ├── config.json // 官网菜单配置，详情见注释1
@@ -7,6 +8,7 @@ src
 ├── packages    // 源码
 ├── shims-vue.d.ts
 └── sites       // 官网
+```
 
 ## 注释1
 
@@ -14,15 +16,14 @@ config.json 为官网菜单配置文件。
 
 ```json
 {
-// 顶部版本号
+	// 顶部版本号
   "versions": [
     {
       "name": "1.x",
       "link": "/"
     }
   ],
-
-// 顶部菜单
+	// 顶部菜单
   "header": [
     {
       "name": "intro,theme,start",
@@ -30,8 +31,7 @@ config.json 为官网菜单配置文件。
       "path": "#/intro"
     }
   ],
-  
-//   左侧顶部菜单
+	// 左侧顶部菜单
   "docs": {
     "name": "指南",
     "packages": [
@@ -48,8 +48,7 @@ config.json 为官网菜单配置文件。
       }
     ]
   },
-
-//   左侧菜单
+	// 左侧菜单
   "nav": [
     {
       "name": "基础组件",
