@@ -164,9 +164,6 @@ Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/
 
 Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
 
-## Contribution Guide
-
-Please make sure to read the [Contributing Guide](./CONTRIBUTING.md) before making a pull request. 
 
 ## Special Note
 
@@ -215,3 +212,8 @@ export default {
   ]
 }
 ```
+
+## Contribution Guide
+
+👋 Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) before making a pull request. 
+
