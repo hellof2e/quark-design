@@ -11,9 +11,9 @@
 第一次启动：
 
 ```bash
-yarn run bootstrap // 安装项目的依赖
+yarn // 安装项目的依赖
 
-yarn run link // 第一次执行需要，互相依赖的软链接
+yarn link // 第一次执行需要，互相依赖的软链接
 
 yarn dev // 开始执行工程
 ```

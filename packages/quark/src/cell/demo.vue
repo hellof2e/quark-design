@@ -80,7 +80,7 @@ export default createDemo({
 						icon: "展示图标",
 						group: "分组用法",
 						custom: "自定义样式，省略号展示",
-						right: "自定义右侧内容",
+						right: "自定义右侧描述",
 					},
 					title: "这是标题",
 					desc: "描述文字",

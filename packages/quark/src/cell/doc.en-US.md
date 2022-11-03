@@ -59,7 +59,10 @@ Set the maximum width of the title, show ellipsis
   --cell-title-text-overflow: ellipsis;
 }
 ```
-### Right content
+
+### Customize right description
+
+The description on the right can be customized through Slot (the content of the `Cell` package).
 
 ```html
 <quark-cell title="Cell title">

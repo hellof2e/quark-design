@@ -11,17 +11,17 @@ We are very welcome to the community developers to make contributions to Quark D
 First start:
 
 ```bash
-yarn run bootstrap // Install the dependencies of the sub-project
+yarn // Install the dependencies of the sub-project
 
-yarn run link // First execution, mutual dependency soft link
+yarn link // First execution, mutual dependency soft link
 
-npm run dev // Start executing the project
+yarn dev // Start executing the project
 ```
 
 After that, just run the following command:
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Command description (core maintainer release package use)

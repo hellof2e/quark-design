@@ -79,7 +79,7 @@ import { Marquee } from "@quarkd/quark-react"
 |--------------|----------------------------------|
 | left     | 自定义左侧内容              |               
 | text   | 自定义文本                  |   
-| right    | 自定义右侧内容               |    
+| right    | 自定义右侧描述               |    
 
 
 

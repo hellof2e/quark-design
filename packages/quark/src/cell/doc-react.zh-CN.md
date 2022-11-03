@@ -89,7 +89,9 @@ export default () => {
   --cell-title-text-overflow: ellipsis;
 }
 ```
-### 自定义右侧内容
+### 自定义右侧描述
+
+通过 Slot（`Cell` 包裹的内容）可以自定义右侧描述。
 
 ```tsx
 import { Cell } from '@quarkd/quark-react';
