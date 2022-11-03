@@ -13,11 +13,23 @@
   
 </div>
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![Published on NPM](https://img.shields.io/npm/v/quarkd.svg)](https://www.npmjs.com/package/quarkd)
-[![contributors](https://img.shields.io/github/contributors/hellof2e/quark-design)](https://github.com/hellof2e/quark-design)
-[![issues](https://img.shields.io/github/issues-closed/hellof2e/quark-design)](https://github.com/hellof2e/quark-design)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/quarkd)
+<p align="center">
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  </a>
+  <a href="https://www.npmjs.com/package/quarkd">
+    <img src="https://img.shields.io/npm/v/quarkd.svg" alt="Published on NPM">
+  </a>
+  <a href="https://github.com/hellof2e/quark-design">
+    <img src="https://img.shields.io/github/contributors/hellof2e/quark-design" alt="contributors">
+  </a>
+  <a href="https://github.com/hellof2e/quark-design">
+    <img src="https://img.shields.io/github/issues-closed/hellof2e/quark-design" alt="issues">
+  </a>
+  <a href="https://www.webcomponents.org/element/quarkd">
+    <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on webcomponents.org">
+  </a>
+</p>
 
 ## Contact us
 

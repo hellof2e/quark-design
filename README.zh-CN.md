@@ -13,6 +13,24 @@
   
 </div>
 
+<p align="center">
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+  </a>
+  <a href="https://www.npmjs.com/package/quarkd">
+    <img src="https://img.shields.io/npm/v/quarkd.svg" alt="Published on NPM">
+  </a>
+  <a href="https://github.com/hellof2e/quark-design">
+    <img src="https://img.shields.io/github/contributors/hellof2e/quark-design" alt="contributors">
+  </a>
+  <a href="https://github.com/hellof2e/quark-design">
+    <img src="https://img.shields.io/github/issues-closed/hellof2e/quark-design" alt="issues">
+  </a>
+  <a href="https://www.webcomponents.org/element/quarkd">
+    <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on webcomponents.org">
+  </a>
+</p>
+
 ## Contact us
 
 ~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右边小助手微信拉你入群~~
