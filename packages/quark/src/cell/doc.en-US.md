@@ -63,10 +63,7 @@ Set the maximum width of the title, show ellipsis
 
 ```html
 <quark-cell title="Cell title">
-  <quark-radio-group :value="value" @change="onChange">
-    <quark-radio name="apple" style="margin-right: 10px;">Apple</quark-radio>
-    <quark-radio name="banana">Banana</quark-radio>
-  </quark-radio-group>
+  <div>自定义内容</div>
 </quark-cell>
 ```
 

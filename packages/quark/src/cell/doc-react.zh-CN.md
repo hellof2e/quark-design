@@ -83,7 +83,7 @@ export default () => {
 }
 ```
 ```css
-// CSS 省略号展示
+/* CSS 省略号展示 */
 .my-cell {
   --cell-title-white-space: nowrap;
   --cell-title-text-overflow: ellipsis;
