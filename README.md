@@ -131,7 +131,7 @@ import "quarkd/lib/button"
 ```
 
 No framework project
-```html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -150,7 +150,6 @@ No framework project
   })
 </script>
 </html>
-```
 ```
 
 ## Custom theme
