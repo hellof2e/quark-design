@@ -19,7 +19,7 @@ jobs:
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :
           branch : main # action 应该部署到的分支 。
-          folder : site_docs #操作应该部署的文件夹 。
+          folder : site_docs # 操作应该部署的文件夹 。
           clean: false
           repository-name: hellof2e/quark-design-docs
           token: ${{ secrets.GIT_ACTION }}
