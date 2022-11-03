@@ -161,10 +161,6 @@ import "quarkd/lib/button"
 
 现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
 
-## 参与共建
-
-参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
-
 ## 特别说明
 
 - 由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件派发的事件需要使用addEventLisener接收。
@@ -212,3 +208,7 @@ export default {
   ]
 }
 ```
+
+## Contributor 贡献代码
+
+参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
