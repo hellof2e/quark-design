@@ -69,6 +69,14 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 | TDesign Mobile | -     | √ | Gulp           | √ | 2021 | React only  |
 | Antd Mobile | -        | √ | Gulp           | √ | 2016 | React only  |
 
+## CDN
+The easiest way to use quark is to directly introduce the CDN link in the HTML file, and then you can use it anywhere in the world. Since quark has achieved CSS-IN-JS, you only need to load the link below.
+
+```
+<!-- Introduce CDN files, only 80kb -->
+<script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+```
+
 ## Install
 Using `npm` to install:
 
@@ -77,9 +85,12 @@ Using `npm` to install:
 npm i quarkd
 ```
 
+**React usage notes**: Since the components provided by quarkd are all native custom elements (analogous to div), events dispatched in the component need to be received by addEventLisener, such as the custom close event close inside the dialog component. The Vue technology stack can directly use @xx to receive natively dispatched events, so there is no need to use addEventLisener to receive.
+
+In order to improve the development experience, we have Reactify (Reactify) for quarkd! So, we recommend that you use @quarkd/quark-react in your React/Preact projects!
 
 ```bash
-#  install for React project
+# Recommended Use for React
 npm i @quarkd/quark-react --save
 ```
 
