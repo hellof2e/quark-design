@@ -70,18 +70,30 @@
 - 视觉组件无法跨技术框架（React、Vue等）使用
 - 技术框架一旦升级，视觉组件常常必须配合迭代升级
 
-因此，我们开发了这套 UI 框架，旨在与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
+因此，我们开发了这套 UI 框架，旨在让其与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
 
-## 安装
+## CDN使用
+
+使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
+
+```
+<!-- 引入CDN文件，只有 80kb -->
+<script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+```
+
+## 通过 npm 安装
 
 ```bash
-# Vue/Angular/JQ/无框架工程
+# Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目
 npm i quarkd
 ```
 
+**React 使用须知**：由于 `quarkd` 提供的组件均为原生自定义元素（类比div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
+
+为了提升开发体验，我们对 `quarkd` 进行了 Reactify(React 化)！所以，我们建议您在 React/Preact 项目中使用 `@quarkd/quark-react`！
 
 ```bash
-# React 项目
+# React 推荐使用
 npm i @quarkd/quark-react
 ```
 
@@ -120,11 +132,13 @@ import "quarkd/lib/button"
 ```html
 <!DOCTYPE html>
 <html lang="en">
+<!-- cdn -->
+<script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
 <body>
+  
   <quark-button loading="false" id="btn">Button</quark-button>
-</body>
 
-<script src="./node_modules/quarkd/lib/button/index.js" /> // or cdn
+</body>
 <script>
   window.addEventListener(function() {
     const el = document.getElementById('btn')
