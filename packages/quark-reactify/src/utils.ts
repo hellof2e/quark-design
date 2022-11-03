@@ -1,5 +1,5 @@
-const nativeEventSet = /* #__PURE__ */ new Set(
-  Object.keys(HTMLElement.prototype)
+const nativeEventSet = new Set(
+  /* #__PURE__ */ Object.keys(HTMLElement.prototype)
   .filter(eventName => eventName.startsWith('on'))
   .map(eventName => eventName.slice(2))
 );
