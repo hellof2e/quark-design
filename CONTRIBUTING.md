@@ -13,7 +13,7 @@ First start:
 ```bash
 yarn // Install the dependencies of the sub-project
 
-yarn link // First execution, mutual dependency soft link
+yarn run link // First execution, mutual dependency soft link
 
 yarn dev // Start executing the project
 ```

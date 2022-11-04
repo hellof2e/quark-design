@@ -13,7 +13,7 @@
 ```bash
 yarn // 安装项目的依赖
 
-yarn link // 第一次执行需要，互相依赖的软链接
+yarn run link // 第一次执行需要，互相依赖的软链接
 
 yarn dev // 开始执行工程
 ```
@@ -22,6 +22,9 @@ yarn dev // 开始执行工程
 
 ```bash
 yarn dev
+
+// or
+npm run dev
 ```
 
 ## 命令说明（核心维护者发包使用）
