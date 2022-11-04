@@ -32,7 +32,7 @@ npm run dev
 
 ## Command description (core maintainer release package use)
 
-```
+```bash
 npm run release:patch // Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
 npm run release:minor // Publish the middle digit version number of all sub-packages, such as 0.0.1 -> 0.1.0,
 npm run release:major // Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
