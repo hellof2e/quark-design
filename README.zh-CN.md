@@ -41,7 +41,19 @@
   <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='230'/>
 </div>
 
-## 特性
+[English](./README.md) | 简体中文
+
+## 🤔 动机
+
+技术框架的出现，提升了开发体验和页面性能，但技术框架的不断迭代更新，为项目的维护带来诸多挑战，如：
+
+- 视觉组件无法跨技术框架（React、Vue等）使用
+- 技术框架一旦升级，视觉组件常常必须配合迭代升级
+
+因此，我们开发了这套 UI 框架，旨在让其与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
+
+
+## ✨ 特性
 
 - 支持 Vue、React、Angular 等各类框架/无框架。
 - 完全覆盖您所需要的各种通用组件。
@@ -61,18 +73,7 @@
 | TDesign Mobile | -   | Gulp           | √ | 2021 | React
 | Antd Mobile | -      | Gulp           | √ | 2016 | React
 
-[English](./README.md) | 简体中文
-
-## 🤔 动机
-
-技术框架的出现，提升了开发体验和页面性能，但技术框架的不断迭代更新，为项目的维护带来诸多挑战，如：
-
-- 视觉组件无法跨技术框架（React、Vue等）使用
-- 技术框架一旦升级，视觉组件常常必须配合迭代升级
-
-因此，我们开发了这套 UI 框架，旨在让其与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
-
-## CDN使用
+## 🔗 CDN使用
 
 使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
 
@@ -81,7 +82,7 @@
 <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
 ```
 
-## 通过 npm 安装
+## 📦 通过 npm 安装
 
 ```bash
 # Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目
@@ -97,7 +98,8 @@ npm i quarkd
 npm i @quarkd/quark-react
 ```
 
-## 示例
+## 🔨 示例
+
 Vue.x
 ```jsx
 import "quarkd/lib/button"
@@ -149,15 +151,15 @@ import "quarkd/lib/button"
 </html>
 ```
 
-## 定制主题
+## 🎨 定制主题
 
 参考  [定制主题](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 文档。
 
-## 国际化
+## 🌍 国际化
 
 参考 [国际化文档](https://quark-design.hellobike.com/#/zh-CN/guide/internationalization)。
 
-## 兼容环境
+## 🖥 兼容环境
 
 现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
 
@@ -209,6 +211,6 @@ export default {
 }
 ```
 
-## Contributor 贡献代码
+## 👋 Contributor 贡献代码 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
