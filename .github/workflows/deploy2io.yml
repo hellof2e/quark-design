@@ -12,10 +12,10 @@ jobs:
   copy:
     runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v2 
-      - run: yarn install
+      - uses: actions/checkout@v2
       - run: cd example
-      - run: yarn build
+      - run: npm i
+      - run: npm run build
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :

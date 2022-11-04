@@ -7,16 +7,10 @@ import cssVariable from '@quarkd/rollup-plugin-css-variable';
 import typescript from '@rollup/plugin-typescript';
 import path from 'path';
 import variableMap from './global-css';
-const pkg = require('../package.json');
-const hljs = require('highlight.js');
+
 // https://highlightjs.org/
+const hljs = require('highlight.js');
 const { resolve } = path;
-
-// 发布系统需要区分环境，公司规范
-const ENV = process.env.VUE_APP_ENV || 'fat';
-
-// 发布系统每次会自动删除dist文件，所以使用另一个文件夹
-const outputDir = path.resolve(__dirname, `../dist/${ENV}/${pkg.version}/`);
 
 const plugins = [
   cssVariable({
@@ -83,7 +77,7 @@ export default defineConfig({
   // 打包配置
   build: {
     target: 'es2015',
-    outDir: outputDir,
+    outDir: 'dist',
     cssCodeSplit: true,
     rollupOptions: {
       input: {
