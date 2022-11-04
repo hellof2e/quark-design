@@ -154,7 +154,7 @@ No framework project
 
 ## Custom theme
 
-See [custom theme](https://quark-design.hellobike.com/#/zh-CN/guide/theme).
+See [custom theme](https://quark-design.hellobike.com/#/en-US/guide/theme).
 
 ## Internationalization
 
