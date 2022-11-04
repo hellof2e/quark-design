@@ -1,0 +1,9 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main # default branch
+    paths:
+      - '.github/workflows/**'
+      - 'src/**'
