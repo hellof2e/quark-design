@@ -124,17 +124,14 @@ class QuarkCascadePicker extends QuarkElement {
     let cursor: PickerColumn[] = this.columns;
     for (let i = 0; i < this.depth - 1; i += 1) {
       if (newIndexPair[i] !== oldIndexPair[i]) {
-        for (let j = 0; j < i; j += 1) {
+        for (let j = 0; j <= i; j += 1) {
           cursor = cursor[newIndexPair[j]].children;
         }
-        const chirdren = cursor[newIndexPair[i]].children;
-        const values = chirdren.map((item) => item.text);
-        tempPickerData.splice(i + 1, 1, values);
-        cursor = chirdren;
-        for (let j = i + 1; j < this.depth - 1; j += 1) {
-          cursor = cursor[0].children;
+   
+        for (let j = i; j < this.depth - 1; j += 1) {
           const value = cursor.map((item) => item.text);
           tempPickerData.splice(j + 1, 1, value);
+          cursor = cursor[0].children;
         }
         // 让后续 wheel 滚动到第一个位置
         for (let j = i + 1; j < this.depth; j += 1) {
