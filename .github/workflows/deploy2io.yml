@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd example
-      - run: npm i
+      - run: npm i --legacy-peer-deps
       - run: npm run build
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
