@@ -26,4 +26,4 @@ jobs:
           clean: false
           repository-name: hellof2e/quark-design.github.io
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: demo
+          target-folder: demo # 部署到demo目录下
