@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - uses: actions/checkout@v2
-      - run: cd example
-      - run: npm i --legacy-peer-deps
-      - run: npm run build
+      - run: cd example && npm i --legacy-peer-deps && npm run build
+      # - run: npm i --legacy-peer-deps
+      # - run: npm run build
       # - run: cd ..
       # - run: yarn push2GithubWebsite
       - name : Sync 
