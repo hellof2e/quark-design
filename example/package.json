@@ -94,6 +94,7 @@
 		"rollup-plugin-import-css": "^3.0.2",
 		"rollup-plugin-terser": "^7.0.2",
 		"sass": "^1.34.0",
+		"shelljs": "^0.8.5",
 		"sinon": "^12.0.1",
 		"standard-version": "^9.3.0",
 		"stylelint": "^14.7.1",
