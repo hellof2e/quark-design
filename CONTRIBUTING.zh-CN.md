@@ -30,7 +30,8 @@ npm run dev
 ## 命令说明（核心维护者发包使用）
 
 ```bash
-npm run release:patch //发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
+// 发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
+npm run release:patch
 npm run release:minor //发布所有子包的中间一位版本号如 0.0.1 -> 0.1.0,
 npm run release:major //发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
 ```
