@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - uses: actions/checkout@v2 
-      - run: yarn install
-      - command: cd example
-      - run: yarn build
+      - run: npm install
+      - run: cd example
+      - run: npm run build
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :
