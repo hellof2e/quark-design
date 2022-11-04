@@ -29,7 +29,13 @@
   <a href="https://www.webcomponents.org/element/quarkd">
     <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on webcomponents.org">
   </a>
+  
+  <a href="https://github.com/hellof2e/quark-design/actions/workflows/sync-docs.yml">
+    <img src="https://github.com/hellof2e/quark-design/actions/workflows/deploy2io.yml/badge.svg?branch=main" alt="build status">
+  </a>
+  
 </p>
+
 
 ## Contact us
 
