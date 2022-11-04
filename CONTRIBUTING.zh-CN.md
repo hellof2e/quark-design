@@ -13,7 +13,7 @@
 ```bash
 yarn // 安装项目的依赖
 
-yarn link // 第一次执行需要，互相依赖的软链接
+yarn run link // 第一次执行需要，互相依赖的软链接
 
 yarn dev // 开始执行工程
 ```
@@ -22,14 +22,17 @@ yarn dev // 开始执行工程
 
 ```bash
 yarn dev
+
+// or
+npm run dev
 ```
 
 ## 命令说明（核心维护者发包使用）
 
-```
-release:patch: 发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
-release:minor: 发布所有子包的中间一位版本号如 0.0.1 -> 0.1.0,
-release:major: 发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
+```bash
+npm run release:patch //发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
+npm run release:minor //发布所有子包的中间一位版本号如 0.0.1 -> 0.1.0,
+npm run release:major //发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
 ```
 
 ## 提交 commit

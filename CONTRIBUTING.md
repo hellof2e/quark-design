@@ -11,25 +11,31 @@ We are very welcome to the community developers to make contributions to Quark D
 First start:
 
 ```bash
-yarn // Install the dependencies of the sub-project
+// Install the dependencies of the sub-project
+yarn
 
-yarn link // First execution, mutual dependency soft link
+// First execution, mutual dependency soft link
+yarn run link
 
-yarn dev // Start executing the project
+// Start executing the project
+yarn dev
 ```
 
 After that, just run the following command:
 
 ```bash
 yarn dev
+
+// or
+npm run dev
 ```
 
 ## Command description (core maintainer release package use)
 
-```
-release:patch: Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
-release:minor: Publish the middle digit version number of all sub-packages, such as 0.0.1 -> 0.1.0,
-release:major: Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
+```bash
+npm run release:patch // Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
+npm run release:minor // Publish the middle digit version number of all sub-packages, such as 0.0.1 -> 0.1.0,
+npm run release:major // Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
 ```
 
 ## Submit commit
