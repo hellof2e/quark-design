@@ -143,7 +143,7 @@ export default class QuarkElement extends HTMLElement {
           
           if (!isEmpty(defaultValue)) {
             // 判断val是否为空值
-            // const isEmpty = () => !(val && val === false && val === 0)
+            // const isEmpty = () => !(val || val === false || val === 0)
             // 当类型为非Boolean时，通过isEmpty方法判断val是否为空值
             // 当类型为Boolean时，在isEmpty判断之外，额外认定空字符串不为空值
             //
