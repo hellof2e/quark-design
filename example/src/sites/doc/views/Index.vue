@@ -113,6 +113,7 @@ export default defineComponent({
 
     // react / vue 文档切换
     const handleTabs = (curKey: string) => {
+      if (data.curKey == curKey) return;
       data.curKey = curKey;
       localStorage.setItem('docMd', curKey);
       watchDocMd(curKey);
