@@ -4,6 +4,11 @@
       <a class="logo-link" href="#" @click="toHome"></a>
     </div>
     <div class="header-nav">
+      <a href="https://github.com/hellof2e/quark-design-docs" target="_blank">
+        当前环境：development，代码 PR 合并后，文档会自动同步至：https://github.com/hellof2e/quark-design-docs
+      </a>
+    </div>
+    <div class="header-nav">
       <a class="switch-lang" @click="switchLang">
         <img src="https://m.hellobike.com/resource/helloyun/13459/QgPJutNlCZ.png" alt="">
       </a>
