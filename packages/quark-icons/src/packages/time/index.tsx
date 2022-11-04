@@ -2,6 +2,7 @@ import {
     Icon
 } from './icon';
 import style from '../style.css';
+import { getFontSize } from '../../../utils/index';
 
 export default class QuarkIconTime extends HTMLElement {
     icon: any
@@ -43,14 +44,7 @@ export default class QuarkIconTime extends HTMLElement {
     }
 
     getFontSize() {
-        let fontSize = '';
-        if (this.size &&(this.size.includes('px') || this.size.includes('rem') || this.size.includes('em'))
-        ) {
-            fontSize = this.size;
-        } else {
-            fontSize = `${this.size}px`;
-        }
-        return fontSize;
+        return getFontSize(this.size);
     }
 
     get size() {
