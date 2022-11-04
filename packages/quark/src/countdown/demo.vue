@@ -60,6 +60,11 @@ export default createDemo({
           slot: '自定义间隔符'
 				},
 				"en-US": {
+          base: 'Basic Usage',
+          format: 'Custom Format',
+          callback: 'End the callback',
+          style: 'Custom Style',
+          slot: 'Custom spacer'
 				},
 			});
 		});
