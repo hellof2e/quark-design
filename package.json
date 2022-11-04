@@ -12,7 +12,6 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "node ./scripts/dev",
-    "build": "node ./scripts/build",
     "link": "node ./scripts/link",
     "clean": "lerna clean -y",
     "prepare": "husky install",
@@ -20,8 +19,7 @@
     "push2GithubWebsite": "node ./scripts/push2GithubWebsite",
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
-    "release:major": "node ./scripts/publish major",
-    "build2": " lerna run build --scope @quarkd/quark-react"
+    "release:major": "node ./scripts/publish major"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

@@ -92,7 +92,7 @@ const copy = async () => {
     docsConfig.version = fromPkgConfig.version;
     docsConfig.nav = fromConfig.nav;
     docsConfig.docs = fromConfig.docs;
-    docsConfig.demoUrl = 'https://quark-design.hellobike.com/demo/demo.html#/';
+    docsConfig.demoUrl = 'https://quark-design.hellobike.com/demo/demo.html#';
     fse
       .writeJson(quarkuiDocsConfigPath, docsConfig, {
         spaces: 2
