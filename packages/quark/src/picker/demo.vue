@@ -13,6 +13,7 @@
 			:open="open"
 			@close="close(0)"
 			:title="translate('selectedTime')"
+			:confirmtext="translate('confirmText')"
 			@confirm="confirm"
 			ref="pickerRef"
 			@change="change"
@@ -65,6 +66,7 @@ export default createDemo({
 					basic: "基础使用",
 					head: "自定义头部",
 					selectedTime: "请选择时间",
+					confirmText: "确认",
 					custom: {
 						cancel: "取消",
 						confirm: "确定",
@@ -77,6 +79,7 @@ export default createDemo({
 				"en-US": {
 					basic: "Basic Usage",
 					head: "Custom head",
+					confirmText: "Confirm",
 					selectedTime: "Please select Time",
 					custom: {
 						cancel: "Cancel",
