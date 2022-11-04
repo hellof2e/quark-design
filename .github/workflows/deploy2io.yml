@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - uses: actions/checkout@v2
-      - run: cd example && npm i --legacy-peer-deps && npm run build
-      # - run: npm i --legacy-peer-deps
-      # - run: npm run build
-      # - run: cd ..
-      # - run: yarn push2GithubWebsite
+      # 会有很多npm包在外层，link 使用
+      # - run: cd example && npm i --legacy-peer-deps && npm run build
+      - run: yarn
+      - run: yarn run link
+      - run: yarn push2GithubWebsite
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :
