@@ -6,7 +6,7 @@ on:
       - main # default branch
     paths:
       - '.github/workflows/**'
-      - 'src/**'
+      - 'packages/quark/src/**'
 
 jobs:
   copy:
