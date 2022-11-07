@@ -141,7 +141,7 @@ export default () => {
 | beforeDelete    | Before delete, can be used as uploader.beforeDelete(fn)           | `(file, {index: number}) => void` |
 | closePreview    | close preview modal                                               |                                   |
 
-## SS Variables
+## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)， which can be used to customize styles. Please refer to[ConfigProvider component](#/zh-CN/guide/theme)。
 
