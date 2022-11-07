@@ -13,10 +13,26 @@ import Locale from '../locale';
 import style from './style.css';
 
 BScroll.use(Wheel);
-type PickerColumn = {
+export interface PickerColumn  {
   text: string;
   children: PickerColumn[];
 };
+export interface SelectedColumn {
+  value: string
+  index: number
+}
+export interface PickerProps {
+  open: boolean
+  name?: string
+  title?: string
+  bottomhidden?: boolean
+}
+
+export interface PickerCustomEvent {
+  close: () => void
+  comfirm: (e: { detail: {value:  SelectedColumn[]} }) => void
+  change?: (e: { detail: {value:  SelectedColumn[]} }) => void
+}
 @customElement({
   tag: 'quark-cascade-picker',
   style,
