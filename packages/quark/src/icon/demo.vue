@@ -61,7 +61,7 @@
 						<span>more-v</span>
 					</div>
 					<div class="icon-item" @click="copyIcon('warning')">
-						<quark-icon-warning size="20" />
+						<quark-icon-warning size="26" />
 						<span>warning</span>
 					</div>
 				</div>
@@ -299,7 +299,7 @@ function copyToClipboard(str) {
 export default createDemo({
 	setup() {
 		const copyIcon = (icon) => {
-			const t = `<quark-icon-${icon} size="20" />`;
+			const t = `<quark-icon-${icon} size="26" />`;
 			copyToClipboard(t);
 			Toast.text(`复制成功：${t}`);
 		};
