@@ -31,7 +31,9 @@
   },
   "types": "./types/index.d.ts",
   "homepage": "https://github.com/egoist/rollup-plugin-postcss#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "concat-with-sourcemaps": "^1.1.0",

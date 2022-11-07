@@ -8,13 +8,16 @@
     "test": "echo \"Error: no test specified\""
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/hellof2e/quark-design.git"
-	},
+    "type": "git",
+    "url": "https://github.com/hellof2e/quark-design.git"
+  },
   "author": "",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }
