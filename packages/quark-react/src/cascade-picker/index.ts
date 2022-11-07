@@ -2,26 +2,11 @@
 import { FC } from 'react';
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/cascadepicker";
-import { componentBaseInterface } from '../type';
+import {PickerProps, PickerCustomEvent, PickerColumn, SelectedColumn} from "quarkd/lib/cascadepicker";
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface CascadePickerProps extends componentBaseInterface {
-    open: boolean
-    title?: string
-    bottomhidden?: boolean
-    onClose: () => void
-    onConfirm: (e: {detail:{value: {value: string, index: number}[]}}) => void
-    onChange: (e: {detail:{value: {value: string, index: number}[]}}) => void
-}
+type CascadePickerProps = componentBaseInterface & ReactifyProps<PickerProps, PickerCustomEvent>;
 
-interface PickerColumn {
-    text: string;
-    children: PickerColumn[];
-}
-  
-interface SelectedColumn {
-    value: string
-    index: number
-}
 interface CascadePickerRef {
     setColumns: (columns: PickerColumn[]) => void
     getValues:  ()=> SelectedColumn[]

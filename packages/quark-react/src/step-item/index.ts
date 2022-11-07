@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { componentBaseInterface } from '../type';
 
 interface StepItemProps extends componentBaseInterface {
-    title: number
+    title: string
     status: 'done' | 'doing' | 'todo'
     content?: string
     order?: string
