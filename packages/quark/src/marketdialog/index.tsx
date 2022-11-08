@@ -1,41 +1,37 @@
-import QuarkElement, {
-  property,
-  customElement
-} from '@quarkd/core';
+import QuarkElement, { property, customElement } from "@quarkd/core";
 
-import '@quarkd/icons/lib/close-o';
-import style from './style.css';
-import '../overlay';
+import "@quarkd/icons/lib/close-o";
+import style from "./style.css";
+import "../overlay";
 type MarketDialogParams = {
-  zindex?: () => void, 
-  url: string
-  size?: boolean
-}
+  zindex?: () => void;
+  url: string;
+  size?: boolean;
+};
 export interface Props extends MarketDialogParams {
-  open: boolean
+  open: boolean;
 }
 export interface CustomEvent {
-  close: () => void
+  close: () => void;
 }
 @customElement({
-  tag: 'quark-market-dialog',
-  style
+  tag: "quark-market-dialog",
+  style,
 })
 class QuarkMarketDialog extends QuarkElement {
   @property()
-  url: string = '';
+  url: string = "";
 
   @property()
-  size: string = '32';
+  size: string = "32";
 
   @property({ type: Boolean })
   open: boolean = false;
 
   dRemove: boolean = false;
 
-
   shouldComponentUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && newValue !== oldValue) {
+    if (propName === "open" && newValue !== oldValue) {
       if (!newValue && this.dRemove) {
         // 等动画结束
         setTimeout(() => document.body.removeChild(this), 300);
@@ -46,7 +42,7 @@ class QuarkMarketDialog extends QuarkElement {
 
   closeIconClick = () => {
     this.open = false;
-    this.$emit('close');
+    this.$emit("close");
   };
 
   render() {
@@ -69,14 +65,16 @@ class QuarkMarketDialog extends QuarkElement {
 }
 
 // 函数调用
-export default function MarketDialog(params: MarketDialogParams & CustomEvent): QuarkMarketDialog{
-  const dialog: any = document.createElement('quark-market-dialog');
+export default function MarketDialog(
+  params: MarketDialogParams & CustomEvent
+): QuarkMarketDialog {
+  const dialog: any = document.createElement("quark-market-dialog");
   const { close, zindex, url } = params;
-    dialog.dRemove = true;
-    dialog.close = close;
-    dialog.zindex = zindex;
-    dialog.url = url;
-    dialog.dRemove = true;
+  dialog.dRemove = true;
+  dialog.close = close;
+  dialog.zindex = zindex;
+  dialog.url = url;
+  dialog.dRemove = true;
   document.body.appendChild(dialog);
   setTimeout(() => {
     dialog.open = true;

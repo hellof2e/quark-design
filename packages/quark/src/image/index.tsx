@@ -1,92 +1,89 @@
-import QuarkElement, {
-  customElement,
-  property,
-  state
-} from '@quarkd/core';
-import { addUnit } from '../../utils/public';
-import style from './style.css';
-import LazyLoad from '../../utils/lazy';
+import QuarkElement, { customElement, property, state } from "@quarkd/core";
+import { addUnit } from "../../utils/public";
+import style from "./style.css";
+import LazyLoad from "../../utils/lazy";
 import Locale from "../locale";
 
-type FitType = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+type FitType = "fill" | "contain" | "cover" | "none" | "scale-down";
 
-type Stauts = 'loading' | 'loaded' | 'error';
+type Stauts = "loading" | "loaded" | "error";
 
 type LazyLoadType = {
-  add: (el: HTMLImageElement, src: string, parent?: ParentNode | null) => void
-}
+  add: (el: HTMLImageElement, src: string, parent?: ParentNode | null) => void;
+};
 export interface Props {
-  width?: number
-  height?: number
-  fit?: FitType
-  lazy?: boolean
-  round?: boolean
-  radius?: number
-  alt?: string
+  width?: number;
+  height?: number;
+  fit?: FitType;
+  lazy?: boolean;
+  round?: boolean;
+  radius?: number;
+  alt?: string;
 }
 export interface CustomEvent {
-  click?: () => void
-  load?: () => void
-  error?: () => void
+  click?: () => void;
+  load?: () => void;
+  error?: () => void;
 }
 @customElement({
-  tag: 'quark-image',
-  style
+  tag: "quark-image",
+  style,
 })
 class QuarkImage extends QuarkElement {
   @property()
-  src: string = '';
+  src: string = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
   lazy: boolean = false;
 
   @property()
-  alt: string = '';
+  alt: string = "";
 
   @property()
-  width: number | string = '';
+  width: number | string = "";
 
   @property()
-  height: number | string = '';
+  height: number | string = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
   round: boolean = false;
 
   @property()
-  fit: FitType = 'fill';
+  fit: FitType = "fill";
 
   @property()
-  radius: number | string = '';
+  radius: number | string = "";
 
   lazyTarget: LazyLoadType = null;
 
   @state()
-  status: Stauts = 'loading';
+  status: Stauts = "loading";
 
   imgRef: HTMLImageElement | null = null;
 
-
   handleClickImg = () => {
-    this.$emit('click');
+    this.$emit("click");
   };
 
   handleLoad = () => {
-    this.status = 'loaded';
-    this.$emit('load');
+    this.status = "loaded";
+    this.$emit("load");
   };
 
   handleError = () => {
-    this.status = 'error';
-    this.$emit('error');
+    this.status = "error";
+    this.$emit("error");
   };
 
   componentDidMount(): void {
     if (!this.shadowRoot) return;
-    this.imgRef = this.shadowRoot.getElementById('quark-img') as HTMLImageElement;
+    this.imgRef = this.shadowRoot.getElementById(
+      "quark-img"
+    ) as HTMLImageElement;
 
     if (!this.imgRef) return;
 
@@ -94,7 +91,7 @@ class QuarkImage extends QuarkElement {
     if (this.lazy) {
       this.lazyTarget = LazyLoad;
       this.imgRef.src =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWP4////fwAJ+wP9CNHoHgAAAABJRU5ErkJggg==';
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWP4////fwAJ+wP9CNHoHgAAAABJRU5ErkJggg==";
       this.lazyTarget.add(this.imgRef, this.src);
     } else {
       this.imgRef.src = this.src;
@@ -104,33 +101,33 @@ class QuarkImage extends QuarkElement {
   render() {
     let attrs = this.alt
       ? {
-        alt: this.alt,
-        class: 'quark-image-img',
-        style: {
-          width: addUnit(this.width),
-          height: addUnit(this.height),
-          'object-fit': this.fit,
-          'border-radius': this.round ? '50%' : this.radius ? 1 : 0
+          alt: this.alt,
+          class: "quark-image-img",
+          style: {
+            width: addUnit(this.width),
+            height: addUnit(this.height),
+            "object-fit": this.fit,
+            "border-radius": this.round ? "50%" : this.radius ? 1 : 0,
+          },
         }
-      }
       : {
-        class: 'quark-image-img',
-        style: {
-          width: addUnit(this.width),
-          height: addUnit(this.height),
-          'object-fit': this.fit,
-          'border-radius': this.round ? '50%' : this.radius ? 1 : 0
-        }
-      };
+          class: "quark-image-img",
+          style: {
+            width: addUnit(this.width),
+            height: addUnit(this.height),
+            "object-fit": this.fit,
+            "border-radius": this.round ? "50%" : this.radius ? 1 : 0,
+          },
+        };
 
     return (
       <div class="quark-image">
-        {this.status === 'error' && (
+        {this.status === "error" && (
           <div class="quark-image-loading">
             <slot name="error">{Locale.current.image.loadError}</slot>
           </div>
         )}
-        {this.status === 'loading' && (
+        {this.status === "loading" && (
           <div class="quark-image-loading">
             <slot name="loading">{Locale.current.image.loading}</slot>
           </div>

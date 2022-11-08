@@ -1,44 +1,39 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public';
-import style from './style.css';
-import groupCss from './group.css';
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import style from "./style.css";
+import groupCss from "./group.css";
 export interface Props {
-  direction?: 'horzontal' | 'vertical'
+  direction?: "horzontal" | "vertical";
 }
 export interface ItemProps {
-  title: string
-  status: 'done' | 'doing' | 'todo'
-  content?: string
-  order?: string
+  title: string;
+  status: "done" | "doing" | "todo";
+  content?: string;
+  order?: string;
 }
-@customElement({tag: 'quark-step', style})
+@customElement({ tag: "quark-step", style })
 class QuarkStep extends QuarkElement {
   @property()
-  order: string = '';
+  order = "";
 
   @property()
-  status: string = '';
+  status = "";
 
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  content: string = '';
+  content = "";
 
   containerRef: any = createRef();
-
 
   setDirection(direction: string) {
     const { current } = this.containerRef;
     if (current) {
-      if (direction === 'vertical') {
-        current.classList.remove('quark-step-horizontal');
+      if (direction === "vertical") {
+        current.classList.remove("quark-step-horizontal");
       } else {
-        current.classList.add('quark-step-horizontal');
+        current.classList.add("quark-step-horizontal");
       }
     }
   }
@@ -50,20 +45,16 @@ class QuarkStep extends QuarkElement {
           <div class="quark-step-head">
             <div class="quark-step-icon is-text">
               <div class="quark-step-inner">
-                <slot name='order'>{this.order}</slot>
+                <slot name="order">{this.order}</slot>
               </div>
             </div>
           </div>
           <div class="quark-step-main">
             <div class="quark-step-title">
-            <slot name='title'>
-                {this.title}
-              </slot>
+              <slot name="title">{this.title}</slot>
             </div>
             <div class="quark-step-content">
-              <slot name='content'>
-                {this.content}
-              </slot>
+              <slot name="content">{this.content}</slot>
             </div>
           </div>
         </div>
@@ -74,10 +65,10 @@ class QuarkStep extends QuarkElement {
 
 export default QuarkStep;
 
-@customElement({tag: 'quark-steps', style: groupCss})
+@customElement({ tag: "quark-steps", style: groupCss })
 class QuarkSteps extends QuarkElement {
   @property()
-  direction: string = '';
+  direction = "";
 
   slotRef = createRef();
 
@@ -86,7 +77,7 @@ class QuarkSteps extends QuarkElement {
     if (current) {
       const nodes = slotAssignedElements(current.assignedNodes());
       nodes.forEach((item: any) => {
-        item.setDirection(this.direction || 'horizontal');
+        item.setDirection(this.direction || "horizontal");
       });
     }
   };
@@ -96,9 +87,9 @@ class QuarkSteps extends QuarkElement {
       <div
         id="step-container"
         class={
-          this.direction === 'vertical'
-            ? 'quark-vertical'
-            : 'quark-steps quark-steps-horizontal'
+          this.direction === "vertical"
+            ? "quark-vertical"
+            : "quark-steps quark-steps-horizontal"
         }
       >
         <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>

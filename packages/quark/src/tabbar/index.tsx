@@ -1,31 +1,27 @@
-import QuarkElement, {
-  property,
-  createRef,
-  customElement
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public';
-import '../tabbaritem';
-import style from './style.css';
+import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import "../tabbaritem";
+import style from "./style.css";
 export interface Props {
-  fixed?: boolean
-  inactivecolor?: string
-  activecolor?: string
-  value?: number
+  fixed?: boolean;
+  inactivecolor?: string;
+  activecolor?: string;
+  value?: number;
 }
 export interface CustomEvent {
-  change: (e: {detail: {value: number | string}}) => void
+  change: (e: { detail: { value: number | string } }) => void;
 }
-@customElement({tag: 'quark-tabbar', style})
+@customElement({ tag: "quark-tabbar", style })
 class QuarkTabbar extends QuarkElement {
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  fixed: boolean = false;
+  fixed = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  placeholder: boolean = false;
+  placeholder = false;
 
   @property()
   inactivecolor: string;
@@ -34,7 +30,7 @@ class QuarkTabbar extends QuarkElement {
   activecolor: string;
 
   @property()
-  value: string = '0';
+  value = "0";
 
   slotRef: any = createRef();
 
@@ -43,14 +39,14 @@ class QuarkTabbar extends QuarkElement {
     oldValue: string,
     newValue: string
   ): boolean {
-    if (propName === 'value' && oldValue !== newValue) {
+    if (propName === "value" && oldValue !== newValue) {
       const assignedNodes = this.slotRef.current?.assignedNodes();
       const elements = slotAssignedElements(assignedNodes);
       elements.forEach((item, index) => {
-        if (item.getAttribute('name') === newValue) {
-          item.setAttribute('active', 'true');
+        if (item.getAttribute("name") === newValue) {
+          item.setAttribute("active", "true");
         } else {
-          item.setAttribute('active', 'false');
+          item.setAttribute("active", "false");
         }
       });
     }
@@ -61,23 +57,28 @@ class QuarkTabbar extends QuarkElement {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const elements = slotAssignedElements(assignedNodes);
     elements.forEach((item, index) => {
-      item.setAttribute('inactivecolor', this.inactivecolor ? this.inactivecolor : '#879099');
-      item.setAttribute('activecolor', this.activecolor ? this.activecolor : '#0088FF');
-      if (item.getAttribute('name') === null) {
-        item.setAttribute('name', String(index));
+      item.setAttribute(
+        "inactivecolor",
+        this.inactivecolor ? this.inactivecolor : "#879099"
+      );
+      item.setAttribute(
+        "activecolor",
+        this.activecolor ? this.activecolor : "#0088FF"
+      );
+      if (item.getAttribute("name") === null) {
+        item.setAttribute("name", String(index));
       }
-      item.addEventListener('click', this.eventListener);
-      if (item.getAttribute('name') === this.value) {
-        item.setAttribute('active', 'true');
+      item.addEventListener("click", this.eventListener);
+      if (item.getAttribute("name") === this.value) {
+        item.setAttribute("active", "true");
       }
     });
   };
 
-
   eventListener = (e: any) => {
-    this.value = e.currentTarget.getAttribute('name');
-    this.$emit('change', {
-      detail: { value: e.currentTarget.getAttribute('name') }
+    this.value = e.currentTarget.getAttribute("name");
+    this.$emit("change", {
+      detail: { value: e.currentTarget.getAttribute("name") },
     });
   };
 

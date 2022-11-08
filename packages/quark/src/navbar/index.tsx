@@ -1,56 +1,51 @@
-import QuarkElement, {
-  Fragment,
-  property,
-  customElement
-} from '@quarkd/core';
+import QuarkElement, { Fragment, property, customElement } from "@quarkd/core";
 
-import '@quarkd/icons/lib/arrow-left';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
+import "@quarkd/icons/lib/arrow-left";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
 export interface Props {
-  title: string
-  lefthide?: boolean
-  closehide?: boolean
-  right?: string
-  safearea?: boolean
-  iconsize?: string
+  title: string;
+  lefthide?: boolean;
+  closehide?: boolean;
+  right?: string;
+  safearea?: boolean;
+  iconsize?: string;
 }
-export interface CustomEvent{
-  leftclick?: () => void
-  rightclick?: () => void
-  close?: () => void
+export interface CustomEvent {
+  leftclick?: () => void;
+  rightclick?: () => void;
+  close?: () => void;
 }
 @customElement({
-  tag: 'quark-navbar',
-  style
+  tag: "quark-navbar",
+  style,
 })
 class QuarkNavbar extends QuarkElement {
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  right: string = '';
+  right = "";
 
   @property()
-  iconsize: string = '24';
+  iconsize = "24";
 
   @property({ type: Boolean })
-  lefthide: boolean = false;
+  lefthide = false;
 
   @property({ type: Boolean })
-  closehide: boolean = false;
-
+  closehide = false;
 
   leftClick = () => {
-    this.$emit('leftclick');
+    this.$emit("leftclick");
   };
 
   rightClick = () => {
-    this.$emit('rightclick');
+    this.$emit("rightclick");
   };
 
   closeClick = () => {
-    this.$emit('close');
+    this.$emit("close");
   };
 
   render() {

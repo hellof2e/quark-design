@@ -1,25 +1,25 @@
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock';
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import QuarkElement, {
   property,
   customElement,
   Fragment,
-  createRef
-} from '@quarkd/core';
-import style from './style.css';
+  createRef,
+} from "@quarkd/core";
+import style from "./style.css";
 export interface Props {
-  open: boolean
-  zindex?: number
+  open: boolean;
+  zindex?: number;
 }
 export interface CustomEvent {
-  close: () => void
+  close: () => void;
 }
 @customElement({
-  tag: 'quark-overlay',
-  style
+  tag: "quark-overlay",
+  style,
 })
 class QuarkOverlay extends QuarkElement {
   constructor() {
@@ -27,9 +27,9 @@ class QuarkOverlay extends QuarkElement {
   }
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @property()
   zindex: number | string = 999;
@@ -43,7 +43,7 @@ class QuarkOverlay extends QuarkElement {
   }
 
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       if (newValue) {
         disableBodyScroll(current);
@@ -58,7 +58,7 @@ class QuarkOverlay extends QuarkElement {
   }
 
   handleMaskClick = () => {
-    this.$emit('close');
+    this.$emit("close");
   };
 
   render() {

@@ -1,25 +1,21 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 
-import style from './style.css';
-import { IFormItem, IRuleItem } from './type';
+import style from "./style.css";
+import { IFormItem, IRuleItem } from "./type";
 import validateAll, {
   filterSymbol,
   booleanTagNames,
   radio,
-  radioGroup
-} from './utils';
+  radioGroup,
+} from "./utils";
 
 @customElement({
-  tag: 'quark-form',
-  style
+  tag: "quark-form",
+  style,
 })
 class QuarkForm extends QuarkElement {
   @property()
-  value: string = '';
+  value: string = "";
 
   @property({ type: Boolean })
   showtext: boolean = false;
@@ -38,7 +34,7 @@ class QuarkForm extends QuarkElement {
       if (booleanTagNames.includes(i.tagName)) {
         // 兼容 radio 成组出现问题，只取  group 的 value
         if (i.tagName === radio && i.parentNode.tagName === radioGroup) {
-          data[i.name] = Symbol('radio');
+          data[i.name] = Symbol("radio");
         } else {
           // 兼容 布尔为 false 时候
           data[i.name] = Boolean(i.value || i.checked);
@@ -54,7 +50,7 @@ class QuarkForm extends QuarkElement {
   setInit = () => {
     const { current } = this.formRef;
     if (this.shadowRoot && current) {
-      const el = current.querySelector('slot');
+      const el = current.querySelector("slot");
       const formChildren = el?.assignedNodes();
       let nodes = formChildren;
       formChildren.forEach((node: Element) => {
@@ -70,7 +66,7 @@ class QuarkForm extends QuarkElement {
 
   setRules = (rules: IRuleItem[]) => {
     this.setInit();
-    if (!Array.isArray(rules)) throw new Error('rules need array');
+    if (!Array.isArray(rules)) throw new Error("rules need array");
     const values = this.getFormData();
     if (values) {
       Object.keys(values).forEach((c: string) => {
@@ -99,7 +95,7 @@ class QuarkForm extends QuarkElement {
   setFieldMsg = (ruleItem: IRuleItem) => {
     const { el, message, required, validator } = ruleItem;
     if (!el) return;
-    if (el.localName !== 'quark-field') return;
+    if (el.localName !== "quark-field") return;
     el.required = required;
     el.setRules([{ required, validator, message }]);
   };
