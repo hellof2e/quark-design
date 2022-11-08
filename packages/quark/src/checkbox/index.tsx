@@ -8,7 +8,23 @@ import QuarkElement, {
 import {slotAssignedElements} from '../../utils/public';
 import { checkFalse } from '../../utils/public';
 import style from './style.css';
+export interface Props {
+  shape?: 'round' | 'square'
+  size?: 'normal' | 'big'
+  disabled?: boolean;
+  checked?: boolean
+  
+}
+export interface CustomEvent {
+  change: (e: {detail: {value: string}}) => void
+}
 
+export interface GroupProps {
+  value?: string
+}
+export interface GroupCustomEvent {
+  change: (e: {detail: {value: string []}}) => void
+}
 @customElement({
   tag: 'quark-checkbox',
   style,

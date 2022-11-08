@@ -11,11 +11,30 @@ import Locale from '../locale';
 
 type DateType = 'date' | 'time' | 'year-month' | 'month-day' | 'datehour' | 'datetime';
 
-export type SelectColumn = {
+export interface SelectColumn {
   value: string,
   index: number
 }
-
+export interface Props {
+  open: boolean
+  title?: string
+  type?: DateType
+  value?: string
+  mindate?: string
+  maxdate?: string
+  minhour?: number
+  maxhour?: number
+  minminute?: number
+  maxminute?: number
+  showtoolbar?: boolean
+  confirmbuttontext?: string
+  cancelbuttontext?: string
+}
+export interface CustomEvent {
+  close: () => void
+  confirm: (e: {detail:{value: {value: string, index: number}[]}}) => void
+  change?: (e: {detail:{value: {value: string, index: number}[]}}) => void
+}
 @customElement({
   tag: 'quark-datetime-picker',
   style,

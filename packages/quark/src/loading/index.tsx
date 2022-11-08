@@ -3,9 +3,13 @@ import QuarkElement, {
   customElement,
   Fragment,
 } from '@quarkd/core';
-
 import style from './style.css';
-
+export interface Props {
+  type?: 'circular' | 'spinner'
+  color?: string
+  size?: string | number
+  vertical?: boolean
+}
 @customElement({
   tag: 'quark-loading',
   style

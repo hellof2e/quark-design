@@ -5,7 +5,14 @@ import QuarkElement, {
 } from '@quarkd/core';
 
 import style from './style.css';
-
+export interface Props {
+  type?: 'primary' | 'success' | 'danger' | 'warning'
+  size?: 'small' | 'large'
+  round?: boolean
+  plain?: boolean
+  color?: string;
+  textcolor?: string;
+}
 @customElement({tag: 'quark-tag', style})
 class QuarkTag extends QuarkElement {
   constructor() {

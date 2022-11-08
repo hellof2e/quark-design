@@ -1,13 +1,10 @@
 import { FC } from 'react';
-import reactify from "@quarkd/reactify";
+import reactify from '@quarkd/reactify';
 import "quarkd/lib/grid";
-import { componentBaseInterface } from '../type';
+import { ItemProps } from "quarkd/lib/grid";
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface GridItemProps extends componentBaseInterface {
-    text?: string
-    icon?: string
-    iconsize?: string
-}
+type GridItemProps = componentBaseInterface & ReactifyProps<ItemProps, {}>;
 type GridItemType =  FC<GridItemProps>;
 
 const GridItem = reactify('quark-grid-item') as GridItemType;

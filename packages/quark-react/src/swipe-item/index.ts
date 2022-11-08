@@ -1,4 +1,4 @@
-import reactify from "@quarkd/reactify";
+import reactify from '@quarkd/reactify';
 import "quarkd/lib/swipe";
 import { FC } from 'react';
 import { componentBaseInterface } from '../type';

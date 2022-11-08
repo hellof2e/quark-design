@@ -1,16 +1,10 @@
-import reactify from "@quarkd/reactify";
-import "quarkd/lib/tag";
+import reactify from '@quarkd/reactify';
+import 'quarkd/lib/tag';
 import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { Props } from  'quarkd/lib/tag';
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface TagProps extends componentBaseInterface {
-    type?: 'primary' | 'success' | 'danger' | 'warning'
-    size?: 'small' | 'large'
-    round?: boolean
-    plain?: boolean
-    color?: string;
-    textcolor?: string;
-}
+type TagProps = componentBaseInterface & ReactifyProps<Props, {}>;
 type TagType =  FC<TagProps>;
 
 const Tag = reactify('quark-tag') as TagType;

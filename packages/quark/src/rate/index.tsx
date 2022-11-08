@@ -4,10 +4,19 @@ import QuarkElement, {
   customElement,
   state
 } from '@quarkd/core';
-
 import '@quarkd/icons/lib/star-fill';
 import style from './style.css';
-
+export interface Props {
+  defaultvalue?: number
+  value?: number
+  size?: number
+  disabled?: boolean
+  readonly?: boolean
+  activecolor?: string
+}
+export interface CustomEvent {
+  change: (e: {detail: {value: string}}) => void
+}
 @customElement({
   tag: 'quark-rate',
   style

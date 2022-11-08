@@ -8,7 +8,20 @@ import {slotAssignedElements} from '../../utils/public'
 import '../sticky';
 import tabs from './tabs-style.css';
 import tab from './tab-style.css';
-
+export interface ContentProps {
+  label: string
+  disabled?: boolean
+  name: string
+}
+export interface Props {
+  activekey?: string
+  sticky?: boolean
+  offsettop?: number
+  linewidth?: number
+}
+export interface CustomEvent {
+  change: (e: {detail: {label: string, name: string}}) => void
+}
 @customElement('quark-tab-content')
 class QuarkTabContent extends QuarkElement {
   @property()

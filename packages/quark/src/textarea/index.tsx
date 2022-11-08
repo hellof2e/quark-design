@@ -5,11 +5,26 @@ import QuarkElement, {
   state
 } from '@quarkd/core';
 import Locale from "../locale";
-
 import style from './style.css';
 
 type autoCompleteType = 'off' | 'on';
-
+export interface Props {
+  value?: string
+  placeholder?: string
+  rows?: number
+  maxlength?: number
+  showcount?: boolean
+  autocomplete?: boolean
+  disabled?: boolean
+  readonly?: boolean
+  id?: string
+}
+export interface CustomEvent {
+  input: (e: {target: {value: string}}) => void
+  focus?: () => void
+  blur?: () => void
+  change: (e: {target: {value: string}}) => void
+}
 @customElement({tag: 'quark-textarea', style})
 class TextArea extends QuarkElement {
   @property()

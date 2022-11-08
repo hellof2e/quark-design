@@ -3,7 +3,15 @@ import QuarkElement, {
   customElement,
 } from '@quarkd/core';
 import style from './style.css';
-
+export interface Props {
+  checked?: boolean
+  disabled?: boolean
+  size?: number
+  color?: string
+}
+export interface CustomEvent {
+  change: (e: {detail: {value: boolean}}) => void
+}
 @customElement({tag: 'quark-switch', style})
 class QuarkSwitch extends QuarkElement {
   @property({ type: Boolean })

@@ -1,13 +1,10 @@
-import reactify from "@quarkd/reactify";
-import "quarkd/lib/tabbar";
+import reactify from '@quarkd/reactify';
+import 'quarkd/lib/tabbaritem';
 import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { Props } from  'quarkd/lib/tabbaritem';
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface TabbarItemProps extends componentBaseInterface {
-   label: string
-   badgecontent?: string
-   name: string
-}
+type TabbarItemProps = componentBaseInterface & ReactifyProps<Props, {}>;
 type TabbarItemType =  FC<TabbarItemProps>;
 
 const TabbarItem = reactify('quark-tabbar-item') as TabbarItemType;

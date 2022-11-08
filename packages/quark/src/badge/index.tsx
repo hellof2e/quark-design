@@ -6,7 +6,13 @@ import QuarkElement, {
   createRef,
 } from '@quarkd/core';
 import style from './style.css';
-
+export interface Props {
+  type?: 'dot' | 'round' | 'label'
+  content?: string
+  size?: 'normal' | 'big'
+  border?: boolean
+  max?: number
+}
 @customElement({
   tag: 'quark-badge',
   style,

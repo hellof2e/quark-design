@@ -6,7 +6,15 @@ import QuarkElement, {
 import {slotAssignedElements} from '../../utils/public';
 import style from './style.css';
 import groupCss from './group.css';
-
+export interface Props {
+  direction?: 'horzontal' | 'vertical'
+}
+export interface ItemProps {
+  title: string
+  status: 'done' | 'doing' | 'todo'
+  content?: string
+  order?: string
+}
 @customElement({tag: 'quark-step', style})
 class QuarkStep extends QuarkElement {
   @property()

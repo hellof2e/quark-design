@@ -15,6 +15,20 @@ type Stauts = 'loading' | 'loaded' | 'error';
 type LazyLoadType = {
   add: (el: HTMLImageElement, src: string, parent?: ParentNode | null) => void
 }
+export interface Props {
+  width?: number
+  height?: number
+  fit?: FitType
+  lazy?: boolean
+  round?: boolean
+  radius?: number
+  alt?: string
+}
+export interface CustomEvent {
+  click?: () => void
+  load?: () => void
+  error?: () => void
+}
 @customElement({
   tag: 'quark-image',
   style

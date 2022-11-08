@@ -9,9 +9,14 @@ import QuarkElement, {
   Fragment,
   createRef
 } from '@quarkd/core';
-
 import style from './style.css';
-
+export interface Props {
+  open: boolean
+  zindex?: number
+}
+export interface CustomEvent {
+  close: () => void
+}
 @customElement({
   tag: 'quark-overlay',
   style
