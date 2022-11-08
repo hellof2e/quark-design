@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import { Marquee } from "@quarkd/quark-react"
+import { Marquee } from "@quarkd/quark-react";
 ```
 
 ### 基础用法

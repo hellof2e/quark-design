@@ -50,8 +50,8 @@ class QuarkMarquee extends QuarkElement {
 
     if (container.offsetWidth >= (this.textWidth || text.offsetWidth)) {
       this.animating = false;
-      text.style.removeProperty('animation-duration');
-      text.style.removeProperty('animation-name');
+      text.style.removeProperty("animation-duration");
+      text.style.removeProperty("animation-name");
       return;
     }
 
@@ -65,19 +65,20 @@ class QuarkMarquee extends QuarkElement {
     }
 
     this.animating = true;
-    text.style.animationDirection = this.reverse ? 'reverse' : 'normal';
+    text.style.animationDirection = this.reverse ? "reverse" : "normal";
     text.style.animationDuration = `${Math.round(
       text.offsetWidth / Number(this.speed)
     )}s`;
-    text.style.animationName = 'quark-marquee-animation';
+    text.style.animationName = "quark-marquee-animation";
   };
 
   render() {
     return (
       <Fragment>
         <span
-          class={`quark-marquee-title ${this.paused ? 'quark-marquee-paused' : ''
-            }`}
+          class={`quark-marquee-title ${
+            this.paused ? "quark-marquee-paused" : ""
+          }`}
           ref={this.titleRef}
           onTransitionend={this.transitionEnd}
         >

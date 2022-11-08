@@ -7,7 +7,7 @@ Text scrolling.
 ### Install
 
 ```tsx
-import { Marquee } from "@quarkd/quark-react"
+import { Marquee } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
