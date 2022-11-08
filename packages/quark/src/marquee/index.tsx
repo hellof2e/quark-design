@@ -5,9 +5,11 @@ import QuarkElement, {
   createRef,
   state
 } from '@quarkd/core';
-
 import style from './style.css';
-
+export interface Props {
+  title: string
+  speed?: number
+}
 @customElement({
   tag: 'quark-marquee',
   style,

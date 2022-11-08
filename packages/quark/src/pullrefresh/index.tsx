@@ -9,6 +9,19 @@ import { getScrollParent } from '../../utils/index';
 import { useTouch, getScrollTop } from './utils';
 import style from './style.css';
 import Locale from "../locale";
+export interface Props {
+  dark?: boolean
+  disabled?: boolean
+  headheight?: number
+  loading: boolean
+  pullingtext?: string
+  loosingtext?: string
+  loadingtext?: string
+  textcolor?: string
+}
+export interface CustomEvent {
+  refresh: () => void
+}
 
 const DEFAULT_HEAD_HEIGHT = 96;
 const DEFAULT_DURING = 300;

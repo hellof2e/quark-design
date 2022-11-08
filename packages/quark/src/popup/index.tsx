@@ -11,7 +11,17 @@ import QuarkElement, {
 } from '@quarkd/core';
 import '@quarkd/icons/lib/close'
 import style from './style.css';
-
+export interface Props {
+  position?: 'top' | 'bottom' | 'left' | 'right'
+  round?: boolean
+  open: boolean
+  closeable?: boolean
+  safearea?: boolean
+  zindex?: number
+}
+export interface CustomEvent {
+  closed: () => void
+}
 @customElement({
   tag: 'quark-popup',
   style

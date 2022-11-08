@@ -1,14 +1,10 @@
-import reactify from "@quarkd/reactify";
-import "quarkd/lib/marketdialog";
+import reactify from '@quarkd/reactify';
+import 'quarkd/lib/marketdialog';
 import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { Props, CustomEvent } from 'quarkd/lib/marketdialog';
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface MarketDialogProps extends componentBaseInterface {
-    open: boolean
-    url?: string
-    size?: boolean
-    onClose: () => void
-}
+type MarketDialogProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
 type MarketDialogType =  FC<MarketDialogProps>;
 
 const MarketDialog = reactify('quark-market-dialog') as MarketDialogType;

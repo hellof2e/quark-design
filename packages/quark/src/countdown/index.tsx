@@ -7,7 +7,13 @@ import QuarkElement, {
 } from '@quarkd/core';
 import "../loading";
 import style from './style.css';
-
+export interface Props {
+  time: string
+  format?: string
+}
+export interface CustomEvent {
+  end: () => void
+}
 @customElement({
   tag: 'quark-countdown',
   style,

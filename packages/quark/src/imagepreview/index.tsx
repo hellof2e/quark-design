@@ -11,14 +11,14 @@ import '../popup';
 
 import style from './style.css';
 BScroll.use(Slide);
-
+export interface Props {
+  open: boolean
+}
 @customElement({
   tag: 'quark-image-preview',
   style,
 })
 class QuarkImagePreview extends QuarkElement {
-  public onClose: null | ((index: number) => void) = null;
-  public onChange: null | ((index: number) => void) = null;
   constructor() {
     super();
   }
@@ -46,6 +46,8 @@ class QuarkImagePreview extends QuarkElement {
 
   isFn: boolean = false;
 
+  onClose: null | ((index: number) => void) = null;
+  onChange: null | ((index: number) => void) = null;
 
   wrapRef = createRef() as any;
   init = async (open) => {

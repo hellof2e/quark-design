@@ -1,10 +1,9 @@
 import { FC } from 'react';
-import reactify from "@quarkd/reactify";
+import reactify from '@quarkd/reactify';
 import "quarkd/lib/form";
 import { componentBaseInterface } from '../type';
 
 interface FormProps extends componentBaseInterface{}
-
 interface Rule {
     name: string // 需要校验的 field 组件的 name 属性
     required?: boolean // 是否必填
@@ -17,7 +16,6 @@ interface FormRef {
 }
 
 type FormType =  FC<FormProps>;
-
 const Form = reactify('quark-form') as FormType;
 export {
    FormRef

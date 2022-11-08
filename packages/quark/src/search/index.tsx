@@ -9,7 +9,29 @@ import "@quarkd/icons/lib/close";
 import "@quarkd/icons/lib/search";
 import style from './style.css';
 import Locale from "../locale";
-
+export interface Props {
+  value?: string
+  shape?: 'round' | 'square'
+  dark?: boolean
+  showback?: boolean
+  hideaction?: boolean
+  actiontext?: string
+  iconcolor?: string
+  placeholder?: string
+  maxlength?: number
+  autofocus?: boolean
+  clearable?: boolean
+  disabled?: boolean
+  readonly?: boolean
+}
+export interface CustomEvent {
+  focus?: (e: {detail: {value: string}}) => void
+  blur?: (e: {detail: {value: string}}) => void
+  search?: (e: {detail: {value: string}}) => void
+  change: (e: {detail: {value: string}}) => void
+  cancel?: () => void
+  back?: () => void
+}
 @customElement({
   tag: 'quark-search',
   style

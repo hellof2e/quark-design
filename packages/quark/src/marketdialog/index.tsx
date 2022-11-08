@@ -7,9 +7,15 @@ import '@quarkd/icons/lib/close-o';
 import style from './style.css';
 import '../overlay';
 type MarketDialogParams = {
-  close?: () => void, 
   zindex?: () => void, 
   url: string
+  size?: boolean
+}
+export interface Props extends MarketDialogParams {
+  open: boolean
+}
+export interface CustomEvent {
+  close: () => void
 }
 @customElement({
   tag: 'quark-market-dialog',
@@ -63,7 +69,7 @@ class QuarkMarketDialog extends QuarkElement {
 }
 
 // 函数调用
-export default function MarketDialog(params: MarketDialogParams): QuarkMarketDialog{
+export default function MarketDialog(params: MarketDialogParams & CustomEvent): QuarkMarketDialog{
   const dialog: any = document.createElement('quark-market-dialog');
   const { close, zindex, url } = params;
     dialog.dRemove = true;

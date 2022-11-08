@@ -5,7 +5,13 @@ import QuarkElement, {
 import '@quarkd/icons/lib/arrow-right';
 import cellStyle from './cellStyle.css';
 import cellGroupCss from './cellGroupStyle.css';
-
+export interface Props {
+  title: string
+  desc?: string
+  to?: string;
+  islink?: boolean
+  icon?: string
+}
 @customElement({
   tag: 'quark-cell',
   style: cellStyle,

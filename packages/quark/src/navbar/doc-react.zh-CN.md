@@ -125,8 +125,8 @@ useEffect(() => {
 | right      | 右侧节点 | `string `                  |
 | safearea      | 安全区适配 | `boolean`                 | `false`
 | iconsize      | 默认图标大小 | `string`                   |`24px`
-| onLeftClick     | 左侧点击事件                   |    `() => void `     |
-| onRightClick    | 右侧点击事件               |`() => void`|
+| onLeftclick     | 左侧点击事件                   |    `() => void `     |
+| onRightclick    | 右侧点击事件               |`() => void`|
 | onClose    | 关闭点击事件               |      `() => void `   |
 
 

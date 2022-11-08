@@ -4,7 +4,14 @@ import QuarkElement, {
   Fragment,
 } from '@quarkd/core';
 import style from './style.css';
-
+export interface Props {
+  avatar?: boolean
+  avatarshape?: 'round' | 'square'
+  titel?: boolean
+  row: number
+  rowwidths?: string
+  hide?: boolean
+}
 @customElement({
   tag: 'quark-skeleton',
   style

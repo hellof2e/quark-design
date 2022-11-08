@@ -9,7 +9,18 @@ import QuarkElement, {
 import {slotAssignedElements} from '../../utils/public';
 import style from './style.css';
 import swipeItemStyle from './swipeItem.css';
-
+export interface Props {
+  type?: string
+  duration?: number
+  interval?: number
+  defaultindex?: string
+  autoplay?: boolean
+  activecolor?: string
+  inactivecolor?: string
+}
+export interface CustomEvent {
+  change: (e: {detail: {index: number}}) => void
+}
 @customElement({tag: 'quark-swipe-item', style: swipeItemStyle})
 class QuarkSwipeItem extends QuarkElement {
   componentDidMount() {

@@ -4,7 +4,12 @@ import QuarkElement, {
 } from '@quarkd/core';
 
 import style from './style.css';
-
+export interface Props {
+  title?: string
+  desc?: string
+  image?: string
+  imagesize?: string
+}
 @customElement({
   tag: 'quark-empty',
   style

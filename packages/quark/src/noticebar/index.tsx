@@ -6,7 +6,17 @@ import QuarkElement, {
 import '@quarkd/icons/lib/notify';
 import '@quarkd/icons/lib/arrow-right';
 import style from './style.css';
-
+export interface Props {
+  text?: string
+  multiple?: boolean
+  closehide?: boolean
+  right?: string
+  safearea?: boolean
+  iconsize?: string
+}
+export interface CustomEvent {
+  rightclick?: () => void
+}
 @customElement({
   tag: 'quark-noticebar',
   style

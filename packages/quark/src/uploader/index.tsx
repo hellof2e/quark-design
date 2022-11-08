@@ -17,7 +17,19 @@ import style from './style.css';
 import imagePreview from '../imagepreview/index';
 import '../loading'
 import '../grid'
-
+export interface Props {
+  accept?: string
+  name?: string
+  multiple?: boolean
+  preview?: boolean
+  capture?: boolean
+  maxcount?: number
+  maxsize?: number
+  disabled?: string
+}
+export interface CustomEvent {
+  afterread?: (e: {detail: UploaderFileListItem | UploaderFileListItem[]}) => void
+}
 @customElement({tag: 'quark-uploader', style})
 class QuarkUploader extends QuarkElement {
   @property()

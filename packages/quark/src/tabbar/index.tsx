@@ -6,7 +6,15 @@ import QuarkElement, {
 import {slotAssignedElements} from '../../utils/public';
 import '../tabbaritem';
 import style from './style.css';
-
+export interface Props {
+  fixed?: boolean
+  inactivecolor?: string
+  activecolor?: string
+  value?: number
+}
+export interface CustomEvent {
+  change: (e: {detail: {value: number | string}}) => void
+}
 @customElement({tag: 'quark-tabbar', style})
 class QuarkTabbar extends QuarkElement {
   @property({

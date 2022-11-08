@@ -7,7 +7,19 @@ import QuarkElement, {
 import '@quarkd/icons/lib/arrow-left';
 import '@quarkd/icons/lib/close';
 import style from './style.css';
-
+export interface Props {
+  title: string
+  lefthide?: boolean
+  closehide?: boolean
+  right?: string
+  safearea?: boolean
+  iconsize?: string
+}
+export interface CustomEvent{
+  leftclick?: () => void
+  rightclick?: () => void
+  close?: () => void
+}
 @customElement({
   tag: 'quark-navbar',
   style
