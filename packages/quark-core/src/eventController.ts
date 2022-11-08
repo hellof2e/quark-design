@@ -1,4 +1,4 @@
-import DblKeyMap from './dblKeyMap';
+import DblKeyMap from "./dblKeyMap";
 
 export type EventHandler = (evt: Event) => void;
 
