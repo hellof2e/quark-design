@@ -47,7 +47,7 @@
 微信群已满员，请添加下面管理员拉你入群谢谢～
 
 <div style="display:flex;">
-  <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180' style="margin-right: 50px;"/>
+  <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180' style="marginRight: 50px;"/>
   <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='188'/>
 </div>
 
