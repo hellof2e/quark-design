@@ -13,6 +13,7 @@
     "init": "yarn && yarn run link",
     "dev": "node ./scripts/dev",
     "link": "node ./scripts/link",
+    "codeformat": "prettier --write packages/quark/src/**/*.vue",
     "clean": "lerna clean -y",
     "prepare": "husky install",
     "copydocs": "node ./scripts/copydocs",
