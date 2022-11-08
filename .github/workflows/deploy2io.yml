@@ -17,7 +17,7 @@ jobs:
       # - run: cd example && npm i --legacy-peer-deps && npm run build
       - run: yarn
       - run: yarn run link
-      - run: yarn push2GithubWebsite
+      - run: yarn push2io
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :
