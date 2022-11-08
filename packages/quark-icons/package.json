@@ -11,7 +11,7 @@
 		"package.json"
 	],
 	"scripts": {
-		"build": "rm -rf umd && rm -rf lib && cross-env BABEL_ENV=umd rollup -c",
+		"build": "rimraf umd && rimraf lib && cross-env BABEL_ENV=umd rollup -c",
 		"release:major": "npm run release -- --release-as major",
 		"release:minor": "npm run release -- --release-as minor",
 		"release:patch": "npm run release -- --release-as patch",
@@ -59,7 +59,8 @@
 		"stylelint-scss": "^4.2.0",
 		"typescript": "^4.1.5",
 		"vite": "^2.3.4",
-		"standard-version": "^9.3.0"
+		"standard-version": "^9.3.0",
+		"rimraf": "3.0.2"
 	},
 	"engines": {
 		"node": ">=12.0.0"
