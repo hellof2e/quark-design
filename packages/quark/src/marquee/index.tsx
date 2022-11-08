@@ -19,8 +19,17 @@ class QuarkMarquee extends QuarkElement {
   @property()
   speed: string = '50';
 
+  @property({ type: Boolean })
+  reverse: boolean = false;
+
+  @property({ type: Boolean })
+  paused: boolean = false;
+
   @state()
   animating: boolean = false;
+
+  @state()
+  textWidth: number = 0;
 
   titleRef: any = createRef();
 
@@ -36,37 +45,37 @@ class QuarkMarquee extends QuarkElement {
   start = () => {
     const container = this;
     const text = this.titleRef.current;
-    if (container.offsetWidth >= text.offsetWidth) {
+
+    if (container.offsetWidth >= (this.textWidth || text.offsetWidth)) {
       this.animating = false;
-      text.style.removeProperty('transition-duration');
-      text.style.removeProperty('transform');
+      text.style.removeProperty('animation-duration');
+      text.style.removeProperty('animation-name');
       return;
     }
 
     if (this.animating) return;
 
-    const initial = !text.style.transform;
-    text.style.transitionDuration = '0s';
+    const initial = !text.style.animationName;
+
     if (initial) {
-      text.style.transform = 'translateX(0)';
-    } else {
-      text.style.transform = `translateX(${container.offsetWidth}px)`;
+      this.textWidth = text.offsetWidth;
+      text.style.paddingLeft = `${container.offsetWidth}px`;
     }
-    const distance = initial
-      ? text.offsetWidth
-      : container.offsetWidth + text.offsetWidth;
+
     this.animating = true;
-    text.style.transitionDuration = `${Math.round(
-      distance / Number(this.speed)
+    text.style.animationDirection = this.reverse ? 'reverse' : 'normal';
+    text.style.animationDuration = `${Math.round(
+      text.offsetWidth / Number(this.speed)
     )}s`;
-    text.style.transform = `translateX(-${text.offsetWidth}px)`;
+    text.style.animationName = 'quark-marquee-animation';
   };
 
   render() {
     return (
       <Fragment>
         <span
-          class="quark-marquee-title"
+          class={`quark-marquee-title ${this.paused ? 'quark-marquee-paused' : ''
+            }`}
           ref={this.titleRef}
           onTransitionend={this.transitionEnd}
         >

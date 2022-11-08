@@ -11,19 +11,39 @@ import "quarkd/lib/marquee";
 ```
 
 ### 基础用法
+
 ```html
 <quark-marquee :title="title"></quark-marquee>
 ```
+
 ### 不同速度
+
 ```html
 <quark-marquee :title="title" speed="25"></quark-marquee>
+<quark-marquee :title="title" speed="100"></quark-marquee>
+```
+
+### 暂停
+
+```html
+<quark-button @click="isPaused = true"> 暂停 </quark-button>
+<quark-button @click="isPaused = false"> 继续 </quark-button>
+<quark-marquee :title="title" :paused="paused"></quark-marquee>
+```
+
+### 反向动画
+
+```html
+<quark-marquee :title="title" :reverse="true"></quark-marquee>
 ```
 
 ## API
 
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| title        | 标题 | `string`                     | 
-| speed      | 是否隐藏左侧内容               | `string`  | `50`
+| 参数    | 说明         | 类型      | 默认值  |
+| ------- | ------------ | --------- | ------- |
+| title   | 标题         | `string`  |
+| speed   | 动画速度     | `string`  | `50`    |
+| paused  | 是否暂停动画 | `boolean` | `false` |
+| reverse | 是否反向动画 | `boolean` | `false` |

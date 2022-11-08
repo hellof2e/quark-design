@@ -10,7 +10,22 @@
 
 :host .quark-marquee-title {
   width: auto;
-  transition-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   padding: 0 4px;
   white-space: nowrap;
+}
+
+:host .quark-marquee-paused {
+  animation-play-state: paused;
+}
+
+@keyframes quark-marquee-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
