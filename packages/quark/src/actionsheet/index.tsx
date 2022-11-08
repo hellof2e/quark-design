@@ -1,15 +1,11 @@
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock';
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 
-import style from './style.css';
+import style from "./style.css";
 
 type Action = {
   name: string;
@@ -19,20 +15,20 @@ type Action = {
 
 type ActionParams = {
   title?: string;
-  actions: Action[],
-  cancelText?: string,
-  titleColor?: string,
-  titleFontSize?: number,
-  cancelTextColor?: string,
-  cancelTextFontSize?: number,
-  select: (index: number, action: Action) => void,
-  cancel?: () => void,
-  close?: () => void,
-  zIndex?: number
-}
+  actions: Action[];
+  cancelText?: string;
+  titleColor?: string;
+  titleFontSize?: number;
+  cancelTextColor?: string;
+  cancelTextFontSize?: number;
+  select: (index: number, action: Action) => void;
+  cancel?: () => void;
+  close?: () => void;
+  zIndex?: number;
+};
 @customElement({
-  tag: 'quark-actionsheet',
-  style
+  tag: "quark-actionsheet",
+  style,
 })
 class QuarkActionSheet extends QuarkElement {
   constructor() {
@@ -40,9 +36,9 @@ class QuarkActionSheet extends QuarkElement {
   }
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   wrap: any = createRef();
 
@@ -60,7 +56,7 @@ class QuarkActionSheet extends QuarkElement {
 
   cancelTextFontSize: number | undefined = undefined;
 
-  zIndex: number = 999;
+  zIndex = 999;
 
   select: (index: number, action: Action) => void = () => {};
 
@@ -72,8 +68,8 @@ class QuarkActionSheet extends QuarkElement {
     if (this.zIndex) {
       this.style.zIndex = `${this.zIndex}`;
     }
-    this.addEventListener('transitionend', this.handleTransitionend);
-    this.addEventListener('click', this.handleHostClick);
+    this.addEventListener("transitionend", this.handleTransitionend);
+    this.addEventListener("click", this.handleHostClick);
   }
 
   shouldComponentUpdate(
@@ -81,22 +77,22 @@ class QuarkActionSheet extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       // 设置退出过度动画
       if (newValue) {
         // 由关闭到打开
-        current.classList.remove('quark-actionsheet-leave');
+        current.classList.remove("quark-actionsheet-leave");
       } else if (oldValue && !newValue) {
         // 由打开到关闭
-        current.classList.add('quark-actionsheet-leave');
+        current.classList.add("quark-actionsheet-leave");
       }
     }
     return true;
   }
 
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       if (newValue) {
         disableBodyScroll(current);
@@ -108,13 +104,13 @@ class QuarkActionSheet extends QuarkElement {
 
   componentWillUnmount() {
     clearAllBodyScrollLocks();
-    this.removeEventListener('transitionend', this.handleTransitionend);
-    this.removeEventListener('click', this.handleHostClick);
+    this.removeEventListener("transitionend", this.handleTransitionend);
+    this.removeEventListener("click", this.handleHostClick);
   }
 
   handleHostClick() {
     this.handleClick();
-    if (this.close && typeof this.close === 'function') {
+    if (this.close && typeof this.close === "function") {
       this.close();
     }
   }
@@ -124,14 +120,14 @@ class QuarkActionSheet extends QuarkElement {
   };
 
   handleTransitionend(ev: any) {
-    if (ev.propertyName === 'opacity' && !this.open) {
+    if (ev.propertyName === "opacity" && !this.open) {
       document.body.removeChild(this);
     }
   }
 
   handleActionClick = (index: number, action: Action) => {
     this.handleClick();
-    if (this.select && typeof this.select === 'function') {
+    if (this.select && typeof this.select === "function") {
       this.select(index, action);
     }
   };
@@ -142,7 +138,7 @@ class QuarkActionSheet extends QuarkElement {
 
   handleCancelClick = () => {
     this.handleClick();
-    if (this.cancel && typeof this.cancel === 'function') {
+    if (this.cancel && typeof this.cancel === "function") {
       this.cancel();
     }
   };
@@ -157,7 +153,7 @@ class QuarkActionSheet extends QuarkElement {
           class="quark-actionsheet-actions"
           style={{
             color: action.color ? action.color : undefined,
-            fontSize: action.fontSize ? `${action.fontSize}px` : undefined
+            fontSize: action.fontSize ? `${action.fontSize}px` : undefined,
           }}
           onClick={() => {
             this.handleActionClick(index, action);
@@ -182,7 +178,7 @@ class QuarkActionSheet extends QuarkElement {
             class="quark-actionsheet-title"
             style={{
               color: this.titleColor ? this.titleColor : undefined,
-              fontSize: this.titleFontSize ? this.titleFontSize : undefined
+              fontSize: this.titleFontSize ? this.titleFontSize : undefined,
             }}
           >
             {this.titl}
@@ -198,7 +194,7 @@ class QuarkActionSheet extends QuarkElement {
                 color: this.cancelTextColor ? this.cancelTextColor : undefined,
                 fontSize: this.cancelTextFontSize
                   ? this.cancelTextFontSize
-                  : undefined
+                  : undefined,
               }}
               onClick={this.handleCancelClick}
             >
@@ -212,9 +208,9 @@ class QuarkActionSheet extends QuarkElement {
 }
 
 // // 函数调用
-export default function (params: ActionParams): QuarkActionSheet{
+export default function (params: ActionParams): QuarkActionSheet {
   const actionSheet = document.createElement(
-    'quark-actionsheet'
+    "quark-actionsheet"
   ) as QuarkActionSheet;
   const {
     title,
@@ -227,7 +223,7 @@ export default function (params: ActionParams): QuarkActionSheet{
     select,
     cancel,
     close,
-    zIndex
+    zIndex,
   } = params;
   actionSheet.titl = title;
   actionSheet.actions = actions;

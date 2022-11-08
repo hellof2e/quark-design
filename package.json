@@ -10,8 +10,8 @@
     "packages/*"
   ],
   "scripts": {
-    "init": "yarn && yarn run link",
-    "dev": "node ./scripts/dev",
+    "init": "yarn && yarn run link && cd example && yarn",
+    "dev": "cd example && yarn run dev",
     "link": "node ./scripts/link",
     "clean": "lerna clean -y",
     "prepare": "husky install",
