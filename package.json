@@ -13,7 +13,7 @@
     "init": "yarn && yarn run link && cd example && yarn",
     "dev": "cd example && yarn run dev",
     "link": "node ./scripts/link",
-    "codeformat": "prettier --write example/src/**/*.vue",
+    "codeformat": "prettier --write example/src/**/*.ts",
     "clean": "lerna clean -y",
     "prepare": "husky install",
     "copydocs": "node ./scripts/copydocs",
