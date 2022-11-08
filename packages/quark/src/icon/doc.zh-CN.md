@@ -42,4 +42,4 @@ import '@quarkd/icons/lib/user';
 | 参数         | 说明                             | 类型             | 默认值           |
 |--------------|----------------------------------|------------------|------------------|
 | color        | 图标颜色                           | `string`           | -                |
-| size         | 图标大小，如 `20px` `2em` `2rem`    | `string or number` | -                |
+| size         | 图标大小，如 `20` `20px` `2em` `2rem` `2vh` `2vw`| `string or number` | `20px`     |
