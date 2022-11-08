@@ -64,16 +64,10 @@ type(ComponentName?)：commit message
 yarn clean
 ```
 
-Windows 电脑运行 yarn run link 时乱码？
-
-```
-在git bash中执行yarn run link命令
-```
-
 ## 结构
 
 ```
-├── README.MD
+├── README.MD 
 ├── demo.html
 ├── dev.md
 ├── example
