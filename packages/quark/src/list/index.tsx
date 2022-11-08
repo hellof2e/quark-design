@@ -60,15 +60,22 @@ class QuarkList extends QuarkElement {
   })
   loading: boolean = false;
 
+  @property({
+    type: Boolean
+  })
+  immediatecheck: boolean = true;
+
   placeholderRef: any = createRef();
 
   componentDidMount() {
-    this.check({ auto: true });
-    window.addEventListener('scroll', this.check);
+    if(this.immediatecheck) {
+      setTimeout(() => this.check({ auto: true }), 50);
+    }
+    window.addEventListener('scroll', this.check, true);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.check);
+    window.removeEventListener('scroll', this.check, true);
   }
 
   shouldComponentUpdate(
