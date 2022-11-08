@@ -22,6 +22,7 @@ export interface SelectColumn {
 export interface Props {
   open: boolean;
   title?: string;
+  confirmtext?: string;
   bottomhidden?: boolean;
 }
 export interface CustomEvent {
@@ -52,6 +53,9 @@ class QuarkPicker extends QuarkElement {
 
   @property()
   title = "";
+
+  @property()
+  confirmtext = "";
 
   @property({ type: Boolean })
   bottomhidden = false;
@@ -195,7 +199,7 @@ class QuarkPicker extends QuarkElement {
           {!this.bottomhidden && (
             <div class="quark-picker-bottom">
               <quark-button type="primary" onclick={this.confirm}>
-                {Locale.current.confirm}
+                {this.confirmtext || Locale.current.confirm}
               </quark-button>
             </div>
           )}

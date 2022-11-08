@@ -142,6 +142,7 @@ export default {
 |--------------|----------------------------------|--------|------------------|
 | open        | picker是否显示 |` boolean `                 | `require`
 | title    | 标题 | `string `                 | |
+| confirmtext      | 确定按钮的文字           | `string` | `确认`
 | bottomhidden      | 是否隐藏底部按钮（通常配合自定义头部使用）           | `boolean` | `false`
 
 

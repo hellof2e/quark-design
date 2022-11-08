@@ -147,6 +147,7 @@ export default () => {
 |--------------|----------------------------------|--------|------------------|
 | open  | Whether to show picker  | `boolean`  | `require`
 | title | Title | `string`  | - |
+| confirmtext      | Text of the ok button           | `string` | `Confirm`
 | bottomhidden  | Whether to show bottom button (use with custom header)  | `boolean` | `false`
 | onClose | Emitted when click mask or cancel button. | `() => void`    |  `require ` |
 | onConfirm | Emitted when click confirm button.  |  `（e: {detail:{value: SelectColumn[]}}）=> void`   | `require` |
