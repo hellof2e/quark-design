@@ -48,7 +48,7 @@
 
 <div style="display:flex;">
   <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
-  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='200'/>
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='185'/>
 </div>
 
 English | [简体中文](./README.zh-CN.md)
