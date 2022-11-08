@@ -11,19 +11,13 @@
 第一次启动：
 
 ```bash
-yarn // 安装项目的依赖
-
-yarn run link // 第一次执行需要，互相依赖的软链接
-
-yarn dev // 开始执行工程
+npm run init
+npm run dev
 ```
 
 以后再次启动本工程只需：
 
 ```bash
-yarn dev
-
-// or
 npm run dev
 ```
 
