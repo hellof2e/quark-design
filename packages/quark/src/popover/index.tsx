@@ -7,11 +7,22 @@ import QuarkElement, {
 import style from './style.css';
 import { classNames } from '../../utils/index';
 
-type PopoverAction = {
+export interface PopoverAction {
   text: string;
   icon?: string;
   disabled?: boolean;
 };
+export interface Props {
+  open: boolean
+  placement?: 'top' | 'topleft' | 'topright' | 'left' | 'lefttop' | 'leftbottom' | 'right' | 'righttop' | 'rightbottom' | 'bottom' | 'bottomleft' | 'bottomright'
+  zindex?: number
+  theme?: 'light' | 'dark'
+  scroolhidden?: boolean
+}
+export interface CustomEvent {
+  close: () => void
+  select: (e: {detail:{action: PopoverAction, index: number}}) => void
+}
 @customElement({
   tag: 'quark-popover',
   style

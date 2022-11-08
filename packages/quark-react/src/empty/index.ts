@@ -1,14 +1,10 @@
 import { FC } from 'react';
-import reactify from "@quarkd/reactify";
+import reactify from '@quarkd/reactify';
 import "quarkd/lib/empty";
-import { componentBaseInterface } from '../type';
+import { Props } from "quarkd/lib/empty";
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface EmptyProps extends componentBaseInterface{
-    title?: string
-    desc?: string
-    image?: string
-    imagesize?: string
-}
+type EmptyProps = componentBaseInterface & ReactifyProps<Props, {}>;
 type EmptyType =  FC<EmptyProps>;
 
 const Empty = reactify('quark-empty') as EmptyType;

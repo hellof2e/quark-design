@@ -7,7 +7,17 @@ import QuarkElement, {
 } from '@quarkd/core';
 import {slotAssignedElements} from '../../utils/public';
 import style from './style.css';
-
+export interface Props {
+  shape?: 'round' | 'square'
+  size?: 'normal' | 'big'
+  disabled?: boolean;
+}
+export interface GroupProps {
+  value?: string
+}
+export interface GroupCustomEvent {
+  change: (e: {detail: {value: string}}) => void
+}
 @customElement({
   tag: 'quark-radio',
   style

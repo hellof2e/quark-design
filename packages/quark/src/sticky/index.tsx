@@ -5,7 +5,10 @@ import QuarkElement, {
 } from '@quarkd/core';
 
 import style from './style.css';
-
+export interface Props {
+  offsettop?: number
+  zindex?: number
+}
 @customElement({tag: 'quark-sticky', style})
 class QuarkSticky extends QuarkElement {
   constructor() {

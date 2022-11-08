@@ -5,7 +5,19 @@ import QuarkElement, {
 } from '@quarkd/core';
 import '@quarkd/icons/lib/close';
 import style from './style.css';
-
+export interface Props {
+  open: boolean
+  placement?: 'top' | 'topleft' | 'topright' | 'left' | 'lefttop' | 'leftbottom' | 'right' | 'righttop' | 'rightbottom' | 'bottom' | 'bottomleft' | 'bottomright'
+  zindex?: number
+  tips: string
+  closeable?: boolean
+  autoclose?: boolean
+  opentime?: number
+  scroolhidden?: boolean
+}
+export interface CustomEvent {
+  close: () => void
+}
 @customElement({tag: 'quark-tooltip', style})
 class QuarkTooltip extends QuarkElement {
   constructor() {

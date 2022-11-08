@@ -5,7 +5,11 @@ import QuarkElement, {
 } from '@quarkd/core';
 
 import style from './style.css';
-
+export interface Props {
+  value: number
+  color?: string
+  showtext?: boolean
+}
 @customElement({
   tag: 'quark-progress',
   style
