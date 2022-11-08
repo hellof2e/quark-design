@@ -1,6 +1,6 @@
 {
   "name": "@quarkd/quark-react",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Web components react reactify",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
