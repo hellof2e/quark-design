@@ -38,6 +38,14 @@
             "rules": {
                 "@typescript-eslint/explicit-module-boundary-types": 0
             }
+        },
+        {
+            "files":[
+                "packages/quark-react/src/**/*.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-empty-interface": 0
+            }
         }
     ]
 }
