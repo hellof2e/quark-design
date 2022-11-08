@@ -1,18 +1,18 @@
 quark-marquee {
-	color: #ee8c02;
+  color: #ee8c02;
 
-	.line {
-		width: 100%;
-		height: 1px;
-		background: #fff;
-	}
+  .line {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+  }
 
-	.flex {
-		display: flex;
-		align-items: center;
-	}
+  .flex {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .paused-button {
-	margin: 0 0 10px 20px;
+  margin: 0 0 10px 20px;
 }
