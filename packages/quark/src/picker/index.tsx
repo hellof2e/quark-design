@@ -49,6 +49,9 @@ class QuarkPicker extends QuarkElement {
   @property()
   title: string = '';
 
+  @property()
+  confirmtext: string = '';
+
   @property({ type: Boolean })
   bottomhidden: boolean = false;
 
@@ -107,16 +110,16 @@ class QuarkPicker extends QuarkElement {
   confirm = () => {
     const selectValues = this.getValues();
     this.values = selectValues;
-    this.$emit('confirm', { detail: {value: selectValues} });
+    this.$emit('confirm', { detail: { value: selectValues } });
   };
 
-  debounce(fn, wait){
+  debounce(fn, wait) {
     var timer = null;
-    return function(){
-      if(timer !== null){
+    return function () {
+      if (timer !== null) {
         clearTimeout(timer);
       }
-      timer = setTimeout(fn,wait);
+      timer = setTimeout(fn, wait);
     }
   }
 
@@ -141,7 +144,7 @@ class QuarkPicker extends QuarkElement {
     return this.wheels[i];
   };
 
-  componentDidMount = () => {};
+  componentDidMount = () => { };
 
   renderWheel = () => {
     if (!this.columns) {
@@ -189,7 +192,7 @@ class QuarkPicker extends QuarkElement {
           {!this.bottomhidden && (
             <div class="quark-picker-bottom">
               <quark-button type="primary" onclick={this.confirm}>
-                {Locale.current.confirm}
+                {this.confirmtext || Locale.current.confirm}
               </quark-button>
             </div>
           )}
