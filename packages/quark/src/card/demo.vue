@@ -5,7 +5,7 @@
       tips="$ 100"
       content="This is content of Card"
     >
-      <div slot="desc" style="font-size: 14px; color: #999; padding-top: 14px">
+      <div slot="desc" style="font-size: 14px; color: #999; padding-top: 14px"></div>
         footer content
       </div>
     </quark-card>
