@@ -17,7 +17,8 @@
         "vue/no-unused-components": 0,
         "no-debugger": 0,
         "@typescript-eslint/no-inferrable-types": 1,
-        "@typescript-eslint/explicit-module-boundary-types": 0
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "vue/comment-directive": "off"
     },
     "overrides": [
         {
