@@ -1,18 +1,18 @@
-import { assert, expect, fixture, html } from '@open-wc/testing';
-import '../../../lib/tag';
+import { assert, expect, fixture, html } from "@open-wc/testing";
+import "../../../lib/tag";
 const data = {
-  slotText : '主要标签',
-  type : 'blue',
-  size : 'large',
-  color: '#666666',
-  textcolor: '#333333',
-  plain: true
-}
+  slotText: "主要标签",
+  type: "blue",
+  size: "large",
+  color: "#666666",
+  textcolor: "#333333",
+  plain: true,
+};
 let el;
-describe('<quark-tag>', async () => {
+describe("<quark-tag>", async () => {
   before(async () => {
     el = await fixture(
-    `<quark-tag 
+      `<quark-tag 
       type=${data.type} 
       size=${data.size}
       plain=${data.plain}
@@ -21,34 +21,35 @@ describe('<quark-tag>', async () => {
       textcolor=${data.textcolor}
     >
       ${data.slotText}
-    </quark-tag>`);
+    </quark-tag>`
+    );
   });
 
-  it('tag exist', async () => {
-    const tag = el.shadowRoot.querySelector('.tag');
+  it("tag exist", async () => {
+    const tag = el.shadowRoot.querySelector(".tag");
     expect(tag).to.exist;
   });
 
-  it('type attribute', () => {
+  it("type attribute", () => {
     expect(el.type).to.equal(data.type);
   });
 
-  it('size attribute', () => {
+  it("size attribute", () => {
     expect(el.size).to.equal(data.size);
   });
 
-  it('plain attribute', () => {
+  it("plain attribute", () => {
     expect(el.plain).to.exist;
   });
 
-  it('light attribute', () => {
+  it("light attribute", () => {
     expect(el.light).to.exist;
   });
 
-  it('color attribute', () => {
+  it("color attribute", () => {
     expect(el.color).to.equal(data.color);
   });
-  it('textcolor attribute', () => {
+  it("textcolor attribute", () => {
     expect(el.textcolor).to.equal(data.textcolor);
   });
 });
