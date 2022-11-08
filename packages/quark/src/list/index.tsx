@@ -63,12 +63,12 @@ class QuarkList extends QuarkElement {
   @property({
     type: Boolean
   })
-  immediateCheck: boolean = true;
+  immediatecheck: boolean = true;
 
   placeholderRef: any = createRef();
 
   componentDidMount() {
-    if(this.immediateCheck) {
+    if(this.immediatecheck) {
       setTimeout(() => this.check({ auto: true }), 50);
     }
     window.addEventListener('scroll', this.check, true);
