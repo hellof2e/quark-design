@@ -71,7 +71,7 @@ Set `slot='title'` to replace `title`.
 
 | Attribute    | Description                      | Type      | Default          |
 |--------------|----------------------------------|-----------|------------------|
-| open         | Whether to show popup            | `boolean` | `require` |
+| open         | Whether to show popup            | `boolean` | `false` |
 | title        | Title                            | `string`  |
 | subtitle     | Subtitle                         | `string`  |
 | hideclose    | Whether to hide the close button in the upper-right corner | `boolean` | `false`|

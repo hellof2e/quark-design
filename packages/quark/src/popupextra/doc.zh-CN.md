@@ -83,9 +83,9 @@ this.open = false
 
 | 参数         | 说明                             | 类型   | 默认值           |
 |--------------|----------------------------------|--------|------------------|
-| open         | 弹窗状态 | `boolean`              | `require` |
+| open         | 弹窗状态 | `boolean`              | `false` |
 | title        | 主标题              | `string` |
-| subtitle        | 主标题              | `string` |
+| subtitle        | 副标题              | `string` |
 | hideclose        | 是否隐藏右上角关闭按钮 | `boolean  `             | `false`|
 | round        | 是否圆角| `boolean  `             | `true`|
 | safearea     | 是否开启底部安全区域适配 | `boolean` | `false`   |
