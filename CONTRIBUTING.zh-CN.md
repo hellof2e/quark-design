@@ -4,7 +4,7 @@
 
 ## 开发配置
 
-* 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
+- 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
 
 ## 开始
 
@@ -64,10 +64,16 @@ type(ComponentName?)：commit message
 yarn clean
 ```
 
+Windows 电脑运行 yarn run link 时乱码？
+
+```
+// 在 git bash 中执行 yarn run link 命令
+```
+
 ## 结构
 
 ```
-├── README.MD 
+├── README.MD
 ├── demo.html
 ├── dev.md
 ├── example
