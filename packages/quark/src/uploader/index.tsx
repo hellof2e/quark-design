@@ -3,80 +3,82 @@ import QuarkElement, {
   property,
   createRef,
   customElement,
-  state
-} from '@quarkd/core';
+  state,
+} from "@quarkd/core";
 import {
   readFileContent,
   isOversize,
   UploaderFileListItem,
-  filterFiles
-} from './utils';
-import '@quarkd/icons/lib/camera-fill';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
-import imagePreview from '../imagepreview/index';
-import '../loading'
-import '../grid'
+  filterFiles,
+} from "./utils";
+import "@quarkd/icons/lib/camera-fill";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+import imagePreview from "../imagepreview/index";
+import "../loading";
+import "../grid";
 export interface Props {
-  accept?: string
-  name?: string
-  multiple?: boolean
-  preview?: boolean
-  capture?: boolean
-  maxcount?: number
-  maxsize?: number
-  disabled?: string
+  accept?: string;
+  name?: string;
+  multiple?: boolean;
+  preview?: boolean;
+  capture?: boolean;
+  maxcount?: number;
+  maxsize?: number;
+  disabled?: string;
 }
 export interface CustomEvent {
-  afterread?: (e: {detail: UploaderFileListItem | UploaderFileListItem[]}) => void
+  afterread?: (e: {
+    detail: UploaderFileListItem | UploaderFileListItem[];
+  }) => void;
 }
-@customElement({tag: 'quark-uploader', style})
+@customElement({ tag: "quark-uploader", style })
 class QuarkUploader extends QuarkElement {
   @property()
-  id: string = '';
+  id = "";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property()
-  iconcolor: string = '#ccc';
+  iconcolor = "#ccc";
 
   @property({ type: Boolean })
-  capture: boolean = false;
+  capture = false;
 
   @property({ type: Boolean })
-  preview: boolean = false;
+  preview = false;
 
   @property()
-  accept: string = 'image/*';
+  accept = "image/*";
 
   @property({ type: Boolean })
-  multiple: boolean = true;
+  multiple = true;
 
   @property({ type: Boolean })
-  hidedelete: boolean = false;
+  hidedelete = false;
 
   @property({ type: Boolean })
-  disabled: boolean = false;
+  disabled = false;
 
   @property({ type: Boolean })
-  readonly: boolean = false;
+  readonly = false;
 
   @property()
-  maxcount: number = 999;
+  maxcount = 999;
 
   @property()
   // 25M
-  maxsize: string = '26214400';
+  maxsize = "26214400";
 
   @state()
   tasks: any[] = [];
 
   @state()
-  fId: number = 0;
+  fId = 0;
 
   @state()
-  hiddenUpload: boolean = false;
+  hiddenUpload = false;
 
   inputRef: any = createRef();
 
@@ -86,24 +88,24 @@ class QuarkUploader extends QuarkElement {
 
   values: any[] = [];
 
-  previewStatus = false
+  previewStatus = false;
 
-  previewInstance: any = null
+  previewInstance: any = null;
 
   resetInput = () => {
-    if (this.inputRef.current) this.inputRef.current.value = '';
+    if (this.inputRef.current) this.inputRef.current.value = "";
   };
 
   componentDidMount(): void {
-    if(this.readonly) return
+    if (this.readonly) return;
     const { current } = this.inputRef;
     // 设置退出过度动画
     if (this.capture) {
       // 由关闭到打开
-      current.setAttribute('capture', this.capture);
+      current.setAttribute("capture", this.capture);
     }
     // 由打开到关闭
-    else current.removeAttribute('capture');
+    else current.removeAttribute("capture");
   }
 
   shouldComponentUpdate(
@@ -111,7 +113,7 @@ class QuarkUploader extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    const booleAttr = ['capture', 'multiple', 'disabled', 'deletable'];
+    const booleAttr = ["capture", "multiple", "disabled", "deletable"];
     const exit = booleAttr.includes(propName);
     if (exit && this.inputRef && this.inputRef.current) {
       const { current } = this.inputRef;
@@ -136,12 +138,12 @@ class QuarkUploader extends QuarkElement {
         this.tasks = [...this.tasks, items];
       }
       this.values = this.preview ? this.tasks.slice(0, this.maxcount) : [];
-      this.$emit('afterread', { detail: items });
+      this.$emit("afterread", { detail: items });
     }
   };
 
   readFile = (files: File | File[]) => {
-    const resultType = 'dataUrl';
+    const resultType = "dataUrl";
     if (Array.isArray(files)) {
       const remainCount = +this.maxcount - this.tasks.length;
       if (files.length > remainCount) {
@@ -152,9 +154,9 @@ class QuarkUploader extends QuarkElement {
           const fileList = (files as File[]).map((file, index) => {
             const result: UploaderFileListItem = {
               file,
-              status: 'done',
-              message: '',
-              id: this.fId + index 
+              status: "done",
+              message: "",
+              id: this.fId + index,
             };
             if (contents[index]) {
               result.content = contents[index] as string;
@@ -171,9 +173,9 @@ class QuarkUploader extends QuarkElement {
       readFileContent(files, resultType).then((content) => {
         const result: UploaderFileListItem = {
           file: files as File,
-          status: 'done',
-          message: '',
-          id: this.fId + 1
+          status: "done",
+          message: "",
+          id: this.fId + 1,
         };
         if (content) {
           result.content = content;
@@ -200,16 +202,16 @@ class QuarkUploader extends QuarkElement {
       files.length === 1 ? files[0] : ([].slice.call(files) as File[]);
     this.readFile(file);
     // @ts-ignore
-    e.target.value = ''
+    e.target.value = "";
   };
 
   // 设置初始化预览数据
   setPreview = (urls: string[]) => {
     const data = urls.map((i, index) => ({
-      status: 'done',
-      message: '',
+      status: "done",
+      message: "",
       id: index,
-      url: i
+      url: i,
     }));
     this.tasks = data;
     this.values = data;
@@ -217,80 +219,94 @@ class QuarkUploader extends QuarkElement {
   };
 
   onRemove = (e: Event, item: UploaderFileListItem, index: number) => {
-    if (!this.beforeDelete || typeof this.beforeDelete === 'function' && this.beforeDelete(item, {index})) {
+    if (
+      !this.beforeDelete ||
+      (typeof this.beforeDelete === "function" &&
+        this.beforeDelete(item, { index }))
+    ) {
       e.stopPropagation();
       const newData = this.tasks.filter((i) => i.id !== item.id);
       this.tasks = newData;
       this.values = newData;
-      this.$emit('onremove', { detail: item });
+      this.$emit("onremove", { detail: item });
     }
   };
 
   myImagePreview = (urls: UploaderFileListItem[], index: number) => {
-    if(this.previewStatus) return
-    this.previewStatus = true
-    const data = urls.map((i) => i.url || i.content || '');
+    if (this.previewStatus) return;
+    this.previewStatus = true;
+    const data = urls.map((i) => i.url || i.content || "");
     // eslint-disable-next-line
     this.previewInstance = imagePreview({ images: data, startPosition: index });
-    this.previewStatus = false
+    this.previewStatus = false;
   };
 
   // 设置状态
   setStatus(file: UploaderFileListItem) {
-    this.tasks = this.tasks.map(i => {
+    this.tasks = this.tasks.map((i) => {
       if (i.id === file.id) {
-        Object.assign(i, file)
+        Object.assign(i, file);
       }
-      return i
-    })
+      return i;
+    });
   }
 
   closePreview() {
-    if (this.previewInstance) this.previewInstance.close()
+    if (this.previewInstance) this.previewInstance.close();
   }
-  
+
   render() {
     const { capture, accept, multiple, name, id, disabled } = this;
     const hiddenUpload = this.tasks.length >= Number(this.maxcount);
     const showTasks = this.preview ? this.tasks.slice(0, this.maxcount) : [];
     return (
       <Fragment>
-        {!this.readonly && <div class="quark-uploader" style={{ display: !hiddenUpload ? 'block' : 'none' }}>
-          <slot
-            name="uploader"
+        {!this.readonly && (
+          <div
+            class="quark-uploader"
+            style={{ display: !hiddenUpload ? "block" : "none" }}
           >
-            <div class="quark-uploader-icon">
-              <quark-icon-camera-fill size="32" color={this.iconcolor} />
-            </div>
-          </slot>
-          <input
-            ref={this.inputRef}
-            name={name}
-            id={id}
-            type="file"
-            accept={accept}
-            multiple={multiple}
-            // @ts-ignore
-            capture={capture}
-            // @ts-ignore
-            onchange={this.onChange}
-            disabled={disabled}
-          />
-        </div>}
+            <slot name="uploader">
+              <div class="quark-uploader-icon">
+                <quark-icon-camera-fill size="32" color={this.iconcolor} />
+              </div>
+            </slot>
+            <input
+              ref={this.inputRef}
+              name={name}
+              id={id}
+              type="file"
+              accept={accept}
+              multiple={multiple}
+              // @ts-ignore
+              capture={capture}
+              // @ts-ignore
+              onchange={this.onChange}
+              disabled={disabled}
+            />
+          </div>
+        )}
         {showTasks.map((item, index, n) => (
           <div
             class="quark-uploader-preview-item"
             key={item.id}
-            onClick={() => this.myImagePreview(n, index )}
+            onClick={() => this.myImagePreview(n, index)}
           >
-            {item.status === 'uploading' && <div class="uploading" slot="uploading">
-              <quark-loading type="circular" color='#fff' />
-              <span class='uploading-text'>{item.message}</span>
-            </div>}
+            {item.status === "uploading" && (
+              <div class="uploading" slot="uploading">
+                <quark-loading type="circular" color="#fff" />
+                <span class="uploading-text">{item.message}</span>
+              </div>
+            )}
             <img src={item.url || item.content} />
-            {(!this.hidedelete && !this.readonly) && <span class="quark-uploader-remove" onClick={(e) => this.onRemove(e, item, index)}>
-              <quark-icon-close />
-            </span>}
+            {!this.hidedelete && !this.readonly && (
+              <span
+                class="quark-uploader-remove"
+                onClick={(e) => this.onRemove(e, item, index)}
+              >
+                <quark-icon-close />
+              </span>
+            )}
           </div>
         ))}
       </Fragment>

@@ -1,50 +1,54 @@
-import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/tabbar-item';
+import { expect, fixture } from "@open-wc/testing";
+import "../../../lib/tabbar-item";
 
 const data = {
-  label: 'home',
-  icon: 'home',
-  iconsize: '20',
-  name: 'home',
-  badgecontent: '20',
-}
+  label: "home",
+  icon: "home",
+  iconsize: "20",
+  name: "home",
+  badgecontent: "20",
+};
 let el;
 
-describe('<quark-tabbar-item>', async () => {
-  it('element exist', async () => {
+describe("<quark-tabbar-item>", async () => {
+  it("element exist", async () => {
     el = await fixture(
-        `<quark-tabbar-item>
-        </quark-tabbar-item>`);
-    const item  = el.shadowRoot.querySelector('.tabbar-item');
+      `<quark-tabbar-item>
+        </quark-tabbar-item>`
+    );
+    const item = el.shadowRoot.querySelector(".tabbar-item");
     expect(item).to.exist;
   });
 
-
-  it('icon attribute', async () => {
+  it("icon attribute", async () => {
     el = await fixture(
-        `<quark-tabbar-item icon=${data.icon}>
-        </quark-tabbar-item>`);
+      `<quark-tabbar-item icon=${data.icon}>
+        </quark-tabbar-item>`
+    );
     expect(el.icon).to.equal(data.icon);
   });
 
-  it('iconsize attribute', async () => {
+  it("iconsize attribute", async () => {
     el = await fixture(
-        `<quark-tabbar-item iconsize=${data.iconsize}>
-        </quark-tabbar-item>`);
+      `<quark-tabbar-item iconsize=${data.iconsize}>
+        </quark-tabbar-item>`
+    );
     expect(el.iconsize).to.equal(data.iconsize);
   });
 
-  it('name attribute', async () => {
+  it("name attribute", async () => {
     el = await fixture(
-        `<quark-tabbar-item name=${data.name}>
-        </quark-tabbar-item>`);
+      `<quark-tabbar-item name=${data.name}>
+        </quark-tabbar-item>`
+    );
     expect(el.name).to.equal(data.name);
   });
 
-  it('badgecontent attribute', async () => {
+  it("badgecontent attribute", async () => {
     el = await fixture(
-        `<quark-tabbar-item badgecontent=${data.badgecontent}>
-        </quark-tabbar-item>`);
+      `<quark-tabbar-item badgecontent=${data.badgecontent}>
+        </quark-tabbar-item>`
+    );
     expect(el.badgecontent).to.equal(data.badgecontent);
   });
 
@@ -58,5 +62,4 @@ describe('<quark-tabbar-item>', async () => {
   //   const slotResult = node.assignedNodes()[0];
   //   expect(slotResult.outerHTML).to.equal(slot);
   // });
-
 });

@@ -1,4 +1,4 @@
-import QuarkElement from './index';
+import QuarkElement from "./index";
 
 type TypeHint = typeof Boolean | typeof Number | typeof String;
 type converterFunction = (val: any, type?: TypeHint) => any;

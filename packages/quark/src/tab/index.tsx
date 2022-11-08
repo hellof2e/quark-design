@@ -2,86 +2,86 @@ import QuarkElement, {
   customElement,
   property,
   state,
-  createRef
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public'
-import '../sticky';
-import tabs from './tabs-style.css';
-import tab from './tab-style.css';
+  createRef,
+} from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import "../sticky";
+import tabs from "./tabs-style.css";
+import tab from "./tab-style.css";
 export interface ContentProps {
-  label: string
-  disabled?: boolean
-  name: string
+  label: string;
+  disabled?: boolean;
+  name: string;
 }
 export interface Props {
-  activekey?: string
-  sticky?: boolean
-  offsettop?: number
-  linewidth?: number
+  activekey?: string;
+  sticky?: boolean;
+  offsettop?: number;
+  linewidth?: number;
 }
 export interface CustomEvent {
-  change: (e: {detail: {label: string, name: string}}) => void
+  change: (e: { detail: { label: string; name: string } }) => void;
 }
-@customElement('quark-tab-content')
+@customElement("quark-tab-content")
 class QuarkTabContent extends QuarkElement {
   @property()
-  label: string = '';
+  label = "";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   render() {
     return <slot></slot>;
   }
 }
 
-@customElement({tag: 'quark-tabs', style: tabs})
+@customElement({ tag: "quark-tabs", style: tabs })
 class QuarkTabs extends QuarkElement {
   @property()
-  activekey: string = '0';
+  activekey = "0";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  sticky: boolean = false;
+  sticky = false;
 
   @property()
-  offsettop: string = '0vw';
+  offsettop = "0vw";
 
   @property()
-  linewidth: string = '40px';
+  linewidth = "40px";
 
   @state()
-  init: boolean = false;
+  init = false;
 
   @state()
   tabNavs: Array<any> = [];
 
   @state()
-  leftIndex: number = 0;
+  leftIndex = 0;
 
   @state()
   tabPos: any = {};
 
   @state()
-  startX: number = 0;
+  startX = 0;
 
   @state()
-  startY: number = 0;
+  startY = 0;
 
   @state()
-  endX: number = 0;
+  endX = 0;
 
   @state()
-  endY: number = 0;
+  endY = 0;
 
   @state()
-  tabLineStyle: string = '';
+  tabLineStyle = "";
 
   slotRef: any = createRef();
 
@@ -98,25 +98,25 @@ class QuarkTabs extends QuarkElement {
     oldValue: string,
     newValue: string
   ): void {
-    if (propName === 'activekey' && oldValue !== newValue && this.init) {
+    if (propName === "activekey" && oldValue !== newValue && this.init) {
       this.handleChange(newValue);
     }
   }
 
-  handleChange = (activekey = '0') => {
+  handleChange = (activekey = "0") => {
     let active = this.tabPos[activekey];
     this.activekey = activekey;
     const assignedNodes = this.slotRef.current?.assignedNodes();
-    const elements = slotAssignedElements(assignedNodes)
+    const elements = slotAssignedElements(assignedNodes);
     if (active === undefined) {
       this.activekey = elements[0].name;
       active = this.tabPos[this.activekey];
     }
     elements.forEach((item: HTMLElement) => {
-      if (item.getAttribute('name') === this.activekey) {
-        item.setAttribute('active', '');
+      if (item.getAttribute("name") === this.activekey) {
+        item.setAttribute("active", "");
       } else {
-        item.removeAttribute('active');
+        item.removeAttribute("active");
       }
     });
     this.navRef.current.parentNode.scrollLeft =
@@ -125,13 +125,13 @@ class QuarkTabs extends QuarkElement {
       this.navRef.current.parentNode.offsetWidth / 2;
     const pre = this.navRef.current.querySelector(`quark-tab-nav[active]`);
     if (pre) {
-      pre.removeAttribute('active');
+      pre.removeAttribute("active");
     }
     const cur = this.navRef.current.querySelector(
       `quark-tab-nav[name='${activekey}']`
     );
     if (cur) {
-      cur.setAttribute('active', true);
+      cur.setAttribute("active", true);
     }
     this.initTabLine();
     this.initTabContent();
@@ -179,9 +179,9 @@ class QuarkTabs extends QuarkElement {
     if (!active) {
       return;
     }
-    const keys = Object.keys(this.tabPos)
+    const keys = Object.keys(this.tabPos);
     if (active.index <= 0 && keys.length > 0) {
-      this.activekey = keys[keys.length -1]
+      this.activekey = keys[keys.length - 1];
       return;
     }
     const preIndex = active.index - 1;
@@ -191,12 +191,12 @@ class QuarkTabs extends QuarkElement {
       const item = this.tabPos[key];
       if (item.index === preIndex) {
         activeKey = key;
-        prevItem = item
+        prevItem = item;
       }
     });
-    if(prevItem && prevItem.disabled) {
+    if (prevItem && prevItem.disabled) {
       this.activekey = activeKey;
-      this.prevSlider()
+      this.prevSlider();
       return;
     }
 
@@ -214,7 +214,7 @@ class QuarkTabs extends QuarkElement {
     }
     const keys = Object.keys(this.tabPos);
     if (active.index >= keys.length - 1) {
-      this.activekey = keys[0]
+      this.activekey = keys[0];
       return;
     }
     const nextIndex = active.index + 1;
@@ -224,15 +224,15 @@ class QuarkTabs extends QuarkElement {
       const item = this.tabPos[key];
       if (item.index === nextIndex) {
         activeKey = key;
-        nextItem = item
+        nextItem = item;
       }
     });
-    if(nextItem && nextItem.disabled) {
+    if (nextItem && nextItem.disabled) {
       this.activekey = activeKey;
-      this.nextSlider()
-      return
+      this.nextSlider();
+      return;
     }
-    console.log(nextItem)
+    console.log(nextItem);
     if (!activeKey) {
       return;
     }
@@ -254,7 +254,7 @@ class QuarkTabs extends QuarkElement {
 
   initTabNavs = () => {
     const assignedNodes = this.slotRef.current?.assignedNodes();
-    const elements = slotAssignedElements(assignedNodes)
+    const elements = slotAssignedElements(assignedNodes);
     elements.forEach((item: any, index: number) => {
       if (item.name === null) {
         item.name = String(index);
@@ -262,21 +262,21 @@ class QuarkTabs extends QuarkElement {
       this.tabNavs.push({
         disabled: item.disabled,
         name: item.name,
-        label: item.label
+        label: item.label,
       });
     });
     this.init = true;
   };
 
   initTabLine = () => {
-    const items = this.navRef.current?.querySelectorAll('quark-tab-nav');
+    const items = this.navRef.current?.querySelectorAll("quark-tab-nav");
     Array.from(items).forEach((item: any, index) => {
       this.tabPos[item.name] = {
         index: index,
         width: item.offsetWidth,
         left: item.offsetLeft,
         label: item.textContent,
-        disabled: item.disabled
+        disabled: item.disabled,
       };
     });
   };
@@ -284,16 +284,16 @@ class QuarkTabs extends QuarkElement {
   initTabContent = () => {
     let active = this.tabPos[this.activekey];
     const assignedNodes = this.slotRef.current?.assignedNodes();
-    const elements = slotAssignedElements(assignedNodes)
+    const elements = slotAssignedElements(assignedNodes);
     if (active === undefined) {
       this.activekey = elements[0].name;
       active = this.tabPos[this.activekey];
     }
     elements.forEach((item: any) => {
-      if (item.getAttribute('name') === this.activekey) {
-        item.setAttribute('active', '');
+      if (item.getAttribute("name") === this.activekey) {
+        item.setAttribute("active", "");
       } else {
-        item.removeAttribute('active');
+        item.removeAttribute("active");
       }
     });
     this.tabLineStyle = this.getLineStyle(active?.width, active?.left);
@@ -302,8 +302,8 @@ class QuarkTabs extends QuarkElement {
 
   getLineStyle = (labelWidth: number, labelOffset: number) => {
     let lineWidth: string | number = this.linewidth;
-    if (lineWidth.includes('px')) {
-      lineWidth.replace('px', '');
+    if (lineWidth.includes("px")) {
+      lineWidth.replace("px", "");
     }
     lineWidth = parseInt(lineWidth, 10);
     const tranX = labelOffset + (labelWidth - lineWidth) * 0.5;
@@ -315,11 +315,11 @@ class QuarkTabs extends QuarkElement {
       return;
     }
     this.handleChange(item.name);
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
         name: item.name,
-        label: item.label || ''
-      }
+        label: item.label || "",
+      },
     });
   };
 
@@ -345,7 +345,7 @@ class QuarkTabs extends QuarkElement {
 
   render() {
     const style = {
-      transform: `translateX(${-this.leftIndex * 100}%)`
+      transform: `translateX(${-this.leftIndex * 100}%)`,
     };
     return (
       <div class="quark-tabs">
@@ -373,17 +373,17 @@ class QuarkTabs extends QuarkElement {
   }
 }
 
-@customElement({tag: 'quark-tab-nav', style: tab})
+@customElement({ tag: "quark-tab-nav", style: tab })
 class QuarkTabNav extends QuarkElement {
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  active: boolean = false;
+  active = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property()
   name: string | number = 0;
@@ -392,11 +392,11 @@ class QuarkTabNav extends QuarkElement {
     if (this.active || this.disabled) {
       return;
     }
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
         name: this.name,
-        label: this.innerHTML || ''
-      }
+        label: this.innerHTML || "",
+      },
     });
   };
 

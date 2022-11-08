@@ -1,28 +1,25 @@
-import QuarkElement, {
-  property,
-  customElement,
-} from '@quarkd/core';
-import style from './style.css';
+import QuarkElement, { property, customElement } from "@quarkd/core";
+import style from "./style.css";
 export interface Props {
-  label: string
-  badgecontent?: string
-  name: string
+  label: string;
+  badgecontent?: string;
+  name: string;
 }
-@customElement({tag: 'quark-tabbar-item', style})
+@customElement({ tag: "quark-tabbar-item", style })
 class QuarkTabbarItem extends QuarkElement {
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  active: boolean = false;
+  active = false;
 
   @property()
-  icon: string = '';
+  icon = "";
 
   @property()
-  iconsize: string = '20';
+  iconsize = "20";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property()
   badgetype: string;
@@ -37,7 +34,7 @@ class QuarkTabbarItem extends QuarkElement {
   activecolor: string;
 
   @property()
-  label: string = '';
+  label = "";
 
   renderIcon = () => {
     if (this.querySelector("[slot='icon']")) {
@@ -49,14 +46,19 @@ class QuarkTabbarItem extends QuarkElement {
   render() {
     return (
       <div class="quark-tabbar-item">
-        <quark-badge type={this.badgetype ? this.badgetype : 'round'} content={this.badgecontent}>
+        <quark-badge
+          type={this.badgetype ? this.badgetype : "round"}
+          content={this.badgecontent}
+        >
           <div
             class="quark-tabbar-slot"
             style={{
-              color: this.active ? this.activecolor : this.inactivecolor
+              color: this.active ? this.activecolor : this.inactivecolor,
             }}
           >
-            <div class="quark-tabbar-icon"><slot name="icon"></slot></div>
+            <div class="quark-tabbar-icon">
+              <slot name="icon"></slot>
+            </div>
             <span class="quark-tabbar-text">{this.label}</span>
           </div>
         </quark-badge>

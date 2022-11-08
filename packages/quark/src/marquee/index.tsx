@@ -3,26 +3,26 @@ import QuarkElement, {
   property,
   customElement,
   createRef,
-  state
-} from '@quarkd/core';
-import style from './style.css';
+  state,
+} from "@quarkd/core";
+import style from "./style.css";
 export interface Props {
-  title: string
-  speed?: number
+  title: string;
+  speed?: number;
 }
 @customElement({
-  tag: 'quark-marquee',
+  tag: "quark-marquee",
   style,
 })
 class QuarkMarquee extends QuarkElement {
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  speed: string = '50';
+  speed = "50";
 
   @state()
-  animating: boolean = false;
+  animating = false;
 
   titleRef: any = createRef();
 
@@ -40,17 +40,17 @@ class QuarkMarquee extends QuarkElement {
     const text = this.titleRef.current;
     if (container.offsetWidth >= text.offsetWidth) {
       this.animating = false;
-      text.style.removeProperty('transition-duration');
-      text.style.removeProperty('transform');
+      text.style.removeProperty("transition-duration");
+      text.style.removeProperty("transform");
       return;
     }
 
     if (this.animating) return;
 
     const initial = !text.style.transform;
-    text.style.transitionDuration = '0s';
+    text.style.transitionDuration = "0s";
     if (initial) {
-      text.style.transform = 'translateX(0)';
+      text.style.transform = "translateX(0)";
     } else {
       text.style.transform = `translateX(${container.offsetWidth}px)`;
     }

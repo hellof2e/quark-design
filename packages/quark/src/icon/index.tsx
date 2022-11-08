@@ -1,9 +1,9 @@
-import QuarkElement, { customElement } from '@quarkd/core';
-import style from './style.css';
+import QuarkElement, { customElement } from "@quarkd/core";
+import style from "./style.css";
 
 @customElement({
-  tag: 'quark-icon',
-  style
+  tag: "quark-icon",
+  style,
 })
 class QuarkIcon extends QuarkElement {
   render() {

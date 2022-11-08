@@ -1,37 +1,32 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 
-import style from './style.css';
+import style from "./style.css";
 export interface Props {
-  offsettop?: number
-  zindex?: number
+  offsettop?: number;
+  zindex?: number;
 }
-@customElement({tag: 'quark-sticky', style})
+@customElement({ tag: "quark-sticky", style })
 class QuarkSticky extends QuarkElement {
   constructor() {
     super();
   }
 
   @property()
-  offsettop: string = '0vw';
+  offsettop = "0vw";
 
   @property()
-  zindex: string = '99';
+  zindex = "99";
 
   containerRef: any = createRef();
 
   stickyRef: any = createRef();
 
-
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollEvent);
+    window.addEventListener("scroll", this.scrollEvent);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.scrollEvent);
+    window.removeEventListener("scroll", this.scrollEvent);
   }
 
   scrollEvent = () => {
@@ -47,17 +42,17 @@ class QuarkSticky extends QuarkElement {
       containerCurrent.getBoundingClientRect().top <=
       this.convertVw(this.offsettop)
     ) {
-      stickyCurrent.classList.add('sticky--fixed');
+      stickyCurrent.classList.add("sticky--fixed");
       stickyCurrent.style.top = this.offsettop;
       stickyCurrent.style.zIndex = this.zindex;
     } else {
-      stickyCurrent.classList.remove('sticky--fixed');
-      stickyCurrent.style = '';
+      stickyCurrent.classList.remove("sticky--fixed");
+      stickyCurrent.style = "";
     }
   };
 
   convertVw(value: string) {
-    value = value.replace(/vw/g, '');
+    value = value.replace(/vw/g, "");
     return (+value * document.body.clientWidth) / 100;
   }
 

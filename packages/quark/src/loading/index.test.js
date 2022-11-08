@@ -1,11 +1,11 @@
-import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/loading';
+import { expect, fixture } from "@open-wc/testing";
+import "../../../lib/loading";
 let el;
 const data = {
-  color:'red',
-  size:40
-}
-describe('quark-loading', async () => {
+  color: "red",
+  size: 40,
+};
+describe("quark-loading", async () => {
   before(async () => {
     el = await fixture(
       `<quark-loading color=${data.color} size=${data.size}>
@@ -13,8 +13,8 @@ describe('quark-loading', async () => {
       </quark-loading>`
     );
   });
-  it('quark-loading exist', async () => {
-    const loading = el.shadowRoot.querySelector('.spinner-loading');
+  it("quark-loading exist", async () => {
+    const loading = el.shadowRoot.querySelector(".spinner-loading");
     expect(loading).to.exist;
   });
 
@@ -22,5 +22,4 @@ describe('quark-loading', async () => {
   //   expect(el.color).to.equal(data.color);
   //   expect(el.size).to.equal(data.size);
   // });
-
 });

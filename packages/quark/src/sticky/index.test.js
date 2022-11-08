@@ -1,23 +1,24 @@
-import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/sticky/index';
+import { expect, fixture } from "@open-wc/testing";
+import "../../../lib/sticky/index";
 const data = {
-  'offsettop': '17vw'
-}
+  offsettop: "17vw",
+};
 let el;
-describe('<quark-sticky>', async () => {
+describe("<quark-sticky>", async () => {
   before(async () => {
     el = await fixture(
-    `<quark-sticky offsettop=${data.offsettop}>
+      `<quark-sticky offsettop=${data.offsettop}>
       <div>基础用法</div>
-    </quark-badge>`);
+    </quark-badge>`
+    );
   });
 
-  it('sticky exist', async () => {
-    const sticky = el.shadowRoot.querySelector('#container');
+  it("sticky exist", async () => {
+    const sticky = el.shadowRoot.querySelector("#container");
     expect(sticky).to.exist;
   });
 
-  it('offsettop attribute', () => {
+  it("offsettop attribute", () => {
     expect(el.offsettop).to.equal(data.offsettop);
   });
 });

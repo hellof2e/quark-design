@@ -1,40 +1,44 @@
 <template>
-	<div class="demo uploader-demo">
-		<h2>{{ translate("basic") }}</h2>
-		<div class="flex">
-			<quark-uploader @afterread="afterRead" :preview="isPreview" />
-		</div>
-		<h2>{{ translate("preview") }}</h2>
-		<div class="flex">
-			<quark-uploader @afterread="afterRead" ref="preview" preview></quark-uploader>
-		</div>
-		<h2>{{ translate("limit") }}</h2>
-		<div class="flex">
-			<quark-uploader maxcount="2" preview></quark-uploader>
-		</div>
-		<h2>{{ translate("size") }}</h2>
-		<quark-uploader
-			maxsize="1024"
-			@oversize="oversize"
-			ref="oversize"
-		></quark-uploader>
-		<h2>{{ translate("custom") }}</h2>
-		<div class="flex">
-			<quark-uploader preview>
-				<quark-button type="primary" slot="uploader" icon="home">{{
-					translate("file")
-				}}</quark-button>
-			</quark-uploader>
-		</div>
-		<h2>{{ translate("before") }}</h2>
-		<quark-uploader preview ref="before"></quark-uploader>
-		<h2>{{ translate("disabled") }}</h2>
-		<quark-uploader preview :disabled="true"></quark-uploader>
+  <div class="demo uploader-demo">
+    <h2>{{ translate("basic") }}</h2>
+    <div class="flex">
+      <quark-uploader @afterread="afterRead" :preview="isPreview" />
+    </div>
+    <h2>{{ translate("preview") }}</h2>
+    <div class="flex">
+      <quark-uploader
+        @afterread="afterRead"
+        ref="preview"
+        preview
+      ></quark-uploader>
+    </div>
+    <h2>{{ translate("limit") }}</h2>
+    <div class="flex">
+      <quark-uploader maxcount="2" preview></quark-uploader>
+    </div>
+    <h2>{{ translate("size") }}</h2>
+    <quark-uploader
+      maxsize="1024"
+      @oversize="oversize"
+      ref="oversize"
+    ></quark-uploader>
+    <h2>{{ translate("custom") }}</h2>
+    <div class="flex">
+      <quark-uploader preview>
+        <quark-button type="primary" slot="uploader" icon="home">{{
+          translate("file")
+        }}</quark-button>
+      </quark-uploader>
+    </div>
+    <h2>{{ translate("before") }}</h2>
+    <quark-uploader preview ref="before"></quark-uploader>
+    <h2>{{ translate("disabled") }}</h2>
+    <quark-uploader preview :disabled="true"></quark-uploader>
     <h2>{{ translate("previewMode") }}</h2>
-		<div class="flex">
-		<quark-uploader ref="preview2" preview readonly />
-		</div>
-	</div>
+    <div class="flex">
+      <quark-uploader ref="preview2" preview readonly />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -42,114 +46,114 @@ import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("uploader");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onMounted, onBeforeMount } from "vue";
-import { onBeforeRouteLeave } from "vue-router"
+import { onBeforeRouteLeave } from "vue-router";
 import Toast from "../toast";
 
 export default createDemo({
-	setup() {
-		const isPreview = ref(false);
-		const preview = ref(null);
+  setup() {
+    const isPreview = ref(false);
+    const preview = ref(null);
     const preview2 = ref(null);
-		const before = ref(null);
-		const previewUrls = [
-			"https://img.yzcdn.cn/vant/leaf.jpg",
-			"https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
-		];
-		onBeforeMount(() => {
-			useTranslate({
-				"zh-CN": {
-					basic: "基础用法",
-					preview: "文件预览",
+    const before = ref(null);
+    const previewUrls = [
+      "https://img.yzcdn.cn/vant/leaf.jpg",
+      "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
+    ];
+    onBeforeMount(() => {
+      useTranslate({
+        "zh-CN": {
+          basic: "基础用法",
+          preview: "文件预览",
           previewMode: "预览模式",
-					limit: "限制上传数量",
-					size: "限制上传大小",
-					custom: "自定义上传样式",
-					file: "上传文件",
-					before: "上传前置",
-					disabled: "禁止上传",
-					toast: {
-						format: "请上传 jpg 格式图片",
-						overSize: "有文件超过1KB了哦",
-					},
-				},
-				"en-US": {
-					basic: "Basic Usage",
-					preview: "File Preview",
+          limit: "限制上传数量",
+          size: "限制上传大小",
+          custom: "自定义上传样式",
+          file: "上传文件",
+          before: "上传前置",
+          disabled: "禁止上传",
+          toast: {
+            format: "请上传 jpg 格式图片",
+            overSize: "有文件超过1KB了哦",
+          },
+        },
+        "en-US": {
+          basic: "Basic Usage",
+          preview: "File Preview",
           previewMode: "File Preview Mode",
-					limit: "Limit Uploads Number",
-					size: "Limit Uploads Size",
-					custom: "Custom Upload Style",
-					file: "Upload File",
-					before: "Before Uploading",
-					disabled: "Disabled",
-					toast: {
-						format: "Please upload image in jpg format",
-						overSize: "There are files over 1KB",
-					},
-				},
-			});
-		});
-		onMounted(() => {
-			preview.value.setPreview(previewUrls);
+          limit: "Limit Uploads Number",
+          size: "Limit Uploads Size",
+          custom: "Custom Upload Style",
+          file: "Upload File",
+          before: "Before Uploading",
+          disabled: "Disabled",
+          toast: {
+            format: "Please upload image in jpg format",
+            overSize: "There are files over 1KB",
+          },
+        },
+      });
+    });
+    onMounted(() => {
+      preview.value.setPreview(previewUrls);
       preview2.value.setPreview(previewUrls);
-			before.value.beforeUpload = beforeUpload;
-		});
+      before.value.beforeUpload = beforeUpload;
+    });
     const sleep = (time) => {
-      return new Promise(reslove => {
+      return new Promise((reslove) => {
         setTimeout(() => {
-          reslove(true)
-        }, time)
-      })
-    }
-		const beforeUpload = (files) => {
-			const r = files.every((file) => file.type === "image/jpg");
-			if (!r) {
-				Toast.text(`${translate("toast.format")}`);
-				return false;
-			}
-			return true;
-		};
-		const oversize = () => {
-			Toast.text(`${translate("toast.overSize")}`);
-		};
+          reslove(true);
+        }, time);
+      });
+    };
+    const beforeUpload = (files) => {
+      const r = files.every((file) => file.type === "image/jpg");
+      if (!r) {
+        Toast.text(`${translate("toast.format")}`);
+        return false;
+      }
+      return true;
+    };
+    const oversize = () => {
+      Toast.text(`${translate("toast.overSize")}`);
+    };
     const uploadAction = async (item) => {
       preview.value.setStatus({
-          ...item,
-          status: 'uploading',
-          message: '上传中'
-        })
-      await sleep(2000)
+        ...item,
+        status: "uploading",
+        message: "上传中",
+      });
+      await sleep(2000);
       preview.value.setStatus({
         ...item,
-        status: 'done'
-      })
-      Toast.success('上传成功')
-    }
-		const afterRead = async({ detail: file }) => {
-      if(Array.isArray(file)) {
-        for(let i = 0; i < file.length; i++) {
-          const item = file[i]
-          uploadAction(item)
+        status: "done",
+      });
+      Toast.success("上传成功");
+    };
+    const afterRead = async ({ detail: file }) => {
+      if (Array.isArray(file)) {
+        for (let i = 0; i < file.length; i++) {
+          const item = file[i];
+          uploadAction(item);
         }
-      }else {
-        uploadAction(file)
+      } else {
+        uploadAction(file);
       }
-		};
+    };
     onBeforeRouteLeave(() => {
-      const nodes = document.querySelectorAll('quark-image-preview ')
-      nodes.forEach(i => i.open = false )
-    })
-		return {
-			isPreview,
-			preview,
+      const nodes = document.querySelectorAll("quark-image-preview ");
+      nodes.forEach((i) => (i.open = false));
+    });
+    return {
+      isPreview,
+      preview,
       preview2,
-			before,
-			beforeUpload,
-			oversize,
-			afterRead,
-			translate,
-		};
-	},
+      before,
+      beforeUpload,
+      oversize,
+      afterRead,
+      translate,
+    };
+  },
 });
 </script>
 <style src="./demo.scss"></style>
