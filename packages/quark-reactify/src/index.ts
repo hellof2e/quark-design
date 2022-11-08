@@ -5,8 +5,12 @@
  * */
 import { Component, createRef, createElement, forwardRef } from "react";
 
+type Props = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLElement>,
+  HTMLElement
+>;
 const reactifyWebComponent = (WC: any) => {
-  class Reactified extends Component {
+  class Reactified extends Component<Props> {
     eventHandlers: any[];
 
     ref;

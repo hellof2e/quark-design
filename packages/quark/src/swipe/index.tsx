@@ -24,7 +24,7 @@ export interface CustomEvent {
 @customElement({ tag: "quark-swipe-item", style: swipeItemStyle })
 class QuarkSwipeItem extends QuarkElement {
   componentDidMount() {
-    const { parentNode } = this;
+    const parentNode = this.parentNode as QuarkSwipe;
     if (parentNode && parentNode.moveWidth) {
       this.style.width = `${parentNode.moveWidth}px`;
     }
@@ -131,7 +131,6 @@ class QuarkSwipe extends QuarkElement {
   handleTouchEnd = () => {
     const angle = this.angle(
       { X: this.startX, Y: this.startY },
-      // @ts-ignore
       { X: this.endX, Y: this.endY }
     );
     if (this.endX === undefined || this.endY === undefined) {
