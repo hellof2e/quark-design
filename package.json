@@ -38,6 +38,7 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
+		"lint-staged": "^10.5.4",
     "ora": "^5.1.2",
     "prettier": "^2.0.0",
     "shelljs": "^0.8.5",
@@ -48,5 +49,15 @@
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
-  }
+  },
+	"lint-staged": {
+		"src/**/*.{vue, js,jsx,ts,tsx,json}": [
+			"git add"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	}
 }
