@@ -1,2 +1,2 @@
-import Toast from 'quarkd/lib/toast';
+import Toast from "quarkd/lib/toast";
 export default Toast;
