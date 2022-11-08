@@ -1,36 +1,42 @@
-import { classNames } from '../../utils/index';
+import { classNames } from "../../utils/index";
 import QuarkElement, {
   customElement,
   property,
   state,
   createRef,
-} from '@quarkd/core';
-import style from './style.css';
-
+} from "@quarkd/core";
+import style from "./style.css";
+export interface Props {
+  type?: "dot" | "round" | "label";
+  content?: string;
+  size?: "normal" | "big";
+  border?: boolean;
+  max?: number;
+}
 @customElement({
-  tag: 'quark-badge',
+  tag: "quark-badge",
   style,
 })
 class QuarkBadge extends QuarkElement {
   @property()
-  type: string = 'round';
+  type = "round";
 
   @property()
-  content: string = '';
+  content = "";
 
   @property()
-  size: string = 'normal';
+  size = "normal";
 
   @property({
     type: Boolean,
   })
-  border: boolean = false;
+  border = false;
 
   @property()
-  max: string = '99';
+  max = "99";
 
   @state()
-  classNames: string = '';
+  classNames = "";
 
   slotRef: any = createRef();
 
@@ -43,19 +49,21 @@ class QuarkBadge extends QuarkElement {
   }
 
   dealClass = () => {
-    this.classNames = classNames('quark-badge-dealclass', {
-      'quark-badge-fixed': this.slotRef.current?.assignedNodes().length,
-      'quark-badge-hide': this.type !== 'dot' && (this.content === null || this.content === undefined || !this.content),
+    this.classNames = classNames("quark-badge-dealclass", {
+      "quark-badge-fixed": this.slotRef.current?.assignedNodes().length,
+      "quark-badge-hide":
+        this.type !== "dot" &&
+        (this.content === null || this.content === undefined || !this.content),
     });
   };
 
   renderContent = () => {
     if (
-      /\d/g.test(this.content)
-      && /\d/g.test(this.max)
-      && Number(this.content) > Number(this.max)
+      /\d/g.test(this.content) &&
+      /\d/g.test(this.max) &&
+      Number(this.content) > Number(this.max)
     ) {
-      return '...';
+      return "...";
     }
     return this.content;
   };

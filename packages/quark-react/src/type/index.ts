@@ -1,8 +1,17 @@
-export interface componentBaseInterface {
-    className?: string
-    key?: string 
-    children?: any
-    slot?: string
-    name?: string
-    onClick?: () => void
+export interface baseInterface
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLElement>,
+    HTMLElement
+  > {
+  name?: string;
 }
+export type componentBaseInterface = Omit<
+  baseInterface,
+  "onChange" | "onSelect" | "onFocus" | "onInput" | "onBlur"
+>;
+export type ReactifyProps<
+  Props extends Record<string, any>,
+  Event extends Record<string, any>
+> = Props & {
+  [E in keyof Event as E extends string ? `on${Capitalize<E>}` : E]: Event[E];
+};

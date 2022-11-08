@@ -1,53 +1,59 @@
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock';
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import QuarkElement, {
   Fragment,
   property,
   customElement,
-  createRef
-} from '@quarkd/core';
-import '../button';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
-import '../overlay';
-import Locale from '../locale';
+  createRef,
+} from "@quarkd/core";
+import "../button";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+import "../overlay";
+import Locale from "../locale";
 
-type DialogParams = {
-  title?: string,
-  content?: string,
-  oktext?: string,
-  canceltext?: string,
-  confirm: () => void,
-  cancel: () => void,
-  close: () => void,
-  zindex?: number,
-  autoclose?: boolean,
-  notitle?: boolean,
-  nofooter?: boolean,
-  type?: string,
-	hideclose?: boolean,
-	maskclosable?: boolean,
-  btnvertical?: boolean,
+interface DialogParams {
+  title?: string;
+  content?: string;
+  oktext?: string;
+  canceltext?: string;
+  zindex?: number;
+  autoclose?: boolean;
+  notitle?: boolean;
+  nofooter?: boolean;
+  type?: "modal" | "confirm";
+  hideclose?: boolean;
+  maskclosable?: boolean;
+  btnvertical?: boolean;
 }
+export interface Props extends DialogParams {
+  open: boolean;
+}
+export interface CustomEvent {
+  confirm: () => void;
+  cancel: () => void;
+  close: () => void;
+}
+
 @customElement({
-  tag: 'quark-dialog',
+  tag: "quark-dialog",
   style,
 })
 class QuarkDialog extends QuarkElement {
   @property()
-  zindex: string = '999';
+  zindex: string = "999";
 
   @property()
-  title: string = '';
+  title: string = "";
 
   @property({ type: Boolean })
   notitle: boolean = false;
 
   @property()
-  content: string | HTMLElement = '';
+  content: string | HTMLElement = "";
 
   @property()
   oktext: string = Locale.current.confirm;
@@ -56,7 +62,7 @@ class QuarkDialog extends QuarkElement {
   canceltext: string = Locale.current.cancel;
 
   @property()
-  type: string = 'modal';
+  type: string = "modal";
 
   @property({ type: Boolean })
   open: boolean = false;
@@ -68,11 +74,10 @@ class QuarkDialog extends QuarkElement {
   nofooter: boolean = false;
 
   @property({ type: Boolean })
-	hideclose: boolean = false;
+  hideclose: boolean = false;
 
   @property({ type: Boolean })
   maskclosable: boolean = false;
-
 
   @property({ type: Boolean })
   btnvertical: boolean = false;
@@ -97,7 +102,7 @@ class QuarkDialog extends QuarkElement {
     }
     if (this.shadowRoot)
       this.shadowRoot.addEventListener(
-        'transitionend',
+        "transitionend",
         this.transitionendChange
       );
   }
@@ -107,24 +112,24 @@ class QuarkDialog extends QuarkElement {
   }
 
   shouldComponentUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && newValue !== oldValue && this.bodyRef.current) {
+    if (propName === "open" && newValue !== oldValue && this.bodyRef.current) {
       const { current } = this.bodyRef;
       if (!newValue) {
         enableBodyScroll(current);
-        current.classList.remove('quark-dialog-enter');
-        current.classList.add('quark-dialog-leave');
+        current.classList.remove("quark-dialog-enter");
+        current.classList.add("quark-dialog-leave");
         this.btnActive = document.activeElement;
       } else {
         disableBodyScroll(current);
-        current.classList.remove('quark-dialog-leave');
-        current.classList.add('quark-dialog-enter');
+        current.classList.remove("quark-dialog-leave");
+        current.classList.add("quark-dialog-enter");
       }
     }
     return true;
   }
 
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && newValue !== oldValue && this.bodyRef.current) {
+    if (propName === "open" && newValue !== oldValue && this.bodyRef.current) {
       const { current } = this.bodyRef;
       if (!newValue) {
         enableBodyScroll(current);
@@ -135,19 +140,19 @@ class QuarkDialog extends QuarkElement {
   }
 
   closeIconClick = () => {
-    this.$emit('close');
+    this.$emit("close");
     if (this.close) this.close();
     this.hide();
   };
 
   cancelClick = () => {
-    this.$emit('cancel');
+    this.$emit("cancel");
     if (this.cancel) this.cancel();
     this.hide();
   };
 
   okClick = () => {
-    this.$emit('confirm');
+    this.$emit("confirm");
     if (this.confirm) this.confirm();
     this.hide();
   };
@@ -157,61 +162,95 @@ class QuarkDialog extends QuarkElement {
   }
 
   slotChangeEvent = () => {
-    const node = this.shadowRoot?.querySelector('.quark-dialog-body slot');
+    const node = this.shadowRoot?.querySelector(".quark-dialog-body slot");
   };
 
   transitionendChange = (ev: any) => {
     if (!this.open && this.dRemove) {
       document.body.removeChild(this);
       // 创建自定义对象 onclose
-      this.$emit('close');
+      this.$emit("close");
       if (this.btnActive) this.btnActive.focus();
     }
   };
 
   // 渲染上下按钮
   renderBtnVertical = () => {
-    const footerClass = this.btnvertical ? 'quark-dialog-footer quark-dialog-vertical' : 'quark-dialog-footer';
+    const footerClass = this.btnvertical
+      ? "quark-dialog-footer quark-dialog-vertical"
+      : "quark-dialog-footer";
     return (
       <div class={footerClass}>
         <quark-button type="primary" onClick={this.okClick}>
           {this.oktext}
         </quark-button>
 
-        <quark-button class="quark-dialog-cancel-btn" onClick={this.cancelClick}>
+        <quark-button
+          class="quark-dialog-cancel-btn"
+          onClick={this.cancelClick}
+        >
           {this.canceltext}
         </quark-button>
       </div>
     );
-	};
+  };
 
-	handleClickMask = () => {
-		if (this.maskclosable) {
-			this.$emit('close')
-			this.hide();
-		};
+  handleClickMask = () => {
+    if (this.maskclosable) {
+      this.$emit("close");
+      this.hide();
+    }
   };
 
   render() {
-    const footerClass = this.btnvertical ? 'quark-dialog-footer quark-dialog-vertical' : 'quark-dialog-footer';
+    const footerClass = this.btnvertical
+      ? "quark-dialog-footer quark-dialog-vertical"
+      : "quark-dialog-footer";
     return (
       <Fragment>
         <div class="quark-dialog" ref={this.bodyRef}>
-
           {!this.hideclose && (
             <slot name="close">
               <div class="quark-dialog-close-btn">
                 <div onClick={this.closeIconClick}>
-                  <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <svg
+                    width="16px"
+                    height="16px"
+                    viewBox="0 0 16 16"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
                     <title>切片</title>
-                    <g id="弹窗验收" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="弹窗更新" transform="translate(-641.000000, -346.000000)" fill="#BCC4CC" fill-rule="nonzero">
-                            <g id="编组" transform="translate(350.000000, 334.000000)">
-                                <g id="图形类/01_图标/16x16/03_关闭_black备份-2" transform="translate(291.000000, 12.000000)">
-                                    <path d="M2.28033009,1.21966991 L7.937,6.876 L13.5940386,1.21966991 C13.8869318,0.926776695 14.3618055,0.926776695 14.6546988,1.21966991 C14.947592,1.51256313 14.947592,1.98743687 14.6546988,2.28033009 L8.997,7.937 L14.6546988,13.5940386 C14.947592,13.8869318 14.947592,14.3618055 14.6546988,14.6546988 C14.3618055,14.947592 13.8869318,14.947592 13.5940386,14.6546988 L7.937,8.997 L2.28033009,14.6546988 C1.98743687,14.947592 1.51256313,14.947592 1.21966991,14.6546988 C0.926776695,14.3618055 0.926776695,13.8869318 1.21966991,13.5940386 L6.876,7.937 L1.21966991,2.28033009 C0.926776695,1.98743687 0.926776695,1.51256313 1.21966991,1.21966991 C1.51256313,0.926776695 1.98743687,0.926776695 2.28033009,1.21966991 Z" id="形状结合" transform="translate(7.937184, 7.937184) rotate(-360.000000) translate(-7.937184, -7.937184) "></path>
-                                </g>
-                            </g>
+                    <g
+                      id="弹窗验收"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="弹窗更新"
+                        transform="translate(-641.000000, -346.000000)"
+                        fill="#BCC4CC"
+                        fill-rule="nonzero"
+                      >
+                        <g
+                          id="编组"
+                          transform="translate(350.000000, 334.000000)"
+                        >
+                          <g
+                            id="图形类/01_图标/16x16/03_关闭_black备份-2"
+                            transform="translate(291.000000, 12.000000)"
+                          >
+                            <path
+                              d="M2.28033009,1.21966991 L7.937,6.876 L13.5940386,1.21966991 C13.8869318,0.926776695 14.3618055,0.926776695 14.6546988,1.21966991 C14.947592,1.51256313 14.947592,1.98743687 14.6546988,2.28033009 L8.997,7.937 L14.6546988,13.5940386 C14.947592,13.8869318 14.947592,14.3618055 14.6546988,14.6546988 C14.3618055,14.947592 13.8869318,14.947592 13.5940386,14.6546988 L7.937,8.997 L2.28033009,14.6546988 C1.98743687,14.947592 1.51256313,14.947592 1.21966991,14.6546988 C0.926776695,14.3618055 0.926776695,13.8869318 1.21966991,13.5940386 L6.876,7.937 L1.21966991,2.28033009 C0.926776695,1.98743687 0.926776695,1.51256313 1.21966991,1.21966991 C1.51256313,0.926776695 1.98743687,0.926776695 2.28033009,1.21966991 Z"
+                              id="形状结合"
+                              transform="translate(7.937184, 7.937184) rotate(-360.000000) translate(-7.937184, -7.937184) "
+                            ></path>
+                          </g>
                         </g>
+                      </g>
                     </g>
                   </svg>
                 </div>
@@ -226,25 +265,22 @@ class QuarkDialog extends QuarkElement {
           )}
 
           <div class="quark-dialog-content">
-            {!this.notitle &&
+            {!this.notitle && (
               <slot name="title">
-                <p class="quark-dialog-title">
-                  {this.title}
-                </p>
+                <p class="quark-dialog-title">{this.title}</p>
               </slot>
-            }
+            )}
             <slot onslotchange={this.slotChangeEvent}>
-              {this.content && <div
-                class="quark-dialog-body-wrap"
-                style={{
-                  marginBottom: this.content ? 20 : 0,
-                }}
-              >
-                <div class="quark-dialog-body">
-                  {this.content}
+              {this.content && (
+                <div
+                  class="quark-dialog-body-wrap"
+                  style={{
+                    marginBottom: this.content ? 20 : 0,
+                  }}
+                >
+                  <div class="quark-dialog-body">{this.content}</div>
                 </div>
-              </div>
-              }
+              )}
             </slot>
             {!this.nofooter && (
               <slot name="footer">
@@ -255,7 +291,7 @@ class QuarkDialog extends QuarkElement {
                     <quark-button
                       class="quark-dialog-cancel-btn"
                       style={{
-                        display: this.type === 'confirm' ? 'none' : 'flex'
+                        display: this.type === "confirm" ? "none" : "flex",
                       }}
                       onClick={this.cancelClick}
                     >
@@ -269,19 +305,21 @@ class QuarkDialog extends QuarkElement {
               </slot>
             )}
           </div>
-				</div>
-				<div class="quark-dialog-mask" onClick={this.handleClickMask} />
+        </div>
+        <div class="quark-dialog-mask" onClick={this.handleClickMask} />
       </Fragment>
     );
   }
 }
 
 // 函数调用
-export default function Dialog(params: DialogParams): QuarkDialog {
-  const dialog: any = document.createElement('quark-dialog');
+export default function Dialog(
+  params: DialogParams & CustomEvent
+): QuarkDialog {
+  const dialog: any = document.createElement("quark-dialog");
   const {
-    title = '',
-    content = '',
+    title = "",
+    content = "",
     oktext = Locale.current.conform,
     canceltext = Locale.current.cancel,
     confirm,
@@ -290,7 +328,7 @@ export default function Dialog(params: DialogParams): QuarkDialog {
     zindex,
     autoclose = true,
     nofooter = false,
-    type = '',
+    type = "",
     hideclose = false,
     maskclosable = false,
     btnvertical = false,
@@ -317,4 +355,4 @@ export default function Dialog(params: DialogParams): QuarkDialog {
   });
   return dialog;
 }
-export { QuarkDialog } ;
+export { QuarkDialog };

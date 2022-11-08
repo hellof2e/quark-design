@@ -1,48 +1,68 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
-
-@customElement({tag: 'quark-tooltip', style})
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+export interface Props {
+  open: boolean;
+  placement?:
+    | "top"
+    | "topleft"
+    | "topright"
+    | "left"
+    | "lefttop"
+    | "leftbottom"
+    | "right"
+    | "righttop"
+    | "rightbottom"
+    | "bottom"
+    | "bottomleft"
+    | "bottomright";
+  zindex?: number;
+  tips: string;
+  closeable?: boolean;
+  autoclose?: boolean;
+  opentime?: number;
+  scroolhidden?: boolean;
+}
+export interface CustomEvent {
+  close: () => void;
+}
+@customElement({ tag: "quark-tooltip", style })
 class QuarkTooltip extends QuarkElement {
   constructor() {
     super();
   }
 
   @property()
-  placement: string = 'bottom';
+  placement = "bottom";
 
   @property()
-  tips: string = '';
+  tips = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  closeable: boolean = false;
+  closeable = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  autoclose: boolean = false;
+  autoclose = false;
 
   @property()
-  opentime: number = 3000;
+  opentime = 3000;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  scroolhidden: boolean = false;
+  scroolhidden = false;
 
   @property()
-  zindex: string = '999';
+  zindex = "999";
 
   timer: number | undefined = undefined;
 
@@ -54,14 +74,15 @@ class QuarkTooltip extends QuarkElement {
     }
 
     if (this.scroolhidden) {
-      window.addEventListener('scroll', this.windowScrollListener);
+      window.addEventListener("scroll", this.windowScrollListener);
     }
 
-    document.addEventListener('click', (e) => {
-      if(!e.composedPath().includes(this) && this.open) {  // 打开状态，并且外界点击
+    document.addEventListener("click", (e) => {
+      if (!e.composedPath().includes(this) && this.open) {
+        // 打开状态，并且外界点击
         this.closeEmit();
       }
-    })
+    });
 
     this.addTimer();
   }
@@ -71,16 +92,16 @@ class QuarkTooltip extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'open' && this.tipsRef && this.tipsRef.current) {
+    if (propName === "open" && this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
       // 设置退出过度动画
       if (newValue) {
         // 由关闭到打开
-        current.classList.remove('quark-tooltip-leave');
+        current.classList.remove("quark-tooltip-leave");
         this.addTimer();
       } else if (oldValue && !newValue) {
         // 由打开到关闭
-        current.classList.add('quark-tooltip-leave');
+        current.classList.add("quark-tooltip-leave");
         this.clearTimer();
       }
     }
@@ -88,7 +109,7 @@ class QuarkTooltip extends QuarkElement {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.windowScrollListener);
+    window.removeEventListener("scroll", this.windowScrollListener);
     this.clearTimer();
   }
 
@@ -121,14 +142,14 @@ class QuarkTooltip extends QuarkElement {
   addRemoveAnnimation = () => {
     if (this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
-      current.classList.add('quark-tooltip-leave');
+      current.classList.add("quark-tooltip-leave");
     }
   };
 
   closeEmit = () => {
     this.addRemoveAnnimation();
     this.open = false;
-    this.$emit('close');
+    this.$emit("close");
   };
 
   handleTipsClick = (ev: any) => {
@@ -148,15 +169,19 @@ class QuarkTooltip extends QuarkElement {
 
   renderTips = () => {
     if (
-      this.placement === 'top' ||
-      this.placement === 'topleft' ||
-      this.placement === 'topright' ||
-      this.placement === 'left' ||
-      this.placement === 'lefttop' ||
-      this.placement === 'leftbottom'
+      this.placement === "top" ||
+      this.placement === "topleft" ||
+      this.placement === "topright" ||
+      this.placement === "left" ||
+      this.placement === "lefttop" ||
+      this.placement === "leftbottom"
     ) {
       return (
-        <div class="quark-tooltip-tips" ref={this.tipsRef} onClick={this.handleTipsClick}>
+        <div
+          class="quark-tooltip-tips"
+          ref={this.tipsRef}
+          onClick={this.handleTipsClick}
+        >
           <div class="quark-tooltip-content">
             <div>{this.tips}</div>
             {this.renderCloseIcon()}
@@ -166,7 +191,11 @@ class QuarkTooltip extends QuarkElement {
       );
     }
     return (
-      <div class="quark-tooltip-tips" ref={this.tipsRef} onClick={this.handleTipsClick}>
+      <div
+        class="quark-tooltip-tips"
+        ref={this.tipsRef}
+        onClick={this.handleTipsClick}
+      >
         <div class="quark-tooltip-triangle" />
         <div class="quark-tooltip-content">
           <div>{this.tips}</div>

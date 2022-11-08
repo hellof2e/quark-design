@@ -1,25 +1,24 @@
-import QuarkElement, {
-  Fragment,
-  property,
-  customElement
-} from '@quarkd/core';
+import QuarkElement, { Fragment, property, customElement } from "@quarkd/core";
 
-import style from './style.css';
-
+import style from "./style.css";
+export interface Props {
+  value: number;
+  color?: string;
+  showtext?: boolean;
+}
 @customElement({
-  tag: 'quark-progress',
-  style
+  tag: "quark-progress",
+  style,
 })
 class QuarkProgress extends QuarkElement {
   @property()
-  color: string = 'linear-gradient(90deg, #FFC91C 0%, #FB990F 100%)';
+  color = "linear-gradient(90deg, #FFC91C 0%, #FB990F 100%)";
 
   @property()
-  value: string = '';
+  value = "";
 
   @property({ type: Boolean })
-  showtext: boolean = false;
-
+  showtext = false;
 
   render() {
     return (

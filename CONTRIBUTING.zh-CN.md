@@ -4,26 +4,20 @@
 
 ## 开发配置
 
-* 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
+- 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
 
 ## 开始
 
 第一次启动：
 
 ```bash
-yarn // 安装项目的依赖
-
-yarn run link // 第一次执行需要，互相依赖的软链接
-
-yarn dev // 开始执行工程
+npm run init
+npm run dev
 ```
 
-之后直接运行下面命令即可：
+以后再次启动本工程只需：
 
 ```bash
-yarn dev
-
-// or
 npm run dev
 ```
 
@@ -38,6 +32,13 @@ npm run release:minor
 
 // 发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
 npm run release:major
+```
+
+打 tag
+
+```
+git tag // 先看下是否生成最新的 tag
+git push origin --tags
 ```
 
 ## 提交 commit
@@ -64,10 +65,16 @@ type(ComponentName?)：commit message
 yarn clean
 ```
 
+Windows 电脑运行 yarn run link 时乱码？
+
+```
+// 在 git bash 中执行 yarn run link 命令
+```
+
 ## 结构
 
 ```
-├── README.MD 
+├── README.MD
 ├── demo.html
 ├── dev.md
 ├── example

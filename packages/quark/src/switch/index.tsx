@@ -1,25 +1,30 @@
-import QuarkElement, {
-  property,
-  customElement,
-} from '@quarkd/core';
-import style from './style.css';
-
-@customElement({tag: 'quark-switch', style})
+import QuarkElement, { property, customElement } from "@quarkd/core";
+import style from "./style.css";
+export interface Props {
+  checked?: boolean;
+  disabled?: boolean;
+  size?: number;
+  color?: string;
+}
+export interface CustomEvent {
+  change: (e: { detail: { value: boolean } }) => void;
+}
+@customElement({ tag: "quark-switch", style })
 class QuarkSwitch extends QuarkElement {
   @property({ type: Boolean })
-  disabled: boolean = false;
-  
+  disabled = false;
+
   @property({ type: Boolean })
-  checked: boolean = false;
-  
-  @property()
-  size: string = '';
-  
-  @property()
-  color: string = '';
+  checked = false;
 
   @property()
-  name: string = '';
+  size = "";
+
+  @property()
+  color = "";
+
+  @property()
+  name = "";
 
   handleChange = () => {
     if (this.disabled) {
@@ -27,22 +32,27 @@ class QuarkSwitch extends QuarkElement {
     }
     this.checked = !this.checked;
     // 注册 change 函数，供外部使用 <quark-switch @change={} />
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
         value: this.checked,
       },
     });
-  }
-  
+  };
+
   render() {
     const inlineStyle = {
-      fontSize: this.size ? (16 * (+this.size)) / 30 : 16, // 高度为基准
+      fontSize: this.size ? (16 * +this.size) / 30 : 16, // 高度为基准
       "--switch-inner-color": this.color,
-    }
+    };
 
     return (
       <div style={inlineStyle}>
-        <input type="checkbox" id="quark-switch" class="quark-switch" onClick={this.handleChange}/>
+        <input
+          type="checkbox"
+          id="quark-switch"
+          class="quark-switch"
+          onClick={this.handleChange}
+        />
         <label for="quark-switch"></label>
       </div>
     );

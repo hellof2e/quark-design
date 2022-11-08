@@ -10,7 +10,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rm -rf lib && cross-env BABEL_ENV=umd rollup -c",
+    "build": "rimraf lib && cross-env BABEL_ENV=umd rollup -c",
     "release:major": "npm run release -- --release-as major",
     "release:minor": "npm run release -- --release-as minor",
     "release:patch": "npm run release -- --release-as patch",
@@ -32,18 +32,12 @@
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/node": "^14.14.31",
-    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-node": "^4.1.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-node": "^11.1.0",
-    "lint-staged": "^10.5.4",
     "rollup-plugin-terser": "^7.0.2",
     "sinon": "^12.0.1",
     "standard-version": "^9.3.0",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "rimraf": "3.0.2"
   },
   "repository": {
 		"type": "git",

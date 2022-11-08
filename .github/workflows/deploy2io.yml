@@ -12,10 +12,12 @@ jobs:
   copy:
     runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v2 
-      - run: yarn install
-      - run: cd example
-      - run: yarn build
+      - uses: actions/checkout@v2
+      # 会有很多npm包在外层，link 使用
+      # - run: cd example && npm i --legacy-peer-deps && npm run build
+      - run: yarn
+      - run: yarn run link
+      - run: yarn push2io
       - name : Sync 
         uses : JamesIves/github-pages-deploy-action@4.1.7 
         with :
@@ -24,4 +26,4 @@ jobs:
           clean: false
           repository-name: hellof2e/quark-design.github.io
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: /
+          target-folder: demo # 部署到demo目录下

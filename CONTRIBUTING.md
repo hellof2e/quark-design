@@ -11,22 +11,13 @@ We are very welcome to the community developers to make contributions to Quark D
 First start:
 
 ```bash
-// Install the dependencies of the sub-project
-yarn
-
-// First execution, mutual dependency soft link
-yarn run link
-
-// Start executing the project
-yarn dev
+npm run init
+npm run dev
 ```
 
 After that, just run the following command:
 
 ```bash
-yarn dev
-
-// or
 npm run dev
 ```
 
@@ -65,6 +56,12 @@ How to clear the cache of the sub-project?
 
 ```
 npm run clean
+```
+
+Garbled characters when running yarn run link on a Windows computer?
+
+```
+Execute the yarn run link command in git bash
 ```
 
 ## Structure

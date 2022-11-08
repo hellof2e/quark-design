@@ -1,14 +1,11 @@
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/radio";
-import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { FC } from "react";
+import { Props } from "quarkd/lib/radio";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface RadioProps extends componentBaseInterface {
-    shape?: 'round' | 'square'
-    size?: 'normal' | 'big'
-    disabled?: boolean;
-}
-type RadioType =  FC<RadioProps>;
+type RadioProps = componentBaseInterface & ReactifyProps<Props, {}>;
+type RadioType = FC<RadioProps>;
 
-const Radio = reactify('quark-radio') as RadioType;
+const Radio = reactify("quark-radio") as RadioType;
 export default Radio;

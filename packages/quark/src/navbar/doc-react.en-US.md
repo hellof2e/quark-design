@@ -73,8 +73,8 @@ export default () => {
     <Navbar
       right="share"
       title="Click left or right"
-      onLeftClick={onLeftClick}
-      onRightClick={onRightClick}
+      onLeftclick={onLeftClick}
+      onRightclick={onRightClick}
       onClose={close}
     />
   )
@@ -125,8 +125,8 @@ useEffect(() => {
 | right      | right node | `string`                   |
 | safearea      | Safe zone adaptation | `boolean`                 | `false`
 | iconsize      | Default icon size | `string`                   |`24px`
-| onLeftClick     | Emitted when the left button is clicked                   |    `() => void `     |
-| onRightClick    | Emitted when the right button is clicked               |`() => void`|
+| onLeftclick     | Emitted when the left button is clicked                   |    `() => void `     |
+| onRightclick    | Emitted when the right button is clicked               |`() => void`|
 | onClose    | close click event               |      `() => void `   |
 
 

@@ -1,32 +1,35 @@
-import QuarkElement, {
-  property,
-  customElement,
-} from '@quarkd/core';
-import '@quarkd/icons/lib/arrow-right';
-import cellStyle from './cellStyle.css';
-import cellGroupCss from './cellGroupStyle.css';
-
+import QuarkElement, { property, customElement } from "@quarkd/core";
+import "@quarkd/icons/lib/arrow-right";
+import cellStyle from "./cellStyle.css";
+import cellGroupCss from "./cellGroupStyle.css";
+export interface Props {
+  title: string;
+  desc?: string;
+  to?: string;
+  islink?: boolean;
+  icon?: string;
+}
 @customElement({
-  tag: 'quark-cell',
+  tag: "quark-cell",
   style: cellStyle,
 })
 class QuarkCell extends QuarkElement {
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  icon: string = '';
+  icon = "";
 
   @property()
-  desc: string = '';
+  desc = "";
 
   @property()
-  to: string = '';
+  to = "";
 
   @property({
     type: Boolean,
   })
-  islink: boolean = false;
+  islink = false;
 
   handleNavigation = () => {
     if (this.to) {
@@ -35,8 +38,14 @@ class QuarkCell extends QuarkElement {
   };
 
   renderIcon = () => {
-    if (this.icon && this.icon.includes('http')) {
-      return <img src={this.icon} class="quark-cell-icon" style={{ marginRight: 4 }} />;
+    if (this.icon && this.icon.includes("http")) {
+      return (
+        <img
+          src={this.icon}
+          class="quark-cell-icon"
+          style={{ marginRight: 4 }}
+        />
+      );
     }
     return null;
   };
@@ -64,7 +73,7 @@ class QuarkCell extends QuarkElement {
 export default QuarkCell;
 
 @customElement({
-  tag: 'quark-cell-group',
+  tag: "quark-cell-group",
   style: cellGroupCss,
 })
 class QuarkCellGroup extends QuarkElement {

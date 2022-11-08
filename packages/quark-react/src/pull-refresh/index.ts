@@ -1,20 +1,12 @@
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/pullrefresh";
-import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { FC } from "react";
+import { Props, CustomEvent } from "quarkd/lib/pullrefresh";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface PullRefreshProps extends componentBaseInterface {
-    dark?: boolean
-    disabled?: boolean
-    headheight?: number
-    loading: boolean
-    pullingtext?: string
-    loosingtext?: string
-    loadingtext?: string
-    textcolor?: string
-    onRefresh: () => void
-}
-type PullRefreshType =  FC<PullRefreshProps>;
+type PullRefreshProps = componentBaseInterface &
+  ReactifyProps<Props, CustomEvent>;
+type PullRefreshType = FC<PullRefreshProps>;
 
-const PullRefresh = reactify('quark-pull-refresh') as PullRefreshType;
+const PullRefresh = reactify("quark-pull-refresh") as PullRefreshType;
 export default PullRefresh;

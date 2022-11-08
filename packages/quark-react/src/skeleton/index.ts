@@ -1,17 +1,11 @@
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/skeleton";
-import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { FC } from "react";
+import { Props } from "quarkd/lib/skeleton";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface SkeletonProps extends componentBaseInterface {
-    avatar?: boolean
-    avatarshape?: 'round' | 'square'
-    titel?: boolean
-    row: number
-    rowwidths?: string
-    hide?: boolean
-}
-type SkeletonType =  FC<SkeletonProps>;
+type SkeletonProps = componentBaseInterface & ReactifyProps<Props, {}>;
+type SkeletonType = FC<SkeletonProps>;
 
-const Skeleton = reactify('quark-skeleton') as SkeletonType;
+const Skeleton = reactify("quark-skeleton") as SkeletonType;
 export default Skeleton;

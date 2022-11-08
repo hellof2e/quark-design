@@ -1,20 +1,30 @@
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock';
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import QuarkElement, {
   property,
   customElement,
   Fragment,
-  createRef
-} from '@quarkd/core';
-import '@quarkd/icons/lib/close'
-import style from './style.css';
-
+  createRef,
+} from "@quarkd/core";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+export interface Props {
+  position?: "top" | "bottom" | "left" | "right";
+  round?: boolean;
+  open: boolean;
+  closeable?: boolean;
+  safearea?: boolean;
+  zindex?: number;
+}
+export interface CustomEvent {
+  closed: () => void;
+}
 @customElement({
-  tag: 'quark-popup',
-  style
+  tag: "quark-popup",
+  style,
 })
 class QuarkPopup extends QuarkElement {
   constructor() {
@@ -22,33 +32,32 @@ class QuarkPopup extends QuarkElement {
   }
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  safearea: boolean = false;
+  safearea = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  round: boolean = false;
+  round = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  closeable: boolean = false;
+  closeable = false;
 
   @property()
-  position: string = 'bottom';
+  position = "bottom";
 
   @property()
   zindex: number | string | undefined = undefined;
 
   wrap: any = createRef();
-
 
   componentDidMount() {
     if (this.zindex) {
@@ -61,22 +70,22 @@ class QuarkPopup extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       // 设置退出过度动画
       if (newValue) {
         // 由关闭到打开
-        current.classList.remove('leave');
+        current.classList.remove("leave");
       } else if (oldValue && !newValue) {
         // 由打开到关闭
-        current.classList.add('leave');
+        current.classList.add("leave");
       }
     }
     return true;
   }
 
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       if (newValue) {
         disableBodyScroll(current);
@@ -93,7 +102,7 @@ class QuarkPopup extends QuarkElement {
   dispatchClose() {
     this.open = false;
     // 标签调用触发
-    this.dispatchEvent(new CustomEvent('closed'));
+    this.dispatchEvent(new CustomEvent("closed"));
   }
 
   handleCloseBtnClick = () => {
@@ -108,9 +117,12 @@ class QuarkPopup extends QuarkElement {
     return (
       <Fragment>
         <div class="quark-popup" ref={this.wrap}>
-          {this.closeable && this.position === 'bottom' && (
-            <div class="quark-popup-close-btn" onClick={this.handleCloseBtnClick}>
-              <quark-icon-close  size="24" />
+          {this.closeable && this.position === "bottom" && (
+            <div
+              class="quark-popup-close-btn"
+              onClick={this.handleCloseBtnClick}
+            >
+              <quark-icon-close size="24" />
             </div>
           )}
           <slot></slot>

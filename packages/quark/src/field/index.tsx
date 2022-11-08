@@ -3,48 +3,67 @@ import QuarkElement, {
   property,
   customElement,
   createRef,
-  state
-} from '@quarkd/core';
-
-import style from './style.css';
-
+  state,
+} from "@quarkd/core";
+import style from "./style.css";
+export interface Props {
+  label?: string;
+  type?: string;
+  value?: string;
+  defaultvalue?: string;
+  name?: string;
+  placeholder?: string;
+  min?: string;
+  minlength?: string;
+  max?: string;
+  maxlength?: string;
+  disabled?: boolean;
+  readonly?: boolean;
+  required?: boolean;
+  errormsg?: string;
+}
+export interface CustomEvent {
+  change: (e: { detail: { value: string } }) => void;
+  focus?: () => void;
+  blur?: () => void;
+}
 @customElement({
-  tag: 'quark-field',
-  style
+  tag: "quark-field",
+  style,
 })
 class QuarkField extends QuarkElement {
   @property()
-  name: string = '';
+  name: string = "";
 
   @property()
-  label: string = '';
+  label: string = "";
 
   @property()
-  defaultvalue: string = '';
+  defaultvalue: string = "";
 
   @property()
-  value: string = '';
+  value: string = "";
 
   @property()
-  type: string = '';
+  type: string = "";
 
   @property()
-  placeholder: string = '';
+  placeholder: string = "";
 
   @property()
-  max: string = '';
+  max: string = "";
 
   @property()
-  maxlength: string = '';
+  maxlength: string = "";
 
   @property()
-  min: string = '';
+  min: string = "";
 
   @property()
-  minlength: string = '';
+  minlength: string = "";
 
   @property()
-  errormsg: string = '';
+  errormsg: string = "";
 
   @property({ type: Boolean })
   disabled: boolean = false;
@@ -64,14 +83,13 @@ class QuarkField extends QuarkElement {
   @state()
   showError: boolean = false;
 
-
   evenFn = (type: string) => (e: Event) => {
     if (!this.inputRef && !this.inputRef.current) return;
     e.stopPropagation();
     const { value } = this.inputRef.current;
     this.value = value;
     this.$emit(type, { detail: { value } });
-    if (type === 'blur' || type === 'change') {
+    if (type === "blur" || type === "change") {
       this.validRules();
     }
   };
@@ -85,32 +103,34 @@ class QuarkField extends QuarkElement {
         if (rule.validator) {
           if (!rule.validator(this.value) && rule.message) {
             this.errormsg = rule.message;
-            if (rule.message) current.style.display = 'inline-block';
+            if (rule.message) current.style.display = "inline-block";
             return;
           }
         } else if (rule.required && rule.message && !this.value) {
           this.errormsg = rule.message;
-          if (rule.message) current.style.display = 'inline-block';
+          if (rule.message) current.style.display = "inline-block";
           return;
         }
       }
-      current.style.display = 'none';
-      this.errormsg = '';
+      current.style.display = "none";
+      this.errormsg = "";
     }
     if (this.required)
       current.style.display =
-        !this.value && this.errormsg ? 'inline-block' : 'none';
+        !this.value && this.errormsg ? "inline-block" : "none";
   };
 
   setRules(rules: any[]) {
     if (!Array.isArray(rules)) {
-      throw new Error('rules need array');
+      throw new Error("rules need array");
     }
     this.rules = rules;
   }
 
   render() {
-    const label = this.label ? <label class="quark-field-label">{this.label}</label> : null;
+    const label = this.label ? (
+      <label class="quark-field-label">{this.label}</label>
+    ) : null;
     return (
       <Fragment>
         <slot name="label">{label}</slot>
@@ -128,10 +148,10 @@ class QuarkField extends QuarkElement {
               maxlength={this.maxlength}
               disabled={this.disabled}
               readonly={this.readonly}
-              onChange={this.evenFn('change')}
-              onInput={this.evenFn('change')}
-              onBlur={this.evenFn('blur')}
-              onFocus={this.evenFn('focus')}
+              onChange={this.evenFn("change")}
+              onInput={this.evenFn("change")}
+              onBlur={this.evenFn("blur")}
+              onFocus={this.evenFn("focus")}
             />
           </div>
           <div class="quark-field-error-msg" ref={this.errorRef}>

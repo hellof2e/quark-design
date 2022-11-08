@@ -4,19 +4,28 @@ import QuarkElement, {
   customElement,
   Fragment,
   createRef,
-  state
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public';
-import style from './style.css';
-import swipeItemStyle from './swipeItem.css';
-
-@customElement({tag: 'quark-swipe-item', style: swipeItemStyle})
+  state,
+} from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import style from "./style.css";
+import swipeItemStyle from "./swipeItem.css";
+export interface Props {
+  type?: string;
+  duration?: number;
+  interval?: number;
+  defaultindex?: string;
+  autoplay?: boolean;
+  activecolor?: string;
+  inactivecolor?: string;
+}
+export interface CustomEvent {
+  change: (e: { detail: { index: number } }) => void;
+}
+@customElement({ tag: "quark-swipe-item", style: swipeItemStyle })
 class QuarkSwipeItem extends QuarkElement {
   componentDidMount() {
-    const { parentNode } = this;
-    // @ts-ignore
+    const parentNode = this.parentNode as QuarkSwipe;
     if (parentNode && parentNode.moveWidth) {
-      // @ts-ignore
       this.style.width = `${parentNode.moveWidth}px`;
     }
   }
@@ -27,52 +36,52 @@ class QuarkSwipeItem extends QuarkElement {
 }
 export { QuarkSwipeItem };
 
-@customElement({tag: 'quark-swipe', style})
+@customElement({ tag: "quark-swipe", style })
 class QuarkSwipe extends QuarkElement {
   @property({
-    type: Number
+    type: Number,
   })
-  duration: number = 500;
+  duration = 500;
 
   @property({
-    type: Number
+    type: Number,
   })
-  interval: number = 3000;
+  interval = 3000;
 
   @property({
-    type: Number
+    type: Number,
   })
-  defaultindex: number = 0;
+  defaultindex = 0;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  autoplay: boolean = false;
+  autoplay = false;
 
   @property()
-  inactivecolor: string = '#d3dae0';
+  inactivecolor = "#d3dae0";
 
   @property()
-  activecolor: string = '';
+  activecolor = "";
 
   @property()
-  type: string = '';
+  type = "";
 
   @state()
-  count: number = 0;
+  count = 0;
 
   @state()
-  currentIndex: number = 0;
+  currentIndex = 0;
 
   slotWrapRef: any = createRef();
 
   containerRef: any = createRef();
 
-  moveWidth: number = 0;
+  moveWidth = 0;
 
-  startX: number = 0;
+  startX = 0;
 
-  startY: number = 0;
+  startY = 0;
 
   endX: number | undefined = 0;
 
@@ -95,15 +104,15 @@ class QuarkSwipe extends QuarkElement {
 
   eventBind() {
     this.removeEvent();
-    this.addEventListener('touchstart', this.handleTouchStart);
-    this.addEventListener('touchmove', this.handleTouchMove);
-    this.addEventListener('touchend', this.handleTouchEnd);
+    this.addEventListener("touchstart", this.handleTouchStart);
+    this.addEventListener("touchmove", this.handleTouchMove);
+    this.addEventListener("touchend", this.handleTouchEnd);
   }
 
   removeEvent = () => {
-    this.removeEventListener('touchstart', this.handleTouchStart);
-    this.removeEventListener('touchmove', this.handleTouchMove);
-    this.removeEventListener('touchend', this.handleTouchEnd);
+    this.removeEventListener("touchstart", this.handleTouchStart);
+    this.removeEventListener("touchmove", this.handleTouchMove);
+    this.removeEventListener("touchend", this.handleTouchEnd);
   };
 
   handleTouchStart = (e: any) => {
@@ -122,7 +131,6 @@ class QuarkSwipe extends QuarkElement {
   handleTouchEnd = () => {
     const angle = this.angle(
       { X: this.startX, Y: this.startY },
-      // @ts-ignore
       { X: this.endX, Y: this.endY }
     );
     if (this.endX === undefined || this.endY === undefined) {
@@ -282,10 +290,10 @@ class QuarkSwipe extends QuarkElement {
   }
 
   dispatchChanage() {
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
-        index: this.currentIndex
-      }
+        index: this.currentIndex,
+      },
     });
   }
 
@@ -317,7 +325,8 @@ class QuarkSwipe extends QuarkElement {
     if (current) {
       const nodes = slotAssignedElements(current.assignedNodes());
       this.count = nodes.length;
-      if (this.count <= 1) { // 当为1时禁止滑到
+      if (this.count <= 1) {
+        // 当为1时禁止滑到
         this.removeEvent();
         this.clearTimer();
       } else {
@@ -336,7 +345,7 @@ class QuarkSwipe extends QuarkElement {
           style={{
             backgroundColor:
               this.currentIndex === i ? this.activecolor : this.inactivecolor,
-            opacity: this.currentIndex === i ? 1 : 0.7
+            opacity: this.currentIndex === i ? 1 : 0.7,
           }}
         ></div>
       );

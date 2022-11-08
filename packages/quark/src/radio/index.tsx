@@ -1,39 +1,49 @@
-import { classNames } from '../../utils/index';
+import { classNames } from "../../utils/index";
 import QuarkElement, {
   customElement,
   property,
   state,
-  createRef
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public';
-import style from './style.css';
-
+  createRef,
+} from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import style from "./style.css";
+export interface Props {
+  shape?: "round" | "square";
+  size?: "normal" | "big";
+  disabled?: boolean;
+}
+export interface GroupProps {
+  value?: string;
+}
+export interface GroupCustomEvent {
+  change: (e: { detail: { value: string } }) => void;
+}
 @customElement({
-  tag: 'quark-radio',
-  style
+  tag: "quark-radio",
+  style,
 })
 class QuarkRadio extends QuarkElement {
   @property()
-  shape: string = 'round';
+  shape = "round";
 
   @property()
-  size: string = 'normal';
+  size = "normal";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  checked: boolean = false;
+  checked = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @state()
-  classNames: string = '';
+  classNames = "";
 
   slotRef: any = createRef();
 
@@ -53,7 +63,7 @@ class QuarkRadio extends QuarkElement {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const nodes = slotAssignedElements(assignedNodes);
     this.classNames = classNames({
-      hide: !nodes.length
+      hide: !nodes.length,
     });
   };
 
@@ -62,10 +72,10 @@ class QuarkRadio extends QuarkElement {
       return;
     }
     this.checked = !this.checked;
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
-        value: this.checked
-      }
+        value: this.checked,
+      },
     });
   };
 
@@ -92,17 +102,17 @@ class QuarkRadio extends QuarkElement {
 export default QuarkRadio;
 
 @customElement({
-  tag: 'quark-radio-group',
-  style
+  tag: "quark-radio-group",
+  style,
 })
 class QuarkRadioGroup extends QuarkElement {
   @property()
-  value: string = '';
+  value = "";
 
   slotRef: any = createRef();
 
   componentDidMount(): void {
-    this.$on('change', this.eventListener);
+    this.$on("change", this.eventListener);
   }
 
   shouldComponentUpdate(
@@ -110,7 +120,7 @@ class QuarkRadioGroup extends QuarkElement {
     oldValue: string,
     newValue: string
   ): boolean {
-    if (propName === 'value' && oldValue !== newValue) {
+    if (propName === "value" && oldValue !== newValue) {
       this.init();
     }
     return true;
@@ -132,14 +142,14 @@ class QuarkRadioGroup extends QuarkElement {
 
   handleSlotChange = () => {
     this.init();
-  }
+  };
 
   eventListener = (ev: any) => {
     if (ev.target === this) {
       return;
     }
-    this.$emit('change', {
-      detail: { value: ev.target.name }
+    this.$emit("change", {
+      detail: { value: ev.target.name },
     });
     ev.stopPropagation();
   };
@@ -147,10 +157,7 @@ class QuarkRadioGroup extends QuarkElement {
   render() {
     return (
       <div class="quark-radio-group-wrapper">
-        <slot
-          onslotchange={this.handleSlotChange}
-          ref={this.slotRef}
-        ></slot>
+        <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );
   }

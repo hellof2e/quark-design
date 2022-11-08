@@ -3,21 +3,23 @@ import QuarkElement, {
   property,
   customElement,
   createRef,
-  state
-} from '@quarkd/core';
-
-import style from './style.css';
-
+  state,
+} from "@quarkd/core";
+import style from "./style.css";
+export interface Props {
+  title: string;
+  speed?: number;
+}
 @customElement({
-  tag: 'quark-marquee',
+  tag: "quark-marquee",
   style,
 })
 class QuarkMarquee extends QuarkElement {
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  speed: string = '50';
+  speed = "50";
 
   @property({ type: Boolean })
   reverse: boolean = false;
@@ -26,7 +28,7 @@ class QuarkMarquee extends QuarkElement {
   paused: boolean = false;
 
   @state()
-  animating: boolean = false;
+  animating = false;
 
   @state()
   textWidth: number = 0;

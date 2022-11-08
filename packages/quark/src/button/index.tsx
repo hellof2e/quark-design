@@ -1,13 +1,19 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 import "../loading";
-import style from './style.css';
-
+import style from "./style.css";
+export interface Props {
+  type?: "primary" | "success" | "danger" | "warning";
+  size?: "small" | "normal" | "big" | "large";
+  icon?: string;
+  shape?: "square" | "round";
+  plain?: boolean;
+  loading?: boolean;
+  loadtype?: "circular" | "spinner";
+  loadingcolor?: string;
+  loadingsize?: number;
+}
 @customElement({
-  tag: 'quark-button',
+  tag: "quark-button",
   style,
 })
 class QuarkButton extends QuarkElement {
@@ -18,13 +24,13 @@ class QuarkButton extends QuarkElement {
   @property({
     type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property()
   size: string;
 
   @property()
-  type: string = '';
+  type = "";
 
   @property()
   icon: string | undefined = undefined;
@@ -35,7 +41,7 @@ class QuarkButton extends QuarkElement {
   @property({
     type: Boolean,
   })
-  loading: boolean = false;
+  loading = false;
 
   @property()
   loadtype: string;
@@ -49,12 +55,12 @@ class QuarkButton extends QuarkElement {
   @property({
     type: Boolean,
   })
-  plain: boolean = false;
+  plain = false;
 
   slotRef: any = createRef();
 
   renderIcon = () => {
-    if (this.icon && this.icon.includes('http')) {
+    if (this.icon && this.icon.includes("http")) {
       return <img class="quark-button-icon" src={this.icon}></img>;
     }
     if (this.loading) {
@@ -71,11 +77,11 @@ class QuarkButton extends QuarkElement {
   };
 
   componentDidMount() {
-    this.slotRef.current.addEventListener('click', (e) => {
-      if(this.disabled || this.loading) {
+    this.slotRef.current.addEventListener("click", (e) => {
+      if (this.disabled || this.loading) {
         e.stopPropagation();
       }
-    })
+    });
   }
 
   render() {

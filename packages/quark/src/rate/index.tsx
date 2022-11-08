@@ -2,45 +2,54 @@ import QuarkElement, {
   Fragment,
   property,
   customElement,
-  state
-} from '@quarkd/core';
-
-import '@quarkd/icons/lib/star-fill';
-import style from './style.css';
-
+  state,
+} from "@quarkd/core";
+import "@quarkd/icons/lib/star-fill";
+import style from "./style.css";
+export interface Props {
+  defaultvalue?: number;
+  value?: number;
+  size?: number;
+  disabled?: boolean;
+  readonly?: boolean;
+  activecolor?: string;
+}
+export interface CustomEvent {
+  change: (e: { detail: { value: string } }) => void;
+}
 @customElement({
-  tag: 'quark-rate',
-  style
+  tag: "quark-rate",
+  style,
 })
 class QuarkRate extends QuarkElement {
   @property()
-  value: string = '';
+  value = "";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property()
-  defaultValue: string = '';
+  defaultValue = "";
 
   @property()
-  size: string = '25';
+  size = "25";
 
   @property()
-  icon: string = '';
+  icon = "";
 
   @property()
-  activecolor: string = '#ffc800';
+  activecolor = "#ffc800";
 
   @property({ type: Boolean })
-  disable: boolean = false;
+  disable = false;
 
   @property({ type: Boolean })
-  readonly: boolean = false;
+  readonly = false;
 
   @state()
   stars: any[] = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
 
-  activeIndex: number = -1;
+  activeIndex = -1;
 
   componentDidMount(): void {
     if (this.defaultValue) this.initSelect(Number(this.defaultValue));
@@ -51,7 +60,7 @@ class QuarkRate extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'value' || propName === 'defaultValue') {
+    if (propName === "value" || propName === "defaultValue") {
       if (newValue) this.initSelect(Number(newValue));
     }
     return true;
@@ -61,16 +70,16 @@ class QuarkRate extends QuarkElement {
     if (!this.shadowRoot) return;
     const { id, color } = i;
     this.stars = this.stars.map((item) => {
-      item.color = 'inherit';
+      item.color = "inherit";
       if (color === this.activecolor) {
-        item.color = 'inherit';
+        item.color = "inherit";
       }
       if (item.id <= id) item.color = this.activecolor;
       return item;
     });
     const value = this.stars.filter((i) => i.color === this.activecolor).length;
     this.value = `${value}`;
-    this.$emit('change', { detail: { value } });
+    this.$emit("change", { detail: { value } });
   }
 
   initSelect = (value: number) => {
@@ -80,19 +89,27 @@ class QuarkRate extends QuarkElement {
     });
   };
 
-  renderIcon = (i: {id: number, color: string})=> {
+  renderIcon = (i: { id: number; color: string }) => {
     if (this.icon && this.icon.includes("http")) {
-      return <img style={{width: `${this.size}px`, height: 'auto'}} src={this.icon} key={i.id} />;
+      return (
+        <img
+          style={{ width: `${this.size}px`, height: "auto" }}
+          src={this.icon}
+          key={i.id}
+        />
+      );
     }
-    return <quark-icon-star-fill
-      key={i.id}
-      id={i.id}
-      name={this.icon}
-      size={this.size}
-      color={i.color || 'inherit'}
-      onClick={() => this.handleChange(i)}
-    />
-  }
+    return (
+      <quark-icon-star-fill
+        key={i.id}
+        id={i.id}
+        name={this.icon}
+        size={this.size}
+        color={i.color || "inherit"}
+        onClick={() => this.handleChange(i)}
+      />
+    );
+  };
 
   render() {
     return (

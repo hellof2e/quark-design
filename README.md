@@ -26,31 +26,42 @@
   <a href="https://github.com/hellof2e/quark-design">
     <img src="https://img.shields.io/github/issues-closed/hellof2e/quark-design" alt="issues">
   </a>
+</p>
+
+<p align="center">
   <a href="https://www.webcomponents.org/element/quarkd">
     <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on webcomponents.org">
   </a>
+  
+  <a href="https://github.com/hellof2e/quark-design/actions/workflows/sync-docs.yml">
+    <img src="https://github.com/hellof2e/quark-design/actions/workflows/deploy2io.yml/badge.svg?branch=main" alt="build status">
+  </a>
 </p>
+
+
 
 ## Contact us
 
-~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品🎁～, 若群已满请加右侧微信拉你入群~~
+~~微信(1)群已满员~~ 
 
-微信群已满员，请添加下面管理员拉你入群谢谢～
+可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
 
 <div style="display:flex;">
-  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='230'/>
+  <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='189'/>
 </div>
 
 English | [简体中文](./README.zh-CN.md)
 
-## Motivation
+## 🤔 Motivation
 The emergence of the technical framework has improved the development experience and page performance, but the continuous iterative update of the technical framework has brought many challenges to the maintenance of the project, such as:
 
 - Visual components cannot be used across technical frameworks (React, Vue, etc.)
 - Once the technical framework is upgraded, visual components often have to be upgraded iteratively
 
 Therefore, we developed this UI framework to isolate it from the technology framework (no technology stack), so that visual components can avoid falling into the vicious circle of technology stack iteration and iteration.
-## Features
+
+## ✨ Features
 
 - Support Vue, React, Angular, JQ and no framework project
 - 40+ High quality components
@@ -69,7 +80,7 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 | TDesign Mobile | -     | √ | Gulp           | √ | 2021 | React only  |
 | Antd Mobile | -        | √ | Gulp           | √ | 2016 | React only  |
 
-## CDN
+## 🔗 CDN
 The easiest way to use quark is to directly introduce the CDN link in the HTML file, and then you can use it anywhere in the world. Since quark has achieved CSS-IN-JS, you only need to load the link below.
 
 ```
@@ -77,7 +88,7 @@ The easiest way to use quark is to directly introduce the CDN link in the HTML f
 <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
 ```
 
-## Install
+## 📦 Install
 Using `npm` to install:
 
 ```bash
@@ -94,7 +105,7 @@ In order to improve the development experience, we have Reactify (Reactify) for 
 npm i @quarkd/quark-react --save
 ```
 
-## Quickstart
+## 🔨 Quickstart
 Vue.x
 ```jsx
 // 1. Import the components you need
@@ -152,15 +163,15 @@ No framework project
 </html>
 ```
 
-## Custom theme
+## 🎨 Custom theme
 
 See [custom theme](https://quark-design.hellobike.com/#/en-US/guide/theme).
 
-## Internationalization
+## 🌍 Internationalization
 
 Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization).
 
-## Browser Support
+## 🖥 Browser Support
 
 Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
 
@@ -213,7 +224,7 @@ export default {
 }
 ```
 
-## Contributions
+## 👋 Contributions [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-👋 Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) before making a pull request. 
+Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) before making a pull request. 
 

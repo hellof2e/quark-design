@@ -1,20 +1,12 @@
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/noticebar";
-import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { FC } from "react";
+import { Props, CustomEvent } from "quarkd/lib/noticebar";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface NoticebarProps extends componentBaseInterface {
-    text?: string
-    multiple?: boolean
-    closehide?: boolean
-    right?: string
-    safearea?: boolean
-    iconsize?: string
-    onLeftclick?: () => void
-    onRightclick?: () => void
-    onClose?: () => void
-}
-type NoticebarType =  FC<NoticebarProps>;
+type NoticebarProps = componentBaseInterface &
+  ReactifyProps<Props, CustomEvent>;
+type NoticebarType = FC<NoticebarProps>;
 
-const Noticebar = reactify('quark-noticebar') as NoticebarType;
+const Noticebar = reactify("quark-noticebar") as NoticebarType;
 export default Noticebar;

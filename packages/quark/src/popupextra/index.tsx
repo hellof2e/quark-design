@@ -1,22 +1,32 @@
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock';
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 import QuarkElement, {
   property,
   state,
   customElement,
   Fragment,
-  createRef
-} from '@quarkd/core';
-import '@quarkd/icons/lib/close'
-import style from './style.css';
-import { classNames } from '../../utils/index';
-
+  createRef,
+} from "@quarkd/core";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+import { classNames } from "../../utils/index";
+export interface Props {
+  position?: "top" | "bottom" | "left" | "right";
+  round?: boolean;
+  open: boolean;
+  closeable?: boolean;
+  safearea?: boolean;
+  zindex?: number;
+}
+export interface CustomEvent {
+  closed: () => void;
+}
 @customElement({
-  tag: 'quark-popupextra',
-  style
+  tag: "quark-popupextra",
+  style,
 })
 class QuarkPopupExtra extends QuarkElement {
   constructor() {
@@ -24,19 +34,19 @@ class QuarkPopupExtra extends QuarkElement {
   }
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  safearea: boolean = false;
+  safearea = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  hideclose: boolean = false;
+  hideclose = false;
 
   @property()
   title: string;
@@ -48,7 +58,7 @@ class QuarkPopupExtra extends QuarkElement {
   zindex: number | string | undefined = undefined;
 
   @state()
-  contentClassNames: string = '';
+  contentClassNames = "";
 
   wrap: any = createRef();
 
@@ -64,22 +74,22 @@ class QuarkPopupExtra extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       // 设置退出过度动画
       if (newValue) {
         // 由关闭到打开
-        current.classList.remove('leave');
+        current.classList.remove("leave");
       } else if (oldValue && !newValue) {
         // 由打开到关闭
-        current.classList.add('leave');
+        current.classList.add("leave");
       }
     }
     return true;
   }
 
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
-    if (propName === 'open' && this.wrap && this.wrap.current) {
+    if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
       if (newValue) {
         disableBodyScroll(current);
@@ -97,17 +107,18 @@ class QuarkPopupExtra extends QuarkElement {
   dispatchClose() {
     this.open = false;
     // 标签调用触发
-    this.dispatchEvent(new CustomEvent('closed'));
+    this.dispatchEvent(new CustomEvent("closed"));
   }
 
   dealClass() {
     const { current } = this.wrap;
 
-    this.contentClassNames = classNames('quark-popup-extra-body', {
+    this.contentClassNames = classNames("quark-popup-extra-body", {
       // 不触顶时，展示顶部细线
-      'quark-popup-extra-body-with-topline': current?.scrollTop > 1,
+      "quark-popup-extra-body-with-topline": current?.scrollTop > 1,
       // 不触底时，展示底部细线
-      'quark-popup-extra-body-with-bottonline': current?.scrollHeight > current?.scrollTop + current?.clientHeight + 1,
+      "quark-popup-extra-body-with-bottonline":
+        current?.scrollHeight > current?.scrollTop + current?.clientHeight + 1,
     });
   }
 
@@ -121,27 +132,30 @@ class QuarkPopupExtra extends QuarkElement {
 
   handleContentScroll = () => {
     this.dealClass();
-  }
+  };
 
   render() {
     return (
       <Fragment>
-        <div class="quark-popup-extra" >
-          <div class="quark-popup-extra-close-btn" onClick={this.handleCloseBtnClick}>
-            <quark-icon-close  size="24" />
+        <div class="quark-popup-extra">
+          <div
+            class="quark-popup-extra-close-btn"
+            onClick={this.handleCloseBtnClick}
+          >
+            <quark-icon-close size="24" />
           </div>
-          <header className={ this.title || this.subtitle ? 'quark-popup-extra-header' : ''}>
+          <header
+            className={
+              this.title || this.subtitle ? "quark-popup-extra-header" : ""
+            }
+          >
             <div className="quark-popup-extra-toper">
               <slot name="title">
-                <div className="quark-popup-extra-title">
-                  {this.title}
-                </div>
+                <div className="quark-popup-extra-title">{this.title}</div>
               </slot>
             </div>
             {this.subtitle && (
-              <div className="quark-popup-extra-subtitle">
-                {this.subtitle}
-              </div>
+              <div className="quark-popup-extra-subtitle">{this.subtitle}</div>
             )}
           </header>
           <div

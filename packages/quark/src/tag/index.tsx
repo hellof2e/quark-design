@@ -1,38 +1,41 @@
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 
-import style from './style.css';
-
-@customElement({tag: 'quark-tag', style})
+import style from "./style.css";
+export interface Props {
+  type?: "primary" | "success" | "danger" | "warning";
+  size?: "small" | "large";
+  round?: boolean;
+  plain?: boolean;
+  color?: string;
+  textcolor?: string;
+}
+@customElement({ tag: "quark-tag", style })
 class QuarkTag extends QuarkElement {
   constructor() {
     super();
   }
 
   @property()
-  type: string = '';
+  type = "";
 
   @property()
-  color: string = '';
+  color = "";
 
   @property()
-  textcolor: string = '';
+  textcolor = "";
 
   @property()
-  size: string = '';
+  size = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  plain: boolean = false;
+  plain = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  round: boolean = false;
+  round = false;
 
   wrap: any = createRef();
 

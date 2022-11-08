@@ -1,15 +1,11 @@
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/steps";
-import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { FC } from "react";
+import { ItemProps } from "quarkd/lib/steps";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface StepItemProps extends componentBaseInterface {
-    title: number
-    status: 'done' | 'doing' | 'todo'
-    content?: string
-    order?: string
-}
-type StepItemType =  FC<StepItemProps>;
+type StepItemProps = componentBaseInterface & ReactifyProps<ItemProps, {}>;
+type StepItemType = FC<StepItemProps>;
 
-const StepItem = reactify('quark-step') as StepItemType;
+const StepItem = reactify("quark-step") as StepItemType;
 export default StepItem;

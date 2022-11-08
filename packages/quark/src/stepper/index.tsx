@@ -1,55 +1,64 @@
-import { classNames } from '../../utils/index';
-import QuarkElement, {
-  property,
-  customElement,
-  createRef
-} from '@quarkd/core';
-
-import style from './style.css';
-
-@customElement({tag:'quark-stepper', style})
+import { classNames } from "../../utils/index";
+import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import style from "./style.css";
+export interface Props {
+  min?: number;
+  max?: number;
+  steps?: number;
+  name?: string;
+  decimallength?: number;
+  integer?: boolean;
+  disabled?: boolean;
+}
+export interface CustomEvent {
+  overlimit?: (e: { detail: { action: string } }) => void;
+  plus?: () => void;
+  minus?: () => void;
+  change: (e: { detail: { value: number; name: string } }) => void;
+}
+@customElement({ tag: "quark-stepper", style })
 class QuarkStepper extends QuarkElement {
   constructor() {
     super();
   }
 
   @property({
-    type: Number
+    type: Number,
   })
-  value: number = 0;
+  value = 0;
 
   @property({
-    type: Number
+    type: Number,
   })
   min: number | undefined = undefined;
 
   @property({
-    type: Number
+    type: Number,
   })
   max: number | undefined = undefined;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  interger: boolean = false;
+  interger = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property({
-    type: Number
+    type: Number,
   })
   decimallength: number | undefined = undefined;
 
   @property({
-    type: Number
+    type: Number,
   })
-  steps: number = 1;
+  steps = 1;
 
   @property()
-  name: string = '';
+  name = "";
 
   inputRef: any = createRef();
 
@@ -57,38 +66,37 @@ class QuarkStepper extends QuarkElement {
 
   plusRef: any = createRef();
 
-
   componentDidMount() {
     this.formatData();
   }
 
   handlePlusClick = (event: any) => {
     event.stopPropagation();
-    this.$emit('plus');
+    this.$emit("plus");
 
     if ((this.max && this.value < this.max) || this.max === null) {
       this.value += this.steps;
       this.dispatchChange();
     } else if (this.max && this.value >= this.max) {
-      this.$emit('overlimit', {
+      this.$emit("overlimit", {
         detail: {
-          action: 'plus'
-        }
+          action: "plus",
+        },
       });
     }
   };
 
   handleMinusClick = (event: any) => {
     event.stopPropagation();
-    this.$emit('minus');
+    this.$emit("minus");
     if ((this.min && this.value > this.min) || this.min === null) {
       this.value -= this.steps;
       this.dispatchChange();
     } else if (this.min && this.value <= this.min) {
-      this.$emit('overlimit', {
+      this.$emit("overlimit", {
         detail: {
-          action: 'minus'
-        }
+          action: "minus",
+        },
       });
     }
   };
@@ -110,11 +118,11 @@ class QuarkStepper extends QuarkElement {
 
   dispatchChange() {
     this.formatData();
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
         value: this.value,
-        name: this.name || ''
-      }
+        name: this.name || "",
+      },
     });
   }
 
@@ -154,14 +162,14 @@ class QuarkStepper extends QuarkElement {
   };
 
   render() {
-    const miniClassName = classNames('quark-stepper-minus', {
-      'quark-stepper-disabled': this.miniNeedDisable()
+    const miniClassName = classNames("quark-stepper-minus", {
+      "quark-stepper-disabled": this.miniNeedDisable(),
     });
-    const plusClassName = classNames('quark-stepper-plus', {
-      'quark-stepper-disabled': this.plusNeedDisable()
+    const plusClassName = classNames("quark-stepper-plus", {
+      "quark-stepper-disabled": this.plusNeedDisable(),
     });
-    const inputClassName = classNames('quark-stepper-input', {
-      'quark-stepper-disabled': this.disabled
+    const inputClassName = classNames("quark-stepper-input", {
+      "quark-stepper-disabled": this.disabled,
     });
     return (
       <div class="quark-stepper-container" id="stepper">

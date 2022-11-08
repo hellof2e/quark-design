@@ -1,6 +1,6 @@
 {
   "name": "@quarkd/quark-react",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Web components react reactify",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
@@ -13,7 +13,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rm -rf lib && npx tsc",
+    "build": "rimraf lib && npx tsc",
     "release:major": "npm run release -- --release-as major",
     "release:minor": "npm run release -- --release-as minor",
     "release:patch": "npm run release -- --release-as patch",
@@ -44,26 +44,19 @@
     "@types/body-scroll-lock": "^3.1.0",
     "@types/lodash.assign": "^4.2.7",
     "@types/node": "^14.14.31",
-    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "chokidar": "^3.5.2",
     "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",
     "deepmerge": "^3.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-node": "^4.1.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-node": "^11.1.0",
     "fs-extra": "^9.1.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^10.5.4",
     "@quarkd/reactify": "^1.0.0",
     "rollup-plugin-import-css": "^3.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "sinon": "^12.0.1",
     "standard-version": "^9.3.0",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "rimraf": "3.0.2"
   },
   "repository": {
     "type": "git",

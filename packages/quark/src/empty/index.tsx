@@ -1,13 +1,15 @@
-import QuarkElement, {
-  property,
-  customElement
-} from '@quarkd/core';
+import QuarkElement, { property, customElement } from "@quarkd/core";
 
-import style from './style.css';
-
+import style from "./style.css";
+export interface Props {
+  title?: string;
+  desc?: string;
+  image?: string;
+  imagesize?: string;
+}
 @customElement({
-  tag: 'quark-empty',
-  style
+  tag: "quark-empty",
+  style,
 })
 class QuarkEmpty extends QuarkElement {
   constructor() {
@@ -15,13 +17,13 @@ class QuarkEmpty extends QuarkElement {
   }
 
   @property()
-  title: string = '';
+  title: string = "";
 
   @property()
-  desc: string = '';
+  desc: string = "";
 
   @property()
-  image: string = '';
+  image: string = "";
 
   @property()
   imagesize: string;
@@ -31,22 +33,22 @@ class QuarkEmpty extends QuarkElement {
       <div class="quark-empty">
         <div class="quark-empty-container">
           <img
-            style={{width: ~['px', 'rem', 'em', 'vw', 'vh'].indexOf(this.imagesize) ? this.imagesize : `${this.imagesize}px`}}
+            style={{
+              width: ~["px", "rem", "em", "vw", "vh"].indexOf(this.imagesize)
+                ? this.imagesize
+                : `${this.imagesize}px`,
+            }}
             class="quark-empty-image"
-            src={this.image ? this.image : "https://m.hellobike.com/resource/helloyun/16719/NzmBm8lW4h.png"}
+            src={
+              this.image
+                ? this.image
+                : "https://m.hellobike.com/resource/helloyun/16719/NzmBm8lW4h.png"
+            }
             alt="empty-image"
           />
         </div>
-        {this.title && (
-          <div class="quark-empty-title">
-            {this.title}
-          </div>
-        )}
-        {this.desc && (
-          <div class="quark-empty-desc">
-            {this.desc}
-          </div>
-        )}
+        {this.title && <div class="quark-empty-title">{this.title}</div>}
+        {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
         <slot name="footer"></slot>
       </div>
     );

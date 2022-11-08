@@ -2,56 +2,71 @@ import QuarkElement, {
   customElement,
   property,
   createRef,
-  state
-} from '@quarkd/core';
+  state,
+} from "@quarkd/core";
 import Locale from "../locale";
+import style from "./style.css";
 
-import style from './style.css';
-
-type autoCompleteType = 'off' | 'on';
-
-@customElement({tag: 'quark-textarea', style})
+type autoCompleteType = "off" | "on";
+export interface Props {
+  value?: string;
+  placeholder?: string;
+  rows?: number;
+  maxlength?: number;
+  showcount?: boolean;
+  autocomplete?: boolean;
+  disabled?: boolean;
+  readonly?: boolean;
+  id?: string;
+}
+export interface CustomEvent {
+  input: (e: { target: { value: string } }) => void;
+  focus?: () => void;
+  blur?: () => void;
+  change: (e: { target: { value: string } }) => void;
+}
+@customElement({ tag: "quark-textarea", style })
 class TextArea extends QuarkElement {
   @property()
-  name: string = '';
+  name = "";
 
   @property()
-  rows: number = 2;
+  rows = 2;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  autosize: Boolean = false;
+  autosize = false;
 
   @property()
   placeholder: string = Locale.current.placehold;
 
   @property()
-  maxlength: number | string = '';
+  maxlength: number | string = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  showcount: Boolean = false;
+  showcount = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  readonly: boolean = false;
+  readonly = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property()
-  autocomplete: autoCompleteType = 'off';
+  autocomplete: autoCompleteType = "off";
 
   @property()
-  id: string = '';
+  id = "";
 
   @state()
-  value: string = '';
+  value = "";
 
   textAreaRef: any = createRef();
 
@@ -62,7 +77,7 @@ class TextArea extends QuarkElement {
 
     // 自适应高度
     if (this.autosize) {
-      current.style.height = 'auto';
+      current.style.height = "auto";
       current.style.height = `${current.scrollHeight}px`;
     }
   };

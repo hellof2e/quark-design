@@ -2,19 +2,42 @@ import QuarkElement, {
   property,
   state,
   customElement,
-  createRef
-} from '@quarkd/core';
-import style from './style.css';
-import { classNames } from '../../utils/index';
+  createRef,
+} from "@quarkd/core";
+import style from "./style.css";
+import { classNames } from "../../utils/index";
 
-type PopoverAction = {
+export interface PopoverAction {
   text: string;
   icon?: string;
   disabled?: boolean;
-};
+}
+export interface Props {
+  open: boolean;
+  placement?:
+    | "top"
+    | "topleft"
+    | "topright"
+    | "left"
+    | "lefttop"
+    | "leftbottom"
+    | "right"
+    | "righttop"
+    | "rightbottom"
+    | "bottom"
+    | "bottomleft"
+    | "bottomright";
+  zindex?: number;
+  theme?: "light" | "dark";
+  scroolhidden?: boolean;
+}
+export interface CustomEvent {
+  close: () => void;
+  select: (e: { detail: { action: PopoverAction; index: number } }) => void;
+}
 @customElement({
-  tag: 'quark-popover',
-  style
+  tag: "quark-popover",
+  style,
 })
 class QuarkPopover extends QuarkElement {
   constructor() {
@@ -22,29 +45,28 @@ class QuarkPopover extends QuarkElement {
   }
 
   @property()
-  placement: string = 'bottom';
+  placement = "bottom";
 
   @property()
-  theme: string = 'dark';
+  theme = "dark";
 
   @state()
   actions: PopoverAction[] = [];
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  scroolhidden: boolean = false;
+  scroolhidden = false;
 
   @property()
-  zindex: string = '999';
+  zindex = "999";
 
   tipsRef: any = createRef();
-
 
   componentDidMount() {
     if (this.zindex) {
@@ -52,15 +74,15 @@ class QuarkPopover extends QuarkElement {
     }
 
     if (this.scroolhidden) {
-      window.addEventListener('scroll', this.windowScrollListener);
+      window.addEventListener("scroll", this.windowScrollListener);
     }
 
-    document.addEventListener('click', (e) => {
-      if(!e.composedPath().includes(this) && this.open) {  // 打开状态，并且外界点击
+    document.addEventListener("click", (e) => {
+      if (!e.composedPath().includes(this) && this.open) {
+        // 打开状态，并且外界点击
         this.closeEmit();
       }
-    })
-
+    });
   }
 
   shouldComponentUpdate(
@@ -68,22 +90,22 @@ class QuarkPopover extends QuarkElement {
     oldValue: string | boolean,
     newValue: string | boolean
   ): boolean {
-    if (propName === 'open' && this.tipsRef && this.tipsRef.current) {
+    if (propName === "open" && this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
       // 设置退出过度动画
       if (newValue) {
         // 由关闭到打开
-        current.classList.remove('quark-popover-leave');
+        current.classList.remove("quark-popover-leave");
       } else if (oldValue && !newValue) {
         // 由打开到关闭
-        current.classList.add('quark-popover-leave');
+        current.classList.add("quark-popover-leave");
       }
     }
     return true;
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.windowScrollListener);
+    window.removeEventListener("scroll", this.windowScrollListener);
   }
 
   windowScrollListener = () => {
@@ -95,7 +117,7 @@ class QuarkPopover extends QuarkElement {
   addRemoveAnnimation = () => {
     if (this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
-      current.classList.add('quark-popover-leave');
+      current.classList.add("quark-popover-leave");
     }
   };
 
@@ -107,44 +129,53 @@ class QuarkPopover extends QuarkElement {
   closeEmit = () => {
     this.addRemoveAnnimation();
     this.open = false;
-    this.$emit('close');
+    this.$emit("close");
   };
 
   handleActionClick = (ev: any, index: number) => {
     ev.stopPropagation();
-    this.$emit('select', {
+    this.$emit("select", {
       detail: {
         action: this.actions[index],
-        index: index
-      }
+        index: index,
+      },
     });
   };
 
   renderIcon = (icon?: string) => {
-    if (icon && icon.includes('http')) {
-      return <img src={icon} style={{ marginRight: 10 }} class="quark-popover-icon" />;
+    if (icon && icon.includes("http")) {
+      return (
+        <img
+          src={icon}
+          style={{ marginRight: 10 }}
+          class="quark-popover-icon"
+        />
+      );
     }
     return null;
   };
 
   renderActions = () => {
     if (
-      this.placement === 'top' ||
-      this.placement === 'topleft' ||
-      this.placement === 'topright' ||
-      this.placement === 'left' ||
-      this.placement === 'lefttop' ||
-      this.placement === 'leftbottom'
+      this.placement === "top" ||
+      this.placement === "topleft" ||
+      this.placement === "topright" ||
+      this.placement === "left" ||
+      this.placement === "lefttop" ||
+      this.placement === "leftbottom"
     ) {
       return (
         <div class="quark-popover-tips" ref={this.tipsRef}>
           <div class="quark-popover-content">
             <slot name="content">
               {this.actions.map((action: PopoverAction, index: number) => {
-                const actionClass = classNames('quark-popover-action-container', {
-                  'quark-action-container-disable':
-                    action.disabled && action.disabled === true
-                });
+                const actionClass = classNames(
+                  "quark-popover-action-container",
+                  {
+                    "quark-action-container-disable":
+                      action.disabled && action.disabled === true,
+                  }
+                );
                 return (
                   <div
                     class={actionClass}
@@ -169,9 +200,9 @@ class QuarkPopover extends QuarkElement {
         <div class="quark-popover-content">
           <slot name="content">
             {this.actions.map((action: PopoverAction, index: number) => {
-              const actionClass = classNames('quark-popover-action-container', {
-                'quark-action-container-disable':
-                  action.disabled && action.disabled === true
+              const actionClass = classNames("quark-popover-action-container", {
+                "quark-action-container-disable":
+                  action.disabled && action.disabled === true,
               });
               return (
                 <div

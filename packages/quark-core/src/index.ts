@@ -1,10 +1,10 @@
-import { h, render, VNode, Fragment as OriginFragment } from 'preact';
-import { PropertyDeclaration } from './models';
-import DblKeyMap from './dblKeyMap';
-import { EventController, EventHandler } from './eventController';
-import delay from './delay';
+import { h, render, VNode, Fragment as OriginFragment } from "preact";
+import { PropertyDeclaration } from "./models";
+import DblKeyMap from "./dblKeyMap";
+import { EventController, EventHandler } from "./eventController";
+import delay from "./delay";
 
-export { createRef } from 'preact';
+export { createRef } from "preact";
 
 export const Fragment: any = OriginFragment;
 
@@ -17,7 +17,7 @@ const defaultConverter = (value: any, type?: any): any => {
       newValue = isEmpty(value) ? value : Number(value);
       break;
     case Boolean:
-      newValue = !([null, 'false', false, undefined].indexOf(value) > -1);
+      newValue = !([null, "false", false, undefined].indexOf(value) > -1);
       break;
   }
   return newValue;
@@ -26,7 +26,7 @@ const defaultConverter = (value: any, type?: any): any => {
 const defaultPropertyDeclaration: PropertyDeclaration = {
   observed: true,
   type: String,
-  converter: defaultConverter
+  converter: defaultConverter,
 };
 
 export const property = (options: PropertyDeclaration = {}) => {
@@ -56,12 +56,11 @@ const Descriptors: DblKeyMap<
   (defaultValue?: any) => PropertyDescriptor
 > = new DblKeyMap();
 
-export function customElement(params: string
-| { tag: string, style?: string }) {
-  const {
-    tag,
-    style = '',
-  } = typeof params === 'string' ? { tag: params } : params;
+export function customElement(
+  params: string | { tag: string; style?: string }
+) {
+  const { tag, style = "" } =
+    typeof params === "string" ? { tag: params } : params;
 
   return (target: typeof QuarkElement) => {
     class NewQuarkElement extends target {
@@ -92,16 +91,16 @@ export function customElement(params: string
 
       constructor() {
         super();
-        
+
         if (style) {
           this.getStyles = () => style;
         }
 
-        const shadowRoot = this.attachShadow({ mode: 'open' });
+        const shadowRoot = this.attachShadow({ mode: "open" });
 
         if (shadowRoot) {
-          if (typeof this.getStyles === 'function') {
-            const styleEl = document.createElement('style');
+          if (typeof this.getStyles === "function") {
+            const styleEl = document.createElement("style");
             styleEl.innerHTML = this.getStyles();
             shadowRoot.append(styleEl);
           }
@@ -127,7 +126,7 @@ export function customElement(params: string
       customElements.define(tag, NewQuarkElement);
     }
   };
-};
+}
 
 export default class QuarkElement extends HTMLElement {
   static h = h;
@@ -140,7 +139,7 @@ export default class QuarkElement extends HTMLElement {
       return {
         get(this: QuarkElement): any {
           let val = this.getAttribute(name);
-          
+
           if (!isEmpty(defaultValue)) {
             // 判断val是否为空值
             // const isEmpty = () => !(val || val === false || val === 0)
@@ -152,24 +151,24 @@ export default class QuarkElement extends HTMLElement {
             // 变形为：isEmpty(val) && (options.type !== Boolean || (options.type === Boolean && val !== ''))
             // 其中options.type === Boolean显然恒等于true：isEmpty(val) && (options.type !== Boolean || (true && val !== ''))
             // 得出：isEmpty(val) && (options.type !== Boolean || val !== '')
-            if (isEmpty(val) && (options.type !== Boolean || val !== '')) {
+            if (isEmpty(val) && (options.type !== Boolean || val !== "")) {
               return defaultValue;
             }
           }
-          if (typeof options.converter === 'function') {
+          if (typeof options.converter === "function") {
             val = options.converter(val, options.type) as string;
           }
           return val;
         },
         set(this: QuarkElement, value: string | boolean | null) {
           let val = value as string;
-          if (typeof options.converter === 'function') {
+          if (typeof options.converter === "function") {
             val = options.converter(value, options.type) as string;
           }
-          
+
           if (val) {
-            if(typeof val === "boolean") {
-              this.setAttribute(name, '');
+            if (typeof val === "boolean") {
+              this.setAttribute(name, "");
             } else {
               this.setAttribute(name, val);
             }
@@ -178,7 +177,7 @@ export default class QuarkElement extends HTMLElement {
           }
         },
         configurable: true,
-        enumerable: true
+        enumerable: true,
       };
     };
   }
@@ -195,7 +194,7 @@ export default class QuarkElement extends HTMLElement {
           this._render();
         },
         configurable: true,
-        enumerable: true
+        enumerable: true,
       };
     };
   }
@@ -211,7 +210,7 @@ export default class QuarkElement extends HTMLElement {
   }
 
   getStyles(): string {
-    return '';
+    return "";
   }
 
   private eventController: EventController = new EventController();
@@ -259,14 +258,18 @@ export default class QuarkElement extends HTMLElement {
   }
 
   $on = (eventName: string, eventHandler: EventHandler, el?: Element) => {
-    return this.eventController.bindListener(el || this, eventName, eventHandler);
+    return this.eventController.bindListener(
+      el || this,
+      eventName,
+      eventHandler
+    );
   };
 
   $emit<T>(eventName: string, customEventInit?: CustomEventInit<T>) {
     return this.dispatchEvent(
       new CustomEvent(
         eventName,
-        Object.assign({ bubbles: true }, customEventInit),
+        Object.assign({ bubbles: true }, customEventInit)
       )
     );
   }
@@ -274,8 +277,7 @@ export default class QuarkElement extends HTMLElement {
   /**
    * 此时组件 dom 已插入到页面中，等同于 connectedCallback() { super.connectedCallback(); }
    */
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   /**
    * disconnectedCallback 触发时、dom 移除前执行，等同于 disconnectedCallback() { super.disconnectedCallback(); }
@@ -301,7 +303,7 @@ export default class QuarkElement extends HTMLElement {
    * @returns VNode
    */
   render() {
-    return '' as any;
+    return "" as any;
   }
 
   connectedCallback() {
@@ -312,7 +314,7 @@ export default class QuarkElement extends HTMLElement {
      */
     this._render();
 
-    if (typeof this.componentDidMount === 'function') {
+    if (typeof this.componentDidMount === "function") {
       this.componentDidMount();
     }
   }
@@ -321,14 +323,14 @@ export default class QuarkElement extends HTMLElement {
     // @ts-ignore
     // 因为 React 的属性变更并不会触发 set，此时如果 boolean 值变更，这里的 value 会是字符串，组件内部通过 get 操作可以获取到正确的类型
     const newValue = this[name] || value;
-    if (typeof this.shouldComponentUpdate === 'function') {
+    if (typeof this.shouldComponentUpdate === "function") {
       if (!this.shouldComponentUpdate(name, oldValue, newValue)) {
         return;
       }
     }
     this._render();
 
-    if (typeof this.componentDidUpdate === 'function') {
+    if (typeof this.componentDidUpdate === "function") {
       this.componentDidUpdate(name, oldValue, newValue);
     }
 
@@ -340,7 +342,7 @@ export default class QuarkElement extends HTMLElement {
   }
 
   disconnectedCallback() {
-    if (typeof this.componentWillUnmount === 'function') {
+    if (typeof this.componentWillUnmount === "function") {
       this.componentWillUnmount();
     }
 

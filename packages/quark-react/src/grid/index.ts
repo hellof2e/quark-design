@@ -1,13 +1,11 @@
-import { FC } from 'react';
+import { FC } from "react";
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/grid";
-import { componentBaseInterface } from '../type';
-interface GridProps extends componentBaseInterface {
-    column?: number
-    noborder?: boolean
-    square?: boolean
-}
-type GridType =  FC<GridProps>;
+import { Props } from "quarkd/lib/grid";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-const Grid = reactify('quark-grid') as GridType;
+type GridProps = componentBaseInterface & ReactifyProps<Props, {}>;
+type GridType = FC<GridProps>;
+
+const Grid = reactify("quark-grid") as GridType;
 export default Grid;
