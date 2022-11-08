@@ -1,18 +1,18 @@
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { babel } from '@rollup/plugin-babel';
-import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
-import cssVariable from '@quarkd/rollup-plugin-css-variable';
-import fs from 'fs';
-import path from 'path';
-import postcss from '@quarkd/rollup-plugin-postcss';
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
+import typescript from "@rollup/plugin-typescript";
+import { terser } from "rollup-plugin-terser";
+import cssVariable from "@quarkd/rollup-plugin-css-variable";
+import fs from "fs";
+import path from "path";
+import postcss from "@quarkd/rollup-plugin-postcss";
 import px2vp from "postcss-px-to-viewport";
-import filesize from 'rollup-plugin-filesize';
-import variableMap from './global-css';
+import filesize from "rollup-plugin-filesize";
+import variableMap from "./global-css";
 
-const extensions = ['.js', '.ts', '.tsx'];
-const packageSrcRoot = path.join(__dirname, './src');
+const extensions = [".js", ".ts", ".tsx"];
+const packageSrcRoot = path.join(__dirname, "./src");
 const componentNames = fs
   // 获取所有文件夹及文件
   .readdirSync(packageSrcRoot, { withFileTypes: true })
@@ -24,33 +24,33 @@ const componentNames = fs
     name: p.name,
   }))
   // 带上package/index.js
-  .concat({ path: 'index', name: 'index' });
+  .concat({ path: "index", name: "index" });
 
 /**
  * @type {import('rollup').RollupOptions}
  */
 const options = [
   {
-    input: './src/index.js',
+    input: "./src/index.js",
     output: {
-      dir: './umd',
-      format: 'umd',
-      name: 'index.mini.js',
+      dir: "./umd",
+      format: "umd",
+      name: "index.mini.js",
     },
     plugins: [
       cssVariable({
         variableMap,
-        prefix: 'quark-',
+        prefix: "quark-",
       }),
       postcss({
         plugins: [
           px2vp({
-            unitToConvert: 'px',
+            unitToConvert: "px",
             viewportWidth: 375,
             unitPrecision: 5,
-            propList: ['*'],
-            viewportUnit: 'vw',
-            fontViewportUnit: 'vw',
+            propList: ["*"],
+            viewportUnit: "vw",
+            fontViewportUnit: "vw",
             selectorBlackList: [],
             minPixelValue: 1,
             mediaQuery: false,
@@ -58,20 +58,20 @@ const options = [
             exclude: undefined,
             include: undefined,
             landscape: false,
-          }) 
+          }),
         ],
         inject: false,
-        extensions: [ '.css' ],
+        extensions: [".css"],
       }),
       // css(),
       typescript(),
       commonjs(),
       nodeResolve({
-        extensions
+        extensions,
       }),
       babel({
-        babelHelpers: 'runtime',
-        exclude: 'node_modules/**',
+        babelHelpers: "runtime",
+        exclude: "node_modules/**",
         extensions,
       }),
       terser(),
@@ -83,25 +83,25 @@ const options = [
       return result;
     }, {}),
     output: {
-      dir: 'lib',
-      chunkFileNames: '[name].js',
-      format: 'es',
+      dir: "lib",
+      chunkFileNames: "[name].js",
+      format: "es",
     },
     treeshake: false,
     plugins: [
       cssVariable({
         variableMap,
-        prefix: 'quark-',
+        prefix: "quark-",
       }),
       postcss({
         plugins: [
           px2vp({
-            unitToConvert: 'px',
+            unitToConvert: "px",
             viewportWidth: 375,
             unitPrecision: 5,
-            propList: ['*'],
-            viewportUnit: 'vw',
-            fontViewportUnit: 'vw',
+            propList: ["*"],
+            viewportUnit: "vw",
+            fontViewportUnit: "vw",
             selectorBlackList: [],
             minPixelValue: 1,
             mediaQuery: false,
@@ -109,10 +109,10 @@ const options = [
             exclude: undefined,
             include: undefined,
             landscape: false,
-          }) 
+          }),
         ],
         inject: false,
-        extensions: [ '.css' ],
+        extensions: [".css"],
       }),
       // css(),
       typescript(),
@@ -121,9 +121,13 @@ const options = [
         extensions,
         modulesOnly: true,
       }),
-      babel({ babelHelpers: 'runtime', exclude: 'node_modules/**', extensions }),
+      babel({
+        babelHelpers: "runtime",
+        exclude: "node_modules/**",
+        extensions,
+      }),
       filesize(),
-      terser()
+      terser(),
     ],
   },
 ];

@@ -1,6 +1,16 @@
 {
-    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "typescript.inlayHints.variableTypes.enabled": true,
-    "typescript.inlayHints.enumMemberValues.enabled": true,
-    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "files.associations": {
+      "*.vue": "html"
+    },
+    "eslint.options": {
+      "configFile": "./.eslintrc.json"
+    },
+    "eslint.validate": ["javascript", "vue", "html", "typescript"],
+    "workbench.startupEditor": "none",
+    "stylelint.validate": ["css", "scss"],
+    "scss.validate": false,
+    "css.validate": false
 }
