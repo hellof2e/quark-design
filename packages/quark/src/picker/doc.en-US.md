@@ -142,6 +142,7 @@ export default {
 |--------------|----------------------------------|--------|------------------|
 | open         | Whether to show picker	 | `boolean`  | `require`
 | title        | Title | `string` | - |
+| confirmtext      | Text of the ok button           | `string` | `Confirm`
 | bottomhidden | Whether to show bottom button (use with custom header)  | `boolean` | `false`
 
 ### Events
