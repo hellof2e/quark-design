@@ -92,7 +92,7 @@ import { Button } from '@quarkd/quark-react';
 
 | 参数         | 说明                             | 类型   | 默认值           |
 |--------------|----------------------------------|--------|------------------|
-| type         | 类型，可选值为 `primary`、`success`、`orange`、`danger`, `warning` 和默认 6 种类型| `string` |`primary`         |
+| type         | 类型，可选值为 `primary`、`success`、`orange`、`danger`、`warning` 和默认 6 种类型| `string` |`primary`         |
 | size |  尺寸，可选值为 `small`, `normal`, `big`, `large` 4种类型 | `string` | `normal` |
 | disabled          | 	是否禁用按钮                       | `boolean` | `false`              |
 | icon          | 按钮图标 (支持传url链接)                        | `string` | -     |
