@@ -1,17 +1,10 @@
-import reactify from "@quarkd/reactify";
-import "quarkd/lib/rate";
+import reactify from '@quarkd/reactify';
+import 'quarkd/lib/rate';
 import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { Props, CustomEvent } from  'quarkd/lib/rate';
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface RateProps extends componentBaseInterface {
-    defaultvalue?: number
-    value?: number
-    size?: number
-    disabled?: boolean
-    readonly?: boolean
-    activecolor?: string
-    onChange: (e: {detail: {value: string}}) => void
-}
+type RateProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
 type RateType =  FC<RateProps>;
 
 const Rate = reactify('quark-rate') as RateType;

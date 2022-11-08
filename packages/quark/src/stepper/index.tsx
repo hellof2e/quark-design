@@ -4,9 +4,22 @@ import QuarkElement, {
   customElement,
   createRef
 } from '@quarkd/core';
-
 import style from './style.css';
-
+export interface Props {
+  min?: number
+  max?: number
+  steps?: number
+  name?: string
+  decimallength?: number
+  integer?: boolean
+  disabled?: boolean
+}
+export interface CustomEvent {
+  overlimit?: (e: {detail: {action: string}}) => void
+  plus?: () => void
+  minus?: () => void
+  change: (e: {detail: {value: number, name: string}}) => void
+}
 @customElement({tag:'quark-stepper', style})
 class QuarkStepper extends QuarkElement {
   constructor() {

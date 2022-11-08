@@ -21,14 +21,14 @@ export interface SelectedColumn {
   value: string
   index: number
 }
-export interface PickerProps {
+export interface Props {
   open: boolean
   name?: string
   title?: string
   bottomhidden?: boolean
 }
 
-export interface PickerCustomEvent {
+export interface CustomEvent {
   close: () => void
   comfirm: (e: { detail: {value:  SelectedColumn[]} }) => void
   change?: (e: { detail: {value:  SelectedColumn[]} }) => void

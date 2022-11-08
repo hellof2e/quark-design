@@ -9,7 +9,20 @@ import { checkFalse } from '../../utils/public';
 import { getUnuseParent } from '../../utils/index';
 import style from './style.css';
 import Locale from "../locale";
-
+export interface Props {
+  error?: boolean
+  loading: boolean
+  finished: boolean
+  offset?: number
+  loadingtext?: string
+  finishedtext?: string
+  errortext?: string
+  textcolor?: string
+}
+export interface CustomEvent {
+  load?: () => void
+  reload?: () => void
+}
 @customElement({
   tag: 'quark-list',
   style

@@ -5,9 +5,29 @@ import QuarkElement, {
   createRef,
   state
 } from '@quarkd/core';
-
 import style from './style.css';
-
+export interface Props {
+  label?: string
+  type?: string
+  value?: string
+  defaultvalue?: string
+  name?: string
+  placeholder?: string
+  min?: string
+  minlength?: string
+  max?: string
+  maxlength?: string
+  disabled?: boolean
+  readonly?: boolean
+  required?: boolean
+  errormsg?: string
+ 
+}
+export interface CustomEvent {
+  change: (e: {detail: {value: string}}) => void
+  focus?: () => void
+  blur?: () => void
+}
 @customElement({
   tag: 'quark-field',
   style

@@ -15,23 +15,29 @@ import style from './style.css';
 import '../overlay';
 import Locale from '../locale';
 
-type DialogParams = {
+interface DialogParams {
   title?: string,
   content?: string,
   oktext?: string,
   canceltext?: string,
-  confirm: () => void,
-  cancel: () => void,
-  close: () => void,
   zindex?: number,
   autoclose?: boolean,
   notitle?: boolean,
   nofooter?: boolean,
-  type?: string,
+  type?: 'modal' | 'confirm',
 	hideclose?: boolean,
 	maskclosable?: boolean,
   btnvertical?: boolean,
 }
+export interface Props extends DialogParams {
+  open: boolean
+}
+export interface CustomEvent {
+  confirm: () => void,
+  cancel: () => void,
+  close: () => void,
+}
+
 @customElement({
   tag: 'quark-dialog',
   style,
@@ -277,7 +283,7 @@ class QuarkDialog extends QuarkElement {
 }
 
 // 函数调用
-export default function Dialog(params: DialogParams): QuarkDialog {
+export default function Dialog(params: DialogParams & CustomEvent): QuarkDialog {
   const dialog: any = document.createElement('quark-dialog');
   const {
     title = '',

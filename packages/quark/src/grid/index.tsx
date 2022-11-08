@@ -7,7 +7,16 @@ import QuarkElement, {
 import {slotAssignedElements} from '../../utils/public';
 import style from './style.css';
 import itemStyle from './itemStyle.css';
-
+export interface Props {
+  column?: number
+  noborder?: boolean
+  square?: boolean
+}
+export interface ItemProps {
+  text?: string
+  icon?: string
+  iconsize?: string
+}
 @customElement({
   tag: 'quark-grid-item',
   style: itemStyle,

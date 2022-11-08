@@ -11,12 +11,26 @@ import '../button';
 import '@quarkd/icons/lib/close';
 import style from './style.css';
 import Locale from "../locale";
+export interface PickerColumn {
+  values: string[]
+  defaultIndex: number
+}
+export interface SelectColumn {
+  value: string
+  index: number
+}
+export interface Props {
+  open: boolean
+  title?: string
+  bottomhidden?: boolean
+}
+export interface CustomEvent {
+  close: () => void
+  confirm: (e: {detail:{value: {value: string, index: number}[]}}) => void
+  change?: (e: {detail:{value: {value: string, index: number}[]}}) => void
+}
 
 BScroll.use(Wheel);
-type PickerColumn = {
-  values: string[];
-  defaultIndex: number;
-};
 @customElement({
   tag: 'quark-picker',
   style

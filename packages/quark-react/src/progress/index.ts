@@ -1,13 +1,10 @@
-import reactify from "@quarkd/reactify";
-import "quarkd/lib/progress";
+import reactify from '@quarkd/reactify';
+import 'quarkd/lib/progress';
 import { FC } from 'react';
-import { componentBaseInterface } from '../type';
+import { Props } from  'quarkd/lib/progress';
+import { componentBaseInterface, ReactifyProps } from '../type';
 
-interface ProgressProps extends componentBaseInterface {
-    value: number
-    color?: string
-    showtext?: boolean
-}
+type ProgressProps = componentBaseInterface & ReactifyProps<Props, {}>;
 type ProgressType =  FC<ProgressProps>;
 
 const Progress = reactify('quark-progress') as ProgressType;
