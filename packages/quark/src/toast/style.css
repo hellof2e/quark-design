@@ -64,8 +64,8 @@
 }
 
 :host(:not([type="text"])) quark-icon-success,
-quark-icon-failure,
-quark-icon-warning {
+:host(:not([type="text"])) quark-icon-failure,
+:host(:not([type="text"])) quark-icon-warning {
   margin-bottom: quark-vSpacingMd;
 }
 

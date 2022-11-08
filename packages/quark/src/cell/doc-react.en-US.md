@@ -90,7 +90,10 @@ export default () => {
   --cell-title-text-overflow: ellipsis;
 }
 ```
-### Right content
+
+### Customize right description
+
+The description on the right can be customized through Slot (the content of the `Cell` package).
 
 ```tsx
 import { Cell } from '@quarkd/quark-react';

@@ -12,6 +12,9 @@ type FitType = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 
 type Stauts = 'loading' | 'loaded' | 'error';
 
+type LazyLoadType = {
+  add: (el: HTMLImageElement, src: string, parent?: ParentNode | null) => void
+}
 @customElement({
   tag: 'quark-image',
   style
@@ -45,7 +48,7 @@ class QuarkImage extends QuarkElement {
   @property()
   radius: number | string = '';
 
-  lazyTarget: typeof LazyLoad | null = null;
+  lazyTarget: LazyLoadType = null;
 
   @state()
   status: Stauts = 'loading';

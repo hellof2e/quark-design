@@ -1,4 +1,47 @@
 # 更新日志
+### [1.0.14](https://github.com/hellof2e/quark-design/compare/v1.0.13...v1.0.14) (2022-11-04)
+
+
+### Documentation
+
+* **readme:** fix link ([d6bac93](https://github.com/hellof2e/quark-design/commit/d6bac93fc8f5bc97a558e2b9a783ecc5d9aaef44))
+
+
+### 🎉 Features
+
+* fix image type ([7ca5cc8](https://github.com/hellof2e/quark-design/commit/7ca5cc82fbd96fcdadeffed5dee3ab7a1f342dd4))
+* update ([144c069](https://github.com/hellof2e/quark-design/commit/144c0694f4184075d64e24b733a5a90eed07ddea))
+* update ([3efdb93](https://github.com/hellof2e/quark-design/commit/3efdb937f5338113808c4222da8f12c644c4871a))
+* update ([1ef0437](https://github.com/hellof2e/quark-design/commit/1ef0437d3383efa7ca54eafd824f35b613b33fe4))
+* update ([22b9b7b](https://github.com/hellof2e/quark-design/commit/22b9b7bc6c5852c6827853bf4213d63fbf954f86))
+* update ([ddf4e52](https://github.com/hellof2e/quark-design/commit/ddf4e52c11fe2ae813cd2493cc6b027b91a5ec5c))
+* update ([f0cdf4d](https://github.com/hellof2e/quark-design/commit/f0cdf4da7e24e5d07216172bb0f0acbd8ab1fa2d))
+* update cell doc ([fe695a7](https://github.com/hellof2e/quark-design/commit/fe695a76b0d2ca0231d74e1d97e44c8ffa13a8fa))
+* update md ([8b6b7b3](https://github.com/hellof2e/quark-design/commit/8b6b7b399a1f0089fb2f169453a15eafe1f7e94b))
+* update md ([d57e7a3](https://github.com/hellof2e/quark-design/commit/d57e7a3d49f3f81d19def42af3da670d87329283))
+* update md ([f285cd6](https://github.com/hellof2e/quark-design/commit/f285cd660fd72e0566e33596310f9b672921f2ac))
+* update md ([1d2ebea](https://github.com/hellof2e/quark-design/commit/1d2ebead06738e1d59f0c589dc0bc2bc66685bc0))
+* update quark ([ffed59d](https://github.com/hellof2e/quark-design/commit/ffed59dac3565b9c2b335b233d17af8b3454c3b1))
+* update readme ([79c1b48](https://github.com/hellof2e/quark-design/commit/79c1b4809d629839e0c648703fff61e1e12c6000))
+* update readme ([7109b34](https://github.com/hellof2e/quark-design/commit/7109b34d9f23443d77013e3227424be287d40099))
+* update workflow ([1e19b0f](https://github.com/hellof2e/quark-design/commit/1e19b0f121c57c2ccda749324dc97e142d007fd6))
+* update workflow ([8c11eba](https://github.com/hellof2e/quark-design/commit/8c11eba332a7452f631143bed9e3fe6e7b65c026))
+* update workflow ([b7ab0b3](https://github.com/hellof2e/quark-design/commit/b7ab0b326a6cf3a4b86d85a991c25681e0aa37bf))
+* update workflow ([e480941](https://github.com/hellof2e/quark-design/commit/e4809413b0abee017d033c792cae5a0cfabb35c8))
+* update yml ([7e2497d](https://github.com/hellof2e/quark-design/commit/7e2497d9ccc8c62a6eba84d8c02486c3a73cd393))
+* update yml ([64950a0](https://github.com/hellof2e/quark-design/commit/64950a01ddedf4a23b6b30a725cf79e0cef0864c))
+* workflow test ([4ec1bab](https://github.com/hellof2e/quark-design/commit/4ec1bab9a0d050b26db028dc117b8536a07307ad))
+* workflow test ([942ecdb](https://github.com/hellof2e/quark-design/commit/942ecdb40a3788b9a7286bcce3e1a056b147b157))
+* workflow test ([0382d4f](https://github.com/hellof2e/quark-design/commit/0382d4fe8d64219e9d337b0dbd502669f6279807))
+* workflow test ([e39dd4e](https://github.com/hellof2e/quark-design/commit/e39dd4eb376f32145b55a440bd776b7adf76fb10))
+* workflow test ([6930643](https://github.com/hellof2e/quark-design/commit/69306434f0d43338d1b9440a592af8b4c42e148a))
+
+
+### 🐞 Bug Fixes
+
+* field blur double triger in react ([e115d51](https://github.com/hellof2e/quark-design/commit/e115d515c6b1f8626b1a8bffca0d95b7329d1282))
+* fix getFontSize return ([ad1780d](https://github.com/hellof2e/quark-design/commit/ad1780d0282959cba4657a320199111ab32a31e9))
+
 ### [1.0.13](https://github.com/hellof2e/quark-design/compare/v1.0.12...v1.0.13) (2022-11-02)
 
 

@@ -59,14 +59,14 @@ Set the maximum width of the title, show ellipsis
   --cell-title-text-overflow: ellipsis;
 }
 ```
-### Right content
+
+### Customize right description
+
+The description on the right can be customized through Slot (the content of the `Cell` package).
 
 ```html
 <quark-cell title="Cell title">
-  <quark-radio-group :value="value" @change="onChange">
-    <quark-radio name="apple" style="margin-right: 10px;">Apple</quark-radio>
-    <quark-radio name="banana">Banana</quark-radio>
-  </quark-radio-group>
+  <div>自定义内容</div>
 </quark-cell>
 ```
 

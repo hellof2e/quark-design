@@ -51,20 +51,19 @@ import 'quarkd/lib/cell';
 <quark-cell class="my-cell" title="这是标题很长长长长长长长长长长长长长长长长长长" />
 ```
 ```css
-// CSS 省略号展示
+/* CSS 省略号展示 */
 .my-cell {
   --cell-title-white-space: nowrap;
   --cell-title-text-overflow: ellipsis;
 }
 ```
-### 自定义右侧内容
+### 自定义右侧描述
+
+通过 Slot（`Cell` 包裹的内容）可以自定义右侧描述。
 
 ```html
 <quark-cell title="标题">
-  <quark-radio-group :value="value" @change="onChange">
-    <quark-radio name="apple" style="margin-right: 10px;">苹果</quark-radio>
-    <quark-radio name="banana">香蕉</quark-radio>
-  </quark-radio-group>
+  <div>自定义内容</div>
 </quark-cell>
 ```
 

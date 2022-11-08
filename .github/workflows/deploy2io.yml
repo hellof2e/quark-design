@@ -1,0 +1,29 @@
+name: sync to github.io
+
+on:
+  push:
+    branches:
+      - main # default branch
+    paths:
+      - '.github/workflows/**'
+      - '**'
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/checkout@v2
+      # 会有很多npm包在外层，link 使用
+      # - run: cd example && npm i --legacy-peer-deps && npm run build
+      - run: yarn
+      - run: yarn run link
+      - run: yarn push2GithubWebsite
+      - name : Sync 
+        uses : JamesIves/github-pages-deploy-action@4.1.7 
+        with :
+          branch : main # action 应该部署到的分支。
+          folder : dist # 操作应该部署的文件夹。
+          clean: false
+          repository-name: hellof2e/quark-design.github.io
+          token: ${{ secrets.GIT_ACTION }}
+          target-folder: demo # 部署到demo目录下

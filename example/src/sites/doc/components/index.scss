@@ -69,7 +69,7 @@
     display: flex;
     cursor: pointer;
     img{
-      width: 40px;
+      width: 28px;
     }
   }
 }
@@ -126,14 +126,11 @@
   top: 0;
   left: 0;
   right: 0;
-  min-width: 1300px;
   height: 68px;
   line-height: 68px;
   padding: 0 50px;
   font-size: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   background: #000;
   color: #ccc;

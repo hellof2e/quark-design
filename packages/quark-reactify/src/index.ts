@@ -31,7 +31,8 @@
            if (prop.match(/^on[A-Za-z]/)) {
              // 需要过滤掉原生支持的 click 事件
              const eventName = prop.substr(2).toLowerCase();
-             if (eventName !== 'click') {
+             const nativeEvent = ['click', 'blur', 'focus']
+             if (!nativeEvent.includes(eventName)) {
                 return this.setEvent(eventName, val);
              }
            }

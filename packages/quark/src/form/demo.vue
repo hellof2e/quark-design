@@ -67,7 +67,7 @@
 			<div class="line" />
 			<div class="form-item">
 				<span>{{ translate("fruit") }}</span>
-				<quark-radio-group name="radio" :value="data.radio">
+				<quark-radio-group name="radio" :value="data.radio" @change="onRadioChange">
 					<quark-radio name="apple">{{ translate("fruits")[0] }}</quark-radio>
 					<quark-radio name="blue">{{ translate("fruits")[1] }}</quark-radio>
 				</quark-radio-group>
@@ -289,6 +289,10 @@ export default createDemo({
 				});
 		};
 
+		const onRadioChange = ({detail}) => {
+      data.value.radio = detail.value
+    }
+
 		const click = () => {
 			data.value.open = true;
 		};
@@ -315,6 +319,7 @@ export default createDemo({
 			click,
 			close,
 			confirm,
+			onRadioChange,
 		};
 	},
 });
