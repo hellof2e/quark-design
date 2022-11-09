@@ -357,7 +357,6 @@ class QuarkTabs extends QuarkElement {
         {!this.sticky && this.renderTabNav()}
         <div
           class="quark-tab-content"
-          // @ts-ignore
           ontouchstart={this.handleTouchStart}
           ontouchmove={this.handleTouchMove}
           ontouchend={this.handleTouchEnd}

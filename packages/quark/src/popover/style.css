@@ -69,7 +69,6 @@
   transform: translate(-50%, var(--popover-margin-bottom, 0px));
 }
 
-
 /* right */
 :host([placement="right"]) .quark-popover-tips {
   left: 100%;
@@ -82,14 +81,11 @@
 
 :host([placement="right"]) .quark-popover-triangle {
   border-right-color: var(--popover-background-color, #4a4a4a);
-  ;
 }
 
 :host([placement="right"][theme="light"]) .quark-popover-triangle {
   border-right-color: var(--popover-background-color, #fff);
-  ;
 }
-
 
 :host([placement="right"][open]) .quark-popover-tips {
   transform: translate(var(--popover-margin-left, 10px), -50%);
@@ -156,7 +152,6 @@
 
 :host([placement="topleft"][theme="light"]) .quark-popover-triangle {
   border-top-color: var(--popover-background-color, #fff);
-  ;
 }
 
 :host([placement="topleft"][open]) .quark-popover-tips {
@@ -204,7 +199,6 @@
   border-right-color: var(--popover-background-color, #fff);
 }
 
-
 :host([placement="righttop"][open]) .quark-popover-tips {
   transform: translate(var(--popover-margin-left, 10px), 0);
 }
@@ -250,7 +244,6 @@
   border-bottom-color: var(--popover-background-color, #fff);
 }
 
-
 :host([placement="bottomleft"][open]) .quark-popover-tips {
   transform: translate(0, var(--popover-margin-left, 0px));
 }
@@ -274,7 +267,6 @@
   border-bottom-color: var(--popover-background-color, #fff);
 }
 
-
 :host([placement="bottomright"][open]) .quark-popover-tips {
   transform: translate(0, var(--popover-margin-left, 0));
 }
@@ -296,7 +288,6 @@
 :host([placement="lefttop"][theme="light"]) .quark-popover-triangle {
   border-left-color: var(--popover-background-color, #fff);
 }
-
 
 :host([placement="lefttop"][open]) .quark-popover-tips {
   transform: translate(var(--popover-margin-right, -10px), 0);
@@ -360,11 +351,11 @@
   cursor: not-allowed;
   pointer-events: none;
   user-select: none;
-  color: #c8c9cc
+  color: #c8c9cc;
 }
 
 :host([theme="light"]) .quark-action-container-disable {
-  color: #c8c9cc
+  color: #c8c9cc;
 }
 
 :host .quark-popover-action-container:after {
@@ -376,8 +367,8 @@
   right: 16px;
   bottom: 0;
   left: 16px;
-  -webkit-transform: scaleY(.5);
-  transform: scaleY(.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 

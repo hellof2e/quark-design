@@ -7,17 +7,18 @@ Used to loop a group of pictures or content.
 ### Install
 
 ```tsx
-import { Swipe, SwipeItem} from '@quarkd/quark-react';
+import { Swipe, SwipeItem } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
+
 ```html
 <Swipe>
   <SwipeItem>
     <div>1</div>
   </SwipeItem>
   <SwipeItem>
-    <div >2</div>
+    <div>2</div>
   </SwipeItem>
   <SwipeItem>
     <div>3</div>
@@ -29,6 +30,7 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
 ```
 
 ### Round Indicator
+
 ```html
 <Swipe type="round">
   <SwipeItem>
@@ -45,9 +47,11 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
   </SwipeItem>
 </Swipe>
 ```
+
 ### Autoplay
+
 ```html
-<Swipe  autoplay>
+<Swipe autoplay>
   <SwipeItem>
     <div>1</div>
   </SwipeItem>
@@ -64,8 +68,9 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
 ```
 
 ### Default SwipeItem
+
 ```html
-<Swipe  defaultindex="2">
+<Swipe defaultindex="2">
   <SwipeItem>
     <div>1</div>
   </SwipeItem>
@@ -82,6 +87,7 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
 ```
 
 ### Set SwipeItem Size
+
 ```html
 <Swipe class="custom-style">
   <SwipeItem>
@@ -100,8 +106,9 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
 ```
 
 ### Set Indicator color
+
 ```html
-<Swipe  activecolor="red">
+<Swipe activecolor="red">
   <SwipeItem>
     <div>1</div>
   </SwipeItem>
@@ -118,6 +125,7 @@ import { Swipe, SwipeItem} from '@quarkd/quark-react';
 ```
 
 ### Custom Indicator
+
 ```js
 export default () => {
   const handleChange = (e) => {
@@ -161,14 +169,16 @@ export default () => {
 }
 </style>
 ```
+
 ### Change Event
+
 ```js
 export default () => {
   const handleChange = (e) => {
     console.log(e.detail.index);
   };
   return (
-    <div >
+    <div>
       <Swipe onChange={handleChange}>
         <SwipeItem>
           <div>1</div>
@@ -185,32 +195,32 @@ export default () => {
       </Swipe>
     </div>
   );
-}
+};
 ```
 
 ## API
 
 ### Props
 
-| Attibute     | Description                      | Type   | Default          |
-|--------------|----------------------------------|--------|------------------|
-| type         | Indicator type, can be set to `round` | `string` |  |
-| duration     | |  `number` | `500` |
-| interval     | Animation duration | `number ` | `3000` |
-| defaultindex | Default SwipeItem | `number `  | `0` |
-| autoplay     | Whether to enable autoplay |` boolean` | `false`  |
-| activecolor  | Selected indicator color | `string`  |  `#0088ff`  |
-| inactivecolor | Not selected indicator color | `string` |  `#d3dae0` |
-| onChange      |  Emitted when current swipe changed | `（e: {detail:{index: number}}）=> void`    |
+| Attibute      | Description                           | Type                                     | Default   |
+| ------------- | ------------------------------------- | ---------------------------------------- | --------- |
+| type          | Indicator type, can be set to `round` | `string`                                 |           |
+| duration      |                                       | `number`                                 | `500`     |
+| interval      | Animation duration                    | `number `                                | `3000`    |
+| defaultindex  | Default SwipeItem                     | `number `                                | `0`       |
+| autoplay      | Whether to enable autoplay            | ` boolean`                               | `false`   |
+| activecolor   | Selected indicator color              | `string`                                 | `#0088ff` |
+| inactivecolor | Not selected indicator color          | `string`                                 | `#d3dae0` |
+| onChange      | Emitted when current swipe changed    | `（e: {detail:{index: number}}）=> void` |
 
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                         | Default    |
-| ------------------------ | ----------------------------------- | ---------- |
-| `--swipe-width`          | SwipeItem width                     |  `100%`    |
-| `--swipe-height`         | SwipeItem height                    |  `100%`    |
-| `--swipe-border-radius`  | SwipeItem border radius             |  `0`       |
-| `--swipe-indicator-activecolor` | Indicator color              |  `#0088ff` |
-| `--swipe-indicator-margin` | Indicator margin                  |  `2px`     |
+| Name                            | Description             | Default   |
+| ------------------------------- | ----------------------- | --------- |
+| `--swipe-width`                 | SwipeItem width         | `100%`    |
+| `--swipe-height`                | SwipeItem height        | `100%`    |
+| `--swipe-border-radius`         | SwipeItem border radius | `0`       |
+| `--swipe-indicator-activecolor` | Indicator color         | `#0088ff` |
+| `--swipe-indicator-margin`      | Indicator margin        | `2px`     |

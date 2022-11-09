@@ -1,27 +1,27 @@
 :host {
-    display: inline-flex;
-    flex: 1;
-    height: var(--tab-item-height, 44px);
-    line-height: var(--tab-item-height, 44px);
-    min-width: var(--tab-item-min-width, 20vw);
-    font-weight: 400;
-    color: var(--tab-item-color, #5E6266);
-    font-size: var(--tab-item-font-size, 16px);
-    background-color: var(--tab-item-background-color, #fff);
-  }
-  :host([active]) {
-    font-weight: 500;
-    color: var(--tab-item-active-color, #333333);
-  }
-  :host([disabled]) {
-    color: var(--tab-item-disabled-color, quark-formDisabledColor);
-    pointer-events: none;
-  }
-  :host([disabled]) .quark-tab-nav  {
-    cursor: not-allowed;
-  }
-  :host .quark-tab-nav {
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-  }
+  display: inline-flex;
+  flex: 1;
+  height: var(--tab-item-height, 44px);
+  line-height: var(--tab-item-height, 44px);
+  min-width: var(--tab-item-min-width, 20vw);
+  font-weight: 400;
+  color: var(--tab-item-color, #5e6266);
+  font-size: var(--tab-item-font-size, 16px);
+  background-color: var(--tab-item-background-color, #fff);
+}
+:host([active]) {
+  font-weight: 500;
+  color: var(--tab-item-active-color, #333333);
+}
+:host([disabled]) {
+  color: var(--tab-item-disabled-color, quark-formDisabledColor);
+  pointer-events: none;
+}
+:host([disabled]) .quark-tab-nav {
+  cursor: not-allowed;
+}
+:host .quark-tab-nav {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}

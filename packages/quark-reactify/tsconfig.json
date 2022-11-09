@@ -1,28 +1,19 @@
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "sourceMap": true,
-      "strict": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "target": "es5",
-      "lib": [
-        "es2015",
-        "DOM"
-      ],
-      "declaration": true,
-      "outDir": "./lib",
-      "stripInternal": true,
-      "allowSyntheticDefaultImports": true,
-      "skipLibCheck": true,
-    },
-    "include": [
-      "src/",
-    ],
-    "typeRoots": [
-      "./global.d.ts"
-    ],
-    "exclude": [
-      "node_modules/**/*", 
-    ]
-  }
+  "compilerOptions": {
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["es2015", "DOM"],
+    "declaration": true,
+    "outDir": "./lib",
+    "stripInternal": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/"],
+  "typeRoots": ["./global.d.ts"],
+  "exclude": ["node_modules/**/*"]
+}

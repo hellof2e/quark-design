@@ -7,7 +7,7 @@ When new content or pending information is available, a red dot, number or desc 
 ### Install
 
 ```tsx
-import { Badge } from '@quarkd/quark-react';
+import { Badge } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
@@ -35,7 +35,7 @@ There are `dot`、`round`、`label` in Quark，the default is `round`.
 
 ### Size
 
-There are `normal`、`big` in Quark，the default is  `normal`.
+There are `normal`、`big` in Quark，the default is `normal`.
 
 ```html
 <Badge type="dot">
@@ -70,7 +70,7 @@ To show border of badge, add `border` prop on the Badge. The default border colo
 The maximun can be added to a badge by setting `max` prop on the Badge, the default is 99. Show ... when the number of `content` prop on the Badge exceeds.
 
 ```html
-<Badge content="normal badge">
+<Badge content="9">
   <div></div>
 </Badge>
 <Badge content="100" max="99">
@@ -85,6 +85,7 @@ The maximun can be added to a badge by setting `max` prop on the Badge, the defa
   <div></div>
 </Badge>
 ```
+
 ```css
 .bg-color {
   --badge-background: linear-gradient(90deg, blue, pink);
@@ -92,28 +93,29 @@ The maximun can be added to a badge by setting `max` prop on the Badge, the defa
 ```
 
 ## API
+
 ### Props
 
-| Attribute    | Description                               | Type   | Default         |
-|--------------|-------------------------------------------|--------|-----------------|
-| type         | Type，can be set to `dot` `round` `label` |  `string` |  `round`  |
-| content      | Content                              |  `string` | -  |
-| size         | Size，can be set to `normal` `big`   |  `string` |  `normal`  |
-| border       | Whether to show the border of badge. The default border color is white.  | `boolean` |  `false`  |
-| max          | Max value                            | `number` | `99`  |
+| Attribute | Description                                                             | Type      | Default  |
+| --------- | ----------------------------------------------------------------------- | --------- | -------- |
+| type      | Type，can be set to `dot` `round` `label`                               | `string`  | `round`  |
+| content   | Content                                                                 | `string`  | -        |
+| size      | Size，can be set to `normal` `big`                                      | `string`  | `normal` |
+| border    | Whether to show the border of badge. The default border color is white. | `boolean` | `false`  |
+| max       | Max value                                                               | `number`  | `99`     |
 
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                      | Default           |
-| -------------------------| ---------------------------------| ------------------|
-| `--badge-text-color`     | Badge text color                 | `#FFFFFF`         |
-| `--badge-background`     | Badge background color           | `#F72626`         |
-| `--badge-padding-column` | Top and bottom padding of badge  | `2px`             |
-| `--badge-padding-row`    | Left and right padding of badge  | `4px`             |
-| `--badge-font-size`      | Badge font size                  | `10px`            |
-| `--badge-font-weight`    | Badge font weight                | `500`             |
-| `--badge-dot-size`       | Badge dot size                   | `6px`             |
-| `--badge-font-family`    | Badge font-family                | `system default style` |
-| `--badge-border-color`   | Badge border color               | `#FFFFFF`         |
+| Name                     | Description                     | Default                |
+| ------------------------ | ------------------------------- | ---------------------- |
+| `--badge-text-color`     | Badge text color                | `#FFFFFF`              |
+| `--badge-background`     | Badge background color          | `#F72626`              |
+| `--badge-padding-column` | Top and bottom padding of badge | `2px`                  |
+| `--badge-padding-row`    | Left and right padding of badge | `4px`                  |
+| `--badge-font-size`      | Badge font size                 | `10px`                 |
+| `--badge-font-weight`    | Badge font weight               | `500`                  |
+| `--badge-dot-size`       | Badge dot size                  | `6px`                  |
+| `--badge-font-family`    | Badge font-family               | `system default style` |
+| `--badge-border-color`   | Badge border color              | `#FFFFFF`              |

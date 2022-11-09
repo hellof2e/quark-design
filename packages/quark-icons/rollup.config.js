@@ -1,14 +1,14 @@
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { babel } from '@rollup/plugin-babel';
-import typescript from '@rollup/plugin-typescript';
-import { terser } from 'rollup-plugin-terser';
-import css from 'rollup-plugin-import-css';
-import fs from 'fs';
-import path from 'path';
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
+import typescript from "@rollup/plugin-typescript";
+import { terser } from "rollup-plugin-terser";
+import css from "rollup-plugin-import-css";
+import fs from "fs";
+import path from "path";
 
-const extensions = ['.js', '.ts', '.tsx'];
-const packageSrcRoot = path.join(__dirname, './src/packages');
+const extensions = [".js", ".ts", ".tsx"];
+const packageSrcRoot = path.join(__dirname, "./src/packages");
 const componentNames = fs
   // 获取所有文件夹及文件
   .readdirSync(packageSrcRoot, { withFileTypes: true })
@@ -20,29 +20,29 @@ const componentNames = fs
     name: p.name,
   }))
   // 带上package/index.js
-  .concat({ path: 'index', name: 'index' });
+  .concat({ path: "index", name: "index" });
 
 /**
  * @type {import('rollup').RollupOptions}
  */
 const options = [
   {
-    input: './src/packages/index.js',
+    input: "./src/packages/index.js",
     output: {
-      dir: './umd',
-      format: 'umd',
-      name: 'index.mini.js',
+      dir: "./umd",
+      format: "umd",
+      name: "index.mini.js",
     },
     plugins: [
       css(),
       typescript(),
       commonjs(),
       nodeResolve({
-        extensions
+        extensions,
       }),
       babel({
-        babelHelpers: 'runtime',
-        exclude: 'node_modules/**',
+        babelHelpers: "runtime",
+        exclude: "node_modules/**",
         extensions,
       }),
       terser(),
@@ -54,9 +54,9 @@ const options = [
       return result;
     }, {}),
     output: {
-      dir: 'lib',
-      chunkFileNames: '[name].js',
-      format: 'es',
+      dir: "lib",
+      chunkFileNames: "[name].js",
+      format: "es",
     },
     treeshake: false,
     plugins: [
@@ -67,8 +67,12 @@ const options = [
         extensions,
         modulesOnly: true,
       }),
-      babel({ babelHelpers: 'runtime', exclude: 'node_modules/**', extensions }),
-      terser()
+      babel({
+        babelHelpers: "runtime",
+        exclude: "node_modules/**",
+        extensions,
+      }),
+      terser(),
     ],
   },
 ];

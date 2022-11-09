@@ -1,20 +1,20 @@
 .quark-tip {
-    width: 100%;
-    background-color: white; 
-    margin-bottom: 30px;
-    min-height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-    padding: 10px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 30px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding: 10px;
 }
 .left {
-    width: 30px;
-    height: auto;
-    word-break: normal; 
+  width: 30px;
+  height: auto;
+  word-break: normal;
 }
 .custom-tips {
-    --tips-background-color: #0088ff;
-    --tips-font-weight: 500;
+  --tips-background-color: #0088ff;
+  --tips-font-weight: 500;
 }

@@ -13,14 +13,14 @@ npm install @quarkd/quark-design
 ## Usage
 
 ```js
-import { Search } from '@quarkd/quark-react';
+import { Search } from "@quarkd/quark-react";
 <Search
-    className="xxx"
-    onChange={onChange}
-    onFocus={onFocus}
-    onBlur={onBlur}
-    onSearch={onSearch}
-    onCancel={onCancel}
-    onBack={onBack}
-/>
+  className="xxx"
+  onChange={onChange}
+  onFocus={onFocus}
+  onBlur={onBlur}
+  onSearch={onSearch}
+  onCancel={onCancel}
+  onBack={onBack}
+/>;
 ```

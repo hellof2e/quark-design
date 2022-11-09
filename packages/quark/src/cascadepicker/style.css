@@ -125,13 +125,21 @@
 :host .quark-cascade-picker-mask-top {
   position: absolute;
   top: 0;
-  background: linear-gradient(to top, rgb(255 255 255 / 30%), rgb(255 255 255 / 80%));
+  background: linear-gradient(
+    to top,
+    rgb(255 255 255 / 30%),
+    rgb(255 255 255 / 80%)
+  );
 }
 
 :host .quark-cascade-picker-mask-bottom {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to bottom, rgb(255 255 255 / 30%), rgb(255 255 255 / 80%));
+  background: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 30%),
+    rgb(255 255 255 / 80%)
+  );
 }
 
 :host .quark-cascade-picker-wheel-wrapper {

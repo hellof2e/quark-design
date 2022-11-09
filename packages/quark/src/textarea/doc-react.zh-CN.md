@@ -7,56 +7,58 @@
 ### 安装使用
 
 ```tsx
-import { TextArea } from '@quarkd/quark-react';
+import { TextArea } from "@quarkd/quark-react";
 ```
 
 ### 基本使用
+
 ```html
-<TextArea />
+<textarea />
 ```
 
 ### 指定行数
 
 ```html
-<TextArea rows="6" />
+<textarea rows="6" />
 ```
 
 ### 根据内容自动调整高度
 
 ```html
-<TextArea autosize />
+<textarea autosize />
 ```
 
 ### 字数统计
 
 ```html
-<TextArea showcount />
+<textarea showcount />
 ```
 
 ### 字数限制
 
 ```html
-<TextArea showcount maxlength="50" />
+<textarea showcount maxlength="50" />
 ```
 
 ### 禁用状态
 
 ```html
-<TextArea disabled />
+<textarea disabled />
 ```
 
 ### 自定义样式
 
 ```html
-<TextArea showcount class="custom-style" />
+<textarea showcount class="custom-style" />
 ```
+
 ```css
-.custom-style{
+.custom-style {
   --textarea-border-color: red;
   --textarea-color: red;
   --textarea-count-color: red;
   --textarea-placeholder-color: red;
-  --textarea-text-count-align: 'left';
+  --textarea-text-count-align: "left";
 }
 ```
 
@@ -79,42 +81,40 @@ export default () => {
         Toast.text(`${event.target.value}, compositionStart`);
       }}
     />
-  )
-}
+  );
+};
 ```
 
 ## API
+
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| value        | 输入值 | `string `                    |
-| placeholder        | 提示文本 | `string`                     |
-| rows | 行数 | `number` | `2` |
-| maxlength | 最大字符数 | `number `| `-` |
-| showcount | 显示字数 | `boolean` | `false` |
-| autocomplete | 自动补全 | `boolean` | `false` |
-| disabled | 是否禁用 | `boolean`| `false` |
-| readonly | 是否只读 | `boolean` | `false` |
-| id | textarea 元素的 id，常用来配合 label 使用 | `string` |
-| onInput        | 文本域内容变化时触发 |  `(e: {detail:{value: string}}）=>void `    |              |
-| onFocus        | 文本域获得焦点时触发 |  `(e: {detail:{value: string}}）=>void `    |             |
-| onBlur        | 文本域失去焦点时触发 |  `(e: {detail:{value: string}}）=>void `    |              |
-| onCompositionStart         | 输入法编辑器开始新的输入时触发 |    `(）=>void `     | 
+| 参数               | 说明                                      | 类型                                    | 默认值  |
+| ------------------ | ----------------------------------------- | --------------------------------------- | ------- |
+| value              | 输入值                                    | `string `                               |
+| placeholder        | 提示文本                                  | `string`                                |
+| rows               | 行数                                      | `number`                                | `2`     |
+| maxlength          | 最大字符数                                | `number `                               | `-`     |
+| showcount          | 显示字数                                  | `boolean`                               | `false` |
+| autocomplete       | 自动补全                                  | `boolean`                               | `false` |
+| disabled           | 是否禁用                                  | `boolean`                               | `false` |
+| readonly           | 是否只读                                  | `boolean`                               | `false` |
+| id                 | textarea 元素的 id，常用来配合 label 使用 | `string`                                |
+| onInput            | 文本域内容变化时触发                      | `(e: {detail:{value: string}}）=>void ` |         |
+| onFocus            | 文本域获得焦点时触发                      | `(e: {detail:{value: string}}）=>void ` |         |
+| onBlur             | 文本域失去焦点时触发                      | `(e: {detail:{value: string}}）=>void ` |         |
+| onCompositionStart | 输入法编辑器开始新的输入时触发            | `(）=>void `                            |
 
+## CSS 样式变量
 
-## CSS样式变量
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
-
-| 名称                     | 说明                                  | 默认值          |
-| ------------------------ | ----------------------------------- | --------------- |
-| `--textarea-color`   | 文字颜色                          |     `#242729 `  |
-| `--textarea-font-size`   | 文字大小                         |  ` 14px `    |
-| `--textarea-text-align` | 文字位置 | ` left `  |
-| `--textarea-text-count-align` | 统计字数位置 | ` right ` |
-| `--textarea-count-color` | 统计字数颜色 | ` #242729 ` |
-| `--textarea-border-color` | 文本域边框颜色 | ` #242729 ` |
-| `--textarea-placeholder-color` | 占位文字颜色 | ` #242729 ` |
-
-
+| 名称                           | 说明           | 默认值     |
+| ------------------------------ | -------------- | ---------- |
+| `--textarea-color`             | 文字颜色       | `#242729 ` |
+| `--textarea-font-size`         | 文字大小       | `14px`     |
+| `--textarea-text-align`        | 文字位置       | `left`     |
+| `--textarea-text-count-align`  | 统计字数位置   | `right`    |
+| `--textarea-count-color`       | 统计字数颜色   | `#242729`  |
+| `--textarea-border-color`      | 文本域边框颜色 | `#242729`  |
+| `--textarea-placeholder-color` | 占位文字颜色   | `#242729`  |

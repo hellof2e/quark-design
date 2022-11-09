@@ -23,10 +23,10 @@ export interface ItemProps {
 })
 class QuarkGridItem extends QuarkElement {
   @property()
-  text: string = "";
+  text = "";
 
   @property()
-  icon: string = "";
+  icon = "";
 
   @property()
   iconsize: string | undefined = undefined;
@@ -73,17 +73,17 @@ export { QuarkGridItem };
 })
 class QuarkGrid extends QuarkElement {
   @property()
-  column: string = "4";
+  column = "4";
 
   @property({
     type: Boolean,
   })
-  noborder: boolean = false; // 是否显示边框
+  noborder = false; // 是否显示边框
 
   @property({
     type: Boolean,
   })
-  square: boolean = false; // 是否将格子固定为正方形
+  square = false; // 是否将格子固定为正方形
 
   slotRef: any = createRef();
 

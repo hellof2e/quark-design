@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
   text-align: center;
   font-size: 18px;
@@ -22,26 +22,26 @@
 }
 
 :host .quark-dialog-mask {
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 :host .quark-dialog {
   position: relative;
   padding: 28px 12px 24px;
   margin: auto;
-  box-shadow: 0 2px 12px rgba(100, 101, 102, .12);
+  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
   box-sizing: border-box;
   max-height: calc(100vh - 20px);
   border-radius: 12px;
   background-color: #fff;
   opacity: 0;
   transform: scale(0.5);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   width: var(--dialog-width, 320px);
 }
 
@@ -78,15 +78,15 @@
 
 :host .quark-dialog-content {
   font-size: var(--dialog-content-font-size, 14px);
-  color: var(--dialog-content-color, '#5A6066');
+  color: var(--dialog-content-color, "#5A6066");
   font-weight: var(--dialog-content-font-weight, 400);
   font-family: var(--dialog-content-font-family);
   line-height: var(--dialog-content-line-height, 20px);
 }
 
-.quark-dialog-body-wrap{
+.quark-dialog-body-wrap {
   padding: 0 12px;
-  color: #5A6066;
+  color: #5a6066;
   line-height: 20px;
   font-size: 14px;
   text-align: center;
@@ -106,7 +106,7 @@
 }
 
 .quark-dialog-close-btn quark-icon-close {
-  color: #BCC4CC;
+  color: #bcc4cc;
   cursor: pointer;
 }
 
@@ -133,8 +133,8 @@
 }
 
 :host .quark-dialog-cancel-btn {
-  color: #5A6066;
-  background: #F0F3F5;
+  color: #5a6066;
+  background: #f0f3f5;
   margin-right: 8px;
   border: none;
 }
@@ -145,18 +145,18 @@
 }
 
 @media screen and (max-width: 321px) {
-  :host .quark-dialog{
+  :host .quark-dialog {
     display: flex;
     position: relative;
     margin: auto;
-    box-shadow: 0 2px 12px rgba(100, 101, 102, .12);
+    box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
     box-sizing: border-box;
     max-height: calc(100vh - 20px);
     border-radius: 12px;
     background-color: #fff;
     opacity: 0;
     transform: scale(0.5);
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     width: var(--dialog-width, 90%);
   }
 }

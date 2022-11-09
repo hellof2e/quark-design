@@ -36,7 +36,8 @@ label::after {
   height: 1.75em;
   border-radius: 1em;
   background: #fff;
-  transition: 0.3s background, 0.3s padding, 0.3s width, 0.3s height, 0.3s border-radius, 0.3s border;
+  transition: 0.3s background, 0.3s padding, 0.3s width, 0.3s height,
+    0.3s border-radius, 0.3s border;
   box-shadow: 0 0.125em 0.25em 0 rgb(0 35 11 / 20%);
 }
 

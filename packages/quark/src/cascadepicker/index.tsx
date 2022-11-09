@@ -43,16 +43,16 @@ class QuarkCascadePicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property()
-  title: string = "";
+  title = "";
 
   @property()
-  name: string = "";
+  name = "";
 
   @property({ type: Boolean })
-  bottomhidden: boolean = false;
+  bottomhidden = false;
 
   @state()
   pickerData: string[][] = [];
@@ -63,7 +63,7 @@ class QuarkCascadePicker extends QuarkElement {
 
   selectedIndexPair: number[] = [];
 
-  depth: number = 1;
+  depth = 1;
 
   wheelWrapper: any = createRef();
 
@@ -111,7 +111,7 @@ class QuarkCascadePicker extends QuarkElement {
     return this.getDepths(column.children[0], depth);
   }
 
-  getValues(needRestore: boolean = true) {
+  getValues(needRestore = true) {
     if (needRestore) {
       this.restorePosition();
     }

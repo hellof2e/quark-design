@@ -13,7 +13,7 @@
   box-sizing: border-box;
   flex: 1;
   height: 32px;
-  background: #F0F3F5;
+  background: #f0f3f5;
   border-radius: quark-radiusLg;
   padding: 6px 10px;
   display: flex;
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: none;
   -webkit-box-sizing: content-box;
 }
@@ -112,7 +112,7 @@ input::-webkit-search-cancel-button {
 }
 
 :host input[disabled] {
-  opacity: .6;
+  opacity: 0.6;
   cursor: not-allowed;
   color: var(--field-disabled-color, quark-formDisabledColor);
 }

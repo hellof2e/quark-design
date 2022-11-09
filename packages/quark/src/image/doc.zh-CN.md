@@ -7,27 +7,27 @@
 ### 安装使用
 
 ```jsx
-import 'quarkd/lib/image';
+import "quarkd/lib/image";
 ```
 
 ### 基础用法
 
 基础用法与原生 img 标签一致，可以设置 src、width、height、alt 等原生属性。
 
-``` html
-<quark-image 
-    src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg" 
+```html
+<quark-image
+  src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
 />
 ```
 
 ### 圆形图片
 
-``` html
+```html
 <quark-image
-    src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
-    width="100"
-    height="100"
-    round
+  src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
+  width="100"
+  height="100"
+  round
 />
 ```
 
@@ -35,10 +35,10 @@ import 'quarkd/lib/image';
 
 ```html
 <quark-image
-    src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
-    width="100"
-    height="100"
-    lazy
+  src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
+  width="100"
+  height="100"
+  lazy
 />
 ```
 
@@ -46,17 +46,17 @@ import 'quarkd/lib/image';
 
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| width |  宽度，默认单位为px | `number` or `string` | - |
-| height |  高度，默认单位为px | `number` or `string` | - |
-| fit | 图片填充模式，等同于原生的[object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性 | `string` | `fill` |
-| lazy         | 懒加载  | `boolean` |  `false` |
-| round        | 是否显示为圆形 |  `boolean` | `false`  |
-| radius       | 外边框圆角 | `number` or `string` | - |
-| alt          | 定义了图像的备用文本描述 | `string` | - |
+| 参数   | 说明                                                                                                     | 类型                 | 默认值  |
+| ------ | -------------------------------------------------------------------------------------------------------- | -------------------- | ------- |
+| width  | 宽度，默认单位为 px                                                                                      | `number` or `string` | -       |
+| height | 高度，默认单位为 px                                                                                      | `number` or `string` | -       |
+| fit    | 图片填充模式，等同于原生的[object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性 | `string`             | `fill`  |
+| lazy   | 懒加载                                                                                                   | `boolean`            | `false` |
+| round  | 是否显示为圆形                                                                                           | `boolean`            | `false` |
+| radius | 外边框圆角                                                                                               | `number` or `string` | -       |
+| alt    | 定义了图像的备用文本描述                                                                                 | `string`             | -       |
 
-### fit填充模式
+### fit 填充模式
 
 | 名称       | 含义                                                   |
 | ---------- | ------------------------------------------------------ |
@@ -68,25 +68,23 @@ import 'quarkd/lib/image';
 
 ### Events
 
-| 事件名 | 说明 | 类型 |
-| ---   | --- |  ---    |
-| click | 点击图片时触发 | `（）=>void` |
-| load | 图片加载完毕时触发 |`（）=>void` |
-| error | 图片加载失败时触发 | `（）=>void` |
+| 事件名 | 说明               | 类型         |
+| ------ | ------------------ | ------------ |
+| click  | 点击图片时触发     | `（）=>void` |
+| load   | 图片加载完毕时触发 | `（）=>void` |
+| error  | 图片加载失败时触发 | `（）=>void` |
 
 ### Slots
 
-| 名称 | 说明 |
-| -- | -- |
-| loading | 自定义加载中的提示内容 |
-| error | 自定义加载失败时的提示内容 |
+| 名称    | 说明                       |
+| ------- | -------------------------- |
+| loading | 自定义加载中的提示内容     |
+| error   | 自定义加载失败时的提示内容 |
 
 ## 样式变量
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
-| 名称                     | 说明                                  | 默认值          | 
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+| 名称 | 说明 | 默认值 |
 | ------------------------ | ----------------------------------- | --------------- |
-| `--image-height`       | 图片高度                       |    `100%` |
-| `--image-width`       | 图片宽度                      |    `100%` |
-
-
+| `--image-height` | 图片高度 | `100%` |
+| `--image-width` | 图片宽度 | `100%` |

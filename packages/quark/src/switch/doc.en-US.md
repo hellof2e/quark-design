@@ -11,6 +11,7 @@ import "quarkd/lib/switch";
 ```
 
 ### Basic Usage
+
 ```
 <quark-switch checked onchange=""></quark-switch>
 ```
@@ -20,6 +21,7 @@ import "quarkd/lib/switch";
 ```html
 <quark-switch disabled></quark-switch>
 ```
+
 ### Custom Size
 
 TO change switch size, set `size` prop on the Switch or alter `font-size` value of `style` prop.
@@ -42,6 +44,7 @@ To custom color, set `color` prop on the Switch.
 ```html
 <quark-switch @change="onChange" :checked="checked"></quark-switch>
 ```
+
 ```js
 <script>
 export default {
@@ -63,24 +66,23 @@ export default {
 
 ### Props
 
-| Attribute    | Description                    | Type      | Default |
-|--------------|--------------------------------|-----------|---------|
-| checked      | On/Off                         | `boolean` | `false` |
-| disabled     | Disable switch                 | `boolean` | `false` |
-| size         | Switch size                    | `number`  | `16px`  |
-| color        | Switch color                   | `string`  |  -      |
-
+| Attribute | Description    | Type      | Default |
+| --------- | -------------- | --------- | ------- |
+| checked   | On/Off         | `boolean` | `false` |
+| disabled  | Disable switch | `boolean` | `false` |
+| size      | Switch size    | `number`  | `16px`  |
+| color     | Switch color   | `string`  | -       |
 
 ### Event
 
-| Event       | Description                             | Arguments   |
-|-------------|----------------------------------|--------|
-| change      | Emitted when check status changed                   | `e: {detail:{value: string}}）=>void `        |
+| Event  | Description                       | Arguments                              |
+| ------ | --------------------------------- | -------------------------------------- |
+| change | Emitted when check status changed | `e: {detail:{value: string}}）=>void ` |
 
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                   | Default         |
-| ------------------------ | ----------------------------- | --------------- |
-| `--switch-label-width`   | switch label width            |  `50px / 3.125em` |
+| Name                   | Description        | Default          |
+| ---------------------- | ------------------ | ---------------- |
+| `--switch-label-width` | switch label width | `50px / 3.125em` |

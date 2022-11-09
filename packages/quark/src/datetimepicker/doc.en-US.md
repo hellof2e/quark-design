@@ -11,7 +11,9 @@ import "quarkd/lib/datetimepicker";
 ```
 
 ### Basic Usage
+
 #### Choose Date
+
 ```html
 <template>
   <div>
@@ -30,14 +32,15 @@ import "quarkd/lib/datetimepicker";
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
     return {
       open: false,
-      currentDate: '2021-11-30',
-      minDate: '2020-10-01',
-      maxDate: '2025-08-13',
+      currentDate: "2021-11-30",
+      minDate: "2020-10-01",
+      maxDate: "2025-08-13",
     };
   },
   methods: {
@@ -53,8 +56,8 @@ export default {
     },
     change({ detail }) {
       Toast.text(`${detail.value}`);
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -77,6 +80,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -86,10 +90,10 @@ export default {
   },
   methods: {
     formatter(type, val) {
-      if (type === 'year') {
+      if (type === "year") {
         return `${val}Year`;
       }
-      if (type === 'month') {
+      if (type === "month") {
         return `${val}Month`;
       }
       return val;
@@ -106,12 +110,13 @@ export default {
     },
   },
   mounted() {
-    this.$refs.yearMonthRef.setFormatter(this.formatter)
-  }
+    this.$refs.yearMonthRef.setFormatter(this.formatter);
+  },
 };
 ```
 
 #### Choose Month-Day
+
 ```html
 <template>
   <div>
@@ -127,6 +132,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -148,19 +154,20 @@ export default {
   },
   mounted() {
     this.$refs.monthDayRef.setFormatter((type, value) => {
-      if (type === 'month') {
+      if (type === "month") {
         return `${val}月`;
       }
-      if (type === 'day') {
+      if (type === "day") {
         return `${val}日`;
       }
       return val;
     });
-  }
+  },
 };
 ```
 
 #### Choose Time
+
 ```html
 <template>
   <div>
@@ -180,6 +187,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -222,6 +230,7 @@ export default {
 ```
 
 #### Choose DateTime
+
 ```html
 <template>
   <div>
@@ -236,6 +245,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -254,11 +264,12 @@ export default {
       Toast.text(`${detail.value}`);
       this.open = false;
     },
-  }
+  },
 };
 ```
 
 #### Choose DateHour
+
 ```html
 <template>
   <div>
@@ -273,6 +284,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -291,11 +303,14 @@ export default {
       Toast.text(`${detail.value}`);
       this.open = false;
     },
-  }
+  },
 };
 ```
+
 #### ShowToolBar
+
 setting showtoolbar true
+
 ```html
 <template>
   <div>
@@ -311,6 +326,7 @@ setting showtoolbar true
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -329,11 +345,12 @@ export default {
       Toast.text(`${detail.value}`);
       this.open = false;
     },
-  }
+  },
 };
 ```
 
 #### Set Current Date
+
 ```html
 <template>
   <div>
@@ -350,6 +367,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -359,7 +377,7 @@ export default {
   },
   methods: {
     click() {
-      this.$refs.datetimePickerRef.setValue('2023-10-07');
+      this.$refs.datetimePickerRef.setValue("2023-10-07");
       this.open = true;
     },
     close() {
@@ -368,58 +386,62 @@ export default {
     confirm() {
       Toast.text(`${detail.value}`);
       this.open = false;
-    }
-  }
+    },
+  },
 };
 ```
+
 ## API
 
 ### Props
 
-| Attribute         | Description                      | Type     | Default           |
-|-------------------|----------------------------------|----------|-------------------|
-| type              | Can be set to `date` `time` `year-month` `month-day` `datehour` | `string` | `datetime`
-| value             | Default value，when `type` is `time`, the type of `value` should be `HH:mm`, others should be `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | `string` | `null`
-| open              | Whether to show datetime-picker  | `boolean` | `require`
-| title             | Title                            | `string`  | `''`
-| showtoolbar       | Whether to show toolbar          | `boolean` | `false`
-| confirmbuttontext | Text of confirm button           | `string`  | `Confirm`
-| cancelbuttontext  | Text of cancel button	           | `string`  | `Cancel`
-
+| Attribute         | Description                                                                                                                      | Type      | Default    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| type              | Can be set to `date` `time` `year-month` `month-day` `datehour`                                                                  | `string`  | `datetime` |
+| value             | Default value，when `type` is `time`, the type of `value` should be `HH:mm`, others should be `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | `string`  | `null`     |
+| open              | Whether to show datetime-picker                                                                                                  | `boolean` | `require`  |
+| title             | Title                                                                                                                            | `string`  | `''`       |
+| showtoolbar       | Whether to show toolbar                                                                                                          | `boolean` | `false`    |
+| confirmbuttontext | Text of confirm button                                                                                                           | `string`  | `Confirm`  |
+| cancelbuttontext  | Text of cancel button                                                                                                            | `string`  | `Cancel`   |
 
 ### DatePicker Props
+
 Following props are supported when the type is date or datetime
-| Attribute  | Description        | Type                               | Default          |
+| Attribute | Description | Type | Default |
 |------------|--------------------|------------------------------------|------------------|
-| mindate    | 	Min date          | `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | Ten years ago on January 1
-| maxdate    |  Max date          | `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | Ten years later on December 31
+| mindate | Min date | `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | Ten years ago on January 1
+| maxdate | Max date | `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | Ten years later on December 31
 
 ### TimerPicker Props
+
 Following props are supported when the type is time
-| Attribute    | Description                      | Type     | Default       |
+| Attribute | Description | Type | Default |
 |--------------|----------------------------------|----------|---------------|
-| minhour      | 	Min hour for time type          | `number` | 0
-| maxhour      |  Max hour for time type          | `number` | 23
-| minminute    |  Min minute for time type	      | `number` | 0
-| maxminute    |  Max minute for time type	      | `number` | 59
+| minhour | Min hour for time type | `number` | 0
+| maxhour | Max hour for time type | `number` | 23
+| minminute | Min minute for time type | `number` | 0
+| maxminute | Max minute for time type | `number` | 59
 
 ### Events
-| name         | Description                                | Type   |
-|--------------|--------------------------------------------|--------|
-| close        | Emitted when click mask or cancel button.  | `() => void `
-| confirm      | Emitted when click confirm button.	        | `e: {detail:{value: Date \| string }}）=> void`
-| change       | Emitted when current option changed.	      | `e: {detail:{value: Date \| string }}）=> void`
 
+| name    | Description                               | Type                                            |
+| ------- | ----------------------------------------- | ----------------------------------------------- |
+| close   | Emitted when click mask or cancel button. | `() => void `                                   |
+| confirm | Emitted when click confirm button.        | `e: {detail:{value: Date \| string }}）=> void` |
+| change  | Emitted when current option changed.      | `e: {detail:{value: Date \| string }}）=> void` |
 
 ### Methods
-| Name         | Description                        | Type   |
-|--------------|------------------------------------|--------|
-| setValue     | Set current value, when `type` is `time`, the type of `value` should be `HH:mm`, others should be `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | `(value: Date \| string) => void`
-| getValues    | Get current values of all columns  | `() => SelectedColumn[]`
-| setFilter    | Option filter	                    | `(type: string, values: string[]) => string[]`
-| setFormatter | Option text formatter              | `(type: string, value: string) => string`
+
+| Name         | Description                                                                                                                          | Type                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
+| setValue     | Set current value, when `type` is `time`, the type of `value` should be `HH:mm`, others should be `yyyy-MM-dd` or `yyyy-MM-dd HH:mm` | `(value: Date \| string) => void`              |
+| getValues    | Get current values of all columns                                                                                                    | `() => SelectedColumn[]`                       |
+| setFilter    | Option filter                                                                                                                        | `(type: string, values: string[]) => string[]` |
+| setFormatter | Option text formatter                                                                                                                | `(type: string, value: string) => string`      |
 
 ### Types
+
 ```js
 type SelectedColumn = {
   value: string

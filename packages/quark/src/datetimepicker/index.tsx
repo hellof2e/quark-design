@@ -51,22 +51,22 @@ class QuarkDatetimePicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property()
   value: string;
 
   @property({ type: String })
-  title: string = "";
+  title = "";
 
   @property({ type: String })
   type: DateType = "datetime";
 
   @property({ type: String })
-  mindate: string = "";
+  mindate = "";
 
   @property({ type: String })
-  maxdate: string = "";
+  maxdate = "";
 
   @property({ type: Number })
   minhour: number | string = 0;
@@ -81,7 +81,7 @@ class QuarkDatetimePicker extends QuarkElement {
   maxminute: number | string = 59;
 
   @property({ type: Boolean })
-  showtoolbar: boolean = false;
+  showtoolbar = false;
 
   @property({ type: String })
   confirmbuttontext: string = Locale.current.confirm;

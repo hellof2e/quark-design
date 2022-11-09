@@ -7,10 +7,11 @@
 ### 安装使用
 
 ```jsx
-import 'quarkd/lib/textarea';
+import "quarkd/lib/textarea";
 ```
 
 ### 基本使用
+
 ```html
 <quark-textarea />
 ```
@@ -19,7 +20,7 @@ import 'quarkd/lib/textarea';
 
 ```jsx
 <div class="quark-cell">
-    <quark-textarea rows="6" />
+  <quark-textarea rows="6" />
 </div>
 ```
 
@@ -27,7 +28,7 @@ import 'quarkd/lib/textarea';
 
 ```jsx
 <div class="quark-cell">
-    <quark-textarea autosize />
+  <quark-textarea autosize />
 </div>
 ```
 
@@ -35,7 +36,7 @@ import 'quarkd/lib/textarea';
 
 ```jsx
 <div class="quark-cell">
-    <quark-textarea showcount />
+  <quark-textarea showcount />
 </div>
 ```
 
@@ -43,7 +44,7 @@ import 'quarkd/lib/textarea';
 
 ```jsx
 <div class="quark-cell">
-    <quark-textarea showcount maxlength="50" />
+  <quark-textarea showcount maxlength="50" />
 </div>
 ```
 
@@ -51,7 +52,7 @@ import 'quarkd/lib/textarea';
 
 ```jsx
 <div class="quark-cell">
-    <quark-textarea disabled />
+  <quark-textarea disabled />
 </div>
 ```
 
@@ -59,17 +60,17 @@ import 'quarkd/lib/textarea';
 
 ```html
 <div class="quark-cell">
-    <quark-textarea showcount class="custom-style" />
+  <quark-textarea showcount class="custom-style" />
 </div>
 
 <style>
-.custom-style{
-  --textarea-border-color: red;
-  --textarea-color: red;
-  --textarea-count-color: red;
-  --textarea-placeholder-color: red;
-  --textarea-text-count-align: 'left';
-}
+  .custom-style {
+    --textarea-border-color: red;
+    --textarea-color: red;
+    --textarea-count-color: red;
+    --textarea-placeholder-color: red;
+    --textarea-text-count-align: "left";
+  }
 </style>
 ```
 
@@ -85,56 +86,55 @@ import 'quarkd/lib/textarea';
   />
 </div>
 ```
+
 ```js
-import Toast from '../toast';
+import Toast from "../toast";
 export default {
   methods: {
     handleEvent(event, type) {
       console.log(`${event.target.value}, ${type}`);
     },
-  }
-}
+  },
+};
 ```
 
-
 ## API
+
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| value        | 输入值 | `string `                    |
-| placeholder        | 提示文本 | `string`                     |
-| rows | 行数 | `number` | `2` |
-| maxlength | 最大字符数 | `number `| `-` |
-| showcount | 显示字数 | `boolean` | `false` |
-| autocomplete | 自动补全 | `boolean` | `false` |
-| disabled | 是否禁用 | `boolean`| `false` |
-| readonly | 是否只读 | `boolean` | `false` |
-| id | textarea 元素的 id，常用来配合 label 使用 | `string` |
+| 参数         | 说明                                      | 类型      | 默认值  |
+| ------------ | ----------------------------------------- | --------- | ------- |
+| value        | 输入值                                    | `string ` |
+| placeholder  | 提示文本                                  | `string`  |
+| rows         | 行数                                      | `number`  | `2`     |
+| maxlength    | 最大字符数                                | `number ` | `-`     |
+| showcount    | 显示字数                                  | `boolean` | `false` |
+| autocomplete | 自动补全                                  | `boolean` | `false` |
+| disabled     | 是否禁用                                  | `boolean` | `false` |
+| readonly     | 是否只读                                  | `boolean` | `false` |
+| id           | textarea 元素的 id，常用来配合 label 使用 | `string`  |
 
 ### Events
 
 textarea 原生事件均支持
 
-| 属性         | 说明                             | 类型   | 
-|--------------|----------------------------------|--------|
-| input        | 文本域内容变化时触发 | `(e: {detail:{value: string}}）=>void `                     |
-| focus        | 文本域获得焦点时触发 | `(e: {detail:{value: string}}）=>void `                     |
-| blur        | 文本域失去焦点时触发 |  `(e: {detail:{value: string}}）=>void `                     |
-| compositionstart         | 输入法编辑器开始新的输入时触发 |   `(）=>void `                       |
+| 属性             | 说明                           | 类型                                    |
+| ---------------- | ------------------------------ | --------------------------------------- |
+| input            | 文本域内容变化时触发           | `(e: {detail:{value: string}}）=>void ` |
+| focus            | 文本域获得焦点时触发           | `(e: {detail:{value: string}}）=>void ` |
+| blur             | 文本域失去焦点时触发           | `(e: {detail:{value: string}}）=>void ` |
+| compositionstart | 输入法编辑器开始新的输入时触发 | `(）=>void `                            |
 
-## CSS样式变量
+## CSS 样式变量
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                     | 说明                                  | 默认值          |
-| ------------------------ | ----------------------------------- | --------------- |
-| --textarea-color   | 文字颜色                          |     `#242729 `  |
-| --textarea-font-size   | 文字大小                         |  ` 14px `    |
-| --textarea-text-align | 文字位置 | ` left `  |
-| --textarea-text-count-align | 统计字数位置 | ` right ` |
-| --textarea-count-color | 统计字数颜色 | ` #242729 ` |
-| --textarea-border-color | 文本域边框颜色 | ` #242729 ` |
-| --textarea-placeholder-color | 占位文字颜色 | ` #242729 ` |
-
-
+| 名称                         | 说明           | 默认值     |
+| ---------------------------- | -------------- | ---------- |
+| --textarea-color             | 文字颜色       | `#242729 ` |
+| --textarea-font-size         | 文字大小       | `14px`     |
+| --textarea-text-align        | 文字位置       | `left`     |
+| --textarea-text-count-align  | 统计字数位置   | `right`    |
+| --textarea-count-color       | 统计字数颜色   | `#242729`  |
+| --textarea-border-color      | 文本域边框颜色 | `#242729`  |
+| --textarea-placeholder-color | 占位文字颜色   | `#242729`  |

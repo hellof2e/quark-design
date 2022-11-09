@@ -1,18 +1,27 @@
-declare module '*.png';
-declare module '*.gif';
-declare module '*.jpg';
-declare module '*.jpeg';
-declare module '*.svg';
-declare module '*.css';
-declare module '*.less';
-declare module '*.scss';
-declare module '*.sass';
-declare module '*.styl';
- 
+declare module "*.png";
+declare module "*.gif";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.svg";
+declare module "*.css";
+declare module "*.less";
+declare module "*.scss";
+declare module "*.sass";
+declare module "*.styl";
+
 // @ts-ignore
 declare const process: {
   env: {
-    TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd';
+    TARO_ENV:
+      | "weapp"
+      | "swan"
+      | "alipay"
+      | "h5"
+      | "rn"
+      | "tt"
+      | "quickapp"
+      | "qq"
+      | "jd";
     [key: string]: any;
   };
 };
@@ -20,8 +29,17 @@ declare const process: {
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd';
-      APPNAME: 'AppHellobikeWXSS';
+      TARO_ENV:
+        | "weapp"
+        | "swan"
+        | "alipay"
+        | "h5"
+        | "rn"
+        | "tt"
+        | "quickapp"
+        | "qq"
+        | "jd";
+      APPNAME: "AppHellobikeWXSS";
     }
   }
 }
@@ -46,8 +64,17 @@ declare global {
    * 支付宝小程序
    */
   const IS_ALIPAY: boolean;
-  const TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd';
-  const NODE_ENV: 'development' | 'production';
+  const TARO_ENV:
+    | "weapp"
+    | "swan"
+    | "alipay"
+    | "h5"
+    | "rn"
+    | "tt"
+    | "quickapp"
+    | "qq"
+    | "jd";
+  const NODE_ENV: "development" | "production";
   const USE_BASE_CTX_KEY: string; // ctx  key
   /**
    * APPNAME

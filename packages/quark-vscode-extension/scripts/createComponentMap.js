@@ -1,41 +1,60 @@
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 // eslint-disable-next-line @typescript-eslint/naming-convention
-const MarkdownIt = require('markdown-it')();
+const MarkdownIt = require("markdown-it")();
 
-const basePath = path.resolve(__dirname, './../../AppQuarkui/src/packages');
-const componentDirs = fs.readdirSync(basePath, 'utf8');
-const TYPE_IDENTIFY_OPEN = 'tbody_open';
-const TYPE_IDENTIFY_CLOSE = 'tbody_close';
-const TR_TYPE_IDENTIFY_OPEN = 'tr_open';
-const TR_TYPE_IDENTIFY_CLOSE = 'tr_close';
+const basePath = path.resolve(__dirname, "./../../AppQuarkui/src/packages");
+const componentDirs = fs.readdirSync(basePath, "utf8");
+const TYPE_IDENTIFY_OPEN = "tbody_open";
+const TYPE_IDENTIFY_CLOSE = "tbody_close";
+const TR_TYPE_IDENTIFY_OPEN = "tr_open";
+const TR_TYPE_IDENTIFY_CLOSE = "tr_close";
 
 const getSubSources = (sources) => {
-  const startIndex = sources.findIndex((source) => source.type === TYPE_IDENTIFY_OPEN);
-  const endIndex = sources.findIndex((source) => source.type === TYPE_IDENTIFY_CLOSE);
+  const startIndex = sources.findIndex(
+    (source) => source.type === TYPE_IDENTIFY_OPEN
+  );
+  const endIndex = sources.findIndex(
+    (source) => source.type === TYPE_IDENTIFY_CLOSE
+  );
   sources = sources.slice(startIndex, endIndex + 1);
-  const trStartIndex = sources.findIndex((source) => source.type === TR_TYPE_IDENTIFY_OPEN);
-  const trEndIndex = sources.findIndex((source) => source.type === TR_TYPE_IDENTIFY_CLOSE);
+  const trStartIndex = sources.findIndex(
+    (source) => source.type === TR_TYPE_IDENTIFY_OPEN
+  );
+  const trEndIndex = sources.findIndex(
+    (source) => source.type === TR_TYPE_IDENTIFY_CLOSE
+  );
   return sources.slice(trStartIndex, trEndIndex + 1);
 };
 
 const genaratorComponentMap = () => {
   let componentMap = {};
-  if (!componentDirs.length) {return;}
+  if (!componentDirs.length) {
+    return;
+  }
 
   for (let componentDir of componentDirs) {
     let stat = fs.lstatSync(`${basePath}/${componentDir}`);
     if (stat.isDirectory()) {
-      const absolutePath = path.join(`${basePath}/${componentDir}`, 'doc.zh-CN.md');
-      if (!fs.existsSync(absolutePath)) {continue;}
-      const data = fs.readFileSync(absolutePath, 'utf8');
+      const absolutePath = path.join(
+        `${basePath}/${componentDir}`,
+        "doc.zh-CN.md"
+      );
+      if (!fs.existsSync(absolutePath)) {
+        continue;
+      }
+      const data = fs.readFileSync(absolutePath, "utf8");
       let sources = MarkdownIt.parse(data, {});
       sources = getSubSources(sources);
       componentMap[componentDir] = {
         site: `/${componentDir}`,
-        props: sources.filter((source) => source.type === 'inline').length
-          ? [`${sources.filter((source) => source.type === 'inline')[0].content}=''`]
-          : ['']
+        props: sources.filter((source) => source.type === "inline").length
+          ? [
+              `${
+                sources.filter((source) => source.type === "inline")[0].content
+              }=''`,
+            ]
+          : [""],
       };
     }
   }
@@ -48,10 +67,14 @@ const writeFileInComponentMap = () => {
   let innerText = `
 import { ComponentDesc } from './componentDesc';
 
-export const componentMap: Record<string, ComponentDesc> = ${JSON.stringify(componentMap, null, 2)}
+export const componentMap: Record<string, ComponentDesc> = ${JSON.stringify(
+    componentMap,
+    null,
+    2
+  )}
 `;
 
-  const componentMapPath = path.resolve(__dirname, './../src/componentMap.ts');
+  const componentMapPath = path.resolve(__dirname, "./../src/componentMap.ts");
 
   fs.writeFileSync(componentMapPath, innerText);
 };

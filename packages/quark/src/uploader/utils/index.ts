@@ -1,7 +1,7 @@
-export type UploaderResultType = 'dataUrl' | 'text' | 'file';
+export type UploaderResultType = "dataUrl" | "text" | "file";
 export function readFileContent(file: File, resultType: UploaderResultType) {
   return new Promise<string | void>((resolve) => {
-    if (resultType === 'file') {
+    if (resultType === "file") {
       resolve();
       return;
     }
@@ -12,9 +12,9 @@ export function readFileContent(file: File, resultType: UploaderResultType) {
       resolve((event.target as FileReader).result as string);
     };
 
-    if (resultType === 'dataUrl') {
+    if (resultType === "dataUrl") {
       reader.readAsDataURL(file);
-    } else if (resultType === 'text') {
+    } else if (resultType === "text") {
       reader.readAsText(file);
     }
   });
@@ -26,7 +26,7 @@ export type UploaderFileListItem = {
   file?: File;
   content?: string;
   isImage?: boolean;
-  status?: '' | 'uploading' | 'done' | 'failed';
+  status?: "" | "uploading" | "done" | "failed";
   message?: string;
   deletable?: boolean;
   previewSize?: number | string;

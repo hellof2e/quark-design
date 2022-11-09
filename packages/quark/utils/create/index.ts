@@ -1,2 +1,2 @@
-import { createComponent } from './component';
+import { createComponent } from "./component";
 export { createComponent };

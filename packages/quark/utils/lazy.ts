@@ -1,10 +1,10 @@
-import { inBrowser, throttle } from './public';
+import { inBrowser, throttle } from "./public";
 // import { EventController } from './eventController';
-import { ScrollElement } from './index';
+import { ScrollElement } from "./index";
 
 const OPTIONS = {
-  rootMargin: '0px',
-  threshold: 0
+  rootMargin: "0px",
+  threshold: 0,
 };
 
 const PRELOAD = 1.3;
@@ -13,14 +13,14 @@ const overflowScrollReg = /scroll|auto/i;
 const defaultRoot = inBrowser ? window : undefined;
 
 const DEFAULT_EVENTS = [
-  'scroll',
-  'wheel',
-  'mousewheel',
-  'resize',
-  'animationend',
-  'transitionend',
-  'touchmove',
-  'touchend'
+  "scroll",
+  "wheel",
+  "mousewheel",
+  "resize",
+  "animationend",
+  "transitionend",
+  "touchmove",
+  "touchend",
 ];
 
 type LISTENER = {
@@ -29,13 +29,13 @@ type LISTENER = {
 };
 
 class LazyLoad {
-  private mode: string = '';
+  private mode: string = "";
   private observer?: IntersectionObserver;
   private listeners: Array<LISTENER> = [];
   public listenEvents: string[] = DEFAULT_EVENTS;
 
   constructor() {
-    this.setMode(this.supportIntersection() ? 'observer' : 'event');
+    this.setMode(this.supportIntersection() ? "observer" : "event");
   }
 
   /**
@@ -44,9 +44,9 @@ class LazyLoad {
   private supportIntersection() {
     if (inBrowser) {
       if (
-        'IntersectionObserver' in window &&
-        'IntersectionObserverEntry' in window &&
-        'intersectionRatio' in window.IntersectionObserverEntry.prototype
+        "IntersectionObserver" in window &&
+        "IntersectionObserverEntry" in window &&
+        "intersectionRatio" in window.IntersectionObserverEntry.prototype
       ) {
         return true;
       }
@@ -92,7 +92,7 @@ class LazyLoad {
    *  */
   private setMode(mode: string) {
     this.mode = mode;
-    if (mode === 'observer') {
+    if (mode === "observer") {
       this.initIntersection();
     } else {
       this.initEventTarget();
@@ -140,8 +140,8 @@ class LazyLoad {
   isElement(node: Element) {
     const ELEMENT_NODE_TYPE = 1;
     return (
-      node.tagName !== 'HTML' &&
-      node.tagName !== 'BODY' &&
+      node.tagName !== "HTML" &&
+      node.tagName !== "BODY" &&
       node.nodeType === ELEMENT_NODE_TYPE
     );
   }
@@ -171,9 +171,9 @@ class LazyLoad {
       el: el,
       load: () => {
         el.src = src;
-      }
+      },
     };
-    if (this.mode === 'observer' && this.observer) {
+    if (this.mode === "observer" && this.observer) {
       this.observer && this.observer.observe(el);
       this.listeners.push(listener);
     } else {
@@ -193,7 +193,7 @@ class LazyLoad {
    * 卸载监听元素
    */
   remove(el: HTMLElement) {
-    if (this.mode === 'observer' && this.observer) {
+    if (this.mode === "observer" && this.observer) {
       this.observer.unobserve(el);
     }
 
@@ -212,7 +212,7 @@ class LazyLoad {
    * 卸载
    *  */
   uninstall() {
-    if (this.mode === 'observer' && this.observer) {
+    if (this.mode === "observer" && this.observer) {
       this.observer.disconnect();
     }
   }

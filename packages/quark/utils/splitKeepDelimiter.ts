@@ -1,5 +1,5 @@
 export default (str: string, keyword: string): string[] => {
-  if (keyword === '') {
+  if (keyword === "") {
     return [str];
   }
   const arr = str.split(keyword);

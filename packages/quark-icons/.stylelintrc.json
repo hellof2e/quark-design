@@ -1,10 +1,7 @@
 {
   "root": true,
   "extends": "stylelint-config-standard",
-  "plugins": [
-    "stylelint-order",
-    "stylelint-scss"
-  ],
+  "plugins": ["stylelint-order", "stylelint-scss"],
   "rules": {
     "value-keyword-case": null,
     "function-no-unknown": null,

@@ -31,15 +31,15 @@ export interface CustomEvent {
 })
 class QuarkImage extends QuarkElement {
   @property()
-  src: string = "";
+  src = "";
 
   @property({
     type: Boolean,
   })
-  lazy: boolean = false;
+  lazy = false;
 
   @property()
-  alt: string = "";
+  alt = "";
 
   @property()
   width: number | string = "";
@@ -50,7 +50,7 @@ class QuarkImage extends QuarkElement {
   @property({
     type: Boolean,
   })
-  round: boolean = false;
+  round = false;
 
   @property()
   fit: FitType = "fill";
@@ -99,7 +99,7 @@ class QuarkImage extends QuarkElement {
   }
 
   render() {
-    let attrs = this.alt
+    const attrs = this.alt
       ? {
           alt: this.alt,
           class: "quark-image-img",

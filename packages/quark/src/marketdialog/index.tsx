@@ -20,15 +20,15 @@ export interface CustomEvent {
 })
 class QuarkMarketDialog extends QuarkElement {
   @property()
-  url: string = "";
+  url = "";
 
   @property()
-  size: string = "32";
+  size = "32";
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
-  dRemove: boolean = false;
+  dRemove = false;
 
   shouldComponentUpdate(propName: string, oldValue: string, newValue: string) {
     if (propName === "open" && newValue !== oldValue) {
