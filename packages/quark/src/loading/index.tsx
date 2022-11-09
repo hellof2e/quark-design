@@ -21,7 +21,7 @@ class QuarkLoading extends QuarkElement {
   @property({
     type: Boolean,
   })
-  vertical: boolean = false;
+  vertical = false;
 
   @property()
   color: string | undefined = "#879099";

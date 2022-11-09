@@ -11,30 +11,32 @@ import "quarkd/lib/overlay";
 ```
 
 ### Basic Usage
+
 ```html
 <template>
   <div>
     <h2>Basic usage</h2>
     <div @click="click">open</div>
-    <quark-overlay :open="open" @close="close"/>
+    <quark-overlay :open="open" @close="close" />
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
     return {
-      open: false
+      open: false,
     };
   },
   methods: {
     click() {
-      this.open = true
+      this.open = true;
     },
     close() {
-      this.open = false
-    }
-  }
+      this.open = false;
+    },
+  },
 };
 ```
 
@@ -42,7 +44,7 @@ export default {
 
 ```html
 <template>
-  <div >
+  <div>
     <h2>Custom header</h2>
     <div @click="click">Custom heade</div>
     <quark-overlay :open="open" @close="close">
@@ -59,21 +61,22 @@ export default {
   }
 </style>
 ```
+
 ```js
 export default {
   data() {
     return {
-      open: false
+      open: false,
     };
   },
   methods: {
     click() {
-      this.open = true
+      this.open = true;
     },
     close() {
-      this.open = false
-    }
-  }
+      this.open = false;
+    },
+  },
 };
 ```
 
@@ -81,23 +84,23 @@ export default {
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default   |
-|--------------|----------------------------------|--------|------------------|
-| open        | Whether to show picker| `boolean`                  | `require`
-| zindex    | z-index | `number `               | `999`
-
+| Attribute | Description            | Type      | Default   |
+| --------- | ---------------------- | --------- | --------- |
+| open      | Whether to show picker | `boolean` | `require` |
+| zindex    | z-index                | `number ` | `999`     |
 
 ### Events
-| Event         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| close         | Close mask |      `() => void`    |
+
+| Event | Description | Type         |
+| ----- | ----------- | ------------ |
+| close | Close mask  | `() => void` |
+
 |
 
 ## CSS Variables
 
 The component provides the following[CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties),which can be used to customize styles. Please refer to [Theme customization](#/zh-CN/guide/theme)。
 
-| Name                    | Description                               | Default Value        |
-| ------------------------ | ----------------------------------- | --------------- |
+| Name                   | Description     | Default Value        |
+| ---------------------- | --------------- | -------------------- |
 | `--overlay-background` | Mask background | `rgba(0, 0, 0, 0.7)` |
-

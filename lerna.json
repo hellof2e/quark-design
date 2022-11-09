@@ -8,9 +8,7 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
-      "ignoreChanges": [
-        "ignored-file, lerna.json", "*.md", "*.MD"
-      ]
+      "ignoreChanges": ["ignored-file, lerna.json", "*.md", "*.MD"]
     }
   }
 }

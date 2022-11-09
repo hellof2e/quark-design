@@ -17,9 +17,9 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "lib": ["esnext", "dom"],
-    "declaration": true, /* 生成相关的 '.d.ts' 文件。 */ 
-    "declarationDir": "./types", /* '.d.ts' 文件输出目录 */ 
-    "emitDeclarationOnly": true, /* 只生成声明文件，不生成 js 文件*/ 
+    "declaration": true /* 生成相关的 '.d.ts' 文件。 */,
+    "declarationDir": "./types" /* '.d.ts' 文件输出目录 */,
+    "emitDeclarationOnly": true /* 只生成声明文件，不生成 js 文件*/,
     "types": ["vite/client"]
   },
   "include": ["src/**/*.tsx"],

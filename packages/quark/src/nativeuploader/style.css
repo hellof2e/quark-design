@@ -14,7 +14,7 @@
   margin: 0 var(--uploader-margin, 6px) var(--uploader-margin, 6px) 0;
 }
 
-:host .quark-uploader-icon{
+:host .quark-uploader-icon {
   box-sizing: border-box;
   width: var(--uploader-width, 93px);
   height: var(--uploader-height, 93px);
@@ -87,7 +87,7 @@
   width: var(--uploader-width, 93px);
   height: var(--uploader-height, 93px);
   border-radius: var(--uploader-radius, 4px);
-  background: var(--uploader-mask-background, rgba(50, 50, 51, .88));
+  background: var(--uploader-mask-background, rgba(50, 50, 51, 0.88));
   display: flex;
   align-items: center;
   justify-content: center;

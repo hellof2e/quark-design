@@ -7,16 +7,16 @@ Users can choose multiple option sets, and there are single-column selection and
 ### Install
 
 ```tsx
-import { Picker,PickerRef } from "@quarkd/quark-react";
+import { Picker, PickerRef } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
-```js
-import { useRef, useState, useEffect } from 'react';
-export default () => {
 
+```js
+import { useRef, useState, useEffect } from "react";
+export default () => {
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<PickerRef>(null);
+  const pickerRef = useRef < PickerRef > null;
 
   const handleClose = () => {
     setOpen(false);
@@ -27,7 +27,7 @@ export default () => {
       .map((column) => {
         return column.value;
       })
-      .join('，');
+      .join("，");
     console.log(values);
     setOpen(false);
   };
@@ -39,12 +39,12 @@ export default () => {
       pickerCurrent.setColumns([
         {
           defaultIndex: 2,
-          values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+          values: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         },
         {
           defaultIndex: 0,
-          values: ['Morning', 'Afternoon']
-        }
+          values: ["Morning", "Afternoon"],
+        },
       ]);
     }, 1000);
   }, []);
@@ -54,7 +54,7 @@ export default () => {
   };
 
   return (
-    <div >
+    <div>
       <div onClick={handleClick}>Basic Usage</div>
       <Picker
         ref={pickerRef}
@@ -65,18 +65,16 @@ export default () => {
       />
     </div>
   );
-}
-
+};
 ```
 
 ### Custom Header
 
 ```js
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from "react";
 export default () => {
-
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<PickerRef>(null);
+  const pickerRef = useRef < PickerRef > null;
 
   const handleClose = () => {
     setOpen(false);
@@ -89,7 +87,7 @@ export default () => {
       .map((column) => {
         return column.value;
       })
-      .join('，');
+      .join("，");
     console.log(values);
     setOpen(false);
   };
@@ -101,12 +99,12 @@ export default () => {
       pickerCurrent.setColumns([
         {
           defaultIndex: 2,
-          values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+          values: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         },
         {
           defaultIndex: 0,
-          values: ['Morning', 'Afternoon']
-        }
+          values: ["Morning", "Afternoon"],
+        },
       ]);
     }, 1000);
   }, []);
@@ -116,14 +114,9 @@ export default () => {
   };
 
   return (
-    <div >
+    <div>
       <div onClick={handleClick}>Custom Header</div>
-      <Picker
-        ref={pickerRef}
-        bottomhidden
-        open={open}
-        onClose={handleClose}
-      >
+      <Picker ref={pickerRef} bottomhidden open={open} onClose={handleClose}>
         <div slot="header" className="head-container">
           <span className="cancel" onClick={handleClose}>
             Cancel
@@ -136,34 +129,35 @@ export default () => {
       </Picker>
     </div>
   );
-}
+};
 ```
 
 ## API
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default           |
-|--------------|----------------------------------|--------|------------------|
-| open  | Whether to show picker  | `boolean`  | `require`
-| title | Title | `string`  | - |
-| confirmtext      | Text of the ok button           | `string` | `Confirm`
-| bottomhidden  | Whether to show bottom button (use with custom header)  | `boolean` | `false`
-| onClose | Emitted when click mask or cancel button. | `() => void`    |  `require ` |
-| onConfirm | Emitted when click confirm button.  |  `（e: {detail:{value: SelectColumn[]}}）=> void`   | `require` |
-| onChange  | Emitted when current option changed.  | `（e: {detail:{value:  SelectColumn[]}}）=> void`   | - |
-
+| Attribute    | Description                                            | Type                                             | Default    |
+| ------------ | ------------------------------------------------------ | ------------------------------------------------ | ---------- |
+| open         | Whether to show picker                                 | `boolean`                                        | `require`  |
+| title        | Title                                                  | `string`                                         | -          |
+| confirmtext  | Text of the ok button                                  | `string`                                         | `Confirm`  |
+| bottomhidden | Whether to show bottom button (use with custom header) | `boolean`                                        | `false`    |
+| onClose      | Emitted when click mask or cancel button.              | `() => void`                                     | `require ` |
+| onConfirm    | Emitted when click confirm button.                     | `（e: {detail:{value: SelectColumn[]}}）=> void` | `require`  |
+| onChange     | Emitted when current option changed.                   | `（e: {detail:{value: SelectColumn[]}}）=> void` | -          |
 
 ### Slot
-| Name         | Description                             |
-|--------------|----------------------------------|
-| name=header  | Custom header              |
+
+| Name        | Description   |
+| ----------- | ------------- |
+| name=header | Custom header |
 
 ### Methods
-| Name         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| setColumns   | Set current value of Picker	 |  `(columns: PickerColumn[]) => void`   |
-| getValues    | Get values selected by Picker, usually used with custom header. |  `（）=> SelectColumn[]`   |
+
+| Name       | Description                                                     | Type                                |
+| ---------- | --------------------------------------------------------------- | ----------------------------------- |
+| setColumns | Set current value of Picker                                     | `(columns: PickerColumn[]) => void` |
+| getValues  | Get values selected by Picker, usually used with custom header. | `（）=> SelectColumn[]`             |
 
 ### Type definition
 
@@ -183,10 +177,9 @@ type SelectColumn = {
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                                  | Default          |
-| ------------------------ | ----------------------------------- | --------------- |
-| `--picker-title-font-size` | Title font size | `18px` |
-| `--picker-title-color`   | Title font color | ` #242729`  |
-| `--picker-title-font-weight`  | Title font weight  |  `500` |
-| `--picker-title-font-family`  | Title font family  |  `PingFangSC-Medium, PingFang SC`  |
-
+| Name                         | Description       | Default                          |
+| ---------------------------- | ----------------- | -------------------------------- |
+| `--picker-title-font-size`   | Title font size   | `18px`                           |
+| `--picker-title-color`       | Title font color  | ` #242729`                       |
+| `--picker-title-font-weight` | Title font weight | `500`                            |
+| `--picker-title-font-family` | Title font family | `PingFangSC-Medium, PingFang SC` |

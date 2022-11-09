@@ -1,23 +1,23 @@
 .quark-popover {
-    width: 100px;
-    background-color: #0088ff; 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    color: white;
-    margin-right: 20px;
+  width: 100px;
+  background-color: #0088ff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  margin-right: 20px;
 }
 
 .quark-popover-content {
-    width: 160px;
-    height: 140px;
-    background-color: #4a4a4a;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    color: white
+  width: 160px;
+  height: 140px;
+  background-color: #4a4a4a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
 }

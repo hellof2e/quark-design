@@ -4,47 +4,45 @@
 
 The stepper component consists of an increase button, a decrease button and an input box, which are used to input and adjust numbers within a certain range.
 
-
 ### Install
 
-
-``` tsx
-import { Stepper }  from "@quarkd/quark-react"
+```tsx
+import { Stepper } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
 
-``` html
-<Stepper value="1">
+```html
+<Stepper value="1"></Stepper>
 ```
 
 ### Range
 
-``` html
+```html
 <Stepper min="5" max="12" />
 ```
 
 ### Step
 
-``` html
+```html
 <Stepper steps="2" />
 ```
 
 ### Integer
 
-``` html
+```html
 <Stepper interger />
 ```
 
 ### Disabled
 
-``` html
+```html
 <Stepper disabled />
 ```
 
 ### Custom Style
 
-``` css
+```css
 Stepper {
   --stepper-input-text-color: black;
   --stepper-input-background-color: white;
@@ -60,6 +58,7 @@ Stepper {
 ```
 
 ### Change Event
+
 ```tsx
 export default = () =>  {
   const [value, setValue] = useState(1);
@@ -74,42 +73,42 @@ export default = () =>  {
 
 ### Props
 
-| Attribute | Description | Type | Default |
-| :---: | :---: | :---: | :-------------- |
-| min   | Minimum |  `number`  |    |
-| max   | Maximum | `number` |  |
-| steps | Steps (Step size with each click changes) |` number`  | `1`|
-| name  | Stepper name, which will be recalled in the ``change`` event | `string` |  |
-| decimallength | Decimal length | `number`|   |
-| integer	      | Whether to allow only integers	 | `boolean` | `false` |
-| disabled      | Whether to disable stepper	 | `boolean` | `false` |
-| onChange | Emitted when value changed | `(e:{detail: { name: string, value: number }}) => void` | |
-| onOverlimit | Emitted when a disabled button is clicked | `(e:{detail: { action: string}}) => void` |  |
-| onPlus  | Emitted when the plus button is clicked | `() => void` |  |
-| onMinus | Emitted when the minus button is clicked | `() => void` |  |
+|   Attribute   |                        Description                         |                          Type                           | Default |
+| :-----------: | :--------------------------------------------------------: | :-----------------------------------------------------: | :------ |
+|      min      |                          Minimum                           |                        `number`                         |         |
+|      max      |                          Maximum                           |                        `number`                         |         |
+|     steps     |         Steps (Step size with each click changes)          |                        ` number`                        | `1`     |
+|     name      | Stepper name, which will be recalled in the `change` event |                        `string`                         |         |
+| decimallength |                       Decimal length                       |                        `number`                         |         |
+|    integer    |               Whether to allow only integers               |                        `boolean`                        | `false` |
+|   disabled    |                 Whether to disable stepper                 |                        `boolean`                        | `false` |
+|   onChange    |                 Emitted when value changed                 | `(e:{detail: { name: string, value: number }}) => void` |         |
+|  onOverlimit  |         Emitted when a disabled button is clicked          |        `(e:{detail: { action: string}}) => void`        |         |
+|    onPlus     |          Emitted when the plus button is clicked           |                      `() => void`                       |         |
+|    onMinus    |          Emitted when the minus button is clicked          |                      `() => void`                       |         |
 
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name      | Description                                | Default           |
-|--------------|----------------------------------|------------------|
-| `--stepper-input-text-color`     |  stepper-input font color |`#e8e8e8`   |
-| `--stepper-input-background-color`      |   stepper-input background color |  `#f2f3f5`     |
-| `--stepper-input-width`    |   stepper-input width | `32px`  |
-| `--stepper-input-height`    |   stepper-input height | `28px`  |
-| `--stepper-input-border-color`    |   stepper-input border color|   |
-| `--stepper-input-border-width`    |   stepper-input border width | `1px`  |
-| `--stepper-input-font-size`    |   stepper-input font size | `14px`  |
-| `--stepper-input-line-height`    |   stepper-input line-height | `normal`  |
-| `--stepper-input-border-radius`    |   stepper-input border radius |   |
-| `--stepper-button-border-radius`   |   stepper-button border radius|   |
-| `--stepper-button-border-height`   |   stepper-button height | `28px`  |
-| `--stepper-button-border-width`   |   stepper-button width | `28px`  |
-| `--stepper-button-disabled-color` | stepper disabled color | `#c8c9cc` |
-| `--stepper-minus-color` |  stepper-minus-button font color | `#e8e8e8` |
-| `--stepper-minus-background-color` |  stepper-minus-button background color| `#f2f3f5` |
-| `--stepper-plus-color` |  stepper-plus-button font color | `#e8e8e8` |
-| `--stepper-plus-background-color` |  stepper-plus-button background color | `#f2f3f5` |
-| `--stepper-minus-border-color`   |   stepper-minus-button border color |   |
-| `--stepper-plus-border-color`   |   stepper-plus-button border color |  |
+| Name                               | Description                           | Default   |
+| ---------------------------------- | ------------------------------------- | --------- |
+| `--stepper-input-text-color`       | stepper-input font color              | `#e8e8e8` |
+| `--stepper-input-background-color` | stepper-input background color        | `#f2f3f5` |
+| `--stepper-input-width`            | stepper-input width                   | `32px`    |
+| `--stepper-input-height`           | stepper-input height                  | `28px`    |
+| `--stepper-input-border-color`     | stepper-input border color            |           |
+| `--stepper-input-border-width`     | stepper-input border width            | `1px`     |
+| `--stepper-input-font-size`        | stepper-input font size               | `14px`    |
+| `--stepper-input-line-height`      | stepper-input line-height             | `normal`  |
+| `--stepper-input-border-radius`    | stepper-input border radius           |           |
+| `--stepper-button-border-radius`   | stepper-button border radius          |           |
+| `--stepper-button-border-height`   | stepper-button height                 | `28px`    |
+| `--stepper-button-border-width`    | stepper-button width                  | `28px`    |
+| `--stepper-button-disabled-color`  | stepper disabled color                | `#c8c9cc` |
+| `--stepper-minus-color`            | stepper-minus-button font color       | `#e8e8e8` |
+| `--stepper-minus-background-color` | stepper-minus-button background color | `#f2f3f5` |
+| `--stepper-plus-color`             | stepper-plus-button font color        | `#e8e8e8` |
+| `--stepper-plus-background-color`  | stepper-plus-button background color  | `#f2f3f5` |
+| `--stepper-minus-border-color`     | stepper-minus-button border color     |           |
+| `--stepper-plus-border-color`      | stepper-plus-button border color      |           |

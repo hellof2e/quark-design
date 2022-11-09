@@ -20,7 +20,7 @@
   background: var(--skeleton-avatar-background-color, #f2f3f5);
 }
 
-:host([avatarshape="round"]) .skeleton-avatar{
+:host([avatarshape="round"]) .skeleton-avatar {
   border-radius: 999px;
 }
 

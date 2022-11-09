@@ -1,6 +1,6 @@
 export type ScrollElement = Element | Window;
 export function getScrollTop(el: ScrollElement): number {
-  const top = 'scrollTop' in el ? el.scrollTop : el.pageYOffset;
+  const top = "scrollTop" in el ? el.scrollTop : el.pageYOffset;
 
   // iOS scroll bounce cause minus scrollTop
   return Math.max(top, 0);
@@ -8,12 +8,12 @@ export function getScrollTop(el: ScrollElement): number {
 
 function getDirection(x: number, y: number) {
   if (x > y) {
-    return 'horizontal';
+    return "horizontal";
   }
   if (y > x) {
-    return 'vertical';
+    return "vertical";
   }
-  return '';
+  return "";
 }
 
 let startX = 0;
@@ -23,18 +23,18 @@ let deltaY = 0;
 let offsetX = 0;
 let offsetY = 0;
 let onMove = false;
-let direction = '';
+let direction = "";
 
 export function useTouch() {
-  const isVertical = () => direction === 'vertical';
-  const isHorizontal = () => direction === 'horizontal';
+  const isVertical = () => direction === "vertical";
+  const isHorizontal = () => direction === "horizontal";
 
   const reset = () => {
     deltaX = 0;
     deltaY = 0;
     offsetX = 0;
     offsetY = 0;
-    direction = '';
+    direction = "";
   };
 
   const start = ((event: TouchEvent) => {
@@ -82,6 +82,6 @@ export function useTouch() {
     offsetY,
     direction,
     isVertical,
-    isHorizontal
+    isHorizontal,
   };
 }

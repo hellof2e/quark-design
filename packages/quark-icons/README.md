@@ -13,8 +13,8 @@ icons 是从 Quark 组件库独立出来的独立 npm 包。
 
 浏览器将其视为文字进行抗锯齿优化，有时得到的效果并没有想象中那么锐利。尤其是在不同系统下对文字进行抗锯齿的算法不同，可能会导致显示效果不同。
 
-Icon Font 作为一种字体，Icon 显示的大小和位置可能要受到font-size、line-height、word-spacing 等等 CSS 属性的影响。Icon 所在容器的 CSS 样式可能对 Icon 的位置产生影响，调整起来很不方便。
+Icon Font 作为一种字体，Icon 显示的大小和位置可能要受到 font-size、line-height、word-spacing 等等 CSS 属性的影响。Icon 所在容器的 CSS 样式可能对 Icon 的位置产生影响，调整起来很不方便。
 
-为了实现最大程度的浏览器支持，可能要提供至少四种不同类型的字体文件。包括TTF、WOFF、EOT 以及一个使用 SVG 格式定义的字体。
+为了实现最大程度的浏览器支持，可能要提供至少四种不同类型的字体文件。包括 TTF、WOFF、EOT 以及一个使用 SVG 格式定义的字体。
 
 网络延时会导致 Icon 会先加载出来一个 string。

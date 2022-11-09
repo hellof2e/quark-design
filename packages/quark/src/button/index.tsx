@@ -60,7 +60,7 @@ class QuarkButton extends QuarkElement {
   slotRef: any = createRef();
 
   renderIcon = () => {
-    if (this.icon && this.icon.includes("http")) {
+    if (this.icon && this.icon.startsWith("http")) {
       return <img class="quark-button-icon" src={this.icon}></img>;
     }
     if (this.loading) {
@@ -77,7 +77,7 @@ class QuarkButton extends QuarkElement {
   };
 
   componentDidMount() {
-    this.slotRef.current.addEventListener("click", (e) => {
+    this.slotRef.current.addEventListener("click", (e: Event) => {
       if (this.disabled || this.loading) {
         e.stopPropagation();
       }

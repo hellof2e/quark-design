@@ -1,15 +1,16 @@
-const getMonthEndDay = (year, month) => 32 - new Date(year, month - 1, 32).getDate();
+const getMonthEndDay = (year, month) =>
+  32 - new Date(year, month - 1, 32).getDate();
 
-const padZero = (num, targetLength = 2)  => {
+const padZero = (num, targetLength = 2) => {
   let str = num + "";
   while (str.length < targetLength) {
     str = "0" + str;
   }
   return str;
-}
+};
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-const times = (n, iteratee) =>  {
+const times = (n, iteratee) => {
   if (n < 0) {
     return [];
   }
@@ -19,8 +20,10 @@ const times = (n, iteratee) =>  {
     result[index] = iteratee(index);
   }
   return result;
-}
-const isDate = (val) => Object.prototype.toString.call(val) === "[object Date]" && !Number.isNaN(val.getTime());
+};
+const isDate = (val) =>
+  Object.prototype.toString.call(val) === "[object Date]" &&
+  !Number.isNaN(val.getTime());
 
 function getTrueValue(value) {
   if (!value) {
@@ -36,11 +39,4 @@ function getTrueValue(value) {
   return parseInt(value, 10);
 }
 
-export {
-  getMonthEndDay,
-  padZero,
-  times,
-  isDate,
-  clamp,
-  getTrueValue
-}
+export { getMonthEndDay, padZero, times, isDate, clamp, getTrueValue };

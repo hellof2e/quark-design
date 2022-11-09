@@ -5,7 +5,7 @@
 
 :host ul {
   list-style: none;
-  padding: 0
+  padding: 0;
 }
 
 :host quark-button {
@@ -56,7 +56,7 @@
 
 :host quark-icon-close {
   font-size: 24px;
-  color: #BCC4CC;
+  color: #bcc4cc;
   cursor: pointer;
 }
 
@@ -104,8 +104,8 @@
   right: 16px;
   bottom: 0;
   left: 16px;
-  -webkit-transform: scaleY(.5);
-  transform: scaleY(.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
   border-bottom: 2px solid #f5f6f7;
 }
 
@@ -118,21 +118,29 @@
   right: 16px;
   top: 0;
   left: 16px;
-  -webkit-transform: scaleY(.5);
-  transform: scaleY(.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
   border-bottom: 2px solid #f5f6f7;
 }
 
 .quark-picker-mask-top {
   position: absolute;
   top: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8)
+  );
 }
 
 :host .quark-picker-mask-bottom {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8)
+  );
 }
 
 :host .quark-picker-wheel-wrapper {

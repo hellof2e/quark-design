@@ -14,10 +14,10 @@ import { Uploader,UploaderRef } "quark-react";
 
 ```tsx
 export default () => {
-	const afterread = (file) => {
-		console.log(file.file.name);
-	};
-	return <Uploader onAfterread={afterRead} />;
+  const afterread = (file) => {
+    console.log(file.file.name);
+  };
+  return <Uploader onAfterread={afterRead} />;
 };
 ```
 
@@ -27,15 +27,15 @@ Preview is enabled by default
 
 ```tsx
 export default () => {
-	const preview = useRef<UploaderRef>(null);
-	const previewUrls = [
-		"https://img.yzcdn.cn/vant/leaf.jpg",
-		"https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
-	];
-	useEffect(() => {
-		preview.current.setPreview(previewUrls);
-	}, []);
-	return <Uploader ref={preview} preview />;
+  const preview = useRef<UploaderRef>(null);
+  const previewUrls = [
+    "https://img.yzcdn.cn/vant/leaf.jpg",
+    "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
+  ];
+  useEffect(() => {
+    preview.current.setPreview(previewUrls);
+  }, []);
+  return <Uploader ref={preview} preview />;
 };
 ```
 
@@ -53,13 +53,13 @@ Max size(B), 1M can be set to 1024 \* 1024
 
 ```tsx
 export default () => {
-	const oversize = useRef<UploaderRef>(null);
+  const oversize = useRef<UploaderRef>(null);
 
-	const oversizeFn = () => {
-		console.log("File size cannot exceed 1kB");
-	};
+  const oversizeFn = () => {
+    console.log("File size cannot exceed 1kB");
+  };
 
-	return <Uploader maxsize="1024" ref={oversize} onOversize={oversizeFn} />;
+  return <Uploader maxsize="1024" ref={oversize} onOversize={oversizeFn} />;
 };
 ```
 
@@ -67,7 +67,7 @@ export default () => {
 
 ```html
 <Uploader>
-	<div slot="uploader">Upload files</div>
+  <div slot="uploader">Upload files</div>
 </Uploader>
 ```
 
@@ -77,22 +77,22 @@ setBeforeUpload return Boolean, false blocking upload.
 
 ```tsx
 export default () => {
-	const before = useRef<UploaderRef>(null);
+  const before = useRef<UploaderRef>(null);
 
-	const beforeUpload = (files) => {
-		const r = files.every((file) => file.type === "image/jpg");
-		if (!r) {
-			console.log("Please upload jpg format image");
-			return false;
-		}
-		return true;
-	};
+  const beforeUpload = (files) => {
+    const r = files.every((file) => file.type === "image/jpg");
+    if (!r) {
+      console.log("Please upload jpg format image");
+      return false;
+    }
+    return true;
+  };
 
-	useEffect(() => {
-		before.current.setBeforeUpload(beforeUpload);
-	}, []);
+  useEffect(() => {
+    before.current.setBeforeUpload(beforeUpload);
+  }, []);
 
-	return <Uploader preview ref={before} />;
+  return <Uploader preview ref={before} />;
 };
 ```
 

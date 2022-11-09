@@ -7,9 +7,11 @@ When the component rolls out of screen range, it will always be fixed at the top
 ### Install
 
 ```tsx
-import { Sticky } from '@quarkd/quark-react';
+import { Sticky } from "@quarkd/quark-react";
 ```
+
 ### Basic Usage
+
 ```html
 <Sticky offsettop="17vw">
   <div value="basic usage">Basic Usage</div>
@@ -17,6 +19,7 @@ import { Sticky } from '@quarkd/quark-react';
 ```
 
 ### Offset Top
+
 ```html
 <Sticky offsettop="45vw">
   <div value="offset top">Offset Top</div>
@@ -24,8 +27,10 @@ import { Sticky } from '@quarkd/quark-react';
 ```
 
 ## API
+
 ### Props
-| Attribute            | Description            | Unit           | Default |
-| ---------------------| -----------------------| ---------------|---------|
-| offsettop            | Offset top             | ` vw   `       |  `0vw`  |
-| zindex               | z-index when sticky    | `number  `     |   `99`  |
+
+| Attribute | Description         | Unit      | Default |
+| --------- | ------------------- | --------- | ------- |
+| offsettop | Offset top          | `vw `     | `0vw`   |
+| zindex    | z-index when sticky | `number ` | `99`    |

@@ -52,12 +52,12 @@ Just do not pass in `content`.
 <div @click="open = true">Open Dialog</div>
 
 <quark-dialog
-	:open="open"
-	title="title"
-	content="The code is written for people to see, with the addition of running on the machine"
-	@close="open = false"
-	@confirm="open = false"
-	@cancel="open = false"
+  :open="open"
+  title="title"
+  content="The code is written for people to see, with the addition of running on the machine"
+  @close="open = false"
+  @confirm="open = false"
+  @cancel="open = false"
 >
 </quark-dialog>
 ```
@@ -70,13 +70,13 @@ Buttons can be arranged vertically by setting the property `btnvertical`.
 <div @click="open = true">Open Dialog</div>
 
 <quark-dialog
-	btnvertical
-	:open="open"
-	title="title"
-	content="The code is written for people to see, with the addition of running on the machine"
-	@close="open = false"
-	@confirm="open = false"
-	@cancel="open = false"
+  btnvertical
+  :open="open"
+  title="title"
+  content="The code is written for people to see, with the addition of running on the machine"
+  @close="open = false"
+  @confirm="open = false"
+  @cancel="open = false"
 >
 </quark-dialog>
 ```
@@ -89,12 +89,12 @@ Set custom title/footer via `slot='title'` , `slot='footer'`.
 <div @click="open = true">Open Dialog</div>
 
 <quark-dialog
-	:content="translate('content')"
-	:open="open"
-	@close="open = false"
+  :content="translate('content')"
+  :open="open"
+  @close="open = false"
 >
-	<div slot="title">custom title</div>
-	<div slot="footer">custom footer</div>
+  <div slot="title">custom title</div>
+  <div slot="footer">custom footer</div>
 </quark-dialog>
 ```
 
@@ -106,8 +106,8 @@ Hide the title/footer by passing in the `notitle`, `nofooter` properties.
 <div @click="open = true">Open Dialog</div>
 
 <quark-dialog notitle nofooter :open="open">
-	The code is written for people to see, with the addition of running on the
-	machine
+  The code is written for people to see, with the addition of running on the
+  machine
 </quark-dialog>
 ```
 
