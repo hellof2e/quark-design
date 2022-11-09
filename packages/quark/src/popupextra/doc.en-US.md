@@ -81,7 +81,7 @@ this.open = false
 
 | Attribute    | Description                      | Type      | Default          |
 |--------------|----------------------------------|-----------|------------------|
-| open         | Whether to show popup            | `boolean` | `false` |
+| open         | Whether to show popup            | `boolean` | `require` |
 | title        | Title                            | `string`  |
 | subtitle     | Subtitle                         | `string`  |
 | hideclose    | Whether to hide the close button in the upper-right corner | `boolean` | `false`|
