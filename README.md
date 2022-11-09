@@ -78,6 +78,8 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 | TDesign Mobile    | -       | √                | Gulp           | √          | 2021             | React only                               |
 | Antd Mobile       | -       | √                | Gulp           | √          | 2016             | React only                               |
 
+*The CDN volume comparison above includes the runtime, js, and css required for various component libraries to function properly.*
+
 ## 🔗 CDN
 
 The easiest way to use quark is to directly introduce the CDN link in the HTML file, and then you can use it anywhere in the world. Since quark has achieved CSS-IN-JS, you only need to load the link below.
