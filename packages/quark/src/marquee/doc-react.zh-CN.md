@@ -23,12 +23,29 @@ import { Marquee } from "@quarkd/quark-react";
 <Marquee title={title} speed="100"></Marquee>
 ```
 
-### 暂停
+### 控制暂停
 
 ```tsx
 <Button onClick={pauseAnimation}> 暂停 </Button>
 <Button onClick={continueAnimation}> 继续 </Button>
 <Marquee title={title} paused={paused}></Marquee>
+```
+
+### 悬浮暂停
+
+```tsx
+<Marquee
+  title={title}
+  paused={paused}
+  onMouseover={pauseAnimation}
+  onMouseleave={continueAnimation}
+></Marquee>
+```
+
+### 点击暂停
+
+```tsx
+<Marquee title={title} paused={paused} onClick={changePauseStatus}></Marquee>
 ```
 
 ### 反向动画

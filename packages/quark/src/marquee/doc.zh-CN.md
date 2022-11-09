@@ -23,12 +23,33 @@ import "quarkd/lib/marquee";
 <quark-marquee :title="title" speed="100"></quark-marquee>
 ```
 
-### 暂停
+### 控制暂停
 
 ```html
 <quark-button @click="isPaused = true"> 暂停 </quark-button>
 <quark-button @click="isPaused = false"> 继续 </quark-button>
-<quark-marquee :title="title" :paused="paused"></quark-marquee>
+<quark-marquee :title="title" :paused="isPaused"></quark-marquee>
+```
+
+### 悬浮暂停
+
+```html
+<quark-marquee
+  :title="title"
+  :paused="isPaused"
+  @mouseover="isPaused = true"
+  @mouseleave="isPaused = false"
+></quark-marquee>
+```
+
+### 点击暂停
+
+```html
+<quark-marquee
+  :title="title"
+  :paused="isPaused"
+  @click="isPaused = !isPaused"
+></quark-marquee>
 ```
 
 ### 反向动画

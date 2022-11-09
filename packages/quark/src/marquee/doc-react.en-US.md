@@ -23,12 +23,29 @@ import { Marquee } from "@quarkd/quark-react";
 <Marquee title={title} speed="100"></Marquee>
 ```
 
-### Paused
+### Control Paused
 
 ```tsx
 <Button onClick={pauseAnimation}> Paused </Button>
 <Button onClick={continueAnimation}> Continue </Button>
 <Marquee title={title} paused={paused}></Marquee>
+```
+
+### Hover Paused
+
+```tsx
+<Marquee
+  title={title}
+  paused={paused}
+  onMouseover={pauseAnimation}
+  onMouseleave={continueAnimation}
+></Marquee>
+```
+
+### Click Paused
+
+```tsx
+<Marquee title={title} paused={paused} onClick={changePauseStatus}></Marquee>
 ```
 
 ### Reverse

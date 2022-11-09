@@ -8,27 +8,59 @@
     <quark-marquee :title="translate('content')" speed="25"></quark-marquee>
     <br />
     <quark-marquee :title="translate('content')" speed="100"></quark-marquee>
-    <h2>{{ translate("paused") }}</h2>
-    <quark-button class="paused-button" size="small" @click="isPaused = true">{{
-      translate("pausedButton.pause")
-      }}</quark-button>
-    <quark-button class="paused-button" size="small" @click="isPaused = false">{{ translate("pausedButton.continue") }}
+    <h2>{{ translate("pausedExmple.button.title") }}</h2>
+    <quark-button
+      class="paused-button"
+      size="small"
+      @click="isPaused.button = true"
+    >
+      {{ translate("pausedExmple.button.pause") }}
     </quark-button>
-    <quark-marquee :title="translate('content')" :paused="isPaused"></quark-marquee>
+    <quark-button
+      class="paused-button"
+      size="small"
+      @click="isPaused.button = false"
+    >
+      {{ translate("pausedExmple.button.continue") }}
+    </quark-button>
+    <quark-marquee
+      :title="translate('content')"
+      :paused="isPaused.button"
+    ></quark-marquee>
+    <h2>{{ translate("pausedExmple.hover") }}</h2>
+    <quark-marquee
+      :title="translate('content')"
+      :paused="isPaused.hover"
+      @mouseover="isPaused.hover = true"
+      @mouseleave="isPaused.hover = false"
+    ></quark-marquee>
+    <h2>{{ translate("pausedExmple.click") }}</h2>
+    <quark-marquee
+      :title="translate('content')"
+      :paused="isPaused.click"
+      @click="isPaused.click = !isPaused.click"
+    ></quark-marquee>
     <h2>{{ translate("reverse") }}</h2>
-    <quark-marquee :title="translate('content')" :reverse="true"></quark-marquee>
+    <quark-marquee
+      :title="translate('content')"
+      :reverse="true"
+    ></quark-marquee>
   </div>
 </template>
 
 <script>
-import { ref, onBeforeMount } from "vue";
+import { reactive, onBeforeMount } from "vue";
 import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("marquee");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 
 export default createDemo({
   setup() {
-    const isPaused = ref(false);
+    const isPaused = reactive({
+      button: false,
+      hover: false,
+      click: false,
+    });
 
     onBeforeMount(() => {
       useTranslate({
@@ -36,9 +68,14 @@ export default createDemo({
           basic: "基础用法",
           speed: "不同速度",
           paused: "暂停",
-          pausedButton: {
-            pause: "暂停",
-            continue: "继续",
+          pausedExmple: {
+            button: {
+              title: "控制暂停",
+              pause: "暂停",
+              continue: "继续",
+            },
+            hover: "悬浮暂停",
+            click: "点击暂停",
           },
           reverse: "反转方向",
           content:
@@ -51,10 +88,14 @@ export default createDemo({
         "en-US": {
           basic: "Basic Usage",
           speed: "Marqueen Speed",
-          paused: "Paused",
-          pausedButton: {
-            pause: "Pause",
-            continue: "Continue",
+          pausedExmple: {
+            button: {
+              title: "Control Paused",
+              pause: "Pause",
+              continue: "Continue",
+            },
+            hover: "Hover Paused",
+            click: "Click Paused",
           },
           reverse: "Reverse Direction",
           content:

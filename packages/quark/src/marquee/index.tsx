@@ -9,6 +9,8 @@ import style from "./style.css";
 export interface Props {
   title: string;
   speed?: number;
+  paused?: boolean;
+  reverse?: boolean;
 }
 @customElement({
   tag: "quark-marquee",
@@ -22,16 +24,16 @@ class QuarkMarquee extends QuarkElement {
   speed = "50";
 
   @property({ type: Boolean })
-  reverse: boolean = false;
+  paused = false;
 
   @property({ type: Boolean })
-  paused: boolean = false;
+  reverse = false;
 
   @state()
   animating = false;
 
   @state()
-  textWidth: number = 0;
+  textWidth = 0;
 
   titleRef: any = createRef();
 

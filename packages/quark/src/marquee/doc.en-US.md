@@ -22,12 +22,33 @@ import "quarkd/lib/marquee";
 <quark-marquee :title="title" speed="25"></quark-marquee>
 ```
 
-### Paused
+### Control Paused
 
 ```html
-<quark-button @click="paused = true"> Paused </quark-button>
-<quark-button @click="paused = false"> Continue </quark-button>
-<quark-marquee :title="title" :paused="paused"></quark-marquee>
+<quark-button @click="isPaused = true"> Paused </quark-button>
+<quark-button @click="isPaused = false"> Continue </quark-button>
+<quark-marquee :title="title" :paused="isPaused"></quark-marquee>
+```
+
+### Hover Paused
+
+```html
+<quark-marquee
+  :title="title"
+  :paused="isPaused"
+  @mouseover="isPaused = true"
+  @mouseleave="isPaused = false"
+></quark-marquee>
+```
+
+### Click Paused
+
+```html
+<quark-marquee
+  :title="title"
+  :paused="isPaused"
+  @click="isPaused = !isPaused"
+></quark-marquee>
 ```
 
 ### Reverse
