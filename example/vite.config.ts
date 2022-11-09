@@ -70,7 +70,13 @@ export default defineConfig({
 		host: "0.0.0.0",
 	},
 	resolve: {
-		alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],
+		alias: [
+			{ find: "@", replacement: resolve(__dirname, "./src") },
+			{
+				find: "@quarkd/quark",
+				replacement: resolve(__dirname, "../packages/quark"),
+			},
+		],
 	},
 	plugins,
 	// 打包配置
