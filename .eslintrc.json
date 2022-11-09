@@ -39,6 +39,12 @@
             "rules": {
                 "@typescript-eslint/no-empty-interface": 0
             }
+        },
+        {
+            "files": "*.html",
+            "rules": {
+              "parser": "html"
+            }
         }
     ]
 }
