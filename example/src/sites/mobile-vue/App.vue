@@ -24,6 +24,10 @@ import connect, { close } from "../../utils/wsClient";
 import { initDemoLang } from "@/sites/assets/util/useTranslate";
 import "@quarkd/icons/lib/arrow-left";
 
+import enUS from "@quarkd/quark/src/locale/lang/en-US";
+import zhCN from "@quarkd/quark/src/locale/lang/zh-CN";
+import Locale from "@quarkd/quark/src/locale";
+
 if (isMobile && import.meta.env.DEV) {
 	const vConsole = new VConsole();
 }
@@ -53,8 +57,10 @@ export default defineComponent({
 
 			if (window.location.href.indexOf("en-US") > -1) {
 				initDemoLang("en-US");
+				Locale.use(enUS);
 			} else {
 				initDemoLang("zh-CN");
+				Locale.use(zhCN);
 			}
 		});
 
