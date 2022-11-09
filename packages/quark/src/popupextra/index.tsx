@@ -76,7 +76,7 @@ class QuarkPopupExtra extends QuarkElement {
   ): boolean {
     if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
-      // 设置退出过度动画
+      // 设置退出过渡动画
       if (newValue) {
         // 由关闭到打开
         current.classList.remove("leave");
