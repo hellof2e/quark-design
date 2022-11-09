@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/marquee/index';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/marquee/index";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 let el;
 const data = {
   title:
@@ -24,7 +19,7 @@ describe("quark-marquee base attribute", async () => {
   });
 
   it("quark-marquee exist", async () => {
-    const marquee = el.shadowRoot.querySelector(".title");
+    const marquee = el.shadowRoot.querySelector(".quark-marquee-title");
     expect(marquee).to.exist;
   });
 

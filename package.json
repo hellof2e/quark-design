@@ -6,9 +6,16 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "quarkd/@open-wc/**",
+      "quarkd/sinon",
+      "quarkd/@esm-bundle"
+    ]
+  },
   "scripts": {
     "init": "yarn && yarn run link && cd example && yarn",
     "dev": "cd example && yarn run dev",

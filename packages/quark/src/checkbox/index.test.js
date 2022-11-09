@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/checkbox';
-=======
-import { expect, fixture, html } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/checkbox";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   disabled: "true",
   shape: "square",
@@ -28,7 +22,7 @@ describe("quark-checkbox", async () => {
   });
 
   it("checkbox exist", async () => {
-    const badge = el.shadowRoot.querySelector(".quark-checkbox-wrapper");
+    const badge = el.shadowRoot.querySelector(".quark-checkbox-container");
     expect(badge).to.exist;
   });
 
@@ -54,7 +48,7 @@ describe("quark-checkbox", async () => {
     );
     const eventspy = sinon.spy();
     node.addEventListener("change", eventspy);
-    const checkbox = node.shadowRoot.querySelector(".quark-checkbox-wrapper");
+    const checkbox = node.shadowRoot.querySelector(".quark-checkbox-container");
     checkbox.dispatchEvent(new Event("click"));
     expect(eventspy.called).to.equal(true);
   });

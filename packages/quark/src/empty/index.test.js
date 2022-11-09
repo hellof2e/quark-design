@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/empty';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/empty";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   title: "暂无数据",
@@ -18,8 +13,8 @@ describe("<quark-empty>", async () => {
       `<quark-empty >
         </quark-empty>`
     );
-    const desc = el.shadowRoot.querySelector("#desc");
-    expect(desc).to.null;
+    const desc = el.shadowRoot.querySelector(".quark-empty");
+    expect(desc).to.exist;
   });
 
   it("title attribute", async () => {
@@ -27,7 +22,7 @@ describe("<quark-empty>", async () => {
       `<quark-empty title=${data.title}>
         </quark-empty>`
     );
-    const titleE = el.shadowRoot.querySelector("#title");
+    const titleE = el.shadowRoot.querySelector(".quark-empty-title");
     expect(titleE.innerHTML).to.equal(data.title);
     expect(el.title).to.equal(data.title);
   });
@@ -37,16 +32,16 @@ describe("<quark-empty>", async () => {
       `<quark-empty desc=${data.desc}>
         </quark-empty>`
     );
-    const descE = el.shadowRoot.querySelector("#desc");
+    const descE = el.shadowRoot.querySelector(".quark-empty-desc");
     expect(descE.innerHTML).to.equal(data.desc);
     expect(el.desc).to.equal(data.desc);
   });
 
-  it("slot attribute", async () => {
-    const slot = "<span>我是空状态</span>";
-    el = await fixture(`<quark-empty desc=${data.desc}>${slot}</quark-empty>`);
-    const descE = el.shadowRoot.querySelector("slot");
-    const slotResult = descE.assignedNodes()[0];
-    expect(slotResult.outerHTML).to.equal(slot);
-  });
+  // it("slot attribute", async () => {
+  //   const slot = "<span>我是空状态</span>";
+  //   el = await fixture(`<quark-empty desc=${data.desc}>${slot}</quark-empty>`);
+  //   const descE = el.shadowRoot.querySelector("slot");
+  //   const slotResult = descE.assignedNodes()[0];
+  //   expect(slotResult.outerHTML).to.equal(slot);
+  // });
 });

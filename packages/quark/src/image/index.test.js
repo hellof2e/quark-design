@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/image';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/image";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   src: "https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg",

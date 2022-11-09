@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/cell';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/cell";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   title: "标题",
@@ -29,7 +24,7 @@ describe("<quark-cell>", async () => {
       `<quark-cell title=${data.title}>
         </quark-cell>`
     );
-    const titleE = el.shadowRoot.querySelector(".title");
+    const titleE = el.shadowRoot.querySelector("#title");
     expect(titleE.innerHTML).to.equal(data.title);
     expect(el.title).to.equal(data.title);
   });
@@ -39,7 +34,7 @@ describe("<quark-cell>", async () => {
       `<quark-cell desc=${data.desc}>
         </quark-cell>`
     );
-    const descE = el.shadowRoot.querySelector(".desc");
+    const descE = el.shadowRoot.querySelector("#desc");
     expect(descE.innerHTML).to.equal(data.desc);
     expect(el.desc).to.equal(data.desc);
   });

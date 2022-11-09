@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/grid';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/grid";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   column: "3",
   square: true,
@@ -26,7 +21,7 @@ describe("<quark-grid>", async () => {
   });
 
   it("element exist", async () => {
-    const container = el.shadowRoot.querySelector(".container");
+    const container = el.shadowRoot.querySelector(".quark-grid");
     expect(container).to.exist;
   });
 

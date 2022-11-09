@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/tabbar';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/tabbar";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   fixed: false,
@@ -20,7 +15,7 @@ describe("<quark-tabbar>", async () => {
       `<quark-tabbar>
         </quark-tabbar>`
     );
-    const list = el.shadowRoot.querySelector(".tabbar");
+    const list = el.shadowRoot.querySelector(".quark-tabbar");
     expect(list).to.exist;
   });
 

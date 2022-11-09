@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { assert, expect, fixture, html } from '@open-wc/testing';
 import 'quarkd/lib/tag';
-=======
-import { assert, expect, fixture, html } from "@open-wc/testing";
-import "../../../lib/tag";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   slotText: "主要标签",
   type: "blue",
@@ -12,6 +7,7 @@ const data = {
   color: "#666666",
   textcolor: "#333333",
   plain: true,
+  light: true,
 };
 let el;
 describe("<quark-tag>", async () => {
@@ -31,7 +27,7 @@ describe("<quark-tag>", async () => {
   });
 
   it("tag exist", async () => {
-    const tag = el.shadowRoot.querySelector(".tag");
+    const tag = el.shadowRoot.querySelector(".quark-tag");
     expect(tag).to.exist;
   });
 
@@ -47,9 +43,6 @@ describe("<quark-tag>", async () => {
     expect(el.plain).to.exist;
   });
 
-  it("light attribute", () => {
-    expect(el.light).to.exist;
-  });
 
   it("color attribute", () => {
     expect(el.color).to.equal(data.color);

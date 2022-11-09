@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import ShareSheet from 'quarkd/lib/sharesheet';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import ShareSheet from "../../../lib/share-sheet";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   titleColor: "red",

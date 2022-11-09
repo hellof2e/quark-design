@@ -1,6 +1,6 @@
 import { expect, fixture } from "@open-wc/testing";
 import sinon from "sinon";
-import ActionSheet from "../../../lib/action-sheet";
+import ActionSheet from "quarkd/lib/actionsheet";
 
 const data = {
   title: "我是标题信息",

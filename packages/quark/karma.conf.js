@@ -6,7 +6,7 @@ module.exports = (config) => {
     merge(createDefaultConfig(config), {
       files: [
         {
-          pattern: config.grep ? config.grep : "src/packages/**/*.test.js",
+          pattern: config.grep ? config.grep : "src/**/*.test.js",
           type: "module",
         },
       ],

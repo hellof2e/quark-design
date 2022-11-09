@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect  } from '@open-wc/testing';
 import Toast from 'quarkd/lib/toast/index';
-=======
-import { expect } from "@open-wc/testing";
-import Toast from "../../../lib/toast/index";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   text: "你好",
 };

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/loading';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/loading";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 let el;
 const data = {
   color: "red",
@@ -19,7 +14,7 @@ describe("quark-loading", async () => {
     );
   });
   it("quark-loading exist", async () => {
-    const loading = el.shadowRoot.querySelector(".spinner-loading");
+    const loading = el.shadowRoot.querySelector(".quark-loading-spinner");
     expect(loading).to.exist;
   });
 

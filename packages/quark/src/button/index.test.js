@@ -1,11 +1,11 @@
 import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/button";
+import "quarkd/lib/button";
 
 const data = {
   slotText: "主要按钮",
   disabled: false,
   type: "primary",
-  icon: "user",
+  icon: "https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png",
   loading: true,
   shape: "round",
 };
@@ -15,12 +15,12 @@ describe("<quark-button>", async () => {
   it("icon exist", async () => {
     el = await fixture(
       `<quark-button 
-          icon=${data.user}
+          icon=${data.icon}
         >
           ${data.slotText}
         </quark-button>`
     );
-    const icon = el.shadowRoot.querySelector(".icon");
+    const icon = el.shadowRoot.querySelector(".quark-button-icon");
     expect(icon).to.exist;
   });
 

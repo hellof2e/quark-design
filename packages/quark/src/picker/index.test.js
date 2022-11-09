@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/picker';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/picker";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   title: "请选择时间",
@@ -24,11 +18,11 @@ describe("<quark-picker>", async () => {
         >
         </quark-picker>`
     );
-    const container = el.shadowRoot.querySelector(".picker-container");
-    const header = el.shadowRoot.querySelector(".picker-header");
-    const headerTitle = el.shadowRoot.querySelector(".header-title");
-    const content = el.shadowRoot.querySelector(".picker-content");
-    const bottom = el.shadowRoot.querySelector(".picker-bottom");
+    const container = el.shadowRoot.querySelector(".quark-picker-container");
+    const header = el.shadowRoot.querySelector(".quark-picker-header");
+    const headerTitle = el.shadowRoot.querySelector(".quark-picker-title");
+    const content = el.shadowRoot.querySelector(".quark-picker-content");
+    const bottom = el.shadowRoot.querySelector(".quark-picker-bottom");
     expect(container).to.exist;
     expect(header).to.exist;
     expect(headerTitle).to.exist;

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/sticky/index';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/sticky/index";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   offsettop: "17vw",
 };

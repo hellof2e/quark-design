@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/search';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/search";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 // import './index'
 const data = {
   value: "默认值",
@@ -66,13 +60,13 @@ describe("quark-search base attribute", async () => {
 describe("quark-search Dom attribute", async () => {
   it("dark exit", async () => {
     const el = await fixture(`<quark-search dark="true"></quark-search>`);
-    const dark = el.shadowRoot.querySelector(".quark-search__dark");
+    const dark = el.shadowRoot.querySelector(".quark-search-dark");
     expect(dark).to.be.exist;
   });
 
   it("dark null", async () => {
     const el = await fixture(`<quark-search></quark-search>`);
-    const dark = el.shadowRoot.querySelector(".quark-search__dark");
+    const dark = el.shadowRoot.querySelector(".quark-search-dark");
     expect(dark).to.be.null;
   });
 
@@ -82,7 +76,7 @@ describe("quark-search Dom attribute", async () => {
     );
     const eventspy = sinon.spy();
     el.addEventListener("back", eventspy);
-    const backRef = el.shadowRoot.querySelector(".quark-search__back");
+    const backRef = el.shadowRoot.querySelector(".quark-search-back");
     backRef.dispatchEvent(new Event("click"));
     expect(eventspy.called).to.equal(true);
   });
@@ -91,7 +85,7 @@ describe("quark-search Dom attribute", async () => {
     const el = await fixture(`<quark-search></quark-search>`);
     const eventspy = sinon.spy();
     el.addEventListener("cancel", eventspy);
-    const cancelRef = el.shadowRoot.querySelector(".quark-search__action");
+    const cancelRef = el.shadowRoot.querySelector(".quark-search-action");
     cancelRef.dispatchEvent(new Event("click"));
     expect(eventspy.called).to.equal(true);
   });

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/navbar/index';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/navbar/index";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   lefthide: true,
   right: "right",
@@ -25,7 +19,7 @@ describe("quark-navbar base attribute", async () => {
     );
   });
   it("quark-navbar exist", async () => {
-    const navbar = el.shadowRoot.querySelector(".title");
+    const navbar = el.shadowRoot.querySelector(".quark-navbar-title");
     expect(navbar).to.exist;
   });
 

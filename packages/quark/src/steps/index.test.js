@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/steps';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/steps";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 // slot 内容无法被探测，因此只能测试 quark-steps
 const data = {
   direction: "vertical",

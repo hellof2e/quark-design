@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/uploader';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/uploader";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
   name: "uploader",
@@ -37,7 +31,7 @@ describe("<quark-uploader>", async () => {
   });
 
   it("element exist", async () => {
-    const uploader = el.shadowRoot.querySelector(".wrap");
+    const uploader = el.shadowRoot.querySelector(".quark-uploader");
     expect(uploader).to.exist;
   });
 

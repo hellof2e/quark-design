@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/tab';
-=======
-import { expect, fixture, html } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/tab";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   activekey: "1",
 };

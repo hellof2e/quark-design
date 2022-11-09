@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/radio';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/radio";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 const data = {
   disabled: true,
   shape: "square",
@@ -26,7 +20,7 @@ describe("quark-radio base attribute", async () => {
   });
 
   it("radio exist", async () => {
-    const radio = el.shadowRoot.querySelector(".quark-radio-wrapper");
+    const radio = el.shadowRoot.querySelector(".quark-radio");
     expect(radio).to.exist;
   });
 
@@ -49,7 +43,7 @@ describe("quark-radio base attribute", async () => {
     );
     const eventspy = sinon.spy();
     node.addEventListener("change", eventspy);
-    const radio = node.shadowRoot.querySelector(".quark-radio-wrapper");
+    const radio = node.shadowRoot.querySelector(".quark-radio");
     radio.dispatchEvent(new Event("click"));
     expect(eventspy.called).to.equal(true);
   });

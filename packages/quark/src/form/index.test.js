@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/form';
-=======
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/form";
->>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 let el;
 
