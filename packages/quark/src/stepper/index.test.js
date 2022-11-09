@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/stepper';
+import 'quarkd/lib/stepper';
 import sinon from 'sinon';
 
 let el;

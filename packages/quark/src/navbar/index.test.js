@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/navbar/index';
+import 'quarkd/lib/navbar/index';
 const data = {
   'lefthide': true,
   'right': 'right',

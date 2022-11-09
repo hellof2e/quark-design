@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/skeleton';
+import 'quarkd/lib/skeleton';
 
 let el;
 

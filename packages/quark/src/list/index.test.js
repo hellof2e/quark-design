@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/list';
+import 'quarkd/lib/list';
 
 const data = {
   error: false,

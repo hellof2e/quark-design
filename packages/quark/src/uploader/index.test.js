@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/uploader';
+import 'quarkd/lib/uploader';
 
 const data = {
   name:'uploader',

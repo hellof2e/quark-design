@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/field/index';
+import 'quarkd/lib/field/index';
 const data = {
   name: 'test',
   label: '标题',

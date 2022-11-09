@@ -1,5 +1,5 @@
 import { expect  } from '@open-wc/testing';
-import Toast from '../../../lib/toast/index';
+import Toast from 'quarkd/lib/toast/index';
 const data = {
   'text': '你好'
 }

@@ -1,5 +1,5 @@
 import { assert, expect, fixture, html } from '@open-wc/testing';
-import '../../../lib/tag';
+import 'quarkd/lib/tag';
 const data = {
   slotText : '主要标签',
   type : 'blue',

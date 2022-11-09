@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/rate/index';
+import 'quarkd/lib/rate/index';
 let el;
 const data = {
   value: '2',

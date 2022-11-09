@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/datetime-picker';
+import 'quarkd/lib/datetimepicker';
 
 const data = {
   title: '请选择时间',

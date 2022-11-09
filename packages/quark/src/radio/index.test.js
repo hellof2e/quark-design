@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/radio';
+import 'quarkd/lib/radio';
 const data = {
   disabled: true,
   shape: 'square',

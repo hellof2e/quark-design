@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/icon';
+import 'quarkd/lib/icon';
 
 const data = {
   name: 'user',

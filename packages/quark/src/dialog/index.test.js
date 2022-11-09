@@ -1,6 +1,6 @@
 import { expect, fixture  } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/dialog/index';
+import 'quarkd/lib/dialog/index';
 const data = {
   'title': '我是标题',
   'oktext': '确定',

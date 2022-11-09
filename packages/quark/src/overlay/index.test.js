@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/overlay';
+import 'quarkd/lib/overlay';
 
 const data = {
   open: true,

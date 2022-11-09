@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/pull-refresh';
+import 'quarkd/lib/pullrefresh';
 
 const data = {
   dark: false,    

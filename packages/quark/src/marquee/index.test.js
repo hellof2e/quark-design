@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/marquee/index';
+import 'quarkd/lib/marquee/index';
 let el;
 const data = {
   title: '这是一段多行隐藏的新闻3月25日起，湖北境内铁路客运逐步恢复出,请大家提前购买好车票依次上车，不要坐错车',

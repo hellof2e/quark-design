@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/switch';
+import 'quarkd/lib/switch';
 
 let el;
 // color size 无法测试

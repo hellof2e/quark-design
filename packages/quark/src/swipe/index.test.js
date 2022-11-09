@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/swipe';
+import 'quarkd/lib/swipe';
 
 const data = {
   type: 'round',

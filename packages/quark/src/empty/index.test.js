@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/empty';
+import 'quarkd/lib/empty';
 
 const data = {
   title:'暂无数据',

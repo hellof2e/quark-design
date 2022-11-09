@@ -1,6 +1,6 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/tab';
+import 'quarkd/lib/tab';
 const data = {
   activekey: "1",
 }

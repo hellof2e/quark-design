@@ -1,6 +1,6 @@
 import { expect, fixture, html } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/checkbox';
+import 'quarkd/lib/checkbox';
 const data = {
   disabled: 'true',
   shape: 'square',

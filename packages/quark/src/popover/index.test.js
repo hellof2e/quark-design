@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/tooltip';
+import 'quarkd/lib/tooltip';
 
 const data = {
   slotText : 'tips 宿主',

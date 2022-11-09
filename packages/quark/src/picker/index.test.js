@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/picker';
+import 'quarkd/lib/picker';
 
 const data = {
   title: '请选择时间',

@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/tabbar';
+import 'quarkd/lib/tabbar';
 
 const data = {
   fixed: false,

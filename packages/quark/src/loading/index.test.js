@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/loading';
+import 'quarkd/lib/loading';
 let el;
 const data = {
   color:'red',

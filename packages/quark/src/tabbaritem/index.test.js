@@ -1,5 +1,5 @@
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/tabbar-item';
+import 'quarkd/lib/tabbaritem';
 
 const data = {
   label: 'home',

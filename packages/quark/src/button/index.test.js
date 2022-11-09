@@ -1,6 +1,6 @@
 
 import { expect, fixture } from '@open-wc/testing';
-import '../../../lib/button';
+import 'quarkd/lib/button';
 
 const data = {
   slotText: '主要按钮',

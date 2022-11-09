@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/popup';
+import 'quarkd/lib/popup';
 
 const data = {
     slotText: '弹框内容',

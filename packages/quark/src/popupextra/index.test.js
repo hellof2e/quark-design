@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/popupextra';
+import 'quarkd/lib/popupextra';
 
 const data = {
     title   : '主标题',

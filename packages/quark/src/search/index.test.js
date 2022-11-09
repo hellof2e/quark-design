@@ -1,6 +1,6 @@
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
-import '../../../lib/search';
+import 'quarkd/lib/search';
 // import './index'
 const data = {
   value: '默认值',
