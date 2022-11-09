@@ -7,16 +7,16 @@ import style from "./style.css";
 })
 class QuarkCard extends QuarkElement {
   @property()
-  title: string = "";
+  title = "";
 
   @property()
-  content: string = "";
+  content = "";
 
   @property()
-  tips: string = "";
+  tips = "";
 
   @property()
-  desc: string = "";
+  desc = "";
 
   render() {
     return (

@@ -25,7 +25,7 @@ class QuarkImagePreview extends QuarkElement {
   @property({
     type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @state()
   slide: any = null;
@@ -34,17 +34,17 @@ class QuarkImagePreview extends QuarkElement {
   images: string[] = [];
 
   @state()
-  index: number = 0;
+  index = 0;
 
-  startX: number = 0;
+  startX = 0;
 
-  startY: number = 0;
+  startY = 0;
 
   endX: number | undefined = 0;
 
   endY: number | undefined = 0;
 
-  isFn: boolean = false;
+  isFn = false;
 
   onClose: null | ((index: number) => void) = null;
   onChange: null | ((index: number) => void) = null;

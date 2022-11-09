@@ -96,7 +96,6 @@ class TextArea extends QuarkElement {
           maxlength={this.maxlength}
           placeholder={this.placeholder}
           readonly={this.readonly}
-          // @ts-ignore
           oninput={this.handleInput}
         ></textarea>
         {this.showcount && (

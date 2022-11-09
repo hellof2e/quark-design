@@ -278,9 +278,7 @@ class QuarkUploader extends QuarkElement {
               type="file"
               accept={accept}
               multiple={multiple}
-              // @ts-ignore
               capture={capture}
-              // @ts-ignore
               onchange={this.onChange}
               disabled={disabled}
             />

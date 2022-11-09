@@ -27,39 +27,39 @@ class QuarkList extends QuarkElement {
   @property({
     type: Boolean,
   })
-  error: boolean = false;
+  error = false;
 
   @property({
     type: Number,
   })
-  offset: number = 300;
+  offset = 300;
 
   @property({
     type: Boolean,
   })
-  finished: boolean = false;
+  finished = false;
 
   @property()
-  errortext: string = "";
+  errortext = "";
 
   @property()
-  textcolor: string = "#879099";
+  textcolor = "#879099";
 
   @property()
   loadingtext: string = Locale.current.loading;
 
   @property()
-  finishedtext: string = "";
+  finishedtext = "";
 
   @property({
     type: Boolean,
   })
-  loading: boolean = false;
+  loading = false;
 
   @property({
     type: Boolean,
   })
-  immediatecheck: boolean = true;
+  immediatecheck = true;
 
   placeholderRef: any = createRef();
 

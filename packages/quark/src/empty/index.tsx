@@ -17,13 +17,13 @@ class QuarkEmpty extends QuarkElement {
   }
 
   @property()
-  title: string = "";
+  title = "";
 
   @property()
-  desc: string = "";
+  desc = "";
 
   @property()
-  image: string = "";
+  image = "";
 
   @property()
   imagesize: string;

@@ -44,13 +44,13 @@ export interface CustomEvent {
 })
 class QuarkDialog extends QuarkElement {
   @property()
-  zindex: string = "999";
+  zindex = "999";
 
   @property()
-  title: string = "";
+  title = "";
 
   @property({ type: Boolean })
-  notitle: boolean = false;
+  notitle = false;
 
   @property()
   content: string | HTMLElement = "";
@@ -62,29 +62,29 @@ class QuarkDialog extends QuarkElement {
   canceltext: string = Locale.current.cancel;
 
   @property()
-  type: string = "modal";
+  type = "modal";
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property({ type: Boolean })
-  autoclose: boolean = true;
+  autoclose = true;
 
   @property({ type: Boolean })
-  nofooter: boolean = false;
+  nofooter = false;
 
   @property({ type: Boolean })
-  hideclose: boolean = false;
+  hideclose = false;
 
   @property({ type: Boolean })
-  maskclosable: boolean = false;
+  maskclosable = false;
 
   @property({ type: Boolean })
-  btnvertical: boolean = false;
+  btnvertical = false;
 
   btnActive: any = null;
 
-  dRemove: boolean = false;
+  dRemove = false;
 
   close: any = null;
 
@@ -92,7 +92,7 @@ class QuarkDialog extends QuarkElement {
 
   confirm: any = null;
 
-  hasChangeBodyStyle: boolean = false;
+  hasChangeBodyStyle = false;
 
   bodyRef: any = createRef();
 
