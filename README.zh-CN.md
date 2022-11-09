@@ -79,6 +79,8 @@
 | TDesign Mobile | -       | Gulp           | √          | 2021     | React                              |
 | Antd Mobile    | -       | Gulp           | √          | 2016     | React                              |
 
+*上面CDN体积对比包含各类组件库能正常运行展示所需的运行时、js、css*
+
 ## 🔗 CDN 使用
 
 使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
