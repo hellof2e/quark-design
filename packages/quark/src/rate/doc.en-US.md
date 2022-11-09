@@ -68,4 +68,4 @@ quark-rate {
 
 | Event  | Description               | Type                                 |
 | ------ | ------------------------- | ------------------------------------ |
-| change | Emitted when rate changed | `( e:{detail:{value:string}})=>void` |
+| change | Emitted when rate changed | `(e: { detail: { value: string } }) => void` |

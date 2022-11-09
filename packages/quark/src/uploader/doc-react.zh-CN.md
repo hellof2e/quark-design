@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import { Uploader,UploaderRef } "@quarkd/quark-react";
+import { Uploader, UploaderRef } "@quarkd/quark-react";
 ```
 
 ### 基础用法
@@ -114,17 +114,17 @@ export default () => {
 
 | 参数        | 说明                                              | 类型                                     | 默认值             |
 | ----------- | ------------------------------------------------- | ---------------------------------------- | ------------------ |
-| accept      | 允许上传的文件类型                                | `string `                                | `image/*`          |
-| multiple    | 是否多选                                          | `boolean `                               | `true`             |
+| accept      | 允许上传的文件类型                                | `string`                                | `image/*`          |
+| multiple    | 是否多选                                          | `boolean`                               | `true`             |
 | preview     | 是否展示预览                                      | `boolean`                                | `false`            |
 | capture     | 图片选取模式，可选值为 `boolean` (直接调起摄像头) | `false`                                  |
-| maxcount    | 最大上传数量，超出隐藏                            | `string `                                |
-| maxsize     | 最大上传大小                                      | `string `                                | `26214400 （25M）` |
-| disabled    | 禁止上传                                          | `boolean `                               | `false`            |
+| maxcount    | 最大上传数量，超出隐藏                            | `string`                                |
+| maxsize     | 最大上传大小                                      | `string`                                | `26214400 （25M）` |
+| disabled    | 禁止上传                                          | `boolean`                               | `false`            |
 | hidedelete  | 隐藏删除图标                                      | `boolean`                                | `false`            |
 | readonly    | 只读模式                                          | `boolean`                                | `false`            |
-| onAfterread | 上传后回调                                        | `（file: file or file[]）=>void`         |                    |
-| onOversize  | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string)=>void` |                    |
+| onAfterread | 上传后回调                                        | `(file: file or file[]) => void`         |                    |
+| onOversize  | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |                    |
 
 ### slot
 

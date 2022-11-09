@@ -111,14 +111,14 @@ Checkbox { --radio-background: linear-gradient(225deg, #ff918d 0%, #f54640
 | size     | 复选框大小，可选值为 `normal` `big` | `string`                              | `normal` |
 | disabled | 复选框禁用状态                      | `boolean`                             | `false`  |
 | checked  | 复选框勾选状态                      | `boolean`                             | `false`  |
-| onChange | 复选框勾选状态变化时回调函数        | `(e:{detail: {value: string}})=>void` |
+| onChange | 复选框勾选状态变化时回调函数        | `(e: { detail: { value: string } }) => void` |
 
 ### Checkbox-group Props
 
 | 参数     | 说明                           | 类型                                      | 默认值 |
 | -------- | ------------------------------ | ----------------------------------------- | ------ |
 | value    | 指定选中的选项                 | `string`                                  | -      |
-| onChange | 复选框组勾选状态变化时回调函数 | `(e:{detail: {value: string[]}}) => void` |
+| onChange | 复选框组勾选状态变化时回调函数 | `(e: { detail: { value: string[] } }) => void` |
 
 ## 样式变量
 

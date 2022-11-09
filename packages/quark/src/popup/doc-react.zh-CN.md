@@ -72,7 +72,7 @@ export default () => {
 | closeable | 是否显示关闭按钮         | `boolean`                     | `false`   |
 | safearea  | 是否开启底部安全区域适配 | ` boolean`                    | `false`   |
 | zindex    | popup 层级设置           | `number、string`              | -         |
-| onClosed  | 组件关闭回调             | `（）=> void`                 | -         |
+| onClosed  | 组件关闭回调             | `() => void`                 | -         |
 
 ## 样式变量
 

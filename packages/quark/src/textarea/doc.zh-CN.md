@@ -104,10 +104,10 @@ export default {
 
 | 参数         | 说明                                      | 类型      | 默认值  |
 | ------------ | ----------------------------------------- | --------- | ------- |
-| value        | 输入值                                    | `string ` |
+| value        | 输入值                                    | `string` |
 | placeholder  | 提示文本                                  | `string`  |
 | rows         | 行数                                      | `number`  | `2`     |
-| maxlength    | 最大字符数                                | `number ` | `-`     |
+| maxlength    | 最大字符数                                | `number` | `-`     |
 | showcount    | 显示字数                                  | `boolean` | `false` |
 | autocomplete | 自动补全                                  | `boolean` | `false` |
 | disabled     | 是否禁用                                  | `boolean` | `false` |
@@ -120,10 +120,10 @@ textarea 原生事件均支持
 
 | 属性             | 说明                           | 类型                                    |
 | ---------------- | ------------------------------ | --------------------------------------- |
-| input            | 文本域内容变化时触发           | `(e: {detail:{value: string}}）=>void ` |
-| focus            | 文本域获得焦点时触发           | `(e: {detail:{value: string}}）=>void ` |
-| blur             | 文本域失去焦点时触发           | `(e: {detail:{value: string}}）=>void ` |
-| compositionstart | 输入法编辑器开始新的输入时触发 | `(）=>void `                            |
+| input            | 文本域内容变化时触发           | `(e: { detail: { value: string } }) => void` |
+| focus            | 文本域获得焦点时触发           | `(e: { detail: { value: string } }) => void` |
+| blur             | 文本域失去焦点时触发           | `(e: { detail: { value: string } }) => void` |
+| compositionstart | 输入法编辑器开始新的输入时触发 | `(）=> void `                            |
 
 ## CSS 样式变量
 
@@ -131,7 +131,7 @@ textarea 原生事件均支持
 
 | 名称                         | 说明           | 默认值     |
 | ---------------------------- | -------------- | ---------- |
-| --textarea-color             | 文字颜色       | `#242729 ` |
+| --textarea-color             | 文字颜色       | `#242729` |
 | --textarea-font-size         | 文字大小       | `14px`     |
 | --textarea-text-align        | 文字位置       | `left`     |
 | --textarea-text-count-align  | 统计字数位置   | `right`    |

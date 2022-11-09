@@ -60,7 +60,7 @@ export default () => {
 | disabled | 禁用            | `boolean`                              | `false` |
 | size     | 开关大小        | `number`                               | `16px ` |
 | color    | 颜色            | `string`                               | -       |
-| onChange | change 回调函数 | `e: {detail:{value: string}}）=>void ` |
+| onChange | change 回调函数 | `e: ({ detail: { value: string } }) => void` |
 
 ## 样式变量
 

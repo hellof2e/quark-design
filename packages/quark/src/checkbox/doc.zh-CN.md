@@ -122,7 +122,7 @@ export default {
 
 | 参数   | 说明                         | 类型                                  |
 | ------ | ---------------------------- | ------------------------------------- |
-| change | 复选框勾选状态变化时回调函数 | `(e:{detail: {value: string}})=>void` |
+| change | 复选框勾选状态变化时回调函数 | `(e: { detail: { value: string } }) => void` |
 
 ### quark-checkbox-group Props
 
@@ -134,7 +134,7 @@ export default {
 
 | 参数   | 说明                           | 类型                                      |
 | ------ | ------------------------------ | ----------------------------------------- |
-| change | 复选框组勾选状态变化时回调函数 | `(e:{detail: {value: string[]}}) => void` |
+| change | 复选框组勾选状态变化时回调函数 | `(e: { detail: { value: string[] } }) => void` |
 
 ## 样式变量
 
