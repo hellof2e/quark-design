@@ -15,16 +15,14 @@ import { PopupExtra } from "@quarkd/quark-react";
 ```js
 export default () => {
   const [open, setOpen] = useState(false);
-  const handleClsoe = () => {
-    setOpen(false);
-  };
+
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
 
   return (
     <div>
       <div
-        onClick={() => {
-          setOpen(true);
-        }}
+        onClick={handleOpen}
       >
         Basic Usage
       </div>
@@ -32,9 +30,7 @@ export default () => {
         title="Title"
         subtitle="Subtitle"
         open={open}
-        onClosed={() => {
-          setOpen(false);
-        }}
+        onClosed={handleClose}
       >
         <div class="popup-body">
           <h4 class="">Why We Love Dunhuang</h4>

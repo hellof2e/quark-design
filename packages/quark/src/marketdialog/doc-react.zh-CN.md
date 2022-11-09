@@ -15,13 +15,11 @@ import { MarketDialog } from "@quarkd/quark-react";
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const close = () => {
-    setOpen(false);
-  };
+  const handleClose = () =>  setOpen(false);
   return (
     <MarketDialog
       open={open}
-      onClose={close}
+      onClose={handleClose}
       url="https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png"
     />
   );
@@ -35,11 +33,9 @@ export default () => {
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const close = () => {
-    setOpen(false);
-  };
+  const handleClose = () =>  setOpen(false);
   return (
-    <MarketDialog open={open} onClose={close}>
+    <MarketDialog open={open} onClose={handleClose}>
       <img
         slot="market"
         src="https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png"
