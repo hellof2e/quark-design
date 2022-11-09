@@ -116,7 +116,7 @@ import QuarkToast from "../toast/index.js";
 
 export default createDemo({
   setup() {
-    const open = ref("false");
+    const open = ref(false);
     onBeforeMount(() => {
       useTranslate({
         "zh-CN": {

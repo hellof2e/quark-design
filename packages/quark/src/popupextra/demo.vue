@@ -138,12 +138,12 @@
 import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("popupextra");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
-import { ref, onMounted, onBeforeMount } from "vue";
+import { ref, onBeforeMount } from "vue";
 export default createDemo({
   setup() {
-    const open = ref("false");
-    const open2 = ref("false");
-    const open3 = ref("false");
+    const open = ref(false);
+    const open2 = ref(false);
+    const open3 = ref(false);
 
     onBeforeMount(() => {
       useTranslate({
@@ -161,8 +161,6 @@ export default createDemo({
         },
       });
     });
-
-    onMounted(() => {});
 
     return {
       open,
