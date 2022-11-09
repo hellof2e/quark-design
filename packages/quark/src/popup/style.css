@@ -30,6 +30,7 @@
 
 :host .quark-popup {
   display: flex;
+  padding: 24px;
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
@@ -55,8 +56,10 @@
   right: quark-hSpacingXs;
   top: quark-vSpacingXs;
   border: 0;
-  color: #bcc4cc;
+  color: #00000073;
+  transition: color .3s;
   font-size: 20px;
+  background: 0 0;
   padding: 0;
   width: 40px;
   height: 40px;
@@ -65,6 +68,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+:host .quark-popup-close-btn :hover {
+  color: #bcc4cc;
 }
 
 :host([safearea][position="bottom"]) .quark-popup {

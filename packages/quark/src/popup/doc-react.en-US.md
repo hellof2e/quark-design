@@ -16,20 +16,15 @@ import { Popup } from "@quarkd/quark-react";
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClsoe = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
 
   return (
     <div>
-      <div
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
+      <div onClick={handleOpen}>
         Basic Usage
       </div>
-      <PopUp open={open} onClosed={handleClsoe}>
+      <PopUp open={open} onClosed={handleClose}>
         <div>First Line</div>
         <div>Second Line</div>
         <div>Third Line</div>
