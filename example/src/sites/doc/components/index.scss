@@ -1,191 +1,191 @@
 .header {
-  &-logo {
-    position: relative;
-    display: flex;
-    align-content: center;
-    width: 120px;
-    height: 64px;
+	&-logo {
+		position: relative;
+		display: flex;
+		align-content: center;
+		width: 120px;
+		height: 64px;
 
-    .logo-link {
-      width: 100px;
-      background: url("../../assets/images/quark-logo.png") no-repeat center;
-      background-size: 40px;
-    }
+		.logo-link {
+			width: 100px;
+			background: url("../../assets/images/quark-logo.png") no-repeat center;
+			background-size: 40px;
+		}
 
-    .logo-border {
-      width: 1px;
-      height: 26px;
-      background: #ddd;
-      margin: 20px 10px 0;
-    }
+		.logo-border {
+			width: 1px;
+			height: 26px;
+			background: #ddd;
+			margin: 20px 10px 0;
+		}
 
-    .version {
-      font-size: 14px;
-    }
-  }
+		.version {
+			font-size: 14px;
+		}
+	}
 }
 
 .header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  // width: calc(100% - 180px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// width: calc(100% - 180px);
 
-  .nav-box {
-    .nav-list {
-      display: flex;
-      list-style: none;
-      align-items: center;
-      justify-content: space-around;
-    }
+	.nav-box {
+		.nav-list {
+			display: flex;
+			list-style: none;
+			align-items: center;
+			justify-content: space-around;
+		}
 
-    .nav-item {
-      position: relative;
-      margin-right: 30px;
-      font-size: 14px;
-      text-align: center;
-      cursor: pointer;
+		.nav-item {
+			position: relative;
+			margin-right: 30px;
+			font-size: 14px;
+			text-align: center;
+			cursor: pointer;
 
-      &.active {
-        font-weight: bold;
-      }
+			&.active {
+				font-weight: bold;
+			}
 
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
 
-    .user-link {
-      display: flex;
-      align-items: center;
+		.user-link {
+			display: flex;
+			align-items: center;
 
-      svg {
-        margin-left: 6px;
-      }
-    }
-  }
+			svg {
+				margin-left: 6px;
+			}
+		}
+	}
 
-  .switch-lang{
-    display: flex;
-    cursor: pointer;
-    img{
-      width: 28px;
-    }
-  }
+	.switch-lang {
+		display: flex;
+		cursor: pointer;
+		img {
+			width: 28px;
+		}
+	}
 }
 
 .header-select {
-  &-box {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    outline: 0;
-  }
+	&-box {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		outline: 0;
+	}
 
-  &-hd {
-    min-width: 77px;
-    height: 28px;
-    padding: 0 30px 0 15px;
-    line-height: 26px;
-    font-size: 14px;
-    color: #fff;
-    background-position: right 15px top 12px;
-    background-size: 8px 5px;
-    background-repeat: no-repeat;
-    border-radius: 14px;
-  }
+	&-hd {
+		min-width: 77px;
+		height: 28px;
+		padding: 0 30px 0 15px;
+		line-height: 26px;
+		font-size: 14px;
+		color: #fff;
+		background-position: right 15px top 12px;
+		background-size: 8px 5px;
+		background-repeat: no-repeat;
+		border-radius: 14px;
+	}
 
-  &-bd {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    margin-left: -60px;
-    border-radius: 3px;
-    overflow: hidden;
-  }
+	&-bd {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		margin-left: -60px;
+		border-radius: 3px;
+		overflow: hidden;
+	}
 
-  &-item {
-    width: 120px;
-    height: 28px;
-    padding: 0 12px;
-    line-height: 26px;
-    font-size: 14px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    cursor: pointer;
+	&-item {
+		width: 120px;
+		height: 28px;
+		padding: 0 12px;
+		line-height: 26px;
+		font-size: 14px;
+		border-width: 0 1px 1px;
+		border-style: solid;
+		cursor: pointer;
 
-    &:first-of-type {
-      border-top-width: 1px;
-    }
-  }
+		&:first-of-type {
+			border-top-width: 1px;
+		}
+	}
 }
 
 .doc-header {
-  position: fixed;
-  z-index: 6;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 68px;
-  line-height: 68px;
-  padding: 0 50px;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  background: #000;
-  color: #ccc;
-  border-bottom: 1px solid #6b5554;
+	position: fixed;
+	z-index: 6;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 68px;
+	line-height: 68px;
+	padding: 0 50px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	background: #000;
+	color: #ccc;
+	border-bottom: 1px solid #6b5554;
 
-  .header-nav > a {
-    color: #fff;
-  }
+	.header-nav > a {
+		color: #fff;
+	}
 
-  .header-select {
-    &-box {
-      &.select-down {
-        .header-select-hd {
-          background-image: url("../../assets/images/icon-select-gray-down.png");
-        }
-      }
+	.header-select {
+		&-box {
+			&.select-down {
+				.header-select-hd {
+					background-image: url("../../assets/images/icon-select-gray-down.png");
+				}
+			}
 
-      &.select-up {
-        .header-select-hd {
-          background-image: url("../../assets/images/icon-select-gray-up.png");
-        }
-      }
-    }
+			&.select-up {
+				.header-select-hd {
+					background-image: url("../../assets/images/icon-select-gray-up.png");
+				}
+			}
+		}
 
-    &-hd {
-      color: #666;
-      border: 1px solid #f0f2f5;
-    }
+		&-hd {
+			color: #666;
+			border: 1px solid #f0f2f5;
+		}
 
-    &-bd {
-      color: #666;
-    }
+		&-bd {
+			color: #666;
+		}
 
-    &-item {
-      border-color: #f0f2f5;
-      background-color: #fff;
+		&-item {
+			border-color: #f0f2f5;
+			background-color: #fff;
 
-      &:hover {
-        color: #08f;
-      }
-    }
-  }
+			&:hover {
+				color: #08f;
+			}
+		}
+	}
 }
 
 .switch-language-btn {
-  color: #666;
+	color: #666;
 }
 
 // 下拉列表选择动画效果
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
+	opacity: 0;
 }

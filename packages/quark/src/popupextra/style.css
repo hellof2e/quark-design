@@ -104,32 +104,39 @@
 }
 
 .quark-popup-extra-title {
-	font-size: 18px;
-	color: var(--popup-extra-title-color, #242729);
-	line-height: 24px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: break-all;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-  font-family: var(--popup-extra-title-font-family, PingFangSC-Medium, PingFang SC);
+  font-size: 18px;
+  color: var(--popup-extra-title-color, #242729);
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(
+    --popup-extra-title-font-family,
+    PingFangSC-Medium,
+    PingFang SC
+  );
   font-weight: 500;
 }
 
 .quark-popup-extra-subtitle {
-	font-size: 14px;
-	color: var(--popup-extra-subtitle-color, #879099);
-	line-height: 20px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: break-all;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-  font-family: var(--popup-extra-subtitle-font-family,  'PingFangSC-Regular, PingFang SC, sans-serif');
+  font-size: 14px;
+  color: var(--popup-extra-subtitle-color, #879099);
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(
+    --popup-extra-subtitle-font-family,
+    "PingFangSC-Regular, PingFang SC, sans-serif"
+  );
   font-weight: 400;
-	margin-top: 4px;
+  margin-top: 4px;
 }
 
 .quark-popup-extra-body-with-topline {
@@ -152,7 +159,7 @@
 .quark-popup-extra quark-button {
   height: 56px;
   color: #fff;
-  background: linear-gradient(270deg, #00D9FF 0%, #0098FE 100%);
+  background: linear-gradient(270deg, #00d9ff 0%, #0098fe 100%);
   width: 100%;
   font-size: 16px;
   box-sizing: border-box;

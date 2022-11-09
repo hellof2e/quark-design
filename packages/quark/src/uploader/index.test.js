@@ -1,21 +1,26 @@
+<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import sinon from 'sinon';
 import 'quarkd/lib/uploader';
+=======
+import { expect, fixture } from "@open-wc/testing";
+import sinon from "sinon";
+import "../../../lib/uploader";
+>>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
-  name:'uploader',
-  accept: '*',
+  name: "uploader",
+  accept: "*",
   multiple: true,
   disabled: true,
   preview: true,
   capture: true,
-  maxcount: '2',
-  maxsize: '1024'
-}
+  maxcount: "2",
+  maxsize: "1024",
+};
 let el;
 
-describe('<quark-uploader>', async () => {
-
+describe("<quark-uploader>", async () => {
   before(async () => {
     el = await fixture(
       `<quark-uploader
@@ -27,48 +32,50 @@ describe('<quark-uploader>', async () => {
         maxcount=${data.maxcount}
         maxsize=${data.maxsize}
       >
-      </quark-uploader>`);
+      </quark-uploader>`
+    );
   });
 
-  it('element exist', async () => {
-    const uploader  = el.shadowRoot.querySelector('.wrap');
+  it("element exist", async () => {
+    const uploader = el.shadowRoot.querySelector(".wrap");
     expect(uploader).to.exist;
   });
-  
-  it('name attribute', async () => {
+
+  it("name attribute", async () => {
     expect(el.name).to.equal(data.name);
   });
-  
-  it('accept attribute', async () => {
+
+  it("accept attribute", async () => {
     expect(el.accept).to.equal(data.accept);
   });
 
-  it('disabled attribute', async () => {
+  it("disabled attribute", async () => {
     expect(el.disabled).to.equal(data.disabled);
   });
 
-  it('multiple attribute', async () => {
+  it("multiple attribute", async () => {
     expect(el.multiple).to.equal(data.multiple);
   });
 
-  it('capture attribute', async () => {
+  it("capture attribute", async () => {
     expect(el.capture).to.equal(data.capture);
-  })
+  });
 
-  it('maxcount attribute', async () => {
+  it("maxcount attribute", async () => {
     expect(el.maxcount).to.equal(data.maxcount);
-  })
+  });
 
-  it('maxsize attribute', async () => {
+  it("maxsize attribute", async () => {
     expect(el.maxsize).to.equal(data.maxsize);
-  })
+  });
 
-  it('uploader slot ', async () => {
-    const titleSlot =  `<span slot="uploader">自定义上传</span>`
+  it("uploader slot ", async () => {
+    const titleSlot = `<span slot="uploader">自定义上传</span>`;
     el = await fixture(
-        `<quark-uploader>
+      `<quark-uploader>
          ${titleSlot}
-        </quark-uploader>`);
+        </quark-uploader>`
+    );
     const titleNode = el.shadowRoot.querySelector("slot[name='uploader']");
     const slotResult = titleNode.assignedNodes()[0];
     expect(slotResult.outerHTML).to.equal(titleSlot);
@@ -78,11 +85,11 @@ describe('<quark-uploader>', async () => {
   //   const node = await fixture(
   //     '<quark-uploader/>'
   //   );
-  //   const eventspy = sinon.spy()  
+  //   const eventspy = sinon.spy()
   //   node.addEventListener('afterread', eventspy);
   //   const leftBtn = node.shadowRoot;
   //   leftBtn.dispatchEvent(new Event('change'));
   //   console.log(eventspy)
-  //   expect(eventspy.called).to.equal(true); 
+  //   expect(eventspy.called).to.equal(true);
   // });
 });

@@ -1,25 +1,22 @@
-import QuarkElement, {
-  customElement,
-  property,
-} from '@quarkd/core';
-import style from './style.css';
+import QuarkElement, { customElement, property } from "@quarkd/core";
+import style from "./style.css";
 
 @customElement({
-  tag: 'quark-card',
+  tag: "quark-card",
   style,
 })
 class QuarkCard extends QuarkElement {
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  content: string = '';
+  content = "";
 
   @property()
-  tips: string = '';
+  tips = "";
 
   @property()
-  desc: string = '';
+  desc = "";
 
   render() {
     return (

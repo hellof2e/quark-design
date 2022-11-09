@@ -13,7 +13,7 @@ import { List } from "@quarkd/quark-react";
 ### Basic Usage
 
 ```tsx
-export default () =>  {
+export default () => {
   const [loading1, setLoading1] = useState(false);
   const [finished1, setFinished1] = useState(false);
   const [list1, setList1] = useState([]);
@@ -49,8 +49,8 @@ export default () =>  {
         ))}
       </div>
     </List>
-  )
-}
+  );
+};
 ```
 
 ### Error Text
@@ -103,8 +103,8 @@ export default () => {
         ))}
       </div>
     </List>
-  )
-}
+  );
+};
 ```
 
 ### Custom Info
@@ -125,6 +125,7 @@ export default () => {
 ```
 
 ### PullRefresh
+
 Can be used with `pull-refresh` component.
 
 ```tsx
@@ -156,24 +157,24 @@ export default () => {
 
 ### Props
 
-| Arribute         | Description               | Type   | Default          |
-|--------------|--------------------|--------|---------------|
-| error | Whether loading is error, the load event will be Emitted only when error text clicked | `boolean`| `false`|
-| loading | Whether to show loading info, the load event will not be Emitted when loading | `boolean`| `false`|
-| finished | Whether loading is finished | boolean| `false`|
-| offset | The load event will be Emitted when the distance between the scrollbar and the bottom is less than offset | `number`| `300`|
-| loadingtext  | Loading text | `string`| `loading...` |
-| finishedtext | Finished text | `string` | |
-| errortext   | Error loaded text | `string` | |
-| textcolor   | Text font color | `string` | `#879099` |
-| onLoad     | Emitted when the distance between the scrollbar and the bottom is less than offset  |`() => void`     |          |
-| onReload     |  Emitted when click retry after loading is error     | `() => void`   |      |
+| Arribute     | Description                                                                                               | Type         | Default      |
+| ------------ | --------------------------------------------------------------------------------------------------------- | ------------ | ------------ |
+| error        | Whether loading is error, the load event will be Emitted only when error text clicked                     | `boolean`    | `false`      |
+| loading      | Whether to show loading info, the load event will not be Emitted when loading                             | `boolean`    | `false`      |
+| finished     | Whether loading is finished                                                                               | boolean      | `false`      |
+| offset       | The load event will be Emitted when the distance between the scrollbar and the bottom is less than offset | `number`     | `300`        |
+| loadingtext  | Loading text                                                                                              | `string`     | `loading...` |
+| finishedtext | Finished text                                                                                             | `string`     |              |
+| errortext    | Error loaded text                                                                                         | `string`     |              |
+| textcolor    | Text font color                                                                                           | `string`     | `#879099`    |
+| onLoad       | Emitted when the distance between the scrollbar and the bottom is less than offset                        | `() => void` |              |
+| onReload     | Emitted when click retry after loading is error                                                           | `() => void` |              |
 
 ### slots
 
-| Name         | Description                 |
-|--------------|-----------------------------|
-| content      | List content                |
-| finished     | Custom finished tips        |
-| error        | 	Custom error tips          |
-| loading      | Custom loading tips         |
+| Name     | Description          |
+| -------- | -------------------- |
+| content  | List content         |
+| finished | Custom finished tips |
+| error    | Custom error tips    |
+| loading  | Custom loading tips  |

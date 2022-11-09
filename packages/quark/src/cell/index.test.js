@@ -1,40 +1,46 @@
+<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/cell';
+=======
+import { expect, fixture } from "@open-wc/testing";
+import "../../../lib/cell";
+>>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
-  title: '标题',
-  desc : '描述',
-  to : '#/button'
-}
+  title: "标题",
+  desc: "描述",
+  to: "#/button",
+};
 let el;
 
-describe('<quark-cell>', async () => {
-  it('to attribute', async () => {
+describe("<quark-cell>", async () => {
+  it("to attribute", async () => {
     el = await fixture(
-        `<quark-cell 
+      `<quark-cell 
         to=${data.to}
         >
-        </quark-cell>`);
+        </quark-cell>`
+    );
     expect(el.to).to.be.equal(data.to);
   });
 
-
-  it('title attribute', async () => {
+  it("title attribute", async () => {
     el = await fixture(
-        `<quark-cell title=${data.title}>
-        </quark-cell>`);
-    const titleE = el.shadowRoot.querySelector('.title');
+      `<quark-cell title=${data.title}>
+        </quark-cell>`
+    );
+    const titleE = el.shadowRoot.querySelector(".title");
     expect(titleE.innerHTML).to.equal(data.title);
     expect(el.title).to.equal(data.title);
   });
 
-  it('desc attribute', async () => {
+  it("desc attribute", async () => {
     el = await fixture(
-        `<quark-cell desc=${data.desc}>
-        </quark-cell>`);
-    const descE = el.shadowRoot.querySelector('.desc');
+      `<quark-cell desc=${data.desc}>
+        </quark-cell>`
+    );
+    const descE = el.shadowRoot.querySelector(".desc");
     expect(descE.innerHTML).to.equal(data.desc);
     expect(el.desc).to.equal(data.desc);
   });
-
 });

@@ -1,113 +1,109 @@
-import { classNames } from '../../utils/index';
-import '../icon';
-import QuarkElement, {
-  customElement,
-  property
-} from '@quarkd/core';
+import { classNames } from "../../utils/index";
+import "../icon";
+import QuarkElement, { customElement, property } from "@quarkd/core";
 import "@quarkd/icons/lib/arrow-left";
 import "@quarkd/icons/lib/close";
 import "@quarkd/icons/lib/search";
-import style from './style.css';
+import style from "./style.css";
 import Locale from "../locale";
 export interface Props {
-  value?: string
-  shape?: 'round' | 'square'
-  dark?: boolean
-  showback?: boolean
-  hideaction?: boolean
-  actiontext?: string
-  iconcolor?: string
-  placeholder?: string
-  maxlength?: number
-  autofocus?: boolean
-  clearable?: boolean
-  disabled?: boolean
-  readonly?: boolean
+  value?: string;
+  shape?: "round" | "square";
+  dark?: boolean;
+  showback?: boolean;
+  hideaction?: boolean;
+  actiontext?: string;
+  iconcolor?: string;
+  placeholder?: string;
+  maxlength?: number;
+  autofocus?: boolean;
+  clearable?: boolean;
+  disabled?: boolean;
+  readonly?: boolean;
 }
 export interface CustomEvent {
-  focus?: (e: {detail: {value: string}}) => void
-  blur?: (e: {detail: {value: string}}) => void
-  search?: (e: {detail: {value: string}}) => void
-  change: (e: {detail: {value: string}}) => void
-  cancel?: () => void
-  back?: () => void
+  focus?: (e: { detail: { value: string } }) => void;
+  blur?: (e: { detail: { value: string } }) => void;
+  search?: (e: { detail: { value: string } }) => void;
+  change: (e: { detail: { value: string } }) => void;
+  cancel?: () => void;
+  back?: () => void;
 }
 @customElement({
-  tag: 'quark-search',
-  style
+  tag: "quark-search",
+  style,
 })
 class QuarkSearch extends QuarkElement {
   @property()
-  value: string = '';
+  value = "";
 
   @property()
-  shape: string = 'square';
+  shape = "square";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  dark: boolean = false;
+  dark = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  showback: boolean = false;
+  showback = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  hideaction: boolean = false;
+  hideaction = false;
 
   @property()
   actiontext: string = Locale.current.cancel;
 
   @property()
-  iconcolor: string = '#242729';
+  iconcolor = "#242729";
 
   @property()
   placeholder: string = Locale.current.search.placeholder;
 
   @property()
-  maxlength: string = '';
+  maxlength = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  autofocus: boolean = false;
+  autofocus = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  clearable: boolean = true;
+  clearable = true;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  readonly: boolean = false;
-
+  readonly = false;
 
   backEvent = () => {
-    this.$emit('back');
+    this.$emit("back");
   };
 
   actionEvent = () => {
-    this.$emit('cancel');
+    this.$emit("cancel");
   };
 
   clearEvent = () => {
     if (!this.value) {
       return;
     }
-    this.value = '';
-    this.$emit('change', {
+    this.value = "";
+    this.$emit("change", {
       detail: {
-        value: this.value
-      }
+        value: this.value,
+      },
     });
   };
 
@@ -119,24 +115,24 @@ class QuarkSearch extends QuarkElement {
     e.stopPropagation();
     const { value } = target;
     this.value = value;
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
-        value
-      }
+        value,
+      },
     });
   };
 
   focusEvent = (e: any) => {
     e.stopPropagation();
-    this.$emit('focus', {
-      detail: { value: this.value }
+    this.$emit("focus", {
+      detail: { value: this.value },
     });
   };
 
   blurEvent = (e: any) => {
     e.stopPropagation();
-    this.$emit('blur', {
-      detail: { value: this.value }
+    this.$emit("blur", {
+      detail: { value: this.value },
     });
   };
 
@@ -144,8 +140,8 @@ class QuarkSearch extends QuarkElement {
     const ENTER_CODE = 13;
     if (e.keyCode === ENTER_CODE) {
       e.stopPropagation();
-      this.$emit('search', {
-        detail: { value: this.value }
+      this.$emit("search", {
+        detail: { value: this.value },
       });
     }
   };
@@ -163,12 +159,12 @@ class QuarkSearch extends QuarkElement {
   };
 
   render() {
-    const searchClass = classNames('quark-search', {
-      'quark-search-dark': this.dark
+    const searchClass = classNames("quark-search", {
+      "quark-search-dark": this.dark,
     });
 
-    const contentClass = classNames('quark-search-content', {
-      round: this.shape === 'round'
+    const contentClass = classNames("quark-search-content", {
+      round: this.shape === "round",
     });
 
     const showClear =
@@ -179,7 +175,7 @@ class QuarkSearch extends QuarkElement {
         {this.showback && (
           <div class="quark-search-back" onClick={this.backEvent}>
             <quark-icon-arrow-left
-              color={this.dark ? '#fff' : this.iconcolor}
+              color={this.dark ? "#fff" : this.iconcolor}
               size="24"
             />
           </div>
@@ -187,10 +183,7 @@ class QuarkSearch extends QuarkElement {
 
         <div class={contentClass}>
           <div class="quark-search-content-left-icon">
-            <quark-icon-search
-              color="RGBA(188, 196, 204, 1)"
-              size="12"
-            />
+            <quark-icon-search color="RGBA(188, 196, 204, 1)" size="12" />
           </div>
           <div class="quark-search-input">
             <input
@@ -199,7 +192,6 @@ class QuarkSearch extends QuarkElement {
               autofocus={this.autofocus}
               maxlength={this.maxlength}
               placeholder={this.placeholder}
-              // @ts-ignore
               oncompositionstart={this.onChoiceStart}
               oncompositionend={this.onChoiceEnd}
               oninput={this.inputEvent}

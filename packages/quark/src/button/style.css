@@ -11,7 +11,7 @@
   border-radius: var(--button-border-radius, 8px);
   padding-left: var(--button-hspacing, 12px);
   padding-right: var(--button-hspacing, 12px);
-  
+
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
 
 :host(:not([type])) {
   color: var(--button-color, #666);
-  border: 1px solid rgb(204,204,204);
+  border: 1px solid rgb(204, 204, 204);
 }
 
 :host([type="primary"]) {

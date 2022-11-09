@@ -14,17 +14,30 @@
         "ecmaVersion": 2020
     },
     "rules": {
-        "vue/no-unused-components": "off",
-        "no-debugger": "off",
-        "@typescript-eslint/no-inferrable-types": 1
+        "vue/no-unused-components": 0,
+        "no-debugger": 0,
+        "@typescript-eslint/no-inferrable-types": 1,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "vue/comment-directive": "off"
     },
     "overrides": [
         {
             "files":[
-                "packages/quark-core/src/**/*.ts"
+                "packages/quark/**/*.tsx"
             ],
             "rules": {
-                "@typescript-eslint/explicit-module-boundary-types": "off"
+                "@typescript-eslint/explicit-module-boundary-types": 0,
+                "@typescript-eslint/no-explicit-any": 0,
+                "@typescript-eslint/no-empty-function": 0,
+                "@typescript-eslint/no-inferrable-types": 2
+            }
+        },
+        {
+            "files":[
+                "packages/quark-react/src/**/*.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-empty-interface": 0
             }
         }
     ]

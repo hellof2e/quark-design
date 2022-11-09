@@ -1,61 +1,60 @@
-import { classNames } from '../../utils/index';
+import { classNames } from "../../utils/index";
 import QuarkElement, {
   customElement,
   property,
   state,
   createRef,
-} from '@quarkd/core';
-import {slotAssignedElements} from '../../utils/public';
-import { checkFalse } from '../../utils/public';
-import style from './style.css';
+} from "@quarkd/core";
+import { slotAssignedElements } from "../../utils/public";
+import { checkFalse } from "../../utils/public";
+import style from "./style.css";
 export interface Props {
-  shape?: 'round' | 'square'
-  size?: 'normal' | 'big'
+  shape?: "round" | "square";
+  size?: "normal" | "big";
   disabled?: boolean;
-  checked?: boolean
-  
+  checked?: boolean;
 }
 export interface CustomEvent {
-  change: (e: {detail: {value: string}}) => void
+  change: (e: { detail: { value: string } }) => void;
 }
 
 export interface GroupProps {
-  value?: string
+  value?: string;
 }
 export interface GroupCustomEvent {
-  change: (e: {detail: {value: string []}}) => void
+  change: (e: { detail: { value: string[] } }) => void;
 }
 @customElement({
-  tag: 'quark-checkbox',
+  tag: "quark-checkbox",
   style,
 })
 class QuarkCheckbox extends QuarkElement {
   @property()
-  shape: string = 'round';
+  shape = "round";
 
   @property()
-  size: string = 'normal';
+  size = "normal";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property({
     type: Boolean,
   })
-  value: boolean = false;
-
-  @property({
-    type: Boolean
-  })
-  disabled: boolean = false;
+  value = false;
 
   @property({
     type: Boolean,
   })
-  checked: boolean = false;
+  disabled = false;
+
+  @property({
+    type: Boolean,
+  })
+  checked = false;
 
   @state()
-  classNames: string = '';
+  classNames = "";
 
   slotRef: any = createRef();
 
@@ -72,8 +71,8 @@ class QuarkCheckbox extends QuarkElement {
     oldValue: string,
     newValue: string | boolean
   ) {
-    if (propName === 'checked')
-      this.value = typeof newValue === 'boolean' ? newValue : false;
+    if (propName === "checked")
+      this.value = typeof newValue === "boolean" ? newValue : false;
     return true;
   }
 
@@ -91,7 +90,7 @@ class QuarkCheckbox extends QuarkElement {
     }
     this.checked = !this.checked;
     this.value = this.checked;
-    this.$emit('change', {
+    this.$emit("change", {
       detail: {
         value: this.checked,
       },
@@ -121,25 +120,25 @@ class QuarkCheckbox extends QuarkElement {
 export default QuarkCheckbox;
 
 @customElement({
-  tag: 'quark-checkbox-group',
-  style
+  tag: "quark-checkbox-group",
+  style,
 })
 class QuarkCheckboxGroup extends QuarkElement {
   @property()
-  value: string = '';
+  value = "";
 
   slotRef: any = createRef();
 
   componentDidMount(): void {
-    this.$on('change', this.eventListener);
+    this.$on("change", this.eventListener);
   }
 
   shouldComponentUpdate(
     propName: string,
     oldValue: string,
-    newValue: string,
+    newValue: string
   ): boolean {
-    if (propName === 'value' && oldValue !== newValue) {
+    if (propName === "value" && oldValue !== newValue) {
       this.init();
     }
     return true;
@@ -148,7 +147,7 @@ class QuarkCheckboxGroup extends QuarkElement {
   init() {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const nodes = slotAssignedElements(assignedNodes);
-    const value = this.value ? this.value.split(',') : [];
+    const value = this.value ? this.value.split(",") : [];
     if (nodes?.length) {
       nodes.forEach((item: any) => {
         if (value.includes(item.name)) {
@@ -162,22 +161,22 @@ class QuarkCheckboxGroup extends QuarkElement {
 
   handleSlotChange = () => {
     this.init();
-  }
+  };
 
   eventListener = (ev: any) => {
     if (ev.target === this) {
       return;
     }
-    const value = this.value ? this.value.split(',') : [];
+    const value = this.value ? this.value.split(",") : [];
     if (!checkFalse(ev.target.checked)) {
       value.push(ev.target.name);
     } else {
       value.splice(
         value.findIndex((name) => name === ev.target.name),
-        1,
+        1
       );
     }
-    this.$emit('change', {
+    this.$emit("change", {
       detail: { value },
     });
     ev.stopPropagation();
@@ -186,10 +185,7 @@ class QuarkCheckboxGroup extends QuarkElement {
   render() {
     return (
       <div class="quark-checkbox-group-wrapper">
-        <slot  
-          onslotchange={this.handleSlotChange}
-          ref={this.slotRef}
-          ></slot>
+        <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );
   }

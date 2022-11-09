@@ -8,54 +8,43 @@ The data nesting depth of cascading selection needs to be consistent. If some op
 ### Install
 
 ```tsx
-import { CascadePicker,CascadePickerRef } from "@quarkd/quark-react";
+import { CascadePicker, CascadePickerRef } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
+
 ```js
 const DATA = [
   {
-    text: 'Zhejiang',
+    text: "Zhejiang",
     children: [
       {
-        text: 'Hangzhou',
-        children: [
-          { text: 'West Lake District' },
-          { text: 'Yuhang District' }
-        ],
+        text: "Hangzhou",
+        children: [{ text: "West Lake District" }, { text: "Yuhang District" }],
       },
       {
-        text: 'Wenzhou',
-        children: [
-          { text: 'Lucheng District' },
-          { text: 'Ouhai District' }
-        ],
+        text: "Wenzhou",
+        children: [{ text: "Lucheng District" }, { text: "Ouhai District" }],
       },
     ],
   },
   {
-    text: 'Fujian',
+    text: "Fujian",
     children: [
       {
-        text: 'Fuzhou',
-        children: [
-          { text: 'Gulou District' },
-          { text: 'Taijiang District' }
-        ],
+        text: "Fuzhou",
+        children: [{ text: "Gulou District" }, { text: "Taijiang District" }],
       },
       {
-        text: 'Xiamen',
-        children: [
-          { text: 'Siming District' },
-          { text: 'Haicang District' }
-        ],
+        text: "Xiamen",
+        children: [{ text: "Siming District" }, { text: "Haicang District" }],
       },
     ],
   },
 ];
 export default () => {
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<CascadePickerRef>(null);
+  const pickerRef = useRef < CascadePickerRef > null;
 
   const handleClose = () => {
     setOpen(false);
@@ -66,7 +55,7 @@ export default () => {
       .map((column) => {
         return column.value;
       })
-      .join('，');
+      .join("，");
     console.log(`Current selected：${values}`);
     setOpen(false);
   };
@@ -95,8 +84,7 @@ export default () => {
       />
     </div>
   );
-}
-
+};
 ```
 
 ### Custom Header
@@ -104,47 +92,35 @@ export default () => {
 ```js
 const DATA = [
   {
-    text: 'Zhejiang',
+    text: "Zhejiang",
     children: [
       {
-        text: 'Hangzhou',
-        children: [
-          { text: 'West Lake District' },
-          { text: 'Yuhang District' }
-        ],
+        text: "Hangzhou",
+        children: [{ text: "West Lake District" }, { text: "Yuhang District" }],
       },
       {
-        text: 'Wenzhou',
-        children: [
-          { text: 'Lucheng District' },
-          { text: 'Ouhai District' }
-        ],
+        text: "Wenzhou",
+        children: [{ text: "Lucheng District" }, { text: "Ouhai District" }],
       },
     ],
   },
   {
-    text: 'Fujian',
+    text: "Fujian",
     children: [
       {
-        text: 'Fuzhou',
-        children: [
-          { text: 'Gulou District' },
-          { text: 'Taijiang District' }
-        ],
+        text: "Fuzhou",
+        children: [{ text: "Gulou District" }, { text: "Taijiang District" }],
       },
       {
-        text: 'Xiamen',
-        children: [
-          { text: 'Siming District' },
-          { text: 'Haicang District' }
-        ],
+        text: "Xiamen",
+        children: [{ text: "Siming District" }, { text: "Haicang District" }],
       },
     ],
   },
 ];
 export default () => {
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<CascadePickerRef>(null);
+  const pickerRef = useRef < CascadePickerRef > null;
 
   const handleClose = () => {
     setOpen(false);
@@ -157,7 +133,7 @@ export default () => {
       .map((column) => {
         return column.value;
       })
-      .join('，');
+      .join("，");
     console.log(values);
     setOpen(false);
   };
@@ -195,35 +171,37 @@ export default () => {
       </CascadePicker>
     </div>
   );
-}
+};
 ```
 
 ## API
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default           |
-|--------------|----------------------------------|--------|------------------|
-| open        | Whether to show Picker | `boolean `                 | `require`
-| title    | Title | `string `                 |
-| bottomhidden      | Whether to show bottom button (use with custom header）           | `boolean` | `false`
-| onClose         | Emitted when click mask or cancel button. |      `() => void`    |
-| onConfirm         | Emitted when click confirm button. |      `（e: {detail:{value: SelectedColumn[]}}）=> void`   |
-| onChange         | Emitted when current option changed. |      `（e: {detail:{value: SelectedColumn[]}}）=> void `  |
-
+| Attribute    | Description                                             | Type                                                | Default   |
+| ------------ | ------------------------------------------------------- | --------------------------------------------------- | --------- |
+| open         | Whether to show Picker                                  | `boolean `                                          | `require` |
+| title        | Title                                                   | `string `                                           |
+| bottomhidden | Whether to show bottom button (use with custom header） | `boolean`                                           | `false`   |
+| onClose      | Emitted when click mask or cancel button.               | `() => void`                                        |
+| onConfirm    | Emitted when click confirm button.                      | `（e: {detail:{value: SelectedColumn[]}}）=> void`  |
+| onChange     | Emitted when current option changed.                    | `（e: {detail:{value: SelectedColumn[]}}）=> void ` |
 
 ### Slot
-| Name         | Description                             |
-|--------------|----------------------------------|
-| name=header  | Custom header             |
+
+| Name        | Description   |
+| ----------- | ------------- |
+| name=header | Custom header |
 
 ### Methods
-| Name         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| setColumns         | Set current value of Picker |      `(columns: PickerColumn[]) => void`   |
-| getValues         | Get values selected by Picker, usually used with custom header. |      `（）=> SelectedColumn[]`   |
+
+| Name       | Description                                                     | Type                                |
+| ---------- | --------------------------------------------------------------- | ----------------------------------- |
+| setColumns | Set current value of Picker                                     | `(columns: PickerColumn[]) => void` |
+| getValues  | Get values selected by Picker, usually used with custom header. | `（）=> SelectedColumn[]`           |
 
 ### Type definition
+
 ```js
 type PickerColumn = {
   text: string;
@@ -236,13 +214,14 @@ type SelectedColumn = {
 };
 
 ```
+
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                                  | Default          |
-| ------------------------ | ----------------------------------- | --------------- |
-| `--cascadepicker-title-font-size` | Title font size | `18px` |
-| `--cascadepicker-title-color`   | Title font color                         |   ` #242729`  |
-| `--cascadepicker-title-font-weight`       | Title font weight                            |   `500`   |
-| `--cascadepicker-title-font-family`       | Title font family                         |  ` PingFangSC-Medium, PingFang SC `   |
+| Name                                | Description       | Default                          |
+| ----------------------------------- | ----------------- | -------------------------------- |
+| `--cascadepicker-title-font-size`   | Title font size   | `18px`                           |
+| `--cascadepicker-title-color`       | Title font color  | ` #242729`                       |
+| `--cascadepicker-title-font-weight` | Title font weight | `500`                            |
+| `--cascadepicker-title-font-family` | Title font family | `PingFangSC-Medium, PingFang SC` |

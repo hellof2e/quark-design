@@ -1,21 +1,16 @@
-import QuarkElement, {
-  property,
-  createRef,
-  customElement,
-} from '@quarkd/core';
-import '../picker';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
-import { clamp, padZero, times } from './utils'
-import { SelectColumn } from '.';
+import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
+import "../picker";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+import { clamp, padZero, times } from "./utils";
+import { SelectColumn } from ".";
 
-type TimeType = 'time'
+type TimeType = "time";
 
 @customElement({
-  tag: 'quark-time-picker',
+  tag: "quark-time-picker",
   style,
 })
-
 class QuarkTimePicker extends QuarkElement {
   constructor() {
     super();
@@ -28,10 +23,10 @@ class QuarkTimePicker extends QuarkElement {
   value: string | null;
 
   @property({ type: String })
-  type: TimeType = 'time';
+  type: TimeType = "time";
 
   @property({ type: String })
-  title: string = '';
+  title: string = "";
 
   @property({ type: Number })
   minhour: number = 0;
@@ -49,23 +44,24 @@ class QuarkTimePicker extends QuarkElement {
   showtoolbar: boolean = false;
 
   @property({ type: String })
-  confirmbuttontext: string = '';
+  confirmbuttontext: string = "";
 
   @property({ type: String })
-  cancelbuttontext: string = '';
+  cancelbuttontext: string = "";
 
   pickerRef: any = createRef();
-  originColumns: { defaultIndex: number, type: string, values: string[]}[] = [];
-  columns: { defaultIndex: number, type: string, values: string[]}[] = [];
+  originColumns: { defaultIndex: number; type: string; values: string[] }[] =
+    [];
+  columns: { defaultIndex: number; type: string; values: string[] }[] = [];
   currentTime: string | null = null;
   formatter: Function = (type: string, value: string): string => value;
   filter: Function = (type: string, value: string[]): string[] => value;
 
   formatValue(value) {
-    if(!value) {
+    if (!value) {
       value = `${padZero(this.minhour)}:${padZero(this.minminute)}`;
     }
-    let [hour, minute] = value.split(':');
+    let [hour, minute] = value.split(":");
     hour = padZero(clamp(+hour, +this.minhour, +this.maxhour));
     minute = padZero(clamp(+minute, +this.minminute, this.maxminute));
     return `${hour}:${minute}`;
@@ -75,64 +71,71 @@ class QuarkTimePicker extends QuarkElement {
   calcRanges() {
     return [
       {
-        type: 'hour',
-        range: [+this.minhour, +this.maxhour]
+        type: "hour",
+        range: [+this.minhour, +this.maxhour],
       },
       {
-        type: 'minute',
-        range: [+this.minminute, +this.maxminute]
-      }
+        type: "minute",
+        range: [+this.minminute, +this.maxminute],
+      },
     ];
-  };
+  }
 
   setColumns() {
     const ranges = this.calcRanges();
-    const [hour, minute] = this.currentTime.split(':');
+    const [hour, minute] = this.currentTime.split(":");
     const getDefaultIndex = (values, value) => {
       const index = values.indexOf(value);
-      return index > -1 ? index : 0
-    }
-     this.originColumns = ranges.map(({type, range}) => {
-      let values = times(range[1] - range[0] + 1, (index) => padZero(range[0] + index));
-      if(this.filter) {
-        values = this.filter(type, values)
+      return index > -1 ? index : 0;
+    };
+    this.originColumns = ranges.map(({ type, range }) => {
+      let values = times(range[1] - range[0] + 1, (index) =>
+        padZero(range[0] + index)
+      );
+      if (this.filter) {
+        values = this.filter(type, values);
       }
       return {
-        defaultIndex: type === 'hour' ? getDefaultIndex(values, hour) : getDefaultIndex(values, minute),
+        defaultIndex:
+          type === "hour"
+            ? getDefaultIndex(values, hour)
+            : getDefaultIndex(values, minute),
         type,
-        values
+        values,
       };
     });
 
-    this.columns = this.originColumns.map(({type, defaultIndex, values}) => {
+    this.columns = this.originColumns.map(({ type, defaultIndex, values }) => {
       return {
         type,
         defaultIndex,
-        values: values.map((value) => this.formatter(type, value))
-      }
-    })
+        values: values.map((value) => this.formatter(type, value)),
+      };
+    });
     this.pickerRef.current.setColumns(this.columns);
   }
 
   updateInnerValue(detail) {
-    const values: number[] = detail.value.map(item => parseInt(item.value, 10));
+    const values: number[] = detail.value.map((item) =>
+      parseInt(item.value, 10)
+    );
     const [hour, minute] = values;
     this.currentTime = this.formatValue(`${hour}:${minute}`);
-    this.$emit('change', { detail: { value: this.currentTime } });
+    this.$emit("change", { detail: { value: this.currentTime } });
     this.setColumns();
   }
 
   onClose = () => {
-    this.$emit('close');
+    this.$emit("close");
   };
 
   confirm = () => {
-    this.$emit('confirm', { detail: { value: this.currentTime } });
+    this.$emit("confirm", { detail: { value: this.currentTime } });
   };
 
   onChange = ({ detail }) => {
     this.updateInnerValue(detail);
-  }
+  };
 
   componentDidMount() {
     this.currentTime = this.formatValue(this.value);
@@ -150,12 +153,12 @@ class QuarkTimePicker extends QuarkElement {
 
   setFormatter(formatter: (type: string, value: string) => string) {
     this.formatter = formatter;
-    this.setColumns()
+    this.setColumns();
   }
 
   setFilter(filter: (type: string, values: string[]) => string[]) {
     this.filter = filter;
-    this.setColumns()
+    this.setColumns();
   }
 
   render() {
@@ -169,19 +172,17 @@ class QuarkTimePicker extends QuarkElement {
         onchange={this.onChange}
         onconfirm={this.confirm}
       >
-        {
-          this.showtoolbar && <div slot="header" class='quark-date-picker-header'>
-          <span class="quark-date-picker-close-btn" onclick={this.onClose}>
-            { this.cancelbuttontext }
-          </span>
-          <span class="quark-date-picker-title">
-            { this.title }
-          </span>
-          <span class="quark-date-picker-confirm-btn" onclick={this.confirm}>
-            { this.confirmbuttontext }
-          </span>
-        </div>
-        }
+        {this.showtoolbar && (
+          <div slot="header" class="quark-date-picker-header">
+            <span class="quark-date-picker-close-btn" onclick={this.onClose}>
+              {this.cancelbuttontext}
+            </span>
+            <span class="quark-date-picker-title">{this.title}</span>
+            <span class="quark-date-picker-confirm-btn" onclick={this.confirm}>
+              {this.confirmbuttontext}
+            </span>
+          </div>
+        )}
       </quark-picker>
     );
   }

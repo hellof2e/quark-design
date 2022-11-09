@@ -1,20 +1,25 @@
+<<<<<<< HEAD
 import { expect, fixture } from '@open-wc/testing';
 import 'quarkd/lib/image';
+=======
+import { expect, fixture } from "@open-wc/testing";
+import "../../../lib/image";
+>>>>>>> 6531b81639467a96c76b639475a9e07f71ddf373
 
 const data = {
-  src: 'https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg',
-  alt: '哈士奇',
-  width: '100px',
-  height: '100px',
+  src: "https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg",
+  alt: "哈士奇",
+  width: "100px",
+  height: "100px",
   lazy: false,
   round: false,
-  raidus: '50px',
-  fit: 'scale-down'
+  raidus: "50px",
+  fit: "scale-down",
 };
 
 let el;
 
-describe('<quark-image>', async () => {
+describe("<quark-image>", async () => {
   // it('element exist', async () => {
   //   el = await fixture(
   //     `<quark-image
@@ -23,7 +28,6 @@ describe('<quark-image>', async () => {
   //   const img = el.shadowRoot.querySelector('img');
   //   expect(img).to.exist;
   // });
-
   // it('element attribute exist', async () => {
   //   el = await fixture(
   //     `<quark-image

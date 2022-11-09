@@ -1,21 +1,21 @@
-import BScroll from '@better-scroll/core';
-import Slide from '@better-scroll/slide';
+import BScroll from "@better-scroll/core";
+import Slide from "@better-scroll/slide";
 import QuarkElement, {
   Fragment,
   createRef,
   customElement,
   state,
-  property
-} from '@quarkd/core';
-import '../popup';
+  property,
+} from "@quarkd/core";
+import "../popup";
 
-import style from './style.css';
+import style from "./style.css";
 BScroll.use(Slide);
 export interface Props {
-  open: boolean
+  open: boolean;
 }
 @customElement({
-  tag: 'quark-image-preview',
+  tag: "quark-image-preview",
   style,
 })
 class QuarkImagePreview extends QuarkElement {
@@ -23,9 +23,9 @@ class QuarkImagePreview extends QuarkElement {
     super();
   }
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  open: boolean = false;
+  open = false;
 
   @state()
   slide: any = null;
@@ -34,17 +34,17 @@ class QuarkImagePreview extends QuarkElement {
   images: string[] = [];
 
   @state()
-  index: number = 0;
+  index = 0;
 
-  startX: number = 0;
+  startX = 0;
 
-  startY: number = 0;
+  startY = 0;
 
   endX: number | undefined = 0;
 
   endY: number | undefined = 0;
 
-  isFn: boolean = false;
+  isFn = false;
 
   onClose: null | ((index: number) => void) = null;
   onChange: null | ((index: number) => void) = null;
@@ -52,19 +52,19 @@ class QuarkImagePreview extends QuarkElement {
   wrapRef = createRef() as any;
   init = async (open) => {
     if (!this.images.length) return;
-    if (this.slide) return
+    if (this.slide) return;
     const index = this.index > this.images.length ? 0 : this.index;
     try {
-      await this.initSlide(index)
+      await this.initSlide(index);
     } catch (error) {
-      console.log(error, 'error')
+      console.log(error, "error");
     }
-    this.eventBind()
-   if(this.isFn) this.open = true
+    this.eventBind();
+    if (this.isFn) this.open = true;
   };
   initSlide(index) {
     return new Promise((resolve) => {
-      setTimeout(() => { 
+      setTimeout(() => {
         this.slide = new BScroll(this.wrapRef.current, {
           scrollX: true,
           scrollY: false,
@@ -72,27 +72,27 @@ class QuarkImagePreview extends QuarkElement {
           loop: false,
           momentum: false,
           bounce: false,
-          tap: 'tap',
+          tap: "tap",
           click: true,
           preventDefaultException: {
-            className:  /(^|\s)quark-img(\s|$)/
+            className: /(^|\s)quark-img(\s|$)/,
           },
           slide: {
             loop: true,
             threshold: 100,
             autoplay: false,
-            startPageXIndex: index
-          }
+            startPageXIndex: index,
+          },
         });
-        this.slide.on('slideWillChange', (page: any) => {
-          if(!page) return
+        this.slide.on("slideWillChange", (page: any) => {
+          if (!page) return;
           this.index = page.pageX;
           if (this.onChange) this.onChange(page.pageX);
-          this.$emit('change', page.pageX);
+          this.$emit("change", page.pageX);
         });
-        resolve(true)
-      }, 100)
-    })
+        resolve(true);
+      }, 100);
+    });
   }
   componentWillUnmount(): void {
     if (this.slide) this.slide.destroy();
@@ -111,13 +111,13 @@ class QuarkImagePreview extends QuarkElement {
     startPosition,
     close,
     change,
-    open
+    open,
   }: {
     images: string[];
     startPosition: number;
     close: () => void | null;
     change: (index: number) => void | null;
-    open?: boolean
+    open?: boolean;
   }) => {
     this.images = images;
     this.index = startPosition || 0;
@@ -132,14 +132,14 @@ class QuarkImagePreview extends QuarkElement {
   };
   eventBind() {
     this.removeEvent();
-    this.addEventListener('touchstart', this.handleTouchStart);
-    this.addEventListener('touchmove', this.handleTouchMove);
-    this.addEventListener('touchend', this.handleTouchEnd);
+    this.addEventListener("touchstart", this.handleTouchStart);
+    this.addEventListener("touchmove", this.handleTouchMove);
+    this.addEventListener("touchend", this.handleTouchEnd);
   }
   removeEvent = () => {
-    this.removeEventListener('touchstart', this.handleTouchStart);
-    this.removeEventListener('touchmove', this.handleTouchMove);
-    this.removeEventListener('touchend', this.handleTouchEnd);
+    this.removeEventListener("touchstart", this.handleTouchStart);
+    this.removeEventListener("touchmove", this.handleTouchMove);
+    this.removeEventListener("touchend", this.handleTouchEnd);
   };
   handleTouchStart = (e: any) => {
     this.startX = e.changedTouches[0].clientX;
@@ -160,20 +160,19 @@ class QuarkImagePreview extends QuarkElement {
       { X: this.endX, Y: this.endY }
     );
     if (this.endX === undefined || this.endY === undefined) {
-      this.myClose()
+      this.myClose();
       return;
     }
     if (Math.abs(angle) > 30) {
-      this.myClose()
+      this.myClose();
       return;
     }
     if (this.endX > this.startX) {
       // 右滑
-    //  console.log('右滑')
-      
+      //  console.log('右滑')
     } else {
       // 左滑
-    // console.log('左滑')
+      // console.log('左滑')
     }
   };
   angle(start: { X: number; Y: number }, end: { X: number; Y: number }) {
@@ -183,7 +182,7 @@ class QuarkImagePreview extends QuarkElement {
     return (360 * Math.atan(Y / X)) / (2 * Math.PI);
   }
   close() {
-    this.open = false
+    this.open = false;
   }
   render() {
     const showIndex = `${this.index + 1}`;
@@ -192,7 +191,7 @@ class QuarkImagePreview extends QuarkElement {
         <slot
           name="indicator"
           class="quark-imagepreview-indicator"
-          style={{ display: this.open ? 'inline-block' : 'none' }}
+          style={{ display: this.open ? "inline-block" : "none" }}
         >
           <p>
             {showIndex}/{this.images.length}
@@ -205,7 +204,7 @@ class QuarkImagePreview extends QuarkElement {
               <div class="quark-imagepreview-slide-content">
                 {this.images.map((item, index) => (
                   <div key={index} class="quark-imagepreview-item">
-                    <img src={item} class='quark-img' onClick={this.myClose} />
+                    <img src={item} class="quark-img" onClick={this.myClose} />
                   </div>
                 ))}
               </div>
@@ -225,12 +224,12 @@ interface IImagePreview {
   change?: (index: number) => void;
 }
 // 函数调用
-export default function imagePreview(params: IImagePreview): QuarkImagePreview{
+export default function imagePreview(params: IImagePreview): QuarkImagePreview {
   const preview = document.createElement(
-    'quark-image-preview'
+    "quark-image-preview"
   ) as QuarkImagePreview;
   document.body.appendChild(preview);
-  const { images = [], startPosition, close, change, } = params;
+  const { images = [], startPosition, close, change } = params;
   preview.isFn = true;
   preview.setData({ images, startPosition, close, change, open: true });
   return preview;

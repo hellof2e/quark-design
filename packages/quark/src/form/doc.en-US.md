@@ -3,10 +3,11 @@
 ### Intro
 
 Form
+
 ### Install
 
 ```tsx
-import 'quarkd/lib/form';
+import "quarkd/lib/form";
 ```
 
 ### Basic Usage
@@ -21,8 +22,9 @@ Set value of form items, used with `name` prop.
   <div class="submit-wrap">
     <div @click="submit1" class="submit">Submit</div>
   </div>
-  </quark-form>
+</quark-form>
 ```
+
 ```js
 this.$refs.form1.setRules = ([
   { name: 'name', required: true },
@@ -36,18 +38,32 @@ submit1() {
   });
 },
 ```
+
 ### Validate Rules
+
 Only useful for field components, supports required and validator custom events.
+
 ```html
 <quark-form ref="form2">
-  <quark-field placeholder="Please enter text" name="age" label="age"></quark-field>
+  <quark-field
+    placeholder="Please enter text"
+    name="age"
+    label="age"
+  ></quark-field>
   <div class="line" />
-  <quark-field type="number" value="123" max="11" name="phone" label="phone number"/>
+  <quark-field
+    type="number"
+    value="123"
+    max="11"
+    name="phone"
+    label="phone number"
+  />
   <div class="submit-wrap">
     <div @click="submit2" class="submit">Submit</div>
   </div>
-  </quark-form>
+</quark-form>
 ```
+
 ```js
  this.$refs.form2.setRules([
   {
@@ -72,10 +88,17 @@ Only useful for field components, supports required and validator custom events.
     });
   },
 ```
+
 ### Form Items
+
 ```html
 <quark-form ref="form3">
-  <quark-field placeholder="Please enter text" name="field" label="age" :value="field"></quark-field>
+  <quark-field
+    placeholder="Please enter text"
+    name="field"
+    label="age"
+    :value="field"
+  ></quark-field>
   <div class="line" />
   <div class="form-item">
     <quark-textarea name="textarea" :value="textarea" />
@@ -83,8 +106,12 @@ Only useful for field components, supports required and validator custom events.
   <div class="line" />
   <div class="form-item">
     <span>Vegetables:</span>
-    <quark-checkbox name="checkbox1" shape="square" :checked="checkbox1" >Cucumber</quark-checkbox>
-    <quark-checkbox name="checkbox2" shape="square" :checked="checkbox2" >Ginger</quark-checkbox>
+    <quark-checkbox name="checkbox1" shape="square" :checked="checkbox1"
+      >Cucumber</quark-checkbox
+    >
+    <quark-checkbox name="checkbox2" shape="square" :checked="checkbox2"
+      >Ginger</quark-checkbox
+    >
   </div>
   <div class="line" />
   <div class="form-item">
@@ -133,6 +160,7 @@ Only useful for field components, supports required and validator custom events.
   </div>
 </quark-form>
 ```
+
 ```js
   submit3() {
       this.$refs.form3.submit().then((value) => {
@@ -151,16 +179,18 @@ Only useful for field components, supports required and validator custom events.
       this.open = false;
     }
 ```
+
 ## API
 
 ### Method
 
-| Name         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| submit     | Submit and validate the form to get all form items value  |         `() => Promise<value: any[]>`|
-| setRules     | Only valid for field component  |       `(rule: Rule[])=>void`|
+| Name     | Description                                              | Type                          |
+| -------- | -------------------------------------------------------- | ----------------------------- |
+| submit   | Submit and validate the form to get all form items value | `() => Promise<value: any[]>` |
+| setRules | Only valid for field component                           | `(rule: Rule[])=>void`        |
 
 ### Type definition
+
 ```js
 type Rule = {
   name: string // `Name` prop of field component that needs to be validated

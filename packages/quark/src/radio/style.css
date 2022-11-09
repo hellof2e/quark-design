@@ -69,7 +69,7 @@
 }
 
 :host .quark-radio-container .quark-radio-show {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid quark-formPlaceholderColor;
   border-radius: 50%;
 }
@@ -79,9 +79,8 @@
 }
 
 :host([disabled]) .quark-radio-container .quark-radio-show {
-  background: #F0F3F5;
+  background: #f0f3f5;
 }
-
 
 :host .quark-radio-container .quark-radio-disabled {
   display: none;
@@ -98,7 +97,9 @@
   border-radius: 4px;
 }
 
-:host([disabled][checked][shape="square"]) .quark-radio-container .quark-radio-disabled {
+:host([disabled][checked][shape="square"])
+  .quark-radio-container
+  .quark-radio-disabled {
   border-radius: 4px;
 }
 
@@ -121,7 +122,6 @@
 :host input[type="radio"i] {
   margin: 0;
 }
-
 
 .quark-radio-group-wrapper {
   display: flex;

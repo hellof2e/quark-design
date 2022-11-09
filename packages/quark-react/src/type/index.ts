@@ -1,10 +1,17 @@
-export interface baseInterface extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-    name?: string
+export interface baseInterface
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLElement>,
+    HTMLElement
+  > {
+  name?: string;
 }
-export type componentBaseInterface = Omit<baseInterface, 'onChange' | 'onSelect' | 'onFocus' | 'onInput' | 'onBlur'>;
+export type componentBaseInterface = Omit<
+  baseInterface,
+  "onChange" | "onSelect" | "onFocus" | "onInput" | "onBlur"
+>;
 export type ReactifyProps<
-    Props extends Record<string, any>, 
-    Event extends Record<string, any>
+  Props extends Record<string, any>,
+  Event extends Record<string, any>
 > = Props & {
-    [E in keyof Event as (E extends string ? `on${Capitalize<E>}`: E)]: Event[E]
-}
+  [E in keyof Event as E extends string ? `on${Capitalize<E>}` : E]: Event[E];
+};

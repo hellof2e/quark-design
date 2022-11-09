@@ -1,40 +1,40 @@
-import BScroll from '@better-scroll/core';
-import Wheel from '@better-scroll/wheel';
+import BScroll from "@better-scroll/core";
+import Wheel from "@better-scroll/wheel";
 import QuarkElement, {
   property,
   createRef,
   customElement,
   state,
-} from '@quarkd/core';
-import '../popup';
-import '../button';
-import '@quarkd/icons/lib/close';
-import Locale from '../locale';
-import style from './style.css';
+} from "@quarkd/core";
+import "../popup";
+import "../button";
+import "@quarkd/icons/lib/close";
+import Locale from "../locale";
+import style from "./style.css";
 
 BScroll.use(Wheel);
-export interface PickerColumn  {
+export interface PickerColumn {
   text: string;
   children: PickerColumn[];
-};
+}
 export interface SelectedColumn {
-  value: string
-  index: number
+  value: string;
+  index: number;
 }
 export interface Props {
-  open: boolean
-  name?: string
-  title?: string
-  bottomhidden?: boolean
+  open: boolean;
+  name?: string;
+  title?: string;
+  bottomhidden?: boolean;
 }
 
 export interface CustomEvent {
-  close: () => void
-  comfirm: (e: { detail: {value:  SelectedColumn[]} }) => void
-  change?: (e: { detail: {value:  SelectedColumn[]} }) => void
+  close: () => void;
+  comfirm: (e: { detail: { value: SelectedColumn[] } }) => void;
+  change?: (e: { detail: { value: SelectedColumn[] } }) => void;
 }
 @customElement({
-  tag: 'quark-cascade-picker',
+  tag: "quark-cascade-picker",
   style,
 })
 class QuarkCascadePicker extends QuarkElement {
@@ -43,16 +43,16 @@ class QuarkCascadePicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property()
-  title: string = '';
+  title = "";
 
   @property()
-  name: string = '';
+  name = "";
 
   @property({ type: Boolean })
-  bottomhidden: boolean = false;
+  bottomhidden = false;
 
   @state()
   pickerData: string[][] = [];
@@ -63,7 +63,7 @@ class QuarkCascadePicker extends QuarkElement {
 
   selectedIndexPair: number[] = [];
 
-  depth: number = 1;
+  depth = 1;
 
   wheelWrapper: any = createRef();
 
@@ -111,12 +111,14 @@ class QuarkCascadePicker extends QuarkElement {
     return this.getDepths(column.children[0], depth);
   }
 
-  getValues(needRestore: boolean = true) {
+  getValues(needRestore = true) {
     if (needRestore) {
       this.restorePosition();
     }
 
-    const currentSelectedIndexPair = this.wheels.map((wheel) => wheel.getSelectedIndex());
+    const currentSelectedIndexPair = this.wheels.map((wheel) =>
+      wheel.getSelectedIndex()
+    );
     const selectValues = this.pickerData.map((column, i) => {
       const index = currentSelectedIndexPair[i];
       return {
@@ -143,7 +145,7 @@ class QuarkCascadePicker extends QuarkElement {
         for (let j = 0; j <= i; j += 1) {
           cursor = cursor[newIndexPair[j]].children;
         }
-   
+
         for (let j = i; j < this.depth - 1; j += 1) {
           const value = cursor.map((item) => item.text);
           tempPickerData.splice(j + 1, 1, value);
@@ -161,12 +163,12 @@ class QuarkCascadePicker extends QuarkElement {
 
   popupClose = () => {
     this.restorePosition();
-    this.$emit('close');
+    this.$emit("close");
   };
 
   confirm = () => {
     const selectValues = this.getValues();
-    this.$emit('confirm', { detail: { value: selectValues } });
+    this.$emit("confirm", { detail: { value: selectValues } });
   };
 
   createWheel = (wheelWrapper: any, i: number) => {
@@ -174,17 +176,19 @@ class QuarkCascadePicker extends QuarkElement {
       this.wheels[i] = new BScroll(wheelWrapper.children[i], {
         wheel: {
           selectedIndex: this.selectedIndexPair[i] || 0,
-          wheelWrapperClass: 'quark-cascade-picker-wheel-scroll',
-          wheelItemClass: 'quark-cascade-picker-wheel-item',
+          wheelWrapperClass: "quark-cascade-picker-wheel-scroll",
+          wheelItemClass: "quark-cascade-picker-wheel-item",
         },
       });
       // when any of wheels'scrolling ended , refresh data
-      this.wheels[i].on('scrollEnd', () => {
-        const currentSelectedIndexPair = this.wheels.map((wheel) => wheel.getSelectedIndex());
+      this.wheels[i].on("scrollEnd", () => {
+        const currentSelectedIndexPair = this.wheels.map((wheel) =>
+          wheel.getSelectedIndex()
+        );
         this.changePickerData(currentSelectedIndexPair, this.selectedIndexPair);
         this.selectedIndexPair = currentSelectedIndexPair;
         const selectValues = this.getValues(false);
-        this.$emit('change', { detail: { value: selectValues } });
+        this.$emit("change", { detail: { value: selectValues } });
       });
     } else {
       this.wheels[i].refresh();
@@ -197,11 +201,13 @@ class QuarkCascadePicker extends QuarkElement {
       return null;
     }
     const wheels = this.pickerData.map((column) => (
-        <div class="quark-cascade-picker-wheel">
-          <ul class="quark-cascade-picker-wheel-scroll">
-            {column.map((item: string) => <li class="quark-cascade-picker-wheel-item">{item}</li>)}
-          </ul>
-        </div>
+      <div class="quark-cascade-picker-wheel">
+        <ul class="quark-cascade-picker-wheel-scroll">
+          {column.map((item: string) => (
+            <li class="quark-cascade-picker-wheel-item">{item}</li>
+          ))}
+        </ul>
+      </div>
     ));
     return wheels;
   };
@@ -227,14 +233,17 @@ class QuarkCascadePicker extends QuarkElement {
           <div class="quark-cascade-picker-content">
             <div class="quark-cascade-picker-mask-top"></div>
             <div class="quark-cascade-picker-mask-bottom"></div>
-            <div class="quark-cascade-picker-wheel-wrapper" ref={this.wheelWrapper}>
+            <div
+              class="quark-cascade-picker-wheel-wrapper"
+              ref={this.wheelWrapper}
+            >
               {this.renderWheel()}
             </div>
           </div>
           {!this.bottomhidden && (
             <div class="quark-cascade-picker-bottom">
               <quark-button type="primary" onclick={this.confirm}>
-               {Locale.current.confirm}
+                {Locale.current.confirm}
               </quark-button>
             </div>
           )}

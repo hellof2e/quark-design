@@ -3,11 +3,11 @@
 ### Intro
 
 Form
+
 ### Install
 
-
 ```tsx
-import { Form, FormRef } from "@quarkd/quark-react"
+import { Form, FormRef } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
@@ -20,20 +20,20 @@ export default () => {
 
   useEffect(() => {
     form1.current.setRules([
-      { name: 'name', required: true },
-      { name: 'password', required: true, type: 'password' }
+      { name: "name", required: true },
+      { name: "password", required: true, type: "password" },
     ]);
-  }, [])
+  }, []);
 
   const submit1 = () => {
     form1.current
       .getValues()
       .then((value) => {
-        console.log(value, '22');
+        console.log(value, "22");
       })
       .catch((e) => {
-        console.log(e, 'e')
-        Toast.error(e.message || '请检查表单项');
+        console.log(e, "e");
+        Toast.error(e.message || "请检查表单项");
       });
   };
 
@@ -48,67 +48,80 @@ export default () => {
         </Button>
       </div>
     </Form>
-  )
-}
+  );
+};
 ```
+
 ### Validate Rules
+
 Only useful for field components, supports required and validator custom events.
+
 ```tsx
-  export default () => {
-    const form2 = useRef<FormRef>(null);
+export default () => {
+  const form2 = useRef<FormRef>(null);
 
-    const submit2 = () => {
-      form2.current
-        .getValues()
-        .then((value) => {
-          console.log(value, 'current form values');
-        })
-        .catch((e) => {
-          Toast.error(e.message);
-        });
-   };
+  const submit2 = () => {
+    form2.current
+      .getValues()
+      .then((value) => {
+        console.log(value, "current form values");
+      })
+      .catch((e) => {
+        Toast.error(e.message);
+      });
+  };
 
-    useEffect(() => {
-      form2.current.setRules([
-        {
-          name: 'age',
-          required: true,
-          message: 'older than 18 years old',
-          validator: (value) => value >= 18
-        },
-        {
-          name: 'phone',
-          required: true,
-          message: 'Please enter the correct phone number',
-          validator: (value) => /^1[3456789]\d{9}$/g.test(value)
-        }
-      ]);
-    }, [])
+  useEffect(() => {
+    form2.current.setRules([
+      {
+        name: "age",
+        required: true,
+        message: "older than 18 years old",
+        validator: (value) => value >= 18,
+      },
+      {
+        name: "phone",
+        required: true,
+        message: "Please enter the correct phone number",
+        validator: (value) => /^1[3456789]\d{9}$/g.test(value),
+      },
+    ]);
+  }, []);
 
-    return (
-      <From ref={form2}>
-        <Field placeholder="Please enter text" name="age" label="age" />
-        <div class="line" />
-        <Field type="number" value="123" max="11" name="phone" label="phone number"/>
-        <div class="submit-wrap">
-          <div onClick="submit2" class="submit">Submit</div>
+  return (
+    <From ref={form2}>
+      <Field placeholder="Please enter text" name="age" label="age" />
+      <div class="line" />
+      <Field
+        type="number"
+        value="123"
+        max="11"
+        name="phone"
+        label="phone number"
+      />
+      <div class="submit-wrap">
+        <div onClick="submit2" class="submit">
+          Submit
         </div>
-      </From>
-    )
-  }
+      </div>
+    </From>
+  );
+};
 ```
+
 ### Form Items
+
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const [pickerStr, setStr] = useState('Please choose time');
+  const [pickerStr, setStr] = useState("Please choose time");
   const form3 = useRef<FormRef>();
   const picker = useRef();
 
   const submit3 = () => {
     form3.current.getValues().then((value) => {
-      Toast.text('Please check form value in the console');
-      console.log(value, 'current form values');
+      Toast.text("Please check form value in the console");
+      console.log(value, "current form values");
     });
   };
   const click = () => {
@@ -118,7 +131,7 @@ export default () => {
     setOpen(false);
   };
   const confirm = ({ detail }) => {
-    const datepickerStr = detail.value.map((i) => i.value).join(' ');
+    const datepickerStr = detail.value.map((i) => i.value).join(" ");
     setOpen(false);
     setStr(datepickerStr);
   };
@@ -127,12 +140,12 @@ export default () => {
     picker.current.setColumns([
       {
         defaultIndex: 0,
-        values: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        values: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       },
       {
         defaultIndex: 1,
-        values: ['a.m.', 'p.m.']
-      }
+        values: ["a.m.", "p.m."],
+      },
     ]);
   }, []);
   return (
@@ -205,16 +218,18 @@ export default () => {
       <div className="line" />
     </div>
   );
-}
+};
 ```
+
 ### Method
 
-| Name         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| submit     | Submit and validate the form to get all form items value  |         `() => Promise<value: any[]>`|
-| setRules     | Only valid for field component  |       `(rule: Rule[])=>void`|
+| Name     | Description                                              | Type                          |
+| -------- | -------------------------------------------------------- | ----------------------------- |
+| submit   | Submit and validate the form to get all form items value | `() => Promise<value: any[]>` |
+| setRules | Only valid for field component                           | `(rule: Rule[])=>void`        |
 
 ### Type definition
+
 ```js
 type Rule = {
   name: string // `Name` prop of field component that needs to be validated

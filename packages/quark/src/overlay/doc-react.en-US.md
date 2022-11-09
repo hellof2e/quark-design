@@ -11,6 +11,7 @@ import { Overlay } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
+
 ```js
 export default () => {
   const [open, setOpen] = useState(false);
@@ -29,13 +30,13 @@ export default () => {
       <Overlay open={open} onClose={handleClose} />
     </div>
   );
-}
+};
 ```
 
 ### Embedded Content
 
 ```html
-<Overlay open={open} onClose= {handleClose}>
+<Overlay open="{open}" onClose="{handleClose}">
   <div class="content"></div>
 </Overlay>
 <style>
@@ -52,18 +53,16 @@ export default () => {
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default   |
-|--------------|----------------------------------|--------|------------------|
-| open        | Whether to show picker| `boolean`                  | `require`
-| zindex    | z-index | `number `               | `999`
-| onClose         | Close mask |      `() => void`    |`require` |
-
+| Attribute | Description            | Type         | Default   |
+| --------- | ---------------------- | ------------ | --------- |
+| open      | Whether to show picker | `boolean`    | `require` |
+| zindex    | z-index                | `number `    | `999`     |
+| onClose   | Close mask             | `() => void` | `require` |
 
 ## CSS Variables
 
 The component provides the following[CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties),which can be used to customize styles. Please refer to [Theme customization](#/zh-CN/guide/theme)。
 
-| Name                    | Description                               | Default Value        |
-| ------------------------ | ----------------------------------- | --------------- |
+| Name                   | Description     | Default Value        |
+| ---------------------- | --------------- | -------------------- |
 | `--overlay-background` | Mask background | `rgba(0, 0, 0, 0.7)` |
-

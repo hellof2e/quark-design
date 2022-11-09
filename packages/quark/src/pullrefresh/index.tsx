@@ -1,47 +1,43 @@
-import QuarkElement, {
-  state,
-  property,
-  customElement
-} from '@quarkd/core';
+import QuarkElement, { state, property, customElement } from "@quarkd/core";
 import "../loading";
-import { checkFalse } from '../../utils/public';
-import { getScrollParent } from '../../utils/index';
-import { useTouch, getScrollTop } from './utils';
-import style from './style.css';
+import { checkFalse } from "../../utils/public";
+import { getScrollParent } from "../../utils/index";
+import { useTouch, getScrollTop } from "./utils";
+import style from "./style.css";
 import Locale from "../locale";
 export interface Props {
-  dark?: boolean
-  disabled?: boolean
-  headheight?: number
-  loading: boolean
-  pullingtext?: string
-  loosingtext?: string
-  loadingtext?: string
-  textcolor?: string
+  dark?: boolean;
+  disabled?: boolean;
+  headheight?: number;
+  loading: boolean;
+  pullingtext?: string;
+  loosingtext?: string;
+  loadingtext?: string;
+  textcolor?: string;
 }
 export interface CustomEvent {
-  refresh: () => void
+  refresh: () => void;
 }
 
 const DEFAULT_HEAD_HEIGHT = 96;
 const DEFAULT_DURING = 300;
 @customElement({
-  tag: 'quark-pull-refresh',
-  style
+  tag: "quark-pull-refresh",
+  style,
 })
 class QuarkPullRefresh extends QuarkElement {
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  disabled: boolean = false;
+  disabled = false;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  loading: boolean = false;
+  loading = false;
 
   @property({
-    type: Number
+    type: Number,
   })
   headheight: number = DEFAULT_HEAD_HEIGHT;
 
@@ -52,24 +48,24 @@ class QuarkPullRefresh extends QuarkElement {
   loosingtext: string = Locale.current.pullRefresh.loosing;
 
   @property()
-  textcolor: string = '#879099';
+  textcolor = "#879099";
 
   @property()
   loadingtext: string = Locale.current.loading;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  dark: boolean = false;
+  dark = false;
 
   @state()
-  status: string = 'normal';
+  status = "normal";
 
   @state()
-  distance: number = 0;
+  distance = 0;
 
   @state()
-  duration: number = 0;
+  duration = 0;
 
   @state()
   scrollParent: any = null;
@@ -79,15 +75,14 @@ class QuarkPullRefresh extends QuarkElement {
     oldValue: string,
     newValue: string
   ): boolean {
-    if (propName === 'loading' && checkFalse(newValue)) {
+    if (propName === "loading" && checkFalse(newValue)) {
       this.setStatus(0);
     }
     return false;
   }
 
-
   isTouchable = () =>
-    this.status !== 'loading' && this.status !== 'success' && !this.disabled;
+    this.status !== "loading" && this.status !== "success" && !this.disabled;
 
   ease = (distance: number) => {
     const pullDistance = +this.headheight;
@@ -107,29 +102,29 @@ class QuarkPullRefresh extends QuarkElement {
     const pullDistance = +this.headheight;
     this.distance = distance;
     if (isLoading) {
-      this.status = 'loading';
+      this.status = "loading";
     } else if (distance === 0) {
-      this.status = 'normal';
+      this.status = "normal";
     } else if (distance < pullDistance) {
-      this.status = 'pulling';
+      this.status = "pulling";
     } else {
-      this.status = 'loosing';
+      this.status = "loosing";
     }
   };
 
   getTextColor = (): string => {
     if (this.dark) {
-      return '#FFF';
+      return "#FFF";
     }
     return this.textcolor;
   };
 
   getStatusText = () => {
     const { status } = this;
-    if (status === 'normal') {
-      return '';
+    if (status === "normal") {
+      return "";
     }
-    if (status === 'loading') {
+    if (status === "loading") {
       return (
         <quark-loading
           type="circular"
@@ -141,13 +136,13 @@ class QuarkPullRefresh extends QuarkElement {
         </quark-loading>
       );
     }
-    if (status === 'pulling') {
+    if (status === "pulling") {
       return this.pullingtext;
     }
-    if (status === 'loosing') {
+    if (status === "loosing") {
       return this.loosingtext;
     }
-    return '';
+    return "";
   };
 
   checkPosition = (event: TouchEvent) => {
@@ -187,9 +182,9 @@ class QuarkPullRefresh extends QuarkElement {
     if (useTouch().deltaY && this.isTouchable()) {
       useTouch().end();
       this.duration = DEFAULT_DURING;
-      if (this.status === 'loosing') {
+      if (this.status === "loosing") {
         this.setStatus(+this.headheight, true);
-        this.$emit('refresh');
+        this.$emit("refresh");
         // delay(() => this.$emit('refresh'));
       } else {
         this.setStatus(0);
@@ -203,23 +198,26 @@ class QuarkPullRefresh extends QuarkElement {
         this.headheight !== DEFAULT_HEAD_HEIGHT
           ? this.headheight
           : DEFAULT_HEAD_HEIGHT
-      }px`
+      }px`,
     };
   };
 
   renderHead = () => {
     const { status } = this;
-    if (status === 'loading' && this.querySelector("[slot='loading']")) {
+    if (status === "loading" && this.querySelector("[slot='loading']")) {
       return <slot name="loading"></slot>;
     }
-    if (status === 'pulling' && this.querySelector("[slot='pulling']")) {
+    if (status === "pulling" && this.querySelector("[slot='pulling']")) {
       return <slot name="pulling"></slot>;
     }
-    if (status === 'loosing' && this.querySelector("[slot='loosing']")) {
+    if (status === "loosing" && this.querySelector("[slot='loosing']")) {
       return <slot name="loosing"></slot>;
     }
     return (
-      <div class="quark-pull-refresh-text" style={`color: ${this.getTextColor()}`}>
+      <div
+        class="quark-pull-refresh-text"
+        style={`color: ${this.getTextColor()}`}
+      >
         {this.getStatusText()}
       </div>
     );
@@ -232,7 +230,7 @@ class QuarkPullRefresh extends QuarkElement {
   render() {
     const trackStyle = {
       transitionDuration: `${this.duration}ms`,
-      transform: this.distance ? `translate3d(0,${this.distance}px, 0)` : ''
+      transform: this.distance ? `translate3d(0,${this.distance}px, 0)` : "",
     };
     return (
       <div class="quark-pull-refresh">

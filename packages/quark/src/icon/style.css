@@ -1,7 +1,7 @@
 :host {
   font-size: inherit;
   display: inline-block;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 :host .quark-icon-svg {

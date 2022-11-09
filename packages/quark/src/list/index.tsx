@@ -1,74 +1,77 @@
-import QuarkElement, {
-  property,
-  createRef,
-  customElement
-} from '@quarkd/core';
-import delay from '../../utils/delay';
-import '../loading';
-import { checkFalse } from '../../utils/public';
-import { getUnuseParent } from '../../utils/index';
-import style from './style.css';
+import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
+import delay from "../../utils/delay";
+import "../loading";
+import { checkFalse } from "../../utils/public";
+import { getUnuseParent } from "../../utils/index";
+import style from "./style.css";
 import Locale from "../locale";
 export interface Props {
-  error?: boolean
-  loading: boolean
-  finished: boolean
-  offset?: number
-  loadingtext?: string
-  finishedtext?: string
-  errortext?: string
-  textcolor?: string
+  error?: boolean;
+  loading: boolean;
+  finished: boolean;
+  offset?: number;
+  loadingtext?: string;
+  finishedtext?: string;
+  errortext?: string;
+  textcolor?: string;
 }
 export interface CustomEvent {
-  load?: () => void
-  reload?: () => void
+  load?: () => void;
+  reload?: () => void;
 }
 @customElement({
-  tag: 'quark-list',
-  style
+  tag: "quark-list",
+  style,
 })
 class QuarkList extends QuarkElement {
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  error: boolean = false;
+  error = false;
 
   @property({
-    type: Number
+    type: Number,
   })
-  offset: number = 300;
+  offset = 300;
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  finished: boolean = false;
+  finished = false;
 
   @property()
-  errortext: string = '';
+  errortext = "";
 
   @property()
-  textcolor: string = '#879099';
+  textcolor = "#879099";
 
   @property()
   loadingtext: string = Locale.current.loading;
 
   @property()
-  finishedtext: string = '';
+  finishedtext = "";
 
   @property({
-    type: Boolean
+    type: Boolean,
   })
-  loading: boolean = false;
+  loading = false;
+
+  @property({
+    type: Boolean,
+  })
+  immediatecheck = true;
 
   placeholderRef: any = createRef();
 
   componentDidMount() {
-    this.check({ auto: true });
-    window.addEventListener('scroll', this.check);
+    if (this.immediatecheck) {
+      setTimeout(() => this.check({ auto: true }), 50);
+    }
+    window.addEventListener("scroll", this.check, true);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.check);
+    window.removeEventListener("scroll", this.check, true);
   }
 
   shouldComponentUpdate(
@@ -76,15 +79,15 @@ class QuarkList extends QuarkElement {
     oldValue: string,
     newValue: string
   ): boolean {
-    if (propName === 'loading') {
+    if (propName === "loading") {
       if (!checkFalse(oldValue) && checkFalse(newValue)) {
         this.check({ auto: true });
       }
     }
-    if (propName === 'finished' && !checkFalse(newValue)) {
+    if (propName === "finished" && !checkFalse(newValue)) {
       return true;
     }
-    if (propName === 'error' && !checkFalse(newValue)) {
+    if (propName === "error" && !checkFalse(newValue)) {
       return true;
     }
     return true;
@@ -106,12 +109,12 @@ class QuarkList extends QuarkElement {
     const isReachEdge = placeholderRect.bottom - window.screen.height <= offset;
 
     if (isReachEdge) {
-      this.$emit('load');
+      this.$emit("load");
     }
   });
 
   clickErrorText = () => {
-    this.$emit('reload');
+    this.$emit("reload");
     this.check({ auto: true });
   };
 

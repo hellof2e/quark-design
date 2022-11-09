@@ -6,20 +6,18 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
-  "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": [
-      "quarkd/**"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "dev": "node ./scripts/dev",
+    "init": "yarn && yarn run link && cd example && yarn",
+    "dev": "cd example && yarn run dev",
     "link": "node ./scripts/link",
+    "codeformat": "prettier --write *",
     "clean": "lerna clean -y",
     "prepare": "husky install",
     "copydocs": "node ./scripts/copydocs",
-    "push2GithubWebsite": "node ./scripts/push2GithubWebsite",
+    "push2io": "node ./scripts/push2io",
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
     "release:major": "node ./scripts/publish major"
@@ -41,9 +39,10 @@
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "lerna": "^5.1.8",
-		"lint-staged": "^10.5.4",
+    "lint-staged": "^10.5.4",
     "ora": "^5.1.2",
     "prettier": "^2.0.0",
+    "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
     "vue": "^3.0.5",
     "vue-router": "^4.0.4"
@@ -53,14 +52,14 @@
       "path": "node_modules/cz-customizable"
     }
   },
-	"lint-staged": {
-		"src/**/*.{vue, js,jsx,ts,tsx,json}": [
-			"git add"
-		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	}
+  "lint-staged": {
+    "src/**/*.{vue, js,jsx,ts,tsx,json}": [
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }

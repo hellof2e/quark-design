@@ -1,92 +1,93 @@
 {
-	"name": "quarkd",
-	"version": "1.0.14",
-	"description": "Mobile UI Components built on Web Components.",
-	"main": "lib/index.js",
-	"module": "lib/index.js",
-	"scripts": {
-		"tsc": "rm -rf types && npx tsc -b ./tsconfig.types.json && node ./typesGenerat.js",
-		"build": "rm -rf umd && rm -rf lib && cross-env BABEL_ENV=umd rollup -c && npm run tsc",
-		"release:major": "npm run release -- --release-as major",
-		"release:minor": "npm run release -- --release-as minor",
-		"release:patch": "npm run release -- --release-as patch",
-		"release": "npm run build && standard-version",
-		"test": "karma start  --timeout 10000"
-	},
-	"files": [
-		"lib/*",
-		"umd/*",
-		"README.md",
-		"package.json"
-	],
-	"sideEffects": [
-		"lib/**/*.js",
-		"*.css",
-		"*.js"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/hellof2e/quark-design.git"
-	},
-	"keywords": [
-		"web components",
-		"quark",
-		"shadow dom",
-		"custom element"
-	],
-	"devDependencies": {
-		"@babel/cli": "^7.5.5",
-		"@babel/core": "^7.5.5",
-		"@babel/plugin-proposal-decorators": "^7.16.5",
-		"@babel/plugin-transform-runtime": "^7.5.5",
-		"@babel/preset-env": "^7.5.5",
-		"@babel/preset-typescript": "^7.16.5",
-		"@babel/runtime": "^7.5.5",
-		"@open-wc/testing": "^3.0.2",
-		"@open-wc/testing-karma": "^4.0.9",
-		"@rollup/plugin-babel": "^5.3.0",
-		"@rollup/plugin-commonjs": "^21.0.0",
-		"@rollup/plugin-node-resolve": "^13.0.5",
-		"@rollup/plugin-typescript": "^8.3.0",
-		"@quarkd/rollup-plugin-css-variable": "^1.0.0",
-		"@quarkd/rollup-plugin-postcss": "^1.0.0",
-		"@types/body-scroll-lock": "^3.1.0",
-		"@types/lodash.assign": "^4.2.7",
-		"@types/node": "^14.14.31",
-		"babel-loader": "^8.0.6",
-		"chokidar": "^3.5.2",
-		"concurrently": "^6.5.1",
-		"cross-env": "^7.0.3",
-		"deepmerge": "^3.2.0",
-		"fs-extra": "^9.1.0",
-		"rollup-plugin-import-css": "^3.0.2",
-		"rollup-plugin-terser": "^7.0.2",
-		"sinon": "^12.0.1",
-		"standard-version": "^9.3.0",
-		"typescript": "^4.1.5",
-		"rollup-plugin-filesize": "^9.1.2",
-		"postcss-px-to-viewport": "^1.1.1",
-		"postcss": "8.4.16"
-	},
-	"engines": {
-		"node": ">=12.0.0"
-	},
-	"dependencies": {
-		"@better-scroll/core": "^2.4.2",
-		"@better-scroll/slide": "^2.4.2",
-		"@better-scroll/wheel": "^2.4.2",
-		"@quarkd/icons": "^1.0.3",
-		"@quarkd/core": "^1.0.2",
-		"body-scroll-lock": "3.1.5",
-		"lodash.assign": "^4.2.0",
-		"preact": "10.6.6"
-	},
-	"vetur": {
-		"tags": "dist/smartips/tags.json",
-		"attributes": "dist/smartips/attributes.json"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
-	}
+  "name": "quarkd",
+  "version": "1.0.16",
+  "description": "Mobile UI Components built on Web Components.",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "scripts": {
+    "tsc": "rimraf types && npx tsc -b ./tsconfig.types.json && node ./typesGenerat.js",
+    "build": "rimraf umd && rimraf lib && cross-env BABEL_ENV=umd rollup -c && npm run tsc",
+    "release:major": "npm run release -- --release-as major",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:patch": "npm run release -- --release-as patch",
+    "release": "npm run build && standard-version",
+    "test": "karma start  --timeout 10000"
+  },
+  "files": [
+    "lib/*",
+    "umd/*",
+    "README.md",
+    "package.json"
+  ],
+  "sideEffects": [
+    "lib/**/*.js",
+    "*.css",
+    "*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellof2e/quark-design.git"
+  },
+  "keywords": [
+    "web components",
+    "quark",
+    "shadow dom",
+    "custom element"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@babel/runtime": "^7.5.5",
+    "@open-wc/testing": "^3.0.2",
+    "@open-wc/testing-karma": "^4.0.9",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@quarkd/rollup-plugin-css-variable": "^1.0.0",
+    "@quarkd/rollup-plugin-postcss": "^1.0.0",
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/lodash.assign": "^4.2.7",
+    "@types/node": "^14.14.31",
+    "babel-loader": "^8.0.6",
+    "chokidar": "^3.5.2",
+    "concurrently": "^6.5.1",
+    "cross-env": "^7.0.3",
+    "deepmerge": "^3.2.0",
+    "fs-extra": "^9.1.0",
+    "rollup-plugin-import-css": "^3.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sinon": "^12.0.1",
+    "standard-version": "^9.3.0",
+    "typescript": "^4.1.5",
+    "rollup-plugin-filesize": "^9.1.2",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss": "8.4.16",
+    "rimraf": "3.0.2"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@better-scroll/slide": "^2.4.2",
+    "@better-scroll/wheel": "^2.4.2",
+    "@quarkd/icons": "^1.0.3",
+    "@quarkd/core": "^1.0.2",
+    "body-scroll-lock": "3.1.5",
+    "lodash.assign": "^4.2.0",
+    "preact": "10.6.6"
+  },
+  "vetur": {
+    "tags": "dist/smartips/tags.json",
+    "attributes": "dist/smartips/attributes.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

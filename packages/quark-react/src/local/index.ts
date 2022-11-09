@@ -1,2 +1,2 @@
 import Local from "quarkd/lib/locale";
-export default Local
+export default Local;

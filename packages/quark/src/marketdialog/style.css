@@ -1,18 +1,18 @@
- :host quark-overlay .quark-market-container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
- }
-
- :host slot[name='market'] img {
-   width: var(--market-dialog-with, 288px);
-   border-radius: var(--market-dialog-radius, 12px);
-   height: 100%;
+:host quark-overlay .quark-market-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
- :host quark-overlay .quark-market-close {
-   margin-top: 40px;
-   text-align: center;
-   cursor: pointer;
- }
+:host slot[name="market"] img {
+  width: var(--market-dialog-with, 288px);
+  border-radius: var(--market-dialog-radius, 12px);
+  height: 100%;
+}
+
+:host quark-overlay .quark-market-close {
+  margin-top: 40px;
+  text-align: center;
+  cursor: pointer;
+}

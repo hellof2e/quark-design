@@ -48,7 +48,7 @@
   border: 6px solid transparent;
 }
 
-:host([tips]:not([tips=''])[open]) .quark-tooltip-tips {
+:host([tips]:not([tips=""])[open]) .quark-tooltip-tips {
   visibility: visible;
   opacity: 0.9;
 }
@@ -64,13 +64,11 @@
 
 :host([placement="top"]) .quark-tooltip-triangle {
   border-top-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="top"][open]) .quark-tooltip-tips {
   transform: translate(-50%, var(--tips-margin-bottom, 0px));
 }
-
 
 /* right */
 :host([placement="right"]) .quark-tooltip-tips {
@@ -84,7 +82,6 @@
 
 :host([placement="right"]) .quark-tooltip-triangle {
   border-right-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="right"][open]) .quark-tooltip-tips {
@@ -103,7 +100,6 @@
 
 :host([placement="bottom"]) .quark-tooltip-triangle {
   border-bottom-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="bottom"][open]) .quark-tooltip-tips {
@@ -122,7 +118,6 @@
 
 :host([placement="left"]) .quark-tooltip-triangle {
   border-left-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="left"][open]) .quark-tooltip-tips {
@@ -142,7 +137,6 @@
 :host([placement="topleft"]) .quark-tooltip-triangle {
   margin-left: 16px;
   border-top-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="topleft"][open]) .quark-tooltip-tips {
@@ -162,7 +156,6 @@
 :host([placement="topright"]) .quark-tooltip-triangle {
   margin-right: 16px;
   border-top-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="topright"][open]) .quark-tooltip-tips {
@@ -181,7 +174,6 @@
 
 :host([placement="righttop"]) .quark-tooltip-triangle {
   border-right-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="righttop"][open]) .quark-tooltip-tips {
@@ -200,7 +192,6 @@
 
 :host([placement="rightbottom"]) .quark-tooltip-triangle {
   border-right-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="rightbottom"][open]) .quark-tooltip-tips {
@@ -220,7 +211,6 @@
 :host([placement="bottomleft"]) .quark-tooltip-triangle {
   margin-left: 16px;
   border-bottom-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="bottomleft"][open]) .quark-tooltip-tips {
@@ -240,7 +230,6 @@
 :host([placement="bottomright"]) .quark-tooltip-triangle {
   margin-right: 16px;
   border-bottom-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="bottomright"][open]) .quark-tooltip-tips {
@@ -259,7 +248,6 @@
 
 :host([placement="lefttop"]) .quark-tooltip-triangle {
   border-left-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="lefttop"][open]) .quark-tooltip-tips {
@@ -278,7 +266,6 @@
 
 :host([placement="leftbottom"]) .quark-tooltip-triangle {
   border-left-color: var(--tips-background-color, quark-textBaseColor);
-  ;
 }
 
 :host([placement="leftbottom"][open]) .quark-tooltip-tips {

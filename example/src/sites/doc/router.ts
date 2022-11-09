@@ -1,94 +1,102 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import Index from './views/Index.vue';
-import Component from './views/Component.vue';  
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import Index from "./views/Index.vue";
+import Component from "./views/Component.vue";
 const pagesRouter: Array<RouteRecordRaw> = [];
 
 /** vite */
 // ps: 用 fast-glob 也可以
-const modulesPage = import.meta.glob(`../../../../packages/quark/src/**/doc.zh-CN.md`);
+const modulesPage = import.meta.glob(
+	`../../../../packages/quark/src/**/doc.zh-CN.md`
+);
 for (const path in modulesPage) {
-  let name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
-  pagesRouter.push({
-    path: `/zh-CN/component/${name}`,
-    component: modulesPage[path],
-    name: `zh-CN/component/${name}`
-  });
+	let name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
+	pagesRouter.push({
+		path: `/zh-CN/component/${name}`,
+		component: modulesPage[path],
+		name: `zh-CN/component/${name}`,
+	});
 }
 
 const pagesEnRouter: Array<RouteRecordRaw> = [];
-const modulesEnPage = import.meta.glob('../../../../packages/quark/src/**/doc.en-US.md');
+const modulesEnPage = import.meta.glob(
+	"../../../../packages/quark/src/**/doc.en-US.md"
+);
 for (const path in modulesEnPage) {
-  let name = (/src\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
-  pagesEnRouter.push({
-    path: `/en-US/component/${name}`,
-    component: modulesEnPage[path],
-    name: `en-US/component/${name}`,
-  });
+	let name = (/src\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
+	pagesEnRouter.push({
+		path: `/en-US/component/${name}`,
+		component: modulesEnPage[path],
+		name: `en-US/component/${name}`,
+	});
 }
 
 /** react 中英文文档 */
-const modulesPageReact = (import.meta as any).glob('../../../../packages/quark/src/**/doc-react.zh-CN.md');
+const modulesPageReact = (import.meta as any).glob(
+	"../../../../packages/quark/src/**/doc-react.zh-CN.md"
+);
 for (const path in modulesPageReact) {
-  let name = (/src\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[])[1];
-  pagesRouter.push({
-    path: `/zh-CN/component/${name}-react`,
-    component: modulesPageReact[path]
-  });
+	let name = (/src\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[])[1];
+	pagesRouter.push({
+		path: `/zh-CN/component/${name}-react`,
+		component: modulesPageReact[path],
+	});
 }
 
-const modulesEnPageReact = (import.meta as any).glob('../../../../packages/quark/src/**/doc-react.en-US.md');
+const modulesEnPageReact = (import.meta as any).glob(
+	"../../../../packages/quark/src/**/doc-react.en-US.md"
+);
 for (const path in modulesEnPageReact) {
-  let name = (/src\/(.*)\/doc-react.en-US.md/.exec(path) as any[])[1];
-  pagesEnRouter.push({
-    path: `/en-US/component/${name}-react`,
-    component: modulesEnPageReact[path]
-  });
+	let name = (/src\/(.*)\/doc-react.en-US.md/.exec(path) as any[])[1];
+	pagesEnRouter.push({
+		path: `/en-US/component/${name}-react`,
+		component: modulesEnPageReact[path],
+	});
 }
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: "/zh-CN/component/button",
-    name: "index",
-    component: Index,
-    children: [
-      {
-        path: '/zh-CN/component',
-        name: 'component',
-        component: Component,
-        children: pagesRouter
-      },
-      {
-        path: '/en-US/component',
-        name: 'enComponent',
-        component: Component,
-        children: pagesEnRouter
-      },
-    ]
-  },
+	{
+		path: "/zh-CN/component/button",
+		name: "index",
+		component: Index,
+		children: [
+			{
+				path: "/zh-CN/component",
+				name: "component",
+				component: Component,
+				children: pagesRouter,
+			},
+			{
+				path: "/en-US/component",
+				name: "enComponent",
+				component: Component,
+				children: pagesEnRouter,
+			},
+		],
+	},
 ];
 
 routes.push({
-  name: 'notFound',
-  path: '/:path(.*)+',
-  redirect: {
-    name: 'index'
-  }
+	name: "notFound",
+	path: "/:path(.*)+",
+	redirect: {
+		name: "index",
+	},
 });
 
 console.log(routes, 1);
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
-  scrollBehavior(to) {
-    if (to.hash) {
-      const id = to.hash.split('#')[1];
-      const ele = document.getElementById(id);
-      setTimeout(() => {
-        ele && ele.scrollIntoView(true);
-      });
-    }
-  }
+	history: createWebHashHistory(),
+	routes,
+	scrollBehavior(to) {
+		if (to.hash) {
+			const id = to.hash.split("#")[1];
+			const ele = document.getElementById(id);
+			setTimeout(() => {
+				ele && ele.scrollIntoView(true);
+			});
+		}
+	},
 });
 
 export default router;

@@ -1,5 +1,5 @@
 import { expect, fixture } from "@open-wc/testing";
-import "../../lib/cascadepicker";
+import "../../../lib/cascade-picker";
 
 const data = {
   title: "请选择时间",

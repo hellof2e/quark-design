@@ -13,7 +13,7 @@
 .quark-pull-refresh-container {
   position: relative;
   transition-property: transform;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .quark-pull-refresh-head {
@@ -44,6 +44,6 @@
 }
 
 :host([dark]) .quark-pull-refresh-text {
-  --loading-text-color: #FFF;
-  color: #FFF;
+  --loading-text-color: #fff;
+  color: #fff;
 }

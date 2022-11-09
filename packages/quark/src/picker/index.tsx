@@ -1,39 +1,44 @@
-import BScroll from '@better-scroll/core';
-import Wheel from '@better-scroll/wheel';
+import BScroll from "@better-scroll/core";
+import Wheel from "@better-scroll/wheel";
 import QuarkElement, {
   property,
   createRef,
   customElement,
-  state
-} from '@quarkd/core';
-import '../popup';
-import '../button';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
+  state,
+} from "@quarkd/core";
+import "../popup";
+import "../button";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
 import Locale from "../locale";
 export interface PickerColumn {
-  values: string[]
-  defaultIndex: number
+  values: string[];
+  defaultIndex: number;
 }
 export interface SelectColumn {
-  value: string
-  index: number
+  value: string;
+  index: number;
 }
 export interface Props {
-  open: boolean
-  title?: string
-  bottomhidden?: boolean
+  open: boolean;
+  title?: string;
+  confirmtext?: string;
+  bottomhidden?: boolean;
 }
 export interface CustomEvent {
-  close: () => void
-  confirm: (e: {detail:{value: {value: string, index: number}[]}}) => void
-  change?: (e: {detail:{value: {value: string, index: number}[]}}) => void
+  close: () => void;
+  confirm: (e: {
+    detail: { value: { value: string; index: number }[] };
+  }) => void;
+  change?: (e: {
+    detail: { value: { value: string; index: number }[] };
+  }) => void;
 }
 
 BScroll.use(Wheel);
 @customElement({
-  tag: 'quark-picker',
-  style
+  tag: "quark-picker",
+  style,
 })
 class QuarkPicker extends QuarkElement {
   constructor() {
@@ -41,16 +46,19 @@ class QuarkPicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property()
-  name: string = '';
+  name = "";
 
   @property()
-  title: string = '';
+  title = "";
+
+  @property()
+  confirmtext = "";
 
   @property({ type: Boolean })
-  bottomhidden: boolean = false;
+  bottomhidden = false;
 
   @state()
   columns: PickerColumn[] = [];
@@ -61,12 +69,11 @@ class QuarkPicker extends QuarkElement {
 
   wheelWrapper: any = createRef();
 
-
   setColumns(columns: PickerColumn[]) {
     this.columns = columns;
     const { current } = this.wheelWrapper;
     if (!current) {
-      console.warn('dom not find');
+      console.warn("dom not find");
       return;
     }
     for (let i = 0; i < this.columns.length; i += 1) {
@@ -74,7 +81,7 @@ class QuarkPicker extends QuarkElement {
     }
   }
 
-  getValues(needRestore: boolean = true) {
+  getValues(needRestore = true) {
     if (needRestore) {
       this.restorePosition();
     }
@@ -86,7 +93,7 @@ class QuarkPicker extends QuarkElement {
       const index = currentSelectedIndexPair[i];
       return {
         value: column.values[index],
-        index: index
+        index: index,
       };
     });
 
@@ -101,23 +108,23 @@ class QuarkPicker extends QuarkElement {
 
   popupClose = () => {
     this.restorePosition();
-    this.$emit('close');
+    this.$emit("close");
   };
 
   confirm = () => {
     const selectValues = this.getValues();
     this.values = selectValues;
-    this.$emit('confirm', { detail: {value: selectValues} });
+    this.$emit("confirm", { detail: { value: selectValues } });
   };
 
-  debounce(fn, wait){
-    var timer = null;
-    return function(){
-      if(timer !== null){
+  debounce(fn, wait) {
+    let timer = null;
+    return function () {
+      if (timer !== null) {
         clearTimeout(timer);
       }
-      timer = setTimeout(fn,wait);
-    }
+      timer = setTimeout(fn, wait);
+    };
   }
 
   createWheel = (wheelWrapper: any, i: number) => {
@@ -126,14 +133,17 @@ class QuarkPicker extends QuarkElement {
       this.wheels[i] = new BScroll(wheelWrapper.children[i], {
         wheel: {
           selectedIndex: column.defaultIndex || 0,
-          wheelWrapperClass: 'quark-picker-wheel-scroll',
-          wheelItemClass: 'quark-picker-wheel-item'
-        }
+          wheelWrapperClass: "quark-picker-wheel-scroll",
+          wheelItemClass: "quark-picker-wheel-item",
+        },
       });
-      this.wheels[i].on('scrollEnd', this.debounce(() => {
-        const selectValues = this.getValues(false);
-        this.$emit('change', { detail: { value: selectValues } });
-      }, 30));
+      this.wheels[i].on(
+        "scrollEnd",
+        this.debounce(() => {
+          const selectValues = this.getValues(false);
+          this.$emit("change", { detail: { value: selectValues } });
+        }, 30)
+      );
     } else {
       this.wheels[i].refresh();
       this.wheels[i].wheelTo(this.columns[i].defaultIndex, 10);
@@ -189,7 +199,7 @@ class QuarkPicker extends QuarkElement {
           {!this.bottomhidden && (
             <div class="quark-picker-bottom">
               <quark-button type="primary" onclick={this.confirm}>
-                {Locale.current.confirm}
+                {this.confirmtext || Locale.current.confirm}
               </quark-button>
             </div>
           )}

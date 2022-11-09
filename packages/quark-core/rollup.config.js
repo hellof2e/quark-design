@@ -2,7 +2,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import { babel } from "@rollup/plugin-babel";
 import typescript from "@rollup/plugin-typescript";
-// import filesize from 'rollup-plugin-filesize';
+import filesize from "rollup-plugin-filesize";
 
 const extensions = [".js", ".ts", ".tsx"];
 
@@ -30,7 +30,7 @@ const options = [
         exclude: "node_modules/**",
         extensions,
       }),
-      // filesize()
+      filesize(),
     ],
   },
 ];

@@ -1,67 +1,72 @@
-import QuarkElement, {
-  property,
-  createRef,
-  customElement,
-} from '@quarkd/core';
-import './DatePicker';
-import './TimePicker';
-import '@quarkd/icons/lib/close';
-import style from './style.css';
-import Locale from '../locale';
+import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
+import "./DatePicker";
+import "./TimePicker";
+import "@quarkd/icons/lib/close";
+import style from "./style.css";
+import Locale from "../locale";
 
-type DateType = 'date' | 'time' | 'year-month' | 'month-day' | 'datehour' | 'datetime';
+type DateType =
+  | "date"
+  | "time"
+  | "year-month"
+  | "month-day"
+  | "datehour"
+  | "datetime";
 
 export interface SelectColumn {
-  value: string,
-  index: number
+  value: string;
+  index: number;
 }
 export interface Props {
-  open: boolean
-  title?: string
-  type?: DateType
-  value?: string
-  mindate?: string
-  maxdate?: string
-  minhour?: number
-  maxhour?: number
-  minminute?: number
-  maxminute?: number
-  showtoolbar?: boolean
-  confirmbuttontext?: string
-  cancelbuttontext?: string
+  open: boolean;
+  title?: string;
+  type?: DateType;
+  value?: string;
+  mindate?: string;
+  maxdate?: string;
+  minhour?: number;
+  maxhour?: number;
+  minminute?: number;
+  maxminute?: number;
+  showtoolbar?: boolean;
+  confirmbuttontext?: string;
+  cancelbuttontext?: string;
 }
 export interface CustomEvent {
-  close: () => void
-  confirm: (e: {detail:{value: {value: string, index: number}[]}}) => void
-  change?: (e: {detail:{value: {value: string, index: number}[]}}) => void
+  close: () => void;
+  confirm: (e: {
+    detail: { value: { value: string; index: number }[] };
+  }) => void;
+  change?: (e: {
+    detail: { value: { value: string; index: number }[] };
+  }) => void;
 }
 @customElement({
-  tag: 'quark-datetime-picker',
+  tag: "quark-datetime-picker",
   style,
 })
-
 class QuarkDatetimePicker extends QuarkElement {
   constructor() {
     super();
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property()
   value: string;
 
   @property({ type: String })
-  title: string = '';
+  title = "";
 
   @property({ type: String })
-  type: DateType = 'datetime';
+  type: DateType = "datetime";
 
   @property({ type: String })
-  mindate: string = '';
+  mindate = "";
 
   @property({ type: String })
-  maxdate: string = '';
+  maxdate = "";
 
   @property({ type: Number })
   minhour: number | string = 0;
@@ -76,7 +81,7 @@ class QuarkDatetimePicker extends QuarkElement {
   maxminute: number | string = 59;
 
   @property({ type: Boolean })
-  showtoolbar: boolean = false;
+  showtoolbar = false;
 
   @property({ type: String })
   confirmbuttontext: string = Locale.current.confirm;
@@ -92,35 +97,43 @@ class QuarkDatetimePicker extends QuarkElement {
   }
 
   onClose = () => {
-    this.$emit('close');
+    this.$emit("close");
   };
 
   onConfirm = ({ detail }) => {
-    this.$emit('confirm', { detail });
+    this.$emit("confirm", { detail });
   };
 
   onChange = ({ detail }) => {
-    this.$emit('change', { detail });
-  }
+    this.$emit("change", { detail });
+  };
 
   getValues(): SelectColumn[] {
-    return this.type === 'time' ? this.timePickerRef.current?.getValues() : this.datePickerRef.current?.getValues();
+    return this.type === "time"
+      ? this.timePickerRef.current?.getValues()
+      : this.datePickerRef.current?.getValues();
   }
 
   setValue(value: string) {
-    this.type === 'time' ? this.timePickerRef.current?.setValue(value) : this.datePickerRef.current?.setValue(new Date(value));
+    this.type === "time"
+      ? this.timePickerRef.current?.setValue(value)
+      : this.datePickerRef.current?.setValue(new Date(value));
   }
 
   setFormatter(formatter: Function) {
-    this.type === 'time' ? this.timePickerRef.current?.setFormatter(formatter) : this.datePickerRef.current?.setFormatter(formatter);
+    this.type === "time"
+      ? this.timePickerRef.current?.setFormatter(formatter)
+      : this.datePickerRef.current?.setFormatter(formatter);
   }
 
   setFilter(filter: (type: string, values: []) => []) {
-    this.type === 'time' ? this.timePickerRef.current?.setFilter(filter) : this.datePickerRef.current?.setFilter(filter);
+    this.type === "time"
+      ? this.timePickerRef.current?.setFilter(filter)
+      : this.datePickerRef.current?.setFilter(filter);
   }
 
   render() {
-    return this.type === 'time' ? (
+    return this.type === "time" ? (
       <quark-time-picker
         ref={this.timePickerRef}
         value={this.value}

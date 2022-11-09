@@ -1,18 +1,14 @@
-import QuarkElement, {
-  property,
-  customElement,
-  Fragment,
-} from '@quarkd/core';
-import style from './style.css';
+import QuarkElement, { property, customElement, Fragment } from "@quarkd/core";
+import style from "./style.css";
 export interface Props {
-  type?: 'circular' | 'spinner'
-  color?: string
-  size?: string | number
-  vertical?: boolean
+  type?: "circular" | "spinner";
+  color?: string;
+  size?: string | number;
+  vertical?: boolean;
 }
 @customElement({
-  tag: 'quark-loading',
-  style
+  tag: "quark-loading",
+  style,
 })
 class QuarkLoading extends QuarkElement {
   constructor() {
@@ -20,27 +16,26 @@ class QuarkLoading extends QuarkElement {
   }
 
   @property()
-  type: 'spinner' | 'circular' = 'spinner';
+  type: "spinner" | "circular" = "spinner";
 
   @property({
     type: Boolean,
   })
-  vertical: boolean = false;
+  vertical = false;
 
   @property()
-  color: string | undefined = '#879099';
+  color: string | undefined = "#879099";
 
   @property()
   size: string | undefined = undefined;
 
-
   getFontSize() {
-    let fontSize = '30px';
+    let fontSize = "30px";
     if (
-      this.size
-      && (this.size.includes('px')
-        || this.size.includes('rem')
-        || this.size.includes('em'))
+      this.size &&
+      (this.size.includes("px") ||
+        this.size.includes("rem") ||
+        this.size.includes("em"))
     ) {
       fontSize = this.size;
     } else {
@@ -51,7 +46,7 @@ class QuarkLoading extends QuarkElement {
 
   renderLoadingSvg = () => {
     const fontSize = this.getFontSize();
-    if (this.type === 'circular') {
+    if (this.type === "circular") {
       return (
         <svg
           style={{ fontSize }}
