@@ -5,6 +5,8 @@ const data = {
   title:
     "这是一段多行隐藏的新闻3月25日起，湖北境内铁路客运逐步恢复出,请大家提前购买好车票依次上车，不要坐错车",
   speed: "100",
+  paused: true,
+  reverse: true,
 };
 // color size 无法测试
 describe("quark-marquee base attribute", async () => {
@@ -13,6 +15,8 @@ describe("quark-marquee base attribute", async () => {
       `<quark-marquee
         title=${data.title}
         speed=${data.speed}
+        paused=${data.paused}
+        reverse=${data.reverse}
       >
       </quark-marquee>`
     );
@@ -29,5 +33,13 @@ describe("quark-marquee base attribute", async () => {
 
   it("quark-marquee speed attribute ", async () => {
     expect(el.speed).to.equal(data.speed);
+  });
+
+  it("quark-marquee paused attribute ", async () => {
+    expect(el.paused).to.equal(data.paused);
+  });
+
+  it("quark-marquee reverse attribute ", async () => {
+    expect(el.reverse).to.equal(data.reverse);
   });
 });
