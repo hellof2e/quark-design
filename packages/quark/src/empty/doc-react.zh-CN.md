@@ -63,9 +63,9 @@ import { Empty } from "@quarkd/quark-react";
 | 参数      | 说明     | 类型      | 默认值 |
 | --------- | -------- | --------- | ------ |
 | title     | 标题文字 | `string`  |        |
-| desc      | 描述文字 | `string ` |        |
-| image     | 图片 url | ` string` |        |
-| imagesize | 图片大小 | `string ` |        |
+| desc      | 描述文字 | `string` |        |
+| image     | 图片 url | `string` |        |
+| imagesize | 图片大小 | `string` |        |
 
 ## 样式变量
 
