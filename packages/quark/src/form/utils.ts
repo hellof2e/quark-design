@@ -1,4 +1,4 @@
-import { IRuleItem } from './type';
+import { IRuleItem } from "./type";
 
 const isEmpty = (value: string | undefined) => Boolean(value);
 
@@ -15,7 +15,7 @@ export default (rules: IRuleItem[]) => (callBack: any) => {
         validateStatus = isEmpty(value);
       }
       rules[i].validateStatus = validateStatus;
-      if (typeof callBack === 'function' && !validateStatus) callBack(rules[i]);
+      if (typeof callBack === "function" && !validateStatus) callBack(rules[i]);
     }
   } catch (error) {
     console.error(error);
@@ -36,14 +36,14 @@ const arrayEmpty = (arr: any[]) => {
 
 export const filterSymbol = (data: any) =>
   Object.keys(data)
-    .filter((key) => typeof data[key] !== 'symbol' && arrayEmpty(data[key]))
+    .filter((key) => typeof data[key] !== "symbol" && arrayEmpty(data[key]))
     .reduce((acc, key) => ({ ...acc, [key]: data[key] }), {});
 
 export const booleanTagNames = [
-  'QUARK-CHECKBOX',
-  'QUARK-SWITCH',
-  'QUARK-RADIO'
+  "QUARK-CHECKBOX",
+  "QUARK-SWITCH",
+  "QUARK-RADIO",
 ];
-export const radio = 'QUARK-RADIO';
+export const radio = "QUARK-RADIO";
 
-export const radioGroup = 'QUARK-RADIO-GROUP';
+export const radioGroup = "QUARK-RADIO-GROUP";

@@ -11,6 +11,7 @@ npm install --save @quarkd/icons
 
 import '@quarkd/icons/lib/user';
 ```
+
 ### Basic Usage
 
 ```html
@@ -40,7 +41,7 @@ Use `color` prop to set icon color.
 
 ### Props
 
-| Attribute         | Description                             | Type             | Default           |
-|--------------|----------------------------------|------------------|------------------|
-| color        | Icon color                           | `string `          | -                |
-| size         | Icon size，such as `20px` `2em` `2rem`    | `string or number` | -                |
+| Attribute | Description                            | Type               | Default |
+| --------- | -------------------------------------- | ------------------ | ------- |
+| color     | Icon color                             | `string `          | -       |
+| size      | Icon size，such as `20px` `2em` `2rem` | `string or number` | -       |

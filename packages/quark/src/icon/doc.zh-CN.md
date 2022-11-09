@@ -5,6 +5,7 @@
 图标是在一个单独的 npm 包中，如果你想使用图标，需要先安装它：
 
 ### 安装
+
 ```tsx
 npm install --save @quarkd/icons
 
@@ -12,6 +13,7 @@ import '@quarkd/icons/lib/user';
 ```
 
 ### 基本使用
+
 ```html
 <quark-icon-user size="20" />
 ```
@@ -39,7 +41,7 @@ import '@quarkd/icons/lib/user';
 
 ### Props
 
-| 参数         | 说明                             | 类型             | 默认值           |
-|--------------|----------------------------------|------------------|------------------|
-| color        | 图标颜色                           | `string`           | -                |
-| size         | 图标大小，如 `20px` `2em` `2rem`    | `string or number` | -                |
+| 参数  | 说明                             | 类型               | 默认值 |
+| ----- | -------------------------------- | ------------------ | ------ |
+| color | 图标颜色                         | `string`           | -      |
+| size  | 图标大小，如 `20px` `2em` `2rem` | `string or number` | -      |

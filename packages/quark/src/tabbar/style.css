@@ -20,5 +20,5 @@
   display: flex;
   justify-content: space-around;
   background: #fff;
-  box-shadow: var(--tabbar-box-shadow, 0px -2px 8px 0px rgba(36, 39, 41, 0.08)) ;
+  box-shadow: var(--tabbar-box-shadow, 0px -2px 8px 0px rgba(36, 39, 41, 0.08));
 }

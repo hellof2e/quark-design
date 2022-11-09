@@ -40,9 +40,9 @@
     "rimraf": "3.0.2"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/hellof2e/quark-design.git"
-	},
+    "type": "git",
+    "url": "https://github.com/hellof2e/quark-design.git"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

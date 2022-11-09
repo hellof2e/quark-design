@@ -24,13 +24,13 @@ class QuarkButton extends QuarkElement {
   }
 
   @property()
-  time: string = "0";
+  time = "0";
 
   @property()
-  format: string = "hh:mm:ss";
+  format = "hh:mm:ss";
 
   @state()
-  totalTime: number = 0;
+  totalTime = 0;
 
   timeCounter: any = null;
 

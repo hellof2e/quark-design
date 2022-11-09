@@ -34,7 +34,7 @@
   position: absolute;
   color: quark-dangerColor;
   font-size: 14px;
-  content: '*';
+  content: "*";
   left: 8px;
   overflow: visible;
 }
@@ -61,13 +61,13 @@
 }
 
 :host label[disabled] {
-  opacity: .6;
+  opacity: 0.6;
   cursor: not-allowed;
   color: var(--field-disabled-text-color, quark-formDisabledColor);
 }
 
 :host input[disabled] {
-  opacity: .6;
+  opacity: 0.6;
   cursor: not-allowed;
   color: var(--field-disabled-text-color, quark-formDisabledColor);
 }
@@ -81,13 +81,13 @@
   font-size: var(--field-placeholder-font-size, 15px);
 }
 
-:host input[type=number]::-webkit-inner-spin-button,
-:host input[type=number]::-webkit-outer-spin-button {
+:host input[type="number"]::-webkit-inner-spin-button,
+:host input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-:host input[type=number] {
+:host input[type="number"] {
   -moz-appearance: textfield;
 }
 

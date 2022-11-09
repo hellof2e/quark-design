@@ -11,22 +11,24 @@ import "quarkd/lib/cascadepicker";
 ```
 
 ### 基础用法
+
 ```html
 <template>
   <div>
     <h2>基础用法</h2>
     <div @click="click">open</div>
-    <quark-cascade-picker 
+    <quark-cascade-picker
       title="请选择地区"
       ref="pickerRef"
-      :open="open" 
-      @close="close" 
+      :open="open"
+      @close="close"
       @confirm="confirm"
       @change="change"
     />
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -92,10 +94,15 @@ export default {
 
 ```html
 <template>
-  <div >
+  <div>
     <h2>自定义头部</h2>
     <div @click="click">自定义头部</div>
-    <quark-cascade-picker :open="open" @close="close" ref="pickerRef" bottomhidden>
+    <quark-cascade-picker
+      :open="open"
+      @close="close"
+      ref="pickerRef"
+      bottomhidden
+    >
       <div slot="header" class="head-container">
         <span class="cancel" @click="close">取消</span>
         <span class="picker-title">请选择城市</span>
@@ -105,6 +112,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 export default {
   data() {
@@ -172,33 +180,35 @@ export default {
 
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| open        | picker是否显示 | `boolean`                  | `require`
-| title    | 标题 | `string`                  | |
-| bottomhidden      | 是否隐藏底部按钮（通常配合自定义头部使用）           | `boolean` | `false`
-
+| 参数         | 说明                                       | 类型      | 默认值    |
+| ------------ | ------------------------------------------ | --------- | --------- |
+| open         | picker 是否显示                            | `boolean` | `require` |
+| title        | 标题                                       | `string`  |           |
+| bottomhidden | 是否隐藏底部按钮（通常配合自定义头部使用） | `boolean` | `false`   |
 
 ### Events
-| 名称         | 说明                             | 类型   |
-|--------------|----------------------------------|--------|
-| close         | 点击遮罩或者取消按钮 |      `() => void `   |
-| confirm         | 确定按钮点击回调 |      `（e: {detail:{value: SelectedColumn[]}}）=> void `  |
-| change         | picker改变回调 |      `（e: {detail:{value: SelectedColumn[]}}）=> void`   |
 
+| 名称    | 说明                 | 类型                                                |
+| ------- | -------------------- | --------------------------------------------------- |
+| close   | 点击遮罩或者取消按钮 | `() => void `                                       |
+| confirm | 确定按钮点击回调     | `（e: {detail:{value: SelectedColumn[]}}）=> void ` |
+| change  | picker 改变回调      | `（e: {detail:{value: SelectedColumn[]}}）=> void`  |
 
 ### Slot
-| 名称         | 说明                             | 
-|--------------|----------------------------------|
-| name=header  | 自定义头部              |           
+
+| 名称        | 说明       |
+| ----------- | ---------- |
+| name=header | 自定义头部 |
 
 ### 方法
-| 名称         | 说明                             | 类型   |
-|--------------|----------------------------------|--------|
-| setColumns         | 用于设置选择器数据 |      `(columns: PickerColumn[]) => void`   |
-| getValues         | 获取选择器选中的数据，通常配合自定义头部时使用 |      `（）=> SelectedColumn[] `  |
+
+| 名称       | 说明                                           | 类型                                |
+| ---------- | ---------------------------------------------- | ----------------------------------- |
+| setColumns | 用于设置选择器数据                             | `(columns: PickerColumn[]) => void` |
+| getValues  | 获取选择器选中的数据，通常配合自定义头部时使用 | `（）=> SelectedColumn[] `          |
 
 ### 类型定义
+
 ```js
 type PickerColumn = {
   text: string;
@@ -214,12 +224,11 @@ type SelectedColumn = {
 
 ## 样式变量
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                     | 说明                                  | 默认值          | 
-| ------------------------ | ----------------------------------- | --------------- |
-| `--cascadepicker-title-font-size` | 标题字号 | `18px` |   
-| `--cascadepicker-title-color`   | 标题颜色                         |    `#242729`  |
-| `--cascadepicker-title-font-weight`       | 标题字重                           |   `500`   |  
-| `--cascadepicker-title-font-family`       | 标题字体                       |   `PingFangSC-Medium, PingFang SC`    |  
-
+| 名称                                | 说明     | 默认值                           |
+| ----------------------------------- | -------- | -------------------------------- |
+| `--cascadepicker-title-font-size`   | 标题字号 | `18px`                           |
+| `--cascadepicker-title-color`       | 标题颜色 | `#242729`                        |
+| `--cascadepicker-title-font-weight` | 标题字重 | `500`                            |
+| `--cascadepicker-title-font-family` | 标题字体 | `PingFangSC-Medium, PingFang SC` |

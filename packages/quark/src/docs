@@ -1,4 +1,30 @@
 # 更新日志
+### [1.0.16](https://github.com/hellof2e/quark-design/compare/v1.0.15...v1.0.16) (2022-11-09)
+
+
+### Documentation
+
+* Button props type 标点符号修改 ([e3fcaf1](https://github.com/hellof2e/quark-design/commit/e3fcaf1d4dce515c83666f5f9691f4022abc43c9))
+
+
+### 🎉 Features
+
+* code format ([839f68d](https://github.com/hellof2e/quark-design/commit/839f68d6b8e3ddbc183da1cbc0257f296f519f2f))
+* code format ([52d0f9e](https://github.com/hellof2e/quark-design/commit/52d0f9eb21bee9e1309ad866f5ebda621ca15f1c))
+* code format for example ([2882ba0](https://github.com/hellof2e/quark-design/commit/2882ba08f9e9ef5cb330c3dbe28837268bc0557f))
+* code format for example/src/**/*.ts ([b608ede](https://github.com/hellof2e/quark-design/commit/b608edef520f72c6d9116752b795b38ffab92b45))
+* code format for quarkd ([fd380b4](https://github.com/hellof2e/quark-design/commit/fd380b4bcd0fa18fac0a0a6fa32aad8aed0aa371))
+* **picker:** Add confirmtext a props ([f751e1b](https://github.com/hellof2e/quark-design/commit/f751e1bfb1c4fbbf370cff5b3cf078c74bf300c1))
+* prettier --write packages/quark-core/src/**/*.ts ([b83c12f](https://github.com/hellof2e/quark-design/commit/b83c12f7462479beba7f69038227237a5d637795))
+* prettier --write packages/quark-icons/src/**/*.ts ([97eaf43](https://github.com/hellof2e/quark-design/commit/97eaf434f82cf3ab19ca9b6c85066b8bafd6bee0))
+* prettier --write packages/quark-react/src/**/*.ts ([080ce93](https://github.com/hellof2e/quark-design/commit/080ce93f66d37abfa4899029a96065bde7527bf0))
+* prettier --write packages/quark-reactify/src/**/*.ts ([7eaad5e](https://github.com/hellof2e/quark-design/commit/7eaad5e2fcb085278912ea056c6ff2084db87123))
+* prettier --write packages/quark/src/**/*.test.js ([6c22936](https://github.com/hellof2e/quark-design/commit/6c229366fb5a138d40e59a3f00a60043d5aa8d94))
+* refactor type ([8701741](https://github.com/hellof2e/quark-design/commit/8701741f85f8004ed7148cc008461a6f6c986eb2))
+* release 1.0.15 ([ff710cb](https://github.com/hellof2e/quark-design/commit/ff710cb0cee486d0c8c987efbbf743bec0728043))
+* remove example mobile-react files ([909edc8](https://github.com/hellof2e/quark-design/commit/909edc8c4e391bcdf3991e64c3a22b1908b030cf))
+* update quark-icon readme ([44d10c6](https://github.com/hellof2e/quark-design/commit/44d10c61723eadc2d101b391374b2ffa92fbe069))
+
 ### [1.0.15](https://github.com/hellof2e/quark-design/compare/v1.0.14...v1.0.15) (2022-11-08)
 
 

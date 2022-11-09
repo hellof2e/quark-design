@@ -13,7 +13,7 @@ import { List } from "@quarkd/quark-react";
 ### 基础用法
 
 ```tsx
-export default () =>  {
+export default () => {
   const [loading1, setLoading1] = useState(false);
   const [finished1, setFinished1] = useState(false);
   const [list1, setList1] = useState([]);
@@ -49,12 +49,14 @@ export default () =>  {
         ))}
       </div>
     </List>
-  )
-}
+  );
+};
 ```
 
 ### 错误提示
+
 在发生错误时, 可以点错误提示信息重新拉取数据
+
 ```tsx
 export default () => {
   const [loading2, setLoading2] = useState(false);
@@ -101,11 +103,12 @@ export default () => {
         ))}
       </div>
     </List>
-  )
-}
+  );
+};
 ```
 
 ### 自定义提示
+
 ```tsx
     <List
       {...props}
@@ -120,7 +123,9 @@ export default () => {
       </div>
     </List>
 ```
+
 ### 下拉刷新
+
 可以和下拉刷新组件联合使用
 
 ```tsx
@@ -150,24 +155,24 @@ export default () => {
 
 ### Props
 
-| 参数         | 说明                | 类型   | 默认值           |
-|--------------|--------------------|--------|---------------|
-| error     | 是否加载失败，加载失败后点击错误提示可以重新触发 load 事件| `boolean`| `false`|
-| loading     |是否处于加载状态，加载过程中不触发 load 事件| `boolean`| `false`|
-| finished   | 数据是否加载结束 | `boolean`| `false`|
-| offset   | 滚动条与底部距离小于 offset 时触发 load 事件 | `number`| `300`|
-| loadingtext   | 加载过程中的提示文案 | `string`| `加载中...` |
-| finishedtext   | 加载完成后的提示文案 | `string` | |
-| errortext   | 加载失败后的提示文案 | `string` | |
-| textcolor   | 提示文案字体颜色 | `string` | `#879099` |
-|onLoad     | 滚动条与底部距离小于 offset 时触发   |`() => void`     |          |
-|onReload     | 发生错误, 点击重试时触发      | `() => void`   |      |
+| 参数         | 说明                                                       | 类型         | 默认值      |
+| ------------ | ---------------------------------------------------------- | ------------ | ----------- |
+| error        | 是否加载失败，加载失败后点击错误提示可以重新触发 load 事件 | `boolean`    | `false`     |
+| loading      | 是否处于加载状态，加载过程中不触发 load 事件               | `boolean`    | `false`     |
+| finished     | 数据是否加载结束                                           | `boolean`    | `false`     |
+| offset       | 滚动条与底部距离小于 offset 时触发 load 事件               | `number`     | `300`       |
+| loadingtext  | 加载过程中的提示文案                                       | `string`     | `加载中...` |
+| finishedtext | 加载完成后的提示文案                                       | `string`     |             |
+| errortext    | 加载失败后的提示文案                                       | `string`     |             |
+| textcolor    | 提示文案字体颜色                                           | `string`     | `#879099`   |
+| onLoad       | 滚动条与底部距离小于 offset 时触发                         | `() => void` |             |
+| onReload     | 发生错误, 点击重试时触发                                   | `() => void` |             |
 
 ### slots
 
-| 名称         | 说明     |
-|--------------|----------------------------------|
-|content     | 要展示的内容                    |
-|finished     | 自定义的结束状态提示内容          |
-|error     | 自定义的错误提示内容          |
-|loading     | 自定义的加载过程中的提示信息          |
+| 名称     | 说明                         |
+| -------- | ---------------------------- |
+| content  | 要展示的内容                 |
+| finished | 自定义的结束状态提示内容     |
+| error    | 自定义的错误提示内容         |
+| loading  | 自定义的加载过程中的提示信息 |

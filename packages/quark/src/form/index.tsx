@@ -15,10 +15,10 @@ import validateAll, {
 })
 class QuarkForm extends QuarkElement {
   @property()
-  value: string = "";
+  value = "";
 
   @property({ type: Boolean })
-  showtext: boolean = false;
+  showtext = false;
 
   formRef: any = createRef();
 

@@ -192,7 +192,6 @@ class QuarkSearch extends QuarkElement {
               autofocus={this.autofocus}
               maxlength={this.maxlength}
               placeholder={this.placeholder}
-              // @ts-ignore
               oncompositionstart={this.onChoiceStart}
               oncompositionend={this.onChoiceEnd}
               oninput={this.inputEvent}

@@ -70,7 +70,6 @@ After loading is error, reloading will be Emitted only when error text clicked.
 </quark-list>
 ```
 
-
 ```javascript
 data() {
   return {
@@ -119,15 +118,20 @@ methods: {
   </div>
   <div class="list-text" slot="finished">Custom finished text</div>
   <div class="list-text" slot="error">Custom error text</div>
-  <div class="list-text" slot="loading"><quark-loading size="15"> Custom loading</quark-loading></div>
+  <div class="list-text" slot="loading">
+    <quark-loading size="15"> Custom loading</quark-loading>
+  </div>
 </quark-list>
 ```
 
 ### PullRefresh
+
 Can be used with `pull-refresh` component.
+
 ```tsx
 import "quarkd/lib/pull-refresh";
 ```
+
 ```html
 <div>
   <quark-pull-refresh :loading="loading" @refresh="onRefresh">
@@ -146,6 +150,7 @@ import "quarkd/lib/pull-refresh";
   </quark-pull-refresh>
 </div>
 ```
+
 ```javascript
 data() {
   return {
@@ -183,28 +188,29 @@ methods: {
 
 ### Props
 
-| Arribute         | Description               | Type   | Default          |
-|--------------|--------------------|--------|---------------|
-| error | Whether loading is error, the load event will be Emitted only when error text clicked | `boolean`| `false`|
-| loading | Whether to show loading info, the load event will not be Emitted when loading | `boolean`| `false`|
-| finished | Whether loading is finished | boolean| `false`|
-| offset | The load event will be Emitted when the distance between the scrollbar and the bottom is less than offset | `number`| `300`|
-| loadingtext  | Loading text | `string`| `loading...` |
-| finishedtext | Finished text | `string` | |
-| errortext   | Error loaded text | `string` | |
-| textcolor   | Text font color | `string` | `#879099` |
+| Arribute     | Description                                                                                               | Type      | Default      |
+| ------------ | --------------------------------------------------------------------------------------------------------- | --------- | ------------ |
+| error        | Whether loading is error, the load event will be Emitted only when error text clicked                     | `boolean` | `false`      |
+| loading      | Whether to show loading info, the load event will not be Emitted when loading                             | `boolean` | `false`      |
+| finished     | Whether loading is finished                                                                               | boolean   | `false`      |
+| offset       | The load event will be Emitted when the distance between the scrollbar and the bottom is less than offset | `number`  | `300`        |
+| loadingtext  | Loading text                                                                                              | `string`  | `loading...` |
+| finishedtext | Finished text                                                                                             | `string`  |              |
+| errortext    | Error loaded text                                                                                         | `string`  |              |
+| textcolor    | Text font color                                                                                           | `string`  | `#879099`    |
+
 ### Event
 
-| Event         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-|load     | Emitted when the distance between the scrollbar and the bottom is less than offset       |  `() => void`        |
-|reload     | Emitted when click retry after loading is error      |      `() => void`    |
+| Event  | Description                                                                        | Type         |
+| ------ | ---------------------------------------------------------------------------------- | ------------ |
+| load   | Emitted when the distance between the scrollbar and the bottom is less than offset | `() => void` |
+| reload | Emitted when click retry after loading is error                                    | `() => void` |
 
 ### slots
 
-| Name         | Description                 |
-|--------------|-----------------------------|
-| content      | List content                |
-| finished     | Custom finished tips        |
-| error        | 	Custom error tips          |
-| loading      | Custom loading tips         |
+| Name     | Description          |
+| -------- | -------------------- |
+| content  | List content         |
+| finished | Custom finished tips |
+| error    | Custom error tips    |
+| loading  | Custom loading tips  |

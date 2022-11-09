@@ -7,23 +7,26 @@ Text scrolling.
 ### Install
 
 ```tsx
-import { Marquee } from "@quarkd/quark-react"
+import { Marquee } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
+
 ```html
-<Marquee title={title}></Marquee>
+<marquee title="{title}"></marquee>
 ```
+
 ### Speed
+
 ```html
-<Marquee title={title} speed="25"></Marquee>
+<marquee title="{title}" speed="25"></marquee>
 ```
 
 ## API
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default           |
-|--------------|----------------------------------|--------|------------------|
-| title        | Title | `string`                     |
-| speed      | Whether to hide left content               | `string`  | `50`
+| Attribute | Description                  | Type     | Default |
+| --------- | ---------------------------- | -------- | ------- |
+| title     | Title                        | `string` |
+| speed     | Whether to hide left content | `string` | `50`    |

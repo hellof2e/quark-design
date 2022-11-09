@@ -33,46 +33,46 @@ export interface CustomEvent {
 })
 class QuarkField extends QuarkElement {
   @property()
-  name: string = "";
+  name = "";
 
   @property()
-  label: string = "";
+  label = "";
 
   @property()
-  defaultvalue: string = "";
+  defaultvalue = "";
 
   @property()
-  value: string = "";
+  value = "";
 
   @property()
-  type: string = "";
+  type = "";
 
   @property()
-  placeholder: string = "";
+  placeholder = "";
 
   @property()
-  max: string = "";
+  max = "";
 
   @property()
-  maxlength: string = "";
+  maxlength = "";
 
   @property()
-  min: string = "";
+  min = "";
 
   @property()
-  minlength: string = "";
+  minlength = "";
 
   @property()
-  errormsg: string = "";
+  errormsg = "";
 
   @property({ type: Boolean })
-  disabled: boolean = false;
+  disabled = false;
 
   @property({ type: Boolean })
-  readonly: boolean = false;
+  readonly = false;
 
   @property({ type: Boolean })
-  required: boolean = false;
+  required = false;
 
   rules: any[] = [];
 
@@ -81,7 +81,7 @@ class QuarkField extends QuarkElement {
   errorRef: any = createRef();
 
   @state()
-  showError: boolean = false;
+  showError = false;
 
   evenFn = (type: string) => (e: Event) => {
     if (!this.inputRef && !this.inputRef.current) return;
