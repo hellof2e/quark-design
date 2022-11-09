@@ -1,7 +1,7 @@
 :host {
   width: 74px;
   height: var(--tabbar-height, 56px);
-  background: #FFFFFF;
+  background: #ffffff;
   display: inline-flex;
   padding-top: 9px;
   box-sizing: border-box;

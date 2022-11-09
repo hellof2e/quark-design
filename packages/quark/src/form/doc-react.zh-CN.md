@@ -3,109 +3,119 @@
 ### 介绍
 
 表单
+
 ### 安装使用
 
 ```tsx
-import { Form,FormRef } from "@quarkd/quark-react"
+import { Form, FormRef } from "@quarkd/quark-react";
 ```
 
 ### 基本用法
+
 配合 name 字段，设置表单项的值
+
 ```tsx
 export default () => {
   const form1 = useRef<FormRef>(null);
 
   useEffect(() => {
     form1.current.setRules([
-      { name: 'name', required: true },
-      { name: 'password', required: true, type: 'password' }
+      { name: "name", required: true },
+      { name: "password", required: true, type: "password" },
     ]);
-  }, [])
+  }, []);
 
   const submit1 = () => {
     form1.current
       .getValues()
       .then((value) => {
-        console.log(value, '22');
+        console.log(value, "22");
       })
       .catch((e) => {
-        console.log(e, 'e')
-        Toast.error(e.message || '请检查表单项');
+        console.log(e, "e");
+        Toast.error(e.message || "请检查表单项");
       });
   };
-  
+
   return (
     <Form ref={form1}>
-        <Field name="name" label="姓名" />
-        <div className="line" />
-        <Field type="password" name="password" label="密码" />
-        <div className="submit-wrap">
-          <Button type="primary" onClick={submit1} class="submit">
-            提交
-          </Button>
-        </div>
+      <Field name="name" label="姓名" />
+      <div className="line" />
+      <Field type="password" name="password" label="密码" />
+      <div className="submit-wrap">
+        <Button type="primary" onClick={submit1} class="submit">
+          提交
+        </Button>
+      </div>
     </Form>
-  )
-}
+  );
+};
 ```
+
 ### 自定义校验规则
-只对 field 组件有用，支持 required 、validator自定义事件
+
+只对 field 组件有用，支持 required 、validator 自定义事件
+
 ```tsx
-  export default () => {
-    const form2 = useRef<FormRef>(null);
+export default () => {
+  const form2 = useRef<FormRef>(null);
 
-    const submit2 = () => {
-      form2.current
-        .getValues()
-        .then((value) => {
-          console.log(value, '22');
-        })
-        .catch((e) => {
-          Toast.error(e.message || '请检查表单项');
-        });
-   };
+  const submit2 = () => {
+    form2.current
+      .getValues()
+      .then((value) => {
+        console.log(value, "22");
+      })
+      .catch((e) => {
+        Toast.error(e.message || "请检查表单项");
+      });
+  };
 
-    useEffect(() => {
-      form2.current.setRules([
-        {
-          name: 'age',
-          required: true,
-          message: '不能小于18岁',
-          validator: (value) => value >= 18
-        },
-        {
-          name: 'phone',
-          required: true,
-          message: '请输正确的手机号',
-          validator: (value) => /^1[3456789]\d{9}$/g.test(value)
-        }
-      ]);
-    }, [])
+  useEffect(() => {
+    form2.current.setRules([
+      {
+        name: "age",
+        required: true,
+        message: "不能小于18岁",
+        validator: (value) => value >= 18,
+      },
+      {
+        name: "phone",
+        required: true,
+        message: "请输正确的手机号",
+        validator: (value) => /^1[3456789]\d{9}$/g.test(value),
+      },
+    ]);
+  }, []);
 
-    return (
-      <From ref={form2}>
-        <Field placeholder="请输入文本" name="age" label="年龄" />
-        <div class="line" />
-        <Field type="number" value="123" max="11" name="phone" label="手机号"/>
-        <div class="submit-wrap">
-          <div onClick="submit2" class="submit">提交</div>
+  return (
+    <From ref={form2}>
+      <Field placeholder="请输入文本" name="age" label="年龄" />
+      <div class="line" />
+      <Field type="number" value="123" max="11" name="phone" label="手机号" />
+      <div class="submit-wrap">
+        <div onClick="submit2" class="submit">
+          提交
         </div>
-      </From>
-    )
-  }
+      </div>
+    </From>
+  );
+};
 ```
+
 ### 表单项大全
+
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const [pickerStr, setStr] = useState('请选择时间');
+  const [pickerStr, setStr] = useState("请选择时间");
   const form3 = useRef<FormRef>();
   const picker = useRef();
 
   const submit3 = () => {
     form3.current.getValues().then((value) => {
-      Toast.text('请在控制台查看表单值');
-      console.log(value, '22');
+      Toast.text("请在控制台查看表单值");
+      console.log(value, "22");
     });
   };
   const click = () => {
@@ -115,7 +125,7 @@ export default () => {
     setOpen(false);
   };
   const confirm = ({ detail }) => {
-    const datepickerStr = detail.value.map((i) => i.value).join(' ');
+    const datepickerStr = detail.value.map((i) => i.value).join(" ");
     setOpen(false);
     setStr(datepickerStr);
   };
@@ -124,12 +134,12 @@ export default () => {
     picker.current.setColumns([
       {
         defaultIndex: 0,
-        values: ['星期一', '星期二', '星期三', '星期四', '星期五']
+        values: ["星期一", "星期二", "星期三", "星期四", "星期五"],
       },
       {
         defaultIndex: 1,
-        values: ['上午', '下午']
-      }
+        values: ["上午", "下午"],
+      },
     ]);
   }, []);
   return (
@@ -202,16 +212,18 @@ export default () => {
       <div className="line" />
     </div>
   );
-}
+};
 ```
+
 ### 方法
 
-| 名称         | 说明                             | 类型   | 
-|--------------|----------------------------------|--------|
-| submit     | 提交并校验表单获取所有组件的 value  |         `() => Promise<any[]>`| 
-| setRules     | 只对 field 组件有效  |       `(rule: Rule[])=>void`| 
+| 名称     | 说明                               | 类型                   |
+| -------- | ---------------------------------- | ---------------------- |
+| submit   | 提交并校验表单获取所有组件的 value | `() => Promise<any[]>` |
+| setRules | 只对 field 组件有效                | `(rule: Rule[])=>void` |
 
 ### 类型定义
+
 ```js
 type Rule = {
   name: string // 需要校验的 field 组件的 name 属性

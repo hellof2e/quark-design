@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import 'quarkd/lib/badge';
+import "quarkd/lib/badge";
 ```
 
 ### 徽标独立使用
@@ -21,6 +21,7 @@ import 'quarkd/lib/badge';
 ```
 
 ### 徽标类型
+
 徽标支持`dot`、`round`、`label`三种类型，默认为 `round`。
 
 ```html
@@ -33,6 +34,7 @@ import 'quarkd/lib/badge';
 ```
 
 ### 徽标大小
+
 徽标大小支持 `normal`、`big` 两种，默认为 `normal`。
 
 ```html
@@ -51,6 +53,7 @@ import 'quarkd/lib/badge';
 ```
 
 ### 徽标风格
+
 徽标边框支持白色边框
 
 ```html
@@ -61,8 +64,10 @@ import 'quarkd/lib/badge';
   <div></div>
 </quark-badge>
 ```
+
 ### 数字徽标
-数字徽标支持最大值, 超出显示..., 默认最大99
+
+数字徽标支持最大值, 超出显示..., 默认最大 99
 
 ```html
 <quark-badge content="普通徽标">
@@ -72,6 +77,7 @@ import 'quarkd/lib/badge';
   <div></div>
 </quark-badge>
 ```
+
 ### 自定义样式-背景色
 
 ```html
@@ -79,37 +85,37 @@ import 'quarkd/lib/badge';
   <div></div>
 </quark-badge>
 ```
+
 ```css
 .bg-color {
   --badge-background: linear-gradient(90deg, blue, pink);
 }
 ```
 
-
-
 ## API
+
 ### Props
 
-| 参数         | 说明                               | 类型   | 默认值           |
-|--------------|----------------------------------|--------|-----------------|
-| type         | 类型，可选值为 `dot` `round` `label` |`string` |`round`         |
-| content      | 显示内容                            |`string` |无              |
-| size         | 徽标大小，可选值为 `normal` `big`     |`string` |`normal`        |
-| border       | 是否显示边框(默认白色)                |`boolean`| `false`        |
-| max          | 数字显示最大值                       |`number` | `99`            |
+| 参数    | 说明                                 | 类型      | 默认值   |
+| ------- | ------------------------------------ | --------- | -------- |
+| type    | 类型，可选值为 `dot` `round` `label` | `string`  | `round`  |
+| content | 显示内容                             | `string`  | 无       |
+| size    | 徽标大小，可选值为 `normal` `big`    | `string`  | `normal` |
+| border  | 是否显示边框(默认白色)               | `boolean` | `false`  |
+| max     | 数字显示最大值                       | `number`  | `99`     |
 
 ## 样式变量
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                    | 说明                | 默认值          | 
-| -----------------------| --------------------| ---------------|
-| `--badge-text-color`     | badge 文字颜色        | `#FFFFFF`        |      
-| `--badge-background`     | badge 背景           | `#F72626`        |     
-| `--badge-padding-column` | badge 竖直方向内边距   | `2px`            |     
-| `--badge-padding-row`    | badge 水平方向内边距   | `4px`           |     
-| `--badge-font-size`      | badge 文字大小        | `10px`         |     
-| `--badge-font-weight`    | badge 文字粗细        | `500`            |     
-| `--badge-dot-size`       | badge dot模式大小     | `6px`            |     
-| `--badge-font-family`    | badge font-family    | `跟随系统`        |      
-| `--badge-border-color`   | badge 边框颜色        | `#FFFFFF`        |     
+| 名称                     | 说明                 | 默认值     |
+| ------------------------ | -------------------- | ---------- |
+| `--badge-text-color`     | badge 文字颜色       | `#FFFFFF`  |
+| `--badge-background`     | badge 背景           | `#F72626`  |
+| `--badge-padding-column` | badge 竖直方向内边距 | `2px`      |
+| `--badge-padding-row`    | badge 水平方向内边距 | `4px`      |
+| `--badge-font-size`      | badge 文字大小       | `10px`     |
+| `--badge-font-weight`    | badge 文字粗细       | `500`      |
+| `--badge-dot-size`       | badge dot 模式大小   | `6px`      |
+| `--badge-font-family`    | badge font-family    | `跟随系统` |
+| `--badge-border-color`   | badge 边框颜色       | `#FFFFFF`  |

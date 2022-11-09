@@ -5,8 +5,8 @@ const defaultRoot = window;
 function isElement(node: Element) {
   const ELEMENT_NODE_TYPE = 1;
   return (
-    node.tagName !== 'HTML' &&
-    node.tagName !== 'BODY' &&
+    node.tagName !== "HTML" &&
+    node.tagName !== "BODY" &&
     node.nodeType === ELEMENT_NODE_TYPE
   );
 }
@@ -21,9 +21,9 @@ export function getUnuseParent(
   while (node && node !== root && isElement(node)) {
     const { display, height, visibility } = window.getComputedStyle(node);
     if (
-      display === 'none' ||
-      height.startsWith('0') ||
-      visibility === 'hidden'
+      display === "none" ||
+      height.startsWith("0") ||
+      visibility === "hidden"
     ) {
       return node;
     }
@@ -53,7 +53,7 @@ export function getScrollParent(
 }
 
 var hasOwn = {}.hasOwnProperty;
-export function classNames(...rest: any):string {
+export function classNames(...rest: any): string {
   var classes = [];
 
   for (var i = 0; i < rest.length; i++) {
@@ -62,7 +62,7 @@ export function classNames(...rest: any):string {
 
     var argType = typeof arg;
 
-    if (argType === 'string' || argType === 'number') {
+    if (argType === "string" || argType === "number") {
       classes.push(arg);
     } else if (Array.isArray(arg)) {
       if (arg.length) {
@@ -72,7 +72,7 @@ export function classNames(...rest: any):string {
           classes.push(inner);
         }
       }
-    } else if (argType === 'object') {
+    } else if (argType === "object") {
       if (arg.toString === Object.prototype.toString) {
         for (var key in arg) {
           if (hasOwn.call(arg, key) && arg[key]) {
@@ -85,5 +85,5 @@ export function classNames(...rest: any):string {
     }
   }
 
-  return classes.join(' ');
+  return classes.join(" ");
 }

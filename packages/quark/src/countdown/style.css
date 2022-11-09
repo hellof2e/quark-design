@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   font-size: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 :host .num {
@@ -12,12 +12,12 @@
   font-weight: bold;
   min-width: var(--countdown-num-min-width, 18px);
   padding: var(--countdown-num-padding, 0 3px);
-  border-radius:  var(--countdown-num-border-radius, 4px);
-  background: var(--countdown-num-background, #F4433D);
+  border-radius: var(--countdown-num-border-radius, 4px);
+  background: var(--countdown-num-background, #f4433d);
 }
 
 :host .dot {
   display: inline-block;
   margin: var(--countdown-dot-margin, 0 2px);
-  color: var(--countdown-dot-color, #F4433D);
+  color: var(--countdown-dot-color, #f4433d);
 }

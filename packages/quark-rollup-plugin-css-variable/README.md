@@ -1,32 +1,35 @@
 # @quarkd/rollup-plugin-css-variable
-一个能够支持替换css中符合规则的变量的rollup插件。
+
+一个能够支持替换 css 中符合规则的变量的 rollup 插件。
 
 ---
 
 ## Usage
 
 rollup.config.js
+
 ```js
-import cssVariable from '@quarkd/rollup-plugin-css-variable';
+import cssVariable from "@quarkd/rollup-plugin-css-variable";
 
 const variableMap = {
-  textColorWhite: '#ffffff',
-}
+  textColorWhite: "#ffffff",
+};
 
 export default {
-  input: 'index.js',
-  output: { file: 'dist/index.js', format: 'esm'},
+  input: "index.js",
+  output: { file: "dist/index.js", format: "esm" },
   plugins: [
     // 建议放在第一位
     cssVariable({
       variableMap,
-      prefix: 'quark-'
-    })
-  ]
+      prefix: "quark-",
+    }),
+  ],
 };
 ```
 
 style.css - input
+
 ```css
 .text-white {
   color: quark-textColorWhite;
@@ -34,6 +37,7 @@ style.css - input
 ```
 
 style.css - output
+
 ```css
 .text-white {
   color: #ffffff;

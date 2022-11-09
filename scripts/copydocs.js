@@ -1,5 +1,5 @@
-const fse = require('fs-extra');
-const path = require('path');
+const fse = require("fs-extra");
+const path = require("path");
 const targetBaseUrl = `${process.cwd()}/site_docs`;
 // const changeLogUrl = `${process.cwd()}/changelog`;
 
@@ -7,7 +7,7 @@ const copyFile = (from, to) => {
   fse
     .copy(from, to)
     .then(() => {
-      console.log('success >>>>', to);
+      console.log("success >>>>", to);
     })
     .catch((err) => {
       console.error(err);
@@ -26,8 +26,8 @@ const removeFile = async (url) => {
 };
 
 const copy = async () => {
-  const quarkPath = path.resolve(__dirname, '../packages/quark');
-  let configPath = path.resolve(__dirname, '../example/src/config.json');
+  const quarkPath = path.resolve(__dirname, "../packages/quark");
+  let configPath = path.resolve(__dirname, "../example/src/config.json");
   let configPkgPath = path.resolve(__dirname, `${quarkPath}/package.json`);
   let quarkuiDocsConfigPath = `${targetBaseUrl}/config.json`;
   // let changelogPath = `${changeLogUrl}/CHANGELOG.md`;
@@ -51,8 +51,8 @@ const copy = async () => {
         let reactDocpath = `packages/quark/src/${cmpName}/doc-react.zh-CN.md`;
         let reactDocEnPath = `packages/quark/src/${cmpName}/doc-react.en-US.md`;
 
-        console.log(docpath, "docpath---------->")
-        console.log(docEnPath, "docEnPath---------->")
+        console.log(docpath, "docpath---------->");
+        console.log(docEnPath, "docEnPath---------->");
         fse.readFile(docpath, (err, data) => {
           if (!err) {
             copyFile(docpath, `${targetBaseUrl}/docs/${cmpName}/doc.zh-CN.md`);
@@ -60,19 +60,28 @@ const copy = async () => {
         });
         fse.readFile(docEnPath, (err, data) => {
           if (!err) {
-            copyFile(docEnPath, `${targetBaseUrl}/docs/${cmpName}/doc.en-US.md`);
+            copyFile(
+              docEnPath,
+              `${targetBaseUrl}/docs/${cmpName}/doc.en-US.md`
+            );
           }
         });
-        
+
         // react docs
         fse.readFile(reactDocpath, (err, data) => {
           if (!err) {
-            copyFile(reactDocpath, `${targetBaseUrl}/docs/${cmpName}/doc-react.zh-CN.md`);
+            copyFile(
+              reactDocpath,
+              `${targetBaseUrl}/docs/${cmpName}/doc-react.zh-CN.md`
+            );
           }
         });
         fse.readFile(reactDocEnPath, (err, data) => {
           if (!err) {
-            copyFile(reactDocEnPath, `${targetBaseUrl}/docs/${cmpName}/doc-react.en-US.md`);
+            copyFile(
+              reactDocEnPath,
+              `${targetBaseUrl}/docs/${cmpName}/doc-react.en-US.md`
+            );
           }
         });
       }
@@ -83,25 +92,24 @@ const copy = async () => {
   const fromPkgConfig = await fse.readJson(configPkgPath);
 
   const obj = {
-    version: '',
+    version: "",
     nav: [],
-    docs: []
+    docs: [],
   };
   fse.outputJSON(quarkuiDocsConfigPath, obj, () => {
     const docsConfig = fse.readJson(quarkuiDocsConfigPath);
     docsConfig.version = fromPkgConfig.version;
     docsConfig.nav = fromConfig.nav;
     docsConfig.docs = fromConfig.docs;
-    docsConfig.demoUrl = 'https://quark-design.hellobike.com/demo/demo.html#';
+    docsConfig.demoUrl = "https://quark-design.hellobike.com/demo/demo.html#";
     fse
       .writeJson(quarkuiDocsConfigPath, docsConfig, {
-        spaces: 2
+        spaces: 2,
       })
       .then(() => {
         console.log(`${fromPkgConfig.version} success!`);
       });
   });
-
 
   // 复制changelog
   // await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.md`);

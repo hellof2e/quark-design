@@ -1,68 +1,68 @@
 :host {
-    display: block;
-    text-align: unset;
-    background-color: var(--tabs-background-color, #fff);
+  display: block;
+  text-align: unset;
+  background-color: var(--tabs-background-color, #fff);
 }
 
 .quark-tabs {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .quark-tab-nav-con {
-    position: relative;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 }
 
 .quark-tab-nav {
-    display: flex;
+  display: flex;
 }
 
 .quark-tab-nav-con::-webkit-scrollbar {
-    width: 0 !important;
-    height: 0 !important;
-    background: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 
 .quark-tab-line {
-    background: var(--tab-active-line-color, quark-primaryColor);
-    position: absolute;
-    width: 0;
-    margin-top: -3px;
-    height: 3px;
-    border-radius: 2px;
-    transition: .25s;
-    transition-timing-function: ease-in-out;
+  background: var(--tab-active-line-color, quark-primaryColor);
+  position: absolute;
+  width: 0;
+  margin-top: -3px;
+  height: 3px;
+  border-radius: 2px;
+  transition: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .quark-tab-content {
-    overflow: hidden;
-    flex: 1;
+  overflow: hidden;
+  flex: 1;
 }
 
 .quark-tab-content-wrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition-property: transform;
-    transition-duration: .25s;
-    transition-timing-function: ease-in-out;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 ::slotted(quark-tab-content) {
-    box-sizing: border-box;
-    width: 100%;
-    visibility: visible;
-    height: 100%;
-    flex-shrink: 0;
-    overflow: auto;
+  box-sizing: border-box;
+  width: 100%;
+  visibility: visible;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: auto;
 }
 
 ::slotted(quark-tab-content:not([active])) {
-    visibility: hidden;
-    height: 0;
+  visibility: hidden;
+  height: 0;
 }

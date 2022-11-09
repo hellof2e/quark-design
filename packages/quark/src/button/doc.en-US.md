@@ -7,7 +7,7 @@ To trigger an operation.
 ### Install
 
 ```tsx
-import 'quarkd/lib/button';
+import "quarkd/lib/button";
 ```
 
 ### Basic Usage
@@ -71,10 +71,15 @@ A button shape can be added to a button by setting `shape` prop on the Button, w
 A loading indicator can be added to a button by setting `loading` prop on the Button. `loadingcolor` prop controls the loading color, `loadingsize` prop controls the loading size, and `loadingtype` prop controls the loading type. For loading, refer to the loading component.
 
 ```html
-<quark-button loading type="danger" loadtype="circular">Loading...</quark-button>
+<quark-button loading type="danger" loadtype="circular"
+  >Loading...</quark-button
+>
 <quark-button loading type="warning">Loading...</quark-button>
-<quark-button @click="changeLoading" :loading="isLoading" type="success">Click me!</quark-button>
+<quark-button @click="changeLoading" :loading="isLoading" type="success"
+  >Click me!</quark-button
+>
 ```
+
 ```js
 export default {
   setup() {
@@ -82,16 +87,18 @@ export default {
 
     const changeLoading = () => {
       isLoading.value = true;
-      setTimeout(() => { isLoading.value = false }, 2000);
-    }
+      setTimeout(() => {
+        isLoading.value = false;
+      }, 2000);
+    };
 
     return {
       data,
       isLoading,
-      handleChange
-    }
-  }
-}
+      handleChange,
+    };
+  },
+};
 ```
 
 ### Icon
@@ -99,37 +106,39 @@ export default {
 Button components can contain an Icon. This is done by setting `icon` prop within the Button.
 
 ```html
-<quark-button type="primary" icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png">Like</quark-button>
+<quark-button
+  type="primary"
+  icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
+  >Like</quark-button
+>
 ```
 
 ## API
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default           |
-|--------------|----------------------------------|--------|------------------|
-| type         | Button type，can be set to `primary`, `success`, `danger`, `warning`| `string` | `primary`         |
-| size |  Button size，can be set to `small`, `normal`, `big`, `large`| `string` | `normal` |
-| disabled          | 	Whether to disable button                 | `boolean` | `false`              |
-| icon          | Icon on button (can be set to url link)                 | `string` | -     |
-| shape          | Button shape，can be set to `square`, `round`           | `string` | `round`               |
-| plain         | 	Whether to be plain button | `boolean` | `false ` |
-| loading          | Whether to show loading status                    | `boolean` | `false`               |
-| loadtype |  Loading type，can be set to `circular` | `string` | `spinner` |
-| loadingcolor | Loading color | `string` | `#fff` |
-| loadingsize |  Loading size | `string` | `20` |
-
+| Attribute    | Description                                                          | Type      | Default   |
+| ------------ | -------------------------------------------------------------------- | --------- | --------- |
+| type         | Button type，can be set to `primary`, `success`, `danger`, `warning` | `string`  | `primary` |
+| size         | Button size，can be set to `small`, `normal`, `big`, `large`         | `string`  | `normal`  |
+| disabled     | Whether to disable button                                            | `boolean` | `false`   |
+| icon         | Icon on button (can be set to url link)                              | `string`  | -         |
+| shape        | Button shape，can be set to `square`, `round`                        | `string`  | `round`   |
+| plain        | Whether to be plain button                                           | `boolean` | `false `  |
+| loading      | Whether to show loading status                                       | `boolean` | `false`   |
+| loadtype     | Loading type，can be set to `circular`                               | `string`  | `spinner` |
+| loadingcolor | Loading color                                                        | `string`  | `#fff`    |
+| loadingsize  | Loading size                                                         | `string`  | `20`      |
 
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name           |Description                                 | Default Value          | 
-| ------------------------ | ----------------------------------- | --------------- |
-| `--button-height`       | Height of button                       |    `32px` |    
-| `--button-hspacing`       | Left and right padding of button                    |    `12px`|    
-| `--button-font-size`    | font size on button                          |       `14px`| 
-| `--button-border-radius`        | Border-radius of button                          | `8px`      | 
-| `--button-color` | font color on button                      | `#fff`  |
-| `--button-icon-hspacing` | icon margin right                        | `6px`  |
-
+| Name                     | Description                      | Default Value |
+| ------------------------ | -------------------------------- | ------------- |
+| `--button-height`        | Height of button                 | `32px`        |
+| `--button-hspacing`      | Left and right padding of button | `12px`        |
+| `--button-font-size`     | font size on button              | `14px`        |
+| `--button-border-radius` | Border-radius of button          | `8px`         |
+| `--button-color`         | font color on button             | `#fff`        |
+| `--button-icon-hspacing` | icon margin right                | `6px`         |

@@ -11,6 +11,7 @@ import { Overlay } from "@quarkd/quark-react";
 ```
 
 ### 基础用法
+
 ```js
 export default () => {
   const [open, setOpen] = useState(false);
@@ -29,13 +30,13 @@ export default () => {
       <Overlay open={open} onClose={handleClose} />
     </div>
   );
-}
+};
 ```
 
 ### 嵌入内容
 
 ```html
-<Overlay open={open} onClose= {handleClose}>
+<Overlay open="{open}" onClose="{handleClose}">
   <div class="content"></div>
 </Overlay>
 <style>
@@ -52,18 +53,16 @@ export default () => {
 
 ### Props
 
-| 参数         | 说明                             | 类型   | 默认值           |
-|--------------|----------------------------------|--------|------------------|
-| open        | picker是否显示 | `boolean `                 | `require`
-| zindex    | 遮罩层级 | `number `               | `999`
-| onClose         | 遮罩关闭 |      `() => void`    |`require` |
-
+| 参数    | 说明            | 类型         | 默认值    |
+| ------- | --------------- | ------------ | --------- |
+| open    | picker 是否显示 | `boolean `   | `require` |
+| zindex  | 遮罩层级        | `number `    | `999`     |
+| onClose | 遮罩关闭        | `() => void` | `require` |
 
 ## 样式变量
 
-组件提供了以下[CSS变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                     | 说明                                  | 默认值          | 
-| ------------------------ | ----------------------------------- | --------------- |
-| `--overlay-background` | 遮罩背景 | `rgba(0, 0, 0, 0.7)` |   
-
+| 名称                   | 说明     | 默认值               |
+| ---------------------- | -------- | -------------------- |
+| `--overlay-background` | 遮罩背景 | `rgba(0, 0, 0, 0.7)` |

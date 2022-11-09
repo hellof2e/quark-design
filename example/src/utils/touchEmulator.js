@@ -5,46 +5,46 @@
  */
 
 var eventTarget;
-var supportTouch = 'ontouchstart' in window;
+var supportTouch = "ontouchstart" in window;
 
 // polyfills
 if (!document.createTouch) {
-  document.createTouch = function(
-    view,
-    target,
-    identifier,
-    pageX,
-    pageY,
-    screenX,
-    screenY
-  ) {
-    // auto set
-    return new Touch(
-      target,
-      identifier,
-      {
-        pageX: pageX,
-        pageY: pageY,
-        screenX: screenX,
-        screenY: screenY,
-        clientX: pageX - window.pageXOffset,
-        clientY: pageY - window.pageYOffset
-      },
-      0,
-      0
-    );
-  };
+	document.createTouch = function (
+		view,
+		target,
+		identifier,
+		pageX,
+		pageY,
+		screenX,
+		screenY
+	) {
+		// auto set
+		return new Touch(
+			target,
+			identifier,
+			{
+				pageX: pageX,
+				pageY: pageY,
+				screenX: screenX,
+				screenY: screenY,
+				clientX: pageX - window.pageXOffset,
+				clientY: pageY - window.pageYOffset,
+			},
+			0,
+			0
+		);
+	};
 }
 
 if (!document.createTouchList) {
-  document.createTouchList = function() {
-    var touchList = TouchList();
-    for (var i = 0; i < arguments.length; i++) {
-      touchList[i] = arguments[i];
-    }
-    touchList.length = arguments.length;
-    return touchList;
-  };
+	document.createTouchList = function () {
+		var touchList = TouchList();
+		for (var i = 0; i < arguments.length; i++) {
+			touchList[i] = arguments[i];
+		}
+		touchList.length = arguments.length;
+		return touchList;
+	};
 }
 
 /**
@@ -59,17 +59,17 @@ if (!document.createTouchList) {
  */
 
 var Touch = function Touch(target, identifier, pos, deltaX, deltaY) {
-  deltaX = deltaX || 0;
-  deltaY = deltaY || 0;
+	deltaX = deltaX || 0;
+	deltaY = deltaY || 0;
 
-  this.identifier = identifier;
-  this.target = target;
-  this.clientX = pos.clientX + deltaX;
-  this.clientY = pos.clientY + deltaY;
-  this.screenX = pos.screenX + deltaX;
-  this.screenY = pos.screenY + deltaY;
-  this.pageX = pos.pageX + deltaX;
-  this.pageY = pos.pageY + deltaY;
+	this.identifier = identifier;
+	this.target = target;
+	this.clientX = pos.clientX + deltaX;
+	this.clientY = pos.clientY + deltaY;
+	this.screenX = pos.screenX + deltaX;
+	this.screenY = pos.screenY + deltaY;
+	this.pageX = pos.pageX + deltaX;
+	this.pageY = pos.pageY + deltaY;
 };
 
 /**
@@ -78,18 +78,18 @@ var Touch = function Touch(target, identifier, pos, deltaX, deltaY) {
  * @returns touchList
  */
 function TouchList() {
-  var touchList = [];
+	var touchList = [];
 
-  touchList['item'] = function(index) {
-    return this[index] || null;
-  };
+	touchList["item"] = function (index) {
+		return this[index] || null;
+	};
 
-  // specified by Mozilla
-  touchList['identifiedTouch'] = function(id) {
-    return this[id + 1] || null;
-  };
+	// specified by Mozilla
+	touchList["identifiedTouch"] = function (id) {
+		return this[id + 1] || null;
+	};
 
-  return touchList;
+	return touchList;
 }
 
 /**
@@ -100,39 +100,39 @@ function TouchList() {
 
 var initiated = false;
 function onMouse(touchType) {
-  return function(ev) {
-    // prevent mouse events
+	return function (ev) {
+		// prevent mouse events
 
-    if (ev.type === 'mousedown') {
-      initiated = true;
-    }
+		if (ev.type === "mousedown") {
+			initiated = true;
+		}
 
-    if (ev.type === 'mouseup') {
-      initiated = false;
-    }
+		if (ev.type === "mouseup") {
+			initiated = false;
+		}
 
-    if (ev.type === 'mousemove' && !initiated) {
-      return;
-    }
+		if (ev.type === "mousemove" && !initiated) {
+			return;
+		}
 
-    // The EventTarget on which the touch point started when it was first placed on the surface,
-    // even if the touch point has since moved outside the interactive area of that element.
-    // also, when the target doesnt exist anymore, we update it
-    if (
-      ev.type === 'mousedown' ||
-      !eventTarget ||
-      (eventTarget && !eventTarget.dispatchEvent)
-    ) {
-      eventTarget = ev.target;
-    }
+		// The EventTarget on which the touch point started when it was first placed on the surface,
+		// even if the touch point has since moved outside the interactive area of that element.
+		// also, when the target doesnt exist anymore, we update it
+		if (
+			ev.type === "mousedown" ||
+			!eventTarget ||
+			(eventTarget && !eventTarget.dispatchEvent)
+		) {
+			eventTarget = ev.target;
+		}
 
-    triggerTouch(touchType, ev);
+		triggerTouch(touchType, ev);
 
-    // reset
-    if (ev.type === 'mouseup') {
-      eventTarget = null;
-    }
-  };
+		// reset
+		if (ev.type === "mouseup") {
+			eventTarget = null;
+		}
+	};
 }
 
 /**
@@ -141,19 +141,19 @@ function onMouse(touchType) {
  * @param mouseEv
  */
 function triggerTouch(eventName, mouseEv) {
-  var touchEvent = document.createEvent('Event');
-  touchEvent.initEvent(eventName, true, true);
+	var touchEvent = document.createEvent("Event");
+	touchEvent.initEvent(eventName, true, true);
 
-  touchEvent.altKey = mouseEv.altKey;
-  touchEvent.ctrlKey = mouseEv.ctrlKey;
-  touchEvent.metaKey = mouseEv.metaKey;
-  touchEvent.shiftKey = mouseEv.shiftKey;
+	touchEvent.altKey = mouseEv.altKey;
+	touchEvent.ctrlKey = mouseEv.ctrlKey;
+	touchEvent.metaKey = mouseEv.metaKey;
+	touchEvent.shiftKey = mouseEv.shiftKey;
 
-  touchEvent.touches = getActiveTouches(mouseEv);
-  touchEvent.targetTouches = getActiveTouches(mouseEv);
-  touchEvent.changedTouches = createTouchList(mouseEv);
+	touchEvent.touches = getActiveTouches(mouseEv);
+	touchEvent.targetTouches = getActiveTouches(mouseEv);
+	touchEvent.changedTouches = createTouchList(mouseEv);
 
-  eventTarget.dispatchEvent(touchEvent);
+	eventTarget.dispatchEvent(touchEvent);
 }
 
 /**
@@ -162,9 +162,9 @@ function triggerTouch(eventName, mouseEv) {
  * @returns {TouchList}
  */
 function createTouchList(mouseEv) {
-  var touchList = TouchList();
-  touchList.push(new Touch(eventTarget, 1, mouseEv, 0, 0));
-  return touchList;
+	var touchList = TouchList();
+	touchList.push(new Touch(eventTarget, 1, mouseEv, 0, 0));
+	return touchList;
 }
 
 /**
@@ -173,25 +173,25 @@ function createTouchList(mouseEv) {
  * @returns {TouchList}
  */
 function getActiveTouches(mouseEv) {
-  // empty list
-  if (mouseEv.type === 'mouseup') {
-    return TouchList();
-  }
-  return createTouchList(mouseEv);
+	// empty list
+	if (mouseEv.type === "mouseup") {
+		return TouchList();
+	}
+	return createTouchList(mouseEv);
 }
 
 /**
  * TouchEmulator initializer
  */
 function TouchEmulator() {
-  window.addEventListener('mousedown', onMouse('touchstart'), true);
-  window.addEventListener('mousemove', onMouse('touchmove'), true);
-  window.addEventListener('mouseup', onMouse('touchend'), true);
+	window.addEventListener("mousedown", onMouse("touchstart"), true);
+	window.addEventListener("mousemove", onMouse("touchmove"), true);
+	window.addEventListener("mouseup", onMouse("touchend"), true);
 }
 
 // start distance when entering the multitouch mode
-TouchEmulator['multiTouchOffset'] = 75;
+TouchEmulator["multiTouchOffset"] = 75;
 
 if (!supportTouch) {
-  new TouchEmulator();
+	new TouchEmulator();
 }

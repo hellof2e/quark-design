@@ -11,6 +11,7 @@ import "quarkd/lib/picker";
 ```
 
 ### Basic Usage
+
 ```html
 <template>
   <div>
@@ -27,6 +28,7 @@ import "quarkd/lib/picker";
   </div>
 </template>
 ```
+
 ```js
 <script>
 export default {
@@ -75,7 +77,7 @@ export default {
 
 ```html
 <template>
-  <div >
+  <div>
     <h2>Custom Header</h2>
     <div @click="click">Custom Header</div>
     <quark-picker :open="open" @close="close" ref="pickerRef" bottomhidden>
@@ -88,6 +90,7 @@ export default {
   </div>
 </template>
 ```
+
 ```js
 <script>
 export default {
@@ -138,33 +141,33 @@ export default {
 
 ### Props
 
-| Attribute         | Description                             | Type   | Default  |
-|--------------|----------------------------------|--------|------------------|
-| open         | Whether to show picker	 | `boolean`  | `require`
-| title        | Title | `string` | - |
-| confirmtext      | Text of the ok button           | `string` | `Confirm`
-| bottomhidden | Whether to show bottom button (use with custom header)  | `boolean` | `false`
+| Attribute    | Description                                            | Type      | Default   |
+| ------------ | ------------------------------------------------------ | --------- | --------- |
+| open         | Whether to show picker                                 | `boolean` | `require` |
+| title        | Title                                                  | `string`  | -         |
+| confirmtext  | Text of the ok button                                  | `string`  | `Confirm` |
+| bottomhidden | Whether to show bottom button (use with custom header) | `boolean` | `false`   |
 
 ### Events
 
-| Event         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| close        | Emitted when click mask or cancel button. |      `() => void`    |
-| confirm      | Emitted when click confirm button. |      `（e: {detail:{value: SelectColumn[]}}）=> void`   |
-| change       | Emitted when current option changed. |      `（e: {detail:{value: SelectColumn[]}}）=> void`   |
+| Event   | Description                               | Type                                             |
+| ------- | ----------------------------------------- | ------------------------------------------------ |
+| close   | Emitted when click mask or cancel button. | `() => void`                                     |
+| confirm | Emitted when click confirm button.        | `（e: {detail:{value: SelectColumn[]}}）=> void` |
+| change  | Emitted when current option changed.      | `（e: {detail:{value: SelectColumn[]}}）=> void` |
 
 ### Slot
 
-| Name         | Description                             |
-|--------------|----------------------------------|
-| name=header  | Custom header              |
+| Name        | Description   |
+| ----------- | ------------- |
+| name=header | Custom header |
 
 ### Methods
 
-| Name         | Description                             | Type   |
-|--------------|----------------------------------|--------|
-| setColumns   | Set current value of Picker	 |  `(columns: PickerColumn[]) => void` |
-| getValues    | Get values selected by Picker, usually used with custom header. |  `（）=> SelectColumn[]` |
+| Name       | Description                                                     | Type                                |
+| ---------- | --------------------------------------------------------------- | ----------------------------------- |
+| setColumns | Set current value of Picker                                     | `(columns: PickerColumn[]) => void` |
+| getValues  | Get values selected by Picker, usually used with custom header. | `（）=> SelectColumn[]`             |
 
 ### Type definition
 
@@ -184,10 +187,9 @@ type SelectColumn = {
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                                  | Default          |
-| ------------------------ | ----------------------------------- | --------------- |
-| `--picker-title-font-size` | Title font size | `18px` |
-| `--picker-title-color`   | Title font color | ` #242729`  |
-| `--picker-title-font-weight`  | Title font weight  |  `500` |
-| `--picker-title-font-family`  | Title font family  |  `PingFangSC-Medium, PingFang SC`  |
-
+| Name                         | Description       | Default                          |
+| ---------------------------- | ----------------- | -------------------------------- |
+| `--picker-title-font-size`   | Title font size   | `18px`                           |
+| `--picker-title-color`       | Title font color  | ` #242729`                       |
+| `--picker-title-font-weight` | Title font weight | `500`                            |
+| `--picker-title-font-family` | Title font family | `PingFangSC-Medium, PingFang SC` |

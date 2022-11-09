@@ -1,19 +1,17 @@
-import {
-    Icon
-} from './icon';
-import style from '../style.css';
-import { getFontSize } from '../../../utils/index';
+import { Icon } from "./icon";
+import style from "../style.css";
+import { getFontSize } from "../../../utils/index";
 
 export default class QuarkIconDelete extends HTMLElement {
-    icon: any
-    static get observedAttributes() {
-        return ['size', 'color'];
-    }
+  icon: any;
+  static get observedAttributes() {
+    return ["size", "color"];
+  }
 
-    constructor() {
-        super();
-        const shadowRoot = this.attachShadow({ mode: 'open' });
-        shadowRoot.innerHTML = `
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.innerHTML = `
             <style>
                 ${style}
             </style>
@@ -21,51 +19,51 @@ export default class QuarkIconDelete extends HTMLElement {
                 ${Icon}
             </svg>
         `;
-        // @ts-ignore
-        this.icon = this.shadowRoot.getElementById('icon');
-    }
+    // @ts-ignore
+    this.icon = this.shadowRoot.getElementById("icon");
+  }
 
-    connectedCallback() {
-        this.upgradeProperty();
-    }
+  connectedCallback() {
+    this.upgradeProperty();
+  }
 
-    attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-        if (name === 'color') {
-            this.icon.style.color = newValue;
-        } else if (name === 'size') {
-            const fontSize = this.getFontSize();
-            this.icon.style.fontSize = `${fontSize}`;
-        }
+  attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+    if (name === "color") {
+      this.icon.style.color = newValue;
+    } else if (name === "size") {
+      const fontSize = this.getFontSize();
+      this.icon.style.fontSize = `${fontSize}`;
     }
+  }
 
-    upgradeProperty() {
-        this.size = this.size;
-        this.color = this.color;
-    }
+  upgradeProperty() {
+    this.size = this.size;
+    this.color = this.color;
+  }
 
-    getFontSize() {
-        return getFontSize(this.size);
-    }
+  getFontSize() {
+    return getFontSize(this.size);
+  }
 
-    get size() {
-        return this.getAttribute('size');
-    }
+  get size() {
+    return this.getAttribute("size");
+  }
 
-    get color() {
-        return this.getAttribute('color');
-    }
+  get color() {
+    return this.getAttribute("color");
+  }
 
-    set size(value) {
-        // @ts-ignore
-        this.setAttribute('size', value);
-    }
+  set size(value) {
+    // @ts-ignore
+    this.setAttribute("size", value);
+  }
 
-    set color(value) {
-        // @ts-ignore
-        this.setAttribute('color', value);
-    }
+  set color(value) {
+    // @ts-ignore
+    this.setAttribute("color", value);
+  }
 }
 
-if (!customElements.get('quark-icon-delete')) {
-    customElements.define('quark-icon-delete', QuarkIconDelete);
+if (!customElements.get("quark-icon-delete")) {
+  customElements.define("quark-icon-delete", QuarkIconDelete);
 }

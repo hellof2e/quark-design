@@ -1,10 +1,10 @@
-:host{
+:host {
   display: block;
   background: #fff;
 }
-::slotted(quark-cell){
+::slotted(quark-cell) {
   position: relative;
-  background-color: rgba(0,0,0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 ::slotted(quark-cell):after {
   position: absolute;
@@ -15,8 +15,8 @@
   right: 16px;
   bottom: 0;
   left: 16px;
-  -webkit-transform: scaleY(.5);
-  transform: scaleY(.5);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
   border-bottom: 2px solid #f5f6f7;
 }
 ::slotted(quark-cell:last-child):after {
