@@ -55,7 +55,6 @@ import { Image } from "@quarkd/quark-react";
 | round   | 是否显示为圆形                                                                                           | `boolean`            | `false` |
 | radius  | 外边框圆角                                                                                               | `number` 或 `string` | -       |
 | alt     | 定义了图像的备用文本描述                                                                                 | `string`             | -       |
-| onClick | 点击图片时触发                                                                                           | `() => void`         | -       |
 | onLoad  | 图片加载完毕时触发                                                                                       | `() => void`         | -       |
 | onError | 图片加载失败时触发                                                                                       | `(error) => void`    | -       |
 

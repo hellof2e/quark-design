@@ -55,7 +55,6 @@ The basic usage is consistent with the native img tag, and native attributes suc
 | round     | Whether to be round                                                                         | `boolean`            | `false` |
 | radius    | Border Radius                                                                               | `number` or `string` | -       |
 | alt       | Alternate textual description of image                                                      | `string`             | -       |
-| onClick   | Emitted when image is clicked                                                               | `() => void`         | -       |
 | onLoad    | Emitted when image loaded                                                                   | `() => void`         | -       |
 | onError   | Emitted when image load failed                                                              | `(error) => void`    | -       |
 

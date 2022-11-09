@@ -72,7 +72,6 @@ The basic usage is consistent with the native img tag, and native attributes suc
 
 | Event |          Description           |     Type     |
 | :---: | :----------------------------: | :----------: |
-| click | Emitted when image is clicked  | `（）=>void` |
 | load  |   Emitted when image loaded    | `（）=>void` |
 | error | Emitted when image load failed | `（）=>void` |
 

@@ -7,13 +7,13 @@ import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 
 import style from "./style.css";
 
-type Action = {
+interface Action {
   name: string;
   color?: string;
   fontSize?: number;
-};
+}
 
-type ActionParams = {
+interface Props {
   title?: string;
   actions: Action[];
   cancelText?: string;
@@ -25,7 +25,7 @@ type ActionParams = {
   cancel?: () => void;
   close?: () => void;
   zIndex?: number;
-};
+}
 @customElement({
   tag: "quark-actionsheet",
   style,
@@ -208,7 +208,7 @@ class QuarkActionSheet extends QuarkElement {
 }
 
 // // 函数调用
-export default function (params: ActionParams): QuarkActionSheet {
+export default function (params: Props): QuarkActionSheet {
   const actionSheet = document.createElement(
     "quark-actionsheet"
   ) as QuarkActionSheet;

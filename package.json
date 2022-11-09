@@ -28,7 +28,7 @@
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
     "release:major": "node ./scripts/publish major",
-    "test": "cd packages/quark && npm run test"
+    "test": "cd packages/quark && yarn run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
