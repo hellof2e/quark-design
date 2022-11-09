@@ -6,9 +6,12 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": [
+      "quarkd/**"
+    ]
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "node ./scripts/dev",
