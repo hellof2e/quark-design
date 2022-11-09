@@ -39,9 +39,9 @@
 
 ## Contact us
 
-~~微信(1)群已满员~~
+~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~
 
-可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
+~微信(1)群已满~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
 
 <div style="display:flex;">
   <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
@@ -77,6 +77,8 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 | Nutui             | 275.5kb | √                | Vite           | √          | 2018             | Vue only                                 |
 | TDesign Mobile    | -       | √                | Gulp           | √          | 2021             | React only                               |
 | Antd Mobile       | -       | √                | Gulp           | √          | 2016             | React only                               |
+
+*The CDN volume comparison above includes the runtime, js, and css required for various component libraries to function properly.*
 
 ## 🔗 CDN
 
