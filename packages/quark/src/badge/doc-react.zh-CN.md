@@ -70,7 +70,7 @@ import { Badge } from "@quarkd/quark-react";
 数字徽标支持最大值, 超出显示..., 默认最大 99
 
 ```html
-<Badge content="普通徽标">
+<Badge content="9">
   <div></div>
 </Badge>
 <Badge content="100" max="99">

@@ -70,7 +70,7 @@ To show border of badge, add `border` prop on the Badge. The default border colo
 The maximun can be added to a badge by setting `max` prop on the Badge, the default is 99. Show ... when the number of `content` prop on the Badge exceeds.
 
 ```html
-<quark-badge content="normal badge">
+<quark-badge content="9">
   <div></div>
 </quark-badge>
 <quark-badge content="100" max="99">

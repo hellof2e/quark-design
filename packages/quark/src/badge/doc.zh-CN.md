@@ -70,7 +70,7 @@ import "quarkd/lib/badge";
 数字徽标支持最大值, 超出显示..., 默认最大 99
 
 ```html
-<quark-badge content="普通徽标">
+<quark-badge content="9">
   <div></div>
 </quark-badge>
 <quark-badge content="100" max="99">
