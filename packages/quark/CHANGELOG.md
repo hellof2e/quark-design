@@ -1,4 +1,38 @@
 # 更新日志
+### [1.0.17](https://github.com/hellof2e/quark-design/compare/v1.0.16...v1.0.17) (2022-11-09)
+
+
+### Documentation
+
+* async docs && demo ([c681c77](https://github.com/hellof2e/quark-design/commit/c681c77c99875589c71957b05e2c1de7faf34283))
+* Optimization example ([0bf232f](https://github.com/hellof2e/quark-design/commit/0bf232f45d42c793e8f874b269a6350aaa0d6f56))
+* progress intro ([3c62611](https://github.com/hellof2e/quark-design/commit/3c62611836a1728b56007074ea893823242cc7b9))
+* remove spaces in API props ([64c9ee4](https://github.com/hellof2e/quark-design/commit/64c9ee4dec580927bcc6bef6d51c23ddefc9d5aa))
+* update popupextra docs ([42279d2](https://github.com/hellof2e/quark-design/commit/42279d23b5623ab5fcdcf66ff0ba7e0e8f870071))
+
+
+### 🎉 Features
+
+* **demo:** add Locale for demo ([e220d35](https://github.com/hellof2e/quark-design/commit/e220d359ea5bf7b5df77e6d57877b27549e4a2c3))
+* **demo:** Change to Locale in demo ([0215ddc](https://github.com/hellof2e/quark-design/commit/0215ddceaf9f03617dc999c1a81df981c31d5454))
+* format code. ([87122fd](https://github.com/hellof2e/quark-design/commit/87122fda45329839affc3927a271325752e9f717))
+* format code. ([eed90d5](https://github.com/hellof2e/quark-design/commit/eed90d5cfe49f7815274c5cfad72785328778297))
+* format code. ([69172af](https://github.com/hellof2e/quark-design/commit/69172af3cc973cfefd892aa43a8f13820cc9a9c4))
+* format code. ([28b3b72](https://github.com/hellof2e/quark-design/commit/28b3b7203a92877e594e96ce4ff735ee92d4ed66))
+* **Marquee:** add paused exmple. ([adba07f](https://github.com/hellof2e/quark-design/commit/adba07f1d2e4451b1b479c9fb9f4b1c657273b9a))
+* **Marquee:** refactor the logic to implement pause & reverse animation. ([d5b2b26](https://github.com/hellof2e/quark-design/commit/d5b2b261925fc1d291c9cb9669cc4eb704960a4c))
+
+
+### 🐞 Bug Fixes
+
+* **Button:** fix button icon url ([e4e26ff](https://github.com/hellof2e/quark-design/commit/e4e26ffd65e1a6284996fb10623fcb4390425047))
+* eslint ([e9580ea](https://github.com/hellof2e/quark-design/commit/e9580eaac28235b8d57bde889fd578e52df09933))
+* eslint ([85bff44](https://github.com/hellof2e/quark-design/commit/85bff44dde018a95cd04ef05ef599efebb278a3c))
+* eslint ([e025292](https://github.com/hellof2e/quark-design/commit/e02529230d7b5e439b065887f8947199aaa4e5d8))
+* eslint rules fix ([3f74b1b](https://github.com/hellof2e/quark-design/commit/3f74b1b9e2de9e482d8a6f2d0190449bfbc6f786))
+* image click ([57a60f9](https://github.com/hellof2e/quark-design/commit/57a60f983a5daaab949c4dc16564c583a5167ed7))
+* remove useless references & change ref type ([2c1f018](https://github.com/hellof2e/quark-design/commit/2c1f018f1f9fb8da80e2207443c007ad5296ec0f))
+* test file change ([c7b52a6](https://github.com/hellof2e/quark-design/commit/c7b52a643b06ee8719216c9e55f11bfa61ff65cc))
 
 ### [1.0.16](https://github.com/hellof2e/quark-design/compare/v1.0.15...v1.0.16) (2022-11-09)
 
