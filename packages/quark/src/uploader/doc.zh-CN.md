@@ -2,7 +2,7 @@
 
 ### 介绍
 
-提供上传功能
+提供浏览器原生上传功能
 
 ### 安装使用
 
@@ -103,13 +103,13 @@ beforeUpload(files) {
 
 | 参数       | 说明                                              | 类型                                     | 默认值             |
 | ---------- | ------------------------------------------------- | ---------------------------------------- | ------------------ |
-| accept     | 允许上传的文件类型                                | `string `                                | `image/*`          |
-| multiple   | 是否多选                                          | `boolean `                               | `true`             |
+| accept     | 允许上传的文件类型                                | `string`                                | `image/*`          |
+| multiple   | 是否多选                                          | `boolean`                               | `true`             |
 | preview    | 是否展示预览                                      | `boolean`                                | `false`            |
 | capture    | 图片选取模式，可选值为 `boolean` (直接调起摄像头) | `false`                                  |
-| maxcount   | 最大上传数量，超出隐藏                            | `string `                                |
-| maxsize    | 最大上传大小                                      | `string `                                | `26214400 （25M）` |
-| disabled   | 禁止上传                                          | `boolean `                               | `false`            |
+| maxcount   | 最大上传数量，超出隐藏                            | `string`                                |
+| maxsize    | 最大上传大小                                      | `string`                                | `26214400 （25M）` |
+| disabled   | 禁止上传                                          | `boolean`                               | `false`            |
 | hidedelete | 隐藏删除图标                                      | `boolean`                                | `false`            |
 | readonly   | 只读模式                                          | `boolean`                                | `false`            |
 | afterread  | 上传后回调                                        | `（file: file or file[]）=>void`         |                    |
@@ -143,7 +143,7 @@ beforeUpload(files) {
 | `--uploader-border-style`       | 上传组件的风格         | `dashed`       |
 | `--uploader-radius`             | 上传、预览组件的边框   | `4px`          |
 | `--uploader-margin`             | 上传、预览组件右下间距 | `6px`          |
-| `--uploader-delete-wrap-width`  | 预览删除按钮宽度       | `14px `        |
+| `--uploader-delete-wrap-width`  | 预览删除按钮宽度       | `14px`        |
 | `--uploader-delete-wrap-height` | 预览删除按钮高度       | `14px`         |
 | `--uploader-delete-background`  | 删除组件的背景色       | `rgb(0, 0, 0)` |
 | `--uploader-delete-color`       | 删除组件图标颜色       | `#fff`         |
