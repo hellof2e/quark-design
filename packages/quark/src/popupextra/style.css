@@ -58,10 +58,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #879099;
+  background: 0 0;
+  border: 0;
+  transition: color .3s;
 }
 
-.quark-popup-extra-close-btn quark-icon-close {
-  color: #879099;
+:host .quark-popup-extra-close-btn :hover {
+  color: black
 }
 
 :host([safearea]) .quark-popup-extra {

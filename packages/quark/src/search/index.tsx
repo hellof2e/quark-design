@@ -122,21 +122,21 @@ class QuarkSearch extends QuarkElement {
     });
   };
 
-  focusEvent = (e: any) => {
+  focusEvent = (e: FocusEvent) => {
     e.stopPropagation();
     this.$emit("focus", {
       detail: { value: this.value },
     });
   };
 
-  blurEvent = (e: any) => {
+  blurEvent = (e: FocusEvent) => {
     e.stopPropagation();
     this.$emit("blur", {
       detail: { value: this.value },
     });
   };
 
-  keypressEvent = (e: any) => {
+  keypressEvent = (e: KeyboardEvent) => {
     const ENTER_CODE = 13;
     if (e.keyCode === ENTER_CODE) {
       e.stopPropagation();
@@ -214,7 +214,9 @@ class QuarkSearch extends QuarkElement {
         </div>
         {!this.hideaction && this.actiontext && (
           <div class="quark-search-action" onClick={this.actionEvent}>
-            <slot name="action">{this.actiontext}</slot>
+            <slot name="action" class="quark-search-action-slot">
+              {this.actiontext}
+            </slot>
           </div>
         )}
       </div>
