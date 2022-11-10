@@ -212,12 +212,10 @@ class QuarkSearch extends QuarkElement {
             )}
           </div>
         </div>
-        {!this.hideaction && (
-          <slot name="action">
-            <div class="quark-search-action" onClick={this.actionEvent}>
-              {this.actiontext}
-            </div>
-          </slot>
+        {!this.hideaction && this.actiontext && (
+          <div class="quark-search-action" onClick={this.actionEvent}>
+            <slot name="action">{this.actiontext}</slot>
+          </div>
         )}
       </div>
     );

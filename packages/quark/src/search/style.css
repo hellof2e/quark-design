@@ -91,12 +91,11 @@ input::-webkit-search-cancel-button {
 }
 
 .quark-search-action {
-  margin-left: 16px;
+  margin-left: var(--search-action-text-margin-left, 16px);
   font-weight: 400;
   color: var(--search-action-text-color, quark-formBaseColor);
   font-size: var(--search-action-font-size, quark-fontSizeCaption);
   line-height: 32px;
-  cursor: pointer;
 }
 
 .quark-search-dark {
