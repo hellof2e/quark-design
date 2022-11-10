@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import { Tag } '@quarkd/quark-react';
+import { Tag } "@quarkd/quark-react";
 ```
 
 ### 基本用法
