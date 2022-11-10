@@ -123,7 +123,7 @@ class QuarkSwipe extends QuarkElement {
     this.endY = undefined;
   };
 
-  handleTouchMove = (e: any) => {
+  handleTouchMove = (e: TouchEvent) => {
     this.endX = e.changedTouches[0].clientX;
     this.endY = e.changedTouches[0].clientY;
   };

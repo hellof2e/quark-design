@@ -69,7 +69,7 @@ import { Button } from "@quarkd/quark-react";
 
 通过 `loading` 属性设置加载状态，其中`loadingcolor `属性控制 loading 颜色，`loadingsize `属性控制 loading 大小，`loadingtype `属性控制 loading 类型，loading 参考 loading 组件，
 
-```tsx
+```html
 <Button loading type="danger" loadtype="circular">加载中...</Button>
 <Button loading type="warning">加载中...</Button>
 <Button onClick="changeLoading" loading={isLoading} type="success">Click me!</Button>

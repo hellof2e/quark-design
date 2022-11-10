@@ -134,9 +134,9 @@ mounted(){
 
 | 名称       | 说明         | 类型          |
 | ---------- | ------------ | ------------- |
-| leftclick  | 左侧点击事件 | `（）=> void` |
-| rightclick | 右侧点击事件 | `（）=> void` |
-| close      | 关闭点击事件 | `（）=> void` |
+| leftclick  | 左侧点击事件 | `() => void` |
+| rightclick | 右侧点击事件 | `() => void` |
+| close      | 关闭点击事件 | `() => void` |
 
 ## 样式变量
 

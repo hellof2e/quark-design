@@ -94,6 +94,7 @@ export default () => {
     "https://m.hellobike.com/resource/helloyun/15697/Q6t6B_noNetWork.png",
   ];
   const [index, setIndex] = useState(0);
+  const [open2, setOpen2] = useState(false);
   const preview2 = useRef<ImagePreviewRef>(null);
 
   const componentsClick2 = () => {
@@ -108,7 +109,7 @@ export default () => {
   return (
     <div>
       <div onClick={componentsClick2}>自定义导航</div>
-      <ImagePreview ref={preview2} open={open}>
+      <ImagePreview ref={preview2} open={open2}>
         <p className="my-indicator" slot="indicator">
           Page{{ index }}{" "}
         </p>
@@ -122,7 +123,7 @@ export default () => {
 
 | 参数 | 说明           | 类型       | 默认值  |
 | ---- | -------------- | ---------- | ------- |
-| open | 标签式调用属性 | `boolean ` | `false` |
+| open | 标签式调用属性 | `boolean` | `false` |
 
 ### 方法
 
