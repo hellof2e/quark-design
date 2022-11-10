@@ -10,7 +10,7 @@ export default {
   },
   pullRefresh: {
     pulling: "下拉即可刷新...",
-    loosing: "释放即可刷新...",
+    loosing: "松开立即刷新...",
   },
   search: {
     placeholder: "请输入搜索关键词",
