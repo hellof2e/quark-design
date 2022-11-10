@@ -14,9 +14,9 @@
   ],
   "scripts": {
     "build": "rimraf lib && npx tsc",
-    "release:major": "npm run release -- --release-as major",
-    "release:minor": "npm run release -- --release-as minor",
     "release:patch": "npm run release -- --release-as patch",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:major": "npm run release -- --release-as major",
     "release": "npm run build && standard-version"
   },
   "sideEffects": [
