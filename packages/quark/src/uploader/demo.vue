@@ -56,8 +56,9 @@ export default createDemo({
     const preview2 = ref(null);
     const before = ref(null);
     const previewUrls = [
-      "https://img.yzcdn.cn/vant/leaf.jpg",
+      "https://m.hellobike.com/resource/helloyun/15697/9VgwC_Screenshot_20220215_191457_com.jingyao.easybike.jpg?x-oss-process=image/quality,q_80",
       "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
+      "https://m.hellobike.com/resource/helloyun/15697/WQedaghMmy.jpeg?x-oss-process=image/quality,q_80",
     ];
     onBeforeMount(() => {
       useTranslate({

@@ -11,27 +11,27 @@ We are very welcome to the community developers to make contributions to Quark D
 First start:
 
 ```bash
-npm run init
-npm run dev
+yarn run init
+yarn run dev
 ```
 
 After that, just run the following command:
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ## Command description (Maintainer release package use)
 
 ```bash
 // Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
-npm run release:patch
+yarn run release:patch
 
 // Publish the middle digit version number of all sub-packages, such as 0.0.1 -> 0.1.0,
-npm run release:minor
+yarn run release:minor
 
 // Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
-npm run release:major
+yarn run release:major
 ```
 
 ## Submit commit
@@ -55,7 +55,7 @@ For example:
 How to clear the cache of the sub-project?
 
 ```
-npm run clean
+yarn run clean
 ```
 
 Garbled characters when running yarn run link on a Windows computer?

@@ -139,9 +139,9 @@ export default () => {
 | readonly     | 是否只读                                 | `boolean`                               | `false` |
 | required     | 是否必填                                 | `boolean`                               | `false` |
 | errormsg     | 错误提示信息                             | `string`                                | -       |
-| onChange     | 值改变事件                               | `（e:{detail:{value: string}}）=> void` |         |
-| onFocus      | 聚焦事件                                 | `（e:{detail:{value: string}}）=> void` |         |
-| onBlur       | 失焦事件                                 | `（e:{detail:{value: string}}）=> void` |         |
+| onChange     | 值改变事件                               | `(e: { detail: { value: string } }) => void` |         |
+| onFocus      | 聚焦事件                                 | `(e: { detail: { value: string } }) => void` |         |
+| onBlur       | 失焦事件                                 | `(e: { detail: { value: string } }) => void` |         |
 
 ### Method
 

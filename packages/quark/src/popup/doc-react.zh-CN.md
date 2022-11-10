@@ -16,20 +16,15 @@ import { Popup } from "@quarkd/quark-react";
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClsoe = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
 
   return (
     <div>
-      <div
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
+      <div onClick={handleOpen}>
         基本使用
       </div>
-      <PopUp open={open} onClosed={handleClsoe}>
+      <PopUp open={open} onClosed={handleClose}>
         <div>第二行</div>
         <div>第三行</div>
         <div>第四行</div>
@@ -77,7 +72,7 @@ export default () => {
 | closeable | 是否显示关闭按钮         | `boolean`                     | `false`   |
 | safearea  | 是否开启底部安全区域适配 | ` boolean`                    | `false`   |
 | zindex    | popup 层级设置           | `number、string`              | -         |
-| onClosed  | 组件关闭回调             | `（）=> void`                 | -         |
+| onClosed  | 组件关闭回调             | `() => void`                 | -         |
 
 ## 样式变量
 

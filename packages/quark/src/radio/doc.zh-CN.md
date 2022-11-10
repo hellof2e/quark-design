@@ -105,7 +105,7 @@ export default {
 
 | 参数   | 说明           | 类型                                  |
 | ------ | -------------- | ------------------------------------- |
-| change | 变化时回调函数 | `(e:{detail: {value: string}})=>void` |
+| change | 变化时回调函数 | `(e: { detail: { value: string } }) => void` |
 
 ## 样式变量
 

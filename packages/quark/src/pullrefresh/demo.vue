@@ -31,7 +31,7 @@
             />{{ translate("constantRefresh") }}
           </div>
           <div class="refresh-text" slot="loading">
-            <quark-loading size="18">{{
+            <quark-loading size="18" type="circular">{{
               translate("refreshing")
             }}</quark-loading>
           </div>
