@@ -117,3 +117,4 @@ import { Button } from "@quarkd/quark-react";
 | `--button-border-radius` | 按钮圆角       | `8px`  |
 | `--button-color`         | 文字颜色       | `#fff` |
 | `--button-icon-hspacing` | icon 右间距    | `6px`  |
+| `--button-big-border-radius` | 大尺寸按钮圆角                | `8px`         |

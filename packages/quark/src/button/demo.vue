@@ -20,7 +20,7 @@
       <quark-button shape="square" type="danger">{{
         translate("shape.square")
       }}</quark-button>
-      <quark-button shape="round" type="primary">{{
+      <quark-button style="--button-border-radius: 6px" type="primary">{{
         translate("shape.round")
       }}</quark-button>
     </div>
@@ -118,7 +118,7 @@ export default createDemo({
           },
           shape: {
             square: "方形按钮",
-            round: "圆角按钮",
+            round: "小圆角按钮",
           },
           size: {
             big: "大号尺寸",
