@@ -146,20 +146,14 @@ import "quarkd/lib/button"
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <!-- cdn -->
+  <!-- 1. CDN, import all components -->
   <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
   <body>
-    <quark-button loading="false" id="btn">Button</quark-button>
+  
+    <!-- 2. use it -->
+    <quark-button loading="true">Button</quark-button>
+  
   </body>
-  <script>
-    window.addEventListener(function () {
-      const el = document.getElementById("btn");
-      el.loading = true;
-      setTimeout(() => {
-        el.loading = true;
-      }, 2000);
-    });
-  </script>
 </html>
 ```
 
