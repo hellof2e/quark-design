@@ -115,7 +115,7 @@ Custom checked color
 | 参数     | 说明                                                                          | 类型     | 默认值 |
 | -------- | ----------------------------------------------------------------------------- | -------- | ------ |
 | value    | Specific radio                                                                | `String` | -      |
-| onChange | Emitted when radio check status changed `(e:{detail: {value: string}})=>void` |
+| onChange | Emitted when radio check status changed `(e: { detail: { value: string } }) => void` |
 
 ## CSS Variables
 

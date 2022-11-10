@@ -92,7 +92,7 @@ class QuarkPopover extends QuarkElement {
   ): boolean {
     if (propName === "open" && this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
-      // 设置退出过度动画
+      // 设置退出过渡动画
       if (newValue) {
         // 由关闭到打开
         current.classList.remove("quark-popover-leave");

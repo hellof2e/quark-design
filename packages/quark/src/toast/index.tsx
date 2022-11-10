@@ -61,7 +61,7 @@ class QuarkToast extends QuarkElement {
     if (propName === "show") {
       if (this.toastRef && this.toastRef.current) {
         const { current } = this.toastRef;
-        // 设置退出过度动画
+        // 设置退出过渡动画
         if (newValue) {
           // 由关闭到打开
           current.classList.remove("quark-toast-leave");

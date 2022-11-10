@@ -99,7 +99,7 @@ class QuarkUploader extends QuarkElement {
   componentDidMount(): void {
     if (this.readonly) return;
     const { current } = this.inputRef;
-    // 设置退出过度动画
+    // 设置退出过渡动画
     if (this.capture) {
       // 由关闭到打开
       current.setAttribute("capture", this.capture);

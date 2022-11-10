@@ -120,10 +120,10 @@ textarea native events are supported
 
 | Event            | Description                                  | Type                                    |
 | ---------------- | -------------------------------------------- | --------------------------------------- |
-| input            | Emitted when input value changed             | `(e: {detail:{value: string}}）=>void ` |
-| focus            | Emitted when input is focused                | `(e: {detail:{value: string}}）=>void ` |
-| blur             | Emitted when input is blurred                | `(e: {detail:{value: string}}）=>void ` |
-| compositionstart | Emitted when input editor starts a new input | `(）=>void `                            |
+| input            | Emitted when input value changed             | `(e: ({ detail: { value: string } }) => void` |
+| focus            | Emitted when input is focused                | `(e: ({ detail: { value: string } }) => void` |
+| blur             | Emitted when input is blurred                | `(e: ({ detail: { value: string } }) => void` |
+| compositionstart | Emitted when input editor starts a new input | `(）=> void `                            |
 
 ## CSS Variables
 

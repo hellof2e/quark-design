@@ -64,4 +64,4 @@ export default () => {
 | disabled     | 是否禁用                          | `boolean`                            | `false`   |
 | readonly     | 是否只读                          | `boolean`                            | `false`   |
 | activecolor  | 选中的时候颜色                    | `string`                             | `#ffc800` |
-| onChange     | 当前分值修改时时触发的事件        | `( e:{detail:{value:string}})=>void` |           |
+| onChange     | 当前分值修改时时触发的事件        | `(e: { detail: { value: string } }) => void` |           |

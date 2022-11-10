@@ -112,8 +112,8 @@ beforeUpload(files) {
 | disabled   | 禁止上传                                          | `boolean`                               | `false`            |
 | hidedelete | 隐藏删除图标                                      | `boolean`                                | `false`            |
 | readonly   | 只读模式                                          | `boolean`                                | `false`            |
-| afterread  | 上传后回调                                        | `（file: file or file[]）=>void`         |                    |
-| oversize   | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string)=>void` |                    |
+| afterread  | 上传后回调                                        | `(file: file or file[]) => void`         |                    |
+| oversize   | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |                    |
 
 ### slot
 

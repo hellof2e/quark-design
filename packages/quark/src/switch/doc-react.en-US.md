@@ -60,7 +60,7 @@ export default () => {
 | disabled  | Disable switch                    | `boolean`                              | `false` |
 | size      | Switch size                       | `number`                               | `16px`  |
 | color     | Switch color                      | `string`                               | -       |
-| onChange  | Emitted when check status changed | `e: {detail:{value: string}}）=>void ` |
+| onChange  | Emitted when check status changed | `e: ({ detail: { value: string } }) => void` |
 
 ## CSS Variables
 

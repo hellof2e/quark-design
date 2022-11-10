@@ -100,7 +100,7 @@ toast2.hide();
 | duration  | Toast duration(ms), won't disappear if value is 0 | `number`   | `2000ms` |
 | size      | Custom icon size                                  | `number`   | `40px`   |
 | zIndex    | Custom zIndex                                     | `number`   | `9999`   |
-| close     | Callback function after close                     | `()=>void` | -        |
+| close     | Callback function after close                     | `() => void` | -        |
 
 ## CSS Variables
 

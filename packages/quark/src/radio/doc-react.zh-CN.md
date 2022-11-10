@@ -111,7 +111,7 @@ export default () => {
 | 参数     | 说明           | 类型                                  | 默认值 |
 | -------- | -------------- | ------------------------------------- | ------ |
 | value    | 指定选中的选项 | `string`                              | -      |
-| onChange | 变化时回调函数 | `(e:{detail: {value: string}})=>void` |
+| onChange | 变化时回调函数 | `(e: { detail: { value: string } }) => void` |
 
 ## 样式变量
 
