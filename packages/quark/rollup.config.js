@@ -119,7 +119,7 @@ const options = [
       commonjs(),
       nodeResolve({
         extensions,
-        // modulesOnly: true,
+        modulesOnly: true,
       }),
       babel({
         babelHelpers: "runtime",

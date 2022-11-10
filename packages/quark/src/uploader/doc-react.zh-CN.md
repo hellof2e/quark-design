@@ -2,7 +2,7 @@
 
 ### 介绍
 
-提供上传功能
+提供浏览器原生传功能
 
 ### 安装使用
 
@@ -154,7 +154,7 @@ export default () => {
 | `--uploader-border-style`       | 上传组件的风格         | `dashed`       |
 | `--uploader-radius`             | 上传、预览组件的边框   | `4px`          |
 | `--uploader-margin`             | 上传、预览组件右下间距 | `6px`          |
-| `--uploader-delete-wrap-width`  | 预览删除按钮宽度       | `14px `        |
+| `--uploader-delete-wrap-width`  | 预览删除按钮宽度       | `14px`        |
 | `--uploader-delete-wrap-height` | 预览删除按钮高度       | `14px`         |
 | `--uploader-delete-background`  | 删除组件的背景色       | `rgb(0, 0, 0)` |
 | `--uploader-delete-color`       | 删除组件图标颜色       | `#fff`         |

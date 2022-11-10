@@ -1,5 +1,5 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/pull-refresh";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/pullrefresh';
 
 const data = {
   dark: false,
@@ -19,7 +19,7 @@ describe("<quark-pull-refresh>", async () => {
       `<quark-pull-refresh >
         </quark-pull-refresh>`
     );
-    const pull = el.shadowRoot.querySelector(".pull-refresh");
+    const pull = el.shadowRoot.querySelector(".quark-pull-refresh");
     expect(pull).to.exist;
   });
 

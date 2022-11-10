@@ -1,5 +1,5 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/tabbar-item";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/tabbaritem';
 
 const data = {
   label: "home",
@@ -16,7 +16,7 @@ describe("<quark-tabbar-item>", async () => {
       `<quark-tabbar-item>
         </quark-tabbar-item>`
     );
-    const item = el.shadowRoot.querySelector(".tabbar-item");
+    const item = el.shadowRoot.querySelector(".quark-tabbar-item");
     expect(item).to.exist;
   });
 

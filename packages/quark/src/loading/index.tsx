@@ -16,7 +16,7 @@ class QuarkLoading extends QuarkElement {
   }
 
   @property()
-  type: "spinner" | "circular" = "spinner";
+  type: "spinner" | "circular" | "pullrefresh" = "spinner";
 
   @property({
     type: Boolean,
@@ -47,6 +47,42 @@ class QuarkLoading extends QuarkElement {
   renderLoadingSvg = () => {
     const fontSize = this.getFontSize();
     if (this.type === "circular") {
+      return (
+        <svg
+          style={{ fontSize }}
+          class="quark-loading-spinner"
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g stroke={this.color} stroke-width="1.91304348">
+              <g transform="translate(1.000000, 1.000000)">
+                <rect
+                  id="Base"
+                  stroke-opacity="0.2"
+                  x="0"
+                  y="0"
+                  width="22"
+                  height="22"
+                  rx="11"
+                ></rect>
+                <path
+                  d="M11,0 C17.0751322,-1.11598369e-15 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 7.43989126e-16,17.0751322 0,11 C-7.43989126e-16,4.92486775 4.92486775,1.11598369e-15 11,0 Z"
+                  stroke-linecap="round"
+                  stroke-dasharray="39.85507368004841,19.9275368400242"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      );
+    }
+
+    if (this.type === "pullrefresh") {
+      // 专门给下拉刷新使用的loading
       return (
         <svg
           style={{ fontSize }}

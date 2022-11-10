@@ -1,5 +1,5 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/skeleton";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/skeleton';
 
 let el;
 
@@ -9,7 +9,7 @@ describe("<quark-skeleton>", async () => {
       `<quark-skeleton
       ></quark-skeleton>`
     );
-    const container = el.shadowRoot.querySelector("skeleton-container");
+    const container = el.shadowRoot.querySelector(".skeleton-container");
     expect(container).to.exist;
   });
 });

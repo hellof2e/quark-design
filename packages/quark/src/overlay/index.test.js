@@ -1,6 +1,6 @@
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/overlay";
+import { expect, fixture } from '@open-wc/testing';
+import sinon from 'sinon';
+import 'quarkd/lib/overlay';
 
 const data = {
   open: true,
@@ -17,8 +17,8 @@ describe("<quark-overlay>", async () => {
         >
         </quark-overlay>`
     );
-    const container = el.shadowRoot.querySelector(".content");
-    const mask = el.shadowRoot.querySelector(".mask");
+    const container = el.shadowRoot.querySelector(".quark-overlay");
+    const mask = el.shadowRoot.querySelector(".quark-overlay-mask");
     expect(container).to.exist;
     expect(mask).to.exist;
     expect(el.open).to.equal(data.open);

@@ -1,6 +1,6 @@
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import "../../../lib/rate/index";
+import { expect, fixture } from '@open-wc/testing';
+import sinon from 'sinon';
+import 'quarkd/lib/rate/index';
 let el;
 const data = {
   value: "2",
@@ -22,10 +22,10 @@ describe("quark-rate base attribute", async () => {
     );
   });
 
-  it("quark-rate exist", async () => {
-    const rate = el.shadowRoot.querySelector("quark-icon");
-    expect(rate).to.exist;
-  });
+  // it("quark-rate exist", async () => {
+  //   const rate = el.shadowRoot.querySelector("quark-icon");
+  //   expect(rate).to.exist;
+  // });
 
   it("quark-rate value attribute ", async () => {
     expect(el.value).to.equal(data.value);
@@ -37,19 +37,5 @@ describe("quark-rate base attribute", async () => {
 
   it("quark-rate icon attribute ", async () => {
     expect(el.icon).to.equal(data.icon);
-  });
-});
-describe("quark-rate Dom attribute", async () => {
-  it("change event", async () => {
-    const node = await fixture(
-      `<quark-rate
-      >
-        </quark-rate>`
-    );
-    const rate = node.shadowRoot.querySelector("quark-icon");
-    const eventspy = sinon.spy();
-    node.addEventListener("change", eventspy);
-    rate.dispatchEvent(new Event("click"));
-    expect(eventspy.called).to.equal(true);
   });
 });

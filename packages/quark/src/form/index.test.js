@@ -1,5 +1,5 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/form";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/form';
 
 let el;
 

@@ -127,7 +127,7 @@ class QuarkPullRefresh extends QuarkElement {
     if (status === "loading") {
       return (
         <quark-loading
-          type="circular"
+          type="pullrefresh"
           color={this.getTextColor()}
           size="28"
           vertical

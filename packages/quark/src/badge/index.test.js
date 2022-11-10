@@ -1,5 +1,5 @@
-import { expect, fixture, html } from "@open-wc/testing";
-import "../../../lib/badge";
+import { expect, fixture } from "@open-wc/testing";
+import "quarkd/lib/badge";
 const data = {
   type: "label",
   content: "100",

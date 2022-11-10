@@ -21,7 +21,6 @@ export interface Props {
   alt?: string;
 }
 export interface CustomEvent {
-  click?: () => void;
   load?: () => void;
   error?: () => void;
 }
@@ -64,10 +63,6 @@ class QuarkImage extends QuarkElement {
   status: Stauts = "loading";
 
   imgRef: HTMLImageElement | null = null;
-
-  handleClickImg = () => {
-    this.$emit("click");
-  };
 
   handleLoad = () => {
     this.status = "loaded";
@@ -135,8 +130,6 @@ class QuarkImage extends QuarkElement {
         <img
           id="quark-img"
           {...attrs}
-          // @ts-ignore
-          onclick={this.handleClickImg}
           onload={this.handleLoad}
           onerror={this.handleError}
         />

@@ -5,15 +5,13 @@ import {
 } from "body-scroll-lock";
 import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
 import Locale from "../locale";
-
 import style from "./style.css";
-
-type Option = {
+interface Option {
   name: string;
   icon: string;
-};
+}
 
-type ShareSheetParams = {
+interface Props {
   options: Option[];
   titleColor?: string;
   titleFontSize?: number;
@@ -23,7 +21,7 @@ type ShareSheetParams = {
   cancel?: () => void;
   close?: () => void;
   zIndex?: number;
-};
+}
 @customElement({
   tag: "quark-sharesheet",
   style,
@@ -215,7 +213,7 @@ class QuarkShareSheet extends QuarkElement {
 }
 
 // // 函数调用
-export default function (params: ShareSheetParams): QuarkShareSheet {
+export default function (params: Props): QuarkShareSheet {
   const shareSheet = document.createElement(
     "quark-sharesheet"
   ) as QuarkShareSheet;

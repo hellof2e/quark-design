@@ -6,9 +6,16 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "quarkd/@open-wc/**",
+      "quarkd/sinon",
+      "quarkd/@esm-bundle"
+    ]
+  },
   "scripts": {
     "init": "yarn && yarn run link && cd example && yarn",
     "dev": "cd example && yarn run dev",
@@ -20,7 +27,8 @@
     "push2io": "node ./scripts/push2io",
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
-    "release:major": "node ./scripts/publish major"
+    "release:major": "node ./scripts/publish major",
+    "test": "cd packages/quark && yarn run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",

@@ -1,6 +1,6 @@
-import { expect, fixture } from "@open-wc/testing";
-import sinon from "sinon";
-import ShareSheet from "../../../lib/share-sheet";
+import { expect, fixture } from '@open-wc/testing';
+import sinon from 'sinon';
+import ShareSheet from 'quarkd/lib/sharesheet';
 
 const data = {
   titleColor: "red",

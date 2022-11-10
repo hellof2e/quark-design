@@ -1,6 +1,6 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/stepper";
-import sinon from "sinon";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/stepper';
+import sinon from 'sinon';
 
 let el;
 

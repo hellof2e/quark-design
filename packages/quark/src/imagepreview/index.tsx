@@ -63,6 +63,7 @@ class QuarkImagePreview extends QuarkElement {
     if (this.isFn) this.open = true;
   };
   initSlide(index) {
+    console.log(window.screen);
     return new Promise((resolve) => {
       setTimeout(() => {
         this.slide = new BScroll(this.wrapRef.current, {
@@ -186,6 +187,10 @@ class QuarkImagePreview extends QuarkElement {
   }
   render() {
     const showIndex = `${this.index + 1}`;
+    const screenHeight =
+      window.screen.availHeight > 900 ? 900 : window.screen.availHeight;
+    const realHeight = this.open && this.images.length ? "100vh" : "100%";
+    console.log(window.screen);
     return (
       <Fragment>
         <slot
@@ -199,12 +204,25 @@ class QuarkImagePreview extends QuarkElement {
         </slot>
 
         <quark-popup position="center" open={this.open} onclosed={this.myClose}>
-          <div class="quark-imagepreview-slide">
+          <div
+            class="quark-imagepreview-slide"
+            style={
+              {
+                // height: realHeight,
+              }
+            }
+          >
             <div class="quark-imagepreview-slide-wrapper" ref={this.wrapRef}>
               <div class="quark-imagepreview-slide-content">
                 {this.images.map((item, index) => (
                   <div key={index} class="quark-imagepreview-item">
-                    <img src={item} class="quark-img" onClick={this.myClose} />
+                    <div class="quark-preview-image">
+                      <img
+                        src={item}
+                        class="quark-img"
+                        onClick={this.myClose}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

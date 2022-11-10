@@ -1,5 +1,5 @@
-import { expect, fixture } from "@open-wc/testing";
-import "../../../lib/noticebar";
+import { expect, fixture } from '@open-wc/testing';
+import 'quarkd/lib/noticebar';
 
 const data = {
   text: "暂无数据",
