@@ -2,7 +2,7 @@ import { Icon } from "./icon";
 import style from "../style.css";
 import { getFontSize } from "../../../utils/index";
 
-export default class QuarkIconWhitecloseO extends HTMLElement {
+export default class QuarkIconWhiteSuccessO extends HTMLElement {
   icon: any;
   static get observedAttributes() {
     return ["size", "color"];
@@ -12,13 +12,13 @@ export default class QuarkIconWhitecloseO extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `
-            <style>
-                ${style}
-            </style>
-            <svg class="icon" id="icon" aria-hidden="true" viewBox="0 0 1024 1024">
-                ${Icon}
-            </svg>
-        `;
+      <style>
+          ${style}
+      </style>
+      <svg class="icon" id="icon" aria-hidden="true" viewBox="0 0 1024 1024">
+          ${Icon}
+      </svg>
+    `;
     // @ts-ignore
     this.icon = this.shadowRoot.getElementById("icon");
   }
@@ -64,6 +64,6 @@ export default class QuarkIconWhitecloseO extends HTMLElement {
   }
 }
 
-if (!customElements.get("quark-icon-whiteclose-o")) {
-  customElements.define("quark-icon-whiteclose-o", QuarkIconWhitecloseO);
+if (!customElements.get("quark-icon-whitesuccess-o")) {
+  customElements.define("quark-icon-whitesuccess-o", QuarkIconWhiteSuccessO);
 }

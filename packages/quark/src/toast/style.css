@@ -46,9 +46,9 @@
   max-width: var(--toast-max-width, 240px);
 }
 
-quark-icon-whiteclose-o,
-quark-icon-success,
-quark-icon-warning {
+quark-icon-whitesuccess-o,
+quark-icon-whiteerror-o,
+quark-icon-whitewarning-o {
   margin-bottom: 14px;
 }
 
@@ -62,9 +62,9 @@ quark-icon-warning {
   margin-right: var(--toast-loading-right, 0);
 }
 
-:host(:not([type="text"])) quark-icon-success,
-:host(:not([type="text"])) quark-icon-failure,
-:host(:not([type="text"])) quark-icon-warning {
+:host(:not([type="text"])) quark-icon-whitesuccess-o,
+:host(:not([type="text"])) quark-icon-whiteerror-o,
+:host(:not([type="text"])) quark-icon-whitewarning-o {
   margin-bottom: quark-vSpacingMd;
 }
 

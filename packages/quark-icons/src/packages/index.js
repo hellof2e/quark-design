@@ -54,7 +54,9 @@ import InfoFill from "./info-fill";
 import SafeFill from "./safe-fill";
 import WarningFill from "./warning-fill";
 import UnSafeFill from "./unsafe-fill";
-import WhiteCloseO from "./whiteclose-o";
+import WhiteErrorO from "./whiteerror-o";
+import WhiteSuccessO from "./whitesuccess-o";
+import WhiteWarningO from "./whitewarning-o";
 
 export default {
   ArrowLeft,
@@ -113,5 +115,7 @@ export default {
   SafeFill,
   WarningFill,
   UnSafeFill,
-  WhiteCloseO,
+  WhiteErrorO,
+  WhiteSuccessO,
+  WhiteWarningO,
 };
