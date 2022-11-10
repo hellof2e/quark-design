@@ -1,5 +1,5 @@
 import "@quarkd/icons/lib/success";
-import "@quarkd/icons/lib/close";
+import "@quarkd/icons/lib/whiteclose-o";
 import "@quarkd/icons/lib/warning";
 import QuarkElement, {
   Fragment,
@@ -89,13 +89,11 @@ class QuarkToast extends QuarkElement {
       );
     } else if (this.type === "failure") {
       return (
-        <div class="quark-toast-failure">
-          <quark-icon-close
-            color={this.iconColor}
-            size={this.iconSize}
-            ref={this.iconRef}
-          />
-        </div>
+        <quark-icon-whiteclose-o
+          color={this.iconColor}
+          size={this.iconSize}
+          ref={this.iconRef}
+        />
       );
     } else if (this.type === "warning") {
       return (

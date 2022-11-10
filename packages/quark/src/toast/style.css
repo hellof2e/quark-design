@@ -38,19 +38,18 @@
   opacity: 1;
 }
 
-.quark-toast-failure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 :host([type="text"]) .quark-toast {
   padding: var(--toast-text-padding, 16px 20px);
   width: max-content;
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
+}
+
+quark-icon-whiteclose-o,
+quark-icon-success,
+quark-icon-warning {
+  margin-bottom: 14px;
 }
 
 :host quark-loading {

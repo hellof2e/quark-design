@@ -7,6 +7,9 @@
           <section class="demo-cell">
             <quark-icon-user size="26" />
           </section>
+          <!-- <section class="demo-cell" style="background: #333">
+            <quark-icon-whiteclose-o size="26" />
+          </section> -->
 
           <h2 class="h2-custom">{{ translate("title.size") }}</h2>
           <section class="demo-cell">
