@@ -1,6 +1,6 @@
-import "@quarkd/icons/lib/success";
-import "@quarkd/icons/lib/close";
-import "@quarkd/icons/lib/warning";
+import "@quarkd/icons/lib/whitesuccess-o";
+import "@quarkd/icons/lib/whiteerror-o";
+import "@quarkd/icons/lib/whitewarning-o";
 import QuarkElement, {
   Fragment,
   property,
@@ -61,7 +61,7 @@ class QuarkToast extends QuarkElement {
     if (propName === "show") {
       if (this.toastRef && this.toastRef.current) {
         const { current } = this.toastRef;
-        // 设置退出过度动画
+        // 设置退出过渡动画
         if (newValue) {
           // 由关闭到打开
           current.classList.remove("quark-toast-leave");
@@ -81,7 +81,7 @@ class QuarkToast extends QuarkElement {
   renderIcon = () => {
     if (this.type === "success") {
       return (
-        <quark-icon-success
+        <quark-icon-whitesuccess-o
           color={this.iconColor}
           size={this.iconSize}
           ref={this.iconRef}
@@ -89,17 +89,15 @@ class QuarkToast extends QuarkElement {
       );
     } else if (this.type === "failure") {
       return (
-        <div class="quark-toast-failure">
-          <quark-icon-close
-            color={this.iconColor}
-            size={this.iconSize}
-            ref={this.iconRef}
-          />
-        </div>
+        <quark-icon-whiteerror-o
+          color={this.iconColor}
+          size={this.iconSize}
+          ref={this.iconRef}
+        />
       );
     } else if (this.type === "warning") {
       return (
-        <quark-icon-warning
+        <quark-icon-whitewarning-o
           color={this.iconColor}
           size={this.iconSize}
           ref={this.iconRef}

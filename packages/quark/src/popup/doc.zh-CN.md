@@ -73,8 +73,8 @@ export default {
 | --------- | ------------------------ | ----------------------------- | --------- |
 | open      | 弹窗状态                 | `boolean`                     | `require` |
 | position  | 弹框位置                 | `top` `bottom` `left` `right` | `bottom`  |
-| round     | 是否圆角                 | `boolean `                    | `false`   |
-| closeable | 是否显示关闭按钮         | `boolean `                    | `false`   |
+| round     | 是否圆角                 | `boolean`                    | `false`   |
+| closeable | 是否显示关闭按钮         | `boolean`                    | `false`   |
 | safearea  | 是否开启底部安全区域适配 | `boolean`                     | `false`   |
 | zindex    | popup 层级设置           | `number、string`              | -         |
 
@@ -82,7 +82,7 @@ export default {
 
 | 名称   | 说明         | 类型          |
 | ------ | ------------ | ------------- |
-| closed | 组件关闭回调 | `（）=> void` |
+| closed | 组件关闭回调 | `() => void` |
 
 ## 样式变量
 

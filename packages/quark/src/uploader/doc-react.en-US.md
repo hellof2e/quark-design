@@ -7,7 +7,7 @@ Provide upload function
 ### Install
 
 ```tsx
-import { Uploader,UploaderRef } "quark-react";
+import { Uploader, UploaderRef } "quark-react";
 ```
 
 ### Basic Usage
@@ -114,17 +114,17 @@ export default () => {
 
 | Attribute   | Description                                            | Type                                     | Default            |
 | ----------- | ------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| accept      | Accepted file type                                     | `string `                                | `image/*`          |
-| multiple    | Whether to enable multiple selection pictures          | `boolean `                               | `true`             |
+| accept      | Accepted file type                                     | `string`                                | `image/*`          |
+| multiple    | Whether to enable multiple selection pictures          | `boolean`                               | `true`             |
 | preview     | Whether to show preview                                | `boolean`                                | `false`            |
 | capture     | Capture, can be set to boolean (call camera directly ) | `false`                                  |
-| maxcount    | Max count of image                                     | `string `                                |
-| maxsize     | Max size of file                                       | `string `                                | `26214400 （25M）` |
-| disabled    | Whether to disabled the upload                         | `boolean `                               | `false`            |
+| maxcount    | Max count of image                                     | `string`                                |
+| maxsize     | Max size of file                                       | `string`                                | `26214400 （25M）` |
+| disabled    | Whether to disabled the upload                         | `boolean`                               | `false`            |
 | hidedelete  | Hide delete icon                                       | `boolean`                                | `false`            |
 | readonly    | ReadOnly                                               | `boolean`                                | `false`            |
-| onAfterread | Emitted when upload files.                             | `（file: file or file[]）=>void`         |                    |
-| onOversize  | Emitted when file size over limit, use with maxsize    | `(items: fiel[], maxsize: string)=>void` |                    |
+| onAfterread | Emitted when upload files.                             | `(file: file or file[]) => void`         |                    |
+| onOversize  | Emitted when file size over limit, use with maxsize    | `(items: fiel[], maxsize: string) => void` |                    |
 
 ### slot
 

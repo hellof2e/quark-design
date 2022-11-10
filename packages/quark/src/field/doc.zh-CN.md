@@ -144,9 +144,9 @@ import "quarkd/lib/field";
 
 | 参数   | 说明       | 类型                                    |
 | ------ | ---------- | --------------------------------------- |
-| change | 值改变事件 | `（e:{detail:{value: string}}）=> void` |
-| focus  | 聚焦事件   | `（e:{detail:{value: string}}）=> void` |
-| blur   | 失焦事件   | `（e:{detail:{value: string}}）=> void` |
+| change | 值改变事件 | `(e: { detail: { value: string } }) => void` |
+| focus  | 聚焦事件   | `(e: { detail: { value: string } }) => void` |
+| blur   | 失焦事件   | `(e: { detail: { value: string } }) => void` |
 
 ### Method
 

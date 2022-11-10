@@ -98,16 +98,16 @@ beforeUpload(files) {
 | Attribute  | Description                                            | Type                                     | Default            |
 | ---------- | ------------------------------------------------------ | ---------------------------------------- | ------------------ |
 | accept     | Accepted file type                                     | `string`                                 | `image/*`          |
-| multiple   | Whether to enable multiple selection pictures          | `boolean `                               | `true`             |
+| multiple   | Whether to enable multiple selection pictures          | `boolean`                               | `true`             |
 | preview    | Whether to show preview                                | `boolean`                                | `false`            |
-| capture    | Capture, can be set to boolean (call camera directly ) | `false `                                 |
+| capture    | Capture, can be set to boolean (call camera directly ) | `false`                                 |
 | maxcount   | Max count of image                                     | `string`                                 |
-| maxsize    | Max size of file                                       | `string `                                | `26214400 （25M）` |
+| maxsize    | Max size of file                                       | `string`                                | `26214400 （25M）` |
 | disabled   | Whether to disabled the upload                         | `boolean`                                | `false`            |
 | hidedelete | Hide delete icon                                       | `boolean`                                | `false`            |
 | readonly   | ReadOnly                                               | `boolean`                                | `false`            |
-| afterread  | Emitted when upload files.                             | `（file: file or file[]）=>void`         |                    |
-| oversize   | Emitted when file size over limit, use with maxsize    | `(items: fiel[], maxsize: string)=>void` |                    |
+| afterread  | Emitted when upload files.                             | `(file: file or file[]) => void`         |                    |
+| oversize   | Emitted when file size over limit, use with maxsize    | `(items: fiel[], maxsize: string) => void` |                    |
 | onremove   | Emitted when remove files                              |
 
 ### slot

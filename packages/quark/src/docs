@@ -1,4 +1,28 @@
 # 更新日志
+### [1.0.19](https://github.com/hellof2e/quark-design/compare/v1.0.18...v1.0.19) (2022-11-10)
+
+
+### 🐞 Bug Fixes
+
+* add close transition & optimization example ([13e3a60](https://github.com/hellof2e/quark-design/commit/13e3a60f7baad641763256cd85d27cd93c7338af))
+* correct typos ([cd4f379](https://github.com/hellof2e/quark-design/commit/cd4f379a451b3fab770c19b24d22a9742580cdd5))
+
+
+### Documentation
+
+* fomat doc  indent ([37c5d52](https://github.com/hellof2e/quark-design/commit/37c5d52b81fb674d1a40b355865b16b78fefa606))
+
+
+### 🎉 Features
+
+*  imagepreview optimize ([d9dd798](https://github.com/hellof2e/quark-design/commit/d9dd798ff72119d48fdd37f29aaf39150a69aacf))
+* UI update for error toast ([d3baf5a](https://github.com/hellof2e/quark-design/commit/d3baf5a195e26108276b756731cc71822b419c90))
+* UI update for error toast ([4193c65](https://github.com/hellof2e/quark-design/commit/4193c65dd49ce7d10891bd4db3692ac51446d211))
+* UI update for error toast ([0caade9](https://github.com/hellof2e/quark-design/commit/0caade96bea1dfdbf7a813eab7fb3d6da660fc97))
+* update badge demo css ([4871b92](https://github.com/hellof2e/quark-design/commit/4871b9238e95e6f3b42fd4d6cdfa04fb69496870))
+* update quark-react scripts ([6bab22e](https://github.com/hellof2e/quark-design/commit/6bab22e1306c3f99b96cc8de97a38457c4f89ce7))
+* update readme ([00431c6](https://github.com/hellof2e/quark-design/commit/00431c6e4c0abe3fa817005830d8af19cc8c2942))
+
 ### 1.0.18 (2022-11-10)
 
 

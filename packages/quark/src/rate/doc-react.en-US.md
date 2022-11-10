@@ -64,4 +64,4 @@ export default () => {
 | disabled                           | Whether to disable rate                                     | `boolean` | `false`   |
 | readonly                           | Whether to be readonly                                      | `boolean` | `false`   |
 | activecolor                        | chosen color                                                | `string`  | `#ffc800` |
-| onChange Emitted when rate changed | `( e:{detail:{value:string}})=>void`                        |           |
+| onChange Emitted when rate changed | `(e: { detail: { value: string } }) => void`                        |           |

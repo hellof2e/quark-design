@@ -87,7 +87,7 @@
 
 ```
 <!-- 引入CDN文件，只有 80kb -->
-<script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
 ## 📦 通过 npm 安装

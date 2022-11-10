@@ -72,7 +72,7 @@ class QuarkPopup extends QuarkElement {
   ): boolean {
     if (propName === "open" && this.wrap && this.wrap.current) {
       const { current } = this.wrap;
-      // 设置退出过度动画
+      // 设置退出过渡动画
       if (newValue) {
         // 由关闭到打开
         current.classList.remove("leave");
@@ -118,12 +118,12 @@ class QuarkPopup extends QuarkElement {
       <Fragment>
         <div class="quark-popup" ref={this.wrap}>
           {this.closeable && this.position === "bottom" && (
-            <div
+            <button
               class="quark-popup-close-btn"
               onClick={this.handleCloseBtnClick}
             >
               <quark-icon-close size="24" />
-            </div>
+            </button>
           )}
           <slot></slot>
         </div>

@@ -5,7 +5,7 @@ export interface Props {
   type?: "primary" | "success" | "danger" | "warning";
   size?: "small" | "normal" | "big" | "large";
   icon?: string;
-  shape?: "square" | "round";
+  shape?: "round" | "square";
   plain?: boolean;
   loading?: boolean;
   loadtype?: "circular" | "spinner";

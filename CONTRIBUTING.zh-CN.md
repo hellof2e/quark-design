@@ -41,6 +41,8 @@ git tag // 先看下是否生成最新的 tag
 git push origin --tags
 ```
 
+然后 github 更新 [release](https://github.com/hellof2e/quark-design/releases/new)
+
 ## 提交 commit
 
 整个 Quark Design 仓库遵从 [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)，在输入 commit message 的时候请务必遵从此规范。

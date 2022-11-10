@@ -77,7 +77,7 @@ export default {
 
 | 名称   | 说明            | 类型                                   |
 | ------ | --------------- | -------------------------------------- |
-| change | change 回调函数 | `e: {detail:{value: string}}）=>void ` |
+| change | change 回调函数 | `e: ({ detail: { value: string } }) => void` |
 
 ## 样式变量
 
