@@ -21,16 +21,26 @@
 :host .quark-imagepreview-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+  height: 100%;
   flex-shrink: 0;
   background: var(--imagepreview-item-bg-color, black);
   transition-duration: 0.3s;
-  max-height: calc(100vh - 100px);
 }
-
+:host .quark-preview-image {
+  width: auto;
+  height: 100%
+}
 :host .quark-imagepreview-item img {
   width: 100%;
-  /* object-fit: contain; */
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  -webkit-user-drag: none;
+}
+:host .quark-imagepreview-slide {
+  height: 100vh;
 }
 :host .quark-imagepreview-slide .quark-imagepreview-slide-wrapper {
   position: relative;
@@ -38,11 +48,13 @@
 
 :host .quark-imagepreview-slide-wrapper {
   overflow: hidden;
+  height: 100%;
   background: var(--imagepreview-item-bg-color, black);
 }
 
 :host .quark-imagepreview-slide-content {
   white-space: nowrap;
   display: flex;
+  height: 100%;
   background: var(--imagepreview-item-bg-color, black);
 }
