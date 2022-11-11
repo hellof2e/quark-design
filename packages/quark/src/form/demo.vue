@@ -65,7 +65,7 @@
         >
       </div>
       <div class="line" />
-      <div class="form-item">
+      <!-- <div class="form-item">
         <span>{{ translate("fruit") }}</span>
         <quark-radio-group
           name="radio"
@@ -75,7 +75,7 @@
           <quark-radio name="apple">{{ translate("fruits")[0] }}</quark-radio>
           <quark-radio name="blue">{{ translate("fruits")[1] }}</quark-radio>
         </quark-radio-group>
-      </div>
+      </div> -->
       <div class="line" />
       <div class="form-item">
         <span>{{ translate("items")[0] }}</span>
@@ -93,7 +93,7 @@
       </div>
       <div class="line" />
       <div class="form-item">
-        <span>{{ translate("items")[3] }}:</span>
+        <span>{{ translate("items")[3] }}</span>
         <quark-uploader name="uploader" iconcolor="#ccc" preview />
       </div>
       <div class="line" />
