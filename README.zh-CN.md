@@ -94,7 +94,7 @@
 
 ```bash
 # Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目
-npm i quarkd
+npm i quarkd --save
 ```
 
 **React 使用须知**：由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
@@ -103,7 +103,7 @@ npm i quarkd
 
 ```bash
 # React 推荐使用
-npm i @quarkd/quark-react
+npm i @quarkd/quark-react --save
 ```
 
 ## 🔨 示例
