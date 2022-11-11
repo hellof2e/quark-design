@@ -6,26 +6,26 @@ Text scrolling.
 
 ### Install
 
-```tsx
+```html
 import { Marquee } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
 
-```tsx
+```html
 <Marquee title={title}></Marquee>
 ```
 
 ### Speed
 
-```tsx
+```html
 <Marquee title={title} speed="25"></Marquee>
 <Marquee title={title} speed="100"></Marquee>
 ```
 
 ### Control Paused
 
-```tsx
+```html
 <Button onClick={pauseAnimation}> Paused </Button>
 <Button onClick={continueAnimation}> Continue </Button>
 <Marquee title={title} paused={paused}></Marquee>
@@ -33,7 +33,7 @@ import { Marquee } from "@quarkd/quark-react";
 
 ### Hover Paused
 
-```tsx
+```html
 <Marquee
   title={title}
   paused={paused}
@@ -44,13 +44,13 @@ import { Marquee } from "@quarkd/quark-react";
 
 ### Click Paused
 
-```tsx
+```html
 <Marquee title={title} paused={paused} onClick={changePauseStatus}></Marquee>
 ```
 
 ### Reverse
 
-```tsx
+```html
 <Marquee title={title} reverse="true"></Marquee>
 ```
 

@@ -13,6 +13,8 @@ import {
 import { SelectColumn } from "./index";
 
 type Datetype = "date" | "year-month" | "month-day" | "datehour" | "datetime";
+type FilterType = (type: string, values: string[]) => string[];
+type FormatterType = (type: string, value: string) => string;
 
 const currentYear = new Date().getFullYear();
 
@@ -26,31 +28,31 @@ class QuarkDatePicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property({ type: String })
-  value: string = "";
+  value = "";
 
   @property({ type: String })
   type: Datetype = "datetime";
 
   @property({ type: String })
-  title: string = "";
+  title = "";
 
   @property({ type: String })
-  mindate: string = "";
+  mindate = "";
 
   @property({ type: String })
-  maxdate: string = "";
+  maxdate = "";
 
   @property({ type: Boolean })
-  showtoolbar: boolean = false;
+  showtoolbar = false;
 
   @property({ type: String })
-  confirmbuttontext: string = "";
+  confirmbuttontext = "";
 
   @property({ type: String })
-  cancelbuttontext: string = "";
+  cancelbuttontext = "";
 
   pickerRef: any = createRef();
 
@@ -61,8 +63,8 @@ class QuarkDatePicker extends QuarkElement {
   innerMinDate: Date = new Date(currentYear - 10, 0, 1);
   innerMaxDate: Date = new Date(currentYear + 10, 0, 1);
 
-  formatter: Function = (type: string, value: string): string => value;
-  filter: Function = (type: string, value: string[]): string[] => value;
+  formatter: FormatterType = (type, value) => value;
+  filter: FilterType = (type, value) => value;
 
   formatValue(value) {
     if (isDate(value)) {
@@ -265,12 +267,12 @@ class QuarkDatePicker extends QuarkElement {
     this.setColumns();
   }
 
-  setFormatter(formatter: (type: string, value: string) => string) {
+  setFormatter(formatter: FormatterType) {
     this.formatter = formatter;
     this.setColumns();
   }
 
-  setFilter(filter: (type: string, values: string[]) => string[]) {
+  setFilter(filter: FilterType) {
     this.filter = filter;
     this.setColumns();
   }

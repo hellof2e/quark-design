@@ -87,11 +87,11 @@ methods: {
         this.list.push(this.list.length + 1);
       }
       // Simulate emitted error
-      if(this.list.length === 10) {
-          this.error = true;
-        } else {
-          this.error = false;
-        }
+      if (this.list.length === 10) {
+        this.error = true;
+      } else {
+        this.error = false;
+      }
       this.loading = false;
       if (this.list.length >= 40) {
         this.finished = true;

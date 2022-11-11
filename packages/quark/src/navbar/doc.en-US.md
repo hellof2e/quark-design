@@ -135,9 +135,9 @@ mounted(){
 
 | Event      | Description                              | Type           |
 | ---------- | ---------------------------------------- | -------------- |
-| leftclick  | Emitted when the left button is clicked  | `（）=> void ` |
-| rightclick | Emitted when the right button is clicked | ` （）=> void` |
-| close      | close click event                        | `（）=> void`  |
+| leftclick  | Emitted when the left button is clicked  | `() => void ` |
+| rightclick | Emitted when the right button is clicked | `() => void` |
+| close      | close click event                        | `() => void`  |
 
 ## CSS Variables
 

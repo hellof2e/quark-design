@@ -138,12 +138,12 @@ class QuarkPopupExtra extends QuarkElement {
     return (
       <Fragment>
         <div class="quark-popup-extra">
-          <div
+          <button
             class="quark-popup-extra-close-btn"
             onClick={this.handleCloseBtnClick}
           >
             <quark-icon-close size="24" />
-          </div>
+          </button>
           <header
             className={
               this.title || this.subtitle ? "quark-popup-extra-header" : ""

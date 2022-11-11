@@ -97,7 +97,7 @@ import "quarkd/lib/marquee";
 
 | 名称       | 说明         | 类型         |
 | ---------- | ------------ | ------------ |
-| rightclick | 右侧点击事件 | `（）=>void` |
+| rightclick | 右侧点击事件 | `() => void` |
 
 ## 样式变量
 

@@ -7,7 +7,7 @@ Tags for tagging and classification.
 ### Install
 
 ```tsx
-import { Tag } '@quarkd/quark-react';
+import { Tag } "@quarkd/quark-react";
 ```
 
 ### Basic Usage

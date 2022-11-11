@@ -96,6 +96,16 @@ input::-webkit-search-cancel-button {
   color: var(--search-action-text-color, quark-formBaseColor);
   font-size: var(--search-action-font-size, quark-fontSizeCaption);
   line-height: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.quark-search-action :active {
+  background-color: #f2f3f5;
+}
+
+.quark-search-action-slot {
+  padding: 0 6px;
 }
 
 .quark-search-dark {
