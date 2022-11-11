@@ -13,13 +13,13 @@ import { Switch } from "@quarkd/quark-react";
 ### Basic Usage
 
 ```html
-<Swtich checked></Swtich>
+<Switch checked></Switch>
 ```
 
 ### Disabled
 
 ```html
-<Swtich disabled></Swtich>
+<Switch disabled></Switch>
 ```
 
 ### Custom Size
@@ -27,7 +27,7 @@ import { Switch } from "@quarkd/quark-react";
 TO change switch size, set `size` prop on the Switch or alter `font-size` value of `style` prop.
 
 ```html
-<Swtich size="26px"></Swtich> <Swtich style="font-size: 26px"></Swtich>
+<Switch size="26px"></Switch> <Switch style="font-size: 26px"></Switch>
 ```
 
 ### Custom Color
@@ -35,7 +35,7 @@ TO change switch size, set `size` prop on the Switch or alter `font-size` value 
 To custom color, set `color` prop on the Switch.
 
 ```html
-<Swtich color="red"></Swtich>
+<Switch color="red"></Switch>
 ```
 
 ### Change Event
@@ -46,7 +46,7 @@ export default () => {
   const handleChange = (e) => {
     setChecked(e.detail.value);
   };
-  return <Swtich onChange="console.log(event)" checked={checked}></Swtich>;
+  return <Switch onChange="console.log(event)" checked={checked}></Switch>;
 };
 ```
 
