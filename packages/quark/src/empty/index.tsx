@@ -42,7 +42,7 @@ class QuarkEmpty extends QuarkElement {
             src={
               this.image
                 ? this.image
-                : "https://m.hellobike.com/resource/helloyun/16719/NzmBm8lW4h.png"
+                : "https://m.hellobike.com/resource/helloyun/16682/-UzYw-6Q1G.png?x-oss-process=image/quality,q_80"
             }
             alt="empty-image"
           />
