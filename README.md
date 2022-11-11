@@ -95,7 +95,7 @@ Using `npm` to install:
 
 ```bash
 # install for Vue/React/Angular/No framework project
-npm i quarkd
+npm i quarkd --save
 ```
 
 **React usage notes**: Since the components provided by `quarkd` are all native custom elements (analogous to div), events dispatched in the component need to be received by `addEventLisener`, such as the custom close event close inside the `dialog` component. The `Vue` technology stack can directly use `@xx` to receive natively dispatched events, so there is no need to use `addEventLisener` to receive.
