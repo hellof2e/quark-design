@@ -126,12 +126,12 @@ export default defineComponent({
 			watchDocMd(curKey);
 		};
 
-		const isReact = (router: RouteLocationNormalized) => {
-			return router.path.indexOf("react") > -1;
+		const isReact = (route: RouteLocationNormalized) => {
+			return route.path.indexOf("react") > -1;
 		};
 
 		onMounted(async () => {
-			componentTitle();
+			componentTitle(route);
 			watchDemoUrl(route);
 			data.curKey = isReact(route) ? "react" : "vue";
 			document.addEventListener("scroll", scrollTitle);
@@ -158,26 +158,17 @@ export default defineComponent({
 		};
 
 		// 获得组件名称
-		const componentTitle = (to?: any) => {
-			let routename = "";
-			if (to?.name) {
-				routename = to.path.toLocaleLowerCase().split("/").pop() || "";
-			} else {
-				routename = route.path.toLocaleLowerCase().split("/").pop() || "";
+		const componentTitle = (to: RouteLocationNormalized) => {
+			const routename = to.path.toLocaleLowerCase().split("/").pop() || "";
+			state.componentName.name = routename.split("-")[0];
+			for (let i = 0; i < nav.length; i++) {
+				const activePackage: any = nav[i].packages.find((item: any) => item.name.toLowerCase() == state.componentName.name);
+				if (activePackage) {
+					state.componentName.name = activePackage.name;
+					state.componentName.cName = activePackage.cName;
+					break;
+				}
 			}
-
-			state.componentName.name = routename.indexOf("-react")
-				? routename.split("-").shift()
-				: routename;
-			nav.forEach((i: any) => {
-				i.packages.forEach((item: any) => {
-					if (item.name.toLowerCase() == state.componentName.name) {
-						state.componentName.name = item.name;
-						state.componentName.cName = item.cName;
-						return;
-					}
-				});
-			});
 		};
 
 		onBeforeRouteUpdate((to) => {
