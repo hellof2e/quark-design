@@ -14,7 +14,7 @@ const findComponentName = (name: string) => {
 	for (const key in nav) {
 		if (Object.prototype.hasOwnProperty.call(nav, key)) {
 			const element = nav[key];
-			let idx = element.packages.findIndex(
+			const idx = element.packages.findIndex(
 				(i) => i.name.toLowerCase() === name
 			);
 			if (idx !== -1) {
@@ -29,7 +29,7 @@ const modulesPage = import.meta.glob(
 	"../../../../packages/quark/src/**/demo.vue"
 );
 for (const path in modulesPage) {
-	let name = (/src\/(.*)\/demo.vue/.exec(path) as any[])[1];
+	const name = (/src\/(.*)\/demo.vue/.exec(path) as any[])[1];
 
 	routes.push({
 		path: `/${name}`,
