@@ -1,6 +1,6 @@
 name: Create new issue(创建新 issue)
 description: Bug feedback via github templates.(通过 github 模板进行 Bug 反馈。)
-title: "A title describing the problem(描述问题的标题)"
+title: "Issue title(Issue 标题)"
 body:
   - type: markdown
     attributes:
