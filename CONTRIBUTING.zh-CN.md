@@ -61,7 +61,7 @@ type(ComponentName?)：commit message
 
 ## 常见问题
 
-如何清楚子项目的缓存？
+如何清除子项目的缓存？
 
 ```
 yarn clean
