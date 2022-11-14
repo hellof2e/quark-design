@@ -46,8 +46,8 @@
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 56px;
+  /* bottom: 0; */
+  /* width: 56px; */
   display: flex;
   justify-content: center;
   align-items: center;
