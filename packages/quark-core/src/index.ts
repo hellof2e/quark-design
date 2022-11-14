@@ -1,16 +1,16 @@
-import { h, render, VNode, Fragment as OriginFragment } from "preact";
-import { PropertyDeclaration } from "./models";
+import { h, render, VNode, Fragment } from "preact";
+import { PropertyDeclaration, converterFunction } from "./models";
 import DblKeyMap from "./dblKeyMap";
 import { EventController, EventHandler } from "./eventController";
 import delay from "./delay";
 
 export { createRef } from "preact";
 
-export const Fragment: any = OriginFragment;
+export { Fragment };
 
-const isEmpty = (val: any) => !(val || val === false || val === 0);
+const isEmpty = (val: unknown) => !(val || val === false || val === 0);
 
-const defaultConverter = (value: any, type?: any): any => {
+const defaultConverter: converterFunction = (value, type?) => {
   let newValue = value;
   switch (type) {
     case Number:
@@ -30,7 +30,7 @@ const defaultPropertyDeclaration: PropertyDeclaration = {
 };
 
 export const property = (options: PropertyDeclaration = {}) => {
-  return (target: Object, name: string) => {
+  return (target: unknown, name: string) => {
     return (target.constructor as typeof QuarkElement).createProperty(
       name,
       options
@@ -39,7 +39,7 @@ export const property = (options: PropertyDeclaration = {}) => {
 };
 
 export const state = () => {
-  return (target: Object, name: string) => {
+  return (target: unknown, name: string) => {
     return (target.constructor as typeof QuarkElement).createState(name);
   };
 };
@@ -233,7 +233,7 @@ export default class QuarkElement extends HTMLElement {
   }
 
   private _render() {
-    let newRootVNode: VNode = this.render() as any;
+    const newRootVNode: VNode = this.render();
     if (newRootVNode) {
       this.rootPatch(newRootVNode);
     }
@@ -320,7 +320,6 @@ export default class QuarkElement extends HTMLElement {
   }
 
   attributeChangedCallback(name: string, oldValue: string, value: string) {
-    // @ts-ignore
     // 因为 React 的属性变更并不会触发 set，此时如果 boolean 值变更，这里的 value 会是字符串，组件内部通过 get 操作可以获取到正确的类型
     const newValue = this[name] || value;
     if (typeof this.shouldComponentUpdate === "function") {
