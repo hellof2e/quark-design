@@ -36,8 +36,8 @@ export const getPropByPath = (obj: any, keyPath: string) => {
 
 export const deepMerge = (target: any, newObj: any) => {
 	Object.keys(newObj).forEach((key) => {
-		let targetValue = target[key];
-		let newObjValue = newObj[key];
+		const targetValue = target[key];
+		const newObjValue = newObj[key];
 		if (isObject(targetValue) && isObject(newObjValue)) {
 			deepMerge(targetValue, newObjValue);
 		} else {

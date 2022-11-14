@@ -10,7 +10,7 @@ export const useTranslate = (object: Record<string, any>) => {
 };
 
 export const initSiteLang = () => {
-	let lang = Locale.currentLang;
+	const lang = Locale.currentLang;
 	location.href = location.href.replace("zh-CN", lang).replace("en-US", lang);
 };
 

@@ -9,7 +9,7 @@ const modulesPage = import.meta.glob(
 	`../../../../packages/quark/src/**/doc.zh-CN.md`
 );
 for (const path in modulesPage) {
-	let name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
+	const name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
 	pagesRouter.push({
 		path: `/zh-CN/component/${name}`,
 		component: modulesPage[path],
@@ -22,7 +22,7 @@ const modulesEnPage = import.meta.glob(
 	"../../../../packages/quark/src/**/doc.en-US.md"
 );
 for (const path in modulesEnPage) {
-	let name = (/src\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
+	const name = (/src\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
 	pagesEnRouter.push({
 		path: `/en-US/component/${name}`,
 		component: modulesEnPage[path],
@@ -35,7 +35,7 @@ const modulesPageReact = (import.meta as any).glob(
 	"../../../../packages/quark/src/**/doc-react.zh-CN.md"
 );
 for (const path in modulesPageReact) {
-	let name = (/src\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[])[1];
+	const name = (/src\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[])[1];
 	pagesRouter.push({
 		path: `/zh-CN/component/${name}-react`,
 		component: modulesPageReact[path],
@@ -46,7 +46,7 @@ const modulesEnPageReact = (import.meta as any).glob(
 	"../../../../packages/quark/src/**/doc-react.en-US.md"
 );
 for (const path in modulesEnPageReact) {
-	let name = (/src\/(.*)\/doc-react.en-US.md/.exec(path) as any[])[1];
+	const name = (/src\/(.*)\/doc-react.en-US.md/.exec(path) as any[])[1];
 	pagesEnRouter.push({
 		path: `/en-US/component/${name}-react`,
 		component: modulesEnPageReact[path],
