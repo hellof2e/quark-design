@@ -41,7 +41,7 @@ class QuarkRate extends QuarkElement {
   activecolor = "#ffc800";
 
   @property({ type: Boolean })
-  disable = false;
+  disabled = false;
 
   @property({ type: Boolean })
   readonly = false;
