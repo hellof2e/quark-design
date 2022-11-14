@@ -48,5 +48,5 @@ body:
   - type: textarea
     id: remarks
     attributes:
-      label: Problem descriptions, steps to reproduce, or code samples can be stored in a GitHub repository, providing a link to the repository.(问题说明，重现步骤，或附上代码示例可存放 GitHub 仓库，提供仓库链接。)
+      label: A description of the problem, steps to reproduce, or with code samples, can be hosted on a GitHub repository with a link to the repository.(问题说明，重现步骤，或附上代码示例，可存放 GitHub 仓库并提供仓库链接。)
       placeholder: Please fill out...(请输入...)
