@@ -30,7 +30,7 @@
 
 :host .quark-popup {
   display: flex;
-  padding: 24px;
+  /* padding: 24px; */
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
