@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  一套企业级跨框架 UI 设计语言，底层基于 Web components
+  一套企业级跨框架 UI 设计语言，底层基于 Web Components
   
 </div>
 
@@ -71,7 +71,7 @@
 - 国际化语言支持。
 - 支持服务端渲染（Beta）。
 
-| framework      | CDN     | 打包/构建工具  | Typescript | 开源时间 | 支持技术栈/框架                    |
+| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持技术栈/框架                    |
 | -------------- | ------- | -------------- | ---------- | -------- | ---------------------------------- |
 | Quark          | 80.1kb  | Rollup         | √          | 2022     | Vue/React/Angular/JQ/Svelte/无框架 |
 | Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | Vue                                |
@@ -147,7 +147,7 @@ import "quarkd/lib/button"
 <!DOCTYPE html>
 <html lang="en">
   <!-- 1. CDN, import all components -->
-  <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
   <body>
   
     <!-- 2. use it -->

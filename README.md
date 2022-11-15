@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  An enterprise-class UI design language and cross-framework UI library, Based on web components.
+  An enterprise-class UI design language and cross-framework UI library, Based on Web Components.
   
 </div>
 
@@ -70,7 +70,7 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 - Support Custom Theme
 - Support i18n, built-in 20+ languages
 
-| Component Library | CDN     | Import on demand | Build tools    | Typescript | open source time | Support technology stack/framework       |
+| Component Library | CDN     | Import on demand | Build tools    | TypeScript | open source time | Support technology stack/framework       |
 | ----------------- | ------- | ---------------- | -------------- | ---------- | ---------------- | ---------------------------------------- |
 | Quark             | 80.1kb  | √                | Rollup         | √          | 2022             | Vue/React/Angular/JQ/Svelte/no framework |
 | Vant              | 183kb   | √                | Vite(Vant-cli) | √          | 2017             | Vue only                                 |
@@ -153,7 +153,7 @@ No framework project
 <!DOCTYPE html>
 <html lang="en">
   <!-- 1. CDN, import all components -->
-  <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
   <body>
   
     <!-- 2. use it -->
