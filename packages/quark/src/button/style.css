@@ -9,6 +9,7 @@
   padding-left: var(--button-hspacing, 12px);
   padding-right: var(--button-hspacing, 12px);
   cursor: pointer;
+  user-select: none;
 }
 
 :host .quark-button {
@@ -17,7 +18,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  user-select: none;
   cursor: unset;
 }
 
