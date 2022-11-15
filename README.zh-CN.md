@@ -147,7 +147,7 @@ import "quarkd/lib/button"
 <!DOCTYPE html>
 <html lang="en">
   <!-- 1. CDN, import all components -->
-  <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
   <body>
   
     <!-- 2. use it -->
