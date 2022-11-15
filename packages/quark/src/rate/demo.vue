@@ -6,7 +6,7 @@
     </div>
     <h2>{{ translate("selectedColor") }}</h2>
     <div class="tag-container">
-      <quark-rate defaultvalue="2" activecolor="green"></quark-rate>
+      <quark-rate defaultvalue="2" activecolor="#ffd21e"></quark-rate>
     </div>
     <h2>{{ translate("disabled") }}</h2>
     <div class="tag-container">

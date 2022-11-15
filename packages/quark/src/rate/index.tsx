@@ -38,7 +38,7 @@ class QuarkRate extends QuarkElement {
   icon = "";
 
   @property()
-  activecolor = "#ffc800";
+  activecolor = "#ee0a24";
 
   @property({ type: Boolean })
   disabled = false;
@@ -67,7 +67,7 @@ class QuarkRate extends QuarkElement {
   }
 
   handleChange(i: { id: number; color: string }) {
-    if (!this.shadowRoot) return;
+    if (!this.shadowRoot || this.disabled) return;
     const { id, color } = i;
     this.stars = this.stars.map((item) => {
       item.color = "inherit";
@@ -99,6 +99,8 @@ class QuarkRate extends QuarkElement {
         />
       );
     }
+    console.log(i, 11);
+
     return (
       <quark-icon-star-fill
         key={i.id}
