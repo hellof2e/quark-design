@@ -1,3 +1,5 @@
+## 目录结构
+```bash
 src
 ├── README.md
 ├── config.json // 官网菜单配置，详情见注释 1
@@ -6,7 +8,7 @@ src
 ├── packages // 源码
 ├── shims-vue.d.ts
 └── sites // 官网
-
+```
 ## 注释 1
 
 config.json 为官网菜单配置文件。
