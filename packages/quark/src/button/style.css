@@ -146,7 +146,7 @@
 }
 
 :host .quark-button-icon {
-  width: 1em;
+  width: var(--button-icon-size, 1em);
   height: auto;
   margin-right: var(--button-icon-hspacing, 5px);
 }

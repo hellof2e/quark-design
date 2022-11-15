@@ -118,4 +118,5 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--button-border-radius` | Border-radius of button          | `8px`         |
 | `--button-color`         | Font color on button             | `#fff`        |
 | `--button-icon-hspacing` | icon margin right                | `6px`         |
+| `--button-icon-size` | icon size    | `1em`  |
 | `--button-big-border-radius` | Border-radius of big size button                | `8px`         |
