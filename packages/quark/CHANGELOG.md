@@ -1,4 +1,37 @@
 # 更新日志
+### [1.0.20](https://github.com/hellof2e/quark-design/compare/v1.0.19...v1.0.20) (2022-11-15)
+
+
+### Documentation
+
+* format doc & TouchEvent type ([9a5a13b](https://github.com/hellof2e/quark-design/commit/9a5a13b22f35c0f758d6bd04390709d3f6b4cbce))
+* update CONTRIBUTING.zh-CN.md ([80f5669](https://github.com/hellof2e/quark-design/commit/80f56699ef352ed9ee5e3e779484aee9f1cd098e))
+
+
+### 🎉 Features
+
+* empty icon ([9b63164](https://github.com/hellof2e/quark-design/commit/9b63164b1628d8060b1f9d0b6a1c13a00980094d))
+* npmrc ([b8fe96f](https://github.com/hellof2e/quark-design/commit/b8fe96fb264733a979b35cafb0547982b9acdfe2))
+* update issue_template ([83cf31a](https://github.com/hellof2e/quark-design/commit/83cf31aa27f84612c0f8e5b8f0508aa5b4e6a527))
+* update issue_template ([20f6336](https://github.com/hellof2e/quark-design/commit/20f63366482fad0c8df627f1129f352675e338cf))
+* update issue_template ([2849f67](https://github.com/hellof2e/quark-design/commit/2849f671207b4a6e313d3cad669e3e4e20ec6a02))
+* update issue_template ([dd8599b](https://github.com/hellof2e/quark-design/commit/dd8599bba5b0913b58bf6a15dff0d7852dd96e89))
+* update issue_template ([1f9fda1](https://github.com/hellof2e/quark-design/commit/1f9fda10ac325ab32bd60bc9964d2a43f5a28a14))
+* update issue_template ([40e857f](https://github.com/hellof2e/quark-design/commit/40e857fcac81eeb8e8415a3cc4c53bed5646342f))
+* update issue_template ([8e49cea](https://github.com/hellof2e/quark-design/commit/8e49ceaf529029e0cf044912bcefe24d7ed7a6be))
+* update issue_template ([b3934bf](https://github.com/hellof2e/quark-design/commit/b3934bf63f0e08e0562114942f331ddbe77cd8fd))
+* update issue_template ([8835fc8](https://github.com/hellof2e/quark-design/commit/8835fc8bf70c8d3ef07ae77972e1b454341ca811))
+
+
+### 🐞 Bug Fixes
+
+* demo ui fix ([70de171](https://github.com/hellof2e/quark-design/commit/70de171b81783c0bd0ea75fadfe4da81e81fa529))
+* fix [#128](https://github.com/hellof2e/quark-design/issues/128) ([15a8754](https://github.com/hellof2e/quark-design/commit/15a8754f64ae9f718882ea9d88dd202cb745edbf))
+* **Rate:** fix disabled prop ([e693016](https://github.com/hellof2e/quark-design/commit/e6930169a4b0e26aa18e944696352dd9e0745bb9))
+* searchbar ui fix ([eea6268](https://github.com/hellof2e/quark-design/commit/eea626802e8b42eb510bfde03fc851047b035411))
+* **types:** fix ts warning & single->double quotes ([e9e7c80](https://github.com/hellof2e/quark-design/commit/e9e7c8092d5f4de9d4f843748de0bcd025db9d38))
+* Use const instead them that  never reassigned ([2d79712](https://github.com/hellof2e/quark-design/commit/2d797129000dfc54ba6b1e56259c7f9d121fac99))
+
 ### [1.0.19](https://github.com/hellof2e/quark-design/compare/v1.0.18...v1.0.19) (2022-11-10)
 
 
