@@ -52,6 +52,9 @@ class QuarkButton extends QuarkElement {
   @property()
   loadingsize: number;
 
+  @property()
+  onselectstart: any = "return false";
+
   @property({
     type: Boolean,
   })
