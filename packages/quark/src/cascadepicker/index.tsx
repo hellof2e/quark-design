@@ -81,9 +81,6 @@ class QuarkCascadePicker extends QuarkElement {
     const firstColumn = this.columns[0];
     this.depth = this.getDepths(firstColumn, 1);
     this.selectedIndexPair = new Array(this.depth).fill(0);
-    if (this.depth <= 1) {
-      return;
-    }
 
     this.loadInitPickerData();
 
