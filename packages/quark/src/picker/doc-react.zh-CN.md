@@ -18,9 +18,7 @@ export default () => {
   const [open, setOpen] = useState(false);
   const pickerRef = useRef < PickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     const values = detail.value
@@ -49,9 +47,7 @@ export default () => {
     }, 1000);
   }, []);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div>
@@ -76,9 +72,7 @@ export default () => {
   const [open, setOpen] = useState(false);
   const pickerRef = useRef < PickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = () => {
     const { current } = pickerRef;
@@ -109,9 +103,7 @@ export default () => {
     }, 1000);
   }, []);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div>

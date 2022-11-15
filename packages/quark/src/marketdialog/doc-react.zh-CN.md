@@ -15,7 +15,7 @@ import { MarketDialog } from "@quarkd/quark-react";
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const handleClose = () =>  setOpen(false);
+  const handleClose = () => setOpen(false);
   return (
     <MarketDialog
       open={open}
@@ -33,7 +33,7 @@ export default () => {
 ```tsx
 export default () => {
   const [open, setOpen] = useState(false);
-  const handleClose = () =>  setOpen(false);
+  const handleClose = () => setOpen(false);
   return (
     <MarketDialog open={open} onClose={handleClose}>
       <img

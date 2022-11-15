@@ -13,7 +13,7 @@ import { Button } from "@quarkd/quark-react";
 ### 基本使用
 
 ```html
-<button>默认按钮</button>
+<Button>默认按钮</Button>
 ```
 
 ### 按钮类型
@@ -21,11 +21,11 @@ import { Button } from "@quarkd/quark-react";
 按钮支持 `primary`、`success`、`danger`、`warning`和默认类型。
 
 ```html
-<button>默认按钮</button>
-<button type="primary">主要按钮</button>
-<button type="success">成功按钮</button>
-<button type="danger">危险按钮</button>
-<button type="warning">警告按钮</button>
+<Button>默认按钮</Button>
+<Button type="primary">主要按钮</Button>
+<Button type="success">成功按钮</Button>
+<Button type="danger">危险按钮</Button>
+<Button type="warning">警告按钮</Button>
 ```
 
 ### 朴素按钮
@@ -33,8 +33,8 @@ import { Button } from "@quarkd/quark-react";
 通过 `plain` 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
 
 ```html
-<button plain type="primary">主要按钮</button>
-<button plain type="success">成功按钮</button>
+<Button plain type="primary">主要按钮</Button>
+<Button plain type="success">成功按钮</Button>
 ```
 
 ### 按钮尺寸
@@ -42,9 +42,9 @@ import { Button } from "@quarkd/quark-react";
 按钮支持 `big`、`small` 和默认尺寸。
 
 ```html
-<button type="primary" size="small">小号尺寸</button>
-<button type="primary" size="big">大号尺寸</button>
-<button type="primary">普通尺寸</button>
+<Button type="primary" size="small">小号尺寸</Button>
+<Button type="primary" size="big">大号尺寸</Button>
+<Button type="primary">普通尺寸</Button>
 ```
 
 ### 禁用状态
@@ -52,8 +52,8 @@ import { Button } from "@quarkd/quark-react";
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。
 
 ```html
-<button disabled type="primary">禁用状态</button>
-<button disabled plain>禁用状态</button>
+<Button disabled type="primary">禁用状态</Button>
+<Button disabled plain>禁用状态</Button>
 ```
 
 ### 按钮形状
@@ -61,8 +61,8 @@ import { Button } from "@quarkd/quark-react";
 通过 `shape` 属性设置按钮形状，支持圆角（`round`）、方形按钮(`square`)和默认的小圆角。
 
 ```html
-<button shape="square" type="danger">方形按钮</button>
-<button shape="round" type="primary">圆角按钮</button>
+<Button shape="square" type="danger">方形按钮</Button>
+<Button shape="round" type="primary">圆角按钮</Button>
 ```
 
 ### 加载状态
@@ -80,12 +80,12 @@ import { Button } from "@quarkd/quark-react";
 通过 `icon` 属性设置图标。
 
 ```html
-<button
+<Button
   type="primary"
   icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
 >
   喜欢
-</button>
+</Button>
 ```
 
 ## API

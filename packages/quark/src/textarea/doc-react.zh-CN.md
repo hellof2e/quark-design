@@ -1,4 +1,4 @@
-# textArea 文本域
+# Textarea 文本域
 
 ### 介绍
 
@@ -7,49 +7,49 @@
 ### 安装使用
 
 ```tsx
-import { TextArea } from "@quarkd/quark-react";
+import { Textarea } from "@quarkd/quark-react";
 ```
 
 ### 基本使用
 
 ```html
-<textarea />
+<Textarea />
 ```
 
 ### 指定行数
 
 ```html
-<textarea rows="6" />
+<Textarea rows="6" />
 ```
 
 ### 根据内容自动调整高度
 
 ```html
-<textarea autosize />
+<Textarea autosize />
 ```
 
 ### 字数统计
 
 ```html
-<textarea showcount />
+<Textarea showcount />
 ```
 
 ### 字数限制
 
 ```html
-<textarea showcount maxlength="50" />
+<Textarea showcount maxlength="50" />
 ```
 
 ### 禁用状态
 
 ```html
-<textarea disabled />
+<Textarea disabled />
 ```
 
 ### 自定义样式
 
 ```html
-<textarea showcount class="custom-style" />
+<Textarea showcount class="custom-style" />
 ```
 
 ```css

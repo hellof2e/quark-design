@@ -23,9 +23,7 @@ export default () => {
     setOpen(false);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
@@ -55,9 +53,7 @@ export default () => {
     setOpen(false);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
@@ -90,9 +86,7 @@ export default () => {
     setOpen(false);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   return (
     <div>

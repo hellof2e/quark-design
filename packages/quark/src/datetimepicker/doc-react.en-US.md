@@ -21,18 +21,14 @@ export default () => {
   const maxDate = "2025-08-13";
   const currentDate = "2021-11-30";
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   const handleChange = ({ detail }) => {
     Toast.text(`${detail.value}`);
@@ -74,18 +70,14 @@ export default () => {
     return val;
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   useEffect(() => {
     const { current: datetimePickerCurrent } = datetimePickerRef;
@@ -115,18 +107,14 @@ export default () => {
   const [open, setOpen] = useState(false);
   const datetimePickerRef = useRef < DatetimePickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   useEffect(() => {
     const { current: datetimePickerCurrent } = datetimePickerRef;
@@ -181,18 +169,14 @@ export default () => {
     return options;
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   useEffect(() => {
     const { current: datetimePickerCurrent } = datetimePickerRef;
@@ -226,18 +210,14 @@ export default () => {
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div className="demo">
@@ -260,18 +240,14 @@ export default () => {
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div className="demo">
@@ -296,18 +272,14 @@ setting showtoolbar true
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);
     setOpen(false);
   };
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div className="demo">
@@ -332,9 +304,7 @@ export default () => {
   const [open, setOpen] = useState(false);
   const datetimePickerRef = useRef < DatetimePickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     Toast.text(`${detail.value}`);

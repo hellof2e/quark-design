@@ -50,9 +50,7 @@ Set `slot='title'` to replace `title`.
 <PopupExtra
   subtitle="Subtitle"
   open={open}
-  onClosed={() => {
-    open = false;
-  }}
+  onClosed={() => setOpen(false)}
 >
   <div slot="title">
     <span style="color: red">Custom</span>Title
@@ -68,7 +66,7 @@ Set `slot='title'` to replace `title`.
 ### Close popup
 
 ```js
-<PopupExtra open={open} onClosed={() => { setOpen(false) } />
+<PopupExtra open={open} onClosed={() => setOpen(false)} />
 ```
 
 ## API
