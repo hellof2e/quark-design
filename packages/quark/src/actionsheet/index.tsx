@@ -119,7 +119,7 @@ class QuarkActionSheet extends QuarkElement {
     this.open = false;
   };
 
-  handleTransitionend(ev: any) {
+  handleTransitionend(ev: TransitionEvent) {
     if (ev.propertyName === "opacity" && !this.open) {
       document.body.removeChild(this);
     }
@@ -132,7 +132,7 @@ class QuarkActionSheet extends QuarkElement {
     }
   };
 
-  handleContainerClick(ev: any) {
+  handleContainerClick(ev: PointerEvent) {
     ev.stopPropagation();
   }
 

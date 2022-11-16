@@ -13,8 +13,8 @@ import {
 import { SelectColumn } from "./index";
 
 type Datetype = "date" | "year-month" | "month-day" | "datehour" | "datetime";
-type FilterType = (type: string, values: string[]) => string[];
-type FormatterType = (type: string, value: string) => string;
+export type FilterType = (type: string, values: string[]) => string[];
+export type FormatterType = (type: string, value: string) => string;
 
 const currentYear = new Date().getFullYear();
 
