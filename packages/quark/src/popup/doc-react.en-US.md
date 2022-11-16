@@ -24,14 +24,14 @@ export default () => {
       <div onClick={handleOpen}>
         Basic Usage
       </div>
-      <PopUp open={open} onClosed={handleClose}>
+      <Popup open={open} onClosed={handleClose}>
         <div>First Line</div>
         <div>Second Line</div>
         <div>Third Line</div>
         <div>Forth Line</div>
         <div>Fifth Line</div>
         <div>Six Line</div>
-      </PopUp>
+      </Popup>
     </div>
   );
 };

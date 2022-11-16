@@ -429,7 +429,7 @@
 				},
 				{
 					"version": "0.0.1",
-					"name": "TextArea",
+					"name": "Textarea",
 					"sort": 1,
 					"cName": "文本域",
 					"type": "component",
