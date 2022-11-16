@@ -1,4 +1,26 @@
 # 更新日志
+### [1.0.21](https://github.com/hellof2e/quark-design/compare/v1.0.20...v1.0.21) (2022-11-16)
+
+
+### Documentation
+
+* optimized format & fix error ([72d5405](https://github.com/hellof2e/quark-design/commit/72d54053981c487309f0e9bd49887df9d587eca4))
+* update README.md ([0f64c2a](https://github.com/hellof2e/quark-design/commit/0f64c2a0cb69cbf4359c6351f745cd0904f30592))
+* update README.md ([c5034ea](https://github.com/hellof2e/quark-design/commit/c5034eaa703f33883f72b660c715681b7b21fbad))
+
+
+### 🐞 Bug Fixes
+
+* issue[#134](https://github.com/hellof2e/quark-design/issues/134) ([ad4527c](https://github.com/hellof2e/quark-design/commit/ad4527c874434e8dfa7ed3ded0939a923a5fd424))
+* lint example md tree ([96c1e2f](https://github.com/hellof2e/quark-design/commit/96c1e2fdbcff7c8da6e48d74f9e06911c505923d))
+* Optimization Types and Cases ([21f83c1](https://github.com/hellof2e/quark-design/commit/21f83c12aa5bedca1289eea66876cd2c708bd7f6))
+
+
+### 🎉 Features
+
+* checkbox radio icon index ([8f70d8a](https://github.com/hellof2e/quark-design/commit/8f70d8ae37336c38a8df670ccc02f07c9f8c146c))
+* quarkd rollup config remove modulesOnly ([5ca40b4](https://github.com/hellof2e/quark-design/commit/5ca40b4b66b7ffca4e80fced8c2e07e056e3fda1))
+
 ### [1.0.20](https://github.com/hellof2e/quark-design/compare/v1.0.19...v1.0.20) (2022-11-15)
 
 
