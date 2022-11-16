@@ -99,7 +99,6 @@ class QuarkRate extends QuarkElement {
         />
       );
     }
-    console.log(i, 11);
 
     return (
       <quark-icon-star-fill
