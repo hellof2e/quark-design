@@ -16,13 +16,8 @@ import { Overlay } from "@quarkd/quark-react";
 export default () => {
   const [open, setOpen] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClose = () => setOpen(false);
+  const handleClick = () => setOpen(true);
 
   return (
     <div>

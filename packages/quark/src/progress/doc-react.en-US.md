@@ -13,13 +13,13 @@ import { Progress } "@quarkd/quark-react"
 ### Basic Usage
 
 ```html
-<progress value="0"></progress>
+<Progress value="0"></Progress>
 ```
 
 ### Showtext
 
 ```html
-<progress value="100" showtext></progress>
+<Progress value="100" showtext></Progress>
 ```
 
 ### Custom style 1
@@ -32,8 +32,8 @@ import { Progress } "@quarkd/quark-react"
 ```
 
 ```html
-<progress value="20" color="green"></progress>
-<progress value="30" color="green" class="green"></progress>
+<Progress value="20" color="green"></Progress>
+<Progress value="30" color="green" class="green"></Progress>
 ```
 
 ### Custom style 2
@@ -47,14 +47,14 @@ import { Progress } "@quarkd/quark-react"
 ```
 
 ```html
-<progress
+<Progress
   value="90"
   class="auto"
   color="linear-gradient(
   268deg,#fa2c19 0%,#fa3f19 44.59259259%,#fa5919 83.40740741%,#fa6419 100%)"
 >
   <span slot="percent" class="percent">0.9</span>
-</progress>
+</Progress>
 ```
 
 ## API

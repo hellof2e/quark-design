@@ -46,9 +46,7 @@ export default () => {
   const [open, setOpen] = useState(false);
   const pickerRef = useRef < CascadePickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = ({ detail }) => {
     const values = detail.value
@@ -68,9 +66,7 @@ export default () => {
     }, 1000);
   }, []);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div className="demo">
@@ -122,9 +118,7 @@ export default () => {
   const [open, setOpen] = useState(false);
   const pickerRef = useRef < CascadePickerRef > null;
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => setOpen(false);
 
   const handleConfirm = () => {
     const { current } = pickerRef;
@@ -146,9 +140,7 @@ export default () => {
     }, 1000);
   }, []);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  const handleClick = () => setOpen(true);
 
   return (
     <div className="demo">
