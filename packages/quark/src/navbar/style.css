@@ -8,6 +8,7 @@
   text-align: center;
   width: 100%;
   background-color: white;
+  user-select: none;
 }
 
 :host([safearea]) {
@@ -42,6 +43,10 @@
   color: var(--navbar-right-color, quark-textBaseColor);
   right: var(--navbar-right-padding, 16px);
 }
+
+:host .back:active, .close:active, .quark-navbar-right:active {
+  opacity: 0.5;
+} 
 
 :host quark-icon-close {
   position: absolute;
