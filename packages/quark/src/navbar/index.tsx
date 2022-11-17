@@ -57,6 +57,7 @@ class QuarkNavbar extends QuarkElement {
               id="left"
               size={this.iconsize}
               onClick={this.leftClick}
+              class="back"
             />
             {!this.closehide && (
               <quark-icon-close
