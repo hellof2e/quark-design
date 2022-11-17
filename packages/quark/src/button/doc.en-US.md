@@ -119,7 +119,7 @@ Button components can contain an Icon. This is done by setting `icon` prop withi
 
 | Attribute    | Description                                                          | Type      | Default   |
 | ------------ | -------------------------------------------------------------------- | --------- | --------- |
-| type         | Button type，can be set to `primary`, `success`, `danger`, `warning` | `string`  | `primary` |
+| type         | Button type，can be set to `primary`, `success`, `danger`, `warning` | `string`  | - |
 | size         | Button size，can be set to `small`, `normal`, `big`, `large`         | `string`  | `normal`  |
 | disabled     | Whether to disable button                                            | `boolean` | `false`   |
 | icon         | Icon on button (can be set to url link)                              | `string`  | -         |

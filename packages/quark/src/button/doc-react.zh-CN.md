@@ -94,12 +94,12 @@ import { Button } from "@quarkd/quark-react";
 
 | 参数         | 说明                                                                               | 类型      | 默认值    |
 | ------------ | ---------------------------------------------------------------------------------- | --------- | --------- |
-| type         | 类型，可选值为 `primary`、`success`、`orange`、`danger`、`warning` 和默认 6 种类型 | `string`  | `primary` |
+| type         | 类型，可选值为 `primary`、`success`、`danger`、`warning` 和默认 5 种类型 | `string`  | - |
 | size         | 尺寸，可选值为 `small`, `normal`, `big`, `large` 4 种类型                          | `string`  | `normal`  |
 | disabled     | 是否禁用按钮                                                                       | `boolean` | `false`   |
 | icon         | 按钮图标 (支持传 url 链接)                                                         | `string`  | -         |
 | shape        | 形状，可选值为 `square`                                                            | `string`  | `round`   |
-| plain        | 是否启用空心按钮                                                                   | `boolean` | `false `  |
+| plain        | 是否为朴素按钮                                                                   | `boolean` | `false `  |
 | loading      | 按钮 loading 状态                                                                  | `boolean` | `false`   |
 | loadtype     | 加载图标类型，可选值为 `circular`                                                  | `string`  | `spinner` |
 | loadingcolor | 加载图标颜色                                                                       | `string`  | `#fff`    |
