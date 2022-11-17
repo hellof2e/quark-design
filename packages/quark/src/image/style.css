@@ -3,7 +3,6 @@
 }
 
 :host .quark-image {
-  display: inline-block;
   position: relative;
   height: var(--image-height, 100%);
   width: var(--image-height, 100%);
@@ -12,6 +11,7 @@
 :host .quark-image-img {
   height: var(--image-height, 100%);
   width: var(--image-height, 100%);
+  display: block;
 }
 
 :host .quark-image-loading {
