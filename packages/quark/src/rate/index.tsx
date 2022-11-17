@@ -68,13 +68,9 @@ class QuarkRate extends QuarkElement {
 
   handleChange(i: { id: number; color: string }) {
     if (!this.shadowRoot || this.disabled) return;
-    const { id, color } = i;
+    const { id } = i;
     this.stars = this.stars.map((item) => {
-      item.color = "inherit";
-      if (color === this.activecolor) {
-        item.color = "inherit";
-      }
-      if (item.id <= id) item.color = this.activecolor;
+      item.color = item.id <= id ? this.activecolor : "inherit";
       return item;
     });
     const value = this.stars.filter((i) => i.color === this.activecolor).length;

@@ -13,7 +13,7 @@ import { Button } from "@quarkd/quark-react";
 ### Basic Usage
 
 ```html
-<button>Default</button>
+<Button>Default</Button>
 ```
 
 ### Type
@@ -21,21 +21,21 @@ import { Button } from "@quarkd/quark-react";
 There are `primary`, `success`, `danger`, `warning` and default type.
 
 ```html
-<button>Default</button>
-<button type="primary">Blue</button>
-<button type="success">Green</button>
-<button type="danger">Red</button>
-<button type="warning">Yellow</button>
-<button type="grey">Grey</button>
+<Button>Default</Button>
+<Button type="primary">Blue</Button>
+<Button type="success">Green</Button>
+<Button type="danger">Red</Button>
+<Button type="warning">Yellow</Button>
+<Button type="grey">Grey</Button>
 ```
 
 ### Plain
 
-To set the button as a plain button, add `plain` prop to the Button. The plain button's text is the button color, and the background is white.
+To set the Button as a plain Button, add `plain` prop to the Button. The plain Button's text is the Button color, and the background is white.
 
 ```html
-<button plain type="primary">Primary</button>
-<button plain type="success">Success</button>
+<Button plain type="primary">Primary</Button>
+<Button plain type="success">Success</Button>
 ```
 
 ### Size
@@ -43,32 +43,32 @@ To set the button as a plain button, add `plain` prop to the Button. The plain b
 Support `big`, `small`, the default is normal.
 
 ```html
-<button type="primary" size="small">Small</button>
-<button type="primary" size="big">Big</button>
-<button type="primary">Normal</button>
+<Button type="primary" size="small">Small</Button>
+<Button type="primary" size="big">Big</Button>
+<Button type="primary">Normal</Button>
 ```
 
 ### Disabled
 
-To mark a button as disabled, add `disabled` prop to the Button. The button cannot be clicked when disabled.
+To mark a Button as disabled, add `disabled` prop to the Button. The Button cannot be clicked when disabled.
 
 ```html
-<button disabled type="primary">Disabled</button>
-<button disabled plain>Disabled</button>
+<Button disabled type="primary">Disabled</Button>
+<Button disabled plain>Disabled</Button>
 ```
 
 ### Shape
 
-A button shape can be added to a button by setting `shape` prop on the Button, which supports `round` and `square` buttons. The default is small rounded corners.
+A Button shape can be added to a Button by setting `shape` prop on the Button, which supports `round` and `square` Buttons. The default is small rounded corners.
 
 ```html
-<button shape="square" type="danger">Square</button>
-<button shape="round" type="primary">Round</button>
+<Button shape="square" type="danger">Square</Button>
+<Button shape="round" type="primary">Round</Button>
 ```
 
 ### Loading
 
-A loading indicator can be added to a button by setting `loading` prop on the Button. `loadingcolor` prop controls the loading color, `loadingsize` prop controls the loading size, and `loadingtype` prop controls the loading type. For loading, refer to the loading component.
+A loading indicator can be added to a Button by setting `loading` prop on the Button. `loadingcolor` prop controls the loading color, `loadingsize` prop controls the loading size, and `loadingtype` prop controls the loading type. For loading, refer to the loading component.
 
 ```tsx
 <Button loading type="danger" loadtype="circular">Loading...</Button>
@@ -81,12 +81,12 @@ A loading indicator can be added to a button by setting `loading` prop on the Bu
 Button components can contain an Icon. This is done by setting `icon` prop within the Button.
 
 ```html
-<button
+<Button
   type="primary"
   icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
 >
   Like
-</button>
+</Button>
 ```
 
 ## API

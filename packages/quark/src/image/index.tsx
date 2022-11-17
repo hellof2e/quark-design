@@ -94,26 +94,17 @@ class QuarkImage extends QuarkElement {
   }
 
   render() {
-    const attrs = this.alt
-      ? {
-          alt: this.alt,
-          class: "quark-image-img",
-          style: {
-            width: addUnit(this.width),
-            height: addUnit(this.height),
-            "object-fit": this.fit,
-            "border-radius": this.round ? "50%" : this.radius ? 1 : 0,
-          },
-        }
-      : {
-          class: "quark-image-img",
-          style: {
-            width: addUnit(this.width),
-            height: addUnit(this.height),
-            "object-fit": this.fit,
-            "border-radius": this.round ? "50%" : this.radius ? 1 : 0,
-          },
-        };
+    const alt = this.alt ? {alt: this.alt} : {};
+    const attrs = {
+      class: "quark-image-img",
+      style: {
+        width: addUnit(this.width),
+        height: addUnit(this.height),
+        "object-fit": this.fit,
+        "border-radius": this.round ? "50%" : this.radius ? 1 : 0,
+      },
+      ...alt,
+    };
 
     return (
       <div class="quark-image">

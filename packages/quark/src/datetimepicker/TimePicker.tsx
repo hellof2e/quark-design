@@ -4,6 +4,7 @@ import "@quarkd/icons/lib/close";
 import style from "./style.css";
 import { clamp, padZero, times } from "./utils";
 import { SelectColumn } from ".";
+import { FilterType, FormatterType } from "./DatePicker";
 
 type TimeType = "time";
 
@@ -17,7 +18,7 @@ class QuarkTimePicker extends QuarkElement {
   }
 
   @property({ type: Boolean })
-  open: boolean = false;
+  open = false;
 
   @property({ type: String })
   value: string | null;
@@ -26,36 +27,36 @@ class QuarkTimePicker extends QuarkElement {
   type: TimeType = "time";
 
   @property({ type: String })
-  title: string = "";
+  title = "";
 
   @property({ type: Number })
-  minhour: number = 0;
+  minhour = 0;
 
   @property({ type: Number })
-  maxhour: number = 23;
+  maxhour = 23;
 
   @property({ type: Number })
-  minminute: number = 0;
+  minminute = 0;
 
   @property({ type: Number })
-  maxminute: number = 59;
+  maxminute = 59;
 
   @property({ type: Boolean })
-  showtoolbar: boolean = false;
+  showtoolbar = false;
 
   @property({ type: String })
-  confirmbuttontext: string = "";
+  confirmbuttontext = "";
 
   @property({ type: String })
-  cancelbuttontext: string = "";
+  cancelbuttontext = "";
 
   pickerRef: any = createRef();
   originColumns: { defaultIndex: number; type: string; values: string[] }[] =
     [];
   columns: { defaultIndex: number; type: string; values: string[] }[] = [];
   currentTime: string | null = null;
-  formatter: Function = (type: string, value: string): string => value;
-  filter: Function = (type: string, value: string[]): string[] => value;
+  formatter: FormatterType = (type: string, value: string): string => value;
+  filter: FilterType = (type: string, value: string[]): string[] => value;
 
   formatValue(value) {
     if (!value) {

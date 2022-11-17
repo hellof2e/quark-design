@@ -28,7 +28,6 @@
 :host .quark-loading-text {
   color: var(--loading-text-color, quark-textSecondaryColor);
   font-size: var(--loading-text-font-size, quark-fontSizeBase);
-  margin-left: 8px;
 }
 
 :host([vertical]) .quark-loading-text {

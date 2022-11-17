@@ -31,12 +31,10 @@
 :host([required]) .quark-field-label::before {
   width: 1em;
   height: 1em;
-  position: absolute;
+  margin-right: 4px;
   color: quark-dangerColor;
   font-size: 14px;
   content: "*";
-  left: 8px;
-  overflow: visible;
 }
 
 :host input {

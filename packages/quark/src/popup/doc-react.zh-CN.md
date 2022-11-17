@@ -24,13 +24,13 @@ export default () => {
       <div onClick={handleOpen}>
         基本使用
       </div>
-      <PopUp open={open} onClosed={handleClose}>
+      <Popup open={open} onClosed={handleClose}>
         <div>第二行</div>
         <div>第三行</div>
         <div>第四行</div>
         <div>第五行</div>
         <div>第六行</div>
-      </PopUp>
+      </Popup>
     </div>
   );
 };

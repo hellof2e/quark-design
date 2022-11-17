@@ -165,7 +165,7 @@ class QuarkDialog extends QuarkElement {
     const node = this.shadowRoot?.querySelector(".quark-dialog-body slot");
   };
 
-  transitionendChange = (ev: any) => {
+  transitionendChange = () => {
     if (!this.open && this.dRemove) {
       document.body.removeChild(this);
       // 创建自定义对象 onclose

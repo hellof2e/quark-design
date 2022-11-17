@@ -132,7 +132,7 @@ class QuarkPopover extends QuarkElement {
     this.$emit("close");
   };
 
-  handleActionClick = (ev: any, index: number) => {
+  handleActionClick = (ev: PointerEvent, index: number) => {
     ev.stopPropagation();
     this.$emit("select", {
       detail: {

@@ -50,9 +50,7 @@ export default () => {
 <PopupExtra
   subtitle="副标题文案"
   open={open}
-  onClosed={() => {
-    open = false;
-  }}
+  onClosed={() => setOpen(false)}
 >
   <div slot="title">
     <span style="color: red">自定义</span>大标题文案
@@ -70,7 +68,7 @@ export default () => {
 设置 `closed` 方法
 
 ```js
-<PopupExtra open={open} onClosed={() => { setOpen(false) } />
+<PopupExtra open={open} onClosed={() => setOpen(false)} />
 ```
 
 ## API

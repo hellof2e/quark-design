@@ -47,9 +47,7 @@ export default () => {
       >
         <div
           className="quark-popover"
-          onClick={() => {
-            handleClick();
-          }}
+          onClick={handleClick}
         >
           Basic Usage
         </div>
@@ -91,12 +89,8 @@ export default () => {
     },
   ];
 
-  const handleClick = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClick = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     const { current: lightCurrent } = openRef;
@@ -108,9 +102,7 @@ export default () => {
       <Popover
         ref={lightRef}
         open={open}
-        onClose={() => {
-          handleClose();
-        }}
+        onClose={handleClose}
         onSelect={({ detail }) => {
           const { action } = detail;
           console.log(action.text);
@@ -119,9 +111,7 @@ export default () => {
       >
         <div
           className="quark-popover"
-          onClick={() => {
-            handleClick();
-          }}
+          onClick={handleClick}
         >
           Show Icon
         </div>
@@ -154,12 +144,8 @@ export default () => {
   const [open, setOpen] = useState(false);
   const openRef = useRef < PopoverRef > null;
 
-  const handleClick = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClick = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     const { current: lightCurrent } = openRef;
@@ -182,9 +168,7 @@ export default () => {
       >
         <div
           className="quark-popover"
-          onClick={() => {
-            handleClick();
-          }}
+          onClick={() => handleClick()}
         >
           Disabled
         </div>

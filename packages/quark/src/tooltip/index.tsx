@@ -152,7 +152,7 @@ class QuarkTooltip extends QuarkElement {
     this.$emit("close");
   };
 
-  handleTipsClick = (ev: any) => {
+  handleTipsClick = (ev: PointerEvent) => {
     ev.stopPropagation();
     if (!this.closeable) {
       return;

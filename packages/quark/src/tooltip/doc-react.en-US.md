@@ -15,27 +15,17 @@ import { Tooltip } '@quarkd/quark-react';
 ```js
 export default () => {
   const [open, setOpen] = useState(false);
-  const click = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClick = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
       <Tooltip
         tips="bubble text"
         open={open}
-        onClose={() => {
-          handleClose();
-        }}
+        onClose={handleClose}
       >
-        <div
-          onClick={() => {
-            click();
-          }}
-        >
+        <div onClick={handleClick}>
           top position
         </div>
       </Tooltip>
