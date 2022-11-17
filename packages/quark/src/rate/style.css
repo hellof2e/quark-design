@@ -1,13 +1,13 @@
 :host {
   display: flex;
   align-items: center;
-  color: #f5f5f9;
+  color: #ddd;
+  cursor: pointer;
 }
 
 :host([disabled]) {
   opacity: 0.6;
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 :host([readonly]) {
