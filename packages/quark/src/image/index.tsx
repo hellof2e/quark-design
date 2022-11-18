@@ -64,6 +64,8 @@ class QuarkImage extends QuarkElement {
 
   imgRef: HTMLImageElement | null = null;
 
+  shadowRoot: ShadowRoot;
+
   handleLoad = () => {
     this.status = "loaded";
     this.$emit("load");

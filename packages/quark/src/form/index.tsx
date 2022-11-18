@@ -22,6 +22,8 @@ class QuarkForm extends QuarkElement {
 
   formRef: any = createRef();
 
+  shadowRoot: ShadowRoot;
+
   rules: IRuleItem[] = [];
 
   child: IFormItem[] = [];

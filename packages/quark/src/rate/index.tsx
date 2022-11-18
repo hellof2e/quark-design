@@ -51,6 +51,8 @@ class QuarkRate extends QuarkElement {
 
   activeIndex = -1;
 
+  shadowRoot: ShadowRoot;
+
   componentDidMount(): void {
     if (this.defaultValue) this.initSelect(Number(this.defaultValue));
   }

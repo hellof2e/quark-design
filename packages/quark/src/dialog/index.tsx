@@ -96,6 +96,8 @@ class QuarkDialog extends QuarkElement {
 
   bodyRef: any = createRef();
 
+  shadowRoot: ShadowRoot;
+
   componentDidMount(): void {
     if (this.zindex) {
       this.style.zIndex = `${this.zindex}`;
