@@ -111,7 +111,7 @@ export default () => {
       <div onClick={componentsClick2}>自定义导航</div>
       <ImagePreview ref={preview2} open={open2}>
         <p className="my-indicator" slot="indicator">
-          Page{{ index }}{" "}
+          第{{ index }}页
         </p>
       </ImagePreview>
     </div>
