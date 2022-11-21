@@ -142,14 +142,14 @@ class QuarkImagePreview extends QuarkElement {
     this.removeEventListener("touchmove", this.handleTouchMove);
     this.removeEventListener("touchend", this.handleTouchEnd);
   };
-  handleTouchStart = (e: any) => {
+  handleTouchStart = (e: TouchEvent) => {
     this.startX = e.changedTouches[0].clientX;
     this.startY = e.changedTouches[0].clientY;
     this.endX = undefined;
     this.endY = undefined;
   };
 
-  handleTouchMove = (e: any) => {
+  handleTouchMove = (e: TouchEvent) => {
     this.endX = e.changedTouches[0].clientX;
     this.endY = e.changedTouches[0].clientY;
   };
