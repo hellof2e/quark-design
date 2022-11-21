@@ -157,7 +157,6 @@ class QuarkImagePreview extends QuarkElement {
   handleTouchEnd = () => {
     const angle = this.angle(
       { X: this.startX, Y: this.startY },
-      // @ts-ignore
       { X: this.endX, Y: this.endY }
     );
     if (this.endX === undefined || this.endY === undefined) {
@@ -187,9 +186,6 @@ class QuarkImagePreview extends QuarkElement {
   }
   render() {
     const showIndex = `${this.index + 1}`;
-    const screenHeight =
-      window.screen.availHeight > 900 ? 900 : window.screen.availHeight;
-    const realHeight = this.open && this.images.length ? "100vh" : "100%";
     console.log(window.screen);
     return (
       <Fragment>
@@ -206,11 +202,6 @@ class QuarkImagePreview extends QuarkElement {
         <quark-popup position="center" open={this.open} onclosed={this.myClose}>
           <div
             class="quark-imagepreview-slide"
-            style={
-              {
-                // height: realHeight,
-              }
-            }
           >
             <div class="quark-imagepreview-slide-wrapper" ref={this.wrapRef}>
               <div class="quark-imagepreview-slide-content">
