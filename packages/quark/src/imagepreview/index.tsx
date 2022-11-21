@@ -62,7 +62,7 @@ class QuarkImagePreview extends QuarkElement {
     this.eventBind();
     if (this.isFn) this.open = true;
   };
-  initSlide(index) {
+  initSlide(index: number) {
     console.log(window.screen);
     return new Promise((resolve) => {
       setTimeout(() => {
