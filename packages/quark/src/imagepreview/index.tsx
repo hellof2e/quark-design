@@ -50,7 +50,7 @@ class QuarkImagePreview extends QuarkElement {
   onChange: null | ((index: number) => void) = null;
 
   wrapRef = createRef() as any;
-  init = async (open) => {
+  init = async () => {
     if (!this.images.length) return;
     if (this.slide) return;
     const index = this.index > this.images.length ? 0 : this.index;
@@ -63,7 +63,6 @@ class QuarkImagePreview extends QuarkElement {
     if (this.isFn) this.open = true;
   };
   initSlide(index) {
-    console.log(window.screen);
     return new Promise((resolve) => {
       setTimeout(() => {
         this.slide = new BScroll(this.wrapRef.current, {
@@ -118,13 +117,12 @@ class QuarkImagePreview extends QuarkElement {
     startPosition: number;
     close: () => void | null;
     change: (index: number) => void | null;
-    open?: boolean;
   }) => {
     this.images = images;
     this.index = startPosition || 0;
     this.onClose = close;
     this.onChange = change;
-    if (this.wrapRef && this.wrapRef.current) this.init(open);
+    if (this.wrapRef && this.wrapRef.current) this.init();
   };
 
   myClose = () => {
@@ -190,7 +188,6 @@ class QuarkImagePreview extends QuarkElement {
     const screenHeight =
       window.screen.availHeight > 900 ? 900 : window.screen.availHeight;
     const realHeight = this.open && this.images.length ? "100vh" : "100%";
-    console.log(window.screen);
     return (
       <Fragment>
         <slot
@@ -237,7 +234,6 @@ class QuarkImagePreview extends QuarkElement {
 interface IImagePreview {
   images: string[];
   startPosition?: number;
-  open?: boolean;
   close?: () => void;
   change?: (index: number) => void;
 }
@@ -249,7 +245,7 @@ export default function imagePreview(params: IImagePreview): QuarkImagePreview {
   document.body.appendChild(preview);
   const { images = [], startPosition, close, change } = params;
   preview.isFn = true;
-  preview.setData({ images, startPosition, close, change, open: true });
+  preview.setData({ images, startPosition, close, change });
   return preview;
 }
 
