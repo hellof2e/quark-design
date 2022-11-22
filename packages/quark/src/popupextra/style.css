@@ -85,7 +85,7 @@
   border-top-right-radius: var(--popup-extra-border-radius, quark-radiusBg);
 }
 :host .quark-popup-extra-body {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 :host([open]) .quark-popup-extra {
