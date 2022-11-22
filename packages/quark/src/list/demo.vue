@@ -1,6 +1,6 @@
 <template>
   <div class="demo no-padding">
-    <quark-tabs>
+    <quark-tabs sticky offsettop="17vw">
       <quark-tab-content :label="translate('label.basic')">
         <quark-list
           @load="onLoad1"
