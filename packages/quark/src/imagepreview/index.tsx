@@ -62,7 +62,7 @@ class QuarkImagePreview extends QuarkElement {
     this.eventBind();
     if (this.isFn) this.open = true;
   };
-  initSlide(index) {
+  initSlide(index: number) {
     return new Promise((resolve) => {
       setTimeout(() => {
         this.slide = new BScroll(this.wrapRef.current, {
@@ -111,7 +111,6 @@ class QuarkImagePreview extends QuarkElement {
     startPosition,
     close,
     change,
-    open,
   }: {
     images: string[];
     startPosition: number;
@@ -155,7 +154,6 @@ class QuarkImagePreview extends QuarkElement {
   handleTouchEnd = () => {
     const angle = this.angle(
       { X: this.startX, Y: this.startY },
-      // @ts-ignore
       { X: this.endX, Y: this.endY }
     );
     if (this.endX === undefined || this.endY === undefined) {
@@ -185,9 +183,6 @@ class QuarkImagePreview extends QuarkElement {
   }
   render() {
     const showIndex = `${this.index + 1}`;
-    const screenHeight =
-      window.screen.availHeight > 900 ? 900 : window.screen.availHeight;
-    const realHeight = this.open && this.images.length ? "100vh" : "100%";
     return (
       <Fragment>
         <slot
@@ -203,11 +198,6 @@ class QuarkImagePreview extends QuarkElement {
         <quark-popup position="center" open={this.open} onclosed={this.myClose}>
           <div
             class="quark-imagepreview-slide"
-            style={
-              {
-                // height: realHeight,
-              }
-            }
           >
             <div class="quark-imagepreview-slide-wrapper" ref={this.wrapRef}>
               <div class="quark-imagepreview-slide-content">
