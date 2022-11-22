@@ -76,15 +76,13 @@ Windows 电脑运行 yarn run link 时乱码？
 ## 结构
 
 ```
+├── CONTRIBUTING.MD
+├── CONTRIBUTING.zh-CN.MD
 ├── README.MD
+├── README.zh-CN.MD
 ├── demo.html
-├── dev.md
 ├── example
-│   ├── Makefile
 │   ├── babel.config.js
-│   ├── commitlint.config.js
-│   ├── compatible.md
-│   ├── demoReact.html
 │   ├── dist
 │   ├── global-css.js
 │   ├── package.json
@@ -97,10 +95,11 @@ Windows 电脑运行 yarn run link 时乱码？
 │   └── yarn.lock
 ├── index.html
 ├── lerna.json lerna的核心 配置
+├── LICENSE
 ├── package.json
 ├── packages 所有子包
 │   ├── quark
-│   ├── quark-element
+│   ├── quark-core
 │   ├── quark-react
 │   ├── quark-reactify
 │   ├── quark-icons
@@ -108,8 +107,11 @@ Windows 电脑运行 yarn run link 时乱码？
 │   ├── quark-rollup-plugin-postcss
 │   └── quark-rollup-plugin-css-variable
 ├── scripts 脚本
+    ├── copydocs.js
+    ├── dev.js
 │   ├── build.js
-│   ├── build_demo.js
-│   └── dev.js
+│   ├── link.js
+│   ├── publish.js
+│   └── push2io.js
 └── yarn.lock
 ```
