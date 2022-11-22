@@ -12,6 +12,13 @@
         translate("offset")
       }}</quark-button>
     </quark-sticky>
+
+    <h2>{{ translate("otherUnits") }}</h2>
+    <quark-sticky offsettop="150px">
+      <quark-button type="primary" shape="square" style="margin-left: 180px">{{
+        translate("otherUnits")
+        }}</quark-button>
+    </quark-sticky>
   </div>
 </template>
 
@@ -28,10 +35,12 @@ export default createDemo({
         "zh-CN": {
           basic: "基础用法",
           offset: "吸顶距离",
+          otherUnits:'其他单位'
         },
         "en-US": {
           basic: "Basic Usage",
           offset: "Offset Top",
+          otherUnits: 'Other Units'
         },
       });
     });

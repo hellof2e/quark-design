@@ -51,3 +51,20 @@ export const slotAssignedElements = (nodes: any[]) => {
   }
   return nodes.filter((node) => node.nodeType === Node.ELEMENT_NODE);
 };
+
+export const vwToPx = ( value: string ) => {
+  return Number( value.replace( 'vw', '' ) ) * document.documentElement.clientWidth / 100;
+}
+
+export const vhToPx = ( value: string ) => {
+  return Number( value.replace( 'vh', '' ) ) * document.documentElement.clientHeight / 100;
+}
+
+export const remToPx = ( value: string ) => {
+  const htmlFontSize = Number( window.getComputedStyle( document.documentElement ).fontSize.replace( 'px', '' ) );
+  return Number( value.replace( 'rem', '' ) ) * htmlFontSize;
+}
+
+export const percentToHeightPx = ( value: string ) => {
+  return Number( value.replace( '%', '' ) ) * document.documentElement.clientHeight / 100;
+}
