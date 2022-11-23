@@ -1,4 +1,36 @@
 # 更新日志
+### [1.0.22](https://github.com/hellof2e/quark-design/compare/v1.0.21...v1.0.22) (2022-11-23)
+
+
+### Documentation
+
+* Fix component name ([5f0aa91](https://github.com/hellof2e/quark-design/commit/5f0aa9141cdff7f944dc5f7ce1982eda2f41e64f))
+* keep consistent vue && react doc ([66ccbe0](https://github.com/hellof2e/quark-design/commit/66ccbe04e69af2cb81f1a39594875019ae87aa28))
+* **List:** add List demo property sticky ([cb4319d](https://github.com/hellof2e/quark-design/commit/cb4319df45c752416a94a7e742af125cfcac783f))
+* **List:** delete ineffective class ([a29119f](https://github.com/hellof2e/quark-design/commit/a29119fdf506e42fb596d7119ad3de47ee33563e))
+* update Button doc ([7b528d1](https://github.com/hellof2e/quark-design/commit/7b528d1c2655f340a2e5140a974173c4374dcdf7))
+
+
+### 🐞 Bug Fixes
+
+* **Field:** increase spacing & remove useless ([2b5db9a](https://github.com/hellof2e/quark-design/commit/2b5db9ae24c1097af602b9c6709e2fe03ebe5e18))
+* image space ([dee97b3](https://github.com/hellof2e/quark-design/commit/dee97b31ee9075d88d9e4973bc33ff11b3235ad2))
+* issues/140 ([5642ae6](https://github.com/hellof2e/quark-design/commit/5642ae6214d6b97be8fc4da5403cd12b05535370))
+* **Loading:** fix loading center ([480ba0c](https://github.com/hellof2e/quark-design/commit/480ba0caa62e8e0f3b8bbca02b86e42698773bf2))
+* **navbar:** Increase click interaction&fix select ([c9e01e2](https://github.com/hellof2e/quark-design/commit/c9e01e2e5389f616b091922d16d1a9334fddb27d))
+* **popupextra:** 部分安卓机型 mpaas 容器上浮层存在灰点修复 ([08fc198](https://github.com/hellof2e/quark-design/commit/08fc198370fa8e81556916a46d436e0a0cd23521))
+* remove console' ([994c512](https://github.com/hellof2e/quark-design/commit/994c512fddf36777a7e95df9e6845efd1e7ccfe1))
+
+
+### 🎉 Features
+
+* **ImagePreview:** change any to TouchEvent ([da482ba](https://github.com/hellof2e/quark-design/commit/da482ba896748cae21a30b65bb0413aa197aa8f9))
+* **ImagePreview:** delete ineffective code ([e2e2a5f](https://github.com/hellof2e/quark-design/commit/e2e2a5f1c91243ab2e262564e41f3044e74332db))
+* **ImagePreview:** delete invalid param open ([6c728a2](https://github.com/hellof2e/quark-design/commit/6c728a2614ecb0e4a767fac45c95522b07418ec1))
+* **image:** simplified code ([06c21e8](https://github.com/hellof2e/quark-design/commit/06c21e82ba0efba1753b6662e7657c43f088e2dd))
+* **MD:** sync tree ([be8d912](https://github.com/hellof2e/quark-design/commit/be8d91206d90eb1e9718cb62d3fda9bcd5fa0ed0))
+* **rate:** del invalid code ([8341d33](https://github.com/hellof2e/quark-design/commit/8341d332e7e151d00922557c58bbc8d788ce7e4a))
+
 ### [1.0.21](https://github.com/hellof2e/quark-design/compare/v1.0.20...v1.0.21) (2022-11-16)
 
 
