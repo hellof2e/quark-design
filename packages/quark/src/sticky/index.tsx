@@ -22,15 +22,17 @@ class QuarkSticky extends QuarkElement {
 
   stickyRef: any = createRef();
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.scrollEvent);
+  componentDidMount () {
+    const calcSize = this.getCalcEvent(this.offsettop);
+    window.addEventListener("scroll", this.scrollEvent.bind(this,calcSize));
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.scrollEvent);
+  componentWillUnmount () {
+    const calcSize = this.getCalcEvent( this.offsettop );
+    window.removeEventListener("scroll", this.scrollEvent.bind( this, calcSize ) );
   }
 
-  scrollEvent = () => {
+  scrollEvent = (event:(arg: string) => number) => {
     const { current: containerCurrent } = this.containerRef;
     const { current: stickyCurrent } = this.stickyRef;
     if (!containerCurrent || !stickyCurrent) {
@@ -41,7 +43,7 @@ class QuarkSticky extends QuarkElement {
     }px`;
     if (
       containerCurrent.getBoundingClientRect().top <=
-      this.convertVw(this.offsettop)
+      event(this.offsettop)
     ) {
       stickyCurrent.classList.add("sticky--fixed");
       stickyCurrent.style.top = this.offsettop;
@@ -52,25 +54,20 @@ class QuarkSticky extends QuarkElement {
     }
   };
 
-  getCalcEvent = () => {
-    if (this.offsettop.includes("vw")) {
+  getCalcEvent = ( offsettop ) => {
+    if (offsettop.includes("vw")) {
       return vwToPx;
-    }else if(this.offsettop.includes("rem")){
+    }else if(offsettop.includes("rem")){
       return remToPx;
-    }else if(this.offsettop.includes("vh")){
+    }else if(offsettop.includes("vh")){
       return vhToPx;
-    } else if ( this.offsettop.includes( "%" ) ) {
+    } else if ( offsettop.includes( "%" ) ) {
       return percentToHeightPx;
     } else {
-      return ( value:string) => {
+      return (value:string) => {
         return Number(value.replace('px',''))
       }
     }
-  }
-
-  convertVw ( value: string ) {
-    const calcEvent = this.getCalcEvent();
-    return calcEvent(value);
   }
 
   render() {
