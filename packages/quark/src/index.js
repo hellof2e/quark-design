@@ -43,7 +43,7 @@ import Popover from "./popover";
 import ShareSheet from "./sharesheet";
 import Skeleton from "./skeleton";
 import Grid from "./grid";
-import Locale from "./locale";
+import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -96,6 +96,11 @@ export default {
   Skeleton,
   Grid,
   Locale,
+  zhCN,
+  zhTW,
+  enUS,
+  thTH,
+  idID,
   PopupExtra,
   Countdown,
   NativeUploader,

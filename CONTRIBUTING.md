@@ -67,15 +67,13 @@ Execute the yarn run link command in git bash
 ## Structure
 
 ```
+├── CONTRIBUTING.MD
+├── CONTRIBUTING.zh-CN.MD
 ├── README.MD
+├── README.zh-CN.MD
 ├── demo.html
-├── dev.md
 ├── example
-│   ├── Makefile
 │   ├── babel.config.js
-│   ├── commitlint.config.js
-│   ├── compatible.md
-│   ├── demoReact.html
 │   ├── dist
 │   ├── global-css.js
 │   ├── package.json
@@ -88,19 +86,23 @@ Execute the yarn run link command in git bash
 │   └── yarn.lock
 ├── index.html
 ├── lerna.json lerna's core configuration
+├── LICENSE
 ├── package.json
 ├── packages All sub-packages
 │   ├── quark
-│   ├── quark-element
+│   ├── quark-core
 │   ├── quark-react
 │   ├── quark-reactify
 │   ├── quark-icons
 │   ├── quark-vscode-extension
 │   ├── quark-rollup-plugin-postcss
 │   └── quark-rollup-plugin-css-variable
-├── scripts Scripts for the project
+├── scripts 脚本
+    ├── copydocs.js
+    ├── dev.js
 │   ├── build.js
-│   ├── build_demo.js
-│   └── dev.js
+│   ├── link.js
+│   ├── publish.js
+│   └── push2io.js
 └── yarn.lock
 ```

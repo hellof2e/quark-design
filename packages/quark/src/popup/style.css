@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: quark-fillBaseColor;
   opacity: 1;
   transition: transform quark-animationDurationBase;
