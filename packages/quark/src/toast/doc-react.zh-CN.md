@@ -93,6 +93,8 @@ toast2.hide();
 | size     |         图标大小         |      ` number`   | `40px` |
 | zIndex     |         浮层层级         |       `number`   | `9999` |
 | close     |         关闭时的回调函数         |       `()=>void`   | - |
+| textWithLoading     |         是否展示文字前面的小 loading 图标，只在 `type='text'` 时生效         |       `boolean`   | `false` |
+
 
 ## 样式变量
 
@@ -103,3 +105,4 @@ toast2.hide();
 | `--toast-text-padding`     | 内间距                     |      `24px 16px`    |
 | `--toast-font-size`     | 字体大小                      |        `14px`  |
 | `--toast-color`     | 字体颜色                     |       ` #fff ` |
+| `--toast-mini-loading-right` | 小 loading 图标与文字之间的间隙 | `16px` |

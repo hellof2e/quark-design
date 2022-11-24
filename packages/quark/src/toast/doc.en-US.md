@@ -103,6 +103,8 @@ toast2.hide();
 | size      | Custom icon size                                  | `number`   | `40px`    |
 | zIndex    | Custom zIndex                                     | `number`   | `9999`    |
 | close     | Callback function after close                     | `()=>void` | -         |
+| textWithLoading     |         Whether to display the small loading icon in front of the text, only valid when `type='text'`         |       `boolean`   | `false` |
+
 
 ## CSS Variables
 
@@ -113,3 +115,4 @@ toast2.hide();
 | `--toast-text-padding`  | Padding                     | `24px 16px`   |
 | `--toast-font-size`     | Font size                   | `14px`        |
 | `--toast-color`         | Font color                  | `#fff`        |
+| `--toast-mini-loading-right` | Space between small loading icon and text | `16px` |

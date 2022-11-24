@@ -34,6 +34,9 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+.quark-toast--text {
+  flex-direction: row;
+}
 :host([show]) .quark-toast {
   opacity: 1;
 }
@@ -61,6 +64,11 @@
   display: block;
   margin-bottom: var(--toast-loading-bottom, 14px);
   margin-right: var(--toast-loading-right, 0);
+}
+
+:host([show][type="text"]) quark-loading {
+  display: inline-block;
+  margin-right: var(--toast-mini-loading-right, 8px);
 }
 
 :host(:not([type="text"])) quark-icon-success,

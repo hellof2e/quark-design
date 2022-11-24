@@ -32,6 +32,8 @@ class QuarkToast extends QuarkElement {
 
   iconSize: number = 40;
 
+  textWithLoading: boolean = false;
+
   iconColor: string = '#ffffff';
 
   zIndex: number = 9999;
@@ -94,9 +96,6 @@ class QuarkToast extends QuarkElement {
     return (
       <quark-overlay open={this.show} zIndex={this.zIndex}>
         <div class="quark-toast" ref={this.toastRef}>
-          {this.type !== 'text' && (
-            this.renderIcon() 
-          )}
             <quark-loading
               class="loading"
               size={this.iconSize}
@@ -111,8 +110,18 @@ class QuarkToast extends QuarkElement {
   }
   renderOther = () => (
     <div class="quark-toast" ref={this.toastRef}>
-      {this.type !== 'text' && (
-        this.renderIcon() 
+      {this.renderIcon()}
+      <slot>{this.content}</slot>
+    </div>
+  )
+  renderText = () => (
+    <div class="quark-toast quark-toast--text" ref={this.toastRef}>
+      {this.textWithLoading && (
+        <quark-loading
+          size={16}
+          color="#ffffff"
+          type="circular"
+        ></quark-loading>
       )}
       <slot>{this.content}</slot>
     </div>
@@ -120,7 +129,11 @@ class QuarkToast extends QuarkElement {
   render() {
     return (
       <Fragment>
-        {this.type ==='loading' ? this.renderLoading() : this.renderOther()}
+        {this.type === 'text' ?
+          this.renderText() :
+          this.type ==='loading' ?
+            this.renderLoading() :
+            this.renderOther()}
       </Fragment>
     );
   }
@@ -157,6 +170,7 @@ const mountToast = (opts: TOptions) => {
     duration = 2000,
     close,
     size = 40,
+    textWithLoading = false,
     zIndex = 9999
   } = { ...defaultOptions, ...opts };
   let mountToast = null
@@ -172,6 +186,7 @@ const mountToast = (opts: TOptions) => {
   mountToast.type = type;
   mountToast.content = msg;
   mountToast.iconSize = size;
+  mountToast.textWithLoading = textWithLoading
   mountToast.zIndex = zIndex;
   document.body.appendChild(mountToast);
   setTimeout(() => {
@@ -218,7 +233,7 @@ export default {
     return mountToast({ ...opts, type: 'warning', msg });
   },
 
-  loading: function (msg = '', opts: ToastParams = {}):QuarkToast {
+  loading: function (msg = '', opts: ToastParams & { textWithLoading } = {}):QuarkToast {
     errorMsg(msg);
     return mountToast({ ...opts, type: 'loading', msg });
   },

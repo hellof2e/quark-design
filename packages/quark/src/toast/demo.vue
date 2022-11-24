@@ -5,6 +5,10 @@
 			<div>Text {{ translate("textTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
 		</div>
+		<div class="quark-cell" @click="handleTextWithLoadingClick">
+			<div>Text {{ translate("textWithLoadingTip") }}</div>
+			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
+		</div>
 		<div class="quark-cell" @click="handleSuccessClick">
 			<div>Success {{ translate("successTip") }}</div>
 			<quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
@@ -46,25 +50,27 @@ export default createDemo({
 					functionCall: "函数式调用",
 					closeCallback: "关闭后回调函数",
 					textTip: "文字提示",
+					textWithLoadingTip: "带 loading 的文字提示",
 					successTip: "成功提示",
 					errorTip: "失败提示",
 					warningTip: "警告提示",
 					loadingTip: "加载提示",
 					networkTip: "网络失败，请稍后再试～",
 					executeCallback: "回调函数执行",
-					close: "一秒后关闭",
+					close: "三秒后关闭",
 				},
 				"en-US": {
 					functionCall: "Function Call",
 					closeCallback: "Close Callback",
 					textTip: "Text Tip",
+					textWithLoadingTip: "Text with Loading Tip",
 					successTip: "Success Tip",
 					errorTip: "Error Tip",
 					warningTip: "Warning Tip",
 					loadingTip: "Loading Tip",
 					networkTip: "Network failed, please try again later~",
 					executeCallback: "Execute Callback",
-					close: "Close after a second",
+					close: "Close after three seconds",
 				},
 			});
 		});
@@ -77,8 +83,13 @@ export default createDemo({
 		const handleTextClick = () => {
 			QuarkToast.text(`${translate("networkTip")}`);
 		};
+		const handleTextWithLoadingClick = () => {
+			QuarkToast.text(`${translate("loadingTip")}`, {
+				textWithLoading: true,
+			});
+		};
 		const handleSuccessClick = () => {
-			QuarkToast.success(`${translate("successTip")}`);
+			QuarkToast.success(`${translate("successTip")}`, { duration: 0 });
 		};
 		const handleErrorClick = () => {
 			QuarkToast.error(`${translate("errorTip")}`);
@@ -102,6 +113,7 @@ export default createDemo({
 			tag,
 			cbClick,
 			handleTextClick,
+			handleTextWithLoadingClick,
 			handleSuccessClick,
 			handleErrorClick,
 			handleWarningClick,
