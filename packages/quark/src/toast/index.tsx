@@ -213,7 +213,7 @@ const errorMsg = (msg: string) => {
 export { QuarkToast };
 
 export default {
-  text: function (msg = '', opts: ToastParams  = {}) :QuarkToast {
+  text: function (msg = '', opts: ToastParams & { textWithLoading } = {}) :QuarkToast {
     errorMsg(msg);
     return mountToast({ ...opts, type: 'text', msg });
   },
@@ -233,7 +233,7 @@ export default {
     return mountToast({ ...opts, type: 'warning', msg });
   },
 
-  loading: function (msg = '', opts: ToastParams & { textWithLoading } = {}):QuarkToast {
+  loading: function (msg = '', opts: ToastParams = {}):QuarkToast {
     errorMsg(msg);
     return mountToast({ ...opts, type: 'loading', msg });
   },

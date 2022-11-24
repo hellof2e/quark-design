@@ -89,7 +89,7 @@ export default createDemo({
 			});
 		};
 		const handleSuccessClick = () => {
-			QuarkToast.success(`${translate("successTip")}`, { duration: 0 });
+			QuarkToast.success(`${translate("successTip")}`);
 		};
 		const handleErrorClick = () => {
 			QuarkToast.error(`${translate("errorTip")}`);
