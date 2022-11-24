@@ -15,24 +15,17 @@
       }}</quark-button>
     </div>
 
-    <h2>{{ translate("title.shape") }}</h2>
-    <div class="demo-buttons">
-      <quark-button shape="square" type="danger">{{
-        translate("shape.square")
-      }}</quark-button>
-      <quark-button style="--button-border-radius: 6px" type="primary">{{
-        translate("shape.round")
-      }}</quark-button>
-    </div>
-
     <h2>{{ translate("title.plain") }}</h2>
     <div class="demo-buttons">
-      <quark-button plain type="primary">{{
-        translate("type.primary")
-      }}</quark-button>
-      <quark-button plain type="success">{{
-        translate("type.success")
-      }}</quark-button>
+      <quark-button plain type="primary">{{ translate("type.primary") }}</quark-button>
+      <quark-button plain type="success">{{ translate("type.success") }}</quark-button>
+    </div>
+
+    <h2>{{ translate("title.size") }}</h2>
+    <div class="demo-buttons">
+      <quark-button type="primary" size="big">{{ translate("size.big") }}</quark-button>
+      <quark-button type="primary">{{ translate("size.normal") }}</quark-button>
+      <quark-button type="primary" size="small">{{ translate("size.small") }}</quark-button>
     </div>
 
     <h2>{{ translate("title.disabled") }}</h2>
@@ -46,20 +39,23 @@
       <quark-button disabled>{{ translate("title.disabled") }}</quark-button>
     </div>
 
+    <h2>{{ translate("title.shape") }}</h2>
+    <div class="demo-buttons">
+      <quark-button shape="square" type="danger">{{ translate("shape.square") }}</quark-button>
+      <quark-button style="--button-border-radius: 6px" type="primary">{{
+        translate("shape.round")
+      }}</quark-button>
+    </div>
+
     <h2>{{ translate("title.loading") }}</h2>
     <div class="demo-buttons flex">
-      <quark-button loading loadtype="circular" type="danger">{{
-        translate("loading")
-      }}</quark-button>
-      <quark-button loading type="warning">{{
-        translate("loading")
-      }}</quark-button>
+      <quark-button loading loadtype="circular" type="danger">{{ translate("loading") }}</quark-button>
+      <quark-button loading type="warning">{{ translate("loading") }}</quark-button>
       <quark-button
         @click="changeLoading"
         :loading="isLoading"
         type="success"
-        >{{ translate("click") }}</quark-button
-      >
+      >{{ translate("click") }}</quark-button>
     </div>
 
     <h2>{{ translate("title.icon") }}</h2>
@@ -67,24 +63,11 @@
       <quark-button
         type="danger"
         icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
-        >{{ translate("like") }}</quark-button
-      >
+      >{{ translate("like") }}</quark-button>
       <quark-button
         type="primary"
         icon="https://m.hellobike.com/resource/helloyun/16682/_pay6_setting%20(1).png"
-        >{{ translate("name") }}</quark-button
-      >
-    </div>
-
-    <h2>{{ translate("title.size") }}</h2>
-    <div class="demo-buttons">
-      <quark-button type="primary" size="big">{{
-        translate("size.big")
-      }}</quark-button>
-      <quark-button type="primary">{{ translate("size.normal") }}</quark-button>
-      <quark-button type="primary" size="small">{{
-        translate("size.small")
-      }}</quark-button>
+      >{{ translate("name") }}</quark-button>
     </div>
   </div>
 </template>
