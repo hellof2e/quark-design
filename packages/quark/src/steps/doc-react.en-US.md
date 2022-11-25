@@ -29,22 +29,19 @@ import { Steps, StepItem } from "@quarkd/quark-react";
     title="finished"
     order="1"
     content="Your order has been packed and the item has been dispatched"
-    >1</StepItem
-  >
+  >1</StepItem>
   <StepItem
     status="doing"
     title="processing"
     order="2"
     content="Your order is being shipped..."
-    >2</StepItem
-  >
+  >2</StepItem>
   <StepItem
     status="todo"
     title="not started"
     order="3"
     content="The delivery address is: 16F, Yizhan Business Building, Hangzhou"
-    >3</StepItem
-  >
+  >3</StepItem>
 </Steps>
 ```
 
@@ -57,22 +54,19 @@ import { Steps, StepItem } from "@quarkd/quark-react";
     title="finished"
     order="1"
     content="Your order has been packed and the item has been dispatched"
-    >1</StepItem
-  >
+  >1</StepItem>
   <StepItem
     status="doing"
     title="processing"
     order="2"
     content="Your order is being shipped..."
-    >2</StepItem
-  >
+  >2</StepItem>
   <StepItem
     status="todo"
     title="not started"
     order="3"
     content="The delivery address is: 16F, Yizhan Business Building, Hangzhou"
-    >3</StepItem
-  >
+  >3</StepItem>
 </Steps>
 ```
 
