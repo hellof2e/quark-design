@@ -5,29 +5,37 @@
       <quark-checkbox :checked="mycheck" @change="onChange">{{
         translate("checked.true")
       }}</quark-checkbox>
-      <quark-checkbox :checked="false">{{
+      <quark-checkbox :checked="mycheckFalse" @change="onChangeFalse">{{
         translate("checked.false")
       }}</quark-checkbox>
     </div>
 
     <h2>{{ translate("title.type") }}</h2>
     <div class="checkbox-container">
-      <quark-checkbox checked="true" shape="round">{{
+      <quark-checkbox :checked="type1" shape="round" @change="onChangeType1">{{
         translate("type.round")
       }}</quark-checkbox>
-      <quark-checkbox checked="true" shape="square">{{
+      <quark-checkbox :checked="type2" shape="square" @change="onChangeType2">{{
         translate("type.square")
       }}</quark-checkbox>
     </div>
 
     <h2>{{ translate("title.size") }}</h2>
     <div class="checkbox-container">
-      <quark-checkbox checked="true" shape="round" size="big">{{
-        translate("size.default")
-      }}</quark-checkbox>
-      <quark-checkbox checked="true" shape="square" size="big">{{
-        translate("size.square")
-      }}</quark-checkbox>
+      <quark-checkbox
+        :checked="size1"
+        shape="round"
+        size="big"
+        @change="onChangeSize1"
+        >{{ translate("size.default") }}</quark-checkbox
+      >
+      <quark-checkbox
+        :checked="size2"
+        shape="square"
+        size="big"
+        @change="onChangeSize2"
+        >{{ translate("size.square") }}</quark-checkbox
+      >
     </div>
 
     <h2>{{ translate("title.disabled") }}</h2>
@@ -72,15 +80,37 @@ import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("checkbox");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onBeforeMount } from "vue";
-import Quarkcheckbox from "./index.js";
+import "./index.js";
 
 export default createDemo({
   setup() {
     const mycheck = ref(true);
+    const mycheckFalse = ref(false);
+    const type1 = ref(true);
+    const type2 = ref(true);
+    const size1 = ref(true);
+    const size2 = ref(true);
     const groupValue = ref([]);
     const onChange = ({ detail }) => {
       mycheck.value = detail.value;
     };
+
+    const onChangeFalse = ({ detail }) => {
+      mycheckFalse.value = detail.value;
+    };
+    const onChangeType1 = ({ detail }) => {
+      type1.value = detail.value;
+    };
+    const onChangeType2 = ({ detail }) => {
+      type2.value = detail.value;
+    };
+    const onChangeSize1 = ({ detail }) => {
+      size1.value = detail.value;
+    };
+    const onChangeSize2 = ({ detail }) => {
+      size2.value = detail.value;
+    };
+
     const onGroupChange = ({ detail }) => {
       groupValue.value = detail.value;
     };
@@ -158,8 +188,18 @@ export default createDemo({
     });
     return {
       mycheck,
+      mycheckFalse,
+      type1,
+      type2,
+      size1,
+      size2,
+      onChangeType2,
+      onChangeType1,
+      onChangeSize2,
+      onChangeSize1,
       groupValue,
       onChange,
+      onChangeFalse,
       onGroupChange,
       translate,
     };

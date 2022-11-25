@@ -1,5 +1,6 @@
 import { expect, fixture } from "@open-wc/testing";
 import "quarkd/lib/button";
+import sinon from 'sinon';
 
 const data = {
   slotText: "主要按钮",
@@ -66,5 +67,52 @@ describe("<quark-button>", async () => {
     );
     const slot = el.textContent;
     expect(data.slotText).to.equal(slot);
+  });
+
+  it("plain attribute", async () => {
+    el = await fixture(
+      `<quark-button>${data.slotText}</quark-button>`
+    );
+    expect(el.plain).to.equal(false);
+  });
+
+  it("loading attribute default type", async () => {
+    el = await fixture(
+      `<quark-button loading>${data.slotText}</quark-button>`
+    );
+    const loading = el.shadowRoot.querySelector(".quark-button-load")
+    expect(loading.color).to.equal("#fff");
+    expect(loading.type).to.equal("spinner");
+    expect(loading.size).to.equal("20");
+  });
+
+  it("loading attribute customize type", async () => {
+    el = await fixture(
+      `<quark-button loading loadtype="circular" loadingcolor="red" loadingsize="30">${data.slotText}</quark-button>`
+    );
+    const loading = el.shadowRoot.querySelector(".quark-button-load")
+    expect(loading.color).to.equal("red");
+    expect(loading.type).to.equal("circular");
+    expect(loading.size).to.equal("30");
+  });
+
+  it('should change loading state instantly by default', async() => {
+     el = await fixture(
+      `<quark-button loading="false" id="btn">${data.slotText}</quark-button>`
+    );
+    el.addEventListener('click', function handleClick() {
+      el.loading = true
+    })
+    el.dispatchEvent(new Event("click"));
+    expect(el.loading).to.equal(true);
+  });
+
+  it('should not clickable when button is loading', async() => {
+    const eventspy = sinon.spy();
+    el = await fixture(
+    `<quark-button loading="true">${data.slotText}</quark-button>`
+    );
+    el.dispatchEvent(new Event("click"));
+    expect(eventspy.called).to.equal(false);
   });
 });
