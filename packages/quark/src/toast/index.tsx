@@ -36,6 +36,8 @@ class QuarkToast extends QuarkElement {
 
   zIndex = 9999;
 
+  loadingIconDirection: "horizontal" | "vertical" = "vertical";
+
   iconRef: any = createRef();
 
   toastRef: any = createRef();
@@ -109,7 +111,10 @@ class QuarkToast extends QuarkElement {
   renderLoading = () => {
     return (
       <quark-overlay open={this.show} zIndex={this.zIndex}>
-        <div class="quark-toast" ref={this.toastRef}>
+        <div
+          class={`quark-toast quark-toast--${this.loadingIconDirection}`}
+          ref={this.toastRef}
+        >
           {this.type !== "text" && this.renderIcon()}
           <quark-loading
             class="loading"
@@ -170,6 +175,7 @@ const mountToast = (opts: TOptions) => {
     close,
     size = 40,
     zIndex = 9999,
+    loadingIconDirection = "vertical",
   } = { ...defaultOptions, ...opts };
   let mountToast = null;
   if (QuarkToast.allowMultiple) {
@@ -185,6 +191,7 @@ const mountToast = (opts: TOptions) => {
   mountToast.content = msg;
   mountToast.iconSize = size;
   mountToast.zIndex = zIndex;
+  mountToast.loadingIconDirection = loadingIconDirection;
   document.body.appendChild(mountToast);
   setTimeout(() => {
     mountToast.show = true;
@@ -230,9 +237,19 @@ export default {
     return mountToast({ ...opts, type: "warning", msg });
   },
 
-  loading: function (msg = "", opts: ToastParams = {}): QuarkToast {
+  loading: function (
+    msg = "",
+    opts: ToastParams & {
+      loadingIconDirection?: "horizontal" | "vertical";
+    } = {}
+  ): QuarkToast {
     errorMsg(msg);
-    return mountToast({ ...opts, type: "loading", msg });
+    return mountToast({
+      size: opts.loadingIconDirection === "horizontal" ? 16 : 40,
+      ...opts,
+      type: "loading",
+      msg,
+    });
   },
 
   hide: function () {
