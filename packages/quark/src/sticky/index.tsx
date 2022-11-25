@@ -1,5 +1,5 @@
 import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
-import { remToPx,vhToPx,percentToHeightPx, vwToPx } from "../../utils/public";
+import { remToPx, vhToPx, percentToHeightPx, vwToPx } from "../../utils/public";
 
 import style from "./style.css";
 export interface Props {
@@ -22,19 +22,21 @@ class QuarkSticky extends QuarkElement {
 
   stickyRef: any = createRef();
 
-  componentDidMount () {
-    const calcSize = this.getCalcEvent(this.offsettop);
-    window.addEventListener("scroll", this.scrollEvent.bind(this,calcSize));
+  calcSizeFuncRef = createRef<(arg: string) => number>();
+
+  componentDidMount() {
+    this.calcSizeFuncRef.current = this.getCalcEvent(this.offsettop);
+    window.addEventListener("scroll", this.scrollEvent);
   }
 
-  componentWillUnmount () {
-    const calcSize = this.getCalcEvent( this.offsettop );
-    window.removeEventListener("scroll", this.scrollEvent.bind( this, calcSize ) );
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollEvent);
   }
 
-  scrollEvent = (event:(arg: string) => number) => {
+  scrollEvent = () => {
     const { current: containerCurrent } = this.containerRef;
     const { current: stickyCurrent } = this.stickyRef;
+    const { current: calcSizeFuncCurrent } = this.calcSizeFuncRef;
     if (!containerCurrent || !stickyCurrent) {
       return;
     }
@@ -43,7 +45,7 @@ class QuarkSticky extends QuarkElement {
     }px`;
     if (
       containerCurrent.getBoundingClientRect().top <=
-      event(this.offsettop)
+      calcSizeFuncCurrent(this.offsettop)
     ) {
       stickyCurrent.classList.add("sticky--fixed");
       stickyCurrent.style.top = this.offsettop;
@@ -54,21 +56,21 @@ class QuarkSticky extends QuarkElement {
     }
   };
 
-  getCalcEvent = ( offsettop ) => {
+  getCalcEvent = (offsettop) => {
     if (offsettop.includes("vw")) {
       return vwToPx;
-    }else if(offsettop.includes("rem")){
+    } else if (offsettop.includes("rem")) {
       return remToPx;
-    }else if(offsettop.includes("vh")){
+    } else if (offsettop.includes("vh")) {
       return vhToPx;
-    } else if ( offsettop.includes( "%" ) ) {
+    } else if (offsettop.includes("%")) {
       return percentToHeightPx;
     } else {
-      return (value:string) => {
-        return Number(value.replace('px',''))
-      }
+      return (value: string) => {
+        return Number(value.replace("px", ""));
+      };
     }
-  }
+  };
 
   render() {
     return (

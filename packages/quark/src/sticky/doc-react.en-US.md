@@ -40,5 +40,5 @@ import { Sticky } from "@quarkd/quark-react";
 
 | Attribute | Description         | Unit      | Default |
 | --------- | ------------------- | --------- | ------- |
-| offsettop | Offset top          | `string`     | `0vw`   |
+| offsettop | Offset top          |  `vw` or `vh` or `px` or `rem` or `%`     | `0vw`   |
 | zindex    | z-index when sticky | `number` | `99`    |

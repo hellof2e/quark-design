@@ -40,5 +40,5 @@ import "quarkd/lib/sticky";
 
 | Attribute | Description         | Unit      | Default |
 | --------- | ------------------- | --------- | ------- |
-| offsettop | Offset top          | `vw`     | `0vw`   |
+| offsettop | Offset top          |  `vw` or `vh` or `px` or `rem` or `%`     | `0vw`   |
 | zindex    | z-index when sticky | `number` | `99`    |
