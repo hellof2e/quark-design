@@ -34,6 +34,15 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+.quark-toast--horizontal {
+  flex-direction: row;
+  padding: var(--toast-text-padding, 16px 20px);
+  width: max-content;
+  height: auto;
+  min-width: var(--toast-min-width, 120px);
+  max-width: var(--toast-max-width, 240px);
+}
+
 :host([show]) .quark-toast {
   opacity: 1;
 }
@@ -60,6 +69,12 @@ quark-icon-whitewarning-o {
   display: block;
   margin-bottom: var(--toast-loading-bottom, 14px);
   margin-right: var(--toast-loading-right, 0);
+}
+
+:host([show][type="loading"]) .quark-toast--horizontal quark-loading {
+  display: block;
+  margin-bottom: var(--toast-loading-bottom, 0);
+  margin-right: var(--toast-loading-right, 8px);
 }
 
 :host(:not([type="text"])) quark-icon-whitesuccess-o,
