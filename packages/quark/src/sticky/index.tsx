@@ -22,10 +22,10 @@ class QuarkSticky extends QuarkElement {
 
   stickyRef: any = createRef();
 
-  calcSizeFuncRef = createRef<(arg: string) => number>();
+  calcSizeFuncRef = undefined
 
   componentDidMount() {
-    this.calcSizeFuncRef.current = this.getCalcEvent(this.offsettop);
+    this.calcSizeFuncRef = this.getCalcEvent(this.offsettop);
     window.addEventListener("scroll", this.scrollEvent);
   }
 
@@ -36,7 +36,6 @@ class QuarkSticky extends QuarkElement {
   scrollEvent = () => {
     const { current: containerCurrent } = this.containerRef;
     const { current: stickyCurrent } = this.stickyRef;
-    const { current: calcSizeFuncCurrent } = this.calcSizeFuncRef;
     if (!containerCurrent || !stickyCurrent) {
       return;
     }
@@ -44,8 +43,9 @@ class QuarkSticky extends QuarkElement {
       containerCurrent.getBoundingClientRect().height
     }px`;
     if (
+      this.calcSizeFuncRef && 
       containerCurrent.getBoundingClientRect().top <=
-      calcSizeFuncCurrent(this.offsettop)
+      this.calcSizeFuncRef(this.offsettop)
     ) {
       stickyCurrent.classList.add("sticky--fixed");
       stickyCurrent.style.top = this.offsettop;
