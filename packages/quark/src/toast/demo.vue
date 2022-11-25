@@ -5,6 +5,10 @@
       <div>Text {{ translate("textTip") }}</div>
       <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
     </div>
+    <div class="quark-cell" @click="handlehorizontalLoadingClick">
+      <div>Text {{ translate("horizontalLoadingTip") }}</div>
+      <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
+    </div>
     <div class="quark-cell" @click="handleSuccessClick">
       <div>Success {{ translate("successTip") }}</div>
       <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
@@ -46,13 +50,14 @@ export default createDemo({
           functionCall: "函数式调用",
           closeCallback: "关闭后回调函数",
           textTip: "文字提示",
+          horizontalLoadingTip: "水平方向的加载图标",
           successTip: "成功提示",
           errorTip: "失败提示",
           warningTip: "警告提示",
           loadingTip: "加载提示",
           networkTip: "网络失败，请稍后再试～",
           executeCallback: "回调函数执行",
-          close: "一秒后关闭",
+          close: "三秒后关闭",
         },
         "en-US": {
           functionCall: "Function Call",
@@ -64,7 +69,7 @@ export default createDemo({
           loadingTip: "Loading Tip",
           networkTip: "Network failed, please try again later~",
           executeCallback: "Execute Callback",
-          close: "Close after a second",
+          close: "Close after three seconds",
         },
       });
     });
@@ -77,6 +82,12 @@ export default createDemo({
 
     const handleTextClick = () => {
       QuarkToast.text(`${translate("networkTip")}`);
+    };
+
+    const handlehorizontalLoadingClick = () => {
+      QuarkToast.loading(`${translate("loadingTip")}`, {
+        loadingIconDirection: "horizontal",
+      });
     };
 
     const handleSuccessClick = () => {
@@ -109,6 +120,7 @@ export default createDemo({
       tag,
       cbClick,
       handleTextClick,
+      handlehorizontalLoadingClick,
       handleSuccessClick,
       handleErrorClick,
       handleWarningClick,

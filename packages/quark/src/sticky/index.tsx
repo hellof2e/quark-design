@@ -1,4 +1,5 @@
 import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import { remToPx, vhToPx, percentToHeightPx, vwToPx } from "../../utils/public";
 
 import style from "./style.css";
 export interface Props {
@@ -21,7 +22,10 @@ class QuarkSticky extends QuarkElement {
 
   stickyRef: any = createRef();
 
+  calcSizeFuncRef = undefined
+
   componentDidMount() {
+    this.calcSizeFuncRef = this.getCalcEvent(this.offsettop);
     window.addEventListener("scroll", this.scrollEvent);
   }
 
@@ -39,8 +43,9 @@ class QuarkSticky extends QuarkElement {
       containerCurrent.getBoundingClientRect().height
     }px`;
     if (
+      this.calcSizeFuncRef && 
       containerCurrent.getBoundingClientRect().top <=
-      this.convertVw(this.offsettop)
+      this.calcSizeFuncRef(this.offsettop)
     ) {
       stickyCurrent.classList.add("sticky--fixed");
       stickyCurrent.style.top = this.offsettop;
@@ -51,10 +56,21 @@ class QuarkSticky extends QuarkElement {
     }
   };
 
-  convertVw(value: string) {
-    value = value.replace(/vw/g, "");
-    return (+value * document.body.clientWidth) / 100;
-  }
+  getCalcEvent = (offsettop) => {
+    if (offsettop.includes("vw")) {
+      return vwToPx;
+    } else if (offsettop.includes("rem")) {
+      return remToPx;
+    } else if (offsettop.includes("vh")) {
+      return vhToPx;
+    } else if (offsettop.includes("%")) {
+      return percentToHeightPx;
+    } else {
+      return (value: string) => {
+        return Number(value.replace("px", ""));
+      };
+    }
+  };
 
   render() {
     return (

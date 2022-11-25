@@ -111,6 +111,7 @@ toast2.hide();
 | size     | 图标大小                                | `number`  | `40px`   |
 | zIndex   | 浮层层级                                | `number`   | `9999`   |
 | close    | 关闭时的回调函数                        | `() => void` | -        |
+| loadingIconDirection    | loading 图标展示方向，仅 `type=loading` 时生效 | `horizontal` 或者 `vertical` | `vertical` |
 
 ## 样式变量
 
@@ -121,3 +122,5 @@ toast2.hide();
 | `--toast-text-padding` | 内间距   | `24px 16px` |
 | `--toast-font-size`    | 字体大小 | `14px`      |
 | `--toast-color`        | 字体颜色 | `#fff`      |
+| `--toast-loading-bottom` | loading 图标底部边距 | 垂直 loading 为 `14px`；水平 loading 为 `0` |
+| `--toast-loading-right` | loading 图标右边边距 | 垂直 loading 为 `0`；水平 loading 为 `8px` |

@@ -26,11 +26,19 @@ import { Sticky } from "@quarkd/quark-react";
 </Sticky>
 ```
 
+### 其他单位
+
+```html
+<Sticky offsettop="150px">
+  <div value="其他单位">其他单位</div>
+</Sticky>
+```
+
 ## API
 
 ### Props
 
 | 参数      | 说明               | 单位      | 默认值 |
 | --------- | ------------------ | --------- | ------ |
-| offsettop | 吸顶时与顶部的距离 | `vw `     | `0vw`  |
-| zindex    | 吸顶时的 z-index   | `number ` | `99`   |
+| offsettop | 吸顶时与顶部的距离 |  `vw` or `vh` or `px` or `rem` or `%`    | `0vw`  |
+| zindex    | 吸顶时的 z-index   | `number` | `99`   |

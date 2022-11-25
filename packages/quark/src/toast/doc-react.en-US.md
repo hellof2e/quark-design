@@ -101,6 +101,8 @@ toast2.hide();
 | size      | Custom icon size                                  | `number`   | `40px`   |
 | zIndex    | Custom zIndex                                     | `number`   | `9999`   |
 | close     | Callback function after close                     | `() => void` | -        |
+| loadingIconDirection    | loading icon display direction, only valid when `type=loading` | `horizontal` or `vertical` | `vertical` |
+
 
 ## CSS Variables
 
@@ -111,3 +113,5 @@ toast2.hide();
 | `--toast-text-padding` | Padding       | `24px 16px`   |
 | `--toast-font-size`    | Font size     | `14px`        |
 | `--toast-color`        | Font color    | `#fff`        |
+| `--toast-loading-bottom` | bottom margin of loading icon | Vertical loading is `14px`; horizontal loading is `0` |
+| `--toast-loading-right` | right margin of loading icon | Vertical loading is `0`; horizontal loading is `8px` |
