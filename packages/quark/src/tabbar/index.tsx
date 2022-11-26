@@ -24,10 +24,10 @@ class QuarkTabbar extends QuarkElement {
   placeholder = false;
 
   @property()
-  inactivecolor: string;
+  inactivecolor: string = "#879099";
 
   @property()
-  activecolor: string;
+  activecolor: string = "#0088FF";
 
   @property()
   value = "0";
@@ -57,14 +57,8 @@ class QuarkTabbar extends QuarkElement {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const elements = slotAssignedElements(assignedNodes);
     elements.forEach((item, index) => {
-      item.setAttribute(
-        "inactivecolor",
-        this.inactivecolor ? this.inactivecolor : "#879099"
-      );
-      item.setAttribute(
-        "activecolor",
-        this.activecolor ? this.activecolor : "#0088FF"
-      );
+      item.setAttribute("inactivecolor", this.inactivecolor);
+      item.setAttribute("activecolor", this.activecolor);
       if (item.getAttribute("name") === null) {
         item.setAttribute("name", String(index));
       }
