@@ -31,6 +31,7 @@ export default () => {
       <Dialog
         open={open}
         title="Title"
+        content="This is a content"
         onConfirm={handleConfirm}
         onClose={handleClose}
         content="This is a content"

@@ -55,7 +55,7 @@
     <quark-dialog
       :open="open3"
       :title="translate('dialogTitle')"
-      :content="translate('content')"
+      :content="translate('text')"
       @close="open3 = false"
       @confirm="open3 = false"
       @cancel="open3 = false"
@@ -66,7 +66,7 @@
       btnvertical
       :open="open6"
       :title="translate('dialogTitle')"
-      :content="translate('content')"
+      :content="translate('text')"
       @close="open6 = false"
       @confirm="open6 = false"
       @cancel="open6 = false"
