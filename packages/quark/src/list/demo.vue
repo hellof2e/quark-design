@@ -1,6 +1,6 @@
 <template>
-  <div class="demo no-padding">
-    <quark-tabs sticky offsettop="17vw">
+  <div class="demo list-demo no-padding">
+    <quark-tabs sticky offsettop="15vw">
       <quark-tab-content :label="translate('label.basic')">
         <quark-list
           @load="onLoad1"
@@ -218,6 +218,9 @@ export default createDemo({
 });
 </script>
 <style>
+#app .list-demo.no-padding {
+  height: 100%;
+}
 .list-list {
   padding: 0 16px;
   height: 60px;
