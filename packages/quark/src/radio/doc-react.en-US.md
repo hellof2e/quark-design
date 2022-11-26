@@ -78,12 +78,12 @@ Radio size supports `normal` and `big`, the default is `normal`.
 To disable radio, add `disabled` prop on the Radio.
 
 ```html
-<Radio checked="{true}" disabled>checked - disabled</Radio>
-<Radio checked="{false}" disabled>unchecked - disabled</Radio>
-<Radio checked="{true}" shape="square" disabled
+<Radio checked={true} disabled>checked - disabled</Radio>
+<Radio checked={false} disabled>unchecked - disabled</Radio>
+<Radio checked={true} shape="square" disabled
   >square - checked - disabled</Radio
 >
-<Radio checked="{false}" shape="square" disabled
+<Radio checked={false} shape="square" disabled
   >square - unchecked - disabled</Radio
 >
 ```

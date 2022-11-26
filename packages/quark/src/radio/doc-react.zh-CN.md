@@ -78,10 +78,10 @@ export default () => {
 单选框支持禁用
 
 ```html
-<Radio checked="{true}" disabled>已选-禁用</Radio>
-<Radio checked="{false}" disabled>未选-禁用</Radio>
-<Radio checked="{true}" shape="square" disabled>方形-已选-禁用</Radio>
-<Radio checked="{false}" shape="square" disabled>方形-未选-禁用</Radio>
+<Radio checked={true} disabled>已选-禁用</Radio>
+<Radio checked={false} disabled>未选-禁用</Radio>
+<Radio checked={true} shape="square" disabled>方形-已选-禁用</Radio>
+<Radio checked={false} shape="square" disabled>方形-未选-禁用</Radio>
 ```
 
 ### 单选框风格
