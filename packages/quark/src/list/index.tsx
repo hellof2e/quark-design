@@ -84,12 +84,6 @@ class QuarkList extends QuarkElement {
         this.check({ auto: true });
       }
     }
-    if (propName === "finished" && !checkFalse(newValue)) {
-      return true;
-    }
-    if (propName === "error" && !checkFalse(newValue)) {
-      return true;
-    }
     return true;
   }
 
