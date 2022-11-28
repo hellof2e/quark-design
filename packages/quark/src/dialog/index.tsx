@@ -320,7 +320,7 @@ export default function Dialog(
   const {
     title = "",
     content = "",
-    oktext = Locale.current.conform,
+    oktext = Locale.current.confirm,
     canceltext = Locale.current.cancel,
     confirm,
     cancel,
