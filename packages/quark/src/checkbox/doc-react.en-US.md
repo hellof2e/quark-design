@@ -41,8 +41,8 @@ export default () => {
 Checkbox shape supports `round` and `square`, the default is `round`.
 
 ```html
-<Checkbox checked="{true}">round(default)</Checkbox>
-<Checkbox checked="{true}" shape="square">square</Checkbox>
+<Checkbox checked={true}>round(default)</Checkbox>
+<Checkbox checked={true} shape="square">square</Checkbox>
 ```
 
 ### Size
@@ -50,10 +50,10 @@ Checkbox shape supports `round` and `square`, the default is `round`.
 Checkbox size supports `normal` and `big`, the default is `normal`.
 
 ```html
-<Checkbox checked="{true}" shape="round" size="big"
+<Checkbox checked={true} shape="round" size="big"
   >default shape - big</Checkbox
 >
-<Checkbox checked="{true}" shape="square" size="big">square - big</Checkbox>
+<Checkbox checked={true} shape="square" size="big">square - big</Checkbox>
 ```
 
 ### Disabled
@@ -61,8 +61,8 @@ Checkbox size supports `normal` and `big`, the default is `normal`.
 To disable Checkbox, add `disabled` prop on the Checkbox.
 
 ```html
-<Checkbox checked="{true}" disabled>checked - disabled</Checkbox>
-<Checkbox checked="{true}" disabled>unchecked - disabled</Checkbox>
+<Checkbox checked={true} disabled>checked - disabled</Checkbox>
+<Checkbox checked={true} disabled>unchecked - disabled</Checkbox>
 ```
 
 ### Checkbox Group
@@ -97,7 +97,7 @@ export default () => {
 Custom checked color
 
 ```html
-<Checkbox checked="{true}">Checkbox-Custom checked color</Checkbox>
+<Checkbox checked={true}>Checkbox-Custom checked color</Checkbox>
 
 <!-- CSS -->
 Checkbox { --radio-background: linear-gradient(225deg, #ff918d 0%, #f54640
