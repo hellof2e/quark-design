@@ -56,10 +56,10 @@ class QuarkDialog extends QuarkElement {
   content: string | HTMLElement = "";
 
   @property()
-  oktext: string = Locale.current.confirm;
+  oktext = Locale.current.confirm;
 
   @property()
-  canceltext: string = Locale.current.cancel;
+  canceltext = Locale.current.cancel;
 
   @property()
   type = "modal";
@@ -297,7 +297,11 @@ class QuarkDialog extends QuarkElement {
                     >
                       {this.canceltext}
                     </quark-button>
-                    <quark-button type="primary" onClick={this.okClick}>
+                    <quark-button
+                      class="quark-dialog-confirm-btn"
+                      type="primary"
+                      onClick={this.okClick}
+                    >
                       {this.oktext}
                     </quark-button>
                   </div>

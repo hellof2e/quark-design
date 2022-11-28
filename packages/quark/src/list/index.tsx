@@ -46,7 +46,7 @@ class QuarkList extends QuarkElement {
   textcolor = "#879099";
 
   @property()
-  loadingtext: string = Locale.current.loading;
+  loadingtext = Locale.current.loading;
 
   @property()
   finishedtext = "";

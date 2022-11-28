@@ -5,6 +5,7 @@ const data = {
   title: "我是标题",
   oktext: "确定",
   canceltext: "取消",
+  content: "弹窗的内容"
 };
 let el;
 describe("quark-dialog base attribute", async () => {
@@ -14,6 +15,7 @@ describe("quark-dialog base attribute", async () => {
         title=${data["title"]}
         oktext=${data["oktext"]}
         canceltext=${data["canceltext"]}
+        content=${data["content"]}
         
     >
     </quark-dialog>`
@@ -28,10 +30,9 @@ describe("quark-dialog base attribute", async () => {
     expect(el.title).to.equal(data["title"]);
   });
 
-  // it('content attribute', () => {
-  //   console.log(el, 'el')
-  //   expect(el.content).to.equal(data['content']);
-  // });
+  it('content attribute', () => {
+    expect(el.content).to.equal(data['content']);
+  });
 
   it("oktext attribute", () => {
     expect(el["oktext"]).to.equal(data["oktext"]);
@@ -78,7 +79,7 @@ describe("quark-dialog Dom attribute", async () => {
   //     >
   //       </quark-dialog>`
   //   );
-  //   const okBtn = node.shadowRoot.querySelector("");
+  //   const okBtn = node.shadowRoot.querySelector(".quark-dialog-confirm-btn");
   //   const eventspy = sinon.spy();
   //   node.addEventListener("confirm", eventspy);
   //   okBtn.dispatchEvent(new Event("click"));
