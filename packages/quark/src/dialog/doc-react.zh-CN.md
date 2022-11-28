@@ -31,6 +31,7 @@ export default () => {
       <Dialog
         open={open}
         title="基础弹窗"
+        content="生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。"
         onConfirm={handleConfirm}
         onClose={handleClose}
         content="代码是写出来给人看的，附带能在机器上运行"

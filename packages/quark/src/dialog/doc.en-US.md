@@ -20,6 +20,7 @@ By setting `type="confirm"` to prompt popup
 <quark-dialog
     type="confirm"
     title="title"
+    content="This is a content"
     :open="open"
     @confirm="open = false" // Confirm button callback function
     @close="open = false" // Close button callback function

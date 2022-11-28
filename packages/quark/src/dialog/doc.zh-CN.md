@@ -20,6 +20,7 @@ import "quarkd/lib/dialog";
 <quark-dialog
     type="confirm"
     title="标题"
+    content="生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。"
     :open="open"
     @confirm="open = false" // 确认按钮回调函数
     @close="open = false" // 关闭按钮回调函数
