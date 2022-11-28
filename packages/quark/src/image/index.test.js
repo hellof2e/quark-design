@@ -15,31 +15,28 @@ const data = {
 let el;
 
 describe("<quark-image>", async () => {
-  // it('element exist', async () => {
-  //   el = await fixture(
-  //     `<quark-image
-  //     ></quark-image>`
-  //   );
-  //   const img = el.shadowRoot.querySelector('img');
-  //   expect(img).to.exist;
-  // });
-  // it('element attribute exist', async () => {
-  //   el = await fixture(
-  //     `<quark-image
-  //     src=${data.src}
-  //     width=${data.width}
-  //     height=${data.height}
-  //     fit=${data.fit}
-  //     lazy=${data.lazy}
-  //     round=${data.round}
-  //     ></quark-image>`
-  //   );
-  //   const img = el.shadowRoot.querySelector('img');
-  //   expect(el.lazy).to.equal(data.lazy);
-  //   expect(el.round).to.equal(data.round);
-  //   expect(img.src).to.equal(data.src);
-  //   expect(img.width).to.exist;
-  //   expect(img.height).to.exist;
-  //   // expect(img['object-fit']).to.equal(data.fit);
-  // });
+  before(async () => {
+    el = await fixture(
+      `<quark-image
+      src=${data.src}
+      width=${data.width}
+      height=${data.height}
+      fit=${data.fit}
+      lazy=${data.lazy}
+      round=${data.round}
+      ></quark-image>`
+    );
+  });
+  it('element exist', async () => {
+    const img = el.shadowRoot.querySelector('img');
+    expect(img).to.exist;
+  });
+  it('element attribute exist', async () => {
+    expect(el.lazy).to.equal(data.lazy);
+    expect(el.round).to.equal(data.round);
+    expect(el.src).to.equal(data.src);
+    expect(el.width).to.equal(data.width);
+    expect(el.height).to.equal(data.height);
+    expect(el.fit).to.equal(data.fit)
+  });
 });

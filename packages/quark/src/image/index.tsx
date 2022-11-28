@@ -94,7 +94,7 @@ class QuarkImage extends QuarkElement {
   }
 
   render() {
-    const alt = this.alt ? {alt: this.alt} : {};
+    const alt = this.alt ? { alt: this.alt } : {};
     const attrs = {
       class: "quark-image-img",
       style: {
