@@ -5,11 +5,11 @@ import idID from "./lang/id-ID";
 import thTH from "./lang/th-TH";
 import assign from "lodash.assign";
 export { zhCN, zhTW, enUS, idID, thTH };
-type Lange = Record<string, unknown>;
+type Lange<T> = { [E in keyof T]: T[E] };
 
 export class Local {
-  static current: Lange = zhCN;
-  static use(newLang: Lange) {
+  static current: Lange<typeof zhCN> = zhCN;
+  static use(newLang) {
     this.current = newLang;
   }
   static add(message: Lange) {

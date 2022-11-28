@@ -1,4 +1,6 @@
 # 更新日志
+### [1.0.25](https://github.com/hellof2e/quark-design/compare/v1.1.0...v1.0.25) (2022-11-28)
+
 ### [1.0.22](https://github.com/hellof2e/quark-design/compare/v1.0.21...v1.0.22) (2022-11-23)
 
 

@@ -115,7 +115,7 @@ class QuarkImage extends QuarkElement {
         )}
         {this.status === "loading" && (
           <div class="quark-image-loading">
-            <slot name="loading">{Locale.current.image.loading}</slot>
+            <slot name="loading">{Locale.current.loading}</slot>
           </div>
         )}
         <img
