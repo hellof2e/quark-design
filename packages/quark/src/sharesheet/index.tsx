@@ -11,7 +11,7 @@ interface Option {
   icon: string;
 }
 
-interface Props {
+export interface Props {
   options: Option[];
   titleColor?: string;
   titleFontSize?: number;
