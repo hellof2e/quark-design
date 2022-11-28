@@ -31,12 +31,7 @@ class QuarkLoading extends QuarkElement {
 
   getFontSize() {
     let fontSize = "30px";
-    if (
-      this.size &&
-      (this.size.includes("px") ||
-        this.size.includes("rem") ||
-        this.size.includes("em"))
-    ) {
+    if (this.size && /\d(px|rem|em|vh|vw)$/.test(this.size)) {
       fontSize = this.size;
     } else {
       fontSize = `${this.size}px`;

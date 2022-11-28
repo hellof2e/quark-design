@@ -72,7 +72,7 @@ Default `px`。
 | --------- | ---------------------------------------------------- | -------------------- | --------- |
 | type      | Icon type, `circular` `spinner`                      | `string`             | `spinner` |
 | color     | Icon color                                           | `string`             | `#879099` |
-| size      | Icon size, `20px` `2em` `2rem`                       | `string` or `number` | `30px`    |
+| size      | Icon size, `20px` `2em` `2rem` `20vm` `20vh`         | `string` or `number` | `30px`    |
 | vertical  | Whether to arrange icons and text content vertically | `boolean`            | `false`   |
 
 ## CSS Variables
