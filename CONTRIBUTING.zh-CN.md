@@ -8,14 +8,14 @@
 
 ## 开始
 
-第一次启动：
+第一次启动
 
 ```bash
 yarn run init
 yarn run dev
 ```
 
-以后再次启动本工程只需：
+以后再次启动本工程只需
 
 ```bash
 yarn run dev
