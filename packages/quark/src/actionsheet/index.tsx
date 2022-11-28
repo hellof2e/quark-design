@@ -13,7 +13,7 @@ interface Action {
   fontSize?: number;
 }
 
-interface Props {
+export interface Props {
   title?: string;
   actions: Action[];
   cancelText?: string;
