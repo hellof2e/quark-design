@@ -29,22 +29,19 @@ import "quarkd/lib/steps";
     title="已完成"
     order="1"
     content="您的订单已经打包完成，商品已发出"
-    >1</quark-step
-  >
+  >1</quark-step>
   <quark-step
     status="doing"
     title="进行中"
     order="2"
     content="您的订单正在配送中"
-    >2</quark-step
-  >
+  >2</quark-step>
   <quark-step
     status="todo"
     title="未开始"
     order="3"
     content="收货地址为：杭州市益展商务大厦16F"
-    >3</quark-step
-  >
+  >3</quark-step>
 </quark-steps>
 ```
 
@@ -57,22 +54,19 @@ import "quarkd/lib/steps";
     title="已完成"
     order="1"
     content="您的订单已经完成，商品已发出"
-    >1</quark-step
-  >
+  >1</quark-step>
   <quark-step
     status="doing"
     title="进行中"
     order="2"
     content="您的订单正在配送中"
-    >2</quark-step
-  >
+  >2</quark-step>
   <quark-step
     status="todo"
     title="未开始"
     order="3"
     content="收货地址为：杭州市益展商务大厦"
-    >3</quark-step
-  >
+  >3</quark-step>
 </quark-steps>
 ```
 

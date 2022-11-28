@@ -28,20 +28,17 @@ import "quarkd/lib/steps";
     status="done"
     title="finished"
     content="Your order has been packed and the item has been dispatched"
-    >1</quark-step
-  >
+  >1</quark-step>
   <quark-step
     status="doing"
     title="processing"
     content="Your order is being shipped..."
-    >2</quark-step
-  >
+  >2</quark-step>
   <quark-step
     status="todo"
     title="not started"
     content="The delivery address is: 16F, Yizhan Business Building, Hangzhou"
-    >3</quark-step
-  >
+  >3</quark-step>
 </quark-steps>
 ```
 
@@ -53,20 +50,17 @@ import "quarkd/lib/steps";
     status="done"
     title="finished"
     content="Your order has been packed and the item has been dispatched"
-    >1</quark-step
-  >
+  >1</quark-step>
   <quark-step
     status="doing"
     title="processing"
     content="Your order is being shipped..."
-    >2</quark-step
-  >
+  >2</quark-step>
   <quark-step
     status="todo"
     title="not started"
     content="The delivery address is: 16F, Yizhan Business Building, Hangzhou"
-    >3</quark-step
-  >
+  >3</quark-step>
 </quark-steps>
 ```
 
