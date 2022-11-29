@@ -54,6 +54,7 @@ export default createDemo({
           selectedColor: "Custom Selected Color",
           disabled: "Disabled",
           readonly: "Readonly",
+          event: "Listen to change event",
           imageIcon: "image icon",
         },
       });
