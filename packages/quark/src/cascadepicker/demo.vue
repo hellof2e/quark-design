@@ -129,7 +129,7 @@ export default createDemo({
               text: `${translate("options.hangzhou")}`,
               children: [
                 { text: `${translate("options.xihu")}` },
-                { text: `${translate("options.yuhang")}` },
+                // { text: `${translate("options.yuhang")}` },
               ],
             },
             {

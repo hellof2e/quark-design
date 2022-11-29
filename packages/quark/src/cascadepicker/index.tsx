@@ -152,13 +152,18 @@ class QuarkCascadePicker extends QuarkElement {
           cursor = cursor[0].children;
         }
         // 让后续 wheel 滚动到第一个位置
-        for (let j = i + 1; j < this.depth; j += 1) {
-          this.wheels[j].wheelTo(0, 10);
-        }
+        // for (let j = i + 1; j < this.depth; j += 1) {
+        //   this.wheels[j].wheelTo(0, 10);
+        // }
         break;
       }
     }
     this.pickerData = tempPickerData;
+    setTimeout(() => {
+      for (let i = 0; i < this.depth; i++) {
+        this.wheels[i].refresh();
+      }
+    }, 1);
   }
 
   popupClose = () => {

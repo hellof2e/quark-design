@@ -12,7 +12,7 @@ export class Local {
   static use(newLang) {
     this.current = newLang;
   }
-  static add(message: Lange) {
+  static add(message) {
     const tempCurrent = assign({}, this.current, message);
     this.current = tempCurrent;
   }
