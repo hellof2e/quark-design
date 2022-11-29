@@ -50,7 +50,11 @@ quark-rate {
 ```javascript
  onselect(e) { console.log(e.detail.value) }
 ```
+### image icon
 
+```html
+<quark-rate  defaultvalue="2" imgicon="https://quark-design.hellobike.com/assets/quark-logo.7fd50e67.png"></quark-rate>
+```
 ## API
 
 ### Props
@@ -63,6 +67,7 @@ quark-rate {
 | disabled     | Whether to disable rate                                     | `boolean` | `false`   |
 | readonly     | Whether to be readonly                                      | `boolean` | `false`   |
 | activecolor  | chosen color                                                | `string`  | `#ffc800` |
+| imgicon      | iamge icon                                                  | `string`  | `-`       |
 
 ### Event
 

@@ -20,6 +20,11 @@
     <div class="tag-container">
       <quark-rate :value="rate" @change="handleChange"></quark-rate>
     </div>
+    <h2>{{ translate("imageIcon") }}</h2>
+    <div class="tag-container">
+      <quark-rate  defaultvalue="2" imgicon="https://quark-design.hellobike.com/assets/quark-logo.7fd50e67.png">
+      </quark-rate>
+    </div>
   </div>
 </template>
 
@@ -42,13 +47,14 @@ export default createDemo({
           disabled: "禁用状态",
           readonly: "只读状态",
           event: "监听 change 事件",
+          imageIcon: "图片icon",
         },
         "en-US": {
           basic: "Basic Usage",
           selectedColor: "Custom Selected Color",
           disabled: "Disabled",
           readonly: "Readonly",
-          event: "Listen to change event",
+          imageIcon: "image icon",
         },
       });
     });

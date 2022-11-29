@@ -52,6 +52,12 @@ export default () => {
 };
 ```
 
+### 图片icon
+
+```html
+<Rate value="2" imgicon="https://quark-design.hellobike.com/assets/quark-logo.7fd50e67.png"></Rate>
+```
+
 ## API
 
 ### Props
@@ -64,4 +70,5 @@ export default () => {
 | disabled     | 是否禁用                          | `boolean`                            | `false`   |
 | readonly     | 是否只读                          | `boolean`                            | `false`   |
 | activecolor  | 选中的时候颜色                    | `string`                             | `#ffc800` |
+| imgicon      | 图片 icon                       | `string`                             | `-`       |
 | onChange     | 当前分值修改时时触发的事件        | `(e: { detail: { value: string } }) => void` |           |
