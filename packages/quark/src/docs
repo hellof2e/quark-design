@@ -1,4 +1,30 @@
 # 更新日志
+### [1.0.26](https://github.com/hellof2e/quark-design/compare/v1.0.25...v1.0.26) (2022-11-29)
+
+
+### Documentation
+
+* **Dialog:** async demo and docs ([be94644](https://github.com/hellof2e/quark-design/commit/be946443e883dace7da7563a5707bd7f3e74e5d2))
+* **List:** fix demo height ([f7d6954](https://github.com/hellof2e/quark-design/commit/f7d6954363206a0e48fe0221ae7deeb427b6869b))
+* **steps:** update doc code ([65efa72](https://github.com/hellof2e/quark-design/commit/65efa723fe51eb47192168acae17a0d9466c98b9))
+
+
+### 🐞 Bug Fixes
+
+* **locale:** fix typos ([7471c1a](https://github.com/hellof2e/quark-design/commit/7471c1a55b6759c5cc2608fa55558d5891018e37))
+* test(dialog/image/popupextra)& dialog(okText) ([7217d87](https://github.com/hellof2e/quark-design/commit/7217d87075c898da5ed417fcd5681a1a85f5e1a3))
+* test(tab/step) & docs example(checkbox/radio) ([a0530db](https://github.com/hellof2e/quark-design/commit/a0530db591b795ca3fb20e13d46965cb94331686))
+
+
+### 🎉 Features
+
+* export interface Props ([723f29f](https://github.com/hellof2e/quark-design/commit/723f29f5c3f056608b39c9c1710da55e8fe9eb14))
+* **List:** delete ineffective code ([61d6b09](https://github.com/hellof2e/quark-design/commit/61d6b09c5f5466e5bdf33593218f98c029e2cd11))
+* **Loading:** add fontSize vm&vh unit ([8e3c4f6](https://github.com/hellof2e/quark-design/commit/8e3c4f6a2c313b15592666b3f94d07ee2ce3748c))
+* update action ([c35a408](https://github.com/hellof2e/quark-design/commit/c35a4080a07e5059b7c6a181b359351c4703b66e))
+* update quarkd ([e34a7d2](https://github.com/hellof2e/quark-design/commit/e34a7d2d14005646346c963892a57f3f41ae756b))
+* 修复级联选择器bug ([2cff8d4](https://github.com/hellof2e/quark-design/commit/2cff8d4a6094dd00ecac7f42c1e619c4de84752e))
+
 ### [1.0.25](https://github.com/hellof2e/quark-design/compare/v1.1.0...v1.0.25) (2022-11-28)
 
 ### [1.0.22](https://github.com/hellof2e/quark-design/compare/v1.0.21...v1.0.22) (2022-11-23)
