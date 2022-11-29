@@ -68,6 +68,15 @@ export default {
               },
             ],
           },
+          {
+            text: '北京',
+            children: [
+              {
+                text: '',
+                children: [{ text: '' }],
+              },
+            ],
+          },
         ];
       )
     }, 1000)
@@ -149,6 +158,15 @@ export default {
               {
                 text: '厦门',
                 children: [{ text: '思明区' }, { text: '海沧区' }],
+              },
+            ],
+          },
+          {
+            text: '北京',
+            children: [
+              {
+                text: '',
+                children: [{ text: '' }],
               },
             ],
           },

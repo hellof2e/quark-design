@@ -40,6 +40,7 @@ const DATA = [
       },
     ],
   },
+  
 ];
 export default () => {
   const [open, setOpen] = useState(false);
@@ -109,6 +110,15 @@ const DATA = [
       {
         text: "厦门",
         children: [{ text: "思明区" }, { text: "海沧区" }],
+      },
+    ],
+  },
+  {
+    text: '北京',
+    children: [
+      {
+        text: '',
+        children: [{ text: '' }],
       },
     ],
   },

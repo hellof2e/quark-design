@@ -41,6 +41,15 @@ const DATA = [
       },
     ],
   },
+  {
+    text: 'Beijing',
+    children: [
+      {
+        text: '',
+        children: [{ text: '' }],
+      },
+    ],
+  },
 ];
 export default () => {
   const [open, setOpen] = useState(false);

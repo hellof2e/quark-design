@@ -87,6 +87,7 @@ export default createDemo({
             xiamen: "厦门",
             siming: "思明区",
             haicang: "海沧区",
+            beijing: "北京",
           },
           selected: "当前选中：",
         },
@@ -115,6 +116,7 @@ export default createDemo({
             xiamen: "Xiamen",
             siming: "Siming",
             haicang: "Haicang",
+            beijing: "Beijing",
           },
           selected: "Currently selected: ",
         },
@@ -127,10 +129,7 @@ export default createDemo({
           children: [
             {
               text: `${translate("options.hangzhou")}`,
-              children: [
-                { text: `${translate("options.xihu")}` },
-                // { text: `${translate("options.yuhang")}` },
-              ],
+              children: [{ text: `${translate("options.xihu")}` }],
             },
             {
               text: `${translate("options.wenzhou")}`,
@@ -160,6 +159,15 @@ export default createDemo({
             },
           ],
         },
+        {
+          text: `${translate("options.beijing")}`,
+          children: [
+            {
+              text: "",
+              children: [{ text: "" }],
+            },
+          ],
+        },
       ];
       setTimeout(() => {
         //模拟异步获取数据
@@ -184,22 +192,26 @@ export default createDemo({
       }
     };
     const confirm = ({ detail }) => {
-      const values = detail.value
-        .map((column) => {
-          return column.value;
-        })
-        .join("，");
+      let values = detail.value.map((column) => {
+        return column.value;
+      });
+      values = values.filter((value) => value.length > 0);
+      if (values.length > 1) {
+        values = values.join("，");
+      }
       Toast.text(`${values}`);
       open.value = false;
     };
     const customConfirm = () => {
       const customPreview = customPickerRef.value;
-      const values = customPreview
-        .getValues()
-        .map((column) => {
-          return column.value;
-        })
-        .join("，");
+      let values = customPreview.getValues().map((column) => {
+        return column.value;
+      });
+
+      values = values.filter((value) => value.length > 0);
+      if (values.length > 1) {
+        values = values.join("，");
+      }
       Toast.text(`${values}`);
       customOpen.value = false;
     };

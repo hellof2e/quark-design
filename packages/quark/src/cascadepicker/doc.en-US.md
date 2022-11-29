@@ -81,6 +81,15 @@ export default {
               },
             ],
           },
+          {
+            text: 'Beijing',
+            children: [
+              {
+                text: '',
+                children: [{ text: '' }],
+              },
+            ],
+          },
         ];
       )
     }, 1000)
@@ -174,6 +183,15 @@ export default {
                   { text: 'Siming District' },
                   { text: 'Haicang District' }
                 ],
+              },
+            ],
+          },
+          {
+            text: 'Beijing',
+            children: [
+              {
+                text: '',
+                children: [{ text: '' }],
               },
             ],
           },
