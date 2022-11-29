@@ -41,11 +41,6 @@ class QuarkCheckbox extends QuarkElement {
   @property({
     type: Boolean,
   })
-  value = false;
-
-  @property({
-    type: Boolean,
-  })
   disabled = false;
 
   @property({
@@ -57,20 +52,6 @@ class QuarkCheckbox extends QuarkElement {
   classNames = "";
 
   slotRef: any = createRef();
-
-  componentDidUpdate(): void {
-    this.value = this.checked;
-  }
-
-  // shouldComponentUpdate(
-  //   propName: string,
-  //   oldValue: string,
-  //   newValue: string | boolean
-  // ) {
-  //   if (propName === "checked")
-  //     this.value = typeof newValue === "boolean" ? newValue : false;
-  //   return true;
-  // }
 
   handleCheck = () => {
     if (this.disabled) {
