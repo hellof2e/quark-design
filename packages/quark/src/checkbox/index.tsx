@@ -64,16 +64,6 @@ class QuarkCheckbox extends QuarkElement {
     }
   }
 
-  // shouldComponentUpdate(
-  //   propName: string,
-  //   oldValue: string,
-  //   newValue: string | boolean
-  // ) {
-  //   if (propName === "checked")
-  //     this.value = typeof newValue === "boolean" ? newValue : false;
-  //   return true;
-  // }
-
   handleCheck = () => {
     if (this.disabled) {
       return;

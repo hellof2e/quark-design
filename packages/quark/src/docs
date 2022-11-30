@@ -1,4 +1,17 @@
 # 更新日志
+### [1.0.27](https://github.com/hellof2e/quark-design/compare/v1.0.26...v1.0.27) (2022-11-30)
+
+
+### 🎉 Features
+
+* update cascadepicker doc ([00b2648](https://github.com/hellof2e/quark-design/commit/00b26486bbde66da33be8e9ad36d65f55a733b23))
+* update quarkd version ([223ea86](https://github.com/hellof2e/quark-design/commit/223ea86c6996aa5d216de71e8ef019b95ea4dc9b))
+
+
+### 🐞 Bug Fixes
+
+* **Checkbox:** fix Maximum call stack ([a0810d2](https://github.com/hellof2e/quark-design/commit/a0810d2b8b5d64050e3671923635e38354563db9))
+
 ### [1.0.26](https://github.com/hellof2e/quark-design/compare/v1.0.25...v1.0.26) (2022-11-29)
 
 
