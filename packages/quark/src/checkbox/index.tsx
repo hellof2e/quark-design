@@ -59,7 +59,9 @@ class QuarkCheckbox extends QuarkElement {
   slotRef: any = createRef();
 
   componentDidUpdate(): void {
-    this.value = this.checked;
+    if (this.value !== this.checked) {
+      this.value = this.checked;
+    }
   }
 
   // shouldComponentUpdate(
