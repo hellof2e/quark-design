@@ -1,0 +1,17 @@
+:host {
+  width: 100%;
+}
+
+:host .quark-virtual-list {
+  width: var(--virtual-list-width, 100%);
+  background-color: var(--virtual-list-background-color, #fff);
+  overflow-y: auto;
+  position: relative;
+}
+
+:host .quark-virtual-list-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
