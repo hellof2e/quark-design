@@ -35,7 +35,7 @@ class QuarkRate extends QuarkElement {
   size = "25";
 
   @property()
-  icon = "";
+  imgicon = "";
 
   @property()
   activecolor = "#ee0a24";
@@ -86,21 +86,20 @@ class QuarkRate extends QuarkElement {
   };
 
   renderIcon = (i: { id: number; color: string }) => {
-    if (this.icon && this.icon.includes("http")) {
+    if (this.imgicon) {
       return (
         <img
-          style={{ width: `${this.size}px`, height: "auto" }}
-          src={this.icon}
+          style={{ width: `${this.size}px`, height: "auto", paddingRight: "4px", filter: (i.color && i.color !== "inherit") ? "initial" : "grayscale(100%)"}}
+          src={this.imgicon}
           key={i.id}
+          onClick={() => this.handleChange(i)}
         />
       );
     }
-
     return (
       <quark-icon-star-fill
         key={i.id}
         id={i.id}
-        name={this.icon}
         size={this.size}
         color={i.color || "inherit"}
         onClick={() => this.handleChange(i)}
