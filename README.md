@@ -37,6 +37,10 @@
   </a>
 </p>
 
+
+English | [简体中文](./README.zh-CN.md)
+
+
 ## Contact us
 
 ~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~
@@ -48,7 +52,6 @@
   <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='189'/>
 </div>
 
-English | [简体中文](./README.zh-CN.md)
 
 ## 🤔 Motivation
 
