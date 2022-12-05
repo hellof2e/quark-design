@@ -20,6 +20,9 @@ class QuarkToast extends QuarkElement {
   @property()
   icon = "";
 
+  @property()
+  position: Position = "middle";
+
   @property({ type: Boolean })
   show = false;
 
@@ -151,12 +154,15 @@ interface TOptions {
   show?: boolean;
   size?: number;
   zIndex?: number;
+  position?: Position;
 }
+type Position = "top" | "middle" | "bottom";
 
 type ToastParams = {
   duration?: number;
   close?: () => void;
   size?: number;
+  position?: Position;
   zIndex?: number;
 };
 
@@ -175,6 +181,7 @@ const mountToast = (opts: TOptions) => {
     close,
     size = 40,
     zIndex = 9999,
+    position = "middle",
     loadingIconDirection = "vertical",
   } = { ...defaultOptions, ...opts };
   let mountToast = null;
@@ -191,6 +198,7 @@ const mountToast = (opts: TOptions) => {
   mountToast.content = msg;
   mountToast.iconSize = size;
   mountToast.zIndex = zIndex;
+  mountToast.position = position;
   mountToast.loadingIconDirection = loadingIconDirection;
   document.body.appendChild(mountToast);
   setTimeout(() => {

@@ -15,7 +15,14 @@ import { Toast } from "@quarkd/quark-react";
 ```javascript
 Toast.text("Network failed, please try again later~");
 ```
+### Text position
+use position property，can use `top`、`bottom`, `middle` is default
 
+```javascript
+Toast.text("网络失败，请稍后再试~", {
+  position: 'top'
+});
+```
 ### Success
 
 ```javascript
@@ -102,6 +109,7 @@ toast2.hide();
 | zIndex    | Custom zIndex                                     | `number`   | `9999`   |
 | close     | Callback function after close                     | `() => void` | -        |
 | loadingIconDirection    | loading icon display direction, only valid when `type=loading` | `horizontal` or `vertical` | `vertical` |
+| position    | Position | `top` or `bottom` | `middle` |
 
 
 ## CSS Variables
@@ -115,3 +123,4 @@ toast2.hide();
 | `--toast-color`        | Font color    | `#fff`        |
 | `--toast-loading-bottom` | bottom margin of loading icon | Vertical loading is `14px`; horizontal loading is `0` |
 | `--toast-loading-right` | right margin of loading icon | Vertical loading is `0`; horizontal loading is `8px` |
+| `--toast-position-top-distance` | the text of top distance | When position is `top`,the value is`20%`.when position is `botton`,the value is`80%` |

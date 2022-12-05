@@ -7,7 +7,7 @@
   background-color: transparent;
 }
 
-.quark-toast {
+:host .quark-toast {
   opacity: 0;
   font-size: var(--toast-font-size, 14px);
   padding: var(--toast-padding, 0);
@@ -34,7 +34,13 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-.quark-toast--horizontal {
+:host([position="top"]) .quark-toast {
+  top: var(--toast-position-top-distance, 20%);
+}
+:host([position="bottom"]) .quark-toast {
+  top: var(--toast-position-top-distance, 80%);
+}
+:host .quark-toast--horizontal {
   flex-direction: row;
   padding: var(--toast-text-padding, 16px 20px);
   width: max-content;
@@ -83,7 +89,7 @@ quark-icon-whitewarning-o {
   margin-bottom: quark-vSpacingMd;
 }
 
-.quark-toast-leave {
+:host .quark-toast-leave {
   opacity: 0;
   transition: transform opacity 3s ease-out;
 }

@@ -25,6 +25,15 @@
       <div>Loading {{ translate("loadingTip") }}</div>
       <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
     </div>
+    <h2>{{ translate("position") }}</h2>
+    <div class="quark-cell" @click="handleTextTopClick">
+      <div>{{ translate("top") }}</div>
+      <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
+    </div>
+    <div class="quark-cell" @click="handleTextBottomClick">
+      <div>{{ translate("bottom") }}</div>
+      <quark-icon-arrow-right size="20" name="right"></quark-icon-arrow-right>
+    </div>
     <h2>{{ translate("closeCallback") }}</h2>
     <div class="quark-cell" @click="cbClick">
       <div>{{ translate("closeCallback") }}</div>
@@ -47,6 +56,9 @@ export default createDemo({
     onBeforeMount(() => {
       useTranslate({
         "zh-CN": {
+          top: "顶部展示",
+          bottom: "底部展示",
+          position: "Toast 显示位置",
           functionCall: "函数式调用",
           closeCallback: "关闭后回调函数",
           textTip: "文字提示",
@@ -60,6 +72,9 @@ export default createDemo({
           close: "三秒后关闭",
         },
         "en-US": {
+          top: "Show on top",
+          bottom: "Show on bottom",
+          position: "Toast position",
           functionCall: "Function Call",
           closeCallback: "Close Callback",
           textTip: "Text Tip",
@@ -82,6 +97,16 @@ export default createDemo({
 
     const handleTextClick = () => {
       QuarkToast.text(`${translate("networkTip")}`);
+    };
+    const handleTextTopClick = () => {
+      QuarkToast.text(`${translate("networkTip")}`, {
+        position: "top",
+      });
+    };
+    const handleTextBottomClick = () => {
+      QuarkToast.text(`${translate("networkTip")}`, {
+        position: "bottom",
+      });
     };
 
     const handlehorizontalLoadingClick = () => {
@@ -117,6 +142,8 @@ export default createDemo({
     // };
 
     return {
+      handleTextTopClick,
+      handleTextBottomClick,
       tag,
       cbClick,
       handleTextClick,

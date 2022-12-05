@@ -15,7 +15,13 @@ import { Toast } from "@quarkd/quark-react";
 ```javascript
 Toast.text("网络失败，请稍后再试~");
 ```
+### 文字提示位置
+通过 position 控制 文字提示位置，支持 `top`、`bottom`,默认`middle`
 
+```javascript
+Toast.text("网络失败，请稍后再试~", {
+  position: 'top'
+});
 ### 成功提示
 
 ```javascript
@@ -100,6 +106,7 @@ toast2.hide();
 | zIndex   | 浮层层级                                | `number`   | `9999`   |
 | close    | 关闭时的回调函数                        | `() => void` | -        |
 | loadingIconDirection    | loading 图标展示方向，仅 `type=loading` 时生效 | `horizontal` 或者 `vertical` | `vertical` |
+| position    | 位置 | `top`或者 `bottom` | `middle` |
 
 
 ## 样式变量
@@ -113,3 +120,4 @@ toast2.hide();
 | `--toast-color`        | 字体颜色 | `#fff`      |
 | `--toast-loading-bottom` | loading 图标底部边距 | 垂直 loading 为 `14px`；水平 loading 为 `0` |
 | `--toast-loading-right` | loading 图标右边边距 | 垂直 loading 为 `0`；水平 loading 为 `8px` |
+| `--toast-position-top-distance` | 提示距顶部距离 | position 为`top`时 值为 `20%`， position值为`botton`时值为`80%` |
