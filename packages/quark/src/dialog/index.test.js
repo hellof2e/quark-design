@@ -73,16 +73,16 @@ describe("quark-dialog Dom attribute", async () => {
     expect(eventspy.called).to.equal(true);
   });
 
-  // it("okBtn event", async () => {
-  //   const node = await fixture(
-  //     `<quark-dialog
-  //     >
-  //       </quark-dialog>`
-  //   );
-  //   const okBtn = node.shadowRoot.querySelector(".quark-dialog-confirm-btn");
-  //   const eventspy = sinon.spy();
-  //   node.addEventListener("confirm", eventspy);
-  //   okBtn.dispatchEvent(new Event("click"));
-  //   expect(eventspy.called).to.equal(true);
-  // });
+  it("okBtn event", async () => {
+    const node = await fixture(
+      `<quark-dialog
+      >
+        </quark-dialog>`
+    );
+    const okBtn = node.shadowRoot.querySelector(".quark-dialog-confirm-btn");
+    const eventspy = sinon.spy();
+    node.addEventListener("confirm", eventspy);
+    okBtn.dispatchEvent(new Event("click"));
+    expect(eventspy.called).to.equal(true);
+  });
 });

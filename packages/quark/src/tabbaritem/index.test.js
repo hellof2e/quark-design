@@ -52,14 +52,14 @@ describe("<quark-tabbar-item>", async () => {
     expect(el.badgecontent).to.equal(data.badgecontent);
   });
 
-  // it('icon slot ', async () => {
-  //   const slot =  `<span slot="icon">icon</span>`
-  //   el = await fixture(
-  //       `<quark-tabbar-item>
-  //        ${slot}
-  //       </quark-tabbar-item>`);
-  //   const node = el.shadowRoot.querySelector("slot[name='icon']");
-  //   const slotResult = node.assignedNodes()[0];
-  //   expect(slotResult.outerHTML).to.equal(slot);
-  // });
+  it('icon slot ', async () => {
+    const slot =  `<span slot="icon">icon</span>`
+    el = await fixture(
+        `<quark-tabbar-item>
+         ${slot}
+        </quark-tabbar-item>`);
+    const node = el.shadowRoot.querySelector("slot[name='icon']");
+    const slotResult = node.assignedNodes()[0];
+    expect(slotResult.outerHTML).to.equal(slot);
+  });
 });
