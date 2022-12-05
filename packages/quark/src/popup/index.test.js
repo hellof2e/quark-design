@@ -52,19 +52,19 @@ describe("<quark-popup>", async () => {
     expect(el.closeable).to.exist;
   });
 
-  // it("onClose event", async () => {
-  //   el = await fixture(
-  //     `<quark-popup 
-  //           closeable=${data.closeable}
-  //         >
-  //         </quark-popup>`
-  //   );
-  //   const eventspy = sinon.spy();
-  //   el.addEventListener("closed", eventspy);
-  //   const maskRef = el.shadowRoot.querySelector(".quark-mask");
-  //   maskRef.dispatchEvent(new Event("click"));
-  //   expect(eventspy.called).to.equal(true);
-  // });
+  it("onClose event", async () => {
+    el = await fixture(
+      `<quark-popup 
+            closeable=${data.closeable}
+          >
+          </quark-popup>`
+    );
+    const eventspy = sinon.spy();
+    el.addEventListener("closed", eventspy);
+    const maskRef = el.shadowRoot.querySelector(".quark-popup-mask");
+    maskRef.dispatchEvent(new Event("click"));
+    expect(eventspy.called).to.equal(true);
+  });
 
   it("slot", async () => {
     const slot = `<span>我是右标题</span>`;

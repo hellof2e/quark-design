@@ -7,8 +7,8 @@ import "quarkd/lib/textarea";
 const data = {
   value: "内容",
   placeholder: "请输入内容",
-  rows: "5",
-  maxlength: "100",
+  rows: 5,
+  maxlength: 100,
   showCount: true,
   autoComplete: true,
   disabled: false,
@@ -42,14 +42,13 @@ describe("<quark-textarea>", async () => {
       ></quark-textarea>`
     );
     const textarea = el.shadowRoot.querySelector(".quark-text-area");
-    console.log(textarea, '22')
     // expect(textarea.value).to.equal(data.value);
     expect(textarea.placeholder).to.equal(data.placeholder);
-    // expect(textarea.rows).to.equal(data.rows);
-    // expect(textarea.maxlength).to.equal(data.maxlength);
-    // expect(textarea.showcount).to.equal(data.showCount);
-    // expect(textarea.autoComplete).to.equal(data.autoComplete);
-    // expect(textarea.disabled).to.equal(data.disabled);
-    // expect(textarea.readOnly).to.equal(data.readOnly);
+    expect(textarea.rows).to.equal(data.rows);
+    expect(textarea.disabled).to.equal(data.disabled);
+    expect(textarea.readOnly).to.equal(data.readOnly);
+    expect(el.maxlength).to.equal(data.maxlength.toString());
+    expect(el.showcount).to.equal(data.showCount);
+    expect(el.autocomplete).to.equal(data.autoComplete.toString());
   });
 });

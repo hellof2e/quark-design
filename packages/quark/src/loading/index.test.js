@@ -3,7 +3,7 @@ import 'quarkd/lib/loading';
 let el;
 const data = {
   color: "red",
-  size: 40,
+  size: "40", // string or number 
 };
 describe("quark-loading", async () => {
   before(async () => {
@@ -18,8 +18,8 @@ describe("quark-loading", async () => {
     expect(loading).to.exist;
   });
 
-  // it(' base attribute', async () => {
-  //   expect(el.color).to.equal(data.color);
-  //   expect(el.size).to.equal(data.size);
-  // });
+  it(' base attribute', async () => {
+    expect(el.color).to.equal(data.color);
+    expect(el.size).to.equal(data.size);
+  });
 });

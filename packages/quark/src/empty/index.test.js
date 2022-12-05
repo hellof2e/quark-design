@@ -37,11 +37,11 @@ describe("<quark-empty>", async () => {
     expect(el.desc).to.equal(data.desc);
   });
 
-  // it("slot attribute", async () => {
-  //   const slot = "<span>我是空状态</span>";
-  //   el = await fixture(`<quark-empty desc=${data.desc}>${slot}</quark-empty>`);
-  //   const descE = el.shadowRoot.querySelector("slot");
-  //   const slotResult = descE.assignedNodes()[0];
-  //   expect(slotResult.outerHTML).to.equal(slot);
-  // });
+  it("slot attribute", async () => {
+    const slot = `<span slot="footer">我是空状态</span>`;
+    el = await fixture(`<quark-empty desc=${data.desc}>${slot}</quark-empty>`);
+    const descE = el.shadowRoot.querySelector("slot");
+    const slotResult = descE.assignedNodes()[0];
+    expect(slotResult.outerHTML).to.equal(slot);
+  });
 });
