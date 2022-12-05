@@ -1,4 +1,14 @@
 # 更新日志
+### [1.0.28](https://github.com/hellof2e/quark-design/compare/v1.0.27...v1.0.28) (2022-12-05)
+
+
+### 🎉 Features
+
+* **Rate:** resume en word ([f18d1b8](https://github.com/hellof2e/quark-design/commit/f18d1b8cc6a5369b5c1860ad68e34018f750b0ad))
+* **Rate:** support image icon ([1622b62](https://github.com/hellof2e/quark-design/commit/1622b62abf95a642e4ee40ad9daf402de93190da))
+* update quarkd version ([f4c51aa](https://github.com/hellof2e/quark-design/commit/f4c51aa01bc6367c1b1b4d773da95506eadc7ad6))
+* **VirtualList:** VirtualList init ([5cd86c5](https://github.com/hellof2e/quark-design/commit/5cd86c5065fd607c0f06772dda2dfcbf1b645dd0))
+
 ### [1.0.27](https://github.com/hellof2e/quark-design/compare/v1.0.26...v1.0.27) (2022-11-30)
 
 
