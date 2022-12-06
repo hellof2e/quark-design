@@ -95,6 +95,11 @@
 }
 
 :host .uploading-text {
-  font-size: var(--van-uploader-mask-font-size, 10px);
-  color: var(--van-uploader-mask-color, #fff);
+  font-size: var(--uploader-mask-font-size, 10px);
+  color: var(--uploader-mask-color, #fff);
+}
+:host .uploader-disabled {
+  opacity: var(--uploader-disabled-opacity, .5);
+  cursor: not-allowed;
+  pointer-events: none;
 }

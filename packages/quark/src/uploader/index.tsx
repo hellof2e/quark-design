@@ -263,7 +263,7 @@ class QuarkUploader extends QuarkElement {
       <Fragment>
         {!this.readonly && (
           <div
-            class="quark-uploader"
+            class={ `quark-uploader ${disabled && 'uploader-disabled'}`}
             style={{ display: !hiddenUpload ? "block" : "none" }}
           >
             <slot name="uploader">
