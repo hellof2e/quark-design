@@ -1,5 +1,7 @@
+
 const fs = require("fs-extra");
 const path = require("path");
+const sh = require("shelljs")
 
 const packageSrcRoot = path.join(__dirname, "./src");
 const typesSrcRoot = path.join(__dirname, "./types");
@@ -17,10 +19,10 @@ const componentNames = fs
 
 const copy = () => {
   componentNames.forEach((component) => {
-    const typePath = `${typesSrcRoot}/src/${component.name}/index.d.ts`;
-    const libPath = `${libSrcRoot}/${component.name}/index.d.ts`;
+    const typePath = `${typesSrcRoot}/src/${component.name}`;
+    const libPath = `${libSrcRoot}/${component.name}`;
     try {
-      fs.copyFileSync(typePath, libPath);
+      sh.exec(`cp -R ${typePath}/ ${libPath}`);
       // console.log(typePath, "复制成功");
     } catch (e) {
       console.log(e, "复制失败");

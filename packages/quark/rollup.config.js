@@ -31,7 +31,7 @@ const componentNames = fs
  */
 const options = [
   {
-    input: "./src/index.js",
+    input: "./src/index.ts",
     output: {
       dir: "./umd",
       format: "umd",
