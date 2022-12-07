@@ -106,9 +106,13 @@ Using `npm` to install:
 npm i quarkd --save
 ```
 
-**React usage notes**: Since the components provided by `quarkd` are all native custom elements (analogous to div), events dispatched in the component need to be received by `addEventLisener`, such as the custom close event close inside the `dialog` component. The `Vue` technology stack can directly use `@xx` to receive natively dispatched events, so there is no need to use `addEventLisener` to receive.
+<details>
+<summary>React usage notes</summary>
+  
+Since the components provided by `quarkd` are all native custom elements (analogous to div), events dispatched in the component need to be received by `addEventLisener`, such as the custom close event close inside the `dialog` component. The `Vue` technology stack can directly use `@xx` to receive natively dispatched events, so there is no need to use `addEventLisener` to receive.
 
 In order to improve the development experience, we have Reactify (Reactify) for `quarkd`! So, we recommend that you use `@quarkd/quark-react` in your React/Preact projects!
+</details>
 
 ```bash
 # Recommended Use for React
@@ -160,7 +164,7 @@ No framework project
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <!-- 1. CDN, import all components -->
+  <!-- 1. CDN, import components -->
   <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
   <body>
   
@@ -208,10 +212,10 @@ Unknown custom element:
 This is because the syntax part of Vue components refers to custom elements. In order to avoid conflicts with Vue components, custom elements need to be ignored! Please inject the following code into the project:
 
 ```tsx
-// VUE2.x
+// Vue@2.x
 Vue.config.ignoredElements = [/^quark-/];
 
-// VUE3.x
+// Vue@3.x
 // https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
 const app = createApp({});
 app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith("quark-");
