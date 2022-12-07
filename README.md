@@ -57,7 +57,6 @@ English | [简体中文](./README.zh-CN.md)
 </details>
 
 
-
 ## 🤔 Motivation
 
 The emergence of the technical framework has improved the development experience and page performance, but the continuous iterative update of the technical framework has brought many challenges to the maintenance of the project, such as:
@@ -93,7 +92,7 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 The easiest way to use quark is to directly introduce the CDN link in the HTML file, and then you can use it anywhere in the world. Since quark has achieved CSS-IN-JS, you only need to load the link below.
 
 ```
-<!-- Introduce CDN files, only 80kb -->
+<!-- file size: 80kb -->
 <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
@@ -186,12 +185,6 @@ Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/
 ## 🖥 Browser Support
 
 Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
-
-## Special Note
-
-- Since the components provided by `quarkd` are all native custom elements (analogous to div), the events dispatched by the components need to be received using addEventListener.
-- The Vue stack uses `@xx` to receive natively dispatched events, so there is no need to use addEventListener to receive them.
-- For the React technology stack, in order to avoid developers manually addingEventLisener to receive events, we rely on `quarkd` at the bottom and Reactify (Reactize) the upper layer! Therefore the React project recommends using `@quarkd/quark-react`.
 
 ## Pay attention
 
