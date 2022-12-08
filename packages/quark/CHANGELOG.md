@@ -1,4 +1,18 @@
 # 更新日志
+### [1.0.31](https://github.com/hellof2e/quark-design/compare/v1.0.30...v1.0.31) (2022-12-08)
+
+### [1.0.30](https://github.com/hellof2e/quark-design/compare/v1.0.29...v1.0.30) (2022-12-08)
+
+
+### 🎉 Features
+
+* update ([9679cfa](https://github.com/hellof2e/quark-design/commit/9679cfa07331816da2ac12563f8f93284c308e51))
+
+
+### 🐞 Bug Fixes
+
+* collapse & iconhide ([50a05fa](https://github.com/hellof2e/quark-design/commit/50a05fa3fcc2d964862944b90840f9c8f6318ebf))
+
 ### [1.0.29](https://github.com/hellof2e/quark-design/compare/v1.0.28...v1.0.29) (2022-12-08)
 
 
