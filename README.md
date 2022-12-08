@@ -121,7 +121,7 @@ npm i @quarkd/quark-react --save
 
 ## 🔨 示例
 
-Vue.x
+Vue (任何版本)
 
 ```jsx
 import "quarkd/lib/button";
@@ -129,7 +129,7 @@ import "quarkd/lib/button";
 <quark-button type="primary">Button</quark-button>;
 ```
 
-React.x
+React (任何版本)
 
 ```jsx
 import { Button } from "@quarkd/quark-react";
@@ -141,7 +141,7 @@ const App = () => (
 );
 ```
 
-Angular
+Angular (任何版本)
 
 ```jsx
 import { Component } from '@angular/core
