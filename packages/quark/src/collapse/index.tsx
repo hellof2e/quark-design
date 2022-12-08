@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import QuarkElement, { property, customElement } from "@quarkd/core";
 import "@quarkd/icons/lib/arrow-down";
 import style from "./style.css";
 
