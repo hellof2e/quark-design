@@ -95,7 +95,7 @@
 使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
 
 ```
-<!-- 引入CDN文件，只有 80kb -->
+<!-- 只有 80kb -->
 <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
