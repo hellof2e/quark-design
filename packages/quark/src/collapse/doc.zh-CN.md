@@ -2,7 +2,7 @@
 
 ### 介绍
 
-Collapse 折叠面板
+将内容放置在多个折叠面板中，点击面板标题可展开或收缩内容。
 
 ### 安装使用
 
@@ -13,7 +13,17 @@ import "quarkd/lib/collapse";
 ### 基本用法
 
 ```html
-<quark-collapse title="标题1">
+<quark-collapse :title="title">
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</quark-collapse>
+```
+
+### 打开状态
+
+通过设置 `open=true` 属性来控制折叠面板打开状态
+
+```html
+<quark-collapse :title="title" open>
   生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
 </quark-collapse>
 ```
@@ -62,3 +72,13 @@ import "quarkd/lib/collapse";
 | title              | 标题文字         | `string`                                  |           |
 | open               | 打开            | `Boolean`                                |   `false` |
 
+## 样式变量
+
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+
+| 名称                       | 说明             | 默认值                            |
+| -------------------------- | ---------------- | --------------------------------- |
+| `--callapse-title-fontsize`   | 标题字体大小     | `14px`                            |
+| `--callapse-title-color`      | 标题字体颜色     | `#666`                            |
+| `--callapse-content-fontsize`   | 标题字体大小     | `14px`                            |
+| `--callapse-content-color`      | 标题字体颜色     | `#666`                            |

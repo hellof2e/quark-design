@@ -2,106 +2,66 @@
 
 ### 介绍
 
-ActionSheet 动作面板
+将内容放置在多个折叠面板中，点击面板标题可展开或收缩内容。
 
 ### 安装使用
 
 ```tsx
-import { ActionSheet } from "@quarkd/quark-react";
+import { Collapse } from "@quarkd/quark-react";
 ```
 
 ### 基本用法
 
-```js
-export default () => {
-  const showBase = () => {
-    ActionSheet({
-      actions: [{ name: '选项一' }, { name: '选项二' }, { name: '选项三' }],
-      select: (index, action) => {
-        console.log.(action.name);
-      },
-    });
-  };
-
-  return (
-    <div>
-      <div onClick={showBase} title="基本使用"></div>
-    </div>
-  );
-}
+```html
+<Collapse title="标题">
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</Collapse>
 ```
 
-### 带标题
+### 打开状态
 
-```js
-ActionSheet({
-  title: "我是标题信息",
-  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+通过设置 `open=true` 属性来控制折叠面板打开状态
+
+```html
+<Collapse title="标题" open>
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</Collapse>
 ```
 
-### 带取消按钮
+### 无icon样式
 
-```js
-ActionSheet({
-  title: "我是标题信息",
-  cancelText: "取消",
-  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+通过 `iconhide` 属性来自定义标题。
+
+```html
+<Collapse title="标题" iconhide>
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</Collapse>
 ```
 
-### 自定义标题样式
+### 自定义标题
 
-```js
-ActionSheet({
-  title: "我是标题信息",
-  titleColor: "red",
-  titleFontSize: 20,
-  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+通过 `slot="title"` 来自定义标题。
+
+```html
+<Collapse title="标题">
+  <div slot="title">
+    <span style="color: blueviolet">自定义标题</span>
+  </div>
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</Collapse>
 ```
 
-### 自定义选项样式
+### 自定义icon
 
-```js
-ActionSheet({
-  title: "我是标题信息",
-  titleColor: "red",
-  titleFontSize: 20,
-  actions: [
-    { name: "选项一", color: "#999", fontSize: 20 },
-    { name: "选项二" },
-    { name: "选项三" },
-  ],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+通过 `slot="icon"` 来自定义icon。
+
+```html
+<Collapse title="标题">
+  <span slot="icon">🎉🎉🎉</span>
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</Collapse>
 ```
 
-### 自定义取消按钮样式
-
-```js
-ActionSheet({
-  title: "我是标题信息",
-  cancelText: "取消",
-  cancelTextColor: "red",
-  cancelTextFontSize: 20,
-  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
-```
 
 ## API
 
@@ -110,37 +70,15 @@ ActionSheet({
 | 参数               | 说明             | 类型                                      | 默认值    |
 | ------------------ | ---------------- | ----------------------------------------- | --------- |
 | title              | 标题文字         | `string`                                  |           |
-| actions            | 选项按钮         | `Action []`                               | `require` |
-| cancelText         | 取消按钮         | `string`                                  |
-| titleColor         | 标题文字颜色     | `string `                                 | `#969799` |
-| titleFontSize      | 标题文字大小     | `number `                                 | `14`      |
-| cancelTextColor    | 取消按钮文字颜色 | `string `                                 | `#646566` |
-| cancelTextFontSize | 取消按钮文字大小 | `number `                                 | `16`      |
-| zIndex             | actionsheet 层级 | `number `                                 | `999`     |
-| select             | 选项选中回调     | `(index: number, action: Action) => void` |           |
-| cancel             | 取消按钮点击回调 | `() => void `                             |           |
-| close              | 蒙版点击回调     | `() => void `                             |           |
+| open               | 打开            | `Boolean`                                |   `false` |
 
-### Action 的数据结构如下
+## 样式变量
 
-```js
-type Action = {
-  name: string,
-  color?: string,
-  fontSize?: number,
-};
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-type ActionParams = {
-  title?: string,
-  actions: Action[],
-  cancelText?: string,
-  titleColor?: string,
-  titleFontSize?: number,
-  cancelTextColor?: string,
-  cancelTextFontSize?: number,
-  select: (index: number, action: Action) => void,
-  cancel?: () => void,
-  close?: () => void,
-  zIndex?: number,
-};
-```
+| 名称                       | 说明             | 默认值                            |
+| -------------------------- | ---------------- | --------------------------------- |
+| `--callapse-title-fontsize`   | 标题字体大小     | `14px`                            |
+| `--callapse-title-color`      | 标题字体颜色     | `#666`                            |
+| `--callapse-content-fontsize`   | 展开内容字体大小     | `14px`                            |
+| `--callapse-content-color`      | 展开内容字体颜色     | `#666`                            |

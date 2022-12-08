@@ -8,8 +8,8 @@ details[open] quark-icon-arrow-down{
 
 summary {
   padding: 13px 26px;
-  color: var(--quark-callapse-title-color, #666);;
-  font-size: 14px;
+  color: var(--callapse-title-color, #666);;
+  font-size: var(--callapse-title-fontsize, 14px);
   position: relative;
   cursor: pointer;
   transition: all .4s;
@@ -34,8 +34,8 @@ summary:first-of-type {
 }
 
 .expander-content {
-  color: var(--quark-callapse-content-color, #666);
-  font-size: 14px;
+  color: var(--callapse-content-color, #666);
+  font-size: var(--callapse-content-fontsize, 14px);
   line-height: 1.5;
   background-color: #fff;
   padding: 12px 28px;

@@ -53,6 +53,7 @@ import Tag from "./tag";
 import Textarea from "./textarea";
 import Toast from "./toast";
 import Tooltip from "./tooltip";
+import Collapse from "./collapse";
 import Uploader, { UploaderRef } from "./uploader";
 
 export {
@@ -120,4 +121,5 @@ export {
   Tooltip,
   Uploader,
   UploaderRef,
+  Collapse,
 };

@@ -2,220 +2,82 @@
 
 ### Intro
 
-The pop-up modal panel at the bottom contains multiple options related to the current situation.
+Place the content in multiple folded panels, and click the panel title to expand or shrink the content.
 
 ### Install
 
 ```ts
-import ActionSheet from "quarkd/lib/action-sheet";
+import "quarkd/lib/collapse";
 ```
 
 ### Basic Usage
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-collapse :title="title">
+  Life is far more than spinning around and being busy to the limit. Human experience is far broader and richer than this.
+</quark-collapse>
 ```
 
-```js
-export default {
-  methods: {
-    showActionSheet() {
-      const actionSheet = ActionSheet({
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
+### Open state
 
-### Show Title
+Control the open state of the accordion by setting the `open=true` property.
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-collapse :title="title" open>
+  Life is far more than spinning around and being busy to the limit. Human experience is far broader and richer than this.
+</quark-collapse>
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
+### No icon style
 
-### Show Cancel Button
+Set custom icons through `iconhide` property.
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-collapse :title="title" iconhide>
+  Life is far more than spinning around and being busy to the limit. Human experience is far broader and richer than this.
+</quark-collapse>
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+### Custom title
+
+Set custom title through `slot="title"`.
+```html
+<quark-collapse :title="title">
+  <div slot="title">
+    <span style="color: blueviolet">custom title</span>
+  </div>
+  Life is far more than spinning around and being busy to the limit. Human experience is far broader and richer than this.
+</quark-collapse>
 ```
 
-### Custom Title Style
+### Custom icon
+
+Set custom icon through `slot="icon"`.
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-collapse :title="title">
+  <span slot="icon">🎉🎉🎉</span>
+  Life is far more than spinning around and being busy to the limit. Human experience is far broader and richer than this.
+</quark-collapse>
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
-
-### Custom Options Style
-
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1", color: "#999", fontSize: 20 },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
-
-### Custom Cancel Button Style
-
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        cancelTextColor: "red",
-        cancelTextFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
 
 ## API
 
 ### Props
 
-| Attribute          | Description                  | Type                                      | Default   |
-| ------------------ | ---------------------------- | ----------------------------------------- | --------- |
-| title              | Title                        | `string`                                  |           |
-| actions            | Options                      | `Action []`                               | `require` |
-| cancelText         | Text of cancel button        | `string `                                 |
-| titleColor         | Title color                  | `string `                                 | `#969799` |
-| titleFontSize      | Title font size              | `number `                                 | `14`      |
-| cancelTextColor    | Text color of cancel button  | `string `                                 | `#646566` |
-| cancelTextFontSize | Font size of cancel button   | `number`                                  | `16`      |
-| zIndex             | actionsheet z-index          | `number `                                 | `999`     |
-| select             | Selected callback            | `(index: number, action: Action) => void` |           |
-| cancel             | Cancel button click callback | `() => void `                             |           |
-| close              | Mask click callback          | `() => void`                              |           |
+| Attribute    | Description                                                          | Type      | Default   |
+| ------------------ | ---------------- | ----------------------------------------- | --------- |
+| title              | title         | `string`                                  |           |
+| open               | open            | `Boolean`                                |   `false` |
 
-### Data Structure of Action
+## CSS Variables
 
-```js
-type Action = {
-  name: string,
-  color?: string,
-  fontSize?: number,
-};
+The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-type ActionParams = {
-  title?: string,
-  actions: Action[],
-  cancelText?: string,
-  titleColor?: string,
-  titleFontSize?: number,
-  cancelTextColor?: string,
-  cancelTextFontSize?: number,
-  select: (index: number, action: Action) => void,
-  cancel?: () => void,
-  close?: () => void,
-  zIndex?: number,
-};
-```
+| Name                     | Description                      | Default Value |
+| -------------------------- | ---------------- | --------------------------------- |
+| `--callapse-title-fontsize`   | Title font size     | `14px`                            |
+| `--callapse-title-color`      | Title color     | `#666`                            |
+| `--callapse-content-fontsize`   | Content font size     | `14px`                            |
+| `--callapse-content-color`      | Content color     | `#666`                            |
