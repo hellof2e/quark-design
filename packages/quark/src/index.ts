@@ -45,6 +45,8 @@ import Skeleton from "./skeleton";
 import Grid from "./grid";
 import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
+import Collapse from "./collapse";
+
 //  业务组件
 import PopupExtra from "./popupextra";
 import NativeUploader from "./nativeuploader";
@@ -104,4 +106,5 @@ export default {
   PopupExtra,
   Countdown,
   NativeUploader,
+  Collapse,
 };
