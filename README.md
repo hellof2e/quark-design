@@ -102,7 +102,7 @@
 ## 📦 通过 npm 安装
 
 ```bash
-# Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目
+# Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目皆可使用
 npm i quarkd --save
 ```
 
