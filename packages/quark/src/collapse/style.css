@@ -1,0 +1,51 @@
+details {
+  background-color: #fff;
+}
+
+details[open] quark-icon-arrow-down{
+  transform: rotate(180deg);
+}
+
+summary {
+  padding: 13px 26px;
+  color: var(--callapse-title-color, #666);;
+  font-size: var(--callapse-title-fontsize, 14px);
+  position: relative;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+summary:first-of-type {
+  list-style-type: none;
+}
+
+.collapse-icon {
+  position: absolute;
+  right: 26px;
+  top: 15px;
+}
+
+.line {
+  width: calc(100% - 52px);
+  height: 1px;
+  background: #ebedf0;
+  position: absolute;
+  bottom: 0;
+}
+
+.expander-content {
+  color: var(--callapse-content-color, #666);
+  font-size: var(--callapse-content-fontsize, 14px);
+  line-height: 1.5;
+  background-color: #fff;
+  padding: 12px 28px;
+}
+
+:host([iconhide]) quark-icon-arrow-down{
+  display: none;
+}
+
+.collapse-icon{
+  position: absolute;
+  right: 10px;
+}

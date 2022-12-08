@@ -4,16 +4,6 @@
 	<doc-nav></doc-nav>
 
 	<div id="doc-content" class="doc-content">
-		<div class="doc-title" v-if="isShow()">
-			<div class="doc-title-position" :class="{ fixed: fixed, hidden: hidden }">
-				<div class="title">
-					{{ componentName.name }}&nbsp;{{
-						isZhLang ? componentName.cName : ""
-					}}
-				</div>
-			</div>
-		</div>
-
 		<div
 			class="doc-content-document"
 			:class="{ isComponent: isShow(), full: !isShow() }"
@@ -162,7 +152,9 @@ export default defineComponent({
 			const routename = to.path.toLocaleLowerCase().split("/").pop() || "";
 			state.componentName.name = routename.split("-")[0];
 			for (let i = 0; i < nav.length; i++) {
-				const activePackage: any = nav[i].packages.find((item: any) => item.name.toLowerCase() == state.componentName.name);
+				const activePackage: any = nav[i].packages.find(
+					(item: any) => item.name.toLowerCase() == state.componentName.name
+				);
 				if (activePackage) {
 					state.componentName.name = activePackage.name;
 					state.componentName.cName = activePackage.cName;
