@@ -108,6 +108,7 @@ npm i quarkd --save
 
 <details>
 <summary>React usage notes</summary>
+
 由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
 
 为了提升开发体验，我们对 `quarkd` 进行了 Reactify(React 化)！所以，我们建议您在 React/Preact 项目中使用 `@quarkd/quark-react`！
