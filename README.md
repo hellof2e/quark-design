@@ -186,7 +186,7 @@ import "quarkd/lib/button"
 
 - Vue 工程中使用组件可能会出现告警：
 
-```jsx
+```html
 <!-- vue2: -->
 Unknown custom element:
 <quark-icon>
