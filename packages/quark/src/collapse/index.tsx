@@ -2,6 +2,11 @@ import QuarkElement, { property, customElement } from "@quarkd/core";
 import "@quarkd/icons/lib/arrow-down";
 import style from "./style.css";
 
+export interface Props {
+  open?: boolean;
+  title: string;
+}
+
 @customElement({
   tag: "quark-collapse",
   style,
