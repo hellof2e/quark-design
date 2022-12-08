@@ -99,7 +99,7 @@
 <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
-## 📦 通过 npm 安装
+## 📦 如何使用？
 
 ```bash
 # Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目皆可使用
