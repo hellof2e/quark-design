@@ -186,14 +186,15 @@ import "quarkd/lib/button"
 
 - Vue 工程中使用组件可能会出现告警：
 
-```html
+```jsx
 <!-- vue2: -->
 Unknown custom element:
 <quark-icon>
   - did you register the component correctly? For recursive components, make
   sure to provide the "name" option.
-  <!-- vue3 -->
-  [Vue warn]: Failed to resolve component: quark-icon
+
+<!-- vue3 -->
+[Vue warn]: Failed to resolve component: quark-icon
 </quark-icon>
 ```
 
