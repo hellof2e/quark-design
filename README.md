@@ -37,20 +37,27 @@
   </a>
 </p>
 
+<p align="center">
+  <span>简体中文 | </span>
+  <a href="https://github.com/hellof2e/quark-design/blob/main/README.en-US.md">
+  English
+  </a>
+</p>
+
 ## Contact us
 
-~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~~
+<details>
+  <summary>Contact us</summary>
+  ~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~
 
-~~微信(1)群已满~~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
+  ~微信(1)群已满~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
 
-<div style="display:flex;">
-  <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
-  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='188'/>
-</div>
+  <div style="display:flex;">
+    <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
+    <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='189'/>
+  </div>
+</details>
 
-
-
-简体中文 | [English](./README.en-US.md)
 
 ## 🤔 动机
 
@@ -99,9 +106,12 @@
 npm i quarkd --save
 ```
 
-**React 使用须知**：由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
+<details>
+<summary>React usage notes</summary>
+由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
 
 为了提升开发体验，我们对 `quarkd` 进行了 Reactify(React 化)！所以，我们建议您在 React/Preact 项目中使用 `@quarkd/quark-react`！
+</details>
 
 ```bash
 # React 推荐使用
@@ -170,12 +180,6 @@ import "quarkd/lib/button"
 ## 🖥 兼容环境
 
 现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
-
-## 特别说明
-
-- 由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件派发的事件需要使用 addEventLisener 接收。
-- Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用 addEventLisener 接收。
-- 针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。
 
 ## 注意
 

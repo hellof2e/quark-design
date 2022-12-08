@@ -37,8 +37,12 @@
   </a>
 </p>
 
-
-[English](./README.md) | 简体中文
+<p align="center">
+  <a href="https://github.com/hellof2e/quark-design">
+  简体中文
+  </a>
+  <span> | English</span>
+</p>
 
 ## Contact us
 
