@@ -1,4 +1,18 @@
 # 更新日志
+### [1.0.29](https://github.com/hellof2e/quark-design/compare/v1.0.28...v1.0.29) (2022-12-08)
+
+
+### 🐞 Bug Fixes
+
+* demo.html src index.js to index.ts ([097d325](https://github.com/hellof2e/quark-design/commit/097d325ecdf26f0d05a55c81506573aa764c6275))
+* ts type quote incomplete ([b033d29](https://github.com/hellof2e/quark-design/commit/b033d29d9c20d69680c2bcdda83c12a61d50f575))
+
+
+### 🎉 Features
+
+* add collapse ([70e345f](https://github.com/hellof2e/quark-design/commit/70e345fc8404ad9ccb90c0a2de70ae30012baa3b))
+* uploader disabled add less opacity ([e15ac47](https://github.com/hellof2e/quark-design/commit/e15ac4747153c15c87691feaef4a6c6696407fde))
+
 ### [1.0.28](https://github.com/hellof2e/quark-design/compare/v1.0.27...v1.0.28) (2022-12-05)
 
 
