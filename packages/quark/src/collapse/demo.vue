@@ -17,9 +17,9 @@
       </quark-collapse>
     </div>
 
-    <h2>{{ translate("hideicon") }}</h2>
+    <h2>{{ translate("iconhide") }}</h2>
     <div>
-      <quark-collapse :title="translate('title')" hideicon>
+      <quark-collapse :title="translate('title')" iconhide>
         {{ translate("content") }}
       </quark-collapse>
     </div>
@@ -60,7 +60,7 @@ export default createDemo({
         "zh-CN": {
           basic: "基本用法",
           openState: "打开状态",
-          hideicon: "无icon样式",
+          iconhide: "无icon样式",
           customTitile: "自定义标题",
           customIcon: "自定义图标",
           title: "标题",
@@ -72,7 +72,7 @@ export default createDemo({
         "en-US": {
           basic: "Basic Usage",
           openState: "Open State",
-          hideicon: "Custom Style",
+          iconhide: "Custom Style",
           customTitile: "Custom titile",
           customIcon: "Custom Icon",
           title: "Title",
