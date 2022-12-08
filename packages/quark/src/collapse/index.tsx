@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement } from "@quarkd/core";
+import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
 import "@quarkd/icons/lib/arrow-down";
 import style from "./style.css";
 
@@ -23,16 +23,30 @@ class Collapse extends QuarkElement {
 
   title = "";
 
+  detailsEl: any = createRef();
+
   componentDidMount() {
     if (this.open) {
-      const el = this.shadowRoot?.querySelector("details");
-      el.open = true;
+      const { current } = this.detailsEl;
+      current.open = true;
     }
+  }
+
+  shouldComponentUpdate(
+    propName: string,
+    oldValue: string | boolean,
+    newValue: string | boolean
+  ): boolean {
+    if (propName === "open" && oldValue !== newValue) {
+      const { current } = this.detailsEl;
+      current.open = newValue;
+    }
+    return true;
   }
 
   render() {
     return (
-      <details>
+      <details ref={this.detailsEl}>
         <summary>
           <slot name="title">{this.title}</slot>
           <slot name="icon">
