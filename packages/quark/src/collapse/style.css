@@ -44,8 +44,3 @@ summary:first-of-type {
 :host([iconhide]) quark-icon-arrow-down{
   display: none;
 }
-
-.collapse-icon{
-  position: absolute;
-  right: 10px;
-}
