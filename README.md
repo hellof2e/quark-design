@@ -201,10 +201,10 @@ Unknown custom element:
 这是由于 Vue 组件的语法部分参考了自定义元素，为了避免与 Vue 组件产生冲突，需要将自定义元素忽略！请在工程中注入如下代码即可：
 
 ```tsx
-// VUE2.x
+// Vue2
 Vue.config.ignoredElements = [/^quark-/];
 
-// VUE3.x
+// Vue3
 // https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
 const app = createApp({});
 app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith("quark-");
