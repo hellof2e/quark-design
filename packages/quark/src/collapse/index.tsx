@@ -21,6 +21,9 @@ class Collapse extends QuarkElement {
   })
   open = false;
 
+  @property({
+    type: String,
+  })
   title = "";
 
   detailsEl: any = createRef();
