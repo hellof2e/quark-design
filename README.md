@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  An enterprise-class UI design language and cross-framework UI library, Based on Web Components.
+  一套企业级跨框架 UI 设计语言，底层基于 Web Components
   
 </div>
 
@@ -37,106 +37,92 @@
   </a>
 </p>
 
-
-English | [简体中文](./README.zh-CN.md)
-
-
 ## Contact us
 
-<details>
-<summary>Contact us</summary>
-~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~
+~~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~~
 
-~微信(1)群已满~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
+~~微信(1)群已满~~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
 
 <div style="display:flex;">
   <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
-  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='189'/>
+  <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='188'/>
 </div>
 
-</details>
 
 
-## 🤔 Motivation
+简体中文 | [English](./README.en-US.md)
 
-The emergence of the technical framework has improved the development experience and page performance, but the continuous iterative update of the technical framework has brought many challenges to the maintenance of the project, such as:
+## 🤔 动机
 
-- Visual components cannot be used across technical frameworks (React, Vue, etc.)
-- Once the technical framework is upgraded, visual components often have to be upgraded iteratively
+技术框架的出现，提升了开发体验和页面性能，但技术框架的不断迭代更新，为项目的维护带来诸多挑战，如：
 
-Therefore, we developed this UI framework to isolate it from the technology framework (no technology stack), so that visual components can avoid falling into the vicious circle of technology stack iteration and iteration.
+- 视觉组件无法跨技术框架（React、Vue 等）使用
+- 技术框架一旦升级，视觉组件常常必须配合迭代升级
 
-## ✨ Features
+因此，我们开发了这套 UI 框架，旨在让其与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
 
-- Support Vue, React, Angular, JQ and no framework project
-- 40+ High quality components
-- Support Tree Shaking
-- 90%+ Unit test coverage
-- Written in TypeScript
-- Support TypeScript
-- Support Custom Theme
-- Support i18n, built-in 20+ languages
+## ✨ 特性
 
-| Component Library | CDN     | Import on demand | Build tools    | TypeScript | open source time | Support technology stack/framework       |
-| ----------------- | ------- | ---------------- | -------------- | ---------- | ---------------- | ---------------------------------------- |
-| Quark             | 80.1kb  | √                | Rollup         | √          | 2022             | Vue/React/Angular/JQ/Svelte/no framework |
-| Vant              | 183kb   | √                | Vite(Vant-cli) | √          | 2017             | Vue only                                 |
-| Nutui             | 275.5kb | √                | Vite           | √          | 2018             | Vue only                                 |
-| TDesign Mobile    | -       | √                | Gulp           | √          | 2021             | React only                               |
-| Antd Mobile       | -       | √                | Gulp           | √          | 2016             | React only                               |
+- 支持 Vue、React、Angular 等各类框架/无框架。
+- 完全覆盖您所需要的各种通用组件。
+- 支持按需引用。
+- 详尽的文档和示例。
+- 单元测试覆盖。
+- 支持 TypeScript。
+- 支持定制主题。
+- 国际化语言支持。
+- 支持服务端渲染（Beta）。
 
-*The CDN volume comparison above includes the runtime, js, and css required for various component libraries to function properly.*
+| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持技术栈/框架                    |
+| -------------- | ------- | -------------- | ---------- | -------- | ---------------------------------- |
+| Quark          | 80.1kb  | Rollup         | √          | 2022     | Vue/React/Angular/JQ/Svelte/无框架 |
+| Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | Vue                                |
+| Nutui          | 275.5kb | Vite           | √          | 2018     | Vue                                |
+| TDesign Mobile | -       | Gulp           | √          | 2021     | React                              |
+| Antd Mobile    | -       | Gulp           | √          | 2016     | React                              |
 
-## 🔗 CDN
+*上面CDN体积对比包含各类组件库能正常运行展示所需的运行时、js、css*
 
-The easiest way to use quark is to directly introduce the CDN link in the HTML file, and then you can use it anywhere in the world. Since quark has achieved CSS-IN-JS, you only need to load the link below.
+## 🔗 CDN 使用
+
+使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
 
 ```
-<!-- file size: 80kb -->
+<!-- 引入CDN文件，只有 80kb -->
 <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
-## 📦 Install
-
-Using `npm` to install:
+## 📦 通过 npm 安装
 
 ```bash
-# install for Vue/React/Angular/No framework project
+# Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目
 npm i quarkd --save
 ```
 
-<details>
-<summary>React usage notes</summary>
-  
-Since the components provided by `quarkd` are all native custom elements (analogous to div), events dispatched in the component need to be received by `addEventLisener`, such as the custom close event close inside the `dialog` component. The `Vue` technology stack can directly use `@xx` to receive natively dispatched events, so there is no need to use `addEventLisener` to receive.
+**React 使用须知**：由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
 
-In order to improve the development experience, we have Reactify (Reactify) for `quarkd`! So, we recommend that you use `@quarkd/quark-react` in your React/Preact projects!
-</details>
+为了提升开发体验，我们对 `quarkd` 进行了 Reactify(React 化)！所以，我们建议您在 React/Preact 项目中使用 `@quarkd/quark-react`！
 
 ```bash
-# Recommended Use for React
+# React 推荐使用
 npm i @quarkd/quark-react --save
 ```
 
-## 🔨 Quickstart
+## 🔨 示例
 
 Vue.x
 
 ```jsx
-// 1. Import the components you need
 import "quarkd/lib/button";
 
-// 2. Use it
 <quark-button type="primary">Button</quark-button>;
 ```
 
 React.x
 
 ```jsx
-// 1. Import the components you need
 import { Button } from "@quarkd/quark-react";
 
-// 2. Use it
 const App = () => (
   <>
     <Button type="primary">Button</Button>
@@ -147,10 +133,9 @@ const App = () => (
 Angular
 
 ```jsx
-// 1. Import the components you need
+import { Component } from '@angular/core
 import "quarkd/lib/button"
 
-// 2. Use it
 @Component({
   template: `<quark-button loading="{{loading}}"" (click)="handleClick()">
     Button
@@ -158,12 +143,12 @@ import "quarkd/lib/button"
 })
 ```
 
-No framework project
+其它 H5 项目
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <!-- 1. CDN, import components -->
+  <!-- 1. CDN, import all components -->
   <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
   <body>
   
@@ -174,21 +159,27 @@ No framework project
 </html>
 ```
 
-## 🎨 Custom theme
+## 🎨 定制主题
 
-See [custom theme](https://quark-design.hellobike.com/#/en-US/guide/theme).
+参考 [定制主题](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 文档。
 
-## 🌍 Internationalization
+## 🌍 国际化
 
-Dozens of languages supported in, see [Docs](https://quark-design.hellobike.com/#/en-US/guide/internationalization).
+参考 [国际化文档](https://quark-design.hellobike.com/#/zh-CN/guide/internationalization)。
 
-## 🖥 Browser Support
+## 🖥 兼容环境
 
-Modern browsers and Internet Explorer 11 (with [polyfills](https://www.webcomponents.org/polyfills)).
+现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
 
-## Pay attention
+## 特别说明
 
-- Unknown custom element in Vue project:
+- 由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件派发的事件需要使用 addEventLisener 接收。
+- Vue 技术栈使用 `@xx` 即可接收原生派发的事件，因此不需要使用 addEventLisener 接收。
+- 针对 React 技术栈，为了避免开发者手动 addEventLisener 接收事件，我们底层依托 `quarkd` ，上层进行了 Reactify(React 化)！因此 React 项目推荐使用 `@quarkd/quark-react`。
+
+## 注意
+
+- Vue 工程中使用组件可能会出现告警：
 
 ```html
 <!-- vue2: -->
@@ -196,25 +187,24 @@ Unknown custom element:
 <quark-icon>
   - did you register the component correctly? For recursive components, make
   sure to provide the "name" option.
-
-<!-- vue3 -->
-[Vue warn]: Failed to resolve component: quark-icon
+  <!-- vue3 -->
+  [Vue warn]: Failed to resolve component: quark-icon
 </quark-icon>
 ```
 
-This is because the syntax part of Vue components refers to custom elements. In order to avoid conflicts with Vue components, custom elements need to be ignored! Please inject the following code into the project:
+这是由于 Vue 组件的语法部分参考了自定义元素，为了避免与 Vue 组件产生冲突，需要将自定义元素忽略！请在工程中注入如下代码即可：
 
 ```tsx
-// Vue@2.x
+// VUE2.x
 Vue.config.ignoredElements = [/^quark-/];
 
-// Vue@3.x
+// VUE3.x
 // https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
 const app = createApp({});
 app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith("quark-");
 ```
 
-If you are using vite, modify vite.config.js:
+如果您使用的是 vite，修改 vite.config.js:
 
 ```tsx
 import vue from "@vitejs/plugin-vue";
@@ -232,6 +222,6 @@ export default {
 };
 ```
 
-## 👋 Contributions [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+## 👋 Contributor 贡献代码 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) before making a pull request.
+参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
