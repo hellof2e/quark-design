@@ -4,7 +4,7 @@ We are very welcome to the community developers to make contributions to Quark D
 
 ## Development configuration
 
-- Environment requirements: `node ^14.17 || >= 16.0.0`, `yarn >=1.22`
+- Environment requirements: `node ^14.17 || >= 16.0.0`, `yarn >= 1.22`
 
 ## Start
 
@@ -33,6 +33,15 @@ yarn run release:minor
 // Publish the first digit version number of all sub-packages, such as 0.0.1 -> 1.0.0,
 yarn run release:major
 ```
+
+Create tag
+
+```
+git tag // First see if the latest tag is generated
+git push origin --tags
+```
+
+Then github update [release](https://github.com/hellof2e/quark-design/releases/new)
 
 ## Submit commit
 
