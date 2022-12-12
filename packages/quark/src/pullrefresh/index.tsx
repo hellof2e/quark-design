@@ -81,8 +81,7 @@ class QuarkPullRefresh extends QuarkElement {
     return false;
   }
 
-  isTouchable = () =>
-    this.status !== "loading" && this.status !== "success" && !this.disabled;
+  isTouchable = () => this.status !== "loading" && !this.disabled;
 
   ease = (distance: number) => {
     const pullDistance = +this.headheight;
