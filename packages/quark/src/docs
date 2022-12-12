@@ -1,4 +1,26 @@
 # 更新日志
+### [1.0.32](https://github.com/hellof2e/quark-design/compare/v1.0.31...v1.0.32) (2022-12-12)
+
+
+### Documentation
+
+* **CONTRIBUTING:** update CONTRIBUTING.md ([17ef38a](https://github.com/hellof2e/quark-design/commit/17ef38a25b9c86ad1092ff28bdd19a431bb651a8))
+
+
+### 🎉 Features
+
+* update readme ([4a8607f](https://github.com/hellof2e/quark-design/commit/4a8607f97dda266abbf1fa34f3496f04098912af))
+* update readme ([d945603](https://github.com/hellof2e/quark-design/commit/d9456030174be6e57fb6a82e60b739d6beb2d2d2))
+* update readme ([1ec44ae](https://github.com/hellof2e/quark-design/commit/1ec44aeb0cf1e732888e06377a9a19b0bd4f2307))
+* update readme ([28c6a15](https://github.com/hellof2e/quark-design/commit/28c6a1581e6e519c61bfe6b7120171b6d5c80d46))
+* update readme ([59b8eae](https://github.com/hellof2e/quark-design/commit/59b8eae67d16458b69a08c024c82e9fce8e94d10))
+* update readme ([1e2ed6d](https://github.com/hellof2e/quark-design/commit/1e2ed6d4fac615c919acbf0d8f802dcc043249b0))
+* update readme ([006c952](https://github.com/hellof2e/quark-design/commit/006c9529e9f5d7eeb572ba09f988ece1afc80381))
+* update readme ([ca88f7a](https://github.com/hellof2e/quark-design/commit/ca88f7ae616628a09b47016b36087669ddb6dec6))
+* update readme ([66ac22a](https://github.com/hellof2e/quark-design/commit/66ac22a32379dcc310216d1d76b26d0c705566e3))
+* update readme ([34d52f2](https://github.com/hellof2e/quark-design/commit/34d52f268d4640c4d6f41b2c3d77abe13e109db0))
+* 修复 pullfresh iOS 无法滚动问题 ([dc0698b](https://github.com/hellof2e/quark-design/commit/dc0698b2f00e85cdb71c4e2bfbbfd2655171c8d3))
+
 ### [1.0.31](https://github.com/hellof2e/quark-design/compare/v1.0.30...v1.0.31) (2022-12-08)
 
 ### [1.0.30](https://github.com/hellof2e/quark-design/compare/v1.0.29...v1.0.30) (2022-12-08)
