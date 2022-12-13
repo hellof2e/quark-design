@@ -67,7 +67,6 @@ class QuarkPullRefresh extends QuarkElement {
   @state()
   duration = 0;
 
-  @state()
   scrollParent: any = null;
 
   shouldComponentUpdate(
