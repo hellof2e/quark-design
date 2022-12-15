@@ -44,6 +44,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img width="500" src="https://user-images.githubusercontent.com/14307551/207770859-8af1149c-111a-49d6-a005-6287bb434105.png" alt="support logos" />
+</p>
+
 ## Contact us
 
 <details>

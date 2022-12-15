@@ -67,7 +67,6 @@ class QuarkPullRefresh extends QuarkElement {
   @state()
   duration = 0;
 
-  @state()
   scrollParent: any = null;
 
   shouldComponentUpdate(
@@ -81,12 +80,30 @@ class QuarkPullRefresh extends QuarkElement {
     return false;
   }
 
-  isTouchable = () =>
-    this.status !== "loading" && this.status !== "success" && !this.disabled;
+  componentDidMount() {
+    this.eventBind();
+    this.scrollParent = getScrollParent(this);
+  }
+
+  isTouchable = () => this.status !== "loading" && !this.disabled;
+
+  eventBind() {
+    this.removeEvent();
+    this.addEventListener("touchstart", this.onTouchStart);
+    this.addEventListener("touchmove", this.onTouchMove);
+    this.addEventListener("touchend", this.onTouchEnd);
+    this.addEventListener("touchcancel", this.onTouchEnd);
+  }
+
+  removeEvent = () => {
+    this.removeEventListener("touchstart", this.onTouchStart);
+    this.removeEventListener("touchmove", this.onTouchMove);
+    this.removeEventListener("touchend", this.onTouchEnd);
+    this.addEventListener("touchcancel", this.onTouchEnd);
+  };
 
   ease = (distance: number) => {
     const pullDistance = +this.headheight;
-
     if (distance > pullDistance) {
       if (distance < pullDistance * 2) {
         distance = pullDistance + (distance - pullDistance) / 2;
@@ -94,7 +111,6 @@ class QuarkPullRefresh extends QuarkElement {
         distance = pullDistance * 1.5 + (distance - pullDistance * 2) / 4;
       }
     }
-
     return Math.round(distance);
   };
 
@@ -223,10 +239,6 @@ class QuarkPullRefresh extends QuarkElement {
     );
   };
 
-  componentDidMount() {
-    this.scrollParent = getScrollParent(this);
-  }
-
   render() {
     const trackStyle = {
       transitionDuration: `${this.duration}ms`,
@@ -234,15 +246,7 @@ class QuarkPullRefresh extends QuarkElement {
     };
     return (
       <div class="quark-pull-refresh">
-        <div
-          class="quark-pull-refresh-container"
-          style={trackStyle}
-          // @ts-ignore
-          ontouchstart={this.onTouchStart}
-          ontouchmove={this.onTouchMove}
-          ontouchend={this.onTouchEnd}
-          ontouchcancel={this.onTouchEnd}
-        >
+        <div class="quark-pull-refresh-container" style={trackStyle}>
           <div class="quark-pull-refresh-head" style={this.getHeadStyle()}>
             {this.renderHead()}
           </div>
