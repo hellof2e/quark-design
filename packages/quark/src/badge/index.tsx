@@ -58,11 +58,7 @@ class QuarkBadge extends QuarkElement {
   };
 
   renderContent = () => {
-    if (
-      /\d/g.test(this.content) &&
-      /\d/g.test(this.max) &&
-      Number(this.content) > Number(this.max)
-    ) {
+    if (+this.content > +this.max) {
       return "...";
     }
     return this.content;
