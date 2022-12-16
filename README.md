@@ -184,7 +184,7 @@ import "quarkd/lib/button"
 
 ## 🖥 兼容环境
 
-现代浏览器和 IE11（需要 [polyfills](https://www.webcomponents.org/polyfills)）
+现代浏览器和 IE11+（需要 [polyfills](https://www.webcomponents.org/polyfills)）
 
 ## 注意
 
