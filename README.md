@@ -188,8 +188,7 @@ import "quarkd/lib/button"
 
 ## 注意
 
-- Vue 工程中使用组件可能会出现告警：
-
+- Vue 项目开发环境如果出现warning，别担心
 ```html
 <!-- vue2: -->
 Unknown custom element:
