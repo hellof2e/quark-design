@@ -48,22 +48,17 @@ class QuarkVirtualList extends QuarkElement {
 
   setListData(listData: any[]) {
     this.listData = listData;
+    this.updateVisibleData();
   }
 
   setRenderItem(renderItem: (item: any) => Element) {
     this.renderItem = renderItem;
   }
 
-  handleListScroll = () => {
-    const { current } = this.virtualListRef;
-    if (!current) {
-      console.warn("virtualListRef not find");
-      return;
-    }
-    const scrollTop = current.scrollTop;
+  updateVisibleData = (scrollTop = 0) => {
     const start = Math.floor(scrollTop / this.itemheight);
     const visibleItemCnt = Math.ceil(this.containerheight / this.itemheight);
-    const end = Math.min(start + visibleItemCnt, this.listData.length);
+    const end = Math.min(start + visibleItemCnt, this.listData.length) + 1;
     if (this.prevStart !== start || this.prevEnd !== end) {
       this.visibleData = this.listData.slice(start, end);
       this.prevStart = start;
@@ -75,15 +70,18 @@ class QuarkVirtualList extends QuarkElement {
     }
   };
 
-  componentDidMount = () => {
-    const start = 0;
-    const visibleItemCnt = Math.ceil(this.containerheight / this.itemheight);
-    const end = Math.min(start + visibleItemCnt, this.listData.length);
-    if (this.prevStart !== start || this.prevEnd !== end) {
-      this.visibleData = this.listData.slice(start, end);
-      this.prevStart = start;
-      this.prevEnd = end;
+  handleListScroll = () => {
+    const { current } = this.virtualListRef;
+    if (!current) {
+      console.warn("virtualListRef not find");
+      return;
     }
+    const scrollTop = current.scrollTop;
+    this.updateVisibleData(scrollTop);
+  };
+
+  componentDidMount = () => {
+    this.updateVisibleData();
   };
 
   renderList = () => {
