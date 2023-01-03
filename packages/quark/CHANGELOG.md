@@ -1,4 +1,22 @@
 # 更新日志
+### [1.0.33](https://github.com/hellof2e/quark-design/compare/v1.0.32...v1.0.33) (2023-01-03)
+
+
+### 🎉 Features
+
+* add sync gitee ([1d67b0a](https://github.com/hellof2e/quark-design/commit/1d67b0ae5c84f3089c210455fc6d4ad90870cf0b))
+* doc ([d31cca4](https://github.com/hellof2e/quark-design/commit/d31cca4fc29231238fb50589e01183c899ea327f))
+* sync gitee update ([fe1117e](https://github.com/hellof2e/quark-design/commit/fe1117ea2db047c2720cfddb1a0ce16044e045e3))
+* test ([3eed7e7](https://github.com/hellof2e/quark-design/commit/3eed7e76e76803382e27973375eabf7b575e50e1))
+* test ([68f1b0e](https://github.com/hellof2e/quark-design/commit/68f1b0e413f49893a542b15af82a675535f59837))
+* test ([e090b5e](https://github.com/hellof2e/quark-design/commit/e090b5e48d4238accd34931fe358b78bc9fb3d21))
+* test ([155f80d](https://github.com/hellof2e/quark-design/commit/155f80d262a86cdf4318b2319b07fcf9ac270a20))
+
+
+### 🐞 Bug Fixes
+
+* **VirtualList:** 虚拟列表初始展示为空白 ([55ac689](https://github.com/hellof2e/quark-design/commit/55ac6899ed3522c6c56960ca49aca69cc5aa5319))
+
 ### [1.0.32](https://github.com/hellof2e/quark-design/compare/v1.0.31...v1.0.32) (2022-12-12)
 
 
