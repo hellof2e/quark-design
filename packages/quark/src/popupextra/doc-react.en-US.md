@@ -30,7 +30,7 @@ export default () => {
         title="Title"
         subtitle="Subtitle"
         open={open}
-        onClosed={handleClose}
+        onClose={handleClose}
       >
         <div class="popup-body">
           <h4 class="">Why We Love Dunhuang</h4>
@@ -50,7 +50,7 @@ Set `slot='title'` to replace `title`.
 <PopupExtra
   subtitle="Subtitle"
   open={open}
-  onClosed={() => setOpen(false)}
+  onClose={() => setOpen(false)}
 >
   <div slot="title">
     <span style="color: red">Custom</span>Title
@@ -66,7 +66,7 @@ Set `slot='title'` to replace `title`.
 ### Close popup
 
 ```js
-<PopupExtra open={open} onClosed={() => setOpen(false)} />
+<PopupExtra open={open} onClose={() => setOpen(false)} />
 ```
 
 ## API
@@ -82,7 +82,7 @@ Set `slot='title'` to replace `title`.
 | round     | Whether to use round popup                                 | `boolean`        | `true`    |
 | safearea  | Whether to turn on the bottom safe area adaptation         | `boolean`        | `false`   |
 | zindex    | Popup level                                                | `number、string` | -         |
-| onClosed  | Emitted when popup is closed                               | `（）=> void`    |
+| onClose  | Emitted when popup is closed                               | `（）=> void`    |
 
 ## CSS Variables
 

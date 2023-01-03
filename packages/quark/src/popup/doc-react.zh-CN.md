@@ -24,7 +24,7 @@ export default () => {
       <div onClick={handleOpen}>
         基本使用
       </div>
-      <Popup open={open} onClosed={handleClose}>
+      <Popup open={open} onClose={handleClose}>
         <div>第二行</div>
         <div>第三行</div>
         <div>第四行</div>
@@ -52,6 +52,14 @@ export default () => {
 <Popup position="bottom" :open="open" closeable />
 ```
 
+### 禁止遮罩层点击
+
+设置 forbidmaskclick 属性后，点击遮罩层将无法自动关闭弹层。
+
+```html
+<Popup position="bottom" :open="open" forbidmaskclick />
+```
+
 ### 圆角弹窗
 
 设置 round 属性后，弹窗会根据弹出位置添加不同的圆角样式。
@@ -70,9 +78,12 @@ export default () => {
 | position  | 弹框位置                 | `top` `bottom` `left` `right` | `bottom`  |
 | round     | 是否圆角                 | `boolean `                    | `false`   |
 | closeable | 是否显示关闭按钮         | `boolean`                     | `false`   |
+| forbidmaskclick  | 是否禁止遮罩层点击 | `boolean`                     | `false`   |
 | safearea  | 是否开启底部安全区域适配 | ` boolean`                    | `false`   |
 | zindex    | popup 层级设置           | `number、string`              | -         |
-| onClosed  | 组件关闭回调             | `() => void`                 | -         |
+| onClose  | 关闭弹出层立即触发            | `() => void`                 | -         |
+| onClosed | 关闭弹出层且动画结束后触发 | `() => void` | -         |
+| onOpened | 弹出层打开后触发 | `() => void` | -         |
 
 ## 样式变量
 

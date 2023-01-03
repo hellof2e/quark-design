@@ -28,7 +28,7 @@
     <quark-popupextra
       title="大标题文案大标题文案大标题文案大标题文案大标题文案大标题文案"
       :open="open"
-      @closed="open = false"
+      @close="open = false"
     >
       <div class="popup-body">
         <h4 class="">1.正正正正正正正正正正正</h4>
@@ -56,7 +56,7 @@
       subtitle="副标题文案副标题文案副标题文案副标题文案副标题文案副标题文案副标题文案副标题文案副标题文案"
       :open="open2"
       safearea
-      @closed="open2 = false"
+      @close="open2 = false"
     >
       <div class="popup-body">
         <h4 class="">1.正正正正正正正正正正正</h4>
@@ -107,7 +107,7 @@
       </div>
     </quark-popupextra>
 
-    <quark-popupextra :open="open3" @closed="open3 = false">
+    <quark-popupextra :open="open3" @close="open3 = false">
       <div slot="title" style="margin: 20px">
         <span style="color: red">自定义</span>大标题文案
       </div>

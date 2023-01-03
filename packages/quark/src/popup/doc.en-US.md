@@ -13,7 +13,7 @@ import "quarkd/lib/popup";
 ### Basic Usage
 
 ```html
-<quark-popup position="bottom" :open="open" @closed="handleClosed">
+<quark-popup position="bottom" :open="open" @close="handleClose">
   <div>First Line</div>
   <div>Second Line</div>
   <div>Third Line</div>
@@ -36,7 +36,7 @@ export default {
     showPopup() {
       this.open = true;
     },
-    handleClosed() {
+    handleClose() {
       this.open = false;
     }
   }
@@ -60,6 +60,14 @@ After setting the closeable property, the close icon will be displayed in the up
 <quark-popup position="bottom" :open="open" closeable />
 ```
 
+### Forbid mask click
+
+forbid mask click
+
+```html
+<quark-popup position="bottom" :open="open" forbidmaskclick />
+```
+
 ### Round Corner
 
 After setting the round property, the popup window will add different rounded corner styles according to the popup position.
@@ -78,6 +86,7 @@ After setting the round property, the popup window will add different rounded co
 | position  | Popup position                                | `top` `bottom` `left` `right` | `bottom`  |
 | round     | Whether to show round corner                  | `boolean`                     | `false`   |
 | closeable | Whether to show close icon                    | `boolean `                    | `false`   |
+| forbidmaskclick  | Whether forbid mask click | `boolean`                     | `false`   |
 | safearea  | Whether to enable bottom safe area adaptation | `boolean`                     | `false`   |
 | zindex    | Popup z-index                                 | `number、string `             | -         |
 
@@ -85,7 +94,9 @@ After setting the round property, the popup window will add different rounded co
 
 | Event  | Description                  | Type          |
 | ------ | ---------------------------- | ------------- |
-| closed | Emitted when Popup is closed | `（）=> void` |
+| close | Emitted when Popup will close | `（）=> void` |
+| closed | Emitted after Popup closed | `（）=> void` |
+| opened | Emitted after Popup opened | `（）=> void` |
 
 ## CSS Variables
 

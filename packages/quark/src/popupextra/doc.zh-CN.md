@@ -17,7 +17,7 @@ import "quarkd/lib/popupextra";
   title="大标题文案"
   subtitle="副标题文案"
   :open="open"
-  @closed="open = false"
+  @close="open = false"
 >
   <div class="popup-body">
     <h4 class="">1.正正正正正正正正正正正</h4>
@@ -50,7 +50,7 @@ export default {
 通过设置 `slot='title'` 可以覆盖属性中的 `title`，从而实现自定义 `title`。
 
 ```html
-<quark-popupextra subtitle="副标题文案" :open="open" @closed="open = false">
+<quark-popupextra subtitle="副标题文案" :open="open" @close="open = false">
   <div slot="title"><span style="color: red">自定义</span>大标题文案</div>
 
   <div class="popup-body">
@@ -62,10 +62,10 @@ export default {
 
 ### 关闭浮层
 
-设置 `closed` 方法，可以关闭浮层
+设置 `close` 方法，可以关闭浮层
 
 ```html
-<quark-popupextra :open="open" @closed="handleClose()" />
+<quark-popupextra :open="open" @close="handleClose()" />
 
 // handleClose this.open = false
 ```
@@ -88,7 +88,7 @@ export default {
 
 | 名称   | 说明         | 类型          |
 | ------ | ------------ | ------------- |
-| closed | 组件关闭回调 | `() => void` |
+| close | 组件关闭回调 | `() => void` |
 
 ## 样式变量
 

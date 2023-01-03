@@ -22,7 +22,7 @@ export interface Props {
   zindex?: number;
 }
 export interface CustomEvent {
-  closed: () => void;
+  close: () => void;
 }
 @customElement({
   tag: "quark-popupextra",
@@ -105,9 +105,9 @@ class QuarkPopupExtra extends QuarkElement {
   }
 
   dispatchClose() {
-    this.open = false;
+    // this.open = false;
     // 标签调用触发
-    this.dispatchEvent(new CustomEvent("closed"));
+    this.dispatchEvent(new CustomEvent("close"));
   }
 
   dealClass() {

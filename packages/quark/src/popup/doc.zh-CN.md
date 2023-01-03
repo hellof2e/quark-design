@@ -13,7 +13,7 @@ import "quarkd/lib/popup";
 ### 基本使用
 
 ```html
-<quark-popup position="bottom" :open="open" @closed="handleClosed">
+<quark-popup position="bottom" :open="open" @close="handleClose">
   <div>第一xxxxxxxxxxxxxxxxx行</div>
   <div>第二xxxxxxxxxxxxxxxxx行</div>
 </quark-popup>
@@ -33,7 +33,7 @@ export default {
         showPopup() {
             this.open = true;
         },
-        handleClosed() {
+        handleClose() {
             this.open = false;
         }
   }
@@ -57,6 +57,14 @@ export default {
 <quark-popup position="bottom" :open="open" closeable />
 ```
 
+### 禁止遮罩层点击
+
+设置 forbidmaskclick 属性后，点击遮罩层将无法自动关闭弹层。
+
+```html
+<quark-popup position="bottom" :open="open" forbidmaskclick />
+```
+
 ### 圆角弹窗
 
 设置 round 属性后，弹窗会根据弹出位置添加不同的圆角样式。
@@ -76,13 +84,16 @@ export default {
 | round     | 是否圆角                 | `boolean`                    | `false`   |
 | closeable | 是否显示关闭按钮         | `boolean`                    | `false`   |
 | safearea  | 是否开启底部安全区域适配 | `boolean`                     | `false`   |
+| forbidmaskclick  | 是否禁止遮罩层点击 | `boolean`                     | `false`   |
 | zindex    | popup 层级设置           | `number、string`              | -         |
 
 ### Event
 
 | 名称   | 说明         | 类型          |
 | ------ | ------------ | ------------- |
-| closed | 组件关闭回调 | `() => void` |
+| close | 关闭弹出层立即触发 | `() => void` |
+| closed | 关闭弹出层且动画结束后触发 | `() => void` |
+| opened | 弹出层打开后触发 | `() => void` |
 
 ## 样式变量
 

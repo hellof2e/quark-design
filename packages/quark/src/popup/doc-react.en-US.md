@@ -24,7 +24,7 @@ export default () => {
       <div onClick={handleOpen}>
         Basic Usage
       </div>
-      <Popup open={open} onClosed={handleClose}>
+      <Popup open={open} onClose={handleClose}>
         <div>First Line</div>
         <div>Second Line</div>
         <div>Third Line</div>
@@ -52,7 +52,13 @@ After setting the closeable property, the close icon will be displayed in the up
 ```html
 <Popup position="bottom" :open="open" closeable />
 ```
+### Forbid mask click
 
+forbid mask click
+
+```html
+<Popup position="bottom" :open="open" forbidmaskclick />
+```
 ### Round Corner
 
 After setting the round property, the popup window will add different rounded corner styles according to the popup position.
@@ -73,8 +79,9 @@ After setting the round property, the popup window will add different rounded co
 | closeable | Whether to show close icon                    | `boolean `                    | `false`   |
 | safearea  | Whether to enable bottom safe area adaptation | `boolean`                     | `false`   |
 | zindex    | Popup z-index                                 | `number、string `             | -         |
-| onClosed  | Emitted when Popup is closed                  | `（）=> void`                 | -         |
-
+| onClose  | Emitted when Popup will close                  | `（）=> void`                 | -         |
+| onClosed  | Emitted after Popup closed                 | `（）=> void`                 | -         |
+| onOpened  | Emitted after Popup opened                  | `（）=> void`                 | -         |
 ## CSS Variables
 
 The component provides the following[CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties),which can be used to customize styles. Please refer to[Theme customization](#/zh-CN/guide/theme)。

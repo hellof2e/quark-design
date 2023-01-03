@@ -17,7 +17,7 @@ import "quarkd/lib/popupextra";
   title="Title"
   subtitle="Subtitle"
   :open="open"
-  @closed="open = false"
+  @close="open = false"
 >
   <div class="popup-body">
     <h4 class="">Why We Love Dunhuang</h4>
@@ -50,7 +50,7 @@ export default {
 Set `slot='title'` to replace `title`.
 
 ```html
-<quark-popupextra subtitle="Sub title" :open="open" @closed="open = false">
+<quark-popupextra subtitle="Sub title" :open="open" @close="open = false">
   <div slot="title"><span style="color: red">Custom</span>Title</div>
 
   <div class="popup-body">
@@ -86,7 +86,7 @@ Set `slot='title'` to replace `title`.
 
 | Name   | Description                  | Type          |
 | ------ | ---------------------------- | ------------- |
-| closed | Emitted when popup is closed | `（）=> void` |
+| close | Emitted when popup is closed | `（）=> void` |
 
 ## CSS Variables
 

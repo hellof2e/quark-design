@@ -29,7 +29,7 @@ export default () => {
       <PopupExtra
         title="大标题文案"
         subtitle="副标题文案"
-        onClosed={handleClose}
+        onClose={handleClose}
         open={open}
       >
         <div class="popup-body">
@@ -50,7 +50,7 @@ export default () => {
 <PopupExtra
   subtitle="副标题文案"
   open={open}
-  onClosed={() => setOpen(false)}
+  onClose={() => setOpen(false)}
 >
   <div slot="title">
     <span style="color: red">自定义</span>大标题文案
@@ -68,7 +68,7 @@ export default () => {
 设置 `closed` 方法
 
 ```js
-<PopupExtra open={open} onClosed={() => setOpen(false)} />
+<PopupExtra open={open} onClose={() => setOpen(false)} />
 ```
 
 ## API
@@ -84,7 +84,7 @@ export default () => {
 | round     | 是否圆角                 | `boolean`       | `true`    |
 | safearea  | 是否开启底部安全区域适配 | `boolean`        | `false`   |
 | zindex    | popup 层级设置           | `number、string` | -         |
-| onClosed  | 组件关闭回调             | `() => void`    |
+| onClose  | 组件关闭回调             | `() => void`    |
 
 ## 样式变量
 

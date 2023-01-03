@@ -16,11 +16,14 @@ export interface Props {
   round?: boolean;
   open: boolean;
   closeable?: boolean;
+  forbidmaskclick?: boolean;
   safearea?: boolean;
   zindex?: number;
 }
 export interface CustomEvent {
+  close: () => void;
   closed: () => void;
+  opened: () => void;
 }
 @customElement({
   tag: "quark-popup",
@@ -35,6 +38,11 @@ class QuarkPopup extends QuarkElement {
     type: Boolean,
   })
   open = false;
+
+  @property({
+    type: Boolean,
+  })
+  forbidmaskclick = false;
 
   @property({
     type: Boolean,
@@ -89,8 +97,10 @@ class QuarkPopup extends QuarkElement {
       const { current } = this.wrap;
       if (newValue) {
         disableBodyScroll(current);
+        this.dispatchEvent(new CustomEvent("opened"));
       } else {
         enableBodyScroll(current);
+        this.dispatchEvent(new CustomEvent("closed"));
       }
     }
   }
@@ -100,9 +110,9 @@ class QuarkPopup extends QuarkElement {
   }
 
   dispatchClose() {
-    this.open = false;
+    // this.open = false;
     // 标签调用触发
-    this.dispatchEvent(new CustomEvent("closed"));
+    this.dispatchEvent(new CustomEvent("close"));
   }
 
   handleCloseBtnClick = () => {
@@ -110,6 +120,9 @@ class QuarkPopup extends QuarkElement {
   };
 
   handleClick = () => {
+    if (this.forbidmaskclick) {
+      return;
+    }
     this.dispatchClose();
   };
 
