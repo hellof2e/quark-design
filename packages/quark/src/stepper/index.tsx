@@ -1,5 +1,10 @@
 import { classNames } from "../../utils/index";
-import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import QuarkElement, {
+  property,
+  customElement,
+  createRef,
+  state,
+} from "@quarkd/core";
 import style from "./style.css";
 export interface Props {
   min?: number;
@@ -60,6 +65,9 @@ class QuarkStepper extends QuarkElement {
   @property()
   name = "";
 
+  @state()
+  cacheValue = 0;
+
   inputRef: any = createRef();
 
   miniRef: any = createRef();
@@ -67,17 +75,19 @@ class QuarkStepper extends QuarkElement {
   plusRef: any = createRef();
 
   componentDidMount() {
-    this.formatData();
+    this.inputRef.current.value = this.value;
+    this.formatData(this.value);
   }
 
   handlePlusClick = (event: any) => {
     event.stopPropagation();
     this.$emit("plus");
-
-    if ((this.max && this.value < this.max) || this.max === null) {
-      this.value += this.steps;
-      this.dispatchChange();
-    } else if (this.max && this.value >= this.max) {
+    const value = this.inputRef.current.value;
+    if ((this.max && value < this.max) || this.max === null) {
+      this.inputRef.current.value =
+        Number(this.inputRef.current.value) + this.steps;
+      this.dispatchChange(this.inputRef.current.value);
+    } else if (this.max && value >= this.max) {
       this.$emit("overlimit", {
         detail: {
           action: "plus",
@@ -89,10 +99,12 @@ class QuarkStepper extends QuarkElement {
   handleMinusClick = (event: any) => {
     event.stopPropagation();
     this.$emit("minus");
-    if ((this.min && this.value > this.min) || this.min === null) {
-      this.value -= this.steps;
-      this.dispatchChange();
-    } else if (this.min && this.value <= this.min) {
+    const value = this.inputRef.current.value;
+    if ((this.min && value > this.min) || this.min === null) {
+      this.inputRef.current.value =
+        Number(this.inputRef.current.value) - this.steps;
+      this.dispatchChange(this.inputRef.current.value);
+    } else if (this.min && value <= this.min) {
       this.$emit("overlimit", {
         detail: {
           action: "minus",
@@ -105,57 +117,67 @@ class QuarkStepper extends QuarkElement {
     event.stopPropagation();
     const { current } = this.inputRef;
     const { value } = event.target;
-
+    console.warn(value, current.value);
     const Reg = this.interger ? /^-?\d*$/ : /^-?\d*\.{0,1}\d*$/;
-
+    // this.value = value;
     if (Reg.test(value)) {
-      this.value = value;
-      this.dispatchChange();
+      current.value = value;
+      this.dispatchChange(value);
     } else {
       current.value = this.value;
     }
+    this.cacheValue = value;
+  };
+  handleBlur = (event: any) => {
+    this.formatData(event.target.value);
+    this.dispatchChange(event.target.value);
   };
 
-  dispatchChange() {
-    this.formatData();
+  dispatchChange(value: number) {
+    this.cacheValue = value;
     this.$emit("change", {
       detail: {
-        value: this.value,
+        value,
         name: this.name || "",
       },
     });
   }
 
   // 格式化数据
-  formatData() {
-    if (this.min && this.min > this.value) {
-      this.value = this.min;
+  formatData(value) {
+    if (this.min && this.min > value) {
+      this.inputRef.current.value = this.min;
+      this.cacheValue = this.inputRef.current.value;
       return;
     }
-    if (this.max && this.max <= this.value) {
-      this.value = this.max;
+    if (this.max && this.max <= value) {
+      this.inputRef.current.value = this.max;
+      this.cacheValue = this.inputRef.current.value;
       return;
     }
     if (this.decimallength) {
-      this.value = Number(this.value.toFixed(this.decimallength));
+      this.inputRef.current.value = Number(value.toFixed(this.decimallength));
+      this.cacheValue = this.inputRef.current.value;
     }
   }
 
   miniNeedDisable = () => {
+    const value = Number(this.cacheValue);
     if (this.disabled) {
       return true;
     }
-    if (this.min && this.value <= this.min) {
+    if (this.min && value <= this.min) {
       return true;
     }
     return false;
   };
 
   plusNeedDisable = () => {
+    const value = Number(this.cacheValue);
     if (this.disabled) {
       return true;
     }
-    if (this.max && this.value >= this.max) {
+    if (this.max && value >= this.max) {
       return true;
     }
     return false;
@@ -183,8 +205,8 @@ class QuarkStepper extends QuarkElement {
           type="text"
           class={inputClassName}
           onInput={this.handleInputInput}
+          onBlur={this.handleBlur}
           // onChange={this.handleInputInput}
-          value={this.value}
           min={this.min}
           max={this.max}
           ref={this.inputRef}
