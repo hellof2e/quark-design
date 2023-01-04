@@ -53,10 +53,11 @@ class QuarkCell extends QuarkElement {
   render() {
     return (
       <div class="quark-cell" onClick={this.handleNavigation}>
-        {this.renderIcon()}
+        <slot name="icon">{this.renderIcon()}</slot>
         <div class="quark-cell-title" id="title">
-          {this.title}
+          <slot name="title">{this.title}</slot>
         </div>
+
         <slot>
           {this.desc && (
             <div class="quark-cell-desc" id="desc">

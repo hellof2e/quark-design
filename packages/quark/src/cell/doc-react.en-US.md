@@ -117,6 +117,14 @@ export default () => {
 | islink    | Whether to show link icon         | `boolean ` | `false` |
 | icon      | Left Icon(can be set to url link) | `string `  | -       |
 
+### Slots
+
+| Name             | Description                                  |
+| ---------------- | -------------------------------------- |
+| slot             | Custom right info                        |
+| slot name=title  | Custom title                             |
+| slot name=icon   | Custom left icon |
+
 ## CSS Variables
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).

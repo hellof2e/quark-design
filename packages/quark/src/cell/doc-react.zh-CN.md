@@ -117,6 +117,14 @@ export default () => {
 | islink | 是否显示右侧箭头          | `boolean ` | `false` |
 | icon   | 左侧图标(支持传 url 链接) | `string `  | -       |
 
+### Slots
+
+| 名称             | 说明                                   |
+| ---------------- | -------------------------------------- |
+| slot             | 自定义右侧信息                        |
+| slot name=title  | 自定义标题                             |
+| slot name=icon   | 自定义左侧icon |
+
 ## 样式变量
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
