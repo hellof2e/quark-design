@@ -71,7 +71,6 @@ const options = [
       }),
       babel({
         babelHelpers: "runtime",
-        exclude: "node_modules/**",
         extensions,
       }),
       terser(),
@@ -123,7 +122,6 @@ const options = [
       }),
       babel({
         babelHelpers: "runtime",
-        exclude: "node_modules/**",
         extensions,
       }),
       filesize(),
