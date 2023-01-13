@@ -119,7 +119,7 @@ const options = [
       commonjs(),
       nodeResolve({
         extensions,
-        // modulesOnly: true,
+        // modulesOnly: true, // 为true 表示不对第三方库进行打包
       }),
       babel({
         babelHelpers: "runtime",
