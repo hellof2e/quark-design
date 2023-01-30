@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/hellof2e/quark-design/compare/v1.0.34...v0.0.2) (2023-01-30)
+
+
+### Features
+
+* publish quarkd ([5dbaaab](https://github.com/hellof2e/quark-design/commit/5dbaaaba5d57189c708b4844d4bf7f116e91245e))
+* quark core compile third dependence ([88a331b](https://github.com/hellof2e/quark-design/commit/88a331b9ac5f4bbef28861fae98e9702fc490e26))
+
 ### [1.0.2](https://github.com/hellof2e/quark-design/compare/v1.0.1...v1.0.2) (2022-10-25)
 
 ### Features
