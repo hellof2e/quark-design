@@ -4,7 +4,7 @@ import QuarkElement, {
   customElement,
   createRef,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import style from "./style.css";
 export interface Props {
   min?: number;

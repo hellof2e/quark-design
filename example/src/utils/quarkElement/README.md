@@ -11,7 +11,7 @@ import QuarkElement, {
 	state,
 	createRef,
 	customElement,
-} from "@quarkd/core";
+} from "quarkc";
 import splitKeepDelimiter from "../../utils/splitKeepDelimiter";
 import style from "./style.css";
 

@@ -1,4 +1,4 @@
-import QuarkElement, { property, createRef, customElement } from "@quarkd/core";
+import QuarkElement, { property, createRef, customElement } from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import "../tabbaritem";
 import style from "./style.css";

@@ -3,7 +3,7 @@ import QuarkElement, {
   property,
   state,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import "../sticky";
 import tabs from "./tabs-style.css";

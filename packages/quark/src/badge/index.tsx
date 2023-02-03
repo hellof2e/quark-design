@@ -4,7 +4,7 @@ import QuarkElement, {
   property,
   state,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import style from "./style.css";
 export interface Props {
   type?: "dot" | "round" | "label";

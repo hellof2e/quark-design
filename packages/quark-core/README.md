@@ -11,7 +11,7 @@ import QuarkElement, {
   state,
   createRef,
   customElement,
-} from "@quarkd/core";
+} from "quarkc";
 import style from "./style.css";
 
 @customElement({ tag: "quark-noticebar", style })

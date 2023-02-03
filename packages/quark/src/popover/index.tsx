@@ -3,7 +3,7 @@ import QuarkElement, {
   state,
   customElement,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import style from "./style.css";
 import { classNames } from "../../utils/index";
 

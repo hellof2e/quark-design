@@ -229,7 +229,7 @@ describe('<${ComponentName}>', async () => {
 		const indexTsxFile = `import QuarkElement, {
   customElement,
   property
-} from '@quarkd/core';
+} from 'quarkc';
 import style from './style.css';
 
 @customElement({

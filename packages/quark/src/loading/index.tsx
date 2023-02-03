@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, Fragment } from "@quarkd/core";
+import QuarkElement, { property, customElement, Fragment } from "quarkc";
 import style from "./style.css";
 export interface Props {
   type?: "circular" | "spinner";

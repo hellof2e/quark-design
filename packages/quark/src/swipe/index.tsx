@@ -5,7 +5,7 @@ import QuarkElement, {
   Fragment,
   createRef,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import style from "./style.css";
 import swipeItemStyle from "./swipeItem.css";

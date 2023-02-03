@@ -6,7 +6,7 @@ import QuarkElement, {
   property,
   customElement,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import style from "./style.css";
 import "../overlay";
 import "../loading";

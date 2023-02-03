@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement } from "@quarkd/core";
+import QuarkElement, { property, customElement } from "quarkc";
 import "@quarkd/icons/lib/arrow-right";
 import cellStyle from "./cellStyle.css";
 import cellGroupCss from "./cellGroupStyle.css";

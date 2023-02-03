@@ -4,7 +4,7 @@ import QuarkElement, {
   createRef,
   customElement,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import { UploaderFileListItem } from "./utils";
 import "@quarkd/icons/lib/camera-fill";
 import "@quarkd/icons/lib/close";

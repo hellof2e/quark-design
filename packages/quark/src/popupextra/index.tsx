@@ -9,7 +9,7 @@ import QuarkElement, {
   customElement,
   Fragment,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import "@quarkd/icons/lib/close";
 import style from "./style.css";
 import { classNames } from "../../utils/index";

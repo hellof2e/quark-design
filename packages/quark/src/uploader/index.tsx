@@ -4,7 +4,7 @@ import QuarkElement, {
   createRef,
   customElement,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import {
   readFileContent,
   isOversize,

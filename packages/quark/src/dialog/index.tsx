@@ -8,7 +8,7 @@ import QuarkElement, {
   property,
   customElement,
   createRef,
-} from "@quarkd/core";
+} from "quarkc";
 import "../button";
 import "@quarkd/icons/lib/close";
 import style from "./style.css";

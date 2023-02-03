@@ -3,7 +3,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import QuarkElement, { property, customElement, createRef } from "quarkc";
 
 import style from "./style.css";
 

@@ -4,7 +4,7 @@ import QuarkElement, {
   createRef,
   Fragment,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import "../loading";
 import style from "./style.css";
 export interface Props {

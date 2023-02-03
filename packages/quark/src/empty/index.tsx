@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement } from "@quarkd/core";
+import QuarkElement, { property, customElement } from "quarkc";
 
 import style from "./style.css";
 export interface Props {

@@ -6,7 +6,7 @@ import QuarkElement, {
   customElement,
   state,
   property,
-} from "@quarkd/core";
+} from "quarkc";
 import "../popup";
 
 import style from "./style.css";

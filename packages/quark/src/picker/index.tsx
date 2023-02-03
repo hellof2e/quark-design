@@ -5,7 +5,7 @@ import QuarkElement, {
   createRef,
   customElement,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import "../popup";
 import "../button";
 import "@quarkd/icons/lib/close";

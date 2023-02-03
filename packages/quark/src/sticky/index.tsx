@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "@quarkd/core";
+import QuarkElement, { property, customElement, createRef } from "quarkc";
 import { remToPx, vhToPx, percentToHeightPx, vwToPx } from "../../utils/public";
 
 import style from "./style.css";

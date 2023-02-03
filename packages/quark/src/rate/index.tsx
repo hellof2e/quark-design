@@ -3,7 +3,7 @@ import QuarkElement, {
   property,
   customElement,
   state,
-} from "@quarkd/core";
+} from "quarkc";
 import "@quarkd/icons/lib/star-fill";
 import style from "./style.css";
 export interface Props {
