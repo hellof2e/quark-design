@@ -74,7 +74,7 @@ export default defineConfig({
 			{ find: "@", replacement: resolve(__dirname, "./src") },
 			{
 				find: "@quarkd/quark",
-				replacement: resolve(__dirname, "../packages/quark"),
+				replacement: resolve(__dirname, "../packages/quark-design"),
 			},
 		],
 	},

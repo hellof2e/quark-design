@@ -26,7 +26,7 @@ const findComponentName = (name: string) => {
 
 /** vite */
 const modulesPage = import.meta.glob(
-	"../../../../packages/quark/src/**/demo.vue"
+	"../../../../packages/quark-design/src/**/demo.vue"
 );
 for (const path in modulesPage) {
 	const name = (/src\/(.*)\/demo.vue/.exec(path) as any[])[1];

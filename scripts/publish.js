@@ -28,13 +28,13 @@ const choosePackage = async (packages) => {
     name: "package",
     message: "选择你要发布的包",
     choices: packages,
-    default: "packages/quark",
+    default: "packages/quark-design",
   });
   return answer;
 };
 
 const writeQuarkReactVersion = () => {
-  const quarkJsonResult = fs.readJSONSync(`${cwd}/packages/quark/package.json`);
+  const quarkJsonResult = fs.readJSONSync(`${cwd}/packages/quark-design/package.json`);
   const quarkReactResult = fs.readJSONSync(
     `${cwd}/packages/quark-react/package.json`
   );
