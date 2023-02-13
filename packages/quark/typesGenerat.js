@@ -1,7 +1,6 @@
-
 const fs = require("fs-extra");
 const path = require("path");
-const sh = require("shelljs")
+const sh = require("shelljs");
 
 const packageSrcRoot = path.join(__dirname, "./src");
 const typesSrcRoot = path.join(__dirname, "./types");
