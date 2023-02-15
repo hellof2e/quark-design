@@ -79,7 +79,7 @@ routes.push({
 	name: "notFound",
 	path: "/:path(.*)+",
 	redirect: {
-		name: "index",
+		path: "/zh-CN/component/button",
 	},
 });
 
