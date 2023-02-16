@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  一套企业级跨框架 UI 设计语言，底层基于 Web Components
+  下一代前端组件库，它可以在任意框架或无框架中使用。
   
 </div>
 
