@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  An enterprise-class UI design language and cross-framework UI library, Based on Web Components.
+  Next-gen frontend component library, it can be used in any framework or no framework.
   
 </div>
 
