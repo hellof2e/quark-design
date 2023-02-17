@@ -1,44 +1,41 @@
 {
-    "root": true,
-    "env": {
-        "node": true
-    },
-    "extends": [
-        "plugin:vue/vue3-essential",
-        "eslint:recommended",
-        "@vue/typescript/recommended",
-        "@vue/prettier",
-        "@vue/prettier/@typescript-eslint"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 2020
-    },
-    "rules": {
-        "vue/no-unused-components": 0,
-        "no-debugger": 0,
-        "@typescript-eslint/no-inferrable-types": 1,
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "@vue/prettier",
+    "@vue/prettier/@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "vue/no-unused-components": 0,
+    "no-debugger": 0,
+    "@typescript-eslint/no-inferrable-types": 1,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "vue/comment-directive": "off"
+  },
+  "overrides": [
+    {
+      "files": ["packages/quark/**/*.tsx"],
+      "rules": {
         "@typescript-eslint/explicit-module-boundary-types": 0,
-        "vue/comment-directive": "off"
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-empty-function": 0,
+        "@typescript-eslint/no-inferrable-types": 2
+      }
     },
-    "overrides": [
-        {
-            "files":[
-                "packages/quark/**/*.tsx"
-            ],
-            "rules": {
-                "@typescript-eslint/explicit-module-boundary-types": 0,
-                "@typescript-eslint/no-explicit-any": 0,
-                "@typescript-eslint/no-empty-function": 0,
-                "@typescript-eslint/no-inferrable-types": 2
-            }
-        },
-        {
-            "files":[
-                "packages/quark-react/src/**/*.ts"
-            ],
-            "rules": {
-                "@typescript-eslint/no-empty-interface": 0
-            }
-        }
-    ]
+    {
+      "files": ["packages/quark-react/src/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/no-empty-interface": 0
+      }
+    }
+  ]
 }
