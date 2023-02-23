@@ -1,4 +1,18 @@
 # 更新日志
+### [1.0.36](https://github.com/hellof2e/quark-design/compare/v1.0.35...v1.0.36) (2023-02-23)
+
+
+### 🎉 Features
+
+* remove useless file ([9d3860d](https://github.com/hellof2e/quark-design/commit/9d3860dc7f317f4b99d7027b1e6fe02c7c618640))
+
+
+### 🐞 Bug Fixes
+
+* fix a bug of development site. ([72a28b3](https://github.com/hellof2e/quark-design/commit/72a28b3be751f9395689b901c56c7b934f730bb8))
+* toast 普通函数增加 zIndex 参数 ([1c1086f](https://github.com/hellof2e/quark-design/commit/1c1086ffbe4829e4de9f948336c28208b1474717))
+* turn off 'no-var-requires' rule to fix error of js files. ([29d3986](https://github.com/hellof2e/quark-design/commit/29d3986f4cd54c44f7d86457702d59db225c39a9))
+
 ### [1.0.35](https://github.com/hellof2e/quark-design/compare/v1.0.0...v1.0.35) (2023-02-03)
 
 ### [1.0.34](https://github.com/hellof2e/quark-design/compare/v1.0.33...v1.0.34) (2023-01-04)
