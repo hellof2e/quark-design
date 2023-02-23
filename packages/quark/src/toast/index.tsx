@@ -132,7 +132,11 @@ class QuarkToast extends QuarkElement {
     );
   };
   renderOther = () => (
-    <div class="quark-toast" ref={this.toastRef}>
+    <div
+      class="quark-toast"
+      ref={this.toastRef}
+      style={{ zIndex: this.zIndex }}
+    >
       {this.type !== "text" && this.renderIcon()}
       <slot>{this.content}</slot>
     </div>
