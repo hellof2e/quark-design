@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.37](https://github.com/hellof2e/quark-design/compare/v1.0.36...v1.0.37) (2023-02-24)
+
+
+### 🎉 Features
+
+* nav righttext ([2bc5374](https://github.com/hellof2e/quark-design/commit/2bc5374c92393dc8ee79ecba5be14888243d4942))
+
 ### [1.0.36](https://github.com/hellof2e/quark-design/compare/v1.0.35...v1.0.36) (2023-02-23)
 
 
