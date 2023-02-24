@@ -7,7 +7,7 @@ export interface Props {
   title: string;
   lefthide?: boolean;
   closehide?: boolean;
-  right?: string;
+  righttext?: string;
   safearea?: boolean;
   iconsize?: string;
 }
@@ -25,7 +25,7 @@ class QuarkNavbar extends QuarkElement {
   title = "";
 
   @property()
-  right = "";
+  righttext = "";
 
   @property()
   iconsize = "24";
@@ -74,7 +74,7 @@ class QuarkNavbar extends QuarkElement {
         </div>
         <slot name="right" class="quark-navbar-right icon">
           <span id="right" onClick={this.rightClick}>
-            {this.right}
+            {this.righttext}
           </span>
         </slot>
       </Fragment>
