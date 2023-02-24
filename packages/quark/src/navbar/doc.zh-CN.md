@@ -80,43 +80,6 @@ import "quarkd/lib/navbar";
 </quark-navbar>
 ```
 
-### 注意：哈啰 App 内使用
-
-App 中默认有导航栏（返回+title 那栏），如果要使用本组件，需要使用客户端能力**隐藏原生导航栏**。以 `vue` 项目举例：
-
-HTML 中设置：
-
-```html
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-/>
-```
-
-```tsx
-mounted(){
-    // 安卓端生效
-    // 设置最顶部状态栏显示和隐藏
-    Native.callNative({
-        classMap: 'NavBar',
-        method: 'setStatusBarColor',
-        params: {
-            isShowStatusBar: true, // 状态栏显示
-            isDarkFont: false, // 状态栏字体黑 or 白
-            colorCode: '#666', // 状态栏显示时，背景颜色代码
-        },
-    });
-    // 设置导航栏是否显示
-    Native.callNative({
-        method: 'showNaviBar',
-        params: {
-            isShow: false,
-        },
-        classMap: 'NavBar',
-    });
-}
-```
-
 ## API
 
 ### Props
