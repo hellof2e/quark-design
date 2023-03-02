@@ -78,6 +78,7 @@
         <div class="child"></div>
       </quark-badge>
     </div>
+
     <h2 @click="change">{{ translate("custom") }}</h2>
     <div class="badge-container">
       <quark-badge class="bg-color" :content="num">
