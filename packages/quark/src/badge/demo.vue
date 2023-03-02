@@ -10,6 +10,13 @@
     <div class="badge-container">
       <quark-badge type="label" :content="translate('word')"></quark-badge>
     </div>
+    <div class="badge-container">
+      <quark-badge
+        type="label"
+        size="big"
+        :content="translate('word2')"
+      ></quark-badge>
+    </div>
 
     <h2>{{ translate("type") }}</h2>
     <div class="badge-container">
@@ -98,6 +105,7 @@ export default createDemo({
         "zh-CN": {
           independent: "徽标独立使用",
           word: "文字徽标",
+          word2: "最高立减5元",
           type: "徽标类型",
           size: "徽标大小",
           style: "徽标风格",
@@ -109,6 +117,7 @@ export default createDemo({
         "en-US": {
           independent: "Badge Independent Use",
           word: "Word Badge",
+          word2: "Up to $5 off",
           type: "Badge Type",
           size: "Badge Size",
           style: "Badge Style",
