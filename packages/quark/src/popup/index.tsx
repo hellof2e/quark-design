@@ -21,6 +21,7 @@ export interface Props {
   zindex?: number;
 }
 export interface CustomEvent {
+  clickoverlay: () => void;
   close: () => void;
   closed: () => void;
   opened: () => void;
@@ -120,6 +121,7 @@ class QuarkPopup extends QuarkElement {
   };
 
   handleClick = () => {
+    this.dispatchEvent(new CustomEvent("clickoverlay"));
     if (this.forbidmaskclick) {
       return;
     }

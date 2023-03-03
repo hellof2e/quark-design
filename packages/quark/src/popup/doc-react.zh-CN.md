@@ -84,6 +84,7 @@ export default () => {
 | onClose  | 关闭弹出层立即触发            | `() => void`                 | -         |
 | onClosed | 关闭弹出层且动画结束后触发 | `() => void` | -         |
 | onOpened | 弹出层打开后触发 | `() => void` | -         |
+| onClickoverlay | 遮罩层点击触发 | `() => void` | -         |
 
 ## 样式变量
 

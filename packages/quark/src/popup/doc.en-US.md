@@ -94,6 +94,7 @@ After setting the round property, the popup window will add different rounded co
 
 | Event  | Description                  | Type          |
 | ------ | ---------------------------- | ------------- |
+| clickoverlay |Emitted when overlay click  | `() => void` |
 | close | Emitted when Popup will close | `（）=> void` |
 | closed | Emitted after Popup closed | `（）=> void` |
 | opened | Emitted after Popup opened | `（）=> void` |
