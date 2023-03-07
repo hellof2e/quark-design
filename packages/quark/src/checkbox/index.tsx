@@ -1,4 +1,3 @@
-import { classNames } from "../../utils/index";
 import QuarkElement, {
   customElement,
   property,
@@ -15,7 +14,7 @@ export interface Props {
   checked?: boolean;
 }
 export interface CustomEvent {
-  change: (e: { detail: { value: string } }) => void;
+  change?: (e: { detail: { value: string } }) => void;
 }
 
 export interface GroupProps {
