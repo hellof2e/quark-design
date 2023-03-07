@@ -1,4 +1,16 @@
 # 更新日志
+### [1.0.39](https://github.com/hellof2e/quark-design/compare/v1.0.38...v1.0.39) (2023-03-07)
+
+
+### 🎉 Features
+
+* update quarkd ([4e8bb55](https://github.com/hellof2e/quark-design/commit/4e8bb5524f262b1dee47fee733fadd27e59ce408))
+
+
+### 🐞 Bug Fixes
+
+* popup && checkbox ([d4f0e1c](https://github.com/hellof2e/quark-design/commit/d4f0e1ce0795372baf2f1d1f2ea0029ba7115b86))
+
 ### [1.0.38](https://github.com/hellof2e/quark-design/compare/v1.0.37...v1.0.38) (2023-03-03)
 
 
