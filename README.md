@@ -82,13 +82,13 @@
 - 国际化语言支持。
 - 支持服务端渲染（Beta）。
 
-| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持技术栈/框架                    |
-| -------------- | ------- | -------------- | ---------- | -------- | ---------------------------------- |
-| Quark          | 80.1kb  | Rollup         | √          | 2022     | Vue/React/Angular/JQ/Svelte/无框架 |
-| Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | Vue                                |
-| Nutui          | 275.5kb | Vite           | √          | 2018     | Vue                                |
-| TDesign Mobile | -       | Gulp           | √          | 2021     | React                              |
-| Antd Mobile    | -       | Gulp           | √          | 2016     | React                              |
+| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue |
+| -------------- | ------- | -------------- | ---------- | -------- | --- | --- | --- | --- | --- | --- |
+| Quark          | 80.1kb  | Rollup         | √          | 2022     | √ | √ | √ | √ | √ | √ |
+| Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | √ | --- | --- | --- | --- | --- |
+| Nutui          | 275.5kb | Vite           | √          | 2018     | √ | --- | --- | --- | --- | --- |
+| TDesign Mobile | -       | Gulp           | √          | 2021     | --- | √ | --- | --- | --- | --- |
+| Antd Mobile    | -       | Gulp           | √          | 2016     | --- | √ | --- | --- | --- | --- |
 
 *上面CDN体积对比包含各类组件库能正常运行展示所需的运行时、js、css*
 
