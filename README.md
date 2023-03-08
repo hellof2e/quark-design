@@ -82,7 +82,7 @@
 - 国际化语言支持。
 - 支持服务端渲染（Beta）。
 
-| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue | 支持 Vue |
+| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持 Vue | 支持 React | 支持 Angular | 支持 JQuery | 支持 svelte | 支持 无框架 |
 | -------------- | ------- | -------------- | ---------- | -------- | --- | --- | --- | --- | --- | --- |
 | Quark          | 80.1kb  | Rollup         | √          | 2022     | √ | √ | √ | √ | √ | √ |
 | Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | √ | --- | --- | --- | --- | --- |
