@@ -44,10 +44,6 @@
   <span> | English</span>
 </p>
 
-<p align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/14307551/207770859-8af1149c-111a-49d6-a005-6287bb434105.png" alt="support logos" />
-</p>
-
 ## Contact us
 
 <details>
@@ -84,13 +80,13 @@ Therefore, we developed this UI framework to isolate it from the technology fram
 - Support Custom Theme
 - Support i18n, built-in 20+ languages
 
-| Component Library | CDN     | Import on demand | Build tools    | TypeScript | open source time | Support technology stack/framework       |
-| ----------------- | ------- | ---------------- | -------------- | ---------- | ---------------- | ---------------------------------------- |
-| Quark             | 80.1kb  | √                | Rollup         | √          | 2022             | Vue/React/Angular/JQ/Svelte/no framework |
-| Vant              | 183kb   | √                | Vite(Vant-cli) | √          | 2017             | Vue only                                 |
-| Nutui             | 275.5kb | √                | Vite           | √          | 2018             | Vue only                                 |
-| TDesign Mobile    | -       | √                | Gulp           | √          | 2021             | React only                               |
-| Antd Mobile       | -       | √                | Gulp           | √          | 2016             | React only                               |
+| Component Library | CDN     | Import on demand | Build tools    | TypeScript | open source time | Support Vue | Support React | Support Angular | Support JQuery | Support Sevlte | Support no framework |
+| ----------------- | ------- | ---------------- | -------------- | ---------- | ---------------- | --- | --- | --- | --- | --- | --- |
+| Quark             | 80.1kb  | √                | Rollup         | √          | 2022             | √ | √ | √ | √ | √ | √ |
+| Vant              | 183kb   | √                | Vite(Vant-cli) | √          | 2017             | √ | --- | --- | --- | --- | --- |
+| Nutui             | 275.5kb | √                | Vite           | √          | 2018             | √ | --- | --- | --- | --- | --- |
+| TDesign Mobile    | -       | √                | Gulp           | √          | 2021             | --- | √ | --- | --- | --- | --- |
+| Antd Mobile       | -       | √                | Gulp           | √          | 2016             | --- | √ | --- | --- | --- | --- |
 
 *The CDN volume comparison above includes the runtime, js, and css required for various component libraries to function properly.*
 
