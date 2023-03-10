@@ -25,8 +25,8 @@ import "quarkd/lib/image";
 ```html
 <quark-image
   src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
-  width="100"
-  height="100"
+  :width="100"
+  :height="100"
   round
 />
 ```
@@ -36,8 +36,8 @@ import "quarkd/lib/image";
 ```html
 <quark-image
   src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
-  width="100"
-  height="100"
+  width="100px"
+  height="100px"
   lazy
 />
 ```

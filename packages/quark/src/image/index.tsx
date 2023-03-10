@@ -12,12 +12,12 @@ type LazyLoadType = {
   add: (el: HTMLImageElement, src: string, parent?: ParentNode | null) => void;
 };
 export interface Props {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   fit?: FitType;
   lazy?: boolean;
   round?: boolean;
-  radius?: number;
+  radius?: number | string;
   alt?: string;
   src: string;
 }

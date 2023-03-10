@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.41](https://github.com/hellof2e/quark-design/compare/v1.0.40...v1.0.41) (2023-03-10)
+
+
+### 🐞 Bug Fixes
+
+* quark-react Image src ([16f4bc7](https://github.com/hellof2e/quark-design/commit/16f4bc7eb0b11101caf7e36b803176b5a632d5bd))
+
 ### [1.0.40](https://github.com/hellof2e/quark-design/compare/v1.0.39...v1.0.40) (2023-03-10)
 
 
