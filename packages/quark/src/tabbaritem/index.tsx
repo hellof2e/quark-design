@@ -3,7 +3,7 @@ import style from "./style.css";
 export interface Props {
   label: string;
   badgecontent?: string;
-  name: string;
+  name?: string;
 }
 @customElement({ tag: "quark-tabbar-item", style })
 class QuarkTabbarItem extends QuarkElement {

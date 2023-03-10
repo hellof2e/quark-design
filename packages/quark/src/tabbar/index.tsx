@@ -6,10 +6,10 @@ export interface Props {
   fixed?: boolean;
   inactivecolor?: string;
   activecolor?: string;
-  value?: number;
+  value?: string;
 }
 export interface CustomEvent {
-  change: (e: { detail: { value: number | string } }) => void;
+  change: (e: { detail: { value: string } }) => void;
 }
 @customElement({ tag: "quark-tabbar", style })
 class QuarkTabbar extends QuarkElement {
@@ -24,10 +24,10 @@ class QuarkTabbar extends QuarkElement {
   placeholder = false;
 
   @property()
-  inactivecolor: string = "#879099";
+  inactivecolor = "#879099";
 
   @property()
-  activecolor: string = "#0088FF";
+  activecolor = "#0088FF";
 
   @property()
   value = "0";
