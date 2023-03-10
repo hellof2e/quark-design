@@ -19,6 +19,7 @@ export interface Props {
   round?: boolean;
   radius?: number;
   alt?: string;
+  src: string;
 }
 export interface CustomEvent {
   load?: () => void;
