@@ -11,7 +11,7 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 
 type CascadePickerProps = componentBaseInterface &
   ReactifyProps<Props, CustomEvent>;
-interface CascadePickerRef {
+interface CascadePickerRef extends componentBaseInterface {
   setColumns: (columns: PickerColumn[]) => void;
   getValues: () => SelectedColumn[];
 }

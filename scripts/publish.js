@@ -61,7 +61,7 @@ const publish = async () => {
   const packageName = getPackageName(package);
   console.log(package, packageName, version);
   if (package && packageName) {
-    if (packageName === "quark-react") {
+    if (packageName === "@quarkd/quark-react") {
       writeQuarkReactVersion();
     }
     const spinner = ora("loading ~~~~").start();

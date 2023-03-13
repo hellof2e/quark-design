@@ -11,7 +11,7 @@ interface Options {
   change?: (index: number) => void; // 图片滑到事件
   close: (index: number) => void; // 组件关闭事件
 }
-interface ImagePreviewRef {
+interface ImagePreviewRef extends componentBaseInterface {
   setData: (data: Options) => void;
 }
 

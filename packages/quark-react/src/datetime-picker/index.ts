@@ -7,7 +7,7 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 type DatetimePickerProps = componentBaseInterface &
   ReactifyProps<Props, CustomEvent>;
 type DatetimePickerType = FC<DatetimePickerProps>;
-interface DatetimePickerRef {
+interface DatetimePickerRef extends componentBaseInterface {
   setValue: (value: Date | string) => void;
   getValues: () => SelectColumn[];
   setFormatter: (type: string, value: string) => string;

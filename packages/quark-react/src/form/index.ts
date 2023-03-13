@@ -10,7 +10,7 @@ interface Rule {
   message?: string; // 错误信息
   validator: (value: string) => void; // 校验规则
 }
-interface FormRef {
+interface FormRef extends componentBaseInterface {
   submit: () => Promise<any[]>;
   setRules: (rule: Rule[]) => void;
 }

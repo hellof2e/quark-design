@@ -5,7 +5,7 @@ import { Props, CustomEvent } from "quarkd/lib/uploader";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
 type UploaderProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
-interface UploaderRef {
+interface UploaderRef extends componentBaseInterface {
   setBeforeUpload: (fn: () => boolean) => void;
   setPreview: (url: string[]) => void;
 }

@@ -11,7 +11,7 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 
 type PickerProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
 type PickerType = FC<PickerProps>;
-interface PickerRef {
+interface PickerRef extends componentBaseInterface{
   setColumns: (columns: PickerColumn[]) => void;
   getValues: () => SelectColumn[];
 }

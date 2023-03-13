@@ -9,7 +9,7 @@ interface Rule {
   message: string; // 错误提示
   validator: (value: string) => void; // 校验规则
 }
-interface FieldRef {
+interface FieldRef extends componentBaseInterface {
   setRules: (rule: Rule[]) => void;
 }
 

@@ -5,7 +5,7 @@ import { Props, CustomEvent, PopoverAction } from "quarkd/lib/popover";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
 type PopoverProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
-interface PopoverRef {
+interface PopoverRef extends componentBaseInterface {
   setActions: (actions: PopoverAction[]) => void;
 }
 type PopoverType = FC<PopoverProps>;
