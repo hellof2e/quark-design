@@ -47,7 +47,7 @@ const writeQuarkReactVersion = () => {
     ...quarkReactResult,
     dependencies: {
       ...quarkReactResult.dependencies,
-      quark: quarkVersion,
+      quarkd: quarkVersion,
     },
   };
   const writeData = JSON.stringify(newQuarkReactData, null, 2);
