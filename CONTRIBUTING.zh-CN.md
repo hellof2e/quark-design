@@ -23,6 +23,7 @@ yarn run dev
 
 ## 命令说明（核心维护者发包使用）
 
+第一步：
 ```bash
 // 发布所有子包的最后一位版本号如 0.0.1 -> 0.0.2,
 yarn run release:patch
@@ -34,8 +35,8 @@ yarn run release:minor
 yarn run release:major
 ```
 
+第二步：
 打 tag
-
 ```
 git tag // 先看下是否生成最新的 tag
 git push origin --tags
