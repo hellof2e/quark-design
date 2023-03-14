@@ -16,7 +16,7 @@
 }
 
 :host .quark-empty-image {
-  width: var(--empty-image-width, 190px);
+  width: var(--empty-image-width, 191px);
 }
 
 :host .quark-empty-title {
