@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement } from "quarkc";
+import QuarkElement, { Fragment, property, customElement } from "quarkc";
 
 import style from "./style.css";
 export interface Props {
@@ -30,8 +30,8 @@ class QuarkEmpty extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-empty">
-        <div class="quark-empty-container">
+      <Fragment>
+        <div class="quark-empty">
           <img
             style={{
               width: ~["px", "rem", "em", "vw", "vh"].indexOf(this.imagesize)
@@ -46,11 +46,11 @@ class QuarkEmpty extends QuarkElement {
             }
             alt="empty-image"
           />
+          {this.title && <div class="quark-empty-title">{this.title}</div>}
+          {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
+          <slot name="footer"></slot>
         </div>
-        {this.title && <div class="quark-empty-title">{this.title}</div>}
-        {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
-        <slot name="footer"></slot>
-      </div>
+      </Fragment>
     );
   }
 }

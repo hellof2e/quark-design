@@ -39,9 +39,7 @@ import "quarkd/lib/empty";
 通过 `image` 属性中传入任意图片 URL。
 
 ```html
-<quark-empty
-  image="https://m.hellobike.com/resource/helloyun/13459/fkntv_custom-empty-image.png"
-/>
+<quark-empty image="https://m.hellobike.com/resource/helloyun/13459/fkntv_custom-empty-image.png"/>
 ```
 
 ### 自定义底部
@@ -49,10 +47,8 @@ import "quarkd/lib/empty";
 通过 `slot="footer"` 来自定义底部。
 
 ```html
-<quark-empty desc="快去下一单吧" title="没有历史订单">
-  <div slot="footer">
-    <div>自定义底部</div>
-  </div>
+<quark-empty>
+  <div slot="footer"> 自定义底部 🎉🎉🎉 </div>
 </quark-empty>
 ```
 
@@ -73,10 +69,11 @@ import "quarkd/lib/empty";
 
 | 名称                        | 说明             | 默认值     |
 | --------------------------- | ---------------- | ---------- |
+| `--empty-padding` | 空白页容器内边距  | `32px 0`     |
 | `--empty-title-font-size`   | 标题字体大小     | `16px`     |
+| `--empty-image-width`       | 图片宽度         | `190px`     |
 | `--empty-title-color`       | 标题字体颜色     | `#242729`  |
 | `--empty-title-line-height` | 标题字体行高     | `22px`     |
-| `--empty-title-width`       | 标题字体最大宽度 |
 | `--empty-title-white-space` | 标题是否换行     | `pre-wrap` |
 | `--empty-desc-font-size`    | 描述字体大小     |
 | `--empty-desc-color`        | 描述字体颜色     | `#969799`  |

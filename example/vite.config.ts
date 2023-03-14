@@ -5,6 +5,7 @@ import legacy from "@vitejs/plugin-legacy";
 import Markdown from "vite-plugin-md";
 import cssVariable from "@quarkd/rollup-plugin-css-variable";
 import typescript from "@rollup/plugin-typescript";
+import reloadOnChange from "vite-plugin-full-reload";
 import path from "path";
 import variableMap from "./global-css";
 
@@ -13,6 +14,8 @@ const hljs = require("highlight.js");
 const { resolve } = path;
 
 const plugins = [
+	// 监听 css 变化热更新
+	reloadOnChange(["../packages/quark/src/**/*.css"]),
 	cssVariable({
 		variableMap,
 		prefix: "quark-",
