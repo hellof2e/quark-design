@@ -11,6 +11,7 @@ export interface Props {
   loadtype?: "circular" | "spinner";
   loadingcolor?: string;
   loadingsize?: number;
+  disabled?: boolean;
 }
 @customElement({
   tag: "quark-button",

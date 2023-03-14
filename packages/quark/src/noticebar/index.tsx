@@ -9,6 +9,7 @@ export interface Props {
   right?: string;
   safearea?: boolean;
   iconsize?: string;
+  bgcolor?: string;
 }
 export interface CustomEvent {
   rightclick?: () => void;
