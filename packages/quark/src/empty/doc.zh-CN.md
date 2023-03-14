@@ -71,7 +71,7 @@ import "quarkd/lib/empty";
 | --------------------------- | ---------------- | ---------- |
 | `--empty-padding` | 空白页容器内边距  | `32px 0`     |
 | `--empty-title-font-size`   | 标题字体大小     | `16px`     |
-| `--empty-image-width`       | 图片宽度         | `190px`     |
+| `--empty-image-width`       | 图片宽度         | `191px`     |
 | `--empty-title-color`       | 标题字体颜色     | `#242729`  |
 | `--empty-title-line-height` | 标题字体行高     | `22px`     |
 | `--empty-title-white-space` | 标题是否换行     | `pre-wrap` |

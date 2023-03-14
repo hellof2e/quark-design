@@ -69,7 +69,7 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | --------------------------- | ------------------------- | ---------- |
 | `--empty-padding` | Container padding         | `32px 0`   |
 | `--empty-title-font-size`   | Title font size           | `16px`     |
-| `--empty-image-width`       | Image width               | `190px`    |
+| `--empty-image-width`       | Image width               | `191px`    |
 | `--empty-title-color`       | Title font color          | `#242729`  |
 | `--empty-title-line-height` | Title line-height         | `22px`     |
 | `--empty-title-white-space` | Whether title change line | `pre-wrap` |
