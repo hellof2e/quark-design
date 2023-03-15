@@ -11,7 +11,7 @@ import validateAll, {
 export interface Rule {
   name: string; // 需要校验的 field 组件的 name 属性
   required?: boolean; // 是否必填
-  message: string; // 错误信息
+  message?: string; // 错误信息
   validator?: (value: string | number) => boolean; // 校验规则
 }
 @customElement({

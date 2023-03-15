@@ -195,7 +195,7 @@ Only useful for field components, supports required and validator custom events.
 type Rule = {
   name: string // `Name` prop of field component that needs to be validated
   required?: boolean // Whether to be required
-  message: string // Error text
+  message?: string // Error text
   validator?: (value: string | number) => boolean; // Custom validator function
 };
 ```
