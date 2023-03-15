@@ -234,7 +234,7 @@ export default () => {
 type Rule = {
   name: string // `Name` prop of field component that needs to be validated
   required?: boolean // Whether to be required
-  message?: string // Error text
-  validator: (value: string) => void; // Custom validator function
+  message: string // Error text
+  validator?: (value: string | number) => boolean; // Custom validator function
 };
 ```

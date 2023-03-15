@@ -162,7 +162,7 @@ import "quarkd/lib/field";
 ```js
 type Rule = {
   message: string, // error message
-  validator: (value: string) => void, // rule
+  validator: (value: string | number) => boolean, // rule
 };
 ```
 

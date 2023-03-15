@@ -6,6 +6,11 @@ import QuarkElement, {
   state,
 } from "quarkc";
 import style from "./style.css";
+export interface Rule {
+  required?: boolean;
+  message?: string; // 错误提示
+  validator?: (value: string | number) => boolean; // 校验规则
+}
 export interface Props {
   label?: string;
   type?: string;
@@ -74,7 +79,7 @@ class QuarkField extends QuarkElement {
   @property({ type: Boolean })
   required = false;
 
-  rules: any[] = [];
+  rules: Rule[] = [];
 
   inputRef: any = createRef();
 
@@ -120,7 +125,7 @@ class QuarkField extends QuarkElement {
         !this.value && this.errormsg ? "inline-block" : "none";
   };
 
-  setRules(rules: any[]) {
+  setRules(rules: Rule[]) {
     if (!Array.isArray(rules)) {
       throw new Error("rules need array");
     }
