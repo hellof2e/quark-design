@@ -5,11 +5,11 @@ import { Props, CustomEvent } from "quarkd/lib/uploader";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
 type UploaderProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
-interface UploaderRef extends componentBaseInterface {
+interface Ref {
   setBeforeUpload: (fn: () => boolean) => void;
   setPreview: (url: string[]) => void;
 }
-
+type UploaderRef = Ref & HTMLElement;
 type UploaderType = FC<UploaderProps>;
 const Uploader = reactify("quark-uploader") as UploaderType;
 export { UploaderRef };

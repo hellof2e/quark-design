@@ -5,11 +5,11 @@ import { componentBaseInterface } from "../type";
 
 interface FormProps extends componentBaseInterface {}
 
-interface FormRef extends componentBaseInterface {
+interface Ref {
   submit: () => Promise<any[]>;
   setRules: (rule: Rule[]) => void;
 }
-
+type FormRef = Ref & HTMLElement;
 type FormType = FC<FormProps>;
 const Form = reactify("quark-form") as FormType;
 export { FormRef };

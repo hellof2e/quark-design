@@ -11,11 +11,11 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 
 type CascadePickerProps = componentBaseInterface &
   ReactifyProps<Props, CustomEvent>;
-interface CascadePickerRef extends componentBaseInterface {
+interface Ref {
   setColumns: (columns: PickerColumn[]) => void;
   getValues: () => SelectedColumn[];
 }
-
+type CascadePickerRef = Ref & HTMLElement;
 type CascadePickerType = FC<CascadePickerProps>;
 const CascadePicker = reactify("quark-cascade-picker") as CascadePickerType;
 export { CascadePickerRef };

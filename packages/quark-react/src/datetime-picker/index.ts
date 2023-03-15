@@ -7,13 +7,13 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 type DatetimePickerProps = componentBaseInterface &
   ReactifyProps<Props, CustomEvent>;
 type DatetimePickerType = FC<DatetimePickerProps>;
-interface DatetimePickerRef extends componentBaseInterface {
+interface Ref {
   setValue: (value: Date | string) => void;
   getValues: () => SelectColumn[];
   setFormatter: (type: string, value: string) => string;
   setFilter: (type: string, values: string[]) => string[];
 }
-
+type DatetimePickerRef = Ref & HTMLElement;
 const DatetimePicker = reactify("quark-datetime-picker") as DatetimePickerType;
 export { DatetimePickerRef };
 export default DatetimePicker;

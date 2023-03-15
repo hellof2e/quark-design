@@ -11,10 +11,10 @@ interface Options {
   change?: (index: number) => void; // 图片滑到事件
   close: (index: number) => void; // 组件关闭事件
 }
-interface ImagePreviewRef extends componentBaseInterface {
+interface Ref {
   setData: (data: Options) => void;
 }
-
+type ImagePreviewRef = Ref & HTMLElement;
 type ImagePreviewType = FC<ImagePreviewProps>;
 const ImagePreview = reactify("quark-image-preview") as ImagePreviewType;
 

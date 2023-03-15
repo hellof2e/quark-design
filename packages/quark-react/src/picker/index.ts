@@ -11,10 +11,11 @@ import { componentBaseInterface, ReactifyProps } from "../type";
 
 type PickerProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
 type PickerType = FC<PickerProps>;
-interface PickerRef extends componentBaseInterface{
+interface Ref {
   setColumns: (columns: PickerColumn[]) => void;
   getValues: () => SelectColumn[];
 }
+type PickerRef = Ref & HTMLElement;
 const Picker = reactify("quark-picker") as PickerType;
 export { PickerRef };
 export default Picker;
