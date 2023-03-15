@@ -9,7 +9,7 @@ import style from "./style.css";
 export interface Rule {
   required?: boolean;
   message?: string; // 错误提示
-  validator?: (value: string & number) => boolean; // 校验规则
+  validator?: (value: string | number) => boolean; // 校验规则
 }
 export interface Props {
   label?: string;
