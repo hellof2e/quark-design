@@ -1,4 +1,12 @@
 # 更新日志
+### [1.0.49](https://github.com/hellof2e/quark-design/compare/v1.0.48...v1.0.49) (2023-03-15)
+
+
+### 🎉 Features
+
+* form 增加组件注册 ([6857ce3](https://github.com/hellof2e/quark-design/commit/6857ce326e60b33e34a0391b5dbaa67b88415767))
+* update quark version ([753fa83](https://github.com/hellof2e/quark-design/commit/753fa8354ce45e3f4be99009d7b0c27a68d2030f))
+
 ### [1.0.48](https://github.com/hellof2e/quark-design/compare/v1.0.47...v1.0.48) (2023-03-15)
 
 
