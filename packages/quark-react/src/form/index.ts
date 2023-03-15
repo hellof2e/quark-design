@@ -6,7 +6,7 @@ import { componentBaseInterface } from "../type";
 interface FormProps extends componentBaseInterface {}
 
 interface Ref {
-  submit: () => Promise<any[]>;
+  getValues: () => Promise<any[]>;
   setRules: (rule: Rule[]) => void;
 }
 type FormRef = Ref & HTMLElement;
