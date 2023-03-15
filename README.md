@@ -44,21 +44,6 @@
   </a>
 </p>
 
-## Contact us
-
-<details>
-  <summary>Contact us</summary>
-  ~Wechat(微信交流/沟通群)，欢迎提意见或建议，有机会获取周边礼品 🎁 ～, 若群已满请加右边小助手微信拉你入群~
-
-  ~微信(1)群已满~ 可扫码加入微信(2)群，或添加下面管理员拉你入群谢谢
-
-  <div style="display:flex;">
-    <img src="https://m.hellobike.com/resource/helloyun/15697/N-Exc_qun.png?x-oss-process=image/quality,q_80" width='180'/>
-    <img src="https://user-images.githubusercontent.com/14307551/198974064-8d02f3af-3cef-4f89-8744-bb860dd56121.png" width='189'/>
-  </div>
-</details>
-
-
 ## 🤔 动机
 
 技术框架的出现，提升了开发体验和页面性能，但技术框架的不断迭代更新，为项目的维护带来诸多挑战，如：
