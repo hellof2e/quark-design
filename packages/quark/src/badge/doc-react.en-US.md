@@ -112,10 +112,11 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | ------------------------ | ------------------------------- | ---------------------- |
 | `--badge-text-color`     | Badge text color                | `#FFFFFF`              |
 | `--badge-background`     | Badge background color          | `#F72626`              |
-| `--badge-padding-column` | Top and bottom padding of badge | `2px`                  |
-| `--badge-padding-row`    | Left and right padding of badge | `4px`                  |
-| `--badge-font-size`      | Badge font size                 | `10px`                 |
+| `--badge-padding-column` | Top and bottom padding of badge | `0`                  |
+| `--badge-padding-row`    | Left and right padding of badge | `normal: 4px` `big: 6px` |
+| `--badge-font-size`      | Badge font size                 | `normal: 10px` `label: 11px` `big: 12px` |
 | `--badge-font-weight`    | Badge font weight               | `500`                  |
-| `--badge-dot-size`       | Badge dot size                  | `6px`                  |
+| `--badge-line-height`    | Badge font line height          | `normal: 14px` `label: 16px` `big: 20px` |
+| `--badge-dot-size`       | Badge dot size                  | `8px`                  |
 | `--badge-font-family`    | Badge font-family               | `system default style` |
 | `--badge-border-color`   | Badge border color              | `#FFFFFF`              |
