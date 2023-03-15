@@ -24,7 +24,7 @@ import "quarkd/lib/empty";
 
 ### 自定义图片大小
 
-通过 `image-size` 属性图片的大小。
+通过 `imagesize` 属性图片的大小。
 
 ```html
 <!-- 不指定单位，默认为 px -->
