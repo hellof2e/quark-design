@@ -23,6 +23,7 @@ yarn run dev
 
 ## Command description (Maintainer release package use)
 
+STEP 1:
 ```bash
 // Publish the last digit version number of all sub-packages, such as 0.0.1 -> 0.0.2,
 yarn run release:patch
@@ -34,8 +35,9 @@ yarn run release:minor
 yarn run release:major
 ```
 
-Create tag
+STEP 2:
 
+Create tag
 ```
 git tag // First see if the latest tag is generated
 git push origin --tags

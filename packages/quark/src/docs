@@ -1,4 +1,25 @@
 # 更新日志
+### [1.0.46](https://github.com/hellof2e/quark-design/compare/v1.0.45...v1.0.46) (2023-03-14)
+
+
+### 🐞 Bug Fixes
+
+* 发布2步走，readme完善 ([bc1d4c4](https://github.com/hellof2e/quark-design/commit/bc1d4c49836aced7fa0d47c9b14cb5d6807b7f3e))
+
+
+### 🎉 Features
+
+* empty 组件图片宽度修改 191 ([2225907](https://github.com/hellof2e/quark-design/commit/2225907bf009c55914f4a2d182306b1cad71a646))
+* empty 组件图片宽度修改 191 ([d551950](https://github.com/hellof2e/quark-design/commit/d551950b37e8c5df8bd6d01e05df9bad9e3dd7fc))
+
+### [1.0.45](https://github.com/hellof2e/quark-design/compare/v1.0.44...v1.0.45) (2023-03-14)
+
+
+### 🎉 Features
+
+* 修复&优化空页面组件 ([94fd07b](https://github.com/hellof2e/quark-design/commit/94fd07b5d87236521cfbec81c1d171586631a4cc))
+* 修复&优化空页面组件 ([6c5cd5b](https://github.com/hellof2e/quark-design/commit/6c5cd5b226f4150521c0c91e8b68e1c8e2b706cd))
+
 ### [1.0.44](https://github.com/hellof2e/quark-design/compare/v1.0.43...v1.0.44) (2023-03-13)
 
 ### [1.0.42](https://github.com/hellof2e/quark-design/compare/v1.0.41...v1.0.42) (2023-03-10)
