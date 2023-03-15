@@ -159,7 +159,7 @@ export default () => {
 ```js
 type Rule = {
   message: string, // error message
-  validator: (value: string | number) => boolean, // rule
+  validator: (value: string & number) => boolean, // rule
 };
 ```
 

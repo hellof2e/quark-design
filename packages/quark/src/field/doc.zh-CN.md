@@ -159,7 +159,7 @@ import "quarkd/lib/field";
 ```js
 type Rule = {
   message: string, // 错误提示
-  validator: (value: string | number) => boolean, // 校验规则
+  validator: (value: string & number) => boolean, // 校验规则
 };
 ```
 
