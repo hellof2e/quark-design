@@ -1,4 +1,15 @@
 # 更新日志
+### [1.0.47](https://github.com/hellof2e/quark-design/compare/v1.0.46...v1.0.47) (2023-03-15)
+
+
+### 🎉 Features
+
+* doc ([28c08f7](https://github.com/hellof2e/quark-design/commit/28c08f75f9935d5fb5e3d015ba0de2f107cb3e36))
+* doc ([490bc84](https://github.com/hellof2e/quark-design/commit/490bc8447e29670ad23bb20f72c87099056b797a))
+* readme optimize ([a663ba7](https://github.com/hellof2e/quark-design/commit/a663ba7ee7bd9fe2708a5908b0b55cc68f11063a))
+* release v1.0.46 ([faaa861](https://github.com/hellof2e/quark-design/commit/faaa8614f6e040be4187a13f57d2352aa5a9ffab))
+* 文档 ([7bab59f](https://github.com/hellof2e/quark-design/commit/7bab59f0d5cb587281b3720283b66fe665924ddd))
+
 ### [1.0.46](https://github.com/hellof2e/quark-design/compare/v1.0.45...v1.0.46) (2023-03-14)
 
 
