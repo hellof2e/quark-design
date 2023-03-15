@@ -1,5 +1,6 @@
 import { FC } from "react";
 import reactify from "@quarkd/reactify";
+import "quarkd/lib/form";
 import { Rule } from "quarkd/lib/form";
 import { componentBaseInterface } from "../type";
 
