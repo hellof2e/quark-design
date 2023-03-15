@@ -4,8 +4,8 @@ module.exports = {
   // 自定义release tag 的信息
   releaseCommitMessageFormat: "chore(release): v{{currentTag}} :tada:",
   /**
-   * 自定义commit类型
-   * 有哪些类型；s
+   * 自定义 commit 类型
+   * 有哪些类型；
    * section：控制类型在CHANGELOG.md中的标题是什么
    * hidden：是否将此类型写入CHANGELOG.md
    */
