@@ -104,7 +104,7 @@ Windows 电脑运行 yarn run link 时乱码？
 │   ├── quark-react
 │   ├── quark-reactify
 │   ├── quark-icons
-│   ├── quark-vscode-extension
+│   ├── vscode-extension
 │   ├── quark-rollup-plugin-postcss
 │   └── quark-rollup-plugin-css-variable
 ├── scripts 脚本

@@ -30,7 +30,7 @@ const removeFile = async (url) => {
 const copy = async () => {
 	let configPath = `src/config.json`;
 	let configPkgPath = `package.json`;
-	let quarkuiDocsConfigPath = `${targetBaseUrl}/config.json`;
+	let quarkdDocsConfigPath = `${targetBaseUrl}/config.json`;
 
 	// 判断 site_docs 文件是否存在根路径中
 	const existsRoot = await fse.pathExists(targetBaseUrl);
@@ -73,14 +73,14 @@ const copy = async () => {
 		nav: [],
 		docs: [],
 	};
-	fse.outputJSON(quarkuiDocsConfigPath, obj, () => {
-		const docsConfig = fse.readJson(quarkuiDocsConfigPath);
+	fse.outputJSON(quarkdDocsConfigPath, obj, () => {
+		const docsConfig = fse.readJson(quarkdDocsConfigPath);
 		docsConfig.version = fromPkgConfig.version;
 		docsConfig.nav = fromConfig.nav;
 		docsConfig.docs = fromConfig.docs;
 		docsConfig.demoUrl = "/#";
 		fse
-			.writeJson(quarkuiDocsConfigPath, docsConfig, {
+			.writeJson(quarkdDocsConfigPath, docsConfig, {
 				spaces: 2,
 			})
 			.then(() => {

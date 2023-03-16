@@ -1,7 +1,7 @@
 {
-  "name": "quarkui-vscode-extension",
-  "displayName": "quarkui-vscode-extension",
-  "description": "quarkui extension for vscode",
+  "name": "quarkd-vscode-extension",
+  "displayName": "quarkd-vscode-extension",
+  "description": "quark design extension for vscode",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -23,7 +23,7 @@
     "TODObuild": "webpack --mode production --devtool hidden-source-map",
     "package": "yarn gen && yarn build && vsce package",
     "publish": "vsce publish",
-    "unpublish": "vsce unpublish quarkui.quarkui-vscode-extension",
+    "unpublish": "vsce unpublish quarkd.quarkd-vscode-extension",
     "vscode:prepublish": "yarn run package",
     "watch": "webpack --watch",
     "gen": "node ./scripts/createComponentMap.js",

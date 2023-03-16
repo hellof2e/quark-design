@@ -3,7 +3,7 @@ const fs = require("fs");
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const MarkdownIt = require("markdown-it")();
 
-const basePath = path.resolve(__dirname, "./../../AppQuarkui/src/packages");
+const basePath = path.resolve(__dirname, "./../../AppQuarkd/src/packages");
 const componentDirs = fs.readdirSync(basePath, "utf8");
 const TYPE_IDENTIFY_OPEN = "tbody_open";
 const TYPE_IDENTIFY_CLOSE = "tbody_close";

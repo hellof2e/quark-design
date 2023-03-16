@@ -28,7 +28,7 @@ const provideHover = (
         const { site } = componentMap[item];
 
         return new vscode.MarkdownString(
-          `[QuarkUI -> $(references) 请查看 ${bigCamelize(
+          `[QuarkDesign -> $(references) 请查看 ${bigCamelize(
             item
           )} 组件官方文档](${DOC}${site})\n`,
           true
@@ -65,8 +65,8 @@ const resolveCompletionItem = (item: vscode.CompletionItem) => {
   item.insertText = `<${item.label} ${propsText}>${tagSuffix}`;
 
   item.command = {
-    title: "quarkui-move-cursor",
-    command: "quarkui-move-cursor",
+    title: "quarkd-move-cursor",
+    command: "quarkd-move-cursor",
     arguments: [-tagSuffix.length - 2],
   };
   return item;
@@ -82,8 +82,8 @@ const moveCursor = (characterDelta: number) => {
 };
 
 export function activate(context: vscode.ExtensionContext) {
-  // 注册 quarkui-move-cursor 命令
-  vscode.commands.registerCommand("quarkui-move-cursor", moveCursor);
+  // 注册 quarkd-move-cursor 命令
+  vscode.commands.registerCommand("quarkd-move-cursor", moveCursor);
 
   // 给插件订阅命令
   context.subscriptions.push(

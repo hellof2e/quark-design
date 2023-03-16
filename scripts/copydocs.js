@@ -29,7 +29,7 @@ const copy = async () => {
   const quarkPath = path.resolve(__dirname, "../packages/quark");
   let configPath = path.resolve(__dirname, "../example/src/config.json");
   let configPkgPath = path.resolve(__dirname, `${quarkPath}/package.json`);
-  let quarkuiDocsConfigPath = `${targetBaseUrl}/config.json`;
+  let quarkdDocsConfigPath = `${targetBaseUrl}/config.json`;
   // let changelogPath = `${changeLogUrl}/CHANGELOG.md`;
 
   // 判断 site_docs 文件是否存在根路径中
@@ -96,14 +96,14 @@ const copy = async () => {
     nav: [],
     docs: [],
   };
-  fse.outputJSON(quarkuiDocsConfigPath, obj, () => {
-    const docsConfig = fse.readJson(quarkuiDocsConfigPath);
+  fse.outputJSON(quarkdDocsConfigPath, obj, () => {
+    const docsConfig = fse.readJson(quarkdDocsConfigPath);
     docsConfig.version = fromPkgConfig.version;
     docsConfig.nav = fromConfig.nav;
     docsConfig.docs = fromConfig.docs;
     docsConfig.demoUrl = "https://quark-design.hellobike.com/demo/demo.html#";
     fse
-      .writeJson(quarkuiDocsConfigPath, docsConfig, {
+      .writeJson(quarkdDocsConfigPath, docsConfig, {
         spaces: 2,
       })
       .then(() => {
