@@ -9,10 +9,10 @@
   align-items: center;
   justify-content: center;
   font-size: var(--badge-font-size, 10px);
-  line-height: var(--badge-font-size, 10px);
+  line-height: var(--badge-line-height, 14px);
   border-radius: 999px;
-  padding: var(--badge-padding-column, 2px) var(--badge-padding-row, 4px);
-  min-width: 14px;
+  padding: var(--badge-padding-column, 0px) var(--badge-padding-row, 4px);
+  /* min-width: 14px; */
   font-weight: var(--badge-font-weight, 500);
   color: var(--badge-text-color, #fff);
   background: var(--badge-background, quark-dangerColor);
@@ -29,8 +29,8 @@
 }
 
 :host([type="dot"]) .quark-badge-dealclass {
-  height: var(--badge-dot-size, 6px);
-  width: var(--badge-dot-size, 6px);
+  height: var(--badge-dot-size, 8px);
+  width: var(--badge-dot-size, 8px);
   border-radius: 50%;
   min-width: 0;
   padding: 0;
@@ -41,13 +41,16 @@
 }
 
 :host([type="label"]) .quark-badge-dealclass {
+  font-size: var(--badge-font-size, 11px);
+  line-height: var(--badge-line-height, 16px);
+  padding: var(--badge-padding-column, 0px) var(--badge-padding-row, 4px);
   border-radius: 999px 999px 999px 1px;
 }
 
 :host([size="big"]) .quark-badge-dealclass {
-  padding: var(--badge-padding-column, 4px) var(--badge-padding-row, 6px);
+  padding: var(--badge-padding-column, 0px) var(--badge-padding-row, 6px);
   font-size: var(--badge-font-size, 12px);
-  line-height: var(--badge-text-size, 12px);
+  line-height: var(--badge-line-height, 20px);
   min-width: 20px;
 }
 

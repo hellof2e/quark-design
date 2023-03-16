@@ -112,10 +112,11 @@ import "quarkd/lib/badge";
 | ------------------------ | -------------------- | ---------- |
 | `--badge-text-color`     | badge 文字颜色       | `#FFFFFF`  |
 | `--badge-background`     | badge 背景           | `#F72626`  |
-| `--badge-padding-column` | badge 竖直方向内边距 | `2px`      |
-| `--badge-padding-row`    | badge 水平方向内边距 | `4px`      |
-| `--badge-font-size`      | badge 文字大小       | `10px`     |
-| `--badge-font-weight`    | badge 文字粗细       | `500`      |
-| `--badge-dot-size`       | badge dot 模式大小   | `6px`      |
-| `--badge-font-family`    | badge font-family    | `跟随系统` |
-| `--badge-border-color`   | badge 边框颜色       | `#FFFFFF`  |
+| `--badge-padding-column` | badge 竖直方向内边距 | `0`      |
+| `--badge-padding-row`    | badge 水平方向内边距 | `normal: 4px` `big: 6px` |
+| `--badge-font-size`      | badge 文字大小      | `normal: 10px` `label: 11px` `big: 12px` |
+| `--badge-font-weight`    | badge 文字粗细      | `500`      |
+| `--badge-line-height`    | badge 文字行高      | `normal: 14px` `label: 16px` `big: 20px` |
+| `--badge-dot-size`       | badge dot 模式大小  | `8px`      |
+| `--badge-font-family`    | badge font-family  | `跟随系统` |
+| `--badge-border-color`   | badge 边框颜色      | `#FFFFFF`  |
