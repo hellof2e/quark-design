@@ -95,7 +95,7 @@
   transform: translateZ(0);
 }
 
-:host .quark-picker-mask-top::after {
+/* :host .quark-picker-mask-top::after {
   position: absolute;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -121,7 +121,7 @@
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
   border-bottom: 2px solid #f5f6f7;
-}
+} */
 
 .quark-picker-mask-top {
   position: absolute;
@@ -141,6 +141,21 @@
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.8)
   );
+}
+
+:host .quark-picker-current {
+  position: absolute;
+  top: 79px;
+  height: 52px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+:host .quark-picker-current .quark-picker-current-mask {
+  height: 100%;
+  background-color: #f7f9fa;
+  border-radius: 8px;
 }
 
 :host .quark-picker-wheel-wrapper {
@@ -167,6 +182,7 @@
 }
 
 :host .quark-picker-wheel-item {
+  font-family: PingFangSC-Semibold, PingFang SC;
   font-size: 16px;
   list-style: none;
   height: 44px;
