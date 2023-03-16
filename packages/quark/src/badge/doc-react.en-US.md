@@ -4,6 +4,9 @@
 
 When new content or pending information is available, a red dot, number or desc show on the top-right.
 
+
+ps: Since the minimum font size of the browser is 12px, there is a slight error in the height displayed in the demo.
+
 ### Install
 
 ```tsx
