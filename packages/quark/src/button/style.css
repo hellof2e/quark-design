@@ -48,8 +48,8 @@
 }
 
 :host(:not([type])) {
-  color: var(--button-color, #666);
-  border: 1px solid rgb(204, 204, 204);
+  color: var(--button-color, #5A6066);
+  border: 1px solid #E1E6EB;
 }
 
 :host([type="primary"]) {
@@ -79,25 +79,25 @@
 :host([plain][type="primary"]) {
   color: var(--button-color, quark-primaryColor);
   border-color: var(--quark-theme-color, quark-borderPrimaryColor);
-  background: var(--button-fill-base-color, quark-fillBaseColor);
+  background: var(--button-fill-base-color, transparent);
 }
 
 :host([plain][type="warning"]) {
   color: var(--button-color, quark-warningColor);
   border-color: var(--quark-warning-color, quark-borderWarningColor);
-  background: var(--button-fill-base-color, quark-fillBaseColor);
+  background: var(--button-fill-base-color, transparent);
 }
 
 :host([plain][type="danger"]) {
   color: var(--button-color, quark-dangerColor);
   border-color: var(--quark-danger-color, quark-borderDangerColor);
-  background: var(--button-fill-base-color, quark-fillBaseColor);
+  background: var(--button-fill-base-color, transparent);
 }
 
 :host([plain][type="success"]) {
   color: var(--button-color, quark-successColor);
   border-color: var(--quark-success-color, quark-borderSuccessColor);
-  background: var(--button-fill-base-color, quark-fillBaseColor);
+  background: var(--button-fill-base-color, transparent);
 }
 
 :host([loading]) {
@@ -107,8 +107,14 @@
 
 :host([disabled]) {
   cursor: not-allowed;
-  opacity: 0.68;
+  /* opacity: 0.68; */
   user-select: none;
+  color: #BCC4CC;
+}
+
+:host([disabled][type]) {
+  background: #D3DAE0;
+  color: #fff;
 }
 
 :host(:active)::before {

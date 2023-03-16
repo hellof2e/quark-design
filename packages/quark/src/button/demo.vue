@@ -41,9 +41,9 @@
       <quark-button type="primary" disabled>{{
         translate("title.disabled")
       }}</quark-button>
-      <quark-button type="success" disabled>{{
+      <!-- <quark-button type="success" disabled>{{
         translate("title.disabled")
-      }}</quark-button>
+      }}</quark-button> -->
       <quark-button disabled>{{ translate("title.disabled") }}</quark-button>
     </div>
 
