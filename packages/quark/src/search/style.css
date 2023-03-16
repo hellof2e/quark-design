@@ -3,10 +3,9 @@
 }
 
 .quark-search {
-  @include safe-padding-top();
   display: flex;
   background: var(--search-background, #fff);
-  padding: 9px 16px;
+  padding: 6px 16px 6px 12px;
 }
 
 .quark-search-content {
@@ -14,7 +13,7 @@
   flex: 1;
   height: 32px;
   background: #f0f3f5;
-  border-radius: quark-radiusLg;
+  border-radius: 8px;
   padding: 6px 10px;
   display: flex;
 }
@@ -24,7 +23,7 @@
 }
 
 .quark-search-content-left-icon {
-  margin-right: 4px;
+  margin-right: 8px;
   display: flex;
   align-items: center;
 }
@@ -128,9 +127,4 @@ input::-webkit-search-cancel-button {
 
 .hide {
   display: none;
-}
-
-.quark-search slot {
-  display: flex;
-  align-items: center;
 }
