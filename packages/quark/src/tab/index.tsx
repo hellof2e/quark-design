@@ -307,7 +307,8 @@ class QuarkTabs extends QuarkElement {
     }
     lineWidth = parseInt(lineWidth, 10);
     const tranX = labelOffset + (labelWidth - lineWidth) * 0.5;
-    return `width:${lineWidth}px;transform:translateX(${tranX}px)`;
+    // 根据设计稿，左右6px padding
+    return `width:${lineWidth - 12}px;transform:translateX(${tranX + 6}px)`;
   };
 
   handleClick = (e: any, item: any) => {
