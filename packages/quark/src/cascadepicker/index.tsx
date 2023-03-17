@@ -238,6 +238,9 @@ class QuarkCascadePicker extends QuarkElement {
           <div class="quark-cascade-picker-content">
             <div class="quark-cascade-picker-mask-top"></div>
             <div class="quark-cascade-picker-mask-bottom"></div>
+            <div class="quark-picker-current">
+              <div class="quark-picker-current-mask"></div>
+            </div>
             <div
               class="quark-cascade-picker-wheel-wrapper"
               ref={this.wheelWrapper}
@@ -247,7 +250,7 @@ class QuarkCascadePicker extends QuarkElement {
           </div>
           {!this.bottomhidden && (
             <div class="quark-cascade-picker-bottom">
-              <quark-button type="primary" onclick={this.confirm}>
+              <quark-button type="primary" size="big" onclick={this.confirm}>
                 {Locale.current.confirm}
               </quark-button>
             </div>
