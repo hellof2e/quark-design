@@ -94,34 +94,6 @@
   transform: translateZ(0);
 }
 
-:host .quark-cascade-picker-mask-top::after {
-  position: absolute;
-  box-sizing: border-box;
-  box-sizing: border-box;
-  content: " ";
-  pointer-events: none;
-  right: 16px;
-  bottom: 0;
-  left: 16px;
-  transform: scaleY(0.5);
-  transform: scaleY(0.5);
-  border-bottom: 2px solid #f5f6f7;
-}
-
-:host .quark-cascade-picker-mask-bottom::before {
-  position: absolute;
-  box-sizing: border-box;
-  box-sizing: border-box;
-  content: " ";
-  pointer-events: none;
-  right: 16px;
-  top: 0;
-  left: 16px;
-  transform: scaleY(0.5);
-  transform: scaleY(0.5);
-  border-bottom: 2px solid #f5f6f7;
-}
-
 :host .quark-cascade-picker-mask-top {
   position: absolute;
   top: 0;
@@ -140,6 +112,21 @@
     rgb(255 255 255 / 30%),
     rgb(255 255 255 / 80%)
   );
+}
+
+:host .quark-picker-current {
+  position: absolute;
+  top: 79px;
+  height: 52px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+:host .quark-picker-current .quark-picker-current-mask {
+  height: 100%;
+  background-color: #f7f9fa;
+  border-radius: 8px;
 }
 
 :host .quark-cascade-picker-wheel-wrapper {
