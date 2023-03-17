@@ -105,7 +105,7 @@ Execute the yarn run link command in git bash
 │   ├── quark-react
 │   ├── quark-reactify
 │   ├── quark-icons
-│   ├── quark-vscode-extension
+│   ├── vscode-extension
 │   ├── quark-rollup-plugin-postcss
 │   └── quark-rollup-plugin-css-variable
 ├── scripts 脚本

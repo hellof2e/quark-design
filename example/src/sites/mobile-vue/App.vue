@@ -35,7 +35,7 @@ if (isMobile && import.meta.env.DEV) {
 export default defineComponent({
 	name: "app",
 	setup() {
-		const title = ref("QuarkUI");
+		const title = ref("QuarkD");
 		// 获取当前路由
 		const route = useRoute();
 		const router = useRouter();

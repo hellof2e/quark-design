@@ -1,4 +1,4 @@
-### quarkui 语言包
+### Quark design 语言包
 
 目前支持的语言:
 

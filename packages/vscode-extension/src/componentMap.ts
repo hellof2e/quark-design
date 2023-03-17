@@ -1,184 +1,311 @@
-import { ComponentDesc } from "./componentDesc";
+
+import { ComponentDesc } from './componentDesc';
 
 export const componentMap: Record<string, ComponentDesc> = {
-  actionsheet: {
-    site: "/actionsheet",
-    props: ["title=''"],
+  "actionsheet": {
+    "site": "/actionsheet",
+    "props": [
+      "title=''"
+    ]
   },
-  badge: {
-    site: "/badge",
-    props: ["type=''"],
+  "badge": {
+    "site": "/badge",
+    "props": [
+      "type=''"
+    ]
   },
-  button: {
-    site: "/button",
-    props: ["type=''"],
+  "button": {
+    "site": "/button",
+    "props": [
+      "type=''"
+    ]
   },
-  card: {
-    site: "/card",
-    props: ["--card-height=''"],
+  "card": {
+    "site": "/card",
+    "props": [
+      "title=''"
+    ]
   },
-  cascadepicker: {
-    site: "/cascadepicker",
-    props: ["open=''"],
+  "cascadepicker": {
+    "site": "/cascadepicker",
+    "props": [
+      "open=''"
+    ]
   },
-  cell: {
-    site: "/cell",
-    props: ["title=''"],
+  "cell": {
+    "site": "/cell",
+    "props": [
+      "title=''"
+    ]
   },
-  checkbox: {
-    site: "/checkbox",
-    props: ["shape=''"],
+  "checkbox": {
+    "site": "/checkbox",
+    "props": [
+      "shape=''"
+    ]
   },
-  dialog: {
-    site: "/dialog",
-    props: ["title=''"],
+  "collapse": {
+    "site": "/collapse",
+    "props": [
+      "title=''"
+    ]
   },
-  empty: {
-    site: "/empty",
-    props: ["title=''"],
+  "countdown": {
+    "site": "/countdown",
+    "props": [
+      "time=''"
+    ]
   },
-  field: {
-    site: "/field",
-    props: ["label=''"],
+  "datetimepicker": {
+    "site": "/datetimepicker",
+    "props": [
+      "type=''"
+    ]
   },
-  form: {
-    site: "/form",
-    props: ["value=''"],
+  "dialog": {
+    "site": "/dialog",
+    "props": [
+      "title=''"
+    ]
   },
-  grid: {
-    site: "/grid",
-    props: ["column=''"],
+  "empty": {
+    "site": "/empty",
+    "props": [
+      "title=''"
+    ]
   },
-  icon: {
-    site: "/icon",
-    props: ["name=''"],
+  "field": {
+    "site": "/field",
+    "props": [
+      "label=''"
+    ]
   },
-  image: {
-    site: "/image",
-    props: ["--image-height=''"],
+  "form": {
+    "site": "/form",
+    "props": [
+      "submit=''"
+    ]
   },
-  imagepreview: {
-    site: "/imagepreview",
-    props: ["open=''"],
+  "grid": {
+    "site": "/grid",
+    "props": [
+      "column=''"
+    ]
   },
-  list: {
-    site: "/list",
-    props: ["error=''"],
+  "icon": {
+    "site": "/icon",
+    "props": [
+      "color=''"
+    ]
   },
-  loading: {
-    site: "/loading",
-    props: ["type=''"],
+  "image": {
+    "site": "/image",
+    "props": [
+      "width=''"
+    ]
   },
-  marketdialog: {
-    site: "/marketdialog",
-    props: ["open=''"],
+  "imagepreview": {
+    "site": "/imagepreview",
+    "props": [
+      "open=''"
+    ]
   },
-  marquee: {
-    site: "/marquee",
-    props: ["title=''"],
+  "list": {
+    "site": "/list",
+    "props": [
+      "error=''"
+    ]
   },
-  navbar: {
-    site: "/navbar",
-    props: ["title=''"],
+  "loading": {
+    "site": "/loading",
+    "props": [
+      "type=''"
+    ]
   },
-  noticebar: {
-    site: "/noticebar",
-    props: ["text=''"],
+  "marketdialog": {
+    "site": "/marketdialog",
+    "props": [
+      "open=''"
+    ]
   },
-  overlay: {
-    site: "/overlay",
-    props: ["open=''"],
+  "marquee": {
+    "site": "/marquee",
+    "props": [
+      "title=''"
+    ]
   },
-  picker: {
-    site: "/picker",
-    props: ["open=''"],
+  "nativeuploader": {
+    "site": "/nativeuploader",
+    "props": [
+      "readonly=''"
+    ]
   },
-  popover: {
-    site: "/popover",
-    props: ["open=''"],
+  "navbar": {
+    "site": "/navbar",
+    "props": [
+      "title=''"
+    ]
   },
-  popup: {
-    site: "/popup",
-    props: ["position=''"],
+  "noticebar": {
+    "site": "/noticebar",
+    "props": [
+      "text=''"
+    ]
   },
-  progress: {
-    site: "/progress",
-    props: ["value=''"],
+  "overlay": {
+    "site": "/overlay",
+    "props": [
+      "open=''"
+    ]
   },
-  pullrefresh: {
-    site: "/pullrefresh",
-    props: ["dark=''"],
+  "picker": {
+    "site": "/picker",
+    "props": [
+      "open=''"
+    ]
   },
-  radio: {
-    site: "/radio",
-    props: ["shape=''"],
+  "popover": {
+    "site": "/popover",
+    "props": [
+      "open=''"
+    ]
   },
-  rate: {
-    site: "/rate",
-    props: ["defaultvalue=''"],
+  "popup": {
+    "site": "/popup",
+    "props": [
+      "open=''"
+    ]
   },
-  search: {
-    site: "/search",
-    props: ["value=''"],
+  "popupextra": {
+    "site": "/popupextra",
+    "props": [
+      "open=''"
+    ]
   },
-  sharesheet: {
-    site: "/sharesheet",
-    props: ["title=''"],
+  "progress": {
+    "site": "/progress",
+    "props": [
+      "value=''"
+    ]
   },
-  skeleton: {
-    site: "/skeleton",
-    props: ["hide=''"],
+  "pullrefresh": {
+    "site": "/pullrefresh",
+    "props": [
+      "dark=''"
+    ]
   },
-  stepper: {
-    site: "/stepper",
-    props: ["min=''"],
+  "radio": {
+    "site": "/radio",
+    "props": [
+      "shape=''"
+    ]
   },
-  steps: {
-    site: "/steps",
-    props: ["direction=''"],
+  "rate": {
+    "site": "/rate",
+    "props": [
+      "defaultvalue=''"
+    ]
   },
-  sticky: {
-    site: "/sticky",
-    props: ["offsettop=''"],
+  "search": {
+    "site": "/search",
+    "props": [
+      "value=''"
+    ]
   },
-  swipe: {
-    site: "/swipe",
-    props: ["type=''"],
+  "sharesheet": {
+    "site": "/sharesheet",
+    "props": [
+      "options=''"
+    ]
   },
-  switch: {
-    site: "/switch",
-    props: ["checked=''"],
+  "skeleton": {
+    "site": "/skeleton",
+    "props": [
+      "avatar=''"
+    ]
   },
-  tab: {
-    site: "/tab",
-    props: ["activekey=''"],
+  "stepper": {
+    "site": "/stepper",
+    "props": [
+      "min=''"
+    ]
   },
-  tabbar: {
-    site: "/tabbar",
-    props: ["--tabbar-z-index=''"],
+  "steps": {
+    "site": "/steps",
+    "props": [
+      "direction=''"
+    ]
   },
-  tabbaritem: {
-    site: "/tabbaritem",
-    props: [""],
+  "sticky": {
+    "site": "/sticky",
+    "props": [
+      "offsettop=''"
+    ]
   },
-  tag: {
-    site: "/tag",
-    props: ["type=''"],
+  "swipe": {
+    "site": "/swipe",
+    "props": [
+      "type=''"
+    ]
   },
-  textarea: {
-    site: "/textarea",
-    props: ["value=''"],
+  "switch": {
+    "site": "/switch",
+    "props": [
+      "checked=''"
+    ]
   },
-  toast: {
-    site: "/toast",
-    props: ["Toast.text=''"],
+  "tab": {
+    "site": "/tab",
+    "props": [
+      "activekey=''"
+    ]
   },
-  tooltip: {
-    site: "/tooltip",
-    props: ["open=''"],
+  "tabbar": {
+    "site": "/tabbar",
+    "props": [
+      "fixed=''"
+    ]
   },
-  uploader: {
-    site: "/uploader",
-    props: ["--uploader-width=''"],
+  "tabbaritem": {
+    "site": "/tabbaritem",
+    "props": [
+      ""
+    ]
   },
-};
+  "tag": {
+    "site": "/tag",
+    "props": [
+      "type=''"
+    ]
+  },
+  "textarea": {
+    "site": "/textarea",
+    "props": [
+      "value=''"
+    ]
+  },
+  "toast": {
+    "site": "/toast",
+    "props": [
+      "Toast.text=''"
+    ]
+  },
+  "tooltip": {
+    "site": "/tooltip",
+    "props": [
+      "open=''"
+    ]
+  },
+  "uploader": {
+    "site": "/uploader",
+    "props": [
+      "accept=''"
+    ]
+  },
+  "virtuallist": {
+    "site": "/virtuallist",
+    "props": [
+      "itemheight=''"
+    ]
+  }
+}
