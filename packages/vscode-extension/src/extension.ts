@@ -3,7 +3,7 @@ import { kebabCase, bigCamelize } from "./utils";
 import { componentMap } from "./componentMap";
 import { ComponentDesc } from "./componentDesc";
 
-const DOC = "";
+const VUEDOC = "https://quark-design.hellobike.com/#/zh-CN/component/button";
 
 const LINK_REG = /(?<=<quark-)([\w-]+)/g;
 const BIG_LINK_REG = /(?<=<Quark-)([\w-])+/g;
@@ -28,9 +28,9 @@ const provideHover = (
         const { site } = componentMap[item];
 
         return new vscode.MarkdownString(
-          `[QuarkDesign -> $(references) 请查看 ${bigCamelize(
+          `Quark Design -> ${bigCamelize(
             item
-          )} 组件官方文档](${DOC}${site})\n`,
+          )} 组件文档 [[Quark]](${VUEDOC}${site})\n`,
           true
         );
       });
