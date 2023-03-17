@@ -1,71 +1,23 @@
-# quarkd-vscode-extension README
+# Quark design 组件库 vscode 插件
 
-This is the README for your extension "quarkd-vscode-extension". After writing up a brief description, we recommend including the following sections.
+开发本插件旨在帮助开发者更加有效率的使用 Quarkd 来开发项目
 
-## Features
+## 特征
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 快速查看文档
+- 代码自动补全
 
-For example if there is an image subfolder under your extension project workspace:
+## 文档
 
-\!\[feature X\]\(images/feature-x.png\)
+### 用法
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- 移动鼠标到 Quarkd 的标签上
+- 能够看到除了提示的 TS 类型之外，还有一行查看当前组件文档的提示，点击可以跳转到对应组件的文档，方便开发者查阅
 
-## Requirements
+## 自动补全
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+在输入 `quark-` 时，会出现组件列表提示，这时，可选择任意需要的组件，然后点击回车自动补全，省时又省力～
 
-## Extension Settings
+## 许可
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-- `myExtension.enable`: enable/disable this extension
-- `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-- Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-- Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT
