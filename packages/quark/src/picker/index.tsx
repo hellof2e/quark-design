@@ -135,6 +135,7 @@ class QuarkPicker extends QuarkElement {
           selectedIndex: column.defaultIndex || 0,
           wheelWrapperClass: "quark-picker-wheel-scroll",
           wheelItemClass: "quark-picker-wheel-item",
+          // rotate: 0,
         },
       });
       this.wheels[i].on(
@@ -192,13 +193,16 @@ class QuarkPicker extends QuarkElement {
           <div class="quark-picker-content">
             <div class="quark-picker-mask-top"></div>
             <div class="quark-picker-mask-bottom"></div>
+            <div class="quark-picker-current">
+              <div class="quark-picker-current-mask"></div>
+            </div>
             <div class="quark-picker-wheel-wrapper" ref={this.wheelWrapper}>
               {this.renderWheel()}
             </div>
           </div>
           {!this.bottomhidden && (
             <div class="quark-picker-bottom">
-              <quark-button type="primary" onclick={this.confirm}>
+              <quark-button type="primary" size="big" onclick={this.confirm}>
                 {this.confirmtext || Locale.current.confirm}
               </quark-button>
             </div>
