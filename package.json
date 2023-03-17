@@ -39,7 +39,6 @@
     "commitizen": "^4.2.4",
     "commitlint": "^17.0.3",
     "commitlint-config-cz": "^0.13.3",
-    "cz-customizable": "^6.9.0",
     "eslint": "^7.23.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.8.0",
@@ -54,11 +53,6 @@
     "shelljs": "^0.8.5",
     "vue": "^3.0.5",
     "vue-router": "^4.0.4"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    }
   },
   "lint-staged": {
     "src/**/*.{vue, js,jsx,ts,tsx,json}": [

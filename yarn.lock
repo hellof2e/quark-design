@@ -5250,18 +5250,6 @@ cz-conventional-changelog@3.3.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-customizable@^6.9.0:
-  version "6.9.1"
-  resolved "https://registry.npmjs.org/cz-customizable/-/cz-customizable-6.9.1.tgz#43382980769f8a3a35345a1dddcdfe24c1c88f05"
-  integrity sha512-syPyuOyV/+cEXbky8x/MIyWvJmzwhucdI1CA3swydxrMz5ey02HQ1zVDkMmtWT/cpKfELCn7uw2w8WUvXkr56g==
-  dependencies:
-    editor "1.0.0"
-    find-config "^1.0.0"
-    inquirer "^8.0.0"
-    lodash "^4.17.19"
-    temp "^0.9.0"
-    word-wrap "^1.2.3"
-
 dargs@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/dargs/-/dargs-7.0.0.tgz#04015c41de0bcb69ec84050f3d9be0caf8d6d5cc"
