@@ -8,7 +8,7 @@
 
 <div align="center">
   
-  下一代前端组件库，它可以在任意框架或无框架中使用。
+  Next-gen frontend component library, it can be used in any framework or no framework.
   
 </div>
 
