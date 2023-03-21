@@ -2,9 +2,9 @@
 
 We are very welcome to the community developers to make contributions to Quark Design. Before submitting a contribution, please take some time to read the following content to ensure that the contribution is in line with the specifications and can help the community.
 
-<p align="center">
+<p>
   <span>English |</span>
-	<a href="https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.zh-CN.md">简体中文</a>
+  <a href="https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.zh-CN.md">简体中文</a>
 </p>
 
 ## Development configuration
