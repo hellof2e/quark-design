@@ -62,8 +62,6 @@
     "type": "git",
     "url": "https://github.com/hellof2e/quark-design.git"
   },
-  "author": "",
-  "license": "ISC",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
