@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://quark-design.hellobike.com/">
-    <img width="160" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
+    <img width="120" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
   </a>
 </p>
 
@@ -22,19 +22,8 @@
   <a href="https://github.com/hellof2e/quark-design">
     <img src="https://img.shields.io/github/contributors/hellof2e/quark-design" alt="contributors">
   </a>
-  <a href="https://github.com/hellof2e/quark-design">
-    <img src="https://img.shields.io/github/issues-closed/hellof2e/quark-design" alt="issues">
-  </a>
-</p>
 
-<p align="center">
-  <a href="https://www.webcomponents.org/element/quarkd">
-    <img src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" alt="Published on webcomponents.org">
-  </a>
-  
-  <a href="https://github.com/hellof2e/quark-design/actions/workflows/sync-docs.yml">
-    <img src="https://github.com/hellof2e/quark-design/actions/workflows/deploy2io.yml/badge.svg?branch=main" alt="build status">
-  </a>
+  <a href="https://github.com/hellof2e/quark-design/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/quark-design.svg" alt="License"></a>
 </p>
 
 <p align="center">
