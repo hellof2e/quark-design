@@ -4,7 +4,7 @@
 
 ## 开发配置
 
-- 环境要求： `node ^14.17 || >= 16.0.0`, `yarn >= 1.22`
+- 环境要求： `node >= 16.0.0`, `yarn >= 1.22`
 
 ## 开始
 
@@ -21,7 +21,23 @@ yarn run dev
 yarn run dev
 ```
 
-## 命令说明（核心维护者发包使用）
+## 常见问题
+
+如何清除子项目的缓存？
+
+```
+yarn clean
+```
+
+Windows 电脑运行 yarn run link 时乱码？
+
+```
+// 在 git bash 中执行 yarn run link 命令
+```
+
+---------
+## 以下内容，核心开发者阅读
+##### 命令说明
 
 第一步：
 ```bash
@@ -43,76 +59,3 @@ git push origin --tags
 ```
 
 然后 github 更新 [release](https://github.com/hellof2e/quark-design/releases/new)
-
-## 提交 commit
-
-整个 Quark Design 仓库遵从 [Angular Style Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)，在输入 commit message 的时候请务必遵从此规范。
-
-Title Format
-type(ComponentName?)：commit message
-
-分支管理：
-
-例如：
-
-- docs: fix type in quickstart
-- build: optimize build speed
-- fix(Button): incorrect style
-- feat(Button): add color prop
-
-## 常见问题
-
-如何清除子项目的缓存？
-
-```
-yarn clean
-```
-
-Windows 电脑运行 yarn run link 时乱码？
-
-```
-// 在 git bash 中执行 yarn run link 命令
-```
-
-## 结构
-
-```
-├── CONTRIBUTING.MD
-├── CONTRIBUTING.zh-CN.MD
-├── README.MD
-├── README.zh-CN.MD
-├── demo.html
-├── example
-│   ├── babel.config.js
-│   ├── dist
-│   ├── global-css.js
-│   ├── package.json
-│   ├── scripts
-│   ├── siteDist
-│   ├── src
-│   ├── tsconfig.json
-│   ├── vite.config.ts
-│   ├── yarn-error.log
-│   └── yarn.lock
-├── index.html
-├── lerna.json lerna的核心 配置
-├── LICENSE
-├── package.json
-├── packages 所有子包
-│   ├── quark
-│   ├── quark-core
-│   ├── quark-react
-│   ├── quark-reactify
-│   ├── quark-icons
-│   ├── vscode-extension
-│   ├── quark-rollup-plugin-postcss
-│   └── quark-rollup-plugin-css-variable
-├── scripts 脚本
-    ├── copydocs.js
-    ├── dev.js
-│   ├── build.js
-│   ├── link.js
-│   ├── publish.js
-│   └── push2io.js
-└── yarn.lock
-```
