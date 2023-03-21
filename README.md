@@ -38,182 +38,23 @@
 </p>
 
 <p align="center">
-  <span>简体中文 | </span>
-  <a href="https://github.com/hellof2e/quark-design/blob/main/README.en-US.md">
-  English
+  <span>English | </span>
+  <a href="https://github.com/hellof2e/quark-design/blob/main/README.zh-CN.md">
+  简体中文
   </a>
 </p>
 
-## 🤔 动机
+------
+## Documentation
 
-技术框架的出现，提升了开发体验和页面性能，但技术框架的不断迭代更新，为项目的维护带来诸多挑战，如：
+For full documentation, visit [quark-design.hellobike.com](https://quark-design.hellobike.com)
 
-- 组件无法跨技术框架（React、Vue等）使用
-- 技术框架一旦升级，组件必须配合迭代升级
+## Community
 
-因此，我们开发了这套 UI 框架，旨在让其与技术框架隔离（技术栈无关），让视觉组件避免落入技术栈迭代而迭代的怪圈。
+For help, discussion about best practices, or any other conversation that would benefit from being searchable:
 
-[相关文章介绍](https://juejin.cn/post/7160483409691672606)
+[Discuss Quark design on Github](https://github.com/hellof2e/quark-design/discussions)
 
-## ✨ 特性
 
-- 支持 Vue、React、Angular 等各类框架/无框架。
-- 完全覆盖您所需要的各种通用组件。
-- 支持按需引用。
-- 详尽的文档和示例。
-- 单元测试覆盖。
-- 支持 TypeScript。
-- 支持定制主题。
-- 国际化语言支持。
-- 支持服务端渲染（Beta）。
 
-| framework      | CDN     | 打包/构建工具  | TypeScript | 开源时间 | 支持 Vue | 支持 React | 支持 Angular | 支持 JQuery | 支持 svelte | 支持 无框架 |
-| -------------- | ------- | -------------- | ---------- | -------- | --- | --- | --- | --- | --- | --- |
-| Quark          | 80.1kb  | Rollup         | √          | 2022     | √ | √ | √ | √ | √ | √ |
-| Vant           | 183kb   | Vite(Vant-cli) | √          | 2017     | √ | --- | --- | --- | --- | --- |
-| Nutui          | 275.5kb | Vite           | √          | 2018     | √ | --- | --- | --- | --- | --- |
-| TDesign Mobile | -       | Gulp           | √          | 2021     | --- | √ | --- | --- | --- | --- |
-| Antd Mobile    | -       | Gulp           | √          | 2016     | --- | √ | --- | --- | --- | --- |
-
-*上面CDN体积对比包含各类组件库能正常运行展示所需的运行时、js、css*
-
-## 🔗 CDN 使用
-
-使用 quark 最简单的方式是直接在 HTML 文件中引入 CDN 链接，之后你可以全局中任意使用，由于 quark 做到了 CSS-IN-JS，因此您只需加载下面链接即可。
-
-```
-<!-- 只有 80kb -->
-<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
-```
-
-## 📦 如何使用？
-
-```bash
-# Vue / React / Preact / Angular / JQ / 其他技术栈或无框架项目皆可使用
-npm i quarkd --save
-```
-
-<details>
-<summary>React usage notes</summary>
-
-由于 `quarkd` 提供的组件均为原生自定义元素（类比 div），因此组件内派发（dispatch）的事件需要使用 `addEventLisener` 接收，比如 `dialog` 组件内部的自定义关闭事件 `close`。而 Vue 技术栈则可以直接使用 `@xx` 即可接收原生派发的事件，因此不需要使用 `addEventLisener` 接收。
-
-为了提升开发体验，我们对 `quarkd` 进行了 Reactify(React 化)！所以，我们建议您在 React/Preact 项目中使用 `@quarkd/quark-react`！
-</details>
-
-```bash
-# React 推荐使用
-npm i @quarkd/quark-react --save
-```
-
-## 🔨 示例
-
-Vue (任何版本)
-
-```jsx
-import "quarkd/lib/button";
-
-<quark-button type="primary">Button</quark-button>;
-```
-
-React (任何版本)
-
-```jsx
-import { Button } from "@quarkd/quark-react";
-
-const App = () => (
-  <>
-    <Button type="primary">Button</Button>
-  </>
-);
-```
-
-Angular (任何版本)
-
-```jsx
-import { Component } from '@angular/core
-import "quarkd/lib/button"
-
-@Component({
-  template: `<quark-button loading="{{loading}}"" (click)="handleClick()">
-    Button
-  </quark-button>`
-})
-```
-
-其它 H5 项目
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <!-- 1. CDN, import all components -->
-  <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
-  <body>
-  
-    <!-- 2. use it -->
-    <quark-button loading="true">Button</quark-button>
-  
-  </body>
-</html>
-```
-
-## 🎨 定制主题
-
-参考 [定制主题](https://quark-design.hellobike.com/#/zh-CN/guide/theme) 文档。
-
-## 🌍 国际化
-
-参考 [国际化文档](https://quark-design.hellobike.com/#/zh-CN/guide/internationalization)。
-
-## 🖥 兼容环境
-
-现代浏览器和 IE11+（需要 [polyfills](https://www.webcomponents.org/polyfills)）
-
-## 注意
-
-- Vue 项目开发环境如果出现warning，别担心
-```html
-<!-- vue2: -->
-Unknown custom element:
-<quark-icon>
-  - did you register the component correctly? For recursive components, make
-  sure to provide the "name" option.
-
-<!-- vue3 -->
-[Vue warn]: Failed to resolve component: quark-icon
-</quark-icon>
-```
-
-这是由于 Vue 组件的语法部分参考了自定义元素，为了避免与 Vue 组件产生冲突，需要将自定义元素忽略！请在工程中注入如下代码即可：
-
-```tsx
-// Vue2
-Vue.config.ignoredElements = [/^quark-/];
-
-// Vue3
-// https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
-const app = createApp({});
-app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith("quark-");
-```
-
-如果您使用的是 vite，修改 vite.config.js:
-
-```tsx
-import vue from "@vitejs/plugin-vue";
-
-export default {
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag.startsWith("quark-"),
-        },
-      },
-    }),
-  ],
-};
-```
-
-## 👋 Contributor 贡献代码 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-参考 [本地开发文档](./CONTRIBUTING.zh-CN.md)
+## If you're interested in contributing to quark design, please read our [contributing docs](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md)
