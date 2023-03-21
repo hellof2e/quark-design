@@ -13,9 +13,7 @@
 </div>
 
 <p align="center">
-  <a href="http://makeapullrequest.com">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
-  </a>
+  <a href="https://www.npmjs.com/package/quarkd"><img src="https://img.shields.io/npm/dt/quarkd.svg" alt="Total Downloads"></a>
   <a href="https://www.npmjs.com/package/quarkd">
     <img src="https://img.shields.io/npm/v/quarkd.svg" alt="Published on NPM">
   </a>
