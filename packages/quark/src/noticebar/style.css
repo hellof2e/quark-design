@@ -7,8 +7,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 11px;
-  border-radius: 8px;
+  padding: var(--noticebar-padding, 10px);
+  border-radius: var(--noticebar-border-radius, 0);
   color: #ee8c02;
   background: #fef4e7;
 }

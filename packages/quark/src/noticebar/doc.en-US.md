@@ -107,5 +107,7 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 
 | Name                      | Description      | Default   |
 | ------------------------- | ---------------- | --------- |
+| `--noticebar-border-radius`  | component border-radius |  `0px`  |
+| `--noticebar-padding`  | component padding |  `10px`  |
 | `--noticebar-left-color`  | Left icon color  | `inherit` |
 | `--noticebar-right-color` | Right icon color | `inherit` |

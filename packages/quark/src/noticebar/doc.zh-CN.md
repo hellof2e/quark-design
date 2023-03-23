@@ -105,5 +105,7 @@ import "quarkd/lib/marquee";
 
 | 名称                      | 说明         | 默认值 |
 | ------------------------- | ------------ | ------ |
+| `--noticebar-border-radius`  | 组件倒圆角 |  `0px`  |
+| `--noticebar-padding`  | 内边距 |  `10px`  |
 | `--noticebar-left-color`  | 左侧图标颜色 | `继承` |
 | `--noticebar-right-color` | 右侧图标颜色 | `继承` |
