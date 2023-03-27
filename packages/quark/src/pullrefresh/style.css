@@ -47,3 +47,23 @@
   --loading-text-color: #fff;
   color: #fff;
 }
+
+.quark-dark-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quark-dark-loading img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 8px;
+  animation: rotate 1.4s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
