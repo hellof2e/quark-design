@@ -54,7 +54,6 @@ yarn run release:major
 第二步：
 打 tag
 ```
-git tag // 先看下是否生成最新的 tag
 git push origin --tags
 ```
 

@@ -1,4 +1,33 @@
 # 更新日志
+### [1.0.50](https://github.com/hellof2e/quark-design/compare/v1.0.49...v1.0.50) (2023-03-23)
+
+
+### 🐞 Bug Fixes
+
+* quarkui change to quarkd ([d32769f](https://github.com/hellof2e/quark-design/commit/d32769ff5918d0faf9e9874ca47232604de96c80))
+
+
+### 🎉 Features
+
+* add --noticebar-border-radius && --noticebar-padding for noticebar ([7919075](https://github.com/hellof2e/quark-design/commit/79190750f0ba5a0e473dd18952d5f6a37a558ce4))
+* badge md修改 ([13e3972](https://github.com/hellof2e/quark-design/commit/13e3972e51e86e2a0f4ad48db089657410bee626))
+* button组件样式修改 ([ca0f19d](https://github.com/hellof2e/quark-design/commit/ca0f19db97e9a04003f8da47f465546741b14011))
+* LICENSE update ([edc2aeb](https://github.com/hellof2e/quark-design/commit/edc2aeb257cb4569de2b0e135a8542c2a9bbac5e))
+* readme update ([5c0ddaa](https://github.com/hellof2e/quark-design/commit/5c0ddaaf5b671494c7e65998d9a833377440b8bf))
+* search 组件css调整 ([9739b6a](https://github.com/hellof2e/quark-design/commit/9739b6aee9b3714ce8d38f756a19ab2ee56df26d))
+* tab 组件样式修改 ([7fdcc49](https://github.com/hellof2e/quark-design/commit/7fdcc49a11220bb403c27d15d78a45acf20e6f58))
+* update ([2f6dca4](https://github.com/hellof2e/quark-design/commit/2f6dca4c967814bb41c83dbe75388eebd807a7b6))
+* update ([f0ba26e](https://github.com/hellof2e/quark-design/commit/f0ba26ebdb131989306f7a61e0447bb9bc596d9e))
+* update empty doc ([468b945](https://github.com/hellof2e/quark-design/commit/468b945783fb03349a363313581737296d3af3da))
+* update readme ([d042633](https://github.com/hellof2e/quark-design/commit/d042633a3bfeca03668fa4359358bfd85dff5606))
+* update readme ([d57c4a9](https://github.com/hellof2e/quark-design/commit/d57c4a97bcdbad23bd8cd218005caa1df2d21ad5))
+* update title ([99b2795](https://github.com/hellof2e/quark-design/commit/99b2795b84c2963ab7cf5aaf6195897959f9438e))
+* vs code ([b1854ab](https://github.com/hellof2e/quark-design/commit/b1854abaa7de09f27186bb36a963fd35d1a0b97b))
+* vs code ([f50d4a5](https://github.com/hellof2e/quark-design/commit/f50d4a57d4a3d9e579ed888ced92cd08a56a8224))
+* vs code ([ad65da8](https://github.com/hellof2e/quark-design/commit/ad65da8fbd0167a8e4ca936927894724344ea28c))
+* vs code plugin ([241d96b](https://github.com/hellof2e/quark-design/commit/241d96b40d0b770d026e0a05406d3c0e1b434fca))
+* vscode extension pub ([9dd0d3b](https://github.com/hellof2e/quark-design/commit/9dd0d3bb2810b3aab5c8039bec162a1632df1438))
+
 ### [1.0.49](https://github.com/hellof2e/quark-design/compare/v1.0.48...v1.0.49) (2023-03-15)
 
 
