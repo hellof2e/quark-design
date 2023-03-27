@@ -136,7 +136,7 @@ export default defineComponent({
 		min-height: 668px;
 
 		&.no-padding {
-			padding: 57px 0 0 0;
+			padding: 57px 0 70px 0;
 			h2 {
 				padding-left: 27px;
 			}
