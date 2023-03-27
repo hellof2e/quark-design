@@ -22,8 +22,9 @@
   <a href="https://github.com/hellof2e/quark-design">
     <img src="https://img.shields.io/github/contributors/hellof2e/quark-design" alt="contributors">
   </a>
-
-  <a href="https://github.com/hellof2e/quark-design/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/quark-design.svg" alt="License"></a>
+  <a href="https://github.com/hellof2e/quark-design/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/quark-design.svg" alt="License">
+  </a>
 </p>
 
 <p align="center">
