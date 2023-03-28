@@ -10,17 +10,22 @@ label {
   height: 1.875em;
   padding: 0.0625em;
   border-radius: 1.2em;
-  background: #eee;
+  background: var(--switch-inactive-color, #eee);
   transition: 0.3s width, 0.3s height, 0.3s background-color;
   box-sizing: border-box;
 }
 
-:host([disabled]) {
+:host([disabled]),
+:host([loading]) {
   pointer-events: none;
+}
+
+:host([disabled]) {
   opacity: 0.6;
 }
 
-:host([disabled]) label {
+:host([disabled]) label,
+:host([loading]) label {
   pointer-events: all;
   cursor: not-allowed;
 }
@@ -41,6 +46,20 @@ label::after {
   box-shadow: 0 0.125em 0.25em 0 rgb(0 35 11 / 20%);
 }
 
+.quark-switch-loading label::after {
+  display: none;
+}
+
+.quark-switch-loading-wrapper {
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 1em;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 :host(:focus-within) #switch,
 :host(:active) .quark-switch {
   z-index: 2;
@@ -57,7 +76,7 @@ label:active::after {
 }
 
 :host([checked]) label {
-  background: var(--theme-color, var(--switch-inner-color, #08f));
+  background: var(--theme-color, var(--switch-active-color, #08f));
 }
 
 :host([checked]) label::before {

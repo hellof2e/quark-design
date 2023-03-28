@@ -10,6 +10,7 @@ describe("quark-switch base attribute", async () => {
       `<quark-switch
          checked
          disabled
+         loading
       >
       </quark-switch>`
     );
@@ -26,6 +27,10 @@ describe("quark-switch base attribute", async () => {
 
   it("quark-switch disabled attribute", async () => {
     expect(el.disabled).to.equal(true);
+  });
+
+  it("quark-switch loading attribute", async () => {
+    expect(el.loading).to.equal(true);
   });
 
   it("change event", async () => {
