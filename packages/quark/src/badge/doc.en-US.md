@@ -4,7 +4,6 @@
 
 When new content or pending information is available, a red dot, number or desc show on the top-right.
 
-
 ps: Since the minimum font size of the browser is 12px, there is a slight error in the height displayed in the demo.
 
 ### Install
@@ -111,15 +110,15 @@ The maximun can be added to a badge by setting `max` prop on the Badge, the defa
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                     | Description                     | Default                |
-| ------------------------ | ------------------------------- | ---------------------- |
-| `--badge-text-color`     | Badge text color                | `#FFFFFF`              |
-| `--badge-background`     | Badge background color          | `#F72626`              |
-| `--badge-padding-column` | Top and bottom padding of badge | `0`                  |
-| `--badge-padding-row`    | Left and right padding of badge | `normal: 4px` `big: 6px` |
+| Name                     | Description                     | Default                                  |
+| ------------------------ | ------------------------------- | ---------------------------------------- |
+| `--badge-text-color`     | Badge text color                | `#FFFFFF`                                |
+| `--badge-background`     | Badge background color          | `#F72626`                                |
+| `--badge-padding-column` | Top and bottom padding of badge | `0`                                      |
+| `--badge-padding-row`    | Left and right padding of badge | `normal: 4px` `big: 6px`                 |
 | `--badge-font-size`      | Badge font size                 | `normal: 10px` `label: 11px` `big: 12px` |
-| `--badge-font-weight`    | Badge font weight               | `500`                  |
+| `--badge-font-weight`    | Badge font weight               | `500`                                    |
 | `--badge-line-height`    | Badge font line height          | `normal: 14px` `label: 16px` `big: 20px` |
-| `--badge-dot-size`       | Badge dot size                  | `8px`                  |
-| `--badge-font-family`    | Badge font-family               | `system default style` |
-| `--badge-border-color`   | Badge border color              | `#FFFFFF`              |
+| `--badge-dot-size`       | Badge dot size                  | `8px`                                    |
+| `--badge-font-family`    | Badge font-family               | `system default style`                   |
+| `--badge-border-color`   | Badge border color              | `#FFFFFF`                                |

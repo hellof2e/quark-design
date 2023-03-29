@@ -4,7 +4,7 @@
 
 出现在图标或文字右上角的红色圆点、数字或者文字，表示有新内容或者待处理的信息。
 
-ps：由于浏览器最小字体大小为12px，因此demo中展示高度略有误差。
+ps：由于浏览器最小字体大小为 12px，因此 demo 中展示高度略有误差。
 
 ### 安装使用
 
@@ -110,15 +110,15 @@ import "quarkd/lib/badge";
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                     | 说明                 | 默认值     |
-| ------------------------ | -------------------- | ---------- |
-| `--badge-text-color`     | badge 文字颜色       | `#FFFFFF`  |
-| `--badge-background`     | badge 背景           | `#F72626`  |
-| `--badge-padding-column` | badge 竖直方向内边距 | `0`      |
-| `--badge-padding-row`    | badge 水平方向内边距 | `normal: 4px` `big: 6px` |
-| `--badge-font-size`      | badge 文字大小      | `normal: 10px` `label: 11px` `big: 12px` |
-| `--badge-font-weight`    | badge 文字粗细      | `500`      |
-| `--badge-line-height`    | badge 文字行高      | `normal: 14px` `label: 16px` `big: 20px` |
-| `--badge-dot-size`       | badge dot 模式大小  | `8px`      |
-| `--badge-font-family`    | badge font-family  | `跟随系统` |
-| `--badge-border-color`   | badge 边框颜色      | `#FFFFFF`  |
+| 名称                     | 说明                 | 默认值                                   |
+| ------------------------ | -------------------- | ---------------------------------------- |
+| `--badge-text-color`     | badge 文字颜色       | `#FFFFFF`                                |
+| `--badge-background`     | badge 背景           | `#F72626`                                |
+| `--badge-padding-column` | badge 竖直方向内边距 | `0`                                      |
+| `--badge-padding-row`    | badge 水平方向内边距 | `normal: 4px` `big: 6px`                 |
+| `--badge-font-size`      | badge 文字大小       | `normal: 10px` `label: 11px` `big: 12px` |
+| `--badge-font-weight`    | badge 文字粗细       | `500`                                    |
+| `--badge-line-height`    | badge 文字行高       | `normal: 14px` `label: 16px` `big: 20px` |
+| `--badge-dot-size`       | badge dot 模式大小   | `8px`                                    |
+| `--badge-font-family`    | badge font-family    | `跟随系统`                               |
+| `--badge-border-color`   | badge 边框颜色       | `#FFFFFF`                                |
