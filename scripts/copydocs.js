@@ -1,5 +1,5 @@
 import fse from "fs-extra";
-import path from "path";
+import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
