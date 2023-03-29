@@ -42,8 +42,6 @@
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-typescript": "^7.16.5",
 		"@babel/runtime": "^7.5.5",
-		"@commitlint/cli": "^13.2.1",
-		"@commitlint/config-conventional": "^13.2.0",
 		"@open-wc/testing": "^3.0.2",
 		"@open-wc/testing-karma": "^4.0.9",
 		"@quarkd/rollup-plugin-css-variable": "file:../packages/quark-rollup-plugin-css-variable",

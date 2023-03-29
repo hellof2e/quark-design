@@ -6,6 +6,7 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
+  "type": "module",
   "workspaces": {
     "packages": [
       "packages/*"
@@ -31,14 +32,12 @@
     "test": "cd packages/quark && yarn run test"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
+    "@commitlint/cli": "^10.0.0",
+    "@commitlint/config-conventional": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "commitizen": "^4.2.4",
-    "commitlint": "^17.0.3",
-    "commitlint-config-cz": "^0.13.3",
     "eslint": "^7.23.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.8.0",
@@ -55,9 +54,8 @@
     "vue-router": "^4.0.4"
   },
   "lint-staged": {
-    "src/**/*.{vue, js,jsx,ts,tsx,json}": [
-      "git add"
-    ]
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,scss}": "prettier --write"
   },
   "husky": {
     "hooks": {
