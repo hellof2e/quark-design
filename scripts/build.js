@@ -1,4 +1,4 @@
-const sh = require("shelljs");
+import sh from "shelljs";
 
 sh.exec(
   "npm run clean &&  lerna bootstrap && lerna run build --scope quark-icons && cd example && npm run build",

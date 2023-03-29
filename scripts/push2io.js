@@ -1,4 +1,4 @@
-const sh = require("shelljs");
+import sh from "shelljs";
 
 sh.exec(
   "cd example && npm i --legacy-peer-deps && npm run build",
