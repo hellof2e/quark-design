@@ -6,6 +6,7 @@
   "repository": "",
   "author": "hello",
   "license": "MIT",
+  "type": "module",
   "workspaces": {
     "packages": [
       "packages/*"
@@ -55,9 +56,8 @@
     "vue-router": "^4.0.4"
   },
   "lint-staged": {
-    "src/**/*.{vue, js,jsx,ts,tsx,json}": [
-      "git add"
-    ]
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,scss}": "prettier --write"
   },
   "husky": {
     "hooks": {
