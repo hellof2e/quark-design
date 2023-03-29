@@ -1,7 +1,7 @@
-const fse = require("fs-extra");
-const path = require("path");
+import fse from "fs-extra/esm";
+import path from "path";
+
 const targetBaseUrl = `${process.cwd()}/site_docs`;
-// const changeLogUrl = `${process.cwd()}/changelog`;
 
 const copyFile = (from, to) => {
   fse
