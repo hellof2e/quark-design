@@ -67,7 +67,7 @@ export default () => {
 | loading   | Loading switch   | `boolean`               | `false` |
 | size      | Switch size      | `number`                | `16px`  |
 | color     | Background color when active   | `string`  | `#08f`  |
-| inactivecolor | Background color when inactive	| `string`  | `#eee` |
+| inactivecolor | Background color when inactive	| `string`  | `#e1e6eb` |
 | onChange  | Emitted when check status changed | `e: ({ detail: { value: string } }) => void` |
 
 ## CSS Variables

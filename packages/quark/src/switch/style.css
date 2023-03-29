@@ -10,7 +10,7 @@ label {
   height: 1.875em;
   padding: 0.0625em;
   border-radius: 1.2em;
-  background: var(--switch-inactive-color, #eee);
+  background: var(--switch-inactive-color, #e1e6eb);
   transition: 0.3s width, 0.3s height, 0.3s background-color;
   box-sizing: border-box;
 }

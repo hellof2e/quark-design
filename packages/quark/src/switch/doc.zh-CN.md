@@ -79,7 +79,7 @@ export default {
 | loading  | 加载状态  | `boolean` | `false` |
 | size     | 开关大小 | `number`  | `16px ` |
 | color    | 打开时的背景色     | `string`  | `#08f`|
-| inactivecolor    | 关闭时的背景色     | `string`  | `#eee`|
+| inactivecolor    | 关闭时的背景色     | `string`  | `#e1e6eb`|
 
 ### Event
 

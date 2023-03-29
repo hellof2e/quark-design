@@ -34,7 +34,7 @@ class QuarkSwitch extends QuarkElement {
   color = "#08f";
 
   @property()
-  inactivecolor = "#eee";
+  inactivecolor = "#e1e6eb";
 
   @property()
   name = "";
