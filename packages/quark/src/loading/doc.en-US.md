@@ -38,7 +38,7 @@ Default `px`。
 ```html
 <quark-loading size="30"></quark-loading> // Default
 <quark-loading size="30" color="green"></quark-loading>
-<quark-loading size="30" color="warning"></quark-loading>
+<quark-loading size="30" color="#08f"></quark-loading>
 ```
 
 ### Text

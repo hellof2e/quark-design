@@ -31,10 +31,10 @@ class QuarkSwitch extends QuarkElement {
   size = "";
 
   @property()
-  color = "";
+  color = "#08f";
 
   @property()
-  inactivecolor = "";
+  inactivecolor = "#eee";
 
   @property()
   name = "";
@@ -75,7 +75,8 @@ class QuarkSwitch extends QuarkElement {
           {this.loading && (
             <div class="quark-switch-loading-wrapper">
               <quark-loading
-                size={this.size ? +this.size / 1.3 : "23"}
+                size={+this.size ? (16 * +this.size) / 30 : 16}
+                color={this.checked ? this.color : this.inactivecolor}
                 type="spinner"
               ></quark-loading>
             </div>

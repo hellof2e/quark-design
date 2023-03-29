@@ -39,6 +39,12 @@ To custom color, set `color` and `inactivecolor` prop on the Switch.
 <quark-switch color="red" inactivecolor="#08f"></quark-switch>
 ```
 
+### Loading
+
+```html
+<quark-switch loading></quark-switch>
+```
+
 ### Change Event
 
 ```html
@@ -70,6 +76,7 @@ export default {
 | --------- | -------------- | --------- | ------- |
 | checked   | On/Off         | `boolean` | `false` |
 | disabled  | Disable switch | `boolean` | `false` |
+| loading   | Loading switch | `boolean` | `false` |
 | size      | Switch size    | `number`  | `16px`  |
 | color     | Background color when active   | `string`  | `#08f` |
 | inactivecolor | Background color when inactive	| `string`  | `#eee` |

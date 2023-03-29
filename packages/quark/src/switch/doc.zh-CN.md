@@ -39,6 +39,12 @@ import "quarkd/lib/switch";
 <quark-switch color="red" inactivecolor="#08f"></quark-switch>
 ```
 
+### 加载状态
+
+```html
+<quark-switch loading></quark-switch>
+```
+
 ### change 事件
 
 ```html
@@ -70,6 +76,7 @@ export default {
 | -------- | -------- | --------- | ------- |
 | checked  | 开/关    | `boolean` | `false` |
 | disabled | 禁用     | `boolean` | `false` |
+| loading  | 加载状态  | `boolean` | `false` |
 | size     | 开关大小 | `number`  | `16px ` |
 | color    | 打开时的背景色     | `string`  | `#08f`|
 | inactivecolor    | 关闭时的背景色     | `string`  | `#eee`|

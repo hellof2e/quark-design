@@ -38,7 +38,7 @@ import "quarkd/lib/loading";
 ```html
 <quark-loading size="30"></quark-loading> // 默认颜色
 <quark-loading size="30" color="green"></quark-loading>
-<quark-loading size="30" color="warning"></quark-loading>
+<quark-loading size="30" color="#08f"></quark-loading>
 ```
 
 ### 加载文案

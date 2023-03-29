@@ -34,6 +34,12 @@ import { Switch } from "@quarkd/quark-react";
 
 可以通过 `color` 属性控制打开时的背景色 `inactivecolor` 属性控制关闭时的背景色。
 
+### 加载状态
+
+```html
+<quark-switch loading></quark-switch>
+```
+
 ```html
 <Switch color="red" inactivecolor="#08f"></Switch>
 ```
@@ -54,13 +60,14 @@ export default () => {
 
 ### Props
 
-| 参数     | 说明            | 类型                                   | 默认值  |
-| -------- | --------------- | -------------------------------------- | ------- |
-| checked  | 开/关           | `boolean`                              | `false` |
-| disabled | 禁用            | `boolean`                              | `false` |
-| size     | 开关大小        | `number`                               | `16px ` |
-| color    | 打开时的背景色            | `string`                       | `#08f` |
-| inactivecolor    | 关闭时的背景色     | `string`  | `#eee`|
+| 参数     | 说明            | 类型               | 默认值  |
+| -------- | --------------- | ---------------- | ------- |
+| checked  | 开/关           | `boolean`         | `false` |
+| disabled | 禁用状态         | `boolean`         | `false` |
+| loading  | 加载状态         | `boolean`         | `false` |
+| size     | 开关大小         | `number`          | `16px ` |
+| color    | 打开时的背景色    | `string`          | `#08f`  |
+| inactivecolor   | 关闭时的背景色     | `string`  | `#eee`  |
 | onChange | change 回调函数 | `e: ({ detail: { value: string } }) => void` |
 
 ## 样式变量
