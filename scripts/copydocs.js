@@ -1,5 +1,9 @@
 import fse from "fs-extra";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const targetBaseUrl = `${process.cwd()}/site_docs`;
 
