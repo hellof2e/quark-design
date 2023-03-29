@@ -22,6 +22,14 @@
       @change="handleChange3"
       :checked="data.checked3"
       color="red"
+      inactivecolor="#08f"
+    ></quark-switch>
+
+    <h2>{{ translate("loading") }}</h2>
+    <quark-switch
+      @change="handleChange3"
+      :checked="data.checked3"
+      loading
     ></quark-switch>
   </div>
 </template>
@@ -39,6 +47,7 @@ export default createDemo({
       checked1: false,
       checked2: true,
       checked3: true,
+      loading: true,
     });
     onBeforeMount(() => {
       useTranslate({
@@ -47,12 +56,14 @@ export default createDemo({
           disabled: "禁用状态",
           size: "自定义大小",
           color: "自定义颜色",
+          loading: "加载状态",
         },
         "en-US": {
           basic: "Basic Usage",
           disabled: "Disabled",
           size: "Custom Size",
           color: "Custom Color",
+          loading: "Loading",
         },
       });
     });

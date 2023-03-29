@@ -33,10 +33,16 @@ TO change switch size, set `size` prop on the Switch or alter `font-size` value 
 
 ### Custom Color
 
-To custom color, set `color` prop on the Switch.
+To custom color, set `color` and `inactivecolor` prop on the Switch.
 
 ```html
-<quark-switch color="red"></quark-switch>
+<quark-switch color="red" inactivecolor="#08f"></quark-switch>
+```
+
+### Loading
+
+```html
+<quark-switch loading></quark-switch>
 ```
 
 ### Change Event
@@ -70,8 +76,10 @@ export default {
 | --------- | -------------- | --------- | ------- |
 | checked   | On/Off         | `boolean` | `false` |
 | disabled  | Disable switch | `boolean` | `false` |
+| loading   | Loading switch | `boolean` | `false` |
 | size      | Switch size    | `number`  | `16px`  |
-| color     | Switch color   | `string`  | -       |
+| color     | Background color when active   | `string`  | `#08f` |
+| inactivecolor | Background color when inactive	| `string`  | `#e1e6eb` |
 
 ### Event
 

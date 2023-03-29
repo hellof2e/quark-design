@@ -37,7 +37,7 @@ Default `px`。
 ```html
 <Loading size="30"></Loading> // Default
 <Loading size="30" color="green"></Loading>
-<Loading size="30" color="warning"></Loading>
+<Loading size="30" color="#08f"></Loading>
 ```
 
 ### Text

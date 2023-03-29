@@ -37,7 +37,7 @@ import { Loading } from "@quarkd/quark-react";
 ```html
 <Loading size="30"></Loading> // 默认颜色
 <Loading size="30" color="green"></Loading>
-<Loading size="30" color="warning"></Loading>
+<Loading size="30" color="#08f"></Loading>
 ```
 
 ### 加载文案

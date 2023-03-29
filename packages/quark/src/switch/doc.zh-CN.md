@@ -33,10 +33,16 @@ import "quarkd/lib/switch";
 
 ### 自定义颜色
 
-可以通过 `color` 属性控制颜色。
+可以通过 `color` 属性控制打开时的背景色 `inactivecolor` 属性控制关闭时的背景色。
 
 ```html
-<quark-switch color="red"></quark-switch>
+<quark-switch color="red" inactivecolor="#08f"></quark-switch>
+```
+
+### 加载状态
+
+```html
+<quark-switch loading></quark-switch>
 ```
 
 ### change 事件
@@ -70,8 +76,10 @@ export default {
 | -------- | -------- | --------- | ------- |
 | checked  | 开/关    | `boolean` | `false` |
 | disabled | 禁用     | `boolean` | `false` |
+| loading  | 加载状态  | `boolean` | `false` |
 | size     | 开关大小 | `number`  | `16px ` |
-| color    | 颜色     | `string`  | -       |
+| color    | 打开时的背景色     | `string`  | `#08f`|
+| inactivecolor    | 关闭时的背景色     | `string`  | `#e1e6eb`|
 
 ### Event
 

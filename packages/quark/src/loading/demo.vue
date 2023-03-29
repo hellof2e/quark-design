@@ -17,7 +17,7 @@
     <div class="demo-loadings">
       <quark-loading size="30"></quark-loading>
       <quark-loading size="30" color="green"></quark-loading>
-      <quark-loading size="30" color="warning"></quark-loading>
+      <quark-loading size="30" color="#08f"></quark-loading>
     </div>
 
     <h2>{{ translate("loadingText") }}</h2>

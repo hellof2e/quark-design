@@ -34,6 +34,12 @@ TO change switch size, set `size` prop on the Switch or alter `font-size` value 
 
 To custom color, set `color` prop on the Switch.
 
+### Loading
+
+```html
+<quark-switch loading></quark-switch>
+```
+
 ```html
 <Switch color="red"></Switch>
 ```
@@ -54,12 +60,14 @@ export default () => {
 
 ### Props
 
-| Attribute | Description                       | Type                                   | Default |
-| --------- | --------------------------------- | -------------------------------------- | ------- |
-| checked   | On/Off                            | `boolean`                              | `false` |
-| disabled  | Disable switch                    | `boolean`                              | `false` |
-| size      | Switch size                       | `number`                               | `16px`  |
-| color     | Switch color                      | `string`                               | -       |
+| Attribute | Description      | Type                    | Default |
+| --------- | ---------------- | ----------------------- | ------- |
+| checked   | On/Off           | `boolean`               | `false` |
+| disabled  | Disable switch   | `boolean`               | `false` |
+| loading   | Loading switch   | `boolean`               | `false` |
+| size      | Switch size      | `number`                | `16px`  |
+| color     | Background color when active   | `string`  | `#08f`  |
+| inactivecolor | Background color when inactive	| `string`  | `#e1e6eb` |
 | onChange  | Emitted when check status changed | `e: ({ detail: { value: string } }) => void` |
 
 ## CSS Variables
