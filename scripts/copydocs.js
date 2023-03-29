@@ -1,4 +1,4 @@
-import fse from "fs-extra/esm";
+import fse from "fs-extra";
 import path from "path";
 
 const targetBaseUrl = `${process.cwd()}/site_docs`;

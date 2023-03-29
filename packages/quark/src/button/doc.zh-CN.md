@@ -115,30 +115,30 @@ export default {
 
 ### Props
 
-| 参数         | 说明                                                                               | 类型      | 默认值    |
-| ------------ | ---------------------------------------------------------------------------------- | --------- | --------- |
-| type         | 类型，可选值为 `primary`、`success`、`danger`、`warning` 和默认 5 种类型 | `string`  | - |
-| size         | 尺寸，可选值为 `small`, `normal`, `big`, `large` 4 种类型                          | `string`  | `normal`  |
-| disabled     | 是否禁用按钮                                                                       | `boolean` | `false`   |
-| icon         | 按钮图标 (支持传 url 链接)                                                         | `string`  | -         |
-| shape        | 形状，可选值为 `square`                                                            | `string`  | `round`   |
-| plain        | 是否为朴素按钮                                                                   | `boolean` | `false `  |
-| loading      | 按钮 loading 状态                                                                  | `boolean` | `false`   |
-| loadtype     | 加载图标类型，可选值为 `circular`                                                  | `string`  | `spinner` |
-| loadingcolor | 加载图标颜色                                                                       | `string`  | `#fff`    |
-| loadingsize  | 加载图标大小                                                                       | `string`  | `20`      |
+| 参数         | 说明                                                                     | 类型      | 默认值    |
+| ------------ | ------------------------------------------------------------------------ | --------- | --------- |
+| type         | 类型，可选值为 `primary`、`success`、`danger`、`warning` 和默认 5 种类型 | `string`  | -         |
+| size         | 尺寸，可选值为 `small`, `normal`, `big`, `large` 4 种类型                | `string`  | `normal`  |
+| disabled     | 是否禁用按钮                                                             | `boolean` | `false`   |
+| icon         | 按钮图标 (支持传 url 链接)                                               | `string`  | -         |
+| shape        | 形状，可选值为 `square`                                                  | `string`  | `round`   |
+| plain        | 是否为朴素按钮                                                           | `boolean` | `false `  |
+| loading      | 按钮 loading 状态                                                        | `boolean` | `false`   |
+| loadtype     | 加载图标类型，可选值为 `circular`                                        | `string`  | `spinner` |
+| loadingcolor | 加载图标颜色                                                             | `string`  | `#fff`    |
+| loadingsize  | 加载图标大小                                                             | `string`  | `20`      |
 
 ## 样式变量
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                     | 说明           | 默认值 |
-| ------------------------ | -------------- | ------ |
-| `--button-height`        | 按钮高度       | `32px` |
-| `--button-hspacing`      | 按钮左右内边距 | `12px` |
-| `--button-font-size`     | 按钮字体大小   | `14px` |
-| `--button-border-radius` | 按钮圆角       | `8px`  |
-| `--button-color`         | 文字颜色       | `#fff` |
-| `--button-icon-hspacing` | icon 右间距    | `6px`  |
-| `--button-icon-size` | icon 大小    | `1em`  |
-| `--button-big-border-radius` | 大尺寸按钮圆角                | `8px`         |
+| 名称                         | 说明           | 默认值 |
+| ---------------------------- | -------------- | ------ |
+| `--button-height`            | 按钮高度       | `32px` |
+| `--button-hspacing`          | 按钮左右内边距 | `12px` |
+| `--button-font-size`         | 按钮字体大小   | `14px` |
+| `--button-border-radius`     | 按钮圆角       | `8px`  |
+| `--button-color`             | 文字颜色       | `#fff` |
+| `--button-icon-hspacing`     | icon 右间距    | `6px`  |
+| `--button-icon-size`         | icon 大小      | `1em`  |
+| `--button-big-border-radius` | 大尺寸按钮圆角 | `8px`  |
