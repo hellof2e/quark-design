@@ -29,28 +29,15 @@
 </template>
 
 <script lang="ts">
-import {
-	defineComponent,
-	reactive,
-	computed,
-	onMounted,
-	toRefs,
-	ref,
-} from "vue";
-import {
-	onBeforeRouteUpdate,
-	RouteLocationNormalized,
-	useRoute,
-	useRouter,
-} from "vue-router";
+import { defineComponent, reactive, computed, onMounted, toRefs } from "vue";
+import { onBeforeRouteUpdate, useRoute } from "vue-router";
 import { RefData } from "@/sites/assets/util/ref";
-import { nav, docs } from "@/config.json";
+import { nav } from "@/config.json";
 
 export default defineComponent({
 	name: "DocNav",
 	setup() {
 		const route = useRoute();
-		const router = useRouter();
 		const state = reactive({
 			fixed: false,
 			isGuideNav: false,
@@ -108,7 +95,6 @@ export default defineComponent({
 			isActive,
 			docMd: localStorage.getItem("docMd"),
 			nav: reactive(nav),
-			docs: reactive(docs),
 			currentRoute: RefData.getInstance().currentRoute,
 			reorder,
 		};
