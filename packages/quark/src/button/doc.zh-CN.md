@@ -33,8 +33,8 @@ import "quarkd/lib/button";
 通过 `plain` 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
 
 ```html
-<quark-button plain type="primary">主要按钮</quark-button>
-<quark-button plain type="success">成功按钮</quark-button>
+<quark-button type="primary" plain>主要按钮</quark-button>
+<quark-button type="success" plain>成功按钮</quark-button>
 ```
 
 ### 按钮尺寸

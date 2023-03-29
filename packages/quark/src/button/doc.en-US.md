@@ -34,8 +34,8 @@ There are `primary`, `success`, `danger`, `warning` and default type.
 To set the button as a plain button, add `plain` prop to the Button. The plain button's text is the button color, and the background is white.
 
 ```html
-<quark-button plain type="primary">Primary</quark-button>
-<quark-button plain type="success">Success</quark-button>
+<quark-button type="primary" plain>Primary</quark-button>
+<quark-button type="success" plain>Success</quark-button>
 ```
 
 ### Size
