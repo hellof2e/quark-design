@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - uses: actions/checkout@v2
-      # 会有很多npm包在外层，link 使用
+      # 会有很多 npm 包在外层，link 使用
       # - run: cd example && npm i --legacy-peer-deps && npm run build
       - run: yarn
       - run: yarn run link
