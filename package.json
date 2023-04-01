@@ -21,7 +21,7 @@
     "init": "yarn && yarn run link && cd example && yarn",
     "dev": "cd example && yarn run dev",
     "link": "node ./scripts/link",
-    "codeformat": "prettier --write *",
+    "codeformat": "prettier --write * --cache",
     "clean": "lerna clean -y",
     "prepare": "husky install",
     "copydocs": "node ./scripts/copydocs",
@@ -47,15 +47,15 @@
     "lerna": "^5.1.8",
     "lint-staged": "^10.5.4",
     "ora": "^5.1.2",
-    "prettier": "^2.0.0",
+    "prettier": "^2.8.7",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
     "vue": "^3.0.5",
     "vue-router": "^4.0.4"
   },
   "lint-staged": {
-    "*.md": "prettier --write",
-    "*.{ts,tsx,js,vue,scss}": "prettier --write"
+    "*.md": "prettier --write --cache",
+    "*.{ts,tsx,js,vue,scss}": "prettier --write --cache"
   },
   "husky": {
     "hooks": {
