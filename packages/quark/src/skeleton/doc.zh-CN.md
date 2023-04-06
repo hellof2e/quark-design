@@ -19,13 +19,13 @@ import "quarkd/lib/skeleton";
 ### 显示头像、标题
 
 ```html
-<quark-skeleton titel avatar :row="2"></quark-skeleton>
+<quark-skeleton title avatar :row="2"></quark-skeleton>
 ```
 
 ### 显示子组件
 
 ```html
-<quark-skeleton titel avatar :row="2" :hide="hide">
+<quark-skeleton title avatar :row="2" :hide="hide">
   <div>正式内容</div>
 </quark-skeleton>
 ```
@@ -36,7 +36,7 @@ import "quarkd/lib/skeleton";
 
 ```html
 <quark-skeleton
-  titel
+  title
   avatar
   :row="3"
   rowwidths="100%,100%,60%"
@@ -51,7 +51,7 @@ import "quarkd/lib/skeleton";
 | ----------- | ------------------ | ------------------- | ------- |
 | avatar      | 是否显示头像占位图 | `boolean`           | `false` |
 | avatarshape | 头像占位图形状     | `round` 或 `square` | `round` |
-| titel       | 是否显示标题占位图 | `boolean`           | `false` |
+| title       | 是否显示标题占位图 | `boolean`           | `false` |
 | row         | 段落占位图行数     | `number`            | -       |
 | rowwidths   | 段落每行宽度       | `string`            | -       |
 | hide        | 关闭骨架屏         | `boolean`           | `false` |

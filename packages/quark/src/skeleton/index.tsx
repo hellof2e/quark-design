@@ -3,11 +3,13 @@ import style from "./style.css";
 export interface Props {
   avatar?: boolean;
   avatarshape?: "round" | "square";
-  titel?: boolean;
+  title?: boolean;
   row: number;
   rowwidths?: string;
   hide?: boolean;
 }
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore ,由于原生title 为 string类型，因此有冲突，所以此处使用了ignore
 @customElement({
   tag: "quark-skeleton",
   style,
@@ -29,7 +31,9 @@ class Skeleton extends QuarkElement {
   hide = false;
 
   @property({ type: Boolean })
-  titel = false;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore ,由于原生title 为 string类型，因此有冲突，所以此处使用了ignore
+  title = false;
 
   componentDidMount(): void {}
 
@@ -55,7 +59,7 @@ class Skeleton extends QuarkElement {
           <div class="skeleton-container">
             {this.avatar && <div class="skeleton-avatar"></div>}
             <div class="skeleton-content">
-              {this.titel && <h3 class="skeleton-title"></h3>}
+              {this.title && <h3 class="skeleton-title"></h3>}
               {new Array(+this.row).fill(1).map((_, index) => {
                 const rowWidth = this.getRowWidth(index);
                 return (
@@ -63,7 +67,7 @@ class Skeleton extends QuarkElement {
                     class="sketleton-row"
                     style={{
                       width: rowWidth,
-                      marginTop: index === 0 && !this.titel ? "0px" : undefined,
+                      marginTop: index === 0 && !this.title ? "0px" : undefined,
                     }}
                   ></div>
                 );

@@ -19,13 +19,13 @@ import "quarkd/lib/skeleton";
 ### Show Avatar
 
 ```html
-<quark-skeleton titel avatar :row="2"></quark-skeleton>
+<quark-skeleton title avatar :row="2"></quark-skeleton>
 ```
 
 ### Show Children
 
 ```html
-<quark-skeleton titel avatar :row="2" :hide="hide">
+<quark-skeleton title avatar :row="2" :hide="hide">
   <div>Content</div>
 </quark-skeleton>
 ```
@@ -36,7 +36,7 @@ use rowwidths property to set row width，use ',' to split.
 
 ```html
 <quark-skeleton
-  titel
+  title
   avatar
   :row="3"
   rowwidths="100%,100%,60%"
@@ -51,7 +51,7 @@ use rowwidths property to set row width，use ',' to split.
 | ----------- | ------------------------------------------------------------ | ------------------- | ------- |
 | avatar      | Whether to show avatar placeholder                           | `boolean`           | `false` |
 | avatarshape | Shape of avatar placeholder                                  | `round` or `square` | `round` |
-| titel       | Whether to show title placeholder                            | `boolean`           | `false` |
+| title       | Whether to show title placeholder                            | `boolean`           | `false` |
 | row         | Row count                                                    | `number`            | -       |
 | rowwidths   | Row width                                                    | `string`            | -       |
 | hide        | Whether to show skeleton, pass false to show child component | `boolean`           | `false` |

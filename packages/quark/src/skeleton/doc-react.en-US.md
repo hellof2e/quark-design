@@ -19,7 +19,7 @@ import { Skeleton } from "@quarkd/quark-react";
 ### Show Avatar
 
 ```tsx
-<Skeleton titel avatar row="2" />
+<Skeleton title avatar row="2" />
 ```
 
 ### Show Children
@@ -43,7 +43,7 @@ export default () => {
 use rowwidths property to set row width，use ',' to split.
 
 ```tsx
-<Skeleton titel avatar row="3" rowwidths="100%,100%,60%" />
+<Skeleton title avatar row="3" rowwidths="100%,100%,60%" />
 ```
 
 ## API
@@ -54,7 +54,7 @@ use rowwidths property to set row width，use ',' to split.
 | ----------- | ------------------------------------------------------------ | ------------------- | ------- |
 | avatar      | Whether to show avatar placeholder                           | `boolean`           | `false` |
 | avatarshape | Shape of avatar placeholder                                  | `round` or `square` | `round` |
-| titel       | Whether to show title placeholder                            | `boolean`           | `false` |
+| title       | Whether to show title placeholder                            | `boolean`           | `false` |
 | row         | Row count                                                    | `number`            | -       |
 | rowwidths   | Row width                                                    | `string`            | -       |
 | hide        | Whether to show skeleton, pass false to show child component | `boolean`           | `false` |

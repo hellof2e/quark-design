@@ -23,7 +23,7 @@ describe("<quark-actionsheet>", async () => {
       cancelTextColor: data.cancelTextColor,
       cancelTextFontSize: data.cancelTextFontSize,
     });
-    expect(actionSheet.titl).to.equal(data.title);
+    expect(actionSheet.title).to.equal(data.title);
     expect(actionSheet.titleColor).to.equal(data.titleColor);
     expect(actionSheet.titleFontSize).to.equal(data.titleFontSize);
     expect(actionSheet.actions).to.equal(data.actions);

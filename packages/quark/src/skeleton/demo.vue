@@ -7,13 +7,13 @@
 
     <h2>{{ translate("avator") }}</h2>
     <div class="quark-cell base-cell">
-      <quark-skeleton titel avatar :row="2"></quark-skeleton>
+      <quark-skeleton title avatar :row="2"></quark-skeleton>
     </div>
 
     <h2>{{ translate("rowwidths") }}</h2>
     <div class="quark-cell base-cell">
       <quark-skeleton
-        titel
+        title
         avatar
         :row="2"
         rowwidths="100%,20%"
@@ -23,7 +23,7 @@
     <h2>{{ translate("childComponent") }}</h2>
     <quark-switch :checked="data.checked" @change="handleSwitch"></quark-switch>
     <div class="quark-cell base-cell">
-      <quark-skeleton titel avatar :row="2" :hide="data.hide">
+      <quark-skeleton title avatar :row="2" :hide="data.hide">
         <div class="demo-preview">
           <img
             src="https://m.hellobike.com/resource/helloyun/13459/BI7jn_quark-logo.png"

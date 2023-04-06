@@ -19,7 +19,7 @@ import { Skeleton } from "@quarkd/quark-react";
 ### 显示头像
 
 ```tsx
-<Skeleton titel avatar row="2" />
+<Skeleton title avatar row="2" />
 ```
 
 ### 显示子组件
@@ -44,7 +44,7 @@ export default () => {
 段落宽度使用 `rowwidths` 属性，采用逗号进行分割：比如 `row` 设为 `3`，则可设置 `rowwidths` 为 `100%,100%,60%`
 
 ```tsx
-<Skeleton titel avatar row="3" rowwidths="100%,100%,60%" />
+<Skeleton title avatar row="3" rowwidths="100%,100%,60%" />
 ```
 
 ## API
@@ -55,7 +55,7 @@ export default () => {
 | ----------- | ------------------ | ------------------- | ------- |
 | avatar      | 是否显示头像占位图 | `boolean`           | `false` |
 | avatarshape | 头像占位图形状     | `round` 或 `square` | `round` |
-| titel       | 是否显示标题占位图 | `boolean`           | `false` |
+| title       | 是否显示标题占位图 | `boolean`           | `false` |
 | row         | 段落占位图行数     | `number`            | -       |
 | rowwidths   | 段落每行宽度       | `string`            | -       |
 | hide        | 关闭骨架屏         | `boolean`           | `false` |
