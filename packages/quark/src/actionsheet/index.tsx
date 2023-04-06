@@ -42,7 +42,7 @@ class QuarkActionSheet extends QuarkElement {
 
   wrap: any = createRef();
 
-  titl: string | undefined = undefined;
+  title: string | undefined = undefined;
 
   actions: Action[] = [];
 
@@ -173,7 +173,7 @@ class QuarkActionSheet extends QuarkElement {
         ref={this.wrap}
         onClick={this.handleContainerClick}
       >
-        {this.titl && (
+        {this.title && (
           <div
             class="quark-actionsheet-title"
             style={{
@@ -181,7 +181,7 @@ class QuarkActionSheet extends QuarkElement {
               fontSize: this.titleFontSize ? this.titleFontSize : undefined,
             }}
           >
-            {this.titl}
+            {this.title}
           </div>
         )}
         <div class="quark-actionsheet-action">{this.renderActions()}</div>
@@ -225,7 +225,7 @@ export default function (params: Props): QuarkActionSheet {
     close,
     zIndex,
   } = params;
-  actionSheet.titl = title;
+  actionSheet.title = title;
   actionSheet.actions = actions;
   actionSheet.cancelText = cancelText;
   actionSheet.titleColor = titleColor;
