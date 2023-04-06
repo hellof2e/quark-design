@@ -1,12 +1,18 @@
-// scripts/publish.js
-const inquirer = require("inquirer");
-const globby = require("globby");
-const fs = require("fs-extra");
-const sh = require("shelljs");
-const ora = require("ora");
+import inquirer from "inquirer";
+import globby from "globby";
+import fs from "fs-extra";
+import sh from "shelljs";
+import ora from "ora";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
 const cwd = process.cwd();
 const { argv } = process;
 const version = argv[2];
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 console.log(version, "argv");
 const getPackagePath = () => {
   const packagePaths = globby.sync("../packages", {
@@ -57,10 +63,10 @@ const writeQuarkReactVersion = () => {
 
 const publish = async () => {
   const packages = getPackagePath();
-  const { package } = await choosePackage(packages);
-  const packageName = getPackageName(package);
-  console.log(package, packageName, version);
-  if (package && packageName) {
+  const { package: _pkg } = await choosePackage(packages);
+  const packageName = getPackageName(_pkg);
+  console.log(_pkg, packageName, version);
+  if (_pkg && packageName) {
     if (packageName === "@quarkd/quark-react") {
       writeQuarkReactVersion();
     }
@@ -68,7 +74,7 @@ const publish = async () => {
     try {
       console.log("-----------------------开始发布-------------------------");
       sh.exec(`lerna run release:${version} --scope ${packageName}`);
-      sh.cd(package).exec("npm publish");
+      sh.cd(_pkg).exec("npm publish");
       spinner.succeed("~~");
     } catch (error) {
       console.log(error, "error");

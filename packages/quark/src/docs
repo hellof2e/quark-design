@@ -1,4 +1,41 @@
 # 更新日志
+### [1.0.52](https://github.com/hellof2e/quark-design/compare/v1.0.51...v1.0.52) (2023-04-06)
+
+
+### 🐞 Bug Fixes
+
+* **actionssheet:** typo ([3cc17ca](https://github.com/hellof2e/quark-design/commit/3cc17ca0ff3d62a80b421ae9f3e578d9dd7235af))
+* md of button ([5c0a5f4](https://github.com/hellof2e/quark-design/commit/5c0a5f4a023cc8fd6aa98b42be73d239243226ba))
+* md of button ([df5e6d5](https://github.com/hellof2e/quark-design/commit/df5e6d5be0163ff20b47358086848e8e3146f4b7))
+
+
+### 🎉 Features
+
+* add husky ([7530c90](https://github.com/hellof2e/quark-design/commit/7530c90a1eb6b5c08ce4668f7c78dfdf0b9fb5c6))
+* add husky ([0b498f6](https://github.com/hellof2e/quark-design/commit/0b498f6869481da30a7c7bc38aabc10c755b2307))
+* add husky ([6fc6a48](https://github.com/hellof2e/quark-design/commit/6fc6a48453d3b9b6d518b257ce65ce541c8925c9))
+* add husky ([2618350](https://github.com/hellof2e/quark-design/commit/2618350eea3fb554684b17a105c04ecd63c1cb76))
+* add husky ([8bc34cf](https://github.com/hellof2e/quark-design/commit/8bc34cfecb648bc66fa747eea268e8a12dcb2d1b))
+* add License for quark-react ([3561aca](https://github.com/hellof2e/quark-design/commit/3561aca0934b78614a1b6bbaacdbf55c2002b07c))
+* loading组件icon更换, 部分ui调整, switch组件新增loading状态与未选中颜色配置 ([cfea75b](https://github.com/hellof2e/quark-design/commit/cfea75ba42ab0773dc9055fc8db439e05b649846))
+* remove commitizen commitlint commitlint-config-cz ([5331a5d](https://github.com/hellof2e/quark-design/commit/5331a5de42bdee45295b853cd0349e310f095bdb))
+* test action ([dc86da8](https://github.com/hellof2e/quark-design/commit/dc86da87ec806beea29a18a0629fce0bc7085e56))
+* test action ([187a72b](https://github.com/hellof2e/quark-design/commit/187a72bf3bf8fcbad0b0957af134ecb15dfa2e67))
+* test action ([01f8d22](https://github.com/hellof2e/quark-design/commit/01f8d224bc2c1f798d5968524c6b35dbb2640961))
+* test action ([c9aa679](https://github.com/hellof2e/quark-design/commit/c9aa67997ada35a88c18722b126b7456a395e961))
+* test action ([25435fc](https://github.com/hellof2e/quark-design/commit/25435fc9e7096ba19b5be88283c9fd19d915e923))
+* titel -> title ([3220911](https://github.com/hellof2e/quark-design/commit/3220911b29a559b67a9197e3cf0a86c3aadef577))
+* update ([901991e](https://github.com/hellof2e/quark-design/commit/901991eab9482c74eb03522b68dab48ae71f845e))
+* update ([e078888](https://github.com/hellof2e/quark-design/commit/e07888897a832ffd8ab6d48e7438329180833c07))
+* update ([35dec81](https://github.com/hellof2e/quark-design/commit/35dec81663e3ecb62c2540b8612c38aecde02795))
+* update ([a0b0049](https://github.com/hellof2e/quark-design/commit/a0b00490bd78fe6927a936a5c9288c66eab0fd99))
+* update ([6cd00aa](https://github.com/hellof2e/quark-design/commit/6cd00aad2514d37cd45ed02457e113bda9d3225e))
+* update ([266cb64](https://github.com/hellof2e/quark-design/commit/266cb640614395318995356cd656eee608b3a35b))
+* update quarkd version ([8a2b8a1](https://github.com/hellof2e/quark-design/commit/8a2b8a13b6cba3b16ba1e10e0fcb88f398aa92b6))
+* 优化demo ([c01f0c0](https://github.com/hellof2e/quark-design/commit/c01f0c0111845d754d58b2f923c663a0034129ff))
+* 优化demo ([2120ff3](https://github.com/hellof2e/quark-design/commit/2120ff3ca98abe6a22b5ae284147717b572d1be3))
+* 增加loading状态, 支持设置关闭背景色 ([47a4f25](https://github.com/hellof2e/quark-design/commit/47a4f254643119ebab38215b524ea42b8e4fde86))
+
 ### [1.0.51](https://github.com/hellof2e/quark-design/compare/v1.0.50...v1.0.51) (2023-03-27)
 
 
