@@ -32,6 +32,14 @@ export interface CustomEvent {
     detail: UploaderFileListItem | UploaderFileListItem[];
   }) => void;
 }
+export interface CustomEvent {
+  oversize?: (e: {
+    detail: {
+      items: UploaderFileListItem[], maxsize: string
+    };
+  }) => void;
+}
+
 @customElement({ tag: "quark-uploader", style })
 class QuarkUploader extends QuarkElement {
   @property()
@@ -139,6 +147,10 @@ class QuarkUploader extends QuarkElement {
       }
       this.values = this.preview ? this.tasks.slice(0, this.maxcount) : [];
       this.$emit("afterread", { detail: items });
+    } else {
+      this.$emit("oversize", { detail: {
+        items, maxsize
+      } });
     }
   };
 

@@ -2,7 +2,7 @@
   <div class="demo uploader-demo">
     <h2>{{ translate("basic") }}</h2>
     <div class="flex">
-      <quark-uploader @afterread="afterRead" :preview="isPreview" />
+      <quark-uploader @afterread="(val) => afterRead(val, true)" :preview="isPreview" />
     </div>
     <h2>{{ translate("preview") }}</h2>
     <div class="flex">
@@ -20,7 +20,7 @@
     <quark-uploader
       maxsize="1024"
       @oversize="oversize"
-      ref="oversize"
+      ref="oversizeRef"
     ></quark-uploader>
     <h2>{{ translate("custom") }}</h2>
     <div class="flex">
@@ -55,6 +55,7 @@ export default createDemo({
     const preview = ref(null);
     const preview2 = ref(null);
     const before = ref(null);
+    const oversizeRef = ref(false);
     const previewUrls = [
       "https://m.hellobike.com/resource/helloyun/15697/9VgwC_Screenshot_20220215_191457_com.jingyao.easybike.jpg?x-oss-process=image/quality,q_80",
       "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
@@ -113,7 +114,8 @@ export default createDemo({
       }
       return true;
     };
-    const oversize = () => {
+    const oversize = ({detail: { items, maxsize }}) => {
+      console.log(items, maxsize)
       Toast.text(`${translate("toast.overSize")}`);
     };
     const uploadAction = async (item) => {
@@ -129,7 +131,11 @@ export default createDemo({
       });
       Toast.success("上传成功");
     };
-    const afterRead = async ({ detail: file }) => {
+    const afterRead = async ({ detail: file }, isDefault) => {
+      if(isDefault) {
+        Toast.text(`success: the file is ${file.file.name}`)
+        return 
+      }
       if (Array.isArray(file)) {
         for (let i = 0; i < file.length; i++) {
           const item = file[i];
@@ -150,6 +156,7 @@ export default createDemo({
       before,
       beforeUpload,
       oversize,
+      oversizeRef,
       afterRead,
       translate,
     };
