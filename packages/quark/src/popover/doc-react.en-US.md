@@ -45,10 +45,7 @@ export default () => {
           handleClose();
         }}
       >
-        <div
-          className="quark-popover"
-          onClick={handleClick}
-        >
+        <div className="quark-popover" onClick={handleClick}>
           Basic Usage
         </div>
       </Popover>
@@ -109,10 +106,7 @@ export default () => {
           handleClose();
         }}
       >
-        <div
-          className="quark-popover"
-          onClick={handleClick}
-        >
+        <div className="quark-popover" onClick={handleClick}>
           Show Icon
         </div>
       </Popover>
@@ -166,10 +160,7 @@ export default () => {
           handleClose();
         }}
       >
-        <div
-          className="quark-popover"
-          onClick={() => handleClick()}
-        >
+        <div className="quark-popover" onClick={() => handleClick()}>
           Disabled
         </div>
       </Popover>
@@ -230,7 +221,7 @@ With the content slot, arbitrary content can be placed inside the Popover.
 The scrollhidden property controls whether to close when the page is scrolled.
 
 ```html
-<Popover scroolhidden>
+<Popover scrollhidden>
   <div class="Popover">Close Scroll</div>
 </Popover>
 ```
@@ -243,7 +234,7 @@ The scrollhidden property controls whether to close when the page is scrolled.
 | ------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | open         | Whether to show popover                                  | `boolean`                                                                                                                     | `false`       |
 | placement    | tip popup position                                       | `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`      |
-| scroolhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
+| scrollhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
 | zindex       | popover z-index                                          | `number`                                                                                                                      | `999`         |
 | theme        | popover theme mode                                       | support `light` `dark`                                                                                                        | `dark`        |
 | onClose      | Emitted when an action is closed                         | `() => void`                                                                                                                  | `require`     |

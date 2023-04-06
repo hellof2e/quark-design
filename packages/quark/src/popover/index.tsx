@@ -29,7 +29,7 @@ export interface Props {
     | "bottomright";
   zindex?: number;
   theme?: "light" | "dark";
-  scroolhidden?: boolean;
+  scrollhidden?: boolean;
 }
 export interface CustomEvent {
   close: () => void;
@@ -61,7 +61,7 @@ class QuarkPopover extends QuarkElement {
   @property({
     type: Boolean,
   })
-  scroolhidden = false;
+  scrollhidden = false;
 
   @property()
   zindex = "999";
@@ -73,7 +73,7 @@ class QuarkPopover extends QuarkElement {
       this.style.zIndex = this.zindex;
     }
 
-    if (this.scroolhidden) {
+    if (this.scrollhidden) {
       window.addEventListener("scroll", this.windowScrollListener);
     }
 

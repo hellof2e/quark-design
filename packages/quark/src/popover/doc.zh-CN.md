@@ -276,11 +276,11 @@ bottomright    # 底部右侧位置
 
 ### 滚动关闭
 
-通过 scroolhidden 属性来控制当页面滚动时是否关闭。
+通过 scrollhidden 属性来控制当页面滚动时是否关闭。
 
 ```html
 <quark-popover
-  scroolhidden
+  scrollhidden
   ref="popoverRef"
   :open="open"
   @close="close"
@@ -335,7 +335,7 @@ bottomright    # 底部右侧位置
 | ------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | open         | popover 是否显示           | `boolean`                                                                                                                          | `false`  |
 | placement    | tip 弹出位置               | 支持 `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom` |
-| scroolhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`  |
+| scrollhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`  |
 | zindex       | popover 层级               | ` number`                                                                                                                          | `999`    |
 | theme        | popover 主题模式           | 支持 `light` `dark`                                                                                                                | `dark`   |
 
