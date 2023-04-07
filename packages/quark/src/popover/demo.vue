@@ -2,7 +2,7 @@
   <div class="demo">
     <h2>{{ translate("basicUsage") }}</h2>
     <quark-popover
-      scroolhidden
+      scrollhidden
       :open="data.light"
       theme="light"
       placement="bottomleft"
@@ -16,7 +16,7 @@
     </quark-popover>
 
     <quark-popover
-      scroolhidden
+      scrollhidden
       :open="data.dark"
       theme="dark"
       ref="darkRef"
@@ -30,7 +30,7 @@
 
     <h2>{{ translate("settings") }}</h2>
     <quark-popover
-      scroolhidden
+      scrollhidden
       :open="data.icon"
       placement="bottomleft"
       ref="iconRef"
@@ -43,7 +43,7 @@
       </div>
     </quark-popover>
     <quark-popover
-      scroolhidden
+      scrollhidden
       theme="light"
       :open="data.disable"
       ref="disableRef"
@@ -56,7 +56,7 @@
     </quark-popover>
     <h2>{{ translate("") }}</h2>
     <quark-popover
-      scroolhidden
+      scrollhidden
       :open="data.content"
       placement="bottomleft"
       @close="close('content')"

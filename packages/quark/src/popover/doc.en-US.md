@@ -276,7 +276,7 @@ The scrollhidden property controls whether to close when the page is scrolled.
 
 ```html
 <quark-popover
-  scroolhidden
+  scrollhidden
   ref="popoverRef"
   :open="open"
   @close="close"
@@ -330,7 +330,7 @@ export default {
 | ------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | open         | Whether to show popover                                  | `boolean`                                                                                                                     | `false`       |
 | placement    | tip popup position                                       | `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`      |
-| scroolhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
+| scrollhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
 | zindex       | popover z-index                                          | `number`                                                                                                                      | `999`         |
 | theme        | popover theme mode                                       | support `light` `dark`                                                                                                        | `dark`        |
 
