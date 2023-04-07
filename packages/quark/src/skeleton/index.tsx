@@ -64,7 +64,7 @@ class Skeleton extends QuarkElement {
                 const rowWidth = this.getRowWidth(index);
                 return (
                   <div
-                    class="sketleton-row"
+                    class="skeleton-row"
                     style={{
                       width: rowWidth,
                       marginTop: index === 0 && !this.title ? "0px" : undefined,
