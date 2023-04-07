@@ -1,7 +1,7 @@
 <template>
   <div class="demo no-padding steps-demo">
     <h2>{{ translate("title.basic") }}</h2>
-    <div class="item-wrap item-horzontal">
+    <div class="item-wrap item-horizontal">
       <quark-steps>
         <quark-step status="done" :title="translate('steps.step1')" order="1">
         </quark-step>
@@ -16,7 +16,7 @@
     </div>
 
     <h2>{{ translate("title.desc") }}</h2>
-    <div class="item-wrap item-horzontal">
+    <div class="item-wrap item-horizontal">
       <quark-steps>
         <quark-step
           status="done"
