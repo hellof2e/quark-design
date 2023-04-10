@@ -78,7 +78,7 @@ import { Steps, StepItem } from "@quarkd/quark-react";
 
 | Attribute | Description                                             | Type      | Default     |
 | --------- | ------------------------------------------------------- | --------- | ----------- |
-| direction | Display direction，can be set to `horzontal` `vertical` | `string ` | `horzontal` |
+| direction | Display direction，can be set to `horizontal` `vertical` | `string ` | `horizontal` |
 
 #### StepItem
 

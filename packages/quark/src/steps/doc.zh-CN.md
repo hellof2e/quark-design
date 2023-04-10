@@ -78,7 +78,7 @@ import "quarkd/lib/steps";
 
 | 参数      | 说明                             | 类型     | 默认值      |
 | --------- | -------------------------------- | -------- | ----------- |
-| direction | 显示方向，`horzontal` `vertical` | `string` | `horzontal` |
+| direction | 显示方向，`horizontal` `vertical` | `string` | `horizontal` |
 
 #### quark-step
 

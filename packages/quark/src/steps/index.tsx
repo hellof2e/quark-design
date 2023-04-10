@@ -3,7 +3,7 @@ import { slotAssignedElements } from "../../utils/public";
 import style from "./style.css";
 import groupCss from "./group.css";
 export interface Props {
-  direction?: "horzontal" | "vertical";
+  direction?: "horizontal" | "vertical";
 }
 export interface ItemProps {
   title: string;
