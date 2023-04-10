@@ -108,13 +108,13 @@ export default {
 
 ### Scroll To Close
 
-Controls whether to close when the page is scrolled through the scroolhidden property.
+Controls whether to close when the page is scrolled through the scrollhidden property.
 
 ```html
 <quark-tooltip
   placement="top"
   tips="bubble text"
-  scroolhidden
+  scrollhidden
   :open="open"
   @close="close"
 >
@@ -186,7 +186,7 @@ export default {
 | closeable    | Whether to show close button                             | `boolean`                                                                                                                     | `false`       |
 | autoclose    | Whether to automatically close after display             | `boolean`                                                                                                                     | `false`       |
 | opentime     | Time from display to auto-off                            | `string`                                                                                                                      | `3000`        |
-| scroolhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
+| scrollhidden | Whether to close automatically when the page is scrolled | `boolean`                                                                                                                     | `false`       |
 | zindex       | z-index                                                  | `number`                                                                                                                      | `999`         |
 
 ### Events

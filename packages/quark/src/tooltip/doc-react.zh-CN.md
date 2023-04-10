@@ -83,10 +83,10 @@ bottomright   # 底部右侧位置
 
 ### 滚动关闭
 
-通过 scroolhidden 属性来控制当页面滚动时是否关闭。
+通过 scrollhidden 属性来控制当页面滚动时是否关闭。
 
 ```html
-<Tooltip tips="气泡文字" scroolhidden>
+<Tooltip tips="气泡文字" scrollhidden>
   <div>top 位置</div>
 </Tooltip>
 ```
@@ -117,7 +117,7 @@ bottomright   # 底部右侧位置
 | closeable    | 是否显示关闭按钮           | ` boolean`                                                                                                                         | `false`   |
 | autoclose    | 显示后是否自动关闭         | `boolean`                                                                                                                          | `false`   |
 | opentime     | 显示后到自动关闭的时间     | `string`                                                                                                                           | `3000`    |
-| scroolhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`   |
+| scrollhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`   |
 | zindex       | tips 层级                  | `number`                                                                                                                           | `999`     |
 | onClose      | tip 消失回调               | `() => void`                                                                                                                       | `require` |
 
