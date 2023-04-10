@@ -95,7 +95,7 @@ export default {
     return {
       data,
       isLoading,
-      handleChange,
+      changeLoading,
     };
   },
 };

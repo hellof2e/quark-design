@@ -72,7 +72,7 @@ import { Button } from "@quarkd/quark-react";
 ```html
 <button loading type="danger" loadtype="circular">加载中...</button>
 <button loading type="warning">加载中...</button>
-<button onClick="changeLoading" loading="{isLoading}" type="success">
+<button onClick="{changeLoading}" loading="{isLoading}" type="success">
   Click me!
 </button>
 ```

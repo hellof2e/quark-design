@@ -7,7 +7,19 @@
 ### 安装使用
 
 ```tsx
-import "quarkd/lib/button";
+import {
+  QuarkElement,
+  customElement,
+  property,
+  state,
+  createRef
+} from "quarkc";
+import style from "./style.css";
+
+@customElement({
+  tag: "quark-badge",
+  style
+})
 ```
 
 ### 基本使用
@@ -72,7 +84,7 @@ import "quarkd/lib/button";
 ```html
 <quark-button loading type="danger" loadtype="circular">加载中...</quark-button>
 <quark-button loading type="warning">加载中...</quark-button>
-<quark-button @click="handleChange" :loading="isLoading" type="success"
+<quark-button @click="changeLoading" :loading="isLoading" type="success"
   >Click me!</quark-button
 >
 ```
@@ -92,7 +104,7 @@ export default {
     return {
       data,
       isLoading,
-      handleChange,
+      changeLoading,
     };
   },
 };
