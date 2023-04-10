@@ -54,18 +54,19 @@ import { Steps, StepItem } from "@quarkd/quark-react";
     title="已完成"
     order="1"
     content="您的订单已经完成，商品已发出"
-    >1</StepItem
-  >
-  <StepItem status="doing" title="进行中" order="2" content="您的订单正在配送中"
-    >2</StepItem
-  >
+  >1</StepItem>
+  <StepItem
+    status="doing"
+    title="进行中"
+    order="2"
+    content="您的订单正在配送中"
+  >2</StepItem>
   <StepItem
     status="todo"
     title="未开始"
     order="3"
     content="收货地址为：杭州市益展商务大厦"
-    >3</StepItem
-  >
+  >3</StepItem>
 </Steps>
 ```
 
@@ -75,8 +76,8 @@ import { Steps, StepItem } from "@quarkd/quark-react";
 
 #### Steps
 
-| 参数      | 说明                              | 类型   | 默认值       |
-| --------- | --------------------------------- | ------ | ------------ |
+| 参数      | 说明                             | 类型   | 默认值      |
+| --------- | -------------------------------- | ------ | ----------- |
 | direction | 显示方向，`horizontal` `vertical` | string | `horizontal` |
 
 #### StepItem
