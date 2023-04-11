@@ -52,29 +52,29 @@ export function getScrollParent(
   return root;
 }
 
-var hasOwn = {}.hasOwnProperty;
+export const hasOwn = {}.hasOwnProperty;
 export function classNames(...rest: any): string {
-  var classes = [];
+  const classes = [];
 
-  for (var i = 0; i < rest.length; i++) {
-    var arg = rest[i];
+  for (let i = 0; i < rest.length; i++) {
+    const arg = rest[i];
     if (!arg) continue;
 
-    var argType = typeof arg;
+    const argType = typeof arg;
 
     if (argType === "string" || argType === "number") {
       classes.push(arg);
     } else if (Array.isArray(arg)) {
       if (arg.length) {
         // @ts-ignore
-        var inner = classNames.apply(null, arg);
+        const inner = classNames.apply(null, arg);
         if (inner) {
           classes.push(inner);
         }
       }
     } else if (argType === "object") {
       if (arg.toString === Object.prototype.toString) {
-        for (var key in arg) {
+        for (const key in arg) {
           if (hasOwn.call(arg, key) && arg[key]) {
             classes.push(key);
           }
