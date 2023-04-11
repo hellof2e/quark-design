@@ -21,7 +21,6 @@
   width: 1em;
   height: 1em;
   margin: auto;
-  animation: rotate 1.4s linear infinite;
   color: #c8c9cc;
 }
 
@@ -40,10 +39,4 @@
 :host slot:empty .quark-loading-text {
   font-size: 0;
   margin: 0;
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
 }
