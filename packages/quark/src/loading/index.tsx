@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, Fragment } from "quarkc";
+import QuarkElement, { property, customElement, Fragment, state } from "quarkc";
 import style from "./style.css";
 export interface Props {
   type?: "circular" | "spinner";
@@ -29,6 +29,9 @@ class QuarkLoading extends QuarkElement {
   @property()
   size: string | undefined = undefined;
 
+  @state()
+  rotate = 0;
+
   getFontSize() {
     let fontSize = "30px";
     if (this.size && /\d(px|rem|em|vh|vw)$/.test(this.size)) {
@@ -39,12 +42,23 @@ class QuarkLoading extends QuarkElement {
     return fontSize;
   }
 
+  iconRotate() {
+    requestAnimationFrame(() => {
+      if (this.rotate > 360) {
+        this.rotate = this.rotate - 360;
+      }
+      this.rotate += 4.3; // 折算1.4s转一圈
+      this.iconRotate();
+    });
+  }
+
   renderLoadingSvg = () => {
     const fontSize = this.getFontSize();
+    const transform = `rotate(${this.rotate}deg)`;
     if (this.type === "circular") {
       return (
         <svg
-          style={{ fontSize }}
+          style={{ fontSize, transform }}
           class="quark-loading-spinner"
           t="1680062076772"
           viewBox="0 0 1024 1024"
@@ -73,7 +87,7 @@ class QuarkLoading extends QuarkElement {
       // 专门给下拉刷新使用的loading
       return (
         <svg
-          style={{ fontSize }}
+          style={{ fontSize, transform }}
           class="quark-loading-spinner"
           width="24px"
           height="24px"
@@ -114,7 +128,7 @@ class QuarkLoading extends QuarkElement {
         p-id="3310"
         width="200"
         height="200"
-        style={{ fontSize }}
+        style={{ fontSize, transform }}
         class="quark-loading-spinner"
       >
         <path
@@ -192,6 +206,10 @@ class QuarkLoading extends QuarkElement {
       </svg>
     );
   };
+
+  componentDidMount() {
+    this.iconRotate();
+  }
 
   render() {
     return (
