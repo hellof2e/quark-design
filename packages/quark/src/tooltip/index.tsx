@@ -21,7 +21,7 @@ export interface Props {
   closeable?: boolean;
   autoclose?: boolean;
   opentime?: number;
-  scroolhidden?: boolean;
+  scrollhidden?: boolean;
 }
 export interface CustomEvent {
   close: () => void;
@@ -59,7 +59,7 @@ class QuarkTooltip extends QuarkElement {
   @property({
     type: Boolean,
   })
-  scroolhidden = false;
+  scrollhidden = false;
 
   @property()
   zindex = "999";
@@ -73,7 +73,7 @@ class QuarkTooltip extends QuarkElement {
       this.style.zIndex = this.zindex;
     }
 
-    if (this.scroolhidden) {
+    if (this.scrollhidden) {
       window.addEventListener("scroll", this.windowScrollListener);
     }
 
@@ -139,7 +139,7 @@ class QuarkTooltip extends QuarkElement {
     }
   };
 
-  addRemoveAnnimation = () => {
+  addRemoveAnimation = () => {
     if (this.tipsRef && this.tipsRef.current) {
       const { current } = this.tipsRef;
       current.classList.add("quark-tooltip-leave");
@@ -147,7 +147,7 @@ class QuarkTooltip extends QuarkElement {
   };
 
   closeEmit = () => {
-    this.addRemoveAnnimation();
+    this.addRemoveAnimation();
     this.open = false;
     this.$emit("close");
   };

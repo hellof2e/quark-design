@@ -5,7 +5,7 @@
       <quark-tooltip
         placement="top"
         :tips="translate('tips')"
-        scroolhidden
+        scrollhidden
         :open="data.top"
         @click="open('top')"
         @close="close('top')"
@@ -18,7 +18,7 @@
       <quark-tooltip
         placement="topleft"
         :tips="translate('tips')"
-        scroolhidden
+        scrollhidden
         :open="data.topleft"
         @click="open('topleft')"
         @close="close('topleft')"
@@ -31,7 +31,7 @@
       <quark-tooltip
         placement="topright"
         :tips="translate('tips')"
-        scroolhidden
+        scrollhidden
         :open="data.topright"
         @click="open('topright')"
         @close="close('topright')"
@@ -41,54 +41,54 @@
     </div>
 
     <!-- <div class="tips">
-      <quark-tooltip placement="bottom" autoclose scroolhidden tips="气泡文字" :open="bottom" @click="open('bottom')" @close="close('bottom')">
+      <quark-tooltip placement="bottom" autoclose scrollhidden tips="气泡文字" :open="bottom" @click="open('bottom')" @close="close('bottom')">
         <div>bottom 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="bottomright" autoclose scroolhidden tips="气泡文字" :open="bottomright" @click="open('bottomright')" @close="close('bottomright')">
+      <quark-tooltip  placement="bottomright" autoclose scrollhidden tips="气泡文字" :open="bottomright" @click="open('bottomright')" @close="close('bottomright')">
         <div>bottom right 位置</div>
       </quark-tooltip>
     </div>
     <div class="tips">
-      <quark-tooltip  placement="bottomleft" autoclose scroolhidden tips="气泡文字" :open="bottomleft" @click="open('bottomleft')" @close="close('bottomleft')">
+      <quark-tooltip  placement="bottomleft" autoclose scrollhidden tips="气泡文字" :open="bottomleft" @click="open('bottomleft')" @close="close('bottomleft')">
         <div>bottom left 位置</div>
       </quark-tooltip>
     </div> -->
 
     <!-- <div class="tips">
-      <quark-tooltip  placement="left" autoclose scroolhidden tips="气泡文字" :open="left" @click="open('left')" @close="close('left')">
+      <quark-tooltip  placement="left" autoclose scrollhidden tips="气泡文字" :open="left" @click="open('left')" @close="close('left')">
         <div class="left">left 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="lefttop" autoclose scroolhidden tips="气泡文字" :open="lefttop" @click="open('lefttop')" @close="close('lefttop')">
+      <quark-tooltip  placement="lefttop" autoclose scrollhidden tips="气泡文字" :open="lefttop" @click="open('lefttop')" @close="close('lefttop')">
         <div class="left">left top 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="leftbottom" autoclose scroolhidden tips="气泡文字" :open="leftbottom" @click="open('leftbottom')" @close="close('leftbottom')">
+      <quark-tooltip  placement="leftbottom" autoclose scrollhidden tips="气泡文字" :open="leftbottom" @click="open('leftbottom')" @close="close('leftbottom')">
         <div class="left">left bottom 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="right" autoclose scroolhidden tips="气泡文字" :open="right" @click="open('right')" @close="close('right')">
+      <quark-tooltip  placement="right" autoclose scrollhidden tips="气泡文字" :open="right" @click="open('right')" @close="close('right')">
         <div class="left">right 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="righttop" autoclose scroolhidden tips="气泡文字" :open="righttop" @click="open('righttop')"  @close="close('righttop')">
+      <quark-tooltip  placement="righttop" autoclose scrollhidden tips="气泡文字" :open="righttop" @click="open('righttop')"  @close="close('righttop')">
         <div class="left">right top 位置</div>
       </quark-tooltip>
     </div>
 
     <div class="tips">
-      <quark-tooltip  placement="rightbottom" autoclose scroolhidden tips="气泡文字"  :open="rightbottom" @click="open('rightbottom')" @close="close('rightbottom')">
+      <quark-tooltip  placement="rightbottom" autoclose scrollhidden tips="气泡文字"  :open="rightbottom" @click="open('rightbottom')" @close="close('rightbottom')">
         <div class="left">right bottom 位置</div>
       </quark-tooltip>
     </div>
@@ -98,7 +98,7 @@
       <quark-tooltip
         placement="top"
         closeable
-        scroolhidden
+        scrollhidden
         :tips="translate('tips')"
         :open="data.topclose"
         @click="open('topclose')"
@@ -114,7 +114,7 @@
         placement="top"
         autoclose
         opentime="5000"
-        scroolhidden
+        scrollhidden
         :tips="translate('tips')"
         :open="data.autoclose"
         @click="open('autoclose')"
@@ -131,7 +131,7 @@
         autoclose
         closeable
         opentime="5000"
-        scroolhidden
+        scrollhidden
         :tips="translate('tips')"
         :open="data.customstyle"
         @click="open('customstyle')"

@@ -108,13 +108,13 @@ export default {
 
 ### 滚动关闭
 
-通过 scroolhidden 属性来控制当页面滚动时是否关闭。
+通过 scrollhidden 属性来控制当页面滚动时是否关闭。
 
 ```html
 <quark-tooltip
   placement="top"
   tips="气泡文字"
-  scroolhidden
+  scrollhidden
   :open="open"
   @close="close"
 >
@@ -186,7 +186,7 @@ export default {
 | closeable    | 是否显示关闭按钮           | `boolean`                                                                                                                          | `false`   |
 | autoclose    | 显示后是否自动关闭         | `boolean`                                                                                                                          | `false`   |
 | opentime     | 显示后到自动关闭的时间     | `string`                                                                                                                           | `3000`    |
-| scroolhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`   |
+| scrollhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`   |
 | zindex       | tips 层级                  | `number`                                                                                                                           | `999`     |
 
 ### Events
