@@ -29,7 +29,7 @@ type LISTENER = {
 };
 
 class LazyLoad {
-  private mode: string = "";
+  private mode = "";
   private observer?: IntersectionObserver;
   private listeners: Array<LISTENER> = [];
   public listenEvents: string[] = DEFAULT_EVENTS;
@@ -127,7 +127,7 @@ class LazyLoad {
     });
   }
 
-  checkVisible(el: HTMLElement): Boolean {
+  checkVisible(el: HTMLElement): boolean {
     const Rect = el.getBoundingClientRect();
     return (
       Rect.top < window.innerHeight * PRELOAD &&
