@@ -7,19 +7,7 @@
 ### 安装使用
 
 ```tsx
-import {
-  QuarkElement,
-  customElement,
-  property,
-  state,
-  createRef
-} from "quarkc";
-import style from "./style.css";
-
-@customElement({
-  tag: "quark-badge",
-  style
-})
+import "quarkd/lib/button";
 ```
 
 ### 基本使用
