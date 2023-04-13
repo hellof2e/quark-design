@@ -1,4 +1,23 @@
 # 更新日志
+### [1.0.53](https://github.com/hellof2e/quark-design/compare/v1.0.52...v1.0.53) (2023-04-13)
+
+
+### 🎉 Features
+
+* **loading:** loading animate use js ([022b194](https://github.com/hellof2e/quark-design/commit/022b194969f63087b990c0dbab125f44557f311f))
+* update ([04c2b9a](https://github.com/hellof2e/quark-design/commit/04c2b9a6f4c1e5223a52e22397f977e91cb9471a))
+
+
+### Documentation
+
+* **button:** revert incorrect change ([cb59de6](https://github.com/hellof2e/quark-design/commit/cb59de6a4a5938f7e568d3285041433d69e9004b))
+
+
+### 🐞 Bug Fixes
+
+* 修复 toast hide loading 没有移除样式 ([8a63b2c](https://github.com/hellof2e/quark-design/commit/8a63b2c78c9f0cdf123078a183e79b8826e4ccbe))
+* readme ([61e382a](https://github.com/hellof2e/quark-design/commit/61e382a89e670beb6836393ade92a11ec3d71507))
+* uploader oversize not work ([91a3d86](https://github.com/hellof2e/quark-design/commit/91a3d86c697dc5a28e026020d4d4cf03c7ee132d))
 
 ### [1.0.52](https://github.com/hellof2e/quark-design/compare/v1.0.51...v1.0.52) (2023-04-06)
 

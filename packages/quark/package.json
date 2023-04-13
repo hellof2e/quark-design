@@ -1,6 +1,6 @@
 {
   "name": "quarkd",
-  "version": "1.0.52",
+  "version": "1.0.53",
   "description": "Mobile UI Components built on Web Components.",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -78,7 +78,7 @@
     "@better-scroll/slide": "^2.4.2",
     "@better-scroll/wheel": "^2.4.2",
     "@quarkd/icons": "^1.0.4",
-    "quarkc": "^1.0.0",
+    "quarkc": "1.0.0",
     "body-scroll-lock": "3.1.5",
     "lodash.assign": "^4.2.0"
   },
