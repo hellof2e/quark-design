@@ -1,6 +1,8 @@
 import "@quarkd/icons/lib/whitesuccess-o";
 import "@quarkd/icons/lib/whiteerror-o";
 import "@quarkd/icons/lib/whitewarning-o";
+import { clearAllBodyScrollLocks } from "body-scroll-lock";
+
 import QuarkElement, {
   Fragment,
   property,
@@ -81,6 +83,7 @@ class QuarkToast extends QuarkElement {
 
   hide = () => {
     document.body.removeChild(this);
+    if (this.type === "loading") clearAllBodyScrollLocks();
   };
 
   renderIcon = () => {
