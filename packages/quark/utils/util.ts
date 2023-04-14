@@ -46,3 +46,33 @@ export const deepMerge = (target: any, newObj: any) => {
   });
   return target;
 };
+
+/**
+ * 判断输入字符串是否为数字或者像素单位
+ * @param value 输入值
+ * @returns true表示输入值为数字或像素单位，false表示不是
+ */
+export const isNumericOrPx = (value: string | number): boolean => {
+  if (!value) return true;
+  return /^\d+$|^\d+px$/.test(`${value}`);
+};
+
+/**
+ * 将像素单位转换成 vw 单位
+ * @param value 像素值
+ * @param viewportWidth 设计稿宽度，默认为 375
+ * @returns 转换后的值
+ * @throws {Error} 当输入值包含非法单位时抛出异常
+ */
+export const pxToVw = (
+  value: string | number,
+  { viewportWidth = 375 }: { viewportWidth?: number } = {}
+): string | number => {
+  const pxNum = parseFloat(value.toString());
+  if (!Number.isNaN(pxNum)) {
+    const vwNum = (pxNum / viewportWidth) * 100;
+    const result = vwNum.toFixed(5) + "vw";
+    return result;
+  }
+  return value;
+};

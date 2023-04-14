@@ -1,6 +1,8 @@
 import QuarkElement, { property, customElement, createRef } from "quarkc";
 import "../loading";
 import style from "./style.css";
+import { pxToVw } from "../../utils/util";
+
 export interface Props {
   type?: "primary" | "success" | "danger" | "warning";
   size?: "small" | "normal" | "big" | "large";
@@ -69,7 +71,7 @@ class QuarkButton extends QuarkElement {
         <quark-loading
           class="quark-button-load"
           color={this.loadingcolor ? this.loadingcolor : "#fff"}
-          size={this.loadingsize ? this.loadingsize : "20"}
+          size={this.loadingsize ? pxToVw(this.loadingsize) : pxToVw(20)}
           type={this.loadtype ? this.loadtype : "spinner"}
         />
       );
