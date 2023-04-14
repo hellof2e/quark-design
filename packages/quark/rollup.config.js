@@ -33,9 +33,10 @@ const options = [
   {
     input: "./src/index.ts",
     output: {
-      dir: "./umd",
+      file: "./umd/index.mini.js",
+      // dir: "./umd",
       format: "umd",
-      name: "index.mini.js",
+      name: "quark",
     },
     plugins: [
       cssVariable({
