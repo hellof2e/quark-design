@@ -81,6 +81,7 @@ class QuarkList extends QuarkElement {
   ): boolean {
     if (propName === "loading") {
       if (!checkFalse(oldValue) && checkFalse(newValue)) {
+        console.log("shouldComponentUpdate");
         this.check({ auto: true });
       }
     }
