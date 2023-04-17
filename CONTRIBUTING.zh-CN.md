@@ -26,12 +26,6 @@ yarn run dev
 yarn clean
 ```
 
-Windows 电脑运行 yarn run link 时乱码？
-
-```
-// 在 git bash 中执行 yarn run link 命令
-```
-
 ---------
 ## 以下内容，核心开发者阅读
 ##### 命令说明
