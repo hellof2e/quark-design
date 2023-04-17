@@ -40,7 +40,9 @@ const choosePackage = async (packages) => {
 };
 
 const writeQuarkReactVersion = () => {
-  const quarkJsonResult = fs.readJSONSync(`${cwd}/packages/quark/package.json`);
+  const quarkJsonResult = fs.readJSONSync(
+    `${cwd}/packages/quarkd/package.json`
+  );
   const quarkReactResult = fs.readJSONSync(
     `${cwd}/packages/quark-react/package.json`
   );

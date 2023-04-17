@@ -29,7 +29,7 @@
     "release:patch": "node ./scripts/publish patch",
     "release:minor": "node ./scripts/publish minor",
     "release:major": "node ./scripts/publish major",
-    "test": "cd packages/quark && yarn run test"
+    "test": "cd packages/quarkd && yarn run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^10.0.0",
