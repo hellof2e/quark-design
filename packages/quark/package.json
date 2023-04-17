@@ -7,6 +7,7 @@
   "scripts": {
     "tsc": "rimraf types && npx tsc -b ./tsconfig.types.json && node ./typesGenerat.js",
     "build": "rimraf umd && rimraf lib && cross-env BABEL_ENV=umd rollup -c && npm run tsc",
+    "watch": "rimraf umd && rimraf lib && cross-env BABEL_ENV=umd rollup -c -w && npm run tsc",
     "release:major": "npm run release -- --release-as major",
     "release:minor": "npm run release -- --release-as minor",
     "release:patch": "npm run release -- --release-as patch",
