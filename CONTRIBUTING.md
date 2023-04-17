@@ -29,12 +29,6 @@ How to clear the cache of the sub-project?
 yarn run clean
 ```
 
-Garbled characters when running yarn run link on a Windows computer?
-
-```
-Execute the yarn run link command in git bash
-```
-
 ---------
 
 ## The following content, core developers read
