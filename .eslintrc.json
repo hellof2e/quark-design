@@ -23,7 +23,7 @@
   },
   "overrides": [
     {
-      "files": ["packages/quark/**/*.tsx"],
+      "files": ["packages/quarkd/**/*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-explicit-any": 0,

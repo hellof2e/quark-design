@@ -6,7 +6,7 @@ const pagesRouter: Array<RouteRecordRaw> = [];
 /** vite */
 // ps: 用 fast-glob 也可以
 const modulesPage = import.meta.glob(
-	`../../../../packages/quark/src/**/doc.zh-CN.md`
+	`../../../../packages/quarkd/src/**/doc.zh-CN.md`
 );
 for (const path in modulesPage) {
 	const name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
@@ -19,7 +19,7 @@ for (const path in modulesPage) {
 
 const pagesEnRouter: Array<RouteRecordRaw> = [];
 const modulesEnPage = import.meta.glob(
-	"../../../../packages/quark/src/**/doc.en-US.md"
+	"../../../../packages/quarkd/src/**/doc.en-US.md"
 );
 for (const path in modulesEnPage) {
 	const name = (/src\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
@@ -32,7 +32,7 @@ for (const path in modulesEnPage) {
 
 /** react 中英文文档 */
 const modulesPageReact = (import.meta as any).glob(
-	"../../../../packages/quark/src/**/doc-react.zh-CN.md"
+	"../../../../packages/quarkd/src/**/doc-react.zh-CN.md"
 );
 for (const path in modulesPageReact) {
 	const name = (/src\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[])[1];
@@ -43,7 +43,7 @@ for (const path in modulesPageReact) {
 }
 
 const modulesEnPageReact = (import.meta as any).glob(
-	"../../../../packages/quark/src/**/doc-react.en-US.md"
+	"../../../../packages/quarkd/src/**/doc-react.en-US.md"
 );
 for (const path in modulesEnPageReact) {
 	const name = (/src\/(.*)\/doc-react.en-US.md/.exec(path) as any[])[1];
