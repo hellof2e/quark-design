@@ -7,17 +7,15 @@
 - 环境要求： `node >= 16.0.0`, `yarn >= 1.22`
 
 ## 开始
+1. 项目使用 lerna 管理，所有的大包在 /packages，所有的自定义组件包在 /widgets
 
-第一次启动
 
-```bash
-yarn run init
-yarn run dev
+2. 如何跑起来（以下操作全在根目录）
 ```
+# 首次开发需要安装依赖，请使用 yarn，会去重的安装所有 node_modules (注意安装必须用 yarn，其他命令无所谓)
+yarn run init (包含了 yarn && yarn run link && cd example && yarn)
 
-以后再次启动本工程只需
-
-```bash
+# 将文档网站跑起来
 yarn run dev
 ```
 
