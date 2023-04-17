@@ -15,7 +15,7 @@ const { resolve } = path;
 
 const plugins = [
 	// 监听 css 变化热更新
-	reloadOnChange(["../packages/quark/src/**/*.css"]),
+	reloadOnChange(["../packages/quarkd/src/**/*.css"]),
 	cssVariable({
 		variableMap,
 		prefix: "quark-",
@@ -77,7 +77,7 @@ export default defineConfig({
 			{ find: "@", replacement: resolve(__dirname, "./src") },
 			{
 				find: "@quarkd/quark",
-				replacement: resolve(__dirname, "../packages/quark"),
+				replacement: resolve(__dirname, "../packages/quarkd"),
 			},
 		],
 	},

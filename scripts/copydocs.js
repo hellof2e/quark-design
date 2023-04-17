@@ -30,7 +30,7 @@ const removeFile = async (url) => {
 };
 
 const copy = async () => {
-  const quarkPath = path.resolve(__dirname, "../packages/quark");
+  const quarkPath = path.resolve(__dirname, "../packages/quarkd");
   let configPath = path.resolve(__dirname, "../example/src/config.json");
   let configPkgPath = path.resolve(__dirname, `${quarkPath}/package.json`);
   let quarkdDocsConfigPath = `${targetBaseUrl}/config.json`;
@@ -52,8 +52,8 @@ const copy = async () => {
         let docpath = `${quarkPath}/src/${cmpName}/doc.zh-CN.md`; // 中文md
         let docEnPath = `${quarkPath}/src/${cmpName}/doc.en-US.md`; // 英文md
 
-        let reactDocpath = `packages/quark/src/${cmpName}/doc-react.zh-CN.md`;
-        let reactDocEnPath = `packages/quark/src/${cmpName}/doc-react.en-US.md`;
+        let reactDocpath = `packages/quarkd/src/${cmpName}/doc-react.zh-CN.md`;
+        let reactDocEnPath = `packages/quarkd/src/${cmpName}/doc-react.en-US.md`;
 
         console.log(docpath, "docpath---------->");
         console.log(docEnPath, "docEnPath---------->");
