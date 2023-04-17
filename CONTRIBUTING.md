@@ -13,19 +13,13 @@ We are very welcome to the community developers to make contributions to Quark D
 
 ## Start
 
-First start:
+```
+# For the first development, you need to install dependencies and perform link operations
+yarn run init (contains yarn && yarn run link && cd example && yarn)
 
-```bash
-yarn run init
+# Run the docs site
 yarn run dev
 ```
-
-After that, just run the following command:
-
-```bash
-yarn run dev
-```
-
 
 ## Frequently asked questions
 
