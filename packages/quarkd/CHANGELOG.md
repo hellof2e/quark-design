@@ -1,5 +1,22 @@
 # 更新日志
 
+### [1.0.54](https://github.com/hellof2e/quark-design/compare/v1.0.53...v1.0.54) (2023-04-18)
+
+### 🎉 Features
+
+- quark-filename-to-quarkd ([eac6c44](https://github.com/hellof2e/quark-design/commit/eac6c442b1d3f6aa53401d6f70217114aae28996))
+- quark-filename-to-quarkd ([1b2ce70](https://github.com/hellof2e/quark-design/commit/1b2ce701dd0f401a37801599c8421544a68ac0bb))
+- umd 支持挂载到 window 上面 ([01aa467](https://github.com/hellof2e/quark-design/commit/01aa467f707b4ffa39feffc829e4f33d7382ab42))
+- update 1.0.53 ([3823f54](https://github.com/hellof2e/quark-design/commit/3823f54bba76716fdd21ab7ff2b18d10b4e1727d))
+
+### 🐞 Bug Fixes
+
+- delete log ([60af854](https://github.com/hellof2e/quark-design/commit/60af854bd7fce42515269f6da32eabb39e6a1631))
+- delete log ([5710ebf](https://github.com/hellof2e/quark-design/commit/5710ebfcfed0d591a380707f15c57bc213ef4060))
+- quark-list 报错 ([903b48b](https://github.com/hellof2e/quark-design/commit/903b48b5ff789e220fd12c8f1d2b9c3aab5afdea))
+- quark-list 报错 ([1634e15](https://github.com/hellof2e/quark-design/commit/1634e15a8793f1972ec74fdc1f004a53448b08fb))
+- 修复 button loading svg 大小无法缩放问题 ([5203d7e](https://github.com/hellof2e/quark-design/commit/5203d7edebaa9dc78212e575aebffc7f5c8d7ea1))
+
 ### [1.0.53](https://github.com/hellof2e/quark-design/compare/v1.0.52...v1.0.53) (2023-04-13)
 
 ### 🎉 Features
