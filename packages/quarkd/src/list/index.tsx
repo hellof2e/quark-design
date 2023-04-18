@@ -96,14 +96,17 @@ class QuarkList extends QuarkElement {
     ) {
       return;
     }
+    if (this.placeholderRef && this.placeholderRef.current) {
+      const { offset } = this;
+      const placeholderRect =
+        this.placeholderRef.current.getBoundingClientRect();
 
-    const { offset } = this;
-    const placeholderRect = this.placeholderRef.current.getBoundingClientRect();
+      const isReachEdge =
+        placeholderRect.bottom - window.screen.height <= offset;
 
-    const isReachEdge = placeholderRect.bottom - window.screen.height <= offset;
-
-    if (isReachEdge) {
-      this.$emit("load");
+      if (isReachEdge) {
+        this.$emit("load");
+      }
     }
   });
 
