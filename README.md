@@ -12,6 +12,8 @@
   
 </div>
 
+哈啰集团面向C端UI组件库，支撑哈啰几乎所有C端H5项目，包括交易，支付，两轮，商城等。这是一个设计轻盈优雅的企业级UI组件库，可以满足所有日常使用的基础组件需求。
+
 <p align="center">
   <a href="https://www.npmjs.com/package/quarkd"><img src="https://img.shields.io/npm/dt/quarkd.svg" alt="Total Downloads"></a>
   <a href="https://www.npmjs.com/package/quarkd">
