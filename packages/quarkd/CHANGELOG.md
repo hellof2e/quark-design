@@ -1,5 +1,16 @@
 # 更新日志
 
+### [1.0.55](https://github.com/hellof2e/quark-design/compare/v1.0.54...v1.0.55) (2023-04-28)
+
+### 🎉 Features
+
+- button readme 修复 ([f49f8a1](https://github.com/hellof2e/quark-design/commit/f49f8a17f502323d7aa09c8647c9da3fd4216c13))
+- update quarkd ([202f4ca](https://github.com/hellof2e/quark-design/commit/202f4caea58129ed4b6e45b48331011fe98e2e70))
+- 代码调试界面优化调整 ([226127b](https://github.com/hellof2e/quark-design/commit/226127bf0eed40c8e42ce18f5bc1ea27aa057ec5))
+- 代码调试界面优化调整 ([49be37e](https://github.com/hellof2e/quark-design/commit/49be37eeff5ef3925c0e4bd7522c3a89a3f58c9f))
+- 代码调试界面优化调整 ([dd5800e](https://github.com/hellof2e/quark-design/commit/dd5800e04f78f93bab1f7f61443f52f339d7ea33))
+- 重构 tabbar 组件 ([6b2c49e](https://github.com/hellof2e/quark-design/commit/6b2c49e0065f46f5b2b84eb1e86e20adee06b9ab))
+
 ### [1.0.54](https://github.com/hellof2e/quark-design/compare/v1.0.53...v1.0.54) (2023-04-18)
 
 ### 🎉 Features

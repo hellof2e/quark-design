@@ -24,7 +24,7 @@
     "*.js"
   ],
   "dependencies": {
-    "quarkd": "1.0.54",
+    "quarkd": "1.0.55",
     "@quarkd/reactify": "^1.0.3"
   },
   "devDependencies": {
