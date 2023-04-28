@@ -72,12 +72,18 @@ import "quarkd/lib/button";
 ```html
 <quark-button loading type="danger" loadtype="circular">加载中...</quark-button>
 <quark-button loading type="warning">加载中...</quark-button>
-<quark-button @click="changeLoading" :loading="isLoading" type="success"
-  >Click me!</quark-button
->
+<!-- @click="changeLoading" -->
+<quark-button type="success" onclick="changeLoading()">Click me!</quark-button>
 ```
 
 ```js
+function changeLoading() {
+  btn.loading = true;
+  setTimeout(() => {
+    btn.loadng = false;
+  }, 2000); // 点击2s后loading消失
+}
+
 export default {
   setup() {
     const isLoading = ref(false);
@@ -103,12 +109,7 @@ export default {
 通过 `icon` 属性设置图标。
 
 ```html
-<quark-button
-  type="primary"
-  icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
->
-  喜欢
-</quark-button>
+<quark-button type="primary" icon="https://xx.png"> 喜欢 </quark-button>
 ```
 
 ## API

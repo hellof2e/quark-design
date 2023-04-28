@@ -13,14 +13,14 @@ import { Marquee } from "@quarkd/quark-react";
 ### 基础用法
 
 ```html
-<marquee title="{title}"></marquee>
+<Marquee title="{title}"></Marquee>
 ```
 
 ### 不同速度
 
 ```html
-<marquee title="{title}" speed="25"></marquee>
-<marquee title="{title}" speed="100"></marquee>
+<Marquee title="{title}" speed="25"></Marquee>
+<Marquee title="{title}" speed="100"></Marquee>
 ```
 
 ### 控制暂停
@@ -28,34 +28,34 @@ import { Marquee } from "@quarkd/quark-react";
 ```html
 <button onClick="{pauseAnimation}">暂停</button>
 <button onClick="{continueAnimation}">继续</button>
-<marquee title="{title}" paused="{paused}"></marquee>
+<Marquee title="{title}" paused="{paused}"></Marquee>
 ```
 
 ### 悬浮暂停
 
 ```html
-<marquee
+<Marquee
   title="{title}"
   paused="{paused}"
   onMouseover="{pauseAnimation}"
   onMouseleave="{continueAnimation}"
-></marquee>
+></Marquee>
 ```
 
 ### 点击暂停
 
 ```html
-<marquee
+<Marquee
   title="{title}"
   paused="{paused}"
   onClick="{changePauseStatus}"
-></marquee>
+></Marquee>
 ```
 
 ### 反向动画
 
 ```html
-<marquee title="{title}" reverse="true"></marquee>
+<Marquee title="{title}" reverse="true"></Marquee>
 ```
 
 ## API

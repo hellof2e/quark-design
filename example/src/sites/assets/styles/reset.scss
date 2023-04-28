@@ -1,69 +1,25 @@
 @charset "utf-8";
-
-html,
-body,
-div,
-span,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-em,
-img,
-s,
-strong,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-time,
-audio,
-video {
+body {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	-webkit-overflow-scrolling: touch;
+}
+ol,
+ul {
+	list-style: none;
 }
 
-/* ios默认文本框阴影 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-input[type="text"],
-textarea {
-	/* stylelint-disable-next-line property-no-vendor-prefix */
-	-webkit-appearance: none;
+p {
+	margin: 0;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
 }
 
 html,
@@ -76,36 +32,41 @@ input {
 	text-decoration: none;
 }
 
-/* 低版本安卓文本框层级问题 */
-
-input:focus {
-	-webkit-user-modify: read-write-plaintext-only;
-}
-
-/* 清除谷歌浏览器下的 search 叉号 */
-input::-webkit-search-cancel-button {
-	display: none;
-}
-
-ol,
-ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-* {
-	-webkit-tap-highlight-color: rgb(0 0 0 / 0%);
-	-webkit-tap-highlight-color: transparent;
-	box-sizing: border-box;
-}
-
 img {
 	border: 0 none;
 	vertical-align: bottom;
-	/* stylelint-disable-next-line property-no-vendor-prefix */
 	-ms-interpolation-mode: bicubic;
+}
+
+html,
+body {
+	min-height: 100vh;
+	flex-direction: column;
+	display: flex;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+	border: 0 none;
+	vertical-align: bottom;
+}
+
+::selection {
+	background: var(--brand-color);
+	color: #fff;
+}
+
+a {
+	color: #4c4c52;
+	transition: all 0.25s;
+}
+a:hover {
+	color: var(--brand-color);
+	transition: all 0.25s;
+}
+
+svg {
+	fill: currentColor;
 }

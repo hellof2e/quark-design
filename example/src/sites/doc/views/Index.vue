@@ -3,22 +3,11 @@
 
 	<doc-nav></doc-nav>
 
-	<div id="doc-content" class="doc-content">
+	<div id="doc-content" class="doc-content pr-390">
 		<div
 			class="doc-content-document"
 			:class="{ isComponent: isShow(), full: !isShow() }"
 		>
-			<div class="doc-content-tabs" v-if="isShow()">
-				<div
-					class="tab-item"
-					:class="{ cur: curKey === item.key }"
-					v-for="item in tabs"
-					:key="item.key"
-					@click="handleTabs(item.key)"
-				>
-					{{ item.text }}
-				</div>
-			</div>
 			<router-view />
 		</div>
 
@@ -181,6 +170,16 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+/* .doc-content {
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	margin-left: 260px;
+} */
+.pr-390 {
+	padding-right: 390px;
+}
+
 .doc {
 	&-content {
 		height: calc(100vh - 68px);

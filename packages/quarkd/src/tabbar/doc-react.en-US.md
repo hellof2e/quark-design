@@ -9,7 +9,7 @@ Used to switch between different pages.
 If use quark-icons, please install: `npm install --save quark-icons`.
 
 ```tsx
-import { Tabbar, TabbarItem } from "@quarkd/quark-react";
+import "quarkd/lib/tabbar";
 
 // import icons
 import "@quarkd/icons/lib/home";
@@ -20,151 +20,82 @@ import "@quarkd/icons/lib/tel";
 ### Basic Usage
 
 ```html
-<Tabbar>
-  <TabbarItem label="home">
-    <quark-icon-home slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="user">
-    <quark-icon-user slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="tel">
-    <quark-icon-tel slot="icon" size="20" />
-  </TabbarItem>
-</Tabbar>
+<QuarkTabbar @change="onChange">
+  <QuarkTabbarItem>
+    <quark-icon-home size="20" />
+    <div>Home</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-user size="20" />
+    <div>Mine</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-tel size="20" />
+    <div>Contact</div>
+  </QuarkTabbarItem>
+</QuarkTabbar>
 ```
 
-### Match by name
+### No icons
 
 ```html
-<Tabbar value="tel">
-  <TabbarItem label="home" name="home">
-    <quark-icon-home slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="user" name="user">
-    <quark-icon-user slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="tel" name="tel">
-    <quark-icon-tel slot="icon" size="20" />
-  </TabbarItem>
-</Tabbar>
+<QuarkTabbar @change="onChange">
+  <QuarkTabbarItem>Home</QuarkTabbarItem>
+  <QuarkTabbarItem>Mine</QuarkTabbarItem>
+  <QuarkTabbarItem>Contact</QuarkTabbarItem>
+</QuarkTabbar>
 ```
 
-### Show Badge
+### Active menu
 
 ```html
-<Tabbar value="user">
-  <TabbarItem badgecontent="20" label="home">
-    <quark-icon-home slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="user">
-    <quark-icon-user slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="tel">
-    <quark-icon-tel slot="icon" size="20" />
-  </TabbarItem>
-</Tabbar>
+<QuarkTabbar val="联系">
+  <QuarkTabbarItem>
+    <quark-icon-home size="20" />
+    <div>Home</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-user size="20" />
+    <div>Mine</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-tel size="20" />
+    <div>Contact</div>
+  </QuarkTabbarItem>
+</QuarkTabbar>
 ```
 
-### Custom Color
+### Fixed at the bottom
 
 ```html
-<Tabbar inactivecolor="#000" activecolor="#ee0a24">
-  <TabbarItem label="home">
-    <quark-icon-home slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="user">
-    <quark-icon-user slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="tel">
-    <quark-icon-tel slot="icon" size="20" />
-  </TabbarItem>
-</Tabbar>
-```
-
-### Custom Icon
-
-```js
-export default () => {
-  const img1 = "https://m.hellobike.com/resource/helloyun/18625/MJ7Tr_src.jpeg";
-  const img2 = "https://m.hellobike.com/resource/helloyun/18625/WUu02_img.png";
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const onChange = ({ detail }) => {
-    setActiveIndex(detail.value);
-    console.log(`currently selected：${detail.value}`);
-  };
-
-  return (
-    <div className="demo no-padding scope-list">
-      <Tabbar onChange={onChange}>
-        <TabbarItem label="home">
-          <quark-icon-home slot="icon" size="20" />
-        </TabbarItem>
-        <TabbarItem icon="user" label="user">
-          <img
-            slot="icon"
-            style={{ height: 20 }}
-            src={activeIndex === 1 ? img1 : img2}
-          />
-        </TabbarItem>
-        <TabbarItem label="tel">
-          <quark-icon-tel slot="icon" size="20" />
-        </TabbarItem>
-      </Tabbar>
-    </div>
-  );
-};
-```
-
-### Change Event
-
-```html
-<Tabbar onChange="{" onChange }>
-  <TabbarItem label="home">
-    <quark-icon-home slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="user">
-    <quark-icon-user slot="icon" size="20" />
-  </TabbarItem>
-  <TabbarItem label="tel">
-    <quark-icon-tel slot="icon" size="20" />
-  </TabbarItem>
-</Tabbar>
+<QuarkTabbar fixed>
+  <QuarkTabbarItem>
+    <quark-icon-home size="20" />
+    <div>Home</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-user size="20" />
+    <div>Mine</div>
+  </QuarkTabbarItem>
+  <QuarkTabbarItem>
+    <quark-icon-tel size="20" />
+    <div>Contact</div>
+  </QuarkTabbarItem>
+</QuarkTabbar>
 ```
 
 ## API
 
-### Tabbar Props
+### QuarkTabbar Props
 
-| Attribute     | Description                      | Type                                                              | Default Value |
-| ------------- | -------------------------------- | ----------------------------------------------------------------- | ------------- |
-| fixed         | Whether to fixed bottom          | `boolean`                                                         | `true `       |
-| inactivecolor | Color of inactive tab item       | `string`                                                          | `#879099`     |
-| activecolor   | Color of active tab item         | `string `                                                         | `#0088FF`     |
-| value         | name or index of active tab item | `string`                                                          | `0`           |
-| onChange      | Emitted when changing active tab | `{e:{detail: {value: The selected name or index value}}} => void` |
+| Attribute   | Description                      | Type      | Default Value |
+| ----------- | -------------------------------- | --------- | ------------- |
+| fixed       | Whether to fixed bottom          | `boolean` | `true `       |
+| activecolor | Color of active tab item         | `string ` | `#0088FF`     |
+| value       | name or index of active tab item | `string`  | `0`           |
 
-### TabbarItem Props
+### QuarkTabbar Event
 
-| Attribute    | Description                            | Type     | Default Value |
-| ------------ | -------------------------------------- | -------- | ------------- |
-| label        | Label name, used to show               | `string` |
-| name         | Label value, as the matched identifier | `string` |               |
-| badgecontent | Content of the badge                   | `string` |               |
-
-### slots
-
-| Name | Description | Arguments |
-| ---- | ----------- | --------- |
-| icon | icon        |           |
-
-## CSS Variables
-
-The component provides the following[CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，which can be used to customize styles.Please refer to[Theme customization](#/zh-CN/guide/theme)。
-
-| Name                  | Description         | Default Value                             |
-| --------------------- | ------------------- | ----------------------------------------- |
-| `--tabbar-z-index`    | tabbar z-index      | `1 `                                      |
-| `--tabbar-box-shadow` | tabbar upper shadow | `0px -2px 8px 0px rgba(36, 39, 41, 0.08)` |
-| `--tabbar-font-size`  | tabbar font size    | `10px`                                    |
-| `--tabbar-height`     | tabbar height       | `56px `                                   |
+| Event  | Description                      | Callback Arguments                                                |
+| ------ | -------------------------------- | ----------------------------------------------------------------- |
+| change | Emitted when changing active tab | `{e:{detail: {value: The selected name or index value}}} => void` |

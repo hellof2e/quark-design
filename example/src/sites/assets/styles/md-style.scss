@@ -1,11 +1,11 @@
 @import "highlight.scss";
 
 .doc-content-document {
+	min-height: 800px;
+	flex-shrink: 0;
 	position: relative;
-	padding-top: 48px;
-	padding-bottom: 48px;
-	padding-left: 40px;
-	padding-right: 445px;
+	padding: 40px;
+
 	.card {
 		margin-bottom: 24px;
 		padding: 24px;
@@ -16,37 +16,27 @@
 
 	a {
 		margin: 0 1px;
-		color: #0088ff;
-		-webkit-font-smoothing: auto;
+		color: #646cff;
+		text-decoration-line: underline;
 
 		&:hover {
-			color: darken(#0088ff, 10%);
+			color: #bcc0ff;
 		}
 
 		&:active {
-			color: darken(#0088ff, 20%);
+			color: #bcc0ff;
 		}
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color: #333;
-		font-weight: bold;
-		line-height: 1.5;
-
-		&[id] {
-			cursor: pointer;
+	&.isComponent {
+		h1 {
+			display: none;
 		}
 	}
 
 	h1 {
 		margin: 0 0 30px;
 		font-size: 30px;
-		color: #333;
 		font-weight: bold;
 		position: relative;
 		margin-bottom: 56px;
@@ -76,33 +66,26 @@
 	}
 
 	p {
-		color: #666;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 22px;
 	}
+
 	strong {
 		margin: 24px 0 12px;
 		font-weight: bold;
-		font-size: 14px;
-		color: #333;
+		font-size: 16px;
 	}
+
 	table {
 		width: 100%;
 		margin-top: 12px;
-		color: #666;
 		font-size: 14px;
 		line-height: 1.5;
 		border-collapse: collapse;
-		border: 1px solid #eee;
 		th {
 			padding: 8px 20px;
 			font-weight: 600;
 			text-align: left;
-			border-left: 1px solid #e9e9e9;
-			background-color: #f7f8fa;
-			// &:first-child {
-			//   padding-left: 0;
-			// }
 
 			&:last-child {
 				padding-right: 0;
@@ -111,19 +94,17 @@
 
 		td {
 			padding: 8px 20px;
-			border-top: 1px solid #f1f4f8;
-			border-left: 1px solid #e9e9e9;
+			color: #fff;
+
 			&:first-child {
-				// padding-left: 0;
 				border-left: 0px;
-				// version tag
 				code {
 					margin: 0;
 					padding: 2px 6px;
-					color: #0088ff;
+					color: #38bdf7;
 					font-weight: 600;
 					font-size: 11px;
-					background-color: fade(#0088ff, 10%);
+					background-color: fade(#38bdf7, 10%);
 					border-radius: 20px;
 				}
 			}
@@ -136,7 +117,8 @@
 		em {
 			color: #fa2400;
 			font-size: 14px;
-			font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+			font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+				Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 			font-style: normal;
 			-webkit-font-smoothing: auto;
 		}
@@ -145,11 +127,11 @@
 	ul li,
 	ol li {
 		position: relative;
-		margin: 5px 0 5px 10px;
-		padding-left: 15px;
-		color: #666;
-		font-size: 15px;
+		// margin: 5px 0 5px 10px;
+		// padding-left: 15px;
+		font-size: 16px;
 		line-height: 26px;
+		list-style-type: disc;
 
 		&::before {
 			position: absolute;
@@ -159,7 +141,7 @@
 			width: 6px;
 			height: 6px;
 			margin-top: 10px;
-			border: 1px solid #666;
+			border: 1px solid #eee;
 			border-radius: 50%;
 			content: "";
 		}
@@ -180,9 +162,10 @@
 		font-size: 14px;
 		font-family: inherit;
 		word-break: keep-all;
-		background-color: #f7f8fa;
 		border-radius: 4px;
 		-webkit-font-smoothing: antialiased;
+		font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
+			Consolas, "Liberation Mono", "Courier New", monospace;
 	}
 
 	p > code {
@@ -197,11 +180,11 @@
 	blockquote {
 		margin: 16px 0px;
 		padding: 16px;
-		background-color: #f7f8fa;
-		border-left: 6px solid #128dff;
-		border-radius: 3px;
+		background-color: rgba(100, 108, 255, 0.08);
+		border: 1px solid var(--brand-color);
+		border-radius: 8px;
 		p {
-			color: #333;
+			color: #fff;
 		}
 	}
 
@@ -241,5 +224,9 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	ul li::before {
+		display: none;
 	}
 }
