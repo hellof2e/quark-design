@@ -3,7 +3,6 @@ import "quarkd/lib/tabbar";
 
 const data = {
   fixed: false,
-  inactivecolor: "#879099",
   activecolor: "#0088FF",
   value: "0",
 };

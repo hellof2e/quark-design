@@ -49,7 +49,7 @@ import "@quarkd/icons/lib/tel";
 ### Active menu
 
 ```html
-<QuarkTabbar val="联系">
+<QuarkTabbar active="2">
   <QuarkTabbarItem>
     <quark-icon-home size="20" />
     <div>Home</div>
@@ -88,14 +88,19 @@ import "@quarkd/icons/lib/tel";
 
 ### QuarkTabbar Props
 
-| Attribute   | Description                      | Type      | Default Value |
-| ----------- | -------------------------------- | --------- | ------------- |
-| fixed       | Whether to fixed bottom          | `boolean` | `true `       |
-| activecolor | Color of active tab item         | `string ` | `#0088FF`     |
-| value       | name or index of active tab item | `string`  | `0`           |
+| Attribute | Description                      | Type      | Default Value |
+| --------- | -------------------------------- | --------- | ------------- |
+| fixed     | Whether to fixed bottom          | `boolean` | `true `       |
+| active    | name or index of active tab item | `string`  | `0`           |
 
 ### QuarkTabbar Event
 
 | Event  | Description                      | Callback Arguments                                                |
 | ------ | -------------------------------- | ----------------------------------------------------------------- |
 | change | Emitted when changing active tab | `{e:{detail: {value: The selected name or index value}}} => void` |
+
+## CSS Variables
+
+| Name                    | Description                     | Default Value |
+| ----------------------- | ------------------------------- | ------------- |
+| `--tabbar-active-color` | The color of the activated menu | `#0088FF`     |

@@ -4,8 +4,7 @@ import "../tabbaritem";
 import style from "./style.css";
 export interface Props {
   fixed?: boolean;
-  activecolor?: string;
-  value?: string;
+  active?: string;
 }
 export interface CustomEvent {
   change: (e: { detail: { value: string } }) => void;
@@ -17,16 +16,8 @@ class QuarkTabbar extends QuarkElement {
   })
   fixed = false;
 
-  @property({
-    type: Boolean,
-  })
-  placeholder = false;
-
   @property()
-  activecolor = "#0088FF";
-
-  @property()
-  value = "0";
+  active = "0";
 
   slotRef: any = createRef();
 
@@ -35,14 +26,15 @@ class QuarkTabbar extends QuarkElement {
     oldValue: string,
     newValue: string
   ): boolean {
-    if (propName === "value" && oldValue !== newValue) {
+    if (propName === "active" && oldValue !== newValue) {
       const assignedNodes = this.slotRef.current?.assignedNodes();
       const elements = slotAssignedElements(assignedNodes);
-      elements.forEach((item, index) => {
-        if (item.getAttribute("name") === newValue) {
-          item.setAttribute("active", "true");
+
+      elements.forEach((item) => {
+        if (item.getAttribute("index") === newValue) {
+          item.setAttribute("active", "");
         } else {
-          item.setAttribute("active", "false");
+          item.removeAttribute("active");
         }
       });
     }
@@ -52,24 +44,24 @@ class QuarkTabbar extends QuarkElement {
   slotchange = () => {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const elements = slotAssignedElements(assignedNodes);
+
     elements.forEach((item, index) => {
-      item.setAttribute("activecolor", this.activecolor);
-      if (item.getAttribute("name") === null) {
-        item.setAttribute("name", String(index));
+      if (item.getAttribute("index") === null) {
+        item.setAttribute("index", String(index));
       }
 
       item.addEventListener("click", this.eventListener);
-      if (item.getAttribute("name") === this.value) {
-        item.setAttribute("active", "true");
+      if (item.getAttribute("index") === this.active) {
+        item.setAttribute("active", "");
       }
     });
   };
 
   eventListener = (e: any) => {
-    this.value = e.currentTarget.getAttribute("name");
+    this.active = e.currentTarget.getAttribute("index");
 
     this.$emit("change", {
-      detail: { value: e.currentTarget.getAttribute("name") },
+      detail: { value: e.currentTarget.getAttribute("index") },
     });
   };
 

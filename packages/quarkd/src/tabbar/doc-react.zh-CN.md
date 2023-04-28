@@ -51,7 +51,7 @@ import "@quarkd/icons/lib/tel";
 ### 设置默认激活菜单
 
 ```html
-<QuarkTabbar val="联系">
+<QuarkTabbar active="2">
   <QuarkTabbarItem>
     <quark-icon-home size="20" />
     <div>首页</div>
@@ -90,16 +90,21 @@ import "@quarkd/icons/lib/tel";
 
 ## API
 
-### QuarkTabbar Props
+### QuarkTabbar 属性
 
-| 参数        | 说明               | 类型      | 默认值    |
-| ----------- | ------------------ | --------- | --------- |
-| fixed       | 是否固定在底部     | `boolean` | `true`    |
-| activecolor | 激活菜单的颜色     | `string`  | `#0088FF` |
-| value       | 选中的名称或索引值 | `string`  | `0`       |
+| 参数   | 说明               | 类型      | 默认值 |
+| ------ | ------------------ | --------- | ------ |
+| fixed  | 是否固定在底部     | `boolean` | `true` |
+| active | 选中的名称或索引值 | `string`  | `0`    |
 
-### QuarkTabbar Event
+### QuarkTabbar 事件
 
 | 名称   | 说明           | 类型                                                |
 | ------ | -------------- | --------------------------------------------------- |
 | change | 切换标签时触发 | `{e:{detail: {value: 选中的名称或索引值}}} => void` |
+
+## 样式变量
+
+| 名称                    | 说明             | 默认值    |
+| ----------------------- | ---------------- | --------- |
+| `--tabbar-active-color` | 被激活菜单的颜色 | `#0088FF` |
