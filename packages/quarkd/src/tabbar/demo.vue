@@ -24,7 +24,7 @@
     </quark-tabbar>
 
     <h2>{{ translate("title.name") }}</h2>
-    <quark-tabbar value="tel">
+    <quark-tabbar active="2">
       <quark-tabbar-item name="home">
         <quark-icon-home size="20" />
         <div>{{ translate("tabbar.home") }}</div>

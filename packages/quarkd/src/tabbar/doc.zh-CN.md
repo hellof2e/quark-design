@@ -50,8 +50,10 @@ import "@quarkd/icons/lib/tel";
 
 ### 设置默认激活菜单
 
+通过 `active` 来设置当前被激活的菜单，`active` 为菜单索引值。
+
 ```html
-<quark-tabbar val="联系">
+<quark-tabbar active="2">
   <quark-tabbar-item>
     <quark-icon-home size="20" />
     <div>首页</div>
@@ -92,14 +94,19 @@ import "@quarkd/icons/lib/tel";
 
 ### Quark-tabbar Props
 
-| 参数        | 说明               | 类型      | 默认值    |
-| ----------- | ------------------ | --------- | --------- |
-| fixed       | 是否固定在底部     | `boolean` | `true`    |
-| activecolor | 激活菜单的颜色     | `string`  | `#0088FF` |
-| value       | 选中的名称或索引值 | `string`  | `0`       |
+| 参数   | 说明           | 类型      | 默认值 |
+| ------ | -------------- | --------- | ------ |
+| fixed  | 是否固定在底部 | `boolean` | `true` |
+| active | 激活的索引值   | `string`  | `0`    |
 
 ### Quark-tabbar Event
 
 | 名称   | 说明           | 类型                                                |
 | ------ | -------------- | --------------------------------------------------- |
 | change | 切换标签时触发 | `{e:{detail: {value: 选中的名称或索引值}}} => void` |
+
+## 样式变量
+
+| 名称                    | 说明             | 默认值    |
+| ----------------------- | ---------------- | --------- |
+| `--tabbar-active-color` | 被激活菜单的颜色 | `#0088FF` |

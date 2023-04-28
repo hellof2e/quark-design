@@ -1,12 +1,9 @@
-
 :host {
   cursor: pointer;
   width: 100%;
   text-align: center;
 }
-.quark-tabbar-icon {
-  text-align: center;
+
+:host([active]) {
+  color: var(--tabbar-active-color, #0088FF);
 }
-/* .quark-tabbar-slot {
-  display: grid;
-} */
