@@ -1,0 +1,252 @@
+:root {
+	--font-family-base: "Inter var", "Inter", ui-sans-serif, system-ui,
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+		Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
+		Consolas, "Liberation Mono", "Courier New", monospace;
+	--link-font-color-dark: rgba(255, 255, 255, 0.87);
+
+	--header-bg-light: #fff;
+	--line-light: rgba(60, 60, 67, 0.12);
+	--text-font-color-light: rgba(60, 60, 67, 0.92);
+
+	--brand-color: #646cff;
+
+	--brand-color-light: #bcc0ff; // hover color
+
+	--mute-light: #f6f6f7; // tag backgroun
+
+	--main-bg: #fff;
+
+	--main-shadow: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
+
+	// --text-font-color: rgba(28, 30, 33);
+	--text-font-color: rgba(60, 60, 67, 0.92);
+	--text-code-font-color: #476582;
+
+	color: var(--text-font-color);
+	background-color: var(--main-bg);
+	font-family: var(--font-family-base);
+}
+
+.nav-item .nav-active {
+	color: var(--brand-color);
+}
+
+.action .why-quark {
+	background-color: var(--main-bg);
+	color: #000;
+	&:hover {
+		background-color: #f6f6f6;
+	}
+}
+
+.nav-item a {
+	color: var(--text-font-color-light);
+	font-family: var(--font-family-base);
+}
+.nav-item a:hover {
+	color: var(--brand-color);
+}
+.social-links a,
+.translate-lang a {
+	color: rgba(60, 60, 67, 0.7);
+}
+.social-links a:hover svg,
+.translate-lang a:hover svg {
+	color: rgba(60, 60, 67, 0.92);
+	transition: color 0.25s;
+}
+.header .container {
+	border-bottom: 1px solid var(--line-light);
+	background-color: var(--main-bg);
+}
+.sticky-nav {
+	background-color: var(--main-bg);
+}
+.sticky-nav-shadow {
+	background-image: linear-gradient(to bottom, #eee, rgba(0, 0, 0, 0));
+}
+.doc-content-document p {
+	color: var(--text-font-color);
+}
+.doc-content-document table {
+	border: 1px solid var(--line-light);
+}
+.doc-content-document table th,
+.doc-content-document table td {
+	border-left: 1px solid var(--line-light);
+	color: var(--text-font-color-light);
+}
+
+.doc-content-document table td {
+	border-top: 1px solid var(--line-light);
+}
+
+.doc-content-document table code {
+	color: var(--text-code-font-color);
+	background-color: var(--mute-light);
+}
+
+.doc-content-document table td:first-child code {
+	color: var(--text-code-font-color);
+}
+.doc-nav {
+	border-right: 1px solid var(--line-light);
+}
+.doc-content-document p > code {
+	color: var(--text-code-font-color);
+	background-color: var(--mute-light);
+}
+.doc-content-document strong {
+	color: var(--text-font-color);
+}
+.doc-content-document blockquote {
+	background-color: rgba(100, 108, 255, 0.08);
+}
+.doc-content-document blockquote p {
+	color: #454ce1;
+}
+
+.doc-content-document ul li,
+.doc-content-document ol li {
+	color: var(--text-font-color);
+}
+
+html.dark {
+	--link-font-color-dark: rgba(255, 255, 255, 0.87);
+	--main-bg: #1e1e20;
+	--text-font-color: rgba(255, 255, 255, 0.87);
+	--header-bg-light: #fff;
+	--line-light: rgba(60, 60, 67, 0.12);
+	--text-font-color-light: rgba(60, 60, 67, 0.92);
+	--text-code-font-color: #c9def1;
+	--brand-color: #646cff;
+	--brand-color-light: #bcc0ff; // hover color
+	--mute-light: #313136; // tag background
+	--line-light: rgba(82, 82, 89, 0.32);
+	font-family: var(--font-family-base);
+	color: var(--link-font-color-dark);
+	background-color: var(--main-bg);
+
+	a,
+	button {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	pre {
+		color: #1e1e20;
+	}
+
+	.flyout-menu .menu-wrap {
+		background: var(--main-bg);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+		border: 1px solid rgba(84, 84, 84, 0.48);
+	}
+
+	.flyout-menu .menu-group-title {
+		color: rgba(235, 235, 235, 0.38);
+	}
+
+	.flyout-menu .menu-link {
+		color: rgba(255, 255, 255, 0.87);
+		&:hover {
+			color: #646cff;
+		}
+	}
+
+	.sticky-nav-shadow {
+		background-image: linear-gradient(to bottom, #1e1e1e, rgb(0 0 0 / 0%));
+	}
+	.nav-item a:hover,
+	.nav-item button:hover {
+		color: rgba(255 255 255 / 1);
+	}
+	.nav-item .nav-active {
+		color: #fff;
+	}
+
+	.social-links a:hover svg {
+		color: #fff;
+	}
+	.translate-lang:hover {
+		color: #fff;
+	}
+
+	.doc-nav a {
+		color: #fff;
+	}
+	.doc-nav a:hover {
+		color: var(--brand-color);
+	}
+
+	.translations:before,
+	.appearance:before,
+	.social-links:before {
+		background-color: rgba(60, 60, 67, 0.92);
+	}
+
+	.sticky-nav {
+		background-color: var(--main-bg);
+	}
+	.doc-content-document p > code {
+		color: var(--text-code-font-color);
+	}
+	.doc-content-document strong {
+		color: var(--text-font-color);
+	}
+	.doc-content-document blockquote p {
+		color: #bcc0ff;
+	}
+	.doc-content-document a {
+		color: #9499ff;
+		text-decoration: underline;
+	}
+	.doc-content-document a:hover {
+		color: #bcc0ff;
+	}
+
+	.doc-content-document table {
+		border: 1px solid #333;
+	}
+	.doc-content-document table th,
+	.doc-content-document table td {
+		border-left: 1px solid #333;
+		color: #fff;
+	}
+	.doc-content-document table td {
+		border-top: 1px solid #333;
+	}
+
+	.doc-content-document ul li,
+	.doc-content-document ol li .doc-content-document strong {
+		color: var(--text-font-color);
+	}
+
+	.action .why-quark {
+		background-color: #313136;
+		color: #fff;
+		&:hover {
+			background-color: #2c2c30;
+		}
+	}
+}
+
+// @media screen and (min-width: 860px) {
+//   .doc-nav {
+//     display: none;
+//   }
+//   .doc-content {
+//     margin-left: 0!important;
+//   }
+// }
+
+// @media screen and (max-width: 880px) {
+//   .doc-nav {
+//     display: block;
+//   }
+//   .doc-content {
+//     margin-left: 260px;
+//   }
+// }
