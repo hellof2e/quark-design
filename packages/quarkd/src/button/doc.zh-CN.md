@@ -72,18 +72,10 @@ import "quarkd/lib/button";
 ```html
 <quark-button loading type="danger" loadtype="circular">加载中...</quark-button>
 <quark-button loading type="warning">加载中...</quark-button>
-<!-- @click="changeLoading" -->
-<quark-button type="success" onclick="changeLoading()">Click me!</quark-button>
+<quark-button type="success" @click="changeLoading">Click me!</quark-button>
 ```
 
 ```js
-function changeLoading() {
-  btn.loading = true;
-  setTimeout(() => {
-    btn.loadng = false;
-  }, 2000); // 点击2s后loading消失
-}
-
 export default {
   setup() {
     const isLoading = ref(false);
