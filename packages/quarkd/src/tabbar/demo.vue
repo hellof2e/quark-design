@@ -1,84 +1,57 @@
 <template>
   <div class="demo no-padding">
     <h2>{{ translate("title.basic") }}</h2>
-    <quark-tabbar fixed="false">
-      <quark-tabbar-item :label="translate('tabbar.home')">
-        <quark-icon-home slot="icon" size="20" />
+    <quark-tabbar @change="onChange">
+      <quark-tabbar-item>
+        <quark-icon-home size="20" />
+        <div>{{ translate("tabbar.home") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')">
-        <quark-icon-user slot="icon" size="20" />
+      <quark-tabbar-item>
+        <quark-icon-user size="20" />
+        <div>{{ translate("tabbar.user") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')">
-        <quark-icon-tel slot="icon" size="20" />
+      <quark-tabbar-item>
+        <quark-icon-tel size="20" />
+        <div>{{ translate("tabbar.tel") }}</div>
       </quark-tabbar-item>
+    </quark-tabbar>
+
+    <h2>{{ translate("title.noicon") }}</h2>
+    <quark-tabbar>
+      <quark-tabbar-item>{{ translate("tabbar.home") }}</quark-tabbar-item>
+      <quark-tabbar-item>{{ translate("tabbar.user") }}</quark-tabbar-item>
+      <quark-tabbar-item>{{ translate("tabbar.tel") }}</quark-tabbar-item>
     </quark-tabbar>
 
     <h2>{{ translate("title.name") }}</h2>
-    <quark-tabbar value="tel" fixed="false">
-      <quark-tabbar-item :label="translate('tabbar.home')" name="home">
-        <quark-icon-home slot="icon" size="20" />
+    <quark-tabbar value="tel">
+      <quark-tabbar-item name="home">
+        <quark-icon-home size="20" />
+        <div>{{ translate("tabbar.home") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')" name="user">
-        <quark-icon-user slot="icon" size="20" />
+      <quark-tabbar-item name="user">
+        <quark-icon-user size="20" />
+        <div>{{ translate("tabbar.user") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')" name="tel">
-        <quark-icon-tel slot="icon" size="20" />
-      </quark-tabbar-item>
-    </quark-tabbar>
-
-    <h2>{{ translate("title.badge") }}</h2>
-    <quark-tabbar value="1" :fixed="false">
-      <quark-tabbar-item badgecontent="20" :label="translate('tabbar.home')">
-        <quark-icon-home slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')">
-        <quark-icon-user slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')">
-        <quark-icon-tel slot="icon" size="20" />
+      <quark-tabbar-item name="tel">
+        <quark-icon-tel size="20" />
+        <div>{{ translate("tabbar.tel") }}</div>
       </quark-tabbar-item>
     </quark-tabbar>
 
-    <h2>{{ translate("title.icon") }}</h2>
-    <quark-tabbar :fixed="false" @change="onChange2">
-      <quark-tabbar-item :label="translate('tabbar.home')">
-        <quark-icon-home slot="icon" size="20" />
+    <h2>{{ translate("title.fixed") }}</h2>
+    <quark-tabbar @change="onChange" fixed>
+      <quark-tabbar-item>
+        <quark-icon-home size="20" />
+        <div>{{ translate("tabbar.home") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')">
-        <img
-          slot="icon"
-          style="height: 20px"
-          :src="data.activeIndex === '1' ? data.img1 : data.img2"
-        />
+      <quark-tabbar-item>
+        <quark-icon-user size="20" />
+        <div>{{ translate("tabbar.user") }}</div>
       </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')">
-        <quark-icon-tel slot="icon" size="20" />
-      </quark-tabbar-item>
-    </quark-tabbar>
-
-    <h2>{{ translate("title.color") }}</h2>
-    <quark-tabbar :fixed="false" inactivecolor="#000" activeColor="#ee0a24">
-      <quark-tabbar-item :label="translate('tabbar.home')">
-        <quark-icon-home slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')">
-        <quark-icon-user slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')">
-        <quark-icon-tel slot="icon" size="20" />
-      </quark-tabbar-item>
-    </quark-tabbar>
-
-    <h2>{{ translate("title.event") }}</h2>
-    <quark-tabbar @change="onChange1" :fixed="false">
-      <quark-tabbar-item :label="translate('tabbar.home')">
-        <quark-icon-home slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.user')">
-        <quark-icon-user slot="icon" size="20" />
-      </quark-tabbar-item>
-      <quark-tabbar-item :label="translate('tabbar.tel')">
-        <quark-icon-tel slot="icon" size="20" />
+      <quark-tabbar-item>
+        <quark-icon-tel size="20" />
+        <div>{{ translate("tabbar.tel") }}</div>
       </quark-tabbar-item>
     </quark-tabbar>
   </div>
@@ -106,11 +79,12 @@ export default createDemo({
         "zh-CN": {
           title: {
             basic: "基础用法",
-            name: "通过名称匹配",
+            noicon: "不带图标",
+            name: "默认激活菜单",
             badge: "徽标提示",
-            icon: "自定义图标",
             color: "自定义颜色",
-            event: "自定义切换事件",
+            event: "自定义切换事件(可制定路由切换)",
+            fixed: "固定底部",
           },
           tabbar: {
             home: "首页",
@@ -121,11 +95,12 @@ export default createDemo({
         "en-US": {
           title: {
             basic: "Basic Usage",
-            name: "Match by Name",
+            noicon: "No Icon",
+            name: "Default Active menu",
             badge: "Badge Tips",
-            icon: "Custom Icon",
             color: "Custom Color",
             event: "Custom Change Event",
+            fixed: "Fixed",
           },
           tabbar: {
             home: "Home",
@@ -135,16 +110,14 @@ export default createDemo({
         },
       });
     });
-    const onChange2 = ({ detail }) => {
-      data.value.activeIndex = detail.value;
-    };
-    const onChange1 = ({ detail }) => {
+
+    const onChange = ({ detail }) => {
       Toast.text(`当前选中：${detail.value}`);
     };
+
     return {
       data,
-      onChange1,
-      onChange2,
+      onChange,
       translate,
     };
   },

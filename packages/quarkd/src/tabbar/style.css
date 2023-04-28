@@ -1,24 +1,22 @@
 :host {
   display: flex;
   width: 100%;
-  height: var(--tabbar-height, 56px);
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  cursor: pointer;
+  padding: 10px 0;
+  background: #fff;
+  font-size: 12px;
+  box-shadow: var(--tabbar-box-shadow, 0px -2px 8px 0px rgba(36, 39, 41, 0.08));
 }
 
 :host([fixed]) {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: var(--tabbar-z-index, 1);
 }
 
 .quark-tabbar {
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  background: #fff;
-  box-shadow: var(--tabbar-box-shadow, 0px -2px 8px 0px rgba(36, 39, 41, 0.08));
 }

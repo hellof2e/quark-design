@@ -4,7 +4,6 @@ import "../tabbaritem";
 import style from "./style.css";
 export interface Props {
   fixed?: boolean;
-  inactivecolor?: string;
   activecolor?: string;
   value?: string;
 }
@@ -22,9 +21,6 @@ class QuarkTabbar extends QuarkElement {
     type: Boolean,
   })
   placeholder = false;
-
-  @property()
-  inactivecolor = "#879099";
 
   @property()
   activecolor = "#0088FF";
@@ -57,11 +53,11 @@ class QuarkTabbar extends QuarkElement {
     const assignedNodes = this.slotRef.current?.assignedNodes();
     const elements = slotAssignedElements(assignedNodes);
     elements.forEach((item, index) => {
-      item.setAttribute("inactivecolor", this.inactivecolor);
       item.setAttribute("activecolor", this.activecolor);
       if (item.getAttribute("name") === null) {
         item.setAttribute("name", String(index));
       }
+
       item.addEventListener("click", this.eventListener);
       if (item.getAttribute("name") === this.value) {
         item.setAttribute("active", "true");
@@ -71,6 +67,7 @@ class QuarkTabbar extends QuarkElement {
 
   eventListener = (e: any) => {
     this.value = e.currentTarget.getAttribute("name");
+
     this.$emit("change", {
       detail: { value: e.currentTarget.getAttribute("name") },
     });
