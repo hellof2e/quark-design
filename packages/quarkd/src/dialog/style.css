@@ -103,7 +103,14 @@
 :host .quark-dialog-footer {
   display: flex;
   align-items: center;
+  padding: 0 4px;
 }
+
+/* :host[type="confirm"] .quark-dialog-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+} */
 
 .quark-dialog-close-btn quark-icon-close {
   color: #bcc4cc;
@@ -118,6 +125,8 @@
   border-radius: var(--dialog-btn-border-radius, 8px);
   font-size: var(--dialog-btn, 16px);
   height: var(--dialog-btn, 40px);
+  font-family: var(--dialog-btn-font-family, mFontFamily);
+  
 }
 
 :host .quark-dialog-vertical {
