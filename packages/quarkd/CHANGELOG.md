@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.58](https://github.com/hellof2e/quark-design/compare/v1.0.57...v1.0.58) (2023-05-09)
+
+
+### 🐞 Bug Fixes
+
+* 优化tabbar组件 ([0d73833](https://github.com/hellof2e/quark-design/commit/0d73833e715be228afdbd09f9e85dcd2f523abca))
+* css  Optimize CSS Sprites ([af8c79e](https://github.com/hellof2e/quark-design/commit/af8c79eeab35d559fad40db0fd65f0333a4723ba))
 
 ### [1.0.57](https://github.com/hellof2e/quark-design/compare/v1.0.56...v1.0.57) (2023-04-28)
 
