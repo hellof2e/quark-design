@@ -3,6 +3,10 @@
   display: inline-flex;
 }
 
+:host .quark-badge {
+  display: flex;
+}
+
 :host .quark-badge-dealclass {
   white-space: nowrap;
   display: inline-flex;
@@ -42,20 +46,22 @@
 
 :host([type="label"]) .quark-badge-dealclass {
   font-size: var(--badge-font-size, 11px);
-  line-height: var(--badge-line-height, 16px);
-  padding: var(--badge-padding-column, 0px) var(--badge-padding-row, 4px);
+  line-height: var(--badge-line-height, 12px);
+  padding: var(--badge-padding-column, 2px) var(--badge-padding-row, 4px);
   border-radius: 999px 999px 999px 1px;
+  font-weight: 400;
 }
 
 :host([size="big"]) .quark-badge-dealclass {
-  padding: var(--badge-padding-column, 0px) var(--badge-padding-row, 6px);
+  padding: var(--badge-padding-column, 4px) var(--badge-padding-row, 6px);
   font-size: var(--badge-font-size, 12px);
-  line-height: var(--badge-line-height, 20px);
+  line-height: var(--badge-line-height, 12px);
   min-width: 20px;
+  font-weight: 500;
 }
 
 :host([border]) .quark-badge-dealclass {
-  border: 0.5px solid var(--badge-border-color, #fff);
+  border: 1px solid var(--badge-border-color, #fff);
 }
 
 :host([size="big"][type="dot"]) .quark-badge-dealclass {
