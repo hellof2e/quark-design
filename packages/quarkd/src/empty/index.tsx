@@ -7,6 +7,7 @@ export interface Props {
   buttontext?: string;
   image?: string;
   imagesize?: string;
+  type?: "global" | "local";
 }
 @customElement({
   tag: "quark-empty",
@@ -31,6 +32,9 @@ class QuarkEmpty extends QuarkElement {
 
   @property()
   buttontext = "";
+
+  @property()
+  type: "global" | "local" = "global";
 
   render() {
     return (

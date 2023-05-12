@@ -28,6 +28,17 @@ import "quarkd/lib/empty";
 <quark-empty title="暂无数据" desc="快去添加数据吧~" buttontext="快去下单吧" />
 ```
 
+### 局部空白页
+
+```html
+<quark-empty
+  title="暂无数据"
+  desc="快去添加数据吧~"
+  buttontext="快去下单吧"
+  type="local"
+/>
+```
+
 ### 自定义图片大小
 
 通过 `imagesize` 属性图片的大小。
@@ -64,13 +75,14 @@ import "quarkd/lib/empty";
 
 ### Props
 
-| 参数       | 说明         | 类型     | 默认值 |
-| ---------- | ------------ | -------- | ------ |
-| title      | 标题文字     | `string` |        |
-| desc       | 描述文字     | `string` |        |
-| image      | 图片 url     | `string` |        |
-| imagesize  | 图片大小     | `string` |        |
-| buttontext | 底部按钮文字 | `string` |        |
+| 参数       | 说明                     | 类型     | 默认值   |
+| ---------- | ------------------------ | -------- | -------- |
+| title      | 标题文字                 | `string` |          |
+| desc       | 描述文字                 | `string` |          |
+| image      | 图片 url                 | `string` |          |
+| imagesize  | 图片大小                 | `string` |          |
+| buttontext | 底部按钮文字             | `string` |          |
+| type       | 全局空白页 or 局部空白页 | `string` | `global` |
 
 ## 样式变量
 

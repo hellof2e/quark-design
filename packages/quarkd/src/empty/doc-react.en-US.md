@@ -28,6 +28,17 @@ import { Empty } from "@quarkd/quark-react";
 <Empty title="no data" desc="add data now~" buttontext="go to Order" />
 ```
 
+### Local empty page
+
+```html
+<Empty
+  title="no data"
+  desc="add data now~"
+  buttontext="go to Order"
+  type="local"
+/>
+```
+
 ### Custom Image Size
 
 ```html
@@ -60,13 +71,14 @@ import { Empty } from "@quarkd/quark-react";
 
 ### Props
 
-| Attribute  | Description | Type     | Default |
-| ---------- | ----------- | -------- | ------- |
-| title      | Title       | `string` |         |
-| desc       | Description | `string` |         |
-| image      | image url   | `string` |         |
-| imagesize  | image size  | `string` |         |
-| buttontext | button text | `string` |         |
+| Attribute  | Description                           | Type     | Default  |
+| ---------- | ------------------------------------- | -------- | -------- |
+| title      | Title                                 | `string` |          |
+| desc       | Description                           | `string` |          |
+| image      | image url                             | `string` |          |
+| imagesize  | image size                            | `string` |          |
+| buttontext | button text                           | `string` |          |
+| type       | global empty page or local empty page | `string` | `global` |
 
 ## CSS Variables
 

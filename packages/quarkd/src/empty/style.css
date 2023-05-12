@@ -60,3 +60,23 @@
   padding: var(--empty-button-padding-column, 9px) var(--empty-button-padding-row, 34px);
   border-radius: var(--empty-button-border-radius, 20px);
 }
+
+:host([type="local"]) .quark-empty-title {
+  margin-top: 4px;
+  font-size: var(--empty-title-font-size, 14px);
+  line-height: var(--empty-title-line-height, 20px);
+}
+
+:host([type="local"]) .quark-empty-desc {
+  margin-top: 6px;
+  font-size: var(--empty-desc-font-size, 12px);
+  line-height: var(--empty-title-line-height, 17px);
+}
+
+:host([type="local"]) .quark-empty-button {
+  font-size: var(--empty-button-font-size, 14px);
+  margin-top: var(--empty-button-margin-top, 12px);;
+  line-height: var(--empty-button-line-height, 20px);
+  padding: var(--empty-button-padding-column, 6px) var(--empty-button-padding-row, 26px);
+  border-radius: var(--empty-button-border-radius, 16px);
+}
