@@ -4,6 +4,7 @@ import style from "./style.css";
 export interface Props {
   title?: string;
   desc?: string;
+  buttontext?: string;
   image?: string;
   imagesize?: string;
 }
@@ -28,6 +29,9 @@ class QuarkEmpty extends QuarkElement {
   @property()
   imagesize: string;
 
+  @property()
+  buttontext = "";
+
   render() {
     return (
       <Fragment>
@@ -48,7 +52,11 @@ class QuarkEmpty extends QuarkElement {
           />
           {this.title && <div class="quark-empty-title">{this.title}</div>}
           {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
-          <slot name="footer"></slot>
+          <slot name="footer">
+            {this.buttontext && (
+              <div class="quark-empty-button">{this.buttontext}</div>
+            )}
+          </slot>
         </div>
       </Fragment>
     );

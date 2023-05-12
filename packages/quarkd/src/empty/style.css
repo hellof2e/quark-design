@@ -45,3 +45,18 @@
 :host .quark-empty-desc:empty {
   margin-top: 0;
 }
+:host .quark-empty-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: var(--empty-button-font-size, 16px);
+  color: var(--empty-button-text-color, #fff);
+  font-weight: 500;
+  font-family: PingFangSC-Medium, PingFang SC;
+  margin-top: var(--empty-button-margin-top, 20px);;
+  background-color: var(--empty-button-background-color, quark-primaryColor);
+  line-height: var(--empty-button-line-height, 22px);
+  padding: var(--empty-button-padding-column, 9px) var(--empty-button-padding-row, 34px);
+  border-radius: var(--empty-button-border-radius, 20px);
+}
