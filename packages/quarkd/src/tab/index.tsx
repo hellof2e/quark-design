@@ -232,7 +232,7 @@ class QuarkTabs extends QuarkElement {
       this.nextSlider();
       return;
     }
-    console.log(nextItem);
+    // console.log(nextItem);
     if (!activeKey) {
       return;
     }
