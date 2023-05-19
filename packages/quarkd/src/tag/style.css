@@ -82,25 +82,25 @@
 
 :host([light]) .quark-tag {
   color: var(--tag-text-color, quark-primaryColor);
-  background: var(--quark-primary-light-color, #e6f4ff);
+  background: var(--quark-primary-light-color, quark-primaryLightColor);
 }
 
 :host([light][type="primary"]) .quark-tag {
-  background: var(--quark-primary-light-color, #e6f4ff);
+  background: var(--quark-primary-light-color, quark-primaryLightColor);
   color: var(--tag-text-color, quark-primaryColor);
 }
 
 :host([light][type="warning"]) .quark-tag {
-  background: var(--quark-warning-light-color, #fef4e7);
+  background: var(--quark-warning-light-color, quark-warningLightColor);
   color: var(--tag-text-color, quark-warningColor);
 }
 
 :host([light][type="danger"]) .quark-tag {
-  background: var(--quark-danger-light-color, #fee9e9);
+  background: var(--quark-danger-light-color, quark-dangerLightColor);
   color: var(--tag-text-color, quark-dangerColor);
 }
 
 :host([light][type="success"]) .quark-tag {
-  background: var(--quark-success-light-color, #e6f8ef);
+  background: var(--quark-success-light-color, quark-successLightColor);
   color: var(--tag-text-color, quark-successColor);
 }
