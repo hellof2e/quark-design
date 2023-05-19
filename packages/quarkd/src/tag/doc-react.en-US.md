@@ -36,6 +36,12 @@ import { Tag } "@quarkd/quark-react";
 <Tag plain>Q</Tag>
 ```
 
+### Light tag
+
+```html
+<Tag light>Q</Tag>
+```
+
 ### Custom style
 
 ```html

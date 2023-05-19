@@ -34,6 +34,12 @@ import "quarkd/lib/tag";
 <quark-tag plain>正</quark-tag>
 ```
 
+### 浅色标签
+
+```html
+<quark-tag light>正</quark-tag>
+```
+
 ### 自定义样式
 
 ```html
@@ -55,6 +61,7 @@ import "quarkd/lib/tag";
 | type      | 类型，可选值为 `primary` `danger` `orange` `success` `warning` `gray` | `string`  | `primary` |
 | size      | 标签大小，可选值为 `small` `large`                                    | `string`  | `small`   |
 | plain     | 是否空心                                                              | `boolean` | `false`   |
+| light     | 是否浅色系                                                            | `boolean` | `false`   |
 | round     | 是否圆角标签                                                          | `boolean` | `false`   |
 | color     | 标签颜色                                                              | `string`  | -         |
 | textcolor | 标签文字颜色                                                          | `string`  | -         |

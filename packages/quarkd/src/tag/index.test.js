@@ -13,16 +13,16 @@ let el;
 describe("<quark-tag>", async () => {
   before(async () => {
     el = await fixture(
-      `<quark-tag 
-      type=${data.type} 
-      size=${data.size}
-      plain=${data.plain}
-      light=${data.light}
-      color=${data.color}
-      textcolor=${data.textcolor}
-    >
-      ${data.slotText}
-    </quark-tag>`
+      `<quark-tag
+        type=${data.type}
+        size=${data.size}
+        plain=${data.plain}
+        light=${data.light}
+        color=${data.color}
+        textcolor=${data.textcolor}
+      >
+        ${data.slotText}
+      </quark-tag>`
     );
   });
 
@@ -43,9 +43,14 @@ describe("<quark-tag>", async () => {
     expect(el.plain).to.exist;
   });
 
+  it("light attribute", () => {
+    expect(el.light).to.exist;
+  });
+
   it("color attribute", () => {
     expect(el.color).to.equal(data.color);
   });
+
   it("textcolor attribute", () => {
     expect(el.textcolor).to.equal(data.textcolor);
   });

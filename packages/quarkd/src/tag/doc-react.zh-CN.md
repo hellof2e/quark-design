@@ -34,6 +34,12 @@ import { Tag } "@quarkd/quark-react";
 <Tag plain>正</Tag>
 ```
 
+### 浅色标签
+
+```html
+<Tag light>正</Tag>
+```
+
 ### 自定义样式
 
 ```html

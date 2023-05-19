@@ -34,6 +34,12 @@ import "quarkd/lib/tag";
 <quark-tag plain>Q</quark-tag>
 ```
 
+### Light tag
+
+```html
+<quark-tag light>Q</quark-tag>
+```
+
 ### Custom style
 
 ```html
