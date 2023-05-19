@@ -23,9 +23,28 @@ import "quarkd/lib/tab";
 
 ```javascript
 data() {
-    return {
-        active: 1,
-    }
+  return {
+    active: 1,
+  }
+},
+```
+
+### 深色模式
+
+```html
+<quark-tabs dark :activekey="active">
+  <quark-tab-content label="tab1"> tab1 content </quark-tab-content>
+  <quark-tab-content label="tab2"> tab2 content </quark-tab-content>
+  <quark-tab-content label="tab3" disabled> tab3 content </quark-tab-content>
+  <quark-tab-content label="tab4"> tab4 content </quark-tab-content>
+</quark-tabs>
+```
+
+```javascript
+data() {
+  return {
+    active: 1,
+  }
 },
 ```
 
@@ -44,9 +63,9 @@ data() {
 
 ```js
 data() {
-    return {
-        activeName: 'd',
-    }
+  return {
+    activeName: 'd',
+  }
 },
 ```
 
@@ -78,15 +97,15 @@ data() {
 
 ```js
 data() {
-    return {
-        activeName1: 'd',
-    }
+  return {
+    activeName1: 'd',
+  }
 },
 methods: {
-    onChange({detail}) {
-        this.activeName1 = detail.name;
-        Toast.text('当前选择:'+detail.label);
-    }
+  onChange({detail}) {
+    this.activeName1 = detail.name;
+    Toast.text('当前选择:'+detail.label);
+  }
 }
 ```
 
@@ -111,6 +130,7 @@ nav-item 在滚动时固定在屏幕上方
 | --------- | ------------------------------------------------------ | ---------- | ------- |
 | activekey | 当前激活的 tab，对应到 `quark-tab-content` 中的 `name` | `string`   | 无      |
 | sticky    | 是否吸顶                                               | `boolean ` | `false` |
+| dark      | 深色模式                                               | `boolean ` | `false` |
 | offsettop | 吸顶时与顶部的距离(单位: vw)                           | `string `  | `0vw`   |
 | linewidth | 下划线宽                                               | `string `  | `40px`  |
 

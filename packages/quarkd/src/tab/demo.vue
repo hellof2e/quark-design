@@ -3,18 +3,35 @@
     <h2>{{ translate("title.basic") }}</h2>
     <div class="demo-item">
       <quark-tabs :activekey="data.active">
-        <quark-tab-content :label="translate('tab')[0]">{{
-          translate("tabs")[0]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[1]">{{
-          translate("tabs")[1]
-        }}</quark-tab-content>
+        <quark-tab-content :label="translate('tab')[0]">
+          {{ translate("tabs")[0] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[1]">
+          {{ translate("tabs")[1] }}
+        </quark-tab-content>
         <quark-tab-content :label="translate('tab')[2]" disabled>
           {{ translate("tabs")[2] }}
         </quark-tab-content>
-        <quark-tab-content :label="translate('tab')[3]">{{
-          translate("tabs")[3]
-        }}</quark-tab-content>
+        <quark-tab-content :label="translate('tab')[3]">
+          {{ translate("tabs")[3] }}
+        </quark-tab-content>
+      </quark-tabs>
+    </div>
+    <h2>{{ translate("title.dark") }}</h2>
+    <div class="demo-item">
+      <quark-tabs dark :activekey="data.active">
+        <quark-tab-content :label="translate('tab')[0]">
+          {{ translate("tabs")[0] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[1]">
+          {{ translate("tabs")[1] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[2]" disabled>
+          {{ translate("tabs")[2] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[3]">
+          {{ translate("tabs")[3] }}
+        </quark-tab-content>
       </quark-tabs>
     </div>
 
@@ -39,36 +56,36 @@
     <h2>{{ translate("title.scroll") }}</h2>
     <div class="demo-item">
       <quark-tabs>
-        <quark-tab-content :label="translate('tab')[0]">{{
-          translate("tabs")[0]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[1]">{{
-          translate("tabs")[1]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[2]">{{
-          translate("tabs")[2]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[3]">{{
-          translate("tabs")[3]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[4]">{{
-          translate("tabs")[4]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[5]">{{
-          translate("tabs")[5]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[6]">{{
-          translate("tabs")[6]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[7]">{{
-          translate("tabs")[7]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[8]">{{
-          translate("tabs")[8]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[9]">{{
-          translate("tabs")[9]
-        }}</quark-tab-content>
+        <quark-tab-content :label="translate('tab')[0]">
+          {{ translate("tabs")[0] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[1]">
+          {{ translate("tabs")[1] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[2]">
+          {{ translate("tabs")[2] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[3]">
+          {{ translate("tabs")[3] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[4]">
+          {{ translate("tabs")[4] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[5]">
+          {{ translate("tabs")[5] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[6]">
+          {{ translate("tabs")[6] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[7]">
+          {{ translate("tabs")[7] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[8]">
+          {{ translate("tabs")[8] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[9]">
+          {{ translate("tabs")[9] }}
+        </quark-tab-content>
       </quark-tabs>
     </div>
 
@@ -97,18 +114,18 @@
     <h2>{{ translate("title.sticky") }}</h2>
     <div class="demo-item">
       <quark-tabs sticky offsettop="17vw">
-        <quark-tab-content :label="translate('tab')[0]">{{
-          translate("tabs")[0]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[1]">{{
-          translate("tabs")[1]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[2]">{{
-          translate("tabs")[2]
-        }}</quark-tab-content>
-        <quark-tab-content :label="translate('tab')[3]">{{
-          translate("tabs")[3]
-        }}</quark-tab-content>
+        <quark-tab-content :label="translate('tab')[0]">
+          {{ translate("tabs")[0] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[1]">
+          {{ translate("tabs")[1] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[2]">
+          {{ translate("tabs")[2] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[3]">
+          {{ translate("tabs")[3] }}
+        </quark-tab-content>
       </quark-tabs>
     </div>
   </div>
@@ -134,6 +151,7 @@ export default createDemo({
         "zh-CN": {
           title: {
             basic: "基础用法",
+            dark: "深色模式",
             name: "通过名称匹配",
             scroll: "横向滚动",
             click: "点击事件",
@@ -168,6 +186,7 @@ export default createDemo({
         "en-US": {
           title: {
             basic: "Basic Usage",
+            dark: "Dark",
             name: "Match by Name",
             scroll: "Horizontal Scrolling",
             click: "Click Event",

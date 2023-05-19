@@ -21,22 +21,33 @@ import { Tabs, TabContent } from "@quarkd/quark-react";
 </Tabs>
 ```
 
+### 深色默模式
+
+```html
+<Tabs dark activekey="{1}">
+  <TabContent label="tab1"> tab1 content </TabContent>
+  <TabContent label="tab2"> tab2 content </TabContent>
+  <TabContent label="tab3" disabled> tab3 content </TabContent>
+  <TabContent label="tab4"> tab4 content </TabContent>
+</Tabs>
+```
+
 ### 通过名称匹配
 
 ```html
 <Tabs activekey={'d'}>
-    <TabContent label="tab1" name="a">
-        tab1 content
-    </TabContent>
-    <TabContent label="tab2" name="b">
-        tab2 content
-    </TabContent>
-    <TabContent label="tab3" disabled name="c">
-        tab3 content
-    </TabContent>
-    <TabContent label="tab4" name="d">
-        tab4 content
-    </TabContent>
+  <TabContent label="tab1" name="a">
+    tab1 content
+  </TabContent>
+  <TabContent label="tab2" name="b">
+    tab2 content
+  </TabContent>
+  <TabContent label="tab3" disabled name="c">
+    tab3 content
+  </TabContent>
+  <TabContent label="tab4" name="d">
+    tab4 content
+  </TabContent>
 </Tabs>
 ```
 
@@ -105,6 +116,7 @@ nav-item 在滚动时固定在屏幕上方
 | --------- | ----------------------------------------------- | -------------------------------------------------------- | ------- |
 | activekey | 当前激活的 tab，对应到 `TabContent` 中的 `name` | `string`                                                 | -       |
 | sticky    | 是否吸顶                                        | `boolean`                                                | `false` |
+| dark      | 深色模式                                        | `boolean`                                                | `false` |
 | offsettop | 吸顶时与顶部的距离(单位: vw)                    | `string`                                                 | `0vw`   |
 | linewidth | 下划线宽                                        | string                                                   | `40px`  |
 | onChange  | change 回调函数                                 | `(e: {detail: { name: string，label: number }}) => void` | -       |
