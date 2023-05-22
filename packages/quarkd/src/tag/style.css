@@ -105,8 +105,3 @@
   background: var(--quark-success-light-color, quark-successLightColor);
   color: var(--tag-text-color, quark-successColor);
 }
-
-:host([light])::selection {
-  background:var(--brand-color);
-  color:#232323;
-}
