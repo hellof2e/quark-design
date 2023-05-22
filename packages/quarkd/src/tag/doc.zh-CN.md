@@ -34,10 +34,34 @@ import "quarkd/lib/tag";
 <quark-tag plain>正</quark-tag>
 ```
 
+### 浅色标签
+
+```html
+<quark-tag light>正</quark-tag>
+```
+
 ### 自定义样式
 
 ```html
 <quark-tag size="large" color="#ffe1e1" textcolor="#ad0000">正</quark-tag>
+<quark-tag size="large" color="linear-gradient(135deg, #667eea, #764ba2)"
+  >正</quark-tag
+>
+<quark-tag
+  class="custom-border-color"
+  plain
+  size="large"
+  color="#ffe1e1"
+  textcolor="#ad0000"
+>
+  正
+</quark-tag>
+```
+
+```css
+.custom-border-color {
+  --tag-border-color: #fb990f;
+}
 ```
 
 ### 圆角标签
@@ -55,6 +79,7 @@ import "quarkd/lib/tag";
 | type      | 类型，可选值为 `primary` `danger` `orange` `success` `warning` `gray` | `string`  | `primary` |
 | size      | 标签大小，可选值为 `small` `large`                                    | `string`  | `small`   |
 | plain     | 是否空心                                                              | `boolean` | `false`   |
+| light     | 是否浅色系                                                            | `boolean` | `false`   |
 | round     | 是否圆角标签                                                          | `boolean` | `false`   |
 | color     | 标签颜色                                                              | `string`  | -         |
 | textcolor | 标签文字颜色                                                          | `string`  | -         |
@@ -74,4 +99,4 @@ import "quarkd/lib/tag";
 | `--tag-line-height`   | 行高                   | small `12px`, large `20px`                                                      |
 | `--tag-text-color`    | 字体颜色               | `#fff`                                                                          |
 | `--tag-background`    | tag 背景               |
-| `--tag-border-color`  | 描边颜色，空心标签生效 |
+| `--tag-border-color`  | 描边颜色，空心标签生效 |                                                                                 |

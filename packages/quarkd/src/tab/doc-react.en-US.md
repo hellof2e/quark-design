@@ -21,6 +21,17 @@ import { Tabs, TabContent } from "@quarkd/quark-react";
 </Tabs>
 ```
 
+### Dark Mode
+
+```html
+<Tabs dark activekey="{1}">
+  <TabContent label="tab1"> tab1 content </TabContent>
+  <TabContent label="tab2"> tab2 content </TabContent>
+  <TabContent label="tab3" disabled> tab3 content </TabContent>
+  <TabContent label="tab4"> tab4 content </TabContent>
+</Tabs>
+```
+
 ### Match By Name
 
 ```html
@@ -105,6 +116,7 @@ In sticky mode, the nav-item will be fixed to top when scroll to top.
 | --------- | ------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------- |
 | activekey | The currently activated tab, corresponding to the `name` in `quark-tab-content` | `string`                                                 | -             |
 | sticky    | Whether to use sticky mode                                                      | `boolean`                                                | `false`       |
+| dark      | Whether to use dark mode                                                        | `boolean`                                                | `false`       |
 | offsettop | Sticky offset top , supports vm                                                 | `string`                                                 | `0vw`         |
 | linewidth | Width of tab line                                                               | `string`                                                 | `40px`        |
 | onChange  | change callback                                                                 | `(e: {detail: { name: string，label: number }}) => void` | -             |
@@ -127,8 +139,8 @@ The component provides the following[CSS variables](https://developer.mozilla.or
 | `--tab-item-active-color`     | `tab-item` Active state `active` font color                                   | `#333333`                        |
 | `--tab-item-disabled-color`   | `tab-item` Disabled state font color                                          | `#c8c9cc`                        |
 | `--tab-item-min-width`        | `tab-item` Minimum width (determines the maximum number of display in a line) | `20vw`(Display up to 5 in a row) |
-| `--tab-item-height`           | `tab-item` Height setting                                                     | `44px `                          |
+| `--tab-item-height`           | `tab-item` Height setting                                                     | `44px`                           |
 | `--tab-item-font-size`        | `tab-item` Font size                                                          | `16px`                           |
-| `--tab-active-line-color`     | `tab-item` active state `underline` color                                     | `#0088ff `                       |
+| `--tab-active-line-color`     | `tab-item` active state `underline` color                                     | `#0088ff`                        |
 | `--tabs-background-color`     | tabs Background color                                                         | `#ffffff`                        |
-| `--tab-item-background-color` | `tab-item` Background color                                                   | `#ffffff `                       |
+| `--tab-item-background-color` | `tab-item` Background color                                                   | `#ffffff`                        |

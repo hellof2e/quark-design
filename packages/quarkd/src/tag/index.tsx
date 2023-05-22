@@ -6,6 +6,7 @@ export interface Props {
   size?: "small" | "large";
   round?: boolean;
   plain?: boolean;
+  light?: boolean;
   color?: string;
   textcolor?: string;
 }
@@ -36,6 +37,11 @@ class QuarkTag extends QuarkElement {
     type: Boolean,
   })
   round = false;
+
+  @property({
+    type: Boolean,
+  })
+  light = false;
 
   wrap: any = createRef();
 

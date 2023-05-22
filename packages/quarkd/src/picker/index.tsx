@@ -186,7 +186,7 @@ class QuarkPicker extends QuarkElement {
             <slot name="header">
               <span class="quark-picker-title">{this.title}</span>
               <div class="quark-picker-header-close-btn">
-                <quark-icon-close onclick={this.popupClose} />
+                <quark-icon-close size="24" onclick={this.popupClose} />
               </div>
             </slot>
           </div>

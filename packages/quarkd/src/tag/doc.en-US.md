@@ -34,10 +34,34 @@ import "quarkd/lib/tag";
 <quark-tag plain>Q</quark-tag>
 ```
 
+### Light tag
+
+```html
+<quark-tag light>Q</quark-tag>
+```
+
 ### Custom style
 
 ```html
 <quark-tag size="large" color="#ffe1e1" textcolor="#ad0000">Q</quark-tag>
+<quark-tag size="large" color="linear-gradient(135deg, #667eea, #764ba2)"
+  >Q</quark-tag
+>
+<quark-tag
+  class="custom-border-color"
+  plain
+  size="large"
+  color="#ffe1e1"
+  textcolor="#ad0000"
+>
+  Q
+</quark-tag>
+```
+
+```css
+.custom-border-color {
+  --tag-border-color: #fb990f;
+}
 ```
 
 ### Round tag

@@ -7,12 +7,16 @@
   font-weight: 400;
   color: var(--tab-item-color, #5e6266);
   font-size: var(--tab-item-font-size, 16px);
+  font-family: var(--tag-font-family, quark-sFontFamily);
   background-color: var(--tab-item-background-color, #fff);
 }
+
 :host([active]) {
   font-weight: 500;
   color: var(--tab-item-active-color, #333333);
+  font-family: var(--tag-font-family, quark-mFontFamily);
 }
+
 :host([disabled]) {
   color: var(--tab-item-disabled-color, quark-formDisabledColor);
   pointer-events: none;
@@ -20,6 +24,16 @@
 :host([disabled]) .quark-tab-nav {
   cursor: not-allowed;
 }
+
+:host([dark]) .quark-tab-nav {
+  color: var(--tab-item-dark-color, quark-textWhiteColor);
+  background-color: var(--tab-item-dark-background-color, #242729);
+}
+
+:host([dark][disabled]) .quark-tab-nav {
+  color: var(--tab-item-disabled-color, quark-formDisabledColor);
+}
+
 :host .quark-tab-nav {
   width: 100%;
   text-align: center;
