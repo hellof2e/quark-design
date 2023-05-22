@@ -57,6 +57,7 @@
   /* border: 0.5px solid; */
   /* border-color: var(--tag-border-color, quark-primaryColor); */
   outline: 0.5px solid;
+  outline-color: var(--tag-border-color, --tag-text-color);
   color: var(--tag-text-color, quark-primaryColor);
 }
 
@@ -103,4 +104,9 @@
 :host([light][type="success"]) .quark-tag {
   background: var(--quark-success-light-color, quark-successLightColor);
   color: var(--tag-text-color, quark-successColor);
+}
+
+:host([light])::selection {
+  background:var(--brand-color);
+  color:#232323;
 }

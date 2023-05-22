@@ -44,6 +44,22 @@ import { Tag } "@quarkd/quark-react";
 
 ```html
 <Tag size="large" color="#ffe1e1" textcolor="#ad0000">正</Tag>
+<Tag size="large" color="linear-gradient(135deg, #667eea, #764ba2)">正</Tag>
+<Tag
+  class="custom-border-color"
+  plain
+  size="large"
+  color="#ffe1e1"
+  textcolor="#ad0000"
+>
+  正
+</Tag>
+```
+
+```css
+.custom-border-color {
+  --tag-border-color: #fb990f;
+}
 ```
 
 ### 圆角标签

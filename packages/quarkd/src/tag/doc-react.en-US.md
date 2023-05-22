@@ -46,6 +46,22 @@ import { Tag } "@quarkd/quark-react";
 
 ```html
 <Tag size="large" color="#ffe1e1" textcolor="#ad0000">Q</Tag>
+<Tag size="large" color="linear-gradient(135deg, #667eea, #764ba2)">Q</Tag>
+<Tag
+  class="custom-border-color"
+  plain
+  size="large"
+  color="#ffe1e1"
+  textcolor="#ad0000"
+>
+  Q
+</Tag>
+```
+
+```css
+.custom-border-color {
+  --tag-border-color: #fb990f;
+}
 ```
 
 ### Round tag

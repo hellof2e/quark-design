@@ -74,7 +74,23 @@
       </quark-tag>
     </div>
     <div class="tag-container">
+      <quark-tag size="large" color="linear-gradient(135deg, #667eea, #764ba2)">
+        {{ translate("tag") }}
+      </quark-tag>
+    </div>
+    <!-- <div class="tag-container">
       <quark-tag size="large" color="#7232dd">
+        {{ translate("tag") }}
+      </quark-tag>
+    </div> -->
+    <div class="tag-container">
+      <quark-tag
+        class="custom-border-color"
+        plain
+        size="large"
+        color="#ffe1e1"
+        textcolor="#ad0000"
+      >
         {{ translate("tag") }}
       </quark-tag>
     </div>
