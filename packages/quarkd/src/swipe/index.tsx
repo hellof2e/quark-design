@@ -227,7 +227,11 @@ class QuarkSwipe extends QuarkElement {
   }
 
   changeFirstNodeTranX(reset: boolean) {
-    const firstNode: any = this.childNodes[0];
+    const { current } = this.slotWrapRef;
+    if (!current) return;
+    const nodes = slotAssignedElements(current.assignedNodes());
+    if (!nodes || nodes.length <= 0) return;
+    const firstNode: any = nodes[0];
     firstNode.style.transitionDuration = null;
     if (reset) {
       firstNode.style.transform = null;
@@ -239,7 +243,12 @@ class QuarkSwipe extends QuarkElement {
   }
 
   changeLastNodeTranX(reset: boolean) {
-    const lastNode: any = this.childNodes[this.count - 1];
+    const { current } = this.slotWrapRef;
+    if (!current) return;
+    const nodes = slotAssignedElements(current.assignedNodes());
+    if (!nodes || nodes.length <= 1) return;
+
+    const lastNode: any = nodes[this.count - 1];
 
     lastNode.style.transitionDuration = null;
     if (reset) {
