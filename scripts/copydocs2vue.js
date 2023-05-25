@@ -52,9 +52,6 @@ const copy = async () => {
         let docpath = `${quarkPath}/src/${cmpName}/doc.zh-CN.md`; // 中文md
         let docEnPath = `${quarkPath}/src/${cmpName}/doc.en-US.md`; // 英文md
 
-        let reactDocpath = `packages/quarkd/src/${cmpName}/doc-react.zh-CN.md`;
-        let reactDocEnPath = `packages/quarkd/src/${cmpName}/doc-react.en-US.md`;
-
         console.log(docpath, "docpath---------->");
         console.log(docEnPath, "docEnPath---------->");
         fse.readFile(docpath, (err, data) => {
@@ -67,24 +64,6 @@ const copy = async () => {
             copyFile(
               docEnPath,
               `${targetBaseUrl}/docs/${cmpName}/doc.en-US.md`
-            );
-          }
-        });
-
-        // react docs
-        fse.readFile(reactDocpath, (err, data) => {
-          if (!err) {
-            copyFile(
-              reactDocpath,
-              `${targetBaseUrl}/docs/${cmpName}/doc-react.zh-CN.md`
-            );
-          }
-        });
-        fse.readFile(reactDocEnPath, (err, data) => {
-          if (!err) {
-            copyFile(
-              reactDocEnPath,
-              `${targetBaseUrl}/docs/${cmpName}/doc-react.en-US.md`
             );
           }
         });
