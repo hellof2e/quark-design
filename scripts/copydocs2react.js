@@ -52,8 +52,8 @@ const copy = async () => {
         let reactDocpath = `packages/quarkd/src/${cmpName}/doc-react.zh-CN.md`;
         let reactDocEnPath = `packages/quarkd/src/${cmpName}/doc-react.en-US.md`;
 
-        console.log(docpath, "docpath---------->");
-        console.log(docEnPath, "docEnPath---------->");
+        console.log(reactDocpath, "docpath---------->");
+        console.log(reactDocEnPath, "docEnPath---------->");
 
         // react docs
         fse.readFile(reactDocpath, (err, data) => {
