@@ -10,6 +10,7 @@
   padding-right: var(--button-hspacing, 12px);
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :host .quark-button {
@@ -18,7 +19,9 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  border-radius: var(--button-border-radius, 16px);
   cursor: unset;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :host([shape="square"]) {
@@ -43,6 +46,14 @@
   height: var(--button-height, 40px);
   line-height: var(--button-height, 40px);
   font-size: var(--button-font-size, 16px);
+  border-radius: var(--button-big-border-radius, 8px);
+  width: 100%;
+}
+
+:host([size="large"]) {
+  height: var(--button-height, 48px);
+  line-height: var(--button-height, 48px);
+  font-size: var(--button-font-size, 18px);
   border-radius: var(--button-big-border-radius, 8px);
   width: 100%;
 }
@@ -100,6 +111,30 @@
   background: var(--button-fill-base-color, transparent);
 }
 
+:host([light]) {
+  background: var(--quark-light-color, #E1E6EB);
+}
+
+:host([light][type="primary"]) {
+  background: var(--quark-primary-light-color, quark-primaryLightColor);
+  color: var(--button-color, quark-primaryColor);
+}
+
+:host([light][type="warning"]) {
+  background: var(--quark-warning-light-color, quark-warningLightColor);
+  color: var(--button-color, quark-warningColor);
+}
+
+:host([light][type="danger"]) {
+  background: var(--quark-danger-light-color, quark-dangerLightColor);
+  color: var(--button-color, quark-dangerColor);
+}
+
+:host([light][type="success"]) {
+  background: var(--quark-success-light-color, quark-successLightColor);
+  color: var(--button-color, quark-successColor);
+}
+
 :host([loading]) {
   cursor: not-allowed;
   user-select: none;
@@ -117,16 +152,16 @@
   color: #fff;
 }
 
-:host(:active)::before {
-  opacity: 0.1;
+:host(:active) .quark-button::before {
+  opacity: 0.05;
 }
 
-:host([disabled])::before,
-:host([loading])::before {
+:host([disabled]) .quark-button::before,
+:host([loading]) .quark-button::before {
   display: none;
 }
 
-:host::before {
+:host .quark-button::before {
   position: absolute;
   top: 50%;
   left: 50%;

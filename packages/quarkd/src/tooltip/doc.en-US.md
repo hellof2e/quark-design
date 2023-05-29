@@ -37,6 +37,16 @@ bottomleft    # bottom left position
 bottomright   # bottom right position
 ```
 
+### Set tips Size
+
+The tips size of the bubble is controlled by the size property. Size supports 2 types: `large` and the default.
+
+```tsx
+<quark-tooltip placement="top" size="large" tips="bubble text">
+  <div>large Size</div>
+</quark-tooltip>
+```
+
 ### Show Close Button
 
 Control whether to display the close button through the closeable property.
@@ -182,6 +192,7 @@ export default {
 | ------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | open         | Whether to show tip                                      | `boolean`                                                                                                                     | `require`     |
 | placement    | Position of tip                                          | `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`      |
+| size         | Size of tip                                              | `large`                                                                                                                       | -             |
 | tips         | content of tip                                           | `string `                                                                                                                     | `require`     |
 | closeable    | Whether to show close button                             | `boolean`                                                                                                                     | `false`       |
 | autoclose    | Whether to automatically close after display             | `boolean`                                                                                                                     | `false`       |

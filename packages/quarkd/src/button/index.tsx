@@ -60,7 +60,14 @@ class QuarkButton extends QuarkElement {
   })
   plain = false;
 
+  @property({
+    type: Boolean,
+  })
+  light = false;
+
   slotRef: any = createRef();
+
+  isActive: true;
 
   renderIcon = () => {
     if (this.icon && this.icon.startsWith("http")) {
@@ -85,6 +92,7 @@ class QuarkButton extends QuarkElement {
         e.stopPropagation();
       }
     });
+    this.slotRef.current.addEventListener("touchstart", () => {});
   }
 
   render() {

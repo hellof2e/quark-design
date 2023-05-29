@@ -38,6 +38,15 @@ To set the button as a plain button, add `plain` prop to the Button. The plain b
 <quark-button type="success" plain>Success</quark-button>
 ```
 
+### Light
+
+To set the Button as a light Button, add `light` prop to the Button. The light Button's text is the Button color, and the background is the light color.
+
+```html
+<quark-button light type="primary">Primary</quark-button>
+<quark-button light type="success">Success</quark-button>
+```
+
 ### Size
 
 Support `big`, `small`, the default is normal.
@@ -45,6 +54,7 @@ Support `big`, `small`, the default is normal.
 ```html
 <quark-button type="primary" size="small">Small</quark-button>
 <quark-button type="primary" size="big">Big</quark-button>
+<quark-button type="primary" size="large">Large</quark-button>
 <quark-button type="primary">Normal</quark-button>
 ```
 
@@ -125,6 +135,7 @@ Button components can contain an Icon. This is done by setting `icon` prop withi
 | icon         | Icon on button (can be set to url link)                              | `string`  | -         |
 | shape        | Button shape，can be set to `square`, `round`                        | `string`  | `round`   |
 | plain        | Whether to be plain button                                           | `boolean` | `false `  |
+| light        | Whether to be light Button                                           | `boolean` | `false `  |
 | loading      | Whether to show loading status                                       | `boolean` | `false`   |
 | loadtype     | Loading type，can be set to `circular`                               | `string`  | `spinner` |
 | loadingcolor | Loading color                                                        | `string`  | `#fff`    |

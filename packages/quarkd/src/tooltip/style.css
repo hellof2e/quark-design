@@ -22,16 +22,16 @@
 
 :host .quark-tooltip-content {
   border-radius: 4px;
-  padding-left: var(--tips-hspacing, 8px);
-  padding-right: var(--tips-hspacing, 8px);
-  padding-top: var(--tips-vspacing, 6px);
-  padding-bottom: var(--tips-vspacing, 6px);
+  padding-left: var(--tips-hspacing, 6px);
+  padding-right: var(--tips-hspacing, 6px);
+  padding-top: var(--tips-vspacing, 3px);
+  padding-bottom: var(--tips-vspacing, 3px);
   line-height: var(--tips-line-height, 1.4);
   font-weight: var(--tips-font-weight, 400);
   text-align: center;
   background-color: var(--tips-background-color, quark-textBaseColor);
   color: var(--tips-color, #fff);
-  font-size: var(--tips-font-size, 14px);
+  font-size: var(--tips-font-size, 12px);
   font-style: normal;
   max-width: 200px;
   width: max-content;
@@ -39,6 +39,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+:host([size="large"]) .quark-tooltip-content {
+  padding-left: var(--tips-hspacing, 8px);
+  padding-right: var(--tips-hspacing, 8px);
+  padding-top: var(--tips-vspacing, 6px);
+  padding-bottom: var(--tips-vspacing, 6px);
+  font-size: var(--tips-font-size, 14px);
 }
 
 :host .quark-tooltip-triangle {

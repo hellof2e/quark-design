@@ -25,8 +25,21 @@
       }}</quark-button>
     </div>
 
+    <h2>{{ translate("title.light") }}</h2>
+    <div class="demo-buttons">
+      <quark-button light type="primary">{{
+        translate("type.primary")
+      }}</quark-button>
+      <quark-button light type="success">{{
+        translate("type.success")
+      }}</quark-button>
+    </div>
+
     <h2>{{ translate("title.size") }}</h2>
     <div class="demo-buttons">
+      <quark-button type="primary" size="large">{{
+        translate("size.large")
+      }}</quark-button>
       <quark-button type="primary" size="big">{{
         translate("size.big")
       }}</quark-button>
@@ -104,6 +117,7 @@ export default createDemo({
             type: "按钮类型",
             shape: "按钮形状",
             plain: "朴素按钮",
+            light: "浅色按钮",
             disabled: "禁用状态",
             loading: "加载状态",
             icon: "图标按钮",
@@ -121,6 +135,7 @@ export default createDemo({
             round: "小圆角按钮",
           },
           size: {
+            large: "特大尺寸",
             big: "大号尺寸",
             normal: "普通尺寸",
             small: "小号尺寸",
@@ -135,6 +150,7 @@ export default createDemo({
             type: "Button Type",
             shape: "Button Shape",
             plain: "Plain Button",
+            light: "Light Button",
             disabled: "Disabled",
             loading: "Loading",
             icon: "Icon Button",
@@ -152,6 +168,7 @@ export default createDemo({
             round: "Round",
           },
           size: {
+            large: "Large",
             big: "Big",
             normal: "Normal",
             small: "Small",
