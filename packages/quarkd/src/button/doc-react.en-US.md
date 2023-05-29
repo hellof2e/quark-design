@@ -38,6 +38,15 @@ To set the Button as a plain Button, add `plain` prop to the Button. The plain B
 <Button plain type="success">Success</Button>
 ```
 
+### Light
+
+To set the Button as a light Button, add `light` prop to the Button. The light Button's text is the Button color, and the background is the light color.
+
+```html
+<Button light type="primary">Primary</Button>
+<Button light type="success">Success</Button>
+```
+
 ### Size
 
 Support `big`, `small`, the default is normal.
@@ -45,6 +54,7 @@ Support `big`, `small`, the default is normal.
 ```html
 <Button type="primary" size="small">Small</Button>
 <Button type="primary" size="big">Big</Button>
+<Button type="primary" size="large">Large</Button>
 <Button type="primary">Normal</Button>
 ```
 
@@ -101,6 +111,7 @@ Button components can contain an Icon. This is done by setting `icon` prop withi
 | icon         | Icon on Button (can be set to url link)                           | `string`  | -         |
 | shape        | Button shape，can be set to `square`, `round`                     | `string`  | `round`   |
 | plain        | Whether to be plain Button                                        | `boolean` | `false `  |
+| light        | Whether to be light Button                                        | `boolean` | `false `  |
 | loading      | Whether to show loading status                                    | `boolean` | `false`   |
 | loadtype     | Loading type，can be set to `circular`                            | `string`  | `spinner` |
 | loadingcolor | Loading color                                                     | `string`  | `#fff`    |

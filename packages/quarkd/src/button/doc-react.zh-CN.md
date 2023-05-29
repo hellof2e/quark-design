@@ -37,6 +37,15 @@ import { Button } from "@quarkd/quark-react";
 <Button plain type="success">成功按钮</Button>
 ```
 
+### 浅色按钮
+
+通过 `light` 属性将按钮设置为浅色按钮，浅色按钮的文字为按钮颜色，背景为对应的浅色。
+
+```html
+<Button type="primary" light>主要按钮</Button>
+<Button type="success" light>成功按钮</Button>
+```
+
 ### 按钮尺寸
 
 按钮支持 `big`、`small` 和默认尺寸。
@@ -44,6 +53,7 @@ import { Button } from "@quarkd/quark-react";
 ```html
 <Button type="primary" size="small">小号尺寸</Button>
 <Button type="primary" size="big">大号尺寸</Button>
+<Button type="primary" size="large">特大尺寸</Button>
 <Button type="primary">普通尺寸</Button>
 ```
 
@@ -102,6 +112,7 @@ import { Button } from "@quarkd/quark-react";
 | icon         | 按钮图标 (支持传 url 链接)                                               | `string`  | -         |
 | shape        | 形状，可选值为 `square`                                                  | `string`  | `round`   |
 | plain        | 是否为朴素按钮                                                           | `boolean` | `false `  |
+| light        | 是否为浅色按钮                                                           | `boolean` | `false `  |
 | loading      | 按钮 loading 状态                                                        | `boolean` | `false`   |
 | loadtype     | 加载图标类型，可选值为 `circular`                                        | `string`  | `spinner` |
 | loadingcolor | 加载图标颜色                                                             | `string`  | `#fff`    |
