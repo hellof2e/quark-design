@@ -13,7 +13,7 @@ import { Button } from "@quarkd/quark-react";
 ### Basic Usage
 
 ```html
-<Button>Default</Button>
+<button>Default</button>
 ```
 
 ### Type
@@ -21,12 +21,12 @@ import { Button } from "@quarkd/quark-react";
 There are `primary`, `success`, `danger`, `warning` and default type.
 
 ```html
-<Button>Default</Button>
-<Button type="primary">Blue</Button>
-<Button type="success">Green</Button>
-<Button type="danger">Red</Button>
-<Button type="warning">Yellow</Button>
-<Button type="grey">Grey</Button>
+<button>Default</button>
+<button type="primary">Blue</button>
+<button type="success">Green</button>
+<button type="danger">Red</button>
+<button type="warning">Yellow</button>
+<button type="grey">Grey</button>
 ```
 
 ### Plain
@@ -34,8 +34,17 @@ There are `primary`, `success`, `danger`, `warning` and default type.
 To set the Button as a plain Button, add `plain` prop to the Button. The plain Button's text is the Button color, and the background is white.
 
 ```html
-<Button plain type="primary">Primary</Button>
-<Button plain type="success">Success</Button>
+<button plain type="primary">Primary</button>
+<button plain type="success">Success</button>
+```
+
+### Light
+
+To set the Button as a light Button, add `light` prop to the Button. The light Button's text is the Button color, and the background is the light color.
+
+```html
+<button light type="primary">Primary</button>
+<button light type="success">Success</button>
 ```
 
 ### Size
@@ -43,9 +52,10 @@ To set the Button as a plain Button, add `plain` prop to the Button. The plain B
 Support `big`, `small`, the default is normal.
 
 ```html
-<Button type="primary" size="small">Small</Button>
-<Button type="primary" size="big">Big</Button>
-<Button type="primary">Normal</Button>
+<button type="primary" size="small">Small</button>
+<button type="primary" size="big">Big</button>
+<button type="primary" size="large">Large</button>
+<button type="primary">Normal</button>
 ```
 
 ### Disabled
@@ -53,8 +63,8 @@ Support `big`, `small`, the default is normal.
 To mark a Button as disabled, add `disabled` prop to the Button. The Button cannot be clicked when disabled.
 
 ```html
-<Button disabled type="primary">Disabled</Button>
-<Button disabled plain>Disabled</Button>
+<button disabled type="primary">Disabled</button>
+<button disabled plain>Disabled</button>
 ```
 
 ### Shape
@@ -62,8 +72,8 @@ To mark a Button as disabled, add `disabled` prop to the Button. The Button cann
 A Button shape can be added to a Button by setting `shape` prop on the Button, which supports `round` and `square` Buttons. The default is small rounded corners.
 
 ```html
-<Button shape="square" type="danger">Square</Button>
-<Button shape="round" type="primary">Round</Button>
+<button shape="square" type="danger">Square</button>
+<button shape="round" type="primary">Round</button>
 ```
 
 ### Loading
@@ -81,12 +91,12 @@ A loading indicator can be added to a Button by setting `loading` prop on the Bu
 Button components can contain an Icon. This is done by setting `icon` prop within the Button.
 
 ```html
-<Button
+<button
   type="primary"
   icon="https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png"
 >
   Like
-</Button>
+</button>
 ```
 
 ## API
@@ -101,6 +111,7 @@ Button components can contain an Icon. This is done by setting `icon` prop withi
 | icon         | Icon on Button (can be set to url link)                           | `string`  | -         |
 | shape        | Button shape，can be set to `square`, `round`                     | `string`  | `round`   |
 | plain        | Whether to be plain Button                                        | `boolean` | `false `  |
+| light        | Whether to be light Button                                        | `boolean` | `false `  |
 | loading      | Whether to show loading status                                    | `boolean` | `false`   |
 | loadtype     | Loading type，can be set to `circular`                            | `string`  | `spinner` |
 | loadingcolor | Loading color                                                     | `string`  | `#fff`    |

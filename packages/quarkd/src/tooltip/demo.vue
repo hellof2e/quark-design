@@ -93,6 +93,20 @@
       </quark-tooltip>
     </div>
      -->
+    <h2>{{ translate("tipsSize") }}</h2>
+    <div class="quark-tip">
+      <quark-tooltip
+        placement="top"
+        :tips="translate('tips')"
+        scrollhidden
+        size="large"
+        :open="data.large"
+        @click="open('large')"
+        @close="close('large')"
+      >
+        <div>{{ translate("largeSize") }}</div>
+      </quark-tooltip>
+    </div>
     <h2>{{ translate("showCloseButton") }}</h2>
     <div class="quark-tip">
       <quark-tooltip
@@ -107,7 +121,20 @@
         <div>{{ translate("topPosition") }}</div>
       </quark-tooltip>
     </div>
-
+    <div class="quark-tip">
+      <quark-tooltip
+        placement="top"
+        scrollhidden
+        closeable
+        size="large"
+        :tips="translate('tips')"
+        :open="data.largeClose"
+        @click="open('largeClose')"
+        @close="close('largeClose')"
+      >
+        <div>{{ translate("largeSize") }}</div>
+      </quark-tooltip>
+    </div>
     <h2>{{ translate("setAutoOffTime") }}</h2>
     <div class="quark-tip">
       <quark-tooltip
@@ -168,6 +195,8 @@ export default createDemo({
       topclose: false,
       autoclose: false,
       customstyle: false,
+      large: false,
+      largeClose: false,
     });
     onBeforeMount(() => {
       useTranslate({
@@ -176,6 +205,8 @@ export default createDemo({
           topPosition: "top 位置",
           topLeftPosition: "top left 位置",
           topRightPosition: "top right 位置",
+          tipsSize: "tips 尺寸",
+          largeSize: "large 尺寸",
           tips: "气泡文字",
           showCloseButton: "显示关闭按钮",
           setAutoOffTime: "设置自动关闭时间",
@@ -187,8 +218,10 @@ export default createDemo({
           topPosition: "Top Position",
           topLeftPosition: "Top Left Position",
           topRightPosition: "Top Right Position",
+          tipsSize: "tips Size",
+          largeSize: "Large Size",
           tips: "Bubble Text",
-          shoeCloseButton: "Show Close Button",
+          showCloseButton: "Show Close Button",
           setAutoOffTime: "Set auto-off time",
           customStyle: "Custom Style",
         },
