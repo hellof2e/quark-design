@@ -6,7 +6,7 @@
 </p>
 
 
-<h1 align="center">Quark Design</h1>
+<!-- <h1 align="center">Quark Design</h1> -->
 
 <div align="center">
 
