@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "quarkc";
+import { property, customElement, createRef, QuarkElement } from "quarkc";
 import "@quarkd/icons/lib/close";
 import style from "./style.css";
 export interface Props {

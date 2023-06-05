@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "quarkc";
+import { property, customElement, createRef, QuarkElement } from "quarkc";
 import "../loading";
 import style from "./style.css";
 import { pxToVw } from "../../utils/util";

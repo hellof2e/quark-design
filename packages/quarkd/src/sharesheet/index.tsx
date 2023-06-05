@@ -3,7 +3,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-import QuarkElement, { property, customElement, createRef } from "quarkc";
+import { property, customElement, createRef, QuarkElement } from "quarkc";
 import Locale from "../locale";
 import style from "./style.css";
 interface Option {

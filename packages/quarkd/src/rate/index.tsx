@@ -1,4 +1,4 @@
-import QuarkElement, { Fragment, property, customElement, state } from "quarkc";
+import { Fragment, property, customElement, state, QuarkElement } from "quarkc";
 import "@quarkd/icons/lib/star-fill";
 import style from "./style.css";
 export interface Props {

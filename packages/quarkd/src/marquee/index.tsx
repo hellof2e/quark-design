@@ -1,9 +1,10 @@
-import QuarkElement, {
+import {
   Fragment,
   property,
   customElement,
   createRef,
   state,
+  QuarkElement,
 } from "quarkc";
 import style from "./style.css";
 export interface Props {

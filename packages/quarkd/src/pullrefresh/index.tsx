@@ -1,4 +1,4 @@
-import QuarkElement, { state, property, customElement } from "quarkc";
+import { state, property, customElement, QuarkElement } from "quarkc";
 import "../loading";
 import { checkFalse } from "../../utils/public";
 import { getScrollParent } from "../../utils/index";

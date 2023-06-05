@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement } from "quarkc";
+import { property, customElement, QuarkElement } from "quarkc";
 
 import "@quarkd/icons/lib/close-o";
 import style from "./style.css";

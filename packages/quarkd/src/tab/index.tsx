@@ -1,8 +1,9 @@
-import QuarkElement, {
+import {
   customElement,
   property,
   state,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import "../sticky";

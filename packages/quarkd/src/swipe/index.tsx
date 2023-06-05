@@ -1,10 +1,11 @@
 /* eslint-disable no-script-url */
-import QuarkElement, {
+import {
   property,
   customElement,
   Fragment,
   createRef,
   state,
+  QuarkElement,
 } from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import style from "./style.css";

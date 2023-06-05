@@ -1,10 +1,11 @@
 import BScroll from "@better-scroll/core";
 import Wheel from "@better-scroll/wheel";
-import QuarkElement, {
+import {
   property,
   createRef,
   customElement,
   state,
+  QuarkElement,
 } from "quarkc";
 import "../popup";
 import "../button";

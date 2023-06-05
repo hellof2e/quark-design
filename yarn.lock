@@ -9869,11 +9869,6 @@ postcss@^8.1.10, postcss@^8.3.11, postcss@^8.4.13, postcss@^8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-preact@10.6.6:
-  version "10.6.6"
-  resolved "https://registry.npmjs.org/preact/-/preact-10.6.6.tgz#f1899bc8dab7c0788b858481532cb3b5d764a520"
-  integrity sha512-dgxpTFV2vs4vizwKohYKkk7g7rmp1wOOcfd4Tz3IB3Wi+ivZzsn/SpeKJhRENSE+n8sUfsAl4S3HiCVT923ABw==
-
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -10012,12 +10007,10 @@ qs@~6.5.2:
   resolved "https://registry.npmjs.org/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
   integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
-quarkc@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/quarkc/-/quarkc-1.0.0.tgz#7c75284256889cd46c028983b4adc146d4684512"
-  integrity sha512-LI8aRCj7xiDJRXdQ+SeXZhyTG0YtoTtWXhyY56dyPT8S6tQrOi+5yF96UI3uuWOfStYK63e69fch5feDIeSUJw==
-  dependencies:
-    preact "10.6.6"
+quarkc@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/quarkc/-/quarkc-1.0.5.tgz#da1be1a156ef6db12435a381057d4338f0dd1c69"
+  integrity sha512-/caPNwe+m08v8EyqZVEby4dt6iUkRBaatTlVqXEw6HMy9wOCp8+a+m58YlvxAQ3WBAUk6jSCOA/s2iwYufSH/g==
 
 queue-microtask@^1.2.2:
   version "1.2.3"

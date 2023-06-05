@@ -1,4 +1,4 @@
-import QuarkElement, { customElement, property, state } from "quarkc";
+import { customElement, property, state, QuarkElement } from "quarkc";
 import { addUnit } from "../../utils/public";
 import style from "./style.css";
 import LazyLoad from "../../utils/lazy";

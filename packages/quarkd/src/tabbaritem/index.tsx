@@ -1,4 +1,4 @@
-import QuarkElement, { customElement } from "quarkc";
+import { customElement, QuarkElement } from "quarkc";
 import style from "./style.css";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

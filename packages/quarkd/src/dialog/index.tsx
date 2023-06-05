@@ -3,11 +3,12 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-import QuarkElement, {
+import {
   Fragment,
   property,
   customElement,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import "../button";
 import "@quarkd/icons/lib/close";

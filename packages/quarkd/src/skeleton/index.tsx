@@ -1,4 +1,4 @@
-import QuarkElement, { customElement, property, Fragment } from "quarkc";
+import { customElement, property, Fragment, QuarkElement } from "quarkc";
 import style from "./style.css";
 export interface Props {
   avatar?: boolean;
