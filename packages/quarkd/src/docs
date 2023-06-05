@@ -1,35 +1,43 @@
 # 更新日志
-### [1.0.59](https://github.com/hellof2e/quark-design/compare/v1.0.58...v1.0.59) (2023-05-23)
+### [1.0.60](https://github.com/hellof2e/quark-design/compare/v1.0.59...v1.0.60) (2023-06-05)
 
 
 ### 🎉 Features
 
-* badge ([46d024c](https://github.com/hellof2e/quark-design/commit/46d024cab6f39cf75b5a3f460fcbaa7406768014))
-* empty  border style ([d8d189e](https://github.com/hellof2e/quark-design/commit/d8d189e4c166c09977c81123f907569778d9b868))
-* empty  local page ([d448aac](https://github.com/hellof2e/quark-design/commit/d448aacf8c72939b2902fc37adf4e67ce6d0bd98))
-* picker close icon大小修改, 与标题居中对齐 ([ead631a](https://github.com/hellof2e/quark-design/commit/ead631ae4c7fd312cfba34e23fb6c0bee643b615))
-* tab 名称改为标签页 ([cac497c](https://github.com/hellof2e/quark-design/commit/cac497c0a95e793d993eb47dc6c7ad941860ed7d))
-* tab标签新增浅色主题, css修改 ([b442a46](https://github.com/hellof2e/quark-design/commit/b442a464e3b6123d90978760b90cfe16e880af1e))
-* tag border style ([5aa80e9](https://github.com/hellof2e/quark-design/commit/5aa80e938339db5add955fb07b21e696774d8774))
-* tag标签 demo修改 ([1143b70](https://github.com/hellof2e/quark-design/commit/1143b70cf690ce0a8c5a219ef8a47d1432606068))
-* update quark react ([da7195b](https://github.com/hellof2e/quark-design/commit/da7195bbb5d2d821e53431f177555de6acd4de1a))
-* 全局样式新增 ([11c7664](https://github.com/hellof2e/quark-design/commit/11c76648916027c010666ba8c0b67511292b28f3))
-* 文档修改 ([0c02739](https://github.com/hellof2e/quark-design/commit/0c027391e002466c446839f6bc2379fdc586cdc3))
-* 文档修改 ([adf8163](https://github.com/hellof2e/quark-design/commit/adf8163c46b654bebab46560670261a0aa21950e))
-* 标签新增深色模式 ([d8accf6](https://github.com/hellof2e/quark-design/commit/d8accf6841c381d1d0cd7608f82634eb22c603e1))
+* optimize button & tooltip ([c0239af](https://github.com/hellof2e/quark-design/commit/c0239af30237232f9542e8589b6e5934b68368bc))
+* update demo ([de6d98e](https://github.com/hellof2e/quark-design/commit/de6d98e19bd539098422c69be4d19da2963193e7))
+* update quarkc dependence ([b11d3a5](https://github.com/hellof2e/quark-design/commit/b11d3a533f1f8826d6625b347553cdfab4959146))
+* update quarkd ([8e10a6c](https://github.com/hellof2e/quark-design/commit/8e10a6c0b896bbf1d8b75c3826e520432e6c8628))
+* 新文档链接 update ([5268651](https://github.com/hellof2e/quark-design/commit/5268651449110602f1f219f2847b8a38db5de2de))
 
+### [1.0.59](https://github.com/hellof2e/quark-design/compare/v1.0.58...v1.0.59) (2023-05-23)
+
+### 🎉 Features
+
+- badge ([46d024c](https://github.com/hellof2e/quark-design/commit/46d024cab6f39cf75b5a3f460fcbaa7406768014))
+- empty border style ([d8d189e](https://github.com/hellof2e/quark-design/commit/d8d189e4c166c09977c81123f907569778d9b868))
+- empty local page ([d448aac](https://github.com/hellof2e/quark-design/commit/d448aacf8c72939b2902fc37adf4e67ce6d0bd98))
+- picker close icon 大小修改, 与标题居中对齐 ([ead631a](https://github.com/hellof2e/quark-design/commit/ead631ae4c7fd312cfba34e23fb6c0bee643b615))
+- tab 名称改为标签页 ([cac497c](https://github.com/hellof2e/quark-design/commit/cac497c0a95e793d993eb47dc6c7ad941860ed7d))
+- tab 标签新增浅色主题, css 修改 ([b442a46](https://github.com/hellof2e/quark-design/commit/b442a464e3b6123d90978760b90cfe16e880af1e))
+- tag border style ([5aa80e9](https://github.com/hellof2e/quark-design/commit/5aa80e938339db5add955fb07b21e696774d8774))
+- tag 标签 demo 修改 ([1143b70](https://github.com/hellof2e/quark-design/commit/1143b70cf690ce0a8c5a219ef8a47d1432606068))
+- update quark react ([da7195b](https://github.com/hellof2e/quark-design/commit/da7195bbb5d2d821e53431f177555de6acd4de1a))
+- 全局样式新增 ([11c7664](https://github.com/hellof2e/quark-design/commit/11c76648916027c010666ba8c0b67511292b28f3))
+- 文档修改 ([0c02739](https://github.com/hellof2e/quark-design/commit/0c027391e002466c446839f6bc2379fdc586cdc3))
+- 文档修改 ([adf8163](https://github.com/hellof2e/quark-design/commit/adf8163c46b654bebab46560670261a0aa21950e))
+- 标签新增深色模式 ([d8accf6](https://github.com/hellof2e/quark-design/commit/d8accf6841c381d1d0cd7608f82634eb22c603e1))
 
 ### 🐞 Bug Fixes
 
-* swpie ([72ead17](https://github.com/hellof2e/quark-design/commit/72ead1712a6a4847479d43602057168f1491c0bd))
+- swpie ([72ead17](https://github.com/hellof2e/quark-design/commit/72ead1712a6a4847479d43602057168f1491c0bd))
 
 ### [1.0.58](https://github.com/hellof2e/quark-design/compare/v1.0.57...v1.0.58) (2023-05-09)
 
-
 ### 🐞 Bug Fixes
 
-* 优化tabbar组件 ([0d73833](https://github.com/hellof2e/quark-design/commit/0d73833e715be228afdbd09f9e85dcd2f523abca))
-* css  Optimize CSS Sprites ([af8c79e](https://github.com/hellof2e/quark-design/commit/af8c79eeab35d559fad40db0fd65f0333a4723ba))
+- 优化 tabbar 组件 ([0d73833](https://github.com/hellof2e/quark-design/commit/0d73833e715be228afdbd09f9e85dcd2f523abca))
+- css Optimize CSS Sprites ([af8c79e](https://github.com/hellof2e/quark-design/commit/af8c79eeab35d559fad40db0fd65f0333a4723ba))
 
 ### [1.0.57](https://github.com/hellof2e/quark-design/compare/v1.0.56...v1.0.57) (2023-04-28)
 

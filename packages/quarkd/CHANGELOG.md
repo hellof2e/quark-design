@@ -1,5 +1,15 @@
 # 更新日志
 
+### [1.0.60](https://github.com/hellof2e/quark-design/compare/v1.0.59...v1.0.60) (2023-06-05)
+
+### 🎉 Features
+
+- optimize button & tooltip ([c0239af](https://github.com/hellof2e/quark-design/commit/c0239af30237232f9542e8589b6e5934b68368bc))
+- update demo ([de6d98e](https://github.com/hellof2e/quark-design/commit/de6d98e19bd539098422c69be4d19da2963193e7))
+- update quarkc dependence ([b11d3a5](https://github.com/hellof2e/quark-design/commit/b11d3a533f1f8826d6625b347553cdfab4959146))
+- update quarkd ([8e10a6c](https://github.com/hellof2e/quark-design/commit/8e10a6c0b896bbf1d8b75c3826e520432e6c8628))
+- 新文档链接 update ([5268651](https://github.com/hellof2e/quark-design/commit/5268651449110602f1f219f2847b8a38db5de2de))
+
 ### [1.0.59](https://github.com/hellof2e/quark-design/compare/v1.0.58...v1.0.59) (2023-05-23)
 
 ### 🎉 Features
