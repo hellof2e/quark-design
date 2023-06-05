@@ -52,7 +52,6 @@ import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onMounted, onBeforeMount } from "vue";
 import "./index";
 import Toast from "../toast/index";
-import { options } from "preact";
 
 export default createDemo({
   setup() {
