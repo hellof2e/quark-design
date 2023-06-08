@@ -46,12 +46,12 @@ For full documentation, visit
 - [Svelte Doc work in prograss...](https://svelte-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
 
 ## Install
-```
+```bash
 npm install quarkd
 ```
 
 ## Usage
-```
+```js
 import 'quarkd/lib/button'
 
 <quark-button type="primary">Button</quark-button>
