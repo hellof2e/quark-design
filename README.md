@@ -45,6 +45,18 @@ For full documentation, visit
 - [Angular Doc work in prograss...](https://angular-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
 - [Svelte Doc work in prograss...](https://svelte-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
 
+## Install
+```
+npm install quarkd
+```
+
+## Usage
+```
+import 'quarkd/lib/button'
+
+<quark-button type="primary">Button</quark-button>
+```
+
 ## Community
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
