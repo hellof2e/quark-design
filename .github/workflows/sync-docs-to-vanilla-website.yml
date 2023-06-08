@@ -1,4 +1,4 @@
-name: sync to vue docs
+name: sync to vanilla docs
 
 on:
   push:
