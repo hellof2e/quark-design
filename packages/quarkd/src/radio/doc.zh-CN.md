@@ -87,7 +87,7 @@ onChange({ detail }) {
 
 ## API
 
-### Props: quark-radio
+### Quark-radio Props
 
 | 参数     | 说明                                | 类型      | 默认值   |
 | -------- | ----------------------------------- | --------- | -------- |
@@ -95,13 +95,13 @@ onChange({ detail }) {
 | size     | 单选框大小，可选值为 `normal` `big` | `string`  | `normal` |
 | disabled | 单选框禁用状态                      | `boolean` | `false`  |
 
-### Props: quark-radio-group
+### Quark-radio-group Props
 
 | 参数  | 说明           | 类型     | 默认值 |
 | ----- | -------------- | -------- | ------ |
 | value | 指定选中的选项 | `string` | -      |
 
-### Event: quark-radio-Group
+### Quark-radio-Group Event
 
 | 参数   | 说明           | 类型                                         |
 | ------ | -------------- | -------------------------------------------- |
