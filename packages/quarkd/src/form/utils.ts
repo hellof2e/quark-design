@@ -11,7 +11,6 @@ export default (rules: IRuleItem[]) => (callBack: any) => {
       if (validator) {
         validateStatus = validator(value);
       } else if (required) {
-        console.log(123, value);
         validateStatus = isEmpty(value);
       }
       rules[i].validateStatus = validateStatus;
