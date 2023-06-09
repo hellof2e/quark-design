@@ -76,11 +76,11 @@ onChange({ detail }) {
 单选框选中颜色自定义
 
 ```html
-<quark-radio checked="true">选中颜色自定义</quark-radio>
+<quark-radio class="my-radio" checked="true">选中颜色自定义</quark-radio>
 ```
 
 ```css
-:quark-radio {
+.my-radio {
   --radio-background: linear-gradient(225deg, #ff918d 0%, #f54640 100%);
 }
 ```
