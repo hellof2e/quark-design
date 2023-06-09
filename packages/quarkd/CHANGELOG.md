@@ -1,5 +1,11 @@
 # 更新日志
 
+### [1.0.62](https://github.com/hellof2e/quark-design/compare/v1.0.61...v1.0.62) (2023-06-09)
+
+### 🎉 Features
+
+- optimize radio ([9fe1d7f](https://github.com/hellof2e/quark-design/commit/9fe1d7f549e00dea77a8354e97f7826fe1de6a2b))
+
 ### [1.0.61](https://github.com/hellof2e/quark-design/compare/v1.0.60...v1.0.61) (2023-06-09)
 
 ### 🎉 Features

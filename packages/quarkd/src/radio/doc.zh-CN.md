@@ -36,7 +36,18 @@ export default {
 };
 ```
 
-### 单选框形状
+### 水平排列
+
+通过 `direction=‘horizontal’` 来设置水平排列，默认垂直排列。
+
+```html
+<quark-radio-group :value="value" direction="horizontal" @change="onChange">
+  <quark-radio name="Radio1">Radio1</quark-radio>
+  <quark-radio name="Radio2">Radio2</quark-radio>
+</quark-radio-group>
+```
+
+### 形状
 
 单选框支持`round`、`square`两种形状，默认为 `round`。
 
@@ -111,11 +122,12 @@ export default {
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                   | 说明                                   | 默认值            |
-| ---------------------- | -------------------------------------- | ----------------- |
-| `--radio-font-size`    | radio 文字大小                         | `12px`            |
-| `--radio-color`        | radio 文字颜色                         | `#242729 `        |
-| `--radio-label-height` | radio 文字行高                         | 和选择框高度一致  |
-| `--radio-label-gap`    | radio 与文字间距                       | `8px`             |
-| `--radio-size`         | radio 单选框尺寸，优先级高于 size 属性 | `16px; big: 20px` |
-| `--radio-background`   | radio 选中颜色                         | `#0088ff`         |
+| 名称                     | 说明                                   | 默认值            |
+| ------------------------ | -------------------------------------- | ----------------- |
+| `--radio-font-size`      | radio 文字大小                         | `12px`            |
+| `--radio-color`          | radio 文字颜色                         | `#242729 `        |
+| `--radio-label-height`   | radio 文字行高                         | 和选择框高度一致  |
+| `--radio-label-gap`      | radio 与文字间距                       | `8px`             |
+| `--radio-size`           | radio 单选框尺寸，优先级高于 size 属性 | `16px; big: 20px` |
+| `--radio-background`     | radio 选中颜色                         | `#0088ff`         |
+| `--radio-horizontal-gap` | 水平排列时 radio 间距                  | `20px`            |

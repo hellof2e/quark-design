@@ -36,6 +36,15 @@ export default {
 };
 ```
 
+### direction
+
+```html
+<quark-radio-group :value="value" direction="horizontal" @change="onChange">
+  <quark-radio name="Radio1">Radio1</quark-radio>
+  <quark-radio name="Radio2">Radio2</quark-radio>
+</quark-radio-group>
+```
+
 ### Shape
 
 Radio shape supports `round` and `square`, the default is `round`.
@@ -113,11 +122,12 @@ Custom checked color
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                   | Description                                     | Default                     |
-| ---------------------- | ----------------------------------------------- | --------------------------- |
-| `--radio-font-size`    | radio label font size                           | `12px`                      |
-| `--radio-color`        | radio label font color                          | `#242729 `                  |
-| `--radio-label-height` | radio label line-height                         | same as the height of radio |
-| `--radio-label-gap`    | radio label gap                                 | `8px`                       |
-| `--radio-size`         | radio size，Priority is higher than `size` prop | `16px; big: 20px`           |
-| `--radio-background`   | checked color                                   | `#0088ff`                   |
+| Name                     | Description                                     | Default                     |
+| ------------------------ | ----------------------------------------------- | --------------------------- |
+| `--radio-font-size`      | radio label font size                           | `12px`                      |
+| `--radio-color`          | radio label font color                          | `#242729 `                  |
+| `--radio-label-height`   | radio label line-height                         | same as the height of radio |
+| `--radio-label-gap`      | radio label gap                                 | `8px`                       |
+| `--radio-size`           | radio size，Priority is higher than `size` prop | `16px; big: 20px`           |
+| `--radio-background`     | checked color                                   | `#0088ff`                   |
+| `--radio-horizontal-gap` | horizontal radio gap                            | `20px`                      |

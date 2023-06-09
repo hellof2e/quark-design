@@ -1,23 +1,38 @@
 :host {
   font-size: var(--radio-font-size, 16px);
   color: var(--radio-color, #333);
-  display: inline-flex;
-  justify-content: center;
+}
+
+:host([name]) {
+  display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+:host([direction="horizontal"]) .quark-radio-group-wrapper {
+  display: flex;
+  gap: var(--radio-horizontal-gap, 20px)
 }
 
 :host .quark-radio {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--radio-label-gap, 8px)
 }
 
+
+:host([name][direction="horizontal"]) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+
 :host label {
-  height: var(--radio-label-height, 100%);
   display: inline-flex;
   align-items: center;
+  height: var(--radio-label-height, 100%);
   line-height: var(--radio-label-height, 100%);
+  cursor: pointer;
 }
 
 :host label.quark-radio-hide {
@@ -53,9 +68,8 @@
   top: 0;
   left: 0;
   opacity: 0;
-  height: 100%;
-  width: 100%;
   z-index: 1;
+  cursor: pointer;
 }
 
 :host .quark-radio-container span {
@@ -116,6 +130,10 @@
   border-radius: 4px;
 }
 
+:host([shape="square"]) .quark-radio-show::after {
+  border-radius: 4px;
+}
+
 :host([shape="square"][size="big"]) .quark-radio-container span {
   border-radius: 5px;
 }
@@ -137,9 +155,4 @@
 
 :host input[type="radio"i] {
   margin: 0;
-}
-
-.quark-radio-group-wrapper {
-  display: flex;
-  flex-direction: row;
 }
