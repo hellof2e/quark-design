@@ -104,7 +104,7 @@ export default createDemo({
       useTranslate({
         "zh-CN": {
           title: {
-            basic: "单选框基础用法",
+            basic: "基础用法",
             direction: "水平排列",
             type: "单选框形状",
             size: "单选框大小",

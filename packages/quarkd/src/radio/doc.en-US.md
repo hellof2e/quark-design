@@ -21,19 +21,10 @@ Generally appear in groups. Use `value` to bind the name of checked radio.
 </quark-radio-group>
 ```
 
-```javascript
-export default {
-  data() {
-    return {
-      value: "apple", // initial value: apple
-    };
-  },
-  methods: {
-    onChange({ detail }) {
-      this.value = detail.value;
-    },
-  },
-};
+```js
+onChange({ detail }) {
+  this.value = detail.value;
+}
 ```
 
 ### direction

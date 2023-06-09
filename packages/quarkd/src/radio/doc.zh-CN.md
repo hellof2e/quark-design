@@ -10,7 +10,7 @@
 import "quarkd/lib/radio";
 ```
 
-### 单选框基础用法
+### 基础用法
 
 一般成组出现，通过 value 和 name 的匹配来绑定勾选。
 
@@ -21,19 +21,10 @@ import "quarkd/lib/radio";
 </quark-radio-group>
 ```
 
-```javascript
-export default {
-  data() {
-    return {
-      value: "apple", // value 初始值: apple
-    };
-  },
-  methods: {
-    onChange({ detail }) {
-      this.value = detail.value;
-    },
-  },
-};
+```js
+onChange({ detail }) {
+  this.value = detail.value;
+}
 ```
 
 ### 水平排列

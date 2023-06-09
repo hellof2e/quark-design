@@ -10,7 +10,7 @@
 import { Radio } from "@quarkd/quark-react";
 ```
 
-### 单选框基础用法
+### 基础用法
 
 一般成组出现，通过 value 和 name 的匹配来绑定勾选。
 
