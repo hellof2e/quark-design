@@ -1,6 +1,6 @@
 :host {
-  font-size: var(--radio-font-size, 12px);
-  color: var(--radio-color, #242729);
+  font-size: var(--radio-font-size, 16px);
+  color: var(--radio-color, #333);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -10,10 +10,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--radio-label-gap, 8px)
 }
 
 :host label {
-  margin-left: 4px;
   height: var(--radio-label-height, 100%);
   display: inline-flex;
   align-items: center;
@@ -27,8 +27,8 @@
 :host .quark-radio-container {
   position: relative;
   display: inline-flex;
-  height: var(--radio-size, 16px);
-  width: var(--radio-size, 16px);
+  height: var(--radio-size, 20px);
+  width: var(--radio-size, 20px);
 }
 
 :host .quark-radio-icon {
@@ -37,7 +37,6 @@
   left: 0;
   height: 100%;
   width: 100%;
-  /* z-index: 1; */
   visibility: hidden;
   opacity: 0;
   transition-duration: 0.2s;

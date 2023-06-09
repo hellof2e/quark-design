@@ -118,5 +118,6 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--radio-font-size`    | radio label font size                           | `12px`                      |
 | `--radio-color`        | radio label font color                          | `#242729 `                  |
 | `--radio-label-height` | radio label line-height                         | same as the height of radio |
+| `--radio-label-gap`    | radio label gap                                 | `8px`                       |
 | `--radio-size`         | radio size，Priority is higher than `size` prop | `16px; big: 20px`           |
 | `--radio-background`   | checked color                                   | `#0088ff`                   |

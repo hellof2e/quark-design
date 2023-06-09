@@ -116,5 +116,6 @@ export default {
 | `--radio-font-size`    | radio 文字大小                         | `12px`            |
 | `--radio-color`        | radio 文字颜色                         | `#242729 `        |
 | `--radio-label-height` | radio 文字行高                         | 和选择框高度一致  |
+| `--radio-label-gap`    | radio 与文字间距                       | `8px`             |
 | `--radio-size`         | radio 单选框尺寸，优先级高于 size 属性 | `16px; big: 20px` |
 | `--radio-background`   | radio 选中颜色                         | `#0088ff`         |
