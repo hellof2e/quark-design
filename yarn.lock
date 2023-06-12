@@ -10159,6 +10159,19 @@ quarkc@^1.0.5:
   resolved "https://registry.npmjs.org/quarkc/-/quarkc-1.0.5.tgz"
   integrity sha512-/caPNwe+m08v8EyqZVEby4dt6iUkRBaatTlVqXEw6HMy9wOCp8+a+m58YlvxAQ3WBAUk6jSCOA/s2iwYufSH/g==
 
+quarkd@1.0.60:
+  version "1.0.60"
+  resolved "https://registry.npmmirror.com/quarkd/-/quarkd-1.0.60.tgz#fce2e61a0547a81307b7d48a49d527981c916be3"
+  integrity sha512-Q6sQ6wznuAugBh5zSkXgCNnwxn1HdDFR/ADgfdTXk20foZp2gwzbi5YbIKuF8BK5HLtUw/7VZi7Z8q15dhgBlQ==
+  dependencies:
+    "@better-scroll/core" "^2.4.2"
+    "@better-scroll/slide" "^2.4.2"
+    "@better-scroll/wheel" "^2.4.2"
+    "@quarkd/icons" "^1.0.4"
+    body-scroll-lock "3.1.5"
+    lodash.assign "^4.2.0"
+    quarkc "^1.0.5"
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
