@@ -301,18 +301,17 @@ class QuarkUploader extends QuarkElement {
           </div>
         )}
         {showTasks.map((item, index, n) => (
-          <div
-            class="quark-uploader-preview-item"
-            key={item.id}
-            onClick={() => this.myImagePreview(n, index)}
-          >
+          <div class="quark-uploader-preview-item" key={item.id}>
             {item.status === "uploading" && (
               <div class="uploading" slot="uploading">
                 <quark-loading type="circular" color="#fff" />
                 <span class="uploading-text">{item.message}</span>
               </div>
             )}
-            <img src={item.url || item.content} />
+            <img
+              src={item.url || item.content}
+              onClick={() => this.myImagePreview(n, index)}
+            />
             {!this.hidedelete && !this.readonly && (
               <span
                 class="quark-uploader-remove"

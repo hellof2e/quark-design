@@ -8,7 +8,7 @@
     <div class="demo-buttons">
       <quark-countdown format="MM:SS" :time="time2" class="mgr-10" />
       <quark-countdown format="MM-SS" :time="time2" class="mgr-10" />
-      <quark-countdown format="MM SS" :time="time2" />
+      <quark-countdown format="SS" :time="time2" />
     </div>
     <h2>{{ translate("callback") }}</h2>
     <div class="demo-buttons">

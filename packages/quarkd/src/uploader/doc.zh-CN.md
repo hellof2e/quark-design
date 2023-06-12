@@ -69,11 +69,11 @@ oversize() {
 
 ### 上传前置
 
-setBeforeUpload 返回 Boolean, false 阻止上传。
+beforeUpload 返回 Boolean, false 阻止上传。
 
 ```js
 mounted() {
-  this.$refs.before.setBeforeUpload(this.beforeUpload)
+  this.$refs.before.beforeUpload = this.beforeUpload
 },
 beforeUpload(files) {
   const r = files.every(file => file.type === 'image/jpg');
@@ -114,6 +114,7 @@ beforeUpload(files) {
 | readonly   | 只读模式                                          | `boolean`                                  | `false`            |
 | afterread  | 上传后回调                                        | `(file: file or file[]) => void`           |                    |
 | oversize   | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |                    |
+| onRemove  | 需配合beforeDelete 不可单独使用            | `(items: file[]) => void` |                    |
 
 ### slot
 
@@ -125,9 +126,9 @@ beforeUpload(files) {
 
 | 名称            | 说明                                           | 类型                              |
 | --------------- | ---------------------------------------------- | --------------------------------- |
-| setBeforeUpload | 上传前置，用法 uploader.setBeforeUpload(fn)    | `(fn: () => boolean) => void`     |
+| beforeUpload | 上传前置，用法 uploader.beforeUpload = fn    | `(fn: () => boolean) => void`     |
 | setPreview      | 初始化预览数据，用法 uploader.setPreview(data) | `(url: string[]) => void`         |
-| beforeDelete    | 删除前置，用法 uploader.beforeDelete(fn)       | `(file, {index: number}) => void` |
+| beforeDelete    | 删除前置, 需配合 onRemove 一起使用，用法 uploader.beforeDelete = fn      | `(file, {index: number}) => void` |
 | closePreview    | 手动关闭预览弹窗方法                           |                                   |
 
 ## 样式变量
