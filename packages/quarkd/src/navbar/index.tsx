@@ -1,4 +1,4 @@
-import QuarkElement, { Fragment, property, customElement } from "quarkc";
+import { Fragment, property, customElement, QuarkElement } from "quarkc";
 
 import "@quarkd/icons/lib/arrow-left";
 import "@quarkd/icons/lib/close";

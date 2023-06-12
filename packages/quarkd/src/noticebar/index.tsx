@@ -1,4 +1,4 @@
-import QuarkElement, { property, createRef, customElement } from "quarkc";
+import { property, createRef, customElement, QuarkElement } from "quarkc";
 import "@quarkd/icons/lib/notify";
 import "@quarkd/icons/lib/arrow-right";
 import style from "./style.css";

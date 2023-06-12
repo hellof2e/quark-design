@@ -20,6 +20,14 @@ export default {
 	// warningColor: '#FF5526',
 	successColor: "#07C160",
 
+	// 品牌色浅色
+	primaryLightColor: "#E6F4FF",
+	dangerLightColor: "#FEE9E9",
+	// orangeLightColor: "#FFEEE9",
+	warningLightColor: "#FEF4E7",
+	successLightColor: "#E6F8EF",
+	// grayLightColor: "#E1E6EB",
+
 	// 边框色
 	borderBaseColor: "#dddddd",
 	borderPrimaryColor: "#7FC3FF",

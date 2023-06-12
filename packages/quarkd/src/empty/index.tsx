@@ -1,11 +1,13 @@
-import QuarkElement, { Fragment, property, customElement } from "quarkc";
+import { Fragment, property, customElement, QuarkElement } from "quarkc";
 
 import style from "./style.css";
 export interface Props {
   title?: string;
   desc?: string;
+  buttontext?: string;
   image?: string;
   imagesize?: string;
+  type?: "global" | "local";
 }
 @customElement({
   tag: "quark-empty",
@@ -28,6 +30,12 @@ class QuarkEmpty extends QuarkElement {
   @property()
   imagesize: string;
 
+  @property()
+  buttontext = "";
+
+  @property()
+  type: "global" | "local" = "global";
+
   render() {
     return (
       <Fragment>
@@ -48,7 +56,11 @@ class QuarkEmpty extends QuarkElement {
           />
           {this.title && <div class="quark-empty-title">{this.title}</div>}
           {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
-          <slot name="footer"></slot>
+          <slot name="footer">
+            {this.buttontext && (
+              <div class="quark-empty-button">{this.buttontext}</div>
+            )}
+          </slot>
         </div>
       </Fragment>
     );

@@ -26,17 +26,19 @@ import "quarkd/lib/form";
 ```
 
 ```js
+// 在onMounted（vue3 setup） 或 mounted（组件配置）钩子中
+// 设置表单验证规则
 this.$refs.form1.setRules = ([
-    { name: 'name', required: true },
-    { name: 'password', required: true, type: 'password' }
-  ]);
- submit1() {
-    this.$refs.form1.submit().then((value) => {
-       console.log(value, '当前表单所有的值');
-    }).catch(err => {
-        Toast.text(err)
-    });
-  },
+  { name: 'name', required: true, message: '姓名必填' },
+  { name: 'password', required: true, type: 'password', message: '密码必填' }
+]);
+submit1() {
+  this.$refs.form1.getValues().then((value) => {
+      console.log(value, '当前表单所有的值');
+  }).catch(firstErrRule => {
+    Toast.text(firstErrRule.message)
+  });
+},
 ```
 
 ### 自定义校验规则
@@ -71,7 +73,7 @@ this.$refs.form1.setRules = ([
   ]);
 
   submit2() {
-    this.$refs.form2.submit().then((value) => {
+    this.$refs.form2.getValues().then((value) => {
        console.log(value, '当前表单所有的值');
     }).catch(err => {
         Toast.text(err)
@@ -153,7 +155,7 @@ this.$refs.form1.setRules = ([
 
 ```js
   submit3() {
-      this.$refs.form3.submit().then((value) => {
+      this.$refs.form3.getValues().then((value) => {
         Toast.text('请在控制台查看表单值');
         console.log(value, '当前表单所有的值');
       });
@@ -174,10 +176,10 @@ this.$refs.form1.setRules = ([
 
 ### Method
 
-| 名称     | 说明                               | 类型                          |
-| -------- | ---------------------------------- | ----------------------------- |
-| submit   | 提交并校验表单获取所有组件的 value | `() => Promise<value: any[]>` |
-| setRules | 只对 field 组件有效                | `(rule: Rule[])=>void`        |
+| 名称      | 说明                               | 类型                          |
+| --------- | ---------------------------------- | ----------------------------- |
+| getValues | 提交并校验表单获取所有组件的 value | `() => Promise<value: any[]>` |
+| setRules  | 只对 field 组件有效                | `(rule: Rule[])=>void`        |
 
 ### 类型定义
 

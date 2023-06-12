@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://quark-design.hellobike.com/">
-    <img width="120" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
+  <a href="https://quark.hellobike.com/">
+    <img src="https://github.com/hellof2e/quark-design/assets/14307551/45ca3969-3f92-49a1-84fa-a4e6160cb7f4" />
   </a>
 </p>
 
-<h1 align="center">Quark Design</h1>
+<h2 align="center">Quark Design</h2>
 
 <div align="center">
-  
-  Next-gen frontend component library, it can be used in any framework or no framework.
-  
+
+Next-gen frontend component library, it can be used in any framework or no framework.
+
 </div>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 ## Documentation
 
-For full documentation, visit [quark-design.hellobike.com](https://quark-design.hellobike.com)
+For full documentation, visit [quark.hellobike.com](https://quark.hellobike.com)
 
 ## Community
 

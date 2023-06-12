@@ -43,11 +43,12 @@
 }
 
 :host .quark-cascade-picker-close-btn {
+  height: 100%;
   position: absolute;
-  right: 0;
+  right: 20px;
   top: 0;
   bottom: 0;
-  width: 56px;
+  /* width: 56px; */
   display: flex;
   justify-content: center;
   align-items: center;

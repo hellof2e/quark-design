@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "quarkc";
+import { property, customElement, createRef, QuarkElement } from "quarkc";
 
 import style from "./style.css";
 export interface Props {
@@ -6,6 +6,7 @@ export interface Props {
   size?: "small" | "large";
   round?: boolean;
   plain?: boolean;
+  light?: boolean;
   color?: string;
   textcolor?: string;
 }
@@ -36,6 +37,11 @@ class QuarkTag extends QuarkElement {
     type: Boolean,
   })
   round = false;
+
+  @property({
+    type: Boolean,
+  })
+  light = false;
 
   wrap: any = createRef();
 

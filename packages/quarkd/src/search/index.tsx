@@ -1,6 +1,6 @@
 import { classNames } from "../../utils/index";
 import "../icon";
-import QuarkElement, { customElement, property } from "quarkc";
+import { customElement, property, QuarkElement } from "quarkc";
 import "@quarkd/icons/lib/arrow-left";
 import "@quarkd/icons/lib/close";
 import "@quarkd/icons/lib/search";

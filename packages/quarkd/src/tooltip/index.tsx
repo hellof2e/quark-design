@@ -1,4 +1,4 @@
-import QuarkElement, { property, customElement, createRef } from "quarkc";
+import { property, customElement, createRef, QuarkElement } from "quarkc";
 import "@quarkd/icons/lib/close";
 import style from "./style.css";
 export interface Props {
@@ -63,6 +63,9 @@ class QuarkTooltip extends QuarkElement {
 
   @property()
   zindex = "999";
+
+  @property()
+  size = "";
 
   timer: number | undefined = undefined;
 
@@ -164,7 +167,7 @@ class QuarkTooltip extends QuarkElement {
     if (!this.closeable) {
       return null;
     }
-    return <quark-icon-close style={{ opacity: 0.9, marginLeft: 9 }} />;
+    return <quark-icon-close style={{ opacity: 0.7, marginLeft: 9 }} />;
   };
 
   renderTips = () => {

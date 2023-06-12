@@ -55,6 +55,16 @@ bottomleft    # bottom left position
 bottomright   # bottom right position
 ```
 
+### Set tips Size
+
+The tips size of the bubble is controlled by the size property. Size supports 2 types: `large` and the default.
+
+```tsx
+<Tooltip placement="top" size="large" tips="bubble text">
+  <div>large Size</div>
+</Tooltip>
+```
+
 ### Show Close Button
 
 Control whether to display the close button through the closeable property.
@@ -107,6 +117,7 @@ Controls whether to close when the page is scrolled through the scrollhidden pro
 | ------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | open         | Whether to show tip                                      | `boolean`                                                                                                                     | `require`     |
 | placement    | Position of tip                                          | `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`      |
+| size         | Size of tip                                              | `large`                                                                                                                       | -             |
 | tips         | content of tip                                           | `string `                                                                                                                     | `require`     |
 | closeable    | Whether to show close button                             | `boolean`                                                                                                                     | `false`       |
 | autoclose    | Whether to automatically close after display             | `boolean`                                                                                                                     | `false`       |

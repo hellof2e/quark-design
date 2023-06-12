@@ -1,4 +1,4 @@
-import QuarkElement, { customElement, property } from "quarkc";
+import { customElement, property, QuarkElement } from "quarkc";
 import style from "./style.css";
 
 @customElement({

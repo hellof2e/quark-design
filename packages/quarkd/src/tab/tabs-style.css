@@ -66,3 +66,11 @@
   visibility: hidden;
   height: 0;
 }
+
+:host([dark]) .quark-tab-line {
+  background-color: #fff;
+}
+
+:host([dark][active]) .quark-tab-line {
+  color: #fff;
+}

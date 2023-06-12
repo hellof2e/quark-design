@@ -24,7 +24,7 @@
     <div class="tag-container">
       <quark-rate
         defaultvalue="2"
-        imgicon="https://quark-design.hellobike.com/assets/quark-logo.7fd50e67.png"
+        imgicon="https://vue-quarkdesign.hellobike.com/assets/quark-logo.f9a6a307.png"
       >
       </quark-rate>
     </div>

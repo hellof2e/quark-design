@@ -3,11 +3,12 @@ import "@quarkd/icons/lib/whiteerror-o";
 import "@quarkd/icons/lib/whitewarning-o";
 import { clearAllBodyScrollLocks } from "body-scroll-lock";
 
-import QuarkElement, {
+import {
   Fragment,
   property,
   customElement,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import style from "./style.css";
 import "../overlay";

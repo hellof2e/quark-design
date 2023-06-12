@@ -1,11 +1,12 @@
 import BScroll from "@better-scroll/core";
 import Slide from "@better-scroll/slide";
-import QuarkElement, {
+import {
   Fragment,
   createRef,
   customElement,
   state,
   property,
+  QuarkElement,
 } from "quarkc";
 import "../popup";
 

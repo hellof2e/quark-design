@@ -1,9 +1,10 @@
-import QuarkElement, {
+import {
   Fragment,
   property,
   createRef,
   customElement,
   state,
+  QuarkElement,
 } from "quarkc";
 import { UploaderFileListItem } from "./utils";
 import "@quarkd/icons/lib/camera-fill";

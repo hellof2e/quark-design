@@ -73,7 +73,7 @@
 
 :host .quark-checkbox .quark-checkbox-show {
   background: #ffffff;
-  border: 1px solid quark-formPlaceholderColor;
+  border: 0.5px solid quark-formPlaceholderColor;
   border-radius: 50%;
 }
 

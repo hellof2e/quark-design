@@ -1,4 +1,4 @@
-name: sync to docs
+name: sync to react docs
 
 on:
   push:
@@ -10,17 +10,17 @@ on:
 
 jobs:
   copy:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v2
       - run: yarn install
-      - run: yarn copydocs
-      - name : Sync 
-        uses : JamesIves/github-pages-deploy-action@4.1.7 
+      - run: yarn copydocs2react
+      - name : Sync
+        uses : JamesIves/github-pages-deploy-action@4.1.7
         with :
           branch : main # action 应该部署到的分支 。
           folder : site_docs # 操作应该部署的文件夹 。
           clean: false
-          repository-name: hellof2e/quark-design-docs
+          repository-name: hellof2e/react-quarkdesign.hellobike.com
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: src/docs_vue
+          target-folder: src/docs_react

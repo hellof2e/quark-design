@@ -3,14 +3,13 @@
     background: #fff;
     padding: 10px;
     border-radius: 4px;
-    quark-radio {
-      margin-right: 20px;
-    }
   }
+
   .my-color {
     --radio-background: linear-gradient(225deg, #ff918d 0%, #f54640 100%);
   }
-  .first-radio {
-    margin-right: 8px;
-  }
+}
+
+quark-radio {
+  padding: 10px 0;
 }

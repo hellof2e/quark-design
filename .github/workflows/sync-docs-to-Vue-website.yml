@@ -1,0 +1,26 @@
+name: sync to vue docs
+
+on:
+  push:
+    branches:
+      - main # default branch
+    paths:
+      - '.github/workflows/**'
+      - 'packages/quarkd/src/**'
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install
+      - run: yarn copydocs2vue
+      - name : Sync
+        uses : JamesIves/github-pages-deploy-action@4.1.7
+        with :
+          branch : main # action 应该部署到的分支 。
+          folder : site_docs # 操作应该部署的文件夹 。
+          clean: false
+          repository-name: hellof2e/vue-quarkdesign.hellobike.com
+          token: ${{ secrets.GIT_ACTION }}
+          target-folder: src/docs_vue

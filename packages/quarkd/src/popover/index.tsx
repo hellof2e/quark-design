@@ -1,8 +1,9 @@
-import QuarkElement, {
+import {
   property,
   state,
   customElement,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import style from "./style.css";
 import { classNames } from "../../utils/index";

@@ -3,17 +3,36 @@
     <h2>{{ translate("title.basic") }}</h2>
     <div class="radio-container">
       <quark-radio-group :value="data.value1" @change="onChange1">
-        <quark-radio name="apple" class="first-radio">{{
-          translate("group.apple")
-        }}</quark-radio>
+        <quark-radio name="apple">{{ translate("group.apple") }}</quark-radio>
         <quark-radio name="banana">{{ translate("group.banana") }}</quark-radio>
+      </quark-radio-group>
+    </div>
+
+    <h2>{{ translate("title.direction") }}</h2>
+    <div class="radio-container">
+      <quark-radio-group
+        :value="data.radio1"
+        @change="directionOnChange"
+        direction="horizontal"
+        class="radio-group-2"
+      >
+        <quark-radio name="radio1">{{
+          translate("direction.radio1")
+        }}</quark-radio>
+        <quark-radio name="radio2">{{
+          translate("direction.radio2")
+        }}</quark-radio>
       </quark-radio-group>
     </div>
 
     <h2>{{ translate("title.type") }}</h2>
     <div class="radio-container">
-      <quark-radio-group :value="data.value2" @change="onChange2">
-        <quark-radio name="apple" class="first-radio">{{
+      <quark-radio-group
+        :value="data.value2"
+        @change="onChange2"
+        class="radio-group-2"
+      >
+        <quark-radio name="apple" shape="square">{{
           translate("type.round")
         }}</quark-radio>
         <quark-radio name="banana" shape="square">{{
@@ -25,13 +44,9 @@
     <h2>{{ translate("title.size") }}</h2>
     <div class="radio-container">
       <quark-radio-group :value="data.value3" @change="onChange3">
-        <quark-radio
-          name="apple"
-          shape="square"
-          size="big"
-          class="first-radio"
-          >{{ translate("size.square") }}</quark-radio
-        >
+        <quark-radio name="apple" size="big">{{
+          translate("size.square")
+        }}</quark-radio>
         <quark-radio name="banana" size="big">{{
           translate("size.round")
         }}</quark-radio>
@@ -41,7 +56,7 @@
     <h2>{{ translate("title.disabled") }}</h2>
     <div class="radio-container">
       <quark-radio-group :value="data.value4" @change="onChange4">
-        <quark-radio name="apple" :disabled="data.flag" class="first-radio">{{
+        <quark-radio name="apple" :disabled="data.flag">{{
           translate("disabled.checked")
         }}</quark-radio>
         <quark-radio name="banana" :disabled="data.flag">{{
@@ -50,14 +65,10 @@
       </quark-radio-group>
     </div>
     <div class="radio-container">
-      <quark-radio
-        :checked="true"
-        shape="square"
-        disabled
-        class="first-radio"
-        >{{ translate("disabled.squareChecekd") }}</quark-radio
-      >
-      <quark-radio :checked="false" shape="square" disabled>{{
+      <quark-radio :checked="true" disabled>{{
+        translate("disabled.squareChecekd")
+      }}</quark-radio>
+      <quark-radio :checked="false" disabled>{{
         translate("disabled.squareUnchecked")
       }}</quark-radio>
     </div>
@@ -85,17 +96,24 @@ export default createDemo({
       value2: "apple",
       value3: "apple",
       value4: "apple",
+      radio1: "radio1",
+      radio2: "radio2",
       flag: true,
     });
     onBeforeMount(() => {
       useTranslate({
         "zh-CN": {
           title: {
-            basic: "单选框基础用法",
+            basic: "基础用法",
+            direction: "水平排列",
             type: "单选框形状",
             size: "单选框大小",
             disabled: "单选框禁用状态",
             selectedColor: "单选框选中颜色自定义",
+          },
+          direction: {
+            radio1: "单选框1",
+            radio2: "单选框2",
           },
           type: {
             round: "圆形(默认)",
@@ -124,6 +142,10 @@ export default createDemo({
             disabled: "Disabled Checkbox",
             selectedColor: "Custom Selected Color",
           },
+          direction: {
+            radio1: "radio1",
+            radio2: "radio2",
+          },
           type: {
             round: "Round(Default)",
             square: "Square",
@@ -148,6 +170,9 @@ export default createDemo({
     const onChange1 = ({ detail }) => {
       data.value.value1 = detail.value;
     };
+    const directionOnChange = ({ detail }) => {
+      data.value.radio1 = detail.value;
+    };
     const onChange2 = ({ detail }) => {
       data.value.value2 = detail.value;
     };
@@ -163,6 +188,7 @@ export default createDemo({
     return {
       data,
       onChange1,
+      directionOnChange,
       onChange2,
       onChange3,
       onChange4,

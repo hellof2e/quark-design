@@ -10,7 +10,7 @@
 import "quarkd/lib/radio";
 ```
 
-### 单选框基础用法
+### 基础用法
 
 一般成组出现，通过 value 和 name 的匹配来绑定勾选。
 
@@ -21,22 +21,24 @@ import "quarkd/lib/radio";
 </quark-radio-group>
 ```
 
-```javascript
-export default {
-  data() {
-    return {
-      value: "apple", // value 初始值: apple
-    };
-  },
-  methods: {
-    onChange({ detail }) {
-      this.value = detail.value;
-    },
-  },
-};
+```js
+onChange({ detail }) {
+  this.value = detail.value;
+}
 ```
 
-### 单选框形状
+### 水平排列
+
+通过 `direction=‘horizontal’` 来设置水平排列，默认垂直排列。
+
+```html
+<quark-radio-group :value="value" direction="horizontal" @change="onChange">
+  <quark-radio name="Radio1">Radio1</quark-radio>
+  <quark-radio name="Radio2">Radio2</quark-radio>
+</quark-radio-group>
+```
+
+### 形状
 
 单选框支持`round`、`square`两种形状，默认为 `round`。
 
@@ -66,9 +68,7 @@ export default {
 <quark-radio checked="true" disabled>已选-禁用</quark-radio>
 <quark-radio checked="false" disabled>未选-禁用</quark-radio>
 <quark-radio checked="true" shape="square" disabled>方形-已选-禁用</quark-radio>
-<quark-radio checked="false" shape="square" disabled
-  >方形-未选-禁用</quark-radio
->
+<quark-radio checked="false" shape="square" disabled>方形-未选-禁用</quark-radio>
 ```
 
 ### 单选框风格
@@ -76,18 +76,18 @@ export default {
 单选框选中颜色自定义
 
 ```html
-<quark-radio checked="true">选中颜色自定义</quark-radio>
+<quark-radio class="my-radio" checked="true">选中颜色自定义</quark-radio>
 ```
 
 ```css
-:quark-radio {
+.my-radio {
   --radio-background: linear-gradient(225deg, #ff918d 0%, #f54640 100%);
 }
 ```
 
 ## API
 
-### Props: quark-radio
+### Quark-radio Props
 
 | 参数     | 说明                                | 类型      | 默认值   |
 | -------- | ----------------------------------- | --------- | -------- |
@@ -95,13 +95,13 @@ export default {
 | size     | 单选框大小，可选值为 `normal` `big` | `string`  | `normal` |
 | disabled | 单选框禁用状态                      | `boolean` | `false`  |
 
-### Props: quark-radio-group
+### Quark-radio-group Props
 
 | 参数  | 说明           | 类型     | 默认值 |
 | ----- | -------------- | -------- | ------ |
 | value | 指定选中的选项 | `string` | -      |
 
-### Event: quark-radio-Group
+### Quark-radio-Group Event
 
 | 参数   | 说明           | 类型                                         |
 | ------ | -------------- | -------------------------------------------- |
@@ -111,10 +111,12 @@ export default {
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                   | 说明                                   | 默认值            |
-| ---------------------- | -------------------------------------- | ----------------- |
-| `--radio-font-size`    | radio 文字大小                         | `12px`            |
-| `--radio-color`        | radio 文字颜色                         | `#242729 `        |
-| `--radio-label-height` | radio 文字行高                         | 和选择框高度一致  |
-| `--radio-size`         | radio 单选框尺寸，优先级高于 size 属性 | `16px; big: 20px` |
-| `--radio-background`   | radio 选中颜色                         | `#0088ff`         |
+| 名称                     | 说明                                   | 默认值            |
+| ------------------------ | -------------------------------------- | ----------------- |
+| `--radio-font-size`      | radio 文字大小                         | `12px`            |
+| `--radio-color`          | radio 文字颜色                         | `#242729 `        |
+| `--radio-label-height`   | radio 文字行高                         | 和选择框高度一致  |
+| `--radio-label-gap`      | radio 与文字间距                       | `8px`             |
+| `--radio-size`           | radio 单选框尺寸，优先级高于 size 属性 | `16px; big: 20px` |
+| `--radio-background`     | radio 选中颜色                         | `#0088ff`         |
+| `--radio-horizontal-gap` | 水平排列时 radio 间距                  | `20px`            |

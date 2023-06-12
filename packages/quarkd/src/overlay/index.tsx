@@ -3,11 +3,12 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-import QuarkElement, {
+import {
   property,
   customElement,
   Fragment,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import style from "./style.css";
 export interface Props {

@@ -21,6 +21,15 @@ export default {
   dangerColor: "#F72626",
   // warningColor: '#FF5526',
   successColor: "#07C160",
+  // grayColor: "#879099",
+
+  // 品牌色浅色
+  primaryLightColor: "#E6F4FF",
+  dangerLightColor: "#FEE9E9",
+  // orangeLightColor: "#FFEEE9",
+  warningLightColor: "#FEF4E7",
+  successLightColor: "#E6F8EF",
+  // grayLightColor: "#E1E6EB",
 
   // 边框色
   borderBaseColor: "#dddddd",
@@ -29,6 +38,7 @@ export default {
   borderDangerColor: "#FB9292",
   borderOrangeColor: "#FFAA92",
   borderSuccessColor: "#83E0AF",
+
   // 透明度
   opacityDisabled: "0.7", // switch checkbox radio 等组件禁用的透明度
 

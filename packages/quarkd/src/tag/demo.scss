@@ -8,9 +8,12 @@
     --tag-text-color: #fb990f;
   }
 
+  .custom-border-color {
+    --tag-border-color: #fb990f;
+  }
+
   .tag-container {
     margin: 5px;
-    margin-bottom: 30px;
     display: inline-flex;
   }
 }

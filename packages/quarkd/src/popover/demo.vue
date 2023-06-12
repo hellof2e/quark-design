@@ -80,7 +80,6 @@ import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("popover");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onMounted, onBeforeMount } from "vue";
-import { options } from "preact";
 
 export default createDemo({
   setup() {

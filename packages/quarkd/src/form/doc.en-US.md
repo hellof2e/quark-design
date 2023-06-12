@@ -26,15 +26,17 @@ Set value of form items, used with `name` prop.
 ```
 
 ```js
+// in onMounted (vue3 setup) or mounted(component option) hook
+// set form validation rules
 this.$refs.form1.setRules = ([
-  { name: 'name', required: true },
-  { name: 'password', required: true, type: 'password' }
+  { name: 'name', required: true, message: 'name required' },
+  { name: 'password', required: true, type: 'password', message: 'password required' }
 ]);
 submit1() {
-  this.$refs.form1.submit().then((value) => {
+  this.$refs.form1.getValues().then((value) => {
     console.log(value, 'current form values');
-  }).catch(err => {
-    Toast.text(err)
+  }).catch(firstErrRule => {
+    Toast.text(firstErrRule.message)
   });
 },
 ```
@@ -81,7 +83,7 @@ Only useful for field components, supports required and validator custom events.
   ]);
 
   submit2() {
-    this.$refs.form2.submit().then((value) => {
+    this.$refs.form2.getValues().then((value) => {
       console.log(value, 'current form values');
     }).catch(err => {
       Toast.text(err)
@@ -163,7 +165,7 @@ Only useful for field components, supports required and validator custom events.
 
 ```js
   submit3() {
-      this.$refs.form3.submit().then((value) => {
+      this.$refs.form3.getValues().then((value) => {
         Toast.text('Please check form value in the console');
         console.log(value, 'current form values');
       });
@@ -184,10 +186,10 @@ Only useful for field components, supports required and validator custom events.
 
 ### Method
 
-| Name     | Description                                              | Type                          |
-| -------- | -------------------------------------------------------- | ----------------------------- |
-| submit   | Submit and validate the form to get all form items value | `() => Promise<value: any[]>` |
-| setRules | Only valid for field component                           | `(rule: Rule[])=>void`        |
+| Name      | Description                                              | Type                          |
+| --------- | -------------------------------------------------------- | ----------------------------- |
+| getValues | Submit and validate the form to get all form items value | `() => Promise<value: any[]>` |
+| setRules  | Only valid for field component                           | `(rule: Rule[])=>void`        |
 
 ### Type definition
 

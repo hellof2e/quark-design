@@ -1,8 +1,9 @@
-import QuarkElement, {
+import {
   customElement,
   property,
   createRef,
   state,
+  QuarkElement,
 } from "quarkc";
 import Locale from "../locale";
 import style from "./style.css";

@@ -1,8 +1,10 @@
 @charset "utf-8";
+
 body {
 	margin: 0;
 	padding: 0;
 }
+
 ol,
 ul {
 	list-style: none;
@@ -35,7 +37,7 @@ input {
 img {
 	border: 0 none;
 	vertical-align: bottom;
-	-ms-interpolation-mode: bicubic;
+	interpolation-mode: bicubic;
 }
 
 html,
@@ -62,6 +64,7 @@ a {
 	color: #4c4c52;
 	transition: all 0.25s;
 }
+
 a:hover {
 	color: var(--brand-color);
 	transition: all 0.25s;

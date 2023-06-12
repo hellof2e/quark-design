@@ -1,8 +1,9 @@
-import QuarkElement, {
+import {
   customElement,
   property,
   state,
   createRef,
+  QuarkElement,
 } from "quarkc";
 import { slotAssignedElements } from "../../utils/public";
 import "../sticky";
@@ -55,6 +56,11 @@ class QuarkTabs extends QuarkElement {
 
   @property()
   linewidth = "40px";
+
+  @property({
+    type: Boolean,
+  })
+  dark = false;
 
   @state()
   init = false;
@@ -232,7 +238,7 @@ class QuarkTabs extends QuarkElement {
       this.nextSlider();
       return;
     }
-    console.log(nextItem);
+    // console.log(nextItem);
     if (!activeKey) {
       return;
     }
@@ -263,6 +269,7 @@ class QuarkTabs extends QuarkElement {
         disabled: item.disabled,
         name: item.name,
         label: item.label,
+        dark: this.dark,
       });
     });
     this.init = true;
@@ -332,6 +339,7 @@ class QuarkTabs extends QuarkElement {
             <quark-tab-nav
               active={item.name === this.activekey}
               disabled={item.disabled}
+              dark={item.dark}
               name={item.name}
               onClick={(e: any) => this.handleClick(e, item)}
             >
@@ -384,6 +392,11 @@ class QuarkTabNav extends QuarkElement {
     type: Boolean,
   })
   disabled = false;
+
+  @property({
+    type: Boolean,
+  })
+  dark = false;
 
   @property()
   name: string | number = 0;

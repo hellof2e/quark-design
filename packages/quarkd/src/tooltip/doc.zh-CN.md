@@ -37,6 +37,16 @@ bottomleft    # 底部左侧位置
 bottomright   # 底部右侧位置
 ```
 
+### 设置 tips 尺寸
+
+通过 `size` 属性来控制气泡的大小。`size` 支持`large`和默认 2 种类型。
+
+```tsx
+<quark-tooltip placement="top" size="large" tips="气泡文字">
+  <div>large 尺寸</div>
+</quark-tooltip>
+```
+
 ### 显示关闭按钮
 
 通过 closeable 属性来控制是否显示关闭按钮。
@@ -178,16 +188,17 @@ export default {
 
 ### Props
 
-| 参数         | 说明                       | 类型                                                                                                                               | 默认值    |
-| ------------ | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| open         | tip 是否显示               | `boolean`                                                                                                                          | `require` |
-| placement    | tip 弹出位置               | 支持 `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`  |
-| tips         | tip 文字提示内容           | `string`                                                                                                                           | `require` |
-| closeable    | 是否显示关闭按钮           | `boolean`                                                                                                                          | `false`   |
-| autoclose    | 显示后是否自动关闭         | `boolean`                                                                                                                          | `false`   |
-| opentime     | 显示后到自动关闭的时间     | `string`                                                                                                                           | `3000`    |
-| scrollhidden | 当页面滚动后，是否自动关闭 | `boolean`                                                                                                                          | `false`   |
-| zindex       | tips 层级                  | `number`                                                                                                                           | `999`     |
+| 参数         | 说明                                     | 类型                                                                                                                               | 默认值    |
+| ------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| open         | tip 是否显示                             | `boolean`                                                                                                                          | `require` |
+| placement    | tip 弹出位置                             | 支持 `top` `topleft` `topright` `left` `lefttop` `leftbottom` `right` `righttop` `rightbottom` `bottom` `bottomleft` `bottomright` | `bottom`  |
+| size         | tip 尺寸，可选值为`large`和默认 2 种类型 | `string`                                                                                                                           | -         |
+| tips         | tip 文字提示内容                         | `string`                                                                                                                           | `require` |
+| closeable    | 是否显示关闭按钮                         | `boolean`                                                                                                                          | `false`   |
+| autoclose    | 显示后是否自动关闭                       | `boolean`                                                                                                                          | `false`   |
+| opentime     | 显示后到自动关闭的时间                   | `string`                                                                                                                           | `3000`    |
+| scrollhidden | 当页面滚动后，是否自动关闭               | `boolean`                                                                                                                          | `false`   |
+| zindex       | tips 层级                                | `number`                                                                                                                           | `999`     |
 
 ### Events
 

@@ -1,4 +1,4 @@
-import QuarkElement, { property, createRef, customElement } from "quarkc";
+import { property, createRef, customElement, QuarkElement } from "quarkc";
 import delay from "../../utils/delay";
 import "../loading";
 import { checkFalse } from "../../utils/public";

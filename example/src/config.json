@@ -199,7 +199,7 @@
 					"version": "0.0.1",
 					"name": "Tab",
 					"sort": 1,
-					"cName": "标签",
+					"cName": "标签页",
 					"type": "component",
 					"show": true,
 					"desc": "标签",
