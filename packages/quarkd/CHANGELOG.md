@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.64](https://github.com/hellof2e/quark-design/compare/v1.0.63...v1.0.64) (2023-06-13)
+
+
+### 🎉 Features
+
+* uploader 组件新增 failed 状态 及示例 ([faca121](https://github.com/hellof2e/quark-design/commit/faca121f5e2f3e9af22b082384189d50ef8c980f))
+
 ### [1.0.63](https://github.com/hellof2e/quark-design/compare/v1.0.62...v1.0.63) (2023-06-12)
 
 
