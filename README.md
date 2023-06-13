@@ -39,11 +39,11 @@ Next-gen frontend component library, it can be used in any framework or no frame
 ## Documentation
 
 For full documentation, visit 
-- [Vue Doc](https://vue-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
-- [React Doc](https://react-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
-- [Vanilla Javascript Doc(work in prograss...)](https://vanilla-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
-- [Angular Doc(work in prograss...)](https://angular-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
-- [Svelte Doc(work in prograss...)](https://svelte-quarkdesign.hellobike.com/#/zh-CN/guide/quickstart)
+- [Vue Doc](https://vue-quarkdesign.hellobike.com)
+- [React Doc](https://react-quarkdesign.hellobike.com)
+- [Vanilla Javascript Doc(work in prograss...)](https://vanilla-quarkdesign.hellobike.com)
+- [Angular Doc(work in prograss...)](https://angular-quarkdesign.hellobike.com)
+- [Svelte Doc(work in prograss...)](https://svelte-quarkdesign.hellobike.com)
 
 ## Install
 ```bash
