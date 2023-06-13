@@ -44,9 +44,9 @@
 
 - [Vue Doc](https://vue-quarkdesign.hellobike.com)
 - [React Doc](https://react-quarkdesign.hellobike.com)
-- [Vanilla Javascript Doc(work in prograss...)](https://vanilla-quarkdesign.hellobike.com)
-- [Angular Doc(work in prograss...)](https://angular-quarkdesign.hellobike.com)
-- [Svelte Doc(work in prograss...)](https://svelte-quarkdesign.hellobike.com)
+- [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkdesign.hellobike.com)
+- [Angular Doc(work in progress...)](https://angular-quarkdesign.hellobike.com)
+- [Svelte Doc(work in progress...)](https://svelte-quarkdesign.hellobike.com)
 
 ## 社区交流
 
