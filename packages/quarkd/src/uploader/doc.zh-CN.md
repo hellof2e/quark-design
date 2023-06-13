@@ -27,13 +27,45 @@ function afterread(file) {
 默认开启预览功能
 
 ```html
-<quark-uploader preview ref="preview"></quark-uploader>
+<quark-uploader preview ref="uploadStatus"></quark-uploader>
 ```
 
 ```js
 mounted() {
   this.$refs.preview.
   setPreview(['https://img.yzcdn.cn/vant/leaf.jpg', 'https://img.yzcdn.cn/vant/leaf.jpg');
+}
+```
+
+### 上传状态
+
+默认三种状态 uploading、 done、failed，其中 failed 会移除当前失败文件, 默认为 done
+
+```html
+<quark-uploader preview ref="preview" @afterread="afterReadStatus"><quark-uploader>
+```
+
+```js
+mounted() {
+  this.$refs.uploadStatus.
+  setPreview(['https://img.yzcdn.cn/vant/leaf.jpg']);
+},
+methods: {
+    // 暂时只做了单独上传示例，多选上传方法也一样
+    async afterReadStatus({ detail: file }) {
+      cosnt { uploadStatus }= this.$refs
+      uploadStatus.value.setStatus({
+        ...file,
+        status: "uploading",
+        message: "上传中",
+      });
+      await sleep(2000);
+      uploadStatus.value.setStatus({
+        ...file,
+        status: "failed",
+      });
+      Toast.success(`${file.file.name}上传失败`);
+  };
 }
 ```
 
@@ -130,6 +162,7 @@ beforeUpload(files) {
 | setPreview      | 初始化预览数据，用法 uploader.setPreview(data) | `(url: string[]) => void`         |
 | beforeDelete    | 删除前置, 需配合 onRemove 一起使用，用法 uploader.beforeDelete = fn      | `(file, {index: number}) => void` |
 | closePreview    | 手动关闭预览弹窗方法                           |                                   |
+| setStatus    | 上传期间设置上传状态       uploader.setStatus(file)                    | fn(file)
 
 ## 样式变量
 

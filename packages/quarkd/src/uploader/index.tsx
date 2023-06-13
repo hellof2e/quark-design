@@ -260,12 +260,16 @@ class QuarkUploader extends QuarkElement {
 
   // 设置状态
   setStatus(file: UploaderFileListItem) {
-    this.tasks = this.tasks.map((i) => {
-      if (i.id === file.id) {
-        Object.assign(i, file);
-      }
-      return i;
-    });
+    if (file.status === "failed") {
+      this.tasks = this.tasks.filter((i) => i.id !== file.id);
+    } else {
+      this.tasks = this.tasks.map((i) => {
+        if (i.id === file.id) {
+          Object.assign(i, file);
+        }
+        return i;
+      });
+    }
   }
 
   closePreview() {
