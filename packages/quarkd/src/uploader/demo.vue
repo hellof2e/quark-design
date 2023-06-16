@@ -9,11 +9,8 @@
     </div>
     <h2>{{ translate("preview") }}</h2>
     <div class="flex">
-      <quark-uploader
-        @afterread="afterRead"
-        ref="preview"
-        preview
-      ></quark-uploader>
+      <quark-uploader @afterread="afterRead" ref="preview" preview>
+      </quark-uploader>
     </div>
     <h2>{{ translate("status") }}</h2>
     <div class="flex">
@@ -41,6 +38,15 @@
         }}</quark-button>
       </quark-uploader>
     </div>
+    <h2>{{ translate("customPreviewIcon") }}</h2>
+    <div class="flex closeimg">
+      <quark-uploader
+        preview
+        ref="customPreviewIcon"
+        closeimg="https://m.hellobike.com/resource/helloyun/15697/dEYF0_round_close_fill.png?x-oss-process=image/quality,q_80"
+      >
+      </quark-uploader>
+    </div>
     <h2>{{ translate("before") }}</h2>
     <quark-uploader preview ref="before"></quark-uploader>
     <h2>{{ translate("disabled") }}</h2>
@@ -62,12 +68,13 @@ import Toast from "../toast";
 
 export default createDemo({
   setup() {
-    const isPreview = ref(false);
+    const isPreview = ref(null);
     const preview = ref(null);
     const preview2 = ref(null);
     const before = ref(null);
     const uploadStatus = ref(null);
-    const oversizeRef = ref(false);
+    const oversizeRef = ref(null);
+    const customPreviewIcon = ref(null);
     const previewUrls = [
       "https://m.hellobike.com/resource/helloyun/15697/9VgwC_Screenshot_20220215_191457_com.jingyao.easybike.jpg?x-oss-process=image/quality,q_80",
       "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
@@ -82,6 +89,7 @@ export default createDemo({
           limit: "限制上传数量",
           size: "限制上传大小",
           custom: "自定义上传样式",
+          customPreviewIcon: "自定义预览删除 icon",
           file: "上传文件",
           before: "上传前置",
           disabled: "禁止上传",
@@ -98,6 +106,7 @@ export default createDemo({
           limit: "Limit Uploads Number",
           size: "Limit Uploads Size",
           custom: "Custom Upload Style",
+          customPreviewIcon: "Custom predictive deletion icon",
           file: "Upload File",
           before: "Before Uploading",
           disabled: "Disabled",
@@ -112,6 +121,7 @@ export default createDemo({
       preview.value.setPreview(previewUrls);
       preview2.value.setPreview(previewUrls);
       uploadStatus.value.setPreview(previewUrls);
+      customPreviewIcon.value.setPreview(previewUrls);
       const tasks = uploadStatus.value.tasks;
       tasks.forEach((i, index) => {
         if (!index) {
@@ -199,6 +209,7 @@ export default createDemo({
       afterRead,
       translate,
       afterReadStatus,
+      customPreviewIcon,
     };
   },
 });

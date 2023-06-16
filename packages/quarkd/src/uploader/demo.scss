@@ -3,4 +3,12 @@
   quark-button {
     margin-left: 10px;
   }
+  .closeimg{
+    --uploader-delete-top: 0px;
+    --uploader-delete-right: 0px;
+    --uploader-delete-wrap-width: 14px;
+    --uploader-delete-wrap-height: 14px;
+    --uploader-delete-background: transparent;
+    --uploader-delete-left-radius:  12px;
+  }
 }

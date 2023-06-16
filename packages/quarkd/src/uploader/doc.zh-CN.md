@@ -99,6 +99,32 @@ oversize() {
 </quark-uploader>
 ```
 
+### 自定义删除图片 icon
+
+使用 closeimg 属性，接收一个图片地址字符串, 并能通过css变量改变图片大小位置
+
+```html
+<div class="flex closeimg">
+    <quark-uploader
+      preview
+      ref="customPreviewIcon"
+      closeimg="https://m.hellobike.com/resource/helloyun/15697/dEYF0_round_close_fill.png?x-oss-process=image/quality,q_80"
+    >
+    </quark-uploader>
+</div>
+```
+
+```css
+  .closeimg{
+    --uploader-delete-top: 0px;
+    --uploader-delete-right: 0px;
+    --uploader-delete-wrap-width: 14px;
+    --uploader-delete-wrap-height: 14px;
+    --uploader-delete-background: transparent;
+    --uploader-delete-left-radius:  12px;
+  }
+```
+
 ### 上传前置
 
 beforeUpload 返回 Boolean, false 阻止上传。
@@ -142,7 +168,8 @@ beforeUpload(files) {
 | maxcount   | 最大上传数量，超出隐藏                            | `string`                                   |
 | maxsize    | 最大上传大小                                      | `string`                                   | `26214400 （25M）` |
 | disabled   | 禁止上传                                          | `boolean`                                  | `false`            |
-| hidedelete | 隐藏删除图标                                      | `boolean`                                  | `false`            |
+| hidedelete | 隐藏删除图标                                      |`boolean`                                  | `false`            |
+|closeimg|||
 | readonly   | 只读模式                                          | `boolean`                                  | `false`            |
 | afterread  | 上传后回调                                        | `(file: file or file[]) => void`           |                    |
 | oversize   | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |                    |
@@ -182,3 +209,9 @@ beforeUpload(files) {
 | `--uploader-delete-background`  | 删除组件的背景色       | `rgb(0, 0, 0)` |
 | `--uploader-delete-color`       | 删除组件图标颜色       | `#fff`         |
 | `--uploader-delete-size`        | 删除组件 图标大小      | `10px`         |
+| `--uploader-delete-top`| 删除组件图标向上位置|
+| `--uploader-delete-right| 删除组件图标向上位置|
+| `--uploader-delete-wrap-width| 删除组件图标宽度|
+| `--uploader-delete-wrap-heigh| 删除组件图标高度|
+| `--uploader-delete-background| 删除组件图标背景色|
+| `--uploader-delete-left-radius| 删除组件图标圆角|

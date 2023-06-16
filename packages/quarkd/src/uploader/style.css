@@ -63,15 +63,15 @@
   border-radius: inherit;
 }
 
-:host .quark-uploader-remove {
+:host .quark-uploader-preview-item .quark-uploader-remove {
   display: inline-block;
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: var(--uploader-delete-top, 1px);
+  right: var(--uploader-delete-right, 1px);
   width: var(--uploader-delete-wrap-width, 14px);
   height: var(--uploader-delete-wrap-height, 14px);
   background: var(--uploader-delete-background, rgb(0 0 0));
-  border-bottom-left-radius: 12px;
+  border-bottom-left-radius:  var(--uploader-delete-left-radius, 12px);
   display: flex;
   justify-content: flex-end;
   cursor: pointer;

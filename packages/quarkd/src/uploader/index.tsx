@@ -81,6 +81,10 @@ class QuarkUploader extends QuarkElement {
   // 25M
   maxsize = "26214400";
 
+  @property()
+  // 25M
+  closeimg = "";
+
   @state()
   tasks: any[] = [];
 
@@ -317,7 +321,13 @@ class QuarkUploader extends QuarkElement {
               src={item.url || item.content}
               onClick={() => this.myImagePreview(n, index)}
             />
-            {!this.hidedelete && !this.readonly && (
+            {!this.hidedelete && !this.readonly && this.closeimg ? (
+              <img
+                onClick={(e) => this.onRemove(e, item, index)}
+                src={this.closeimg}
+                class="quark-uploader-remove"
+              />
+            ) : (
               <span
                 class="quark-uploader-remove"
                 onClick={(e) => this.onRemove(e, item, index)}
