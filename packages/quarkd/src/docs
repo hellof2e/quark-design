@@ -1,4 +1,13 @@
 # 更新日志
+### [1.0.66](https://github.com/hellof2e/quark-design/compare/v1.0.65...v1.0.66) (2023-06-16)
+
+### [1.0.65](https://github.com/hellof2e/quark-design/compare/v1.0.64...v1.0.65) (2023-06-16)
+
+
+### 🎉 Features
+
+* upload 增加自定义删除icon 功能 ([b5136f9](https://github.com/hellof2e/quark-design/commit/b5136f986a900d050b841b381ab8aac6ed7c4612))
+
 ### [1.0.64](https://github.com/hellof2e/quark-design/compare/v1.0.63...v1.0.64) (2023-06-13)
 
 
