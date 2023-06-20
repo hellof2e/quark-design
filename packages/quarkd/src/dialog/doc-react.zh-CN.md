@@ -4,6 +4,13 @@
 
 模态对话框。
 
+<p style="margin: 10px 0; line-height: 20px; font-size: 12px; ">
+  不同于主流组件库的做法，Quarkd 没有在“前人”能力上做了复制/粘贴，我们 <span style="color: red; ">移除了函数式调用</span> 的做法！
+</p>
+<p style="margin: 10px 0; line-height: 20px; font-size: 12px; ">
+  参考浏览器原生组件，能通过js调用唤起的比如 alert 组件，入参比较少，定制性不强，所以像这种组件是适合函数式调用的；相比于入参较多的dialog这种重组件(包含较多的交互逻辑，cb函数，自定义样式)，我们认为使用标签形式去使用比较“优雅/合适”。
+</p>
+
 ### 安装使用
 
 ```tsx
