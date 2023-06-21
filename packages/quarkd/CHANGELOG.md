@@ -1,4 +1,11 @@
 # 更新日志
+### [1.0.68](https://github.com/hellof2e/quark-design/compare/v1.0.67...v1.0.68) (2023-06-21)
+
+
+### 🎉 Features
+
+* update quarkd ([b502aef](https://github.com/hellof2e/quark-design/commit/b502aefc7edad6bb76c1b3c2bc712127d9ba8352))
+* uploader 样式优化以及上传同事位置调整 ([3206e5e](https://github.com/hellof2e/quark-design/commit/3206e5e62fc08e402215b1c155e8cd0729400265))
 
 ### [1.0.67](https://github.com/hellof2e/quark-design/compare/v1.0.66...v1.0.67) (2023-06-21)
 
