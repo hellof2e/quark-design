@@ -44,6 +44,7 @@
   display: inline-flex;
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
+  flex-shrink: 0;
 }
 
 :host .quark-radio-icon {
