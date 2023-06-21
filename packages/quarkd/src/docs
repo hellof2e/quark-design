@@ -1,4 +1,19 @@
 # 更新日志
+### [1.0.67](https://github.com/hellof2e/quark-design/compare/v1.0.66...v1.0.67) (2023-06-21)
+
+
+### 🎉 Features
+
+* code optimize ([d95bd29](https://github.com/hellof2e/quark-design/commit/d95bd29277e85cafaa85889cff525f458e7a27dd))
+* code optimize ([4314138](https://github.com/hellof2e/quark-design/commit/43141386f4b11ae7e9e047e194affc35f19b7c6f))
+* update button demo ([c9b9e13](https://github.com/hellof2e/quark-design/commit/c9b9e13c10ab6613e89ec7b4948955fe3e38369d))
+* update dialog readme ([635a1dd](https://github.com/hellof2e/quark-design/commit/635a1dd612b84e9bec7b7e6ec6df2f280eb569f9))
+
+
+### 🐞 Bug Fixes
+
+* 修复checkbox,radio 样式问题 ([33d66b3](https://github.com/hellof2e/quark-design/commit/33d66b35fd90535294e9d76b68c0b1cb63f04955))
+
 ### [1.0.66](https://github.com/hellof2e/quark-design/compare/v1.0.65...v1.0.66) (2023-06-16)
 
 ### [1.0.65](https://github.com/hellof2e/quark-design/compare/v1.0.64...v1.0.65) (2023-06-16)
