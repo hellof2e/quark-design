@@ -284,31 +284,13 @@ class QuarkUploader extends QuarkElement {
     const { capture, accept, multiple, name, id, disabled } = this;
     const hiddenUpload = this.tasks.length >= Number(this.maxcount);
     const showTasks = this.preview ? this.tasks.slice(0, this.maxcount) : [];
+    const uploaderClasses = [
+      "quark-uploader",
+      disabled && "uploader-disabled",
+      this.preview && showTasks.length && "quark-uploader-mg",
+    ];
     return (
       <Fragment>
-        {!this.readonly && (
-          <div
-            class={`quark-uploader ${disabled && "uploader-disabled"}`}
-            style={{ display: !hiddenUpload ? "block" : "none" }}
-          >
-            <slot name="uploader">
-              <div class="quark-uploader-icon">
-                <quark-icon-camera-fill size="32" color={this.iconcolor} />
-              </div>
-            </slot>
-            <input
-              ref={this.inputRef}
-              name={name}
-              id={id}
-              type="file"
-              accept={accept}
-              multiple={multiple}
-              capture={capture}
-              onchange={this.onChange}
-              disabled={disabled}
-            />
-          </div>
-        )}
         {showTasks.map((item, index, n) => (
           <div class="quark-uploader-preview-item" key={item.id}>
             {item.status === "uploading" && (
@@ -337,6 +319,29 @@ class QuarkUploader extends QuarkElement {
             )}
           </div>
         ))}
+        {!this.readonly && (
+          <div
+            class={uploaderClasses.join(" ")}
+            style={{ display: !hiddenUpload ? "block" : "none" }}
+          >
+            <slot name="uploader">
+              <div class="quark-uploader-icon">
+                <quark-icon-camera-fill size="32" color={this.iconcolor} />
+              </div>
+            </slot>
+            <input
+              ref={this.inputRef}
+              name={name}
+              id={id}
+              type="file"
+              accept={accept}
+              multiple={multiple}
+              capture={capture}
+              onchange={this.onChange}
+              disabled={disabled}
+            />
+          </div>
+        )}
       </Fragment>
     );
   }

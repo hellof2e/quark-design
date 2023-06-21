@@ -11,14 +11,15 @@
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  margin: 0 var(--uploader-margin, 6px) var(--uploader-margin, 6px) 0;
 }
-
+:host .quark-uploader-mg {
+  /* margin-right: var(--uploader-margin, 6px); */
+}
 :host .quark-uploader-icon {
   box-sizing: border-box;
   width: var(--uploader-width, 93px);
   height: var(--uploader-height, 93px);
-  background: var(--uploader-background);
+  background: var(--uploader-background, #f7f8fa);
   border-width: var(--uploader-border-width, 1px);
   border-color: var(--uploader-border-color, #e1e6eb);
   border-style: var(--uploader-border-style, dashed);

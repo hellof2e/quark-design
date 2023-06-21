@@ -3,6 +3,9 @@
   quark-button {
     margin-left: 10px;
   }
+  quark-uploader {
+    --uploader-border-width: 0px;
+  }
   .closeimg{
     --uploader-delete-top: 0px;
     --uploader-delete-right: 0px;
