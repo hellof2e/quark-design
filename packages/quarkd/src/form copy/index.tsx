@@ -27,11 +27,11 @@ class QuarkForm extends QuarkElement {
 
   formRef: any = createRef();
 
-  slotRef: any = createRef();
-
   rules: IRuleItem[] = [];
 
   child: IFormItem[] = [];
+
+  booleanEle: string[] = [];
 
   getFormData = () => {
     const data: any = {};
@@ -90,24 +90,11 @@ class QuarkForm extends QuarkElement {
   };
 
   handleRightSlotChange = () => {
-    console.log("onslotchange", this.slotRef);
-    // console.log("onslotchange formRef", this.formRef);
-    // this.setInit();
+    this.setInit();
   };
 
-  validate = (formRef) => {
-    console.log("validate formRef", formRef);
-    const formItems = formRef.querySelectorAll("quark-form-item");
-    console.log("validate children", formItems);
-    if (formItems && formItems.length > 0) {
-      formItems.forEach((el) => {
-        // el.querySelector(".quark-form-item_error-msg").style.display = "none";
-        console.log(el);
-        console.log(typeof el);
-      });
-    }
-
-    // return validateAll(rules)(this.setErrorMsg);
+  validate = (rules: IRuleItem[]) => {
+    return validateAll(rules)(this.setErrorMsg);
   };
 
   setFieldMsg = (ruleItem: IRuleItem) => {
@@ -140,10 +127,7 @@ class QuarkForm extends QuarkElement {
   render() {
     return (
       <form ref={this.formRef}>
-        <slot
-          ref={this.slotRef}
-          onslotchange={this.handleRightSlotChange}
-        ></slot>
+        <slot onslotchange={this.handleRightSlotChange}></slot>
       </form>
     );
   }

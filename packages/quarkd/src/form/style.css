@@ -1,0 +1,23 @@
+:host {
+
+}
+
+::slotted(quark-form-item) {
+  position: relative;
+}
+
+::slotted(quark-form-item)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-bottom: 2px solid #f5f6f7;
+}
+
+::slotted(quark-form-item):last-child::after {
+  border: none;
+}

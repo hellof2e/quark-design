@@ -39,6 +39,7 @@ import TabbarItem from "./tabbaritem";
 import TextArea from "./textarea";
 import MarketDialog from "./marketdialog";
 import Form from "./form";
+import FormItem from "./form/form-item";
 import Popover from "./popover";
 import ShareSheet from "./sharesheet";
 import Skeleton from "./skeleton";
@@ -93,6 +94,7 @@ export default {
   TabbarItem,
   MarketDialog,
   Form,
+  FormItem,
   Popover,
   ShareSheet,
   Skeleton,

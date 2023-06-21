@@ -158,6 +158,7 @@ class QuarkField extends QuarkElement {
               onInput={this.evenFn("change")}
               onBlur={this.evenFn("blur")}
               onFocus={this.evenFn("focus")}
+              onClick={this.evenFn("click")}
             />
           </div>
           <div class="quark-field-error-msg" ref={this.errorRef}>

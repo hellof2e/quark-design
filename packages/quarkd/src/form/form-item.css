@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  background-color: #fff;
+}
+
+.quark-form-item__wrapper {
+  display: flex;
+  padding: 10px 0;
+  margin: 0 16px;
+  line-height: 24px;
+}
+
+.quark-form-item__prefix {
+  position: relative;
+  padding-left: 8px;
+  flex-shrink: 0;
+  /* width: var(--cell-title-width); */
+  white-space: var(--cell-title-white-space, wrap);
+  font-size: var(--cell-title-font-size, 14px);
+  font-weight: var(--cell-title-font-weight);
+  text-overflow: var(--cell-title-text-overflow);
+}
+
+.quark-form-item__required {
+  color: #f00;
+  position: absolute;
+  left: 0px;
+  transform: translateX(-50%);
+}
+
+.quark-form-item__label {
+  margin-right: 16px;
+}
+
+.quark-form-item__main {
+  flex: 1;
+}
+
+.quark-form-item_error-msg {
+  color: #f00;
+  font-size: 12px;
+}
+
+.quark-form-item__suffix {
+  flex-shrink: 0;
+}
