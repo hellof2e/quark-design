@@ -24,10 +24,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-:host([shape="square"]) {
-  border-radius: 0;
-}
-
 /* :host([shape="round"]) {
   border-radius: var(--button-height, 32px);
 } */
@@ -56,6 +52,10 @@
   font-size: var(--button-font-size, 18px);
   border-radius: var(--button-big-border-radius, 8px);
   width: 100%;
+}
+
+:host([shape="square"]) {
+  border-radius: 0;
 }
 
 :host(:not([type])) {
