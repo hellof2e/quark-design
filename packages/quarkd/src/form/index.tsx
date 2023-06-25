@@ -7,6 +7,7 @@ import validateAll, {
   booleanTagNames,
   radio,
   radioGroup,
+  formTagNames,
 } from "./utils";
 export interface Rule {
   name: string; // 需要校验的 field 组件的 name 属性
@@ -95,17 +96,37 @@ class QuarkForm extends QuarkElement {
     // this.setInit();
   };
 
-  validate = (formRef) => {
-    console.log("validate formRef", formRef);
-    const formItems = formRef.querySelectorAll("quark-form-item");
-    console.log("validate children", formItems);
-    if (formItems && formItems.length > 0) {
-      formItems.forEach((el) => {
-        // el.querySelector(".quark-form-item_error-msg").style.display = "none";
-        console.log(el);
-        console.log(typeof el);
-      });
-    }
+  validate = (formRef, callBack) => {
+    const hasCallback = callBack && typeof callBack === "function";
+    return new Promise((resolve) => {
+      console.log("validate formRef", formRef);
+      const formItems = formRef.querySelectorAll("quark-form-item");
+      const formData = {};
+      const errorMessages = [];
+      if (formItems && formItems.length > 0) {
+        formItems.forEach((el) => {
+          const childNodes = el.children;
+          let filedValue = "";
+          for (let i = 0; i < childNodes.length; i++) {
+            if (formTagNames.includes(childNodes[i].tagName)) {
+              filedValue = childNodes[i].value;
+              break;
+            }
+          }
+          const prop = el.getAttribute("prop");
+          if (prop) {
+            const msg = el.validate(prop);
+            if (msg) errorMessages.push(msg);
+            formData[prop] = filedValue;
+          }
+        });
+      }
+      if (errorMessages.length > 0) {
+        hasCallback ? callBack(false, errorMessages) : resolve(false);
+      } else {
+        hasCallback ? callBack(true) : resolve(true);
+      }
+    });
 
     // return validateAll(rules)(this.setErrorMsg);
   };

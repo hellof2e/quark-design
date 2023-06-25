@@ -1,4 +1,10 @@
-import { property, customElement, createRef, QuarkElement } from "quarkc";
+import {
+  property,
+  customElement,
+  createRef,
+  QuarkElement,
+  state,
+} from "quarkc";
 import "../cell";
 
 import style from "./form-item.css";
@@ -24,20 +30,38 @@ class QuarkFormItem extends QuarkElement {
 
   rules: IRuleItem[] = [];
 
-  required = false;
-
   islink = false;
 
-  validate() {
-    console.log("form-item validate");
+  @state()
+  errormsg = "";
+
+  validate(prop: string) {
+    if (!Array.isArray(this.rules)) {
+      throw new Error("rules need array");
+    }
+    this.rules.forEach((item) => {
+      if (item.required) {
+        this.errormsg = item.message || "";
+      }
+    });
+    return this.errormsg ? { [prop]: this.errormsg } : null;
   }
 
   errorMessageRender() {
-    console.log(this.showerrormessage);
     return (
-      this.showerrormessage && (
-        <div class="quark-form-item_error-msg">error-msg</div>
+      this.showerrormessage &&
+      this.errormsg && (
+        <div class="quark-form-item_error-msg">{this.errormsg}</div>
       )
+    );
+  }
+
+  isRequired() {
+    return (
+      this.rules &&
+      Array.isArray(this.rules) &&
+      this.rules.length > 0 &&
+      this.rules.some((rule) => rule.required)
     );
   }
 
@@ -46,7 +70,9 @@ class QuarkFormItem extends QuarkElement {
       <form-item>
         <div class="quark-form-item__wrapper">
           <div class="quark-form-item__prefix">
-            {this.required && <div class="quark-form-item__required">*</div>}
+            {this.isRequired() && (
+              <div class="quark-form-item__required">*</div>
+            )}
             <slot name="label">
               <div class="quark-form-item__label">{this.label}</div>
             </slot>

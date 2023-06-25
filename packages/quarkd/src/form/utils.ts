@@ -47,3 +47,12 @@ export const booleanTagNames = [
 export const radio = "QUARK-RADIO";
 
 export const radioGroup = "QUARK-RADIO-GROUP";
+
+export const field = "QUARK-FIELD";
+
+export const formTagNames = [
+  "QUARK-CHECKBOX",
+  "QUARK-SWITCH",
+  "QUARK-RADIO",
+  field,
+];
