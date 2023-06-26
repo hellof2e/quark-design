@@ -11,6 +11,14 @@
             required: true,
             message: '请输入姓名',
           },
+          {
+            message: '请输入正确格式姓名',
+            pattern: /^[a-z0-9]{5}$/,
+          },
+          {
+            message: '请输入自定义调用',
+            validator: (rule, value) => true,
+          },
         ]"
       >
         <quark-field :value="formData.name"></quark-field>

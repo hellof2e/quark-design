@@ -2,6 +2,8 @@ import { IRuleItem } from "./type";
 
 const isEmpty = (value: string | undefined) => Boolean(value);
 
+export const noop = () => {};
+
 export default (rules: IRuleItem[]) => (callBack: any) => {
   try {
     for (let i = 0; i < rules.length; i += 1) {

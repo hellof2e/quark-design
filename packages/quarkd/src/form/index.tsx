@@ -105,19 +105,20 @@ class QuarkForm extends QuarkElement {
       const errorMessages = [];
       if (formItems && formItems.length > 0) {
         formItems.forEach((el) => {
-          const childNodes = el.children;
-          let filedValue = "";
-          for (let i = 0; i < childNodes.length; i++) {
-            if (formTagNames.includes(childNodes[i].tagName)) {
-              filedValue = childNodes[i].value;
-              break;
-            }
-          }
+          // const childNodes = el.children;
+          // let filedValue = "";
+          // for (let i = 0; i < childNodes.length; i++) {
+          //   if (formTagNames.includes(childNodes[i].tagName)) {
+          //     filedValue = childNodes[i].value;
+          //     break;
+          //   }
+          // }
           const prop = el.getAttribute("prop");
           if (prop) {
-            const msg = el.validate(prop);
-            if (msg) errorMessages.push(msg);
-            formData[prop] = filedValue;
+            el.validate();
+            // const msg = el.validate(prop, filedValue);
+            // if (msg) errorMessages.push(msg);
+            // formData[prop] = filedValue;
           }
         });
       }

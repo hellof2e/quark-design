@@ -21,7 +21,7 @@
   text-overflow: var(--cell-title-text-overflow);
 }
 
-.quark-form-item__required {
+.quark-form-item__asterisk {
   color: #f00;
   position: absolute;
   left: 0px;

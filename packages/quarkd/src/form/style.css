@@ -17,6 +17,9 @@
   transform: scaleY(0.5);
   border-bottom: 2px solid #f5f6f7;
 }
+::slotted(quark-form-item):last-child {
+  background-color: #f00;
+}
 
 ::slotted(quark-form-item):last-child::after {
   border: none;

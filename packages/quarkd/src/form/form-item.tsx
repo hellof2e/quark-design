@@ -5,10 +5,12 @@ import {
   QuarkElement,
   state,
 } from "quarkc";
+import AsyncValidator from "async-validator";
 import "../cell";
 
 import style from "./form-item.css";
 import { IRuleItem } from "./type";
+import { formTagNames, noop } from "./utils";
 
 export interface Rule {
   name: string; // 需要校验的 field 组件的 name 属性
@@ -26,32 +28,77 @@ class QuarkFormItem extends QuarkElement {
 
   label = "";
 
+  hiderequiredasterisk: false; // 是否隐藏必填 *
+
   formRef: any = createRef();
 
   rules: IRuleItem[] = [];
 
   islink = false;
 
+  @property({ type: String })
+  prop: string;
+
   @state()
   errormsg = "";
 
-  validate(prop: string) {
+  @state()
+  validatestate = "";
+
+  @state()
+  validatemessage = "";
+
+  defaultSlotRef: any = createRef();
+
+  validate(callBack = noop) {
     if (!Array.isArray(this.rules)) {
       throw new Error("rules need array");
     }
-    this.rules.forEach((item) => {
-      if (item.required) {
-        this.errormsg = item.message || "";
+
+    if (this.rules.length === 0) {
+      return;
+    }
+
+    const value = this.getValue();
+    console.log("validate prop", this.prop, value);
+
+    const descriptor = {
+      [this.prop]: this.rules,
+    };
+
+    const validator = new AsyncValidator(descriptor);
+    validator.validate(
+      { [this.prop]: value },
+      { firstFields: true },
+      (errors, invalidFields) => {
+        this.validatestate = !errors ? "success" : "error";
+        this.validatemessage = errors ? errors[0].message : "";
+        callBack(this.validatemessage, invalidFields);
+        console.log(11111, this.validatemessage);
+        console.log(2222, invalidFields);
       }
-    });
-    return this.errormsg ? { [prop]: this.errormsg } : null;
+    );
+    return this.errormsg ? { [this.prop]: this.errormsg } : null;
   }
+
+  getValue = () => {
+    if (!this.prop) return;
+    const slotNodes = this.defaultSlotRef.current.assignedNodes();
+    if (slotNodes.length > 0) {
+      const formNode = slotNodes.find((node) =>
+        formTagNames.includes(node.tagName)
+      );
+      return formNode.value;
+    } else {
+      return null;
+    }
+  };
 
   errorMessageRender() {
     return (
-      this.showerrormessage &&
-      this.errormsg && (
-        <div class="quark-form-item_error-msg">{this.errormsg}</div>
+      this.validatestate === "error" &&
+      this.validatemessage && (
+        <div class="quark-form-item_error-msg">{this.validatemessage}</div>
       )
     );
   }
@@ -70,8 +117,8 @@ class QuarkFormItem extends QuarkElement {
       <form-item>
         <div class="quark-form-item__wrapper">
           <div class="quark-form-item__prefix">
-            {this.isRequired() && (
-              <div class="quark-form-item__required">*</div>
+            {!this.hiderequiredasterisk && this.isRequired() && (
+              <div class="quark-form-item__asterisk">*</div>
             )}
             <slot name="label">
               <div class="quark-form-item__label">{this.label}</div>
@@ -79,7 +126,7 @@ class QuarkFormItem extends QuarkElement {
           </div>
           <div class="quark-form-item__main">
             <div class="quark-form-item__main-content">
-              <slot></slot>
+              <slot ref={this.defaultSlotRef}></slot>
             </div>
             {this.errorMessageRender()}
           </div>

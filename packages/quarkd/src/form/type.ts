@@ -6,6 +6,7 @@ export interface IRuleItem {
   required?: boolean;
   validator?: (value: any) => boolean;
   validateStatus?: boolean;
+  pattern?: RegExp;
 }
 
 export interface IFormItem {
