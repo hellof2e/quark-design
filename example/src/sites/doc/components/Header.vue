@@ -119,12 +119,9 @@ export default defineComponent({
 		});
 
 		const isHomePage = computed(() => {
+			const excludedPaths = ["component", "guide", "otherdocs"];
 			return function () {
-				return !(
-					route.path.includes("component") ||
-					route.path.includes("guide") ||
-					route.path.includes("otherdocs")
-				);
+				return !excludedPaths.some((path) => route.path.includes(path));
 			};
 		});
 
