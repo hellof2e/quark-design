@@ -65,7 +65,7 @@ class QuarkPopup extends QuarkElement {
   position = "bottom";
 
   @property()
-  zindex: number | string | undefined = undefined;
+  zindex?: number | string = undefined;
 
   wrap: any = createRef();
 

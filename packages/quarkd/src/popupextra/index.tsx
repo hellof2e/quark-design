@@ -56,7 +56,7 @@ class QuarkPopupExtra extends QuarkElement {
   subtitle: string;
 
   @property()
-  zindex: number | string | undefined = undefined;
+  zindex?: number | string = undefined;
 
   @state()
   contentClassNames = "";

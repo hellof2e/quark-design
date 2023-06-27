@@ -40,13 +40,13 @@ class QuarkShareSheet extends QuarkElement {
 
   options: Option[] = [];
 
-  titleColor: string | undefined = undefined;
+  titleColor?: string = undefined;
 
-  titleFontSize: number | undefined = undefined;
+  titleFontSize?: number = undefined;
 
-  cancelColor: string | undefined = undefined;
+  cancelColor?: string = undefined;
 
-  cancelFontSize: number | undefined = undefined;
+  cancelFontSize?: number = undefined;
 
   zIndex = 999;
 

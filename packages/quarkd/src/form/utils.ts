@@ -1,6 +1,6 @@
 import { IRuleItem } from "./type";
 
-const isEmpty = (value: string | undefined) => Boolean(value);
+const isEmpty = (value?: string) => Boolean(value);
 
 export default (rules: IRuleItem[]) => (callBack: any) => {
   try {

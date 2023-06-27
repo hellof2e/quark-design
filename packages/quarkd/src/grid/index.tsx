@@ -30,7 +30,7 @@ class QuarkGridItem extends QuarkElement {
   icon = "";
 
   @property()
-  iconsize: string | undefined = undefined;
+  iconsize?: string = undefined;
 
   @state()
   style: any = {};
@@ -125,8 +125,8 @@ class QuarkGrid extends QuarkElement {
     return {
       width: `${itemWidth}px`,
       height: this.square ? `${itemWidth}px` : "auto",
-      borderRight: borderRight,
-      borderBottom: borderBottom,
+      borderRight,
+      borderBottom,
     };
   };
 

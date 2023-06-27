@@ -84,9 +84,9 @@ class QuarkSwipe extends QuarkElement {
 
   startY = 0;
 
-  endX: number | undefined = 0;
+  endX?: number = 0;
 
-  endY: number | undefined = 0;
+  endY?: number = 0;
 
   timer: any = null;
 
