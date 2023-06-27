@@ -36,7 +36,7 @@ class QuarkButton extends QuarkElement {
   type = "";
 
   @property()
-  icon: string | undefined = undefined;
+  icon?: string = undefined;
 
   @property()
   shape: string;

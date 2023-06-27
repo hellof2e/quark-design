@@ -24,10 +24,10 @@ class QuarkLoading extends QuarkElement {
   vertical = false;
 
   @property()
-  color: string | undefined = "#879099";
+  color?: string = "#879099";
 
   @property()
-  size: string | undefined = undefined;
+  size: string = undefined;
 
   @state()
   rotate = 0;

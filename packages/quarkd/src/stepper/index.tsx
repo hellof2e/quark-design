@@ -36,12 +36,12 @@ class QuarkStepper extends QuarkElement {
   @property({
     type: Number,
   })
-  min: number | undefined = undefined;
+  min?: number = undefined;
 
   @property({
     type: Number,
   })
-  max: number | undefined = undefined;
+  max?: number = undefined;
 
   @property({
     type: Boolean,
@@ -56,7 +56,7 @@ class QuarkStepper extends QuarkElement {
   @property({
     type: Number,
   })
-  decimallength: number | undefined = undefined;
+  decimallength?: number = undefined;
 
   @property({
     type: Number,

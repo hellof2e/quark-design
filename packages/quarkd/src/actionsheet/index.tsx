@@ -42,19 +42,19 @@ class QuarkActionSheet extends QuarkElement {
 
   wrap: any = createRef();
 
-  title: string | undefined = undefined;
+  title?: string = undefined;
 
   actions: Action[] = [];
 
-  cancelText: string | undefined = undefined;
+  cancelText?: string = undefined;
 
-  titleColor: string | undefined = undefined;
+  titleColor?: string = undefined;
 
-  titleFontSize: number | undefined = undefined;
+  titleFontSize?: number = undefined;
 
-  cancelTextColor: string | undefined = undefined;
+  cancelTextColor?: string = undefined;
 
-  cancelTextFontSize: number | undefined = undefined;
+  cancelTextFontSize?: number = undefined;
 
   zIndex = 999;
 
