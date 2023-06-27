@@ -11,9 +11,6 @@
   quark-form {
     background: #fff;
   }
-  quark-field {
-    // padding-top: 8px;
-  }
 
   .sapce {
     margin-bottom: 10px;
@@ -102,5 +99,13 @@
     quark-picker {
       width: auto;
     }
+  }
+}
+
+.flex-box {
+  display: flex;
+
+  quark-button {
+    margin: 0 8px;
   }
 }

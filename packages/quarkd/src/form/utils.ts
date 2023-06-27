@@ -2,7 +2,7 @@ import { IRuleItem } from "./type";
 
 const isEmpty = (value: string | undefined) => Boolean(value);
 
-export const noop = () => {};
+export const noop = (...agrs) => {};
 
 export default (rules: IRuleItem[]) => (callBack: any) => {
   try {
@@ -47,14 +47,23 @@ export const booleanTagNames = [
   "QUARK-RADIO",
 ];
 export const radio = "QUARK-RADIO";
-
 export const radioGroup = "QUARK-RADIO-GROUP";
-
 export const field = "QUARK-FIELD";
+export const checkbox = "QUARK-CHECKBOX";
+export const checkboxGroup = "QUARK-CHECKBOX-GROUP";
+export const swicth = "QUARK-SWITCH";
+export const rate = "QUARK-RATE";
+export const stepper = "QUARK-STEPPER";
+export const textarea = "QUARK-TEXTAREA";
 
 export const formTagNames = [
-  "QUARK-CHECKBOX",
-  "QUARK-SWITCH",
-  "QUARK-RADIO",
+  checkboxGroup,
+  checkbox,
+  radioGroup,
+  radio,
   field,
+  swicth,
+  rate,
+  stepper,
+  textarea,
 ];

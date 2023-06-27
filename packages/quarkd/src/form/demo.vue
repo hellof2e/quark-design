@@ -6,53 +6,98 @@
       <quark-form-item
         prop="name"
         :label="translate('labels')[0]"
-        :rules="[
-          {
-            required: true,
-            message: '请输入姓名',
-          },
-          {
-            message: '请输入正确格式姓名',
-            pattern: /^[a-z0-9]{5}$/,
-          },
-          {
-            message: '请输入自定义调用',
-            validator: (rule, value) => true,
-          },
-        ]"
+        :rules="[{ required: true, message: '请输入姓名' }]"
       >
-        <quark-field :value="formData.name"></quark-field>
+        <!-- <quark-field v-model="formData.name"></quark-field> -->
+        <quark-field></quark-field>
       </quark-form-item>
       <quark-form-item
         prop="password"
         :label="translate('labels')[1]"
-        :rules="[
-          {
-            required: true,
-            message: '请输入密码',
-          },
-        ]"
+        :rules="[{ required: true, message: '请输入密码' }]"
       >
-        <quark-field :value="formData.password" placeholder="请输入密码" />
+        <!-- <quark-field :value="formData.password" placeholder="请输入密码" /> -->
+        <quark-field placeholder="请输入密码" />
       </quark-form-item>
-      <quark-form-item prop="empty" label="空item"> </quark-form-item>
-      <quark-form-item prop="captcha" :label="translate('labels')[3]">
+      <!-- <quark-form-item prop="empty" label="空item"> </quark-form-item> -->
+      <quark-form-item
+        prop="captcha"
+        :label="translate('labels')[3]"
+        :rules="[{ required: true, message: '请输入验证码' }]"
+      >
         <div slot="label">验证码</div>
-        <quark-field :value="formData.captcha" />
+        <quark-field />
+        <!-- <quark-field :value="formData.captcha" /> -->
         <div slot="suffix">
           <quark-button type="primary" size="small">发送验证码</quark-button>
         </div>
       </quark-form-item>
-      <quark-form-item label="复选框" :showerrormessage="showErrorMessage">
-        <quark-checkbox
-          name="checkbox"
-          :checked="formData.checkbox"
+      <quark-form-item
+        prop="checkbox"
+        label="复选框"
+        :showerrormessage="showErrorMessage"
+        :rules="[{ required: true, message: '请选择复选框' }]"
+      >
+        <quark-checkbox-group
+          :value="formData.checkbox"
           @change="onCheckboxChange"
         >
-          复选框
-        </quark-checkbox>
+          <quark-checkbox name="apple">苹果</quark-checkbox>
+          <quark-checkbox name="warning" disabled>橘子</quark-checkbox>
+          <quark-checkbox name="banana">香蕉</quark-checkbox>
+        </quark-checkbox-group>
       </quark-form-item>
-      <quark-form-item prop="picker" label="选择器" islink>
+      <quark-form-item
+        prop="radio"
+        label="单选框"
+        :rules="[{ required: true, message: '请选择单选框' }]"
+      >
+        <quark-radio-group :value="formData.radio" @change="onRadioChange">
+          <quark-radio name="apple">方形</quark-radio>
+          <quark-radio name="banana">圆形</quark-radio>
+        </quark-radio-group>
+      </quark-form-item>
+      <quark-form-item
+        prop="switch"
+        label="开关"
+        :rules="[{ required: true, message: '请选择' }]"
+      >
+        <quark-switch :checked="formData.switch"></quark-switch>
+      </quark-form-item>
+      <quark-form-item
+        prop="rate"
+        label="评分"
+        :rules="[{ required: true, message: '请选择' }]"
+      >
+        <quark-rate></quark-rate>
+      </quark-form-item>
+      <quark-form-item
+        prop="stepper"
+        label="步进器"
+        :rules="[{ required: true, message: '请选择' }]"
+      >
+        <quark-stepper min="5" max="12" />
+      </quark-form-item>
+      <quark-form-item
+        prop="textarea"
+        label="文本域"
+        :rules="[{ required: true, message: '请选择' }]"
+      >
+        <quark-textarea showcount maxlength="50" />
+      </quark-form-item>
+      <quark-form-item
+        prop="uploader"
+        label="文件上传"
+        :rules="[{ required: true, message: '请选择' }]"
+      >
+        <quark-uploader preview ref="uploadRef"></quark-uploader>
+      </quark-form-item>
+      <quark-form-item
+        prop="picker"
+        label="选择器"
+        islink
+        :rules="[{ required: true, message: '请选择' }]"
+      >
         <quark-field
           :value="formData.picker"
           readonly
@@ -68,9 +113,12 @@
       </quark-form-item>
     </quark-form>
     <br />
-    <quark-button type="primary" size="big" @click="submitHandler">
-      提交
-    </quark-button>
+    <div class="flex-box">
+      <quark-button type="primary" size="big" @click="submitHandler">
+        提交
+      </quark-button>
+      <quark-button size="big" @click="resetHandler"> 重置 </quark-button>
+    </div>
   </div>
 </template>
 
@@ -88,9 +136,9 @@ export default createDemo({
       name: "name",
       password: "password",
       captcha: "1234",
-      checkbox: "",
+      checkbox: [],
       picker: "",
-      radio: "",
+      radio: [],
       rate: "",
       stepper: "",
       switch: "",
@@ -99,6 +147,7 @@ export default createDemo({
     });
     const form1 = ref(null);
     const pickerRef = ref(null);
+    const uploadRef = ref();
     onMounted(() => {
       const picker = pickerRef.value;
       picker.setColumns([
@@ -106,6 +155,10 @@ export default createDemo({
           defaultIndex: 0,
           values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
         },
+      ]);
+      this.$refs.uploadRef.setPreview([
+        "https://img.yzcdn.cn/vant/leaf.jpg",
+        "https://img.yzcdn.cn/vant/leaf.jpg",
       ]);
     });
     onBeforeUnmount(() => {
@@ -167,13 +220,23 @@ export default createDemo({
     });
 
     const submitHandler = () => {
-      form1.value.validate(form1.value, (valid, errorMsg) => {
-        console.log(valid, errorMsg);
+      form1.value.validate((valid, errorMsg) => {
+        console.log("submitHandler", valid, errorMsg);
       });
     };
 
+    const resetHandler = () => {
+      form1.value.clearValidate();
+    };
+
     const onCheckboxChange = ({ detail }) => {
+      console.log("onCheckboxChange", detail.value, formData.value);
       formData.value.checkbox = detail.value;
+    };
+
+    const onRadioChange = ({ detail }) => {
+      console.log("onRadioChange", detail.value, formData.value);
+      formData.value.radio = detail.value;
     };
 
     const pickerVisible = ref(false);
@@ -197,6 +260,9 @@ export default createDemo({
       submitHandler,
       onCheckboxChange,
       pickerVisible,
+      resetHandler,
+      onRadioChange,
+      uploadRef,
     };
   },
 });
