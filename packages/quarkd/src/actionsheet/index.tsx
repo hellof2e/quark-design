@@ -42,7 +42,7 @@ class QuarkActionSheet extends QuarkElement {
 
   wrap: any = createRef();
 
-  title?: string = undefined;
+  title: string | undefined = undefined;
 
   actions: Action[] = [];
 
