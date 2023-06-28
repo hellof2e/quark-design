@@ -2,13 +2,11 @@
   <div class="demo scoped-form">
     <h2>{{ translate("title.basic") }}</h2>
     <quark-form ref="form1">
-      <!-- <quark-field name="name" :label="translate('labels')[0]"></quark-field> -->
       <quark-form-item
         prop="name"
         :label="translate('labels')[0]"
         :rules="[{ required: true, message: '请输入姓名' }]"
       >
-        <!-- <quark-field v-model="formData.name"></quark-field> -->
         <quark-field></quark-field>
       </quark-form-item>
       <quark-form-item
@@ -16,10 +14,8 @@
         :label="translate('labels')[1]"
         :rules="[{ required: true, message: '请输入密码' }]"
       >
-        <!-- <quark-field :value="formData.password" placeholder="请输入密码" /> -->
         <quark-field placeholder="请输入密码" />
       </quark-form-item>
-      <!-- <quark-form-item prop="empty" label="空item"> </quark-form-item> -->
       <quark-form-item
         prop="captcha"
         :label="translate('labels')[3]"
@@ -27,7 +23,6 @@
       >
         <div slot="label">验证码</div>
         <quark-field />
-        <!-- <quark-field :value="formData.captcha" /> -->
         <div slot="suffix">
           <quark-button type="primary" size="small">发送验证码</quark-button>
         </div>

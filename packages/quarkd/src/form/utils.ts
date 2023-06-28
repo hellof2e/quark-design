@@ -55,15 +55,17 @@ export const swicth = "QUARK-SWITCH";
 export const rate = "QUARK-RATE";
 export const stepper = "QUARK-STEPPER";
 export const textarea = "QUARK-TEXTAREA";
+export const uploader = "QUARK-UPLOADER";
 
-export const formTagNames = [
-  checkboxGroup,
-  checkbox,
-  radioGroup,
-  radio,
-  field,
-  swicth,
-  rate,
-  stepper,
-  textarea,
-];
+export const formTagNamesMap = {
+  [checkboxGroup]: checkboxGroup,
+  [checkbox]: checkbox,
+  [radioGroup]: radioGroup,
+  [radio]: radio,
+  [field]: field,
+  [swicth]: swicth,
+  [rate]: rate,
+  [stepper]: stepper,
+  [textarea]: textarea,
+  [uploader]: uploader,
+};

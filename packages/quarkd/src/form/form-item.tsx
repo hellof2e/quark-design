@@ -10,7 +10,7 @@ import "../cell";
 
 import style from "./form-item.css";
 import { IRuleItem } from "./type";
-import { formTagNames, noop, swicth } from "./utils";
+import { formTagNamesMap, noop } from "./utils";
 import { debounce } from "../../utils/index";
 
 export interface Rule {
@@ -82,8 +82,6 @@ class QuarkFormItem extends QuarkElement {
         this.validatestate = !errors ? "success" : "error";
         this.validatemessage = errors ? errors[0].message : "";
         callBack(this.validatemessage, invalidFields);
-        // console.log(11111, this.validatemessage);
-        // console.log(2222, invalidFields);
       }
     );
     return this.errormsg ? { [this.prop]: this.errormsg } : null;
@@ -100,15 +98,17 @@ class QuarkFormItem extends QuarkElement {
     if (this.formnode) {
       const tagName = this.formnode.tagName;
       if (
-        tagName === "QUARK-RADIO" ||
-        tagName === "QUARK-CHECKBOX" ||
-        tagName === swicth
+        tagName === formTagNamesMap["QUARK-RADIO"] ||
+        tagName === formTagNamesMap["QUARK-CHECKBOX"] ||
+        tagName === formTagNamesMap["QUARK-SWITCH"]
       ) {
         value = this.formnode.checked;
+      } else if (tagName === formTagNamesMap["QUARK-UPLOADER"]) {
+        value = this.formnode.values;
       } else {
         value = this.formnode.value;
       }
-      console.log("getValue", value);
+      console.log("getValue", this.prop, value);
     }
 
     return value;
@@ -118,9 +118,10 @@ class QuarkFormItem extends QuarkElement {
     if (!this.defaultSlotRef.current) return;
     this.slotNodes = this.defaultSlotRef.current.assignedNodes();
     if (this.slotNodes.length > 0) {
-      const formNode = this.slotNodes.find((node) =>
-        formTagNames.includes(node.tagName)
-      );
+      const formNode = this.slotNodes.find((node) => {
+        console.log("node", node.tagName, !!formTagNamesMap[node.tagName]);
+        return !!formTagNamesMap[node.tagName];
+      });
 
       // 监听表单字段change blur
       if (formNode) {
@@ -128,7 +129,7 @@ class QuarkFormItem extends QuarkElement {
         this.formnode.addEventListener("change", () => {
           this.onFieldChange();
         });
-        if (this.formnode.tagName === "QUARK-FIELD") {
+        if (this.formnode.tagName === formTagNamesMap["QUARK-FIELD"]) {
           this.formnode.addEventListener("blur", () => {
             this.onFieldBlur();
           });

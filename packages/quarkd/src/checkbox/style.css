@@ -127,3 +127,11 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+quark-checkbox-group quark-checkbox {
+  margin-right: var(--checkbox-group-margin, quark-hSpacingSm);
+}
+
+quark-checkbox-group quark-checkbox:last-child {
+  margin-right: 0;
+}
