@@ -174,10 +174,6 @@ export default createDemo({
     const uploadRef = ref(null);
 
     onMounted(() => {
-      const form = formRef.value;
-      form.setGlobalProps({
-        showmessage: false,
-      });
       const picker = pickerRef.value;
       picker.setColumns([
         {
