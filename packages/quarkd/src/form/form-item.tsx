@@ -20,42 +20,64 @@ export interface Rule {
   validator?: (value: string | number) => boolean; // 校验规则
 }
 
+interface IFormProps {
+  hiderequiredasterisk: boolean;
+  hidemessage: boolean;
+  labelwidth: string;
+  labelsuffix: string;
+  labelposition: "left" | "right";
+}
+
 @customElement({
   tag: "quark-form-item",
   style,
 })
 class QuarkFormItem extends QuarkElement {
-  showerrormessage = true;
+  @property({ type: Boolean })
+  hidemessage = false;
 
+  @property({ type: String })
   label = "";
 
+  @property({ type: String })
+  labelwidth = "";
+
+  @property({ type: Boolean })
+  islink = false;
+
+  @property({ type: String })
+  prop: string;
+
+  @property({ type: Boolean })
   hiderequiredasterisk: false; // 是否隐藏必填 *
 
   formRef: any = createRef();
 
   rules: IRuleItem[] = [];
 
-  islink = false;
-
-  @property({ type: String })
-  prop: string;
+  @state()
+  validateState = "";
 
   @state()
-  errormsg = "";
+  validateMessage = "";
 
   @state()
-  validatestate = "";
+  itemNode = null;
 
   @state()
-  validatemessage = "";
-
-  @state()
-  slotNodes = [];
-
-  @state()
-  formnode = null;
+  formProps: IFormProps = {
+    hiderequiredasterisk: false,
+    hidemessage: false,
+    labelwidth: "",
+    labelsuffix: "",
+    labelposition: "left",
+  };
 
   defaultSlotRef: any = createRef();
+
+  setFormProps(props: IFormProps) {
+    this.formProps = props;
+  }
 
   validate(callBack = noop) {
     if (!this.prop) return;
@@ -68,7 +90,7 @@ class QuarkFormItem extends QuarkElement {
     }
 
     const value = this.getValue();
-    this.validatestate = "validating";
+    this.validateState = "validating";
 
     const descriptor = {
       [this.prop]: this.rules,
@@ -79,36 +101,34 @@ class QuarkFormItem extends QuarkElement {
       { [this.prop]: value },
       { firstFields: true },
       (errors, invalidFields) => {
-        this.validatestate = !errors ? "success" : "error";
-        this.validatemessage = errors ? errors[0].message : "";
-        callBack(this.validatemessage, invalidFields);
+        this.validateState = !errors ? "success" : "error";
+        this.validateMessage = errors ? errors[0].message : "";
+        callBack(this.validateMessage, invalidFields);
       }
     );
-    return this.errormsg ? { [this.prop]: this.errormsg } : null;
   }
 
   clearValidate() {
-    this.validatestate = "";
-    this.validatemessage = "";
+    this.validateState = "";
+    this.validateMessage = "";
   }
 
   getValue = () => {
     if (!this.prop) return;
     let value = null;
-    if (this.formnode) {
-      const tagName = this.formnode.tagName;
+    if (this.itemNode) {
+      const tagName = this.itemNode.tagName;
       if (
         tagName === formTagNamesMap["QUARK-RADIO"] ||
         tagName === formTagNamesMap["QUARK-CHECKBOX"] ||
         tagName === formTagNamesMap["QUARK-SWITCH"]
       ) {
-        value = this.formnode.checked;
+        value = this.itemNode.checked;
       } else if (tagName === formTagNamesMap["QUARK-UPLOADER"]) {
-        value = this.formnode.values;
+        value = this.itemNode.values;
       } else {
-        value = this.formnode.value;
+        value = this.itemNode.value;
       }
-      console.log("getValue", this.prop, value);
     }
 
     return value;
@@ -116,21 +136,20 @@ class QuarkFormItem extends QuarkElement {
 
   defaultSlotChange = () => {
     if (!this.defaultSlotRef.current) return;
-    this.slotNodes = this.defaultSlotRef.current.assignedNodes();
-    if (this.slotNodes.length > 0) {
-      const formNode = this.slotNodes.find((node) => {
-        console.log("node", node.tagName, !!formTagNamesMap[node.tagName]);
+    const slotNodes = this.defaultSlotRef.current.assignedNodes();
+    if (slotNodes.length > 0) {
+      const formNode = slotNodes.find((node) => {
         return !!formTagNamesMap[node.tagName];
       });
 
       // 监听表单字段change blur
       if (formNode) {
-        this.formnode = formNode;
-        this.formnode.addEventListener("change", () => {
+        this.itemNode = formNode;
+        this.itemNode.addEventListener("change", () => {
           this.onFieldChange();
         });
-        if (this.formnode.tagName === formTagNamesMap["QUARK-FIELD"]) {
-          this.formnode.addEventListener("blur", () => {
+        if (this.itemNode.tagName === formTagNamesMap["QUARK-FIELD"]) {
+          this.itemNode.addEventListener("blur", () => {
             this.onFieldBlur();
           });
         }
@@ -139,31 +158,23 @@ class QuarkFormItem extends QuarkElement {
   };
 
   onFieldChange = debounce(() => {
-    console.log("onFieldChange");
+    // console.log("onFieldChange");
     this.validate();
   }, 200);
 
   onFieldBlur() {
-    console.log("onFieldBlur");
+    // console.log("onFieldBlur");
     this.validate();
   }
 
-  errorMessageRender() {
-    return (
-      this.validatestate === "error" &&
-      this.validatemessage && (
-        <div class="quark-form-item_error-msg">{this.validatemessage}</div>
-      )
-    );
-  }
   componentWillUnmount() {
     // 移除监听表单字段change blur
-    if (this.formnode) {
-      this.formnode.removeEventListener("change", () => {
+    if (this.itemNode) {
+      this.itemNode.removeEventListener("change", () => {
         this.onFieldChange();
       });
-      if (this.formnode.tagName === "QUARK-FIELD") {
-        this.formnode.removeEventListener("blur", () => {
+      if (this.itemNode.tagName === "QUARK-FIELD") {
+        this.itemNode.removeEventListener("blur", () => {
           this.onFieldBlur();
         });
       }
@@ -180,25 +191,48 @@ class QuarkFormItem extends QuarkElement {
     );
   }
 
-  formItemClassHandler() {
+  itemClass() {
     const classNames = ["quark-form-item"];
-    this.validatestate === "success" ? classNames.push("is-success") : null;
-    this.validatestate === "validating"
+    this.validateState === "success" ? classNames.push("is-success") : null;
+    this.validateState === "validating"
       ? classNames.push("is-validating")
       : null;
+
+    if (this.formProps.hiderequiredasterisk) {
+      classNames.push("is-no-asterisk");
+    }
     return classNames.join(" ");
+  }
+
+  errorMessageRender() {
+    return (
+      !this.formProps.hidemessage &&
+      !this.hidemessage &&
+      this.validateState === "error" &&
+      this.validateMessage && (
+        <div class="quark-form-item_error-msg">{this.validateMessage}</div>
+      )
+    );
+  }
+  labelStyle() {
+    const ret: any = {};
+    if (this.formProps.labelwidth) {
+      ret.width = this.formProps.labelwidth;
+      ret.textAlign = this.formProps.labelposition;
+    }
+    return ret;
   }
 
   render() {
     return (
-      <div class={this.formItemClassHandler()}>
+      <div class={this.itemClass()}>
         <div class="quark-form-item__wrapper">
           <div class="quark-form-item__prefix">
-            {!this.hiderequiredasterisk && this.isRequired() && (
-              <div class="quark-form-item__asterisk">*</div>
-            )}
-            <div class="quark-form-item__label">
-              <slot name="label">{this.label}</slot>
+            <div class="quark-form-item__label" style={this.labelStyle()}>
+              <slot name="label">
+                {this.label}
+                {this.formProps.labelsuffix}
+              </slot>
             </div>
           </div>
           <div class="quark-form-item__main">

@@ -12,7 +12,6 @@
 
 .quark-form-item__prefix {
   position: relative;
-  padding-left: 8px;
   flex-shrink: 0;
   /* width: var(--cell-title-width); */
   white-space: var(--cell-title-white-space, wrap);
@@ -29,7 +28,17 @@
 }
 
 .quark-form-item__label {
+  display: flex;
   margin-right: 16px;
+}
+.quark-form-item__label::before {
+  content: '*';
+  color: #f00;
+  margin-right: 4px;
+}
+
+.is-no-asterisk .quark-form-item__label::before {
+  display: none;
 }
 
 .quark-form-item__main {

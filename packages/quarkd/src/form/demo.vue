@@ -1,6 +1,35 @@
 <template>
   <div class="demo scoped-form">
     <h2>{{ translate("title.basic") }}</h2>
+    <quark-form
+      ref="formRef"
+      labelwidth="50px"
+      labelposition="right"
+      :hidemessage="true"
+      labelsuffix=":"
+    >
+      <quark-form-item
+        prop="name"
+        :label="translate('labels')[0]"
+        :rules="[{ required: true, message: '请输入姓名' }]"
+      >
+        <quark-field placeholder="请输入姓名"></quark-field>
+      </quark-form-item>
+      <quark-form-item
+        prop="password"
+        :label="translate('labels')[1]"
+        :rules="[{ required: true, message: '请输入密码' }]"
+      >
+        <quark-field placeholder="请输入密码" />
+      </quark-form-item>
+    </quark-form>
+    <br />
+    <div class="flex-box">
+      <quark-button type="primary" size="big" @click="validateField">
+        提交
+      </quark-button>
+    </div>
+    <h2>{{ translate("title.basic") }}</h2>
     <quark-form ref="form1">
       <quark-form-item
         prop="name"
@@ -38,7 +67,6 @@
           @change="onCheckboxChange"
         >
           <quark-checkbox name="apple">苹果</quark-checkbox>
-          <quark-checkbox name="warning" disabled>橘子</quark-checkbox>
           <quark-checkbox name="banana">香蕉</quark-checkbox>
         </quark-checkbox-group>
       </quark-form-item>
@@ -140,10 +168,16 @@ export default createDemo({
       textarea: "",
       uploader: [],
     });
+    const formRef = ref(null);
     const form1 = ref(null);
     const pickerRef = ref(null);
-    const uploadRef = ref();
+    const uploadRef = ref(null);
+
     onMounted(() => {
+      const form = formRef.value;
+      form.setGlobalProps({
+        showmessage: false,
+      });
       const picker = pickerRef.value;
       picker.setColumns([
         {
@@ -151,7 +185,8 @@ export default createDemo({
           values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
         },
       ]);
-      this.$refs.uploadRef.setPreview([
+      const uploader = uploadRef.value;
+      uploader.setPreview([
         "https://img.yzcdn.cn/vant/leaf.jpg",
         "https://img.yzcdn.cn/vant/leaf.jpg",
       ]);
@@ -214,10 +249,13 @@ export default createDemo({
       });
     });
 
-    const submitHandler = () => {
+    const submitHandler = async () => {
       form1.value.validate((valid, errorMsg) => {
         console.log("submitHandler", valid, errorMsg);
       });
+
+      // const valid = await form1.value.validate();
+      // console.log(valid);
     };
 
     const resetHandler = () => {
@@ -245,7 +283,14 @@ export default createDemo({
       pickerVisible.value = false;
     };
 
+    const validateField = () => {
+      formRef.value.validateField(["name", "password"], (errorMsg) => {
+        console.log(errorMsg);
+      });
+    };
+
     return {
+      formRef,
       formData,
       form1,
       pickerRef,
@@ -258,6 +303,7 @@ export default createDemo({
       resetHandler,
       onRadioChange,
       uploadRef,
+      validateField,
     };
   },
 });
