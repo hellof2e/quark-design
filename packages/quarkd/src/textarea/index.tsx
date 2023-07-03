@@ -71,13 +71,13 @@ class TextArea extends QuarkElement {
 
   textAreaRef: any = createRef();
 
-  handleInput = () => {
+  evenFn = (type: string) => (e: Event) => {
+    if (!this.textAreaRef && !this.textAreaRef.current) return;
+    e.stopPropagation();
     const { current } = this.textAreaRef;
-
     this.value = current.value;
-
-    // 自适应高度
-    if (this.autosize) {
+    this.$emit(type, { detail: { value: this.value } });
+    if (type === "change" && this.autosize) {
       current.style.height = "auto";
       current.style.height = `${current.scrollHeight}px`;
     }
@@ -97,7 +97,11 @@ class TextArea extends QuarkElement {
           maxlength={this.maxlength}
           placeholder={this.placeholder}
           readonly={this.readonly}
-          oninput={this.handleInput}
+          onChange={this.evenFn("change")}
+          onInput={this.evenFn("change")}
+          onBlur={this.evenFn("blur")}
+          onFocus={this.evenFn("focus")}
+          onClick={this.evenFn("click")}
         ></textarea>
         {this.showcount && (
           <div class="quark-textarea-text-count">

@@ -91,6 +91,11 @@ class QuarkField extends QuarkElement {
 
   evenFn = (type: string) => (e: Event) => {
     if (!this.inputRef && !this.inputRef.current) return;
+    if (
+      (this.readonly || this.disabled) &&
+      (type === "blur" || type === "focus")
+    )
+      return;
     e.stopPropagation();
     const { value } = this.inputRef.current;
     this.value = value;

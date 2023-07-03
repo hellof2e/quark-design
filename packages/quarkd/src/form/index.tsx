@@ -21,7 +21,7 @@ export interface Rule {
   style,
 })
 class QuarkForm extends QuarkElement {
-  @property()
+  @property({ type: Boolean })
   validatefirst: false;
 
   @property({ type: Boolean })
@@ -46,23 +46,26 @@ class QuarkForm extends QuarkElement {
   @state()
   formItems: QuarkFormItem[] = [];
 
+  model: { [key: string]: any } | null = null;
+
   handleRightSlotChange = () => {
     if (this.slotRef.current) {
       this.formItems = this.slotRef.current
         .assignedNodes()
         .filter((item) => item.tagName === "QUARK-FORM-ITEM" && item.prop);
 
-      if (this.hidemessage) {
-        this.formItems.forEach((el) => {
-          el.setFormProps({
-            hidemessage: this.hidemessage,
-            labelwidth: this.labelwidth,
-            hiderequiredasterisk: this.hiderequiredasterisk,
-            labelsuffix: this.labelsuffix,
-            labelposition: this.labelposition,
-          });
+      this.formItems.forEach((el) => {
+        if (this.model) {
+          el.setFormModel(this.model);
+        }
+        el.setFormProps({
+          hidemessage: this.hidemessage,
+          labelwidth: this.labelwidth,
+          hiderequiredasterisk: this.hiderequiredasterisk,
+          labelsuffix: this.labelsuffix,
+          labelposition: this.labelposition,
         });
-      }
+      });
     }
   };
 
@@ -127,8 +130,18 @@ class QuarkForm extends QuarkElement {
     });
   }
 
+  resetFields() {
+    this.formItems.forEach((item) => {
+      item.resetField();
+    });
+  }
+
+  setModel = (model) => {
+    this.model = model;
+  };
+
   componentDidMount(): void {
-    console.log("componentDidMount", this.hidemessage, typeof this.hidemessage);
+    console.log("componentDidMount");
   }
 
   render() {

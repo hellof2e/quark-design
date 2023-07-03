@@ -5,7 +5,6 @@
       ref="formRef"
       labelwidth="50px"
       labelposition="right"
-      :hidemessage="true"
       labelsuffix=":"
     >
       <quark-form-item
@@ -32,18 +31,18 @@
     <h2>{{ translate("title.basic") }}</h2>
     <quark-form ref="form1">
       <quark-form-item
-        prop="name"
+        prop="name.a"
         :label="translate('labels')[0]"
         :rules="[{ required: true, message: '请输入姓名' }]"
       >
-        <quark-field></quark-field>
+        <quark-field v-model="formData.name.a"></quark-field>
       </quark-form-item>
       <quark-form-item
         prop="password"
         :label="translate('labels')[1]"
         :rules="[{ required: true, message: '请输入密码' }]"
       >
-        <quark-field placeholder="请输入密码" />
+        <quark-field v-model="formData.password" placeholder="请输入密码" />
       </quark-form-item>
       <quark-form-item
         prop="captcha"
@@ -59,7 +58,6 @@
       <quark-form-item
         prop="checkbox"
         label="复选框"
-        :showerrormessage="showErrorMessage"
         :rules="[{ required: true, message: '请选择复选框' }]"
       >
         <quark-checkbox-group
@@ -106,7 +104,7 @@
         label="文本域"
         :rules="[{ required: true, message: '请选择' }]"
       >
-        <quark-textarea showcount maxlength="50" />
+        <quark-textarea showcount autosize />
       </quark-form-item>
       <quark-form-item
         prop="uploader"
@@ -156,17 +154,22 @@ import Toast from "../toast";
 export default createDemo({
   setup() {
     const formData = ref({
-      name: "name",
+      name: {
+        a: "b",
+      },
       password: "password",
       captcha: "1234",
-      checkbox: [],
-      picker: "",
-      radio: [],
+      checkbox: ["apple"],
+      radio: "",
       rate: "",
       stepper: "",
       switch: "",
       textarea: "",
-      uploader: [],
+      uploader: [
+        { url: "https://img.yzcdn.cn/vant/leaf.jpg" },
+        { url: "https://img.yzcdn.cn/vant/leaf.jpg" },
+      ],
+      picker: "绍兴",
     });
     const formRef = ref(null);
     const form1 = ref(null);
@@ -186,6 +189,9 @@ export default createDemo({
         "https://img.yzcdn.cn/vant/leaf.jpg",
         "https://img.yzcdn.cn/vant/leaf.jpg",
       ]);
+
+      const form1Ref = form1.value;
+      form1Ref.setModel(formData.value);
     });
     onBeforeUnmount(() => {
       console.log("onBeforeUnmount");
@@ -255,7 +261,7 @@ export default createDemo({
     };
 
     const resetHandler = () => {
-      form1.value.clearValidate();
+      form1.value.resetFields();
     };
 
     const onCheckboxChange = ({ detail }) => {
@@ -275,6 +281,7 @@ export default createDemo({
     };
 
     const confirm = ({ detail }) => {
+      console.log(formData.value);
       formData.value.picker = detail.value.map((i) => i.value).join(" ");
       pickerVisible.value = false;
     };
