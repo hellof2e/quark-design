@@ -198,7 +198,7 @@ export default createDemo({
           title: {
             basic: "基础用法",
             rule: "自定义校验规则",
-            items: "表单项大全",
+            items: "表单项类型",
             slots: "使用插槽",
           },
           label: {

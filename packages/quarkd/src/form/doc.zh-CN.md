@@ -71,8 +71,6 @@ export default {
 
 ### 自定义校验规则
 
-只对 field 组件有用，支持 required 、validator 自定义事件
-
 ```html
 <quark-form ref="ruleFormRef" labelwidth="70px">
   <quark-form-item
@@ -151,7 +149,7 @@ export default {
 }
 ```
 
-### 表单项大全
+### 表单项类型
 
 ```html
 <quark-form>
