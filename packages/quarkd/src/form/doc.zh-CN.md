@@ -101,9 +101,7 @@ export default {
 </quark-form>
 
 <div class="flex-box">
-  <quark-button type="primary" size="big" @click="submit">
-    {{ translate("submit") }}
-  </quark-button>
+  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
 </div>
 ```
 
