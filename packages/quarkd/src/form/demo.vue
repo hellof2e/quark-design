@@ -140,6 +140,17 @@
         />
       </quark-form-item>
     </quark-form>
+
+    <h2>{{ translate("title.slots") }}</h2>
+    <quark-form>
+      <quark-form-item>
+        <div slot="label">自定义label</div>
+        <quark-field />
+        <div slot="suffix">
+          <quark-button type="primary" size="small">发送验证码</quark-button>
+        </div>
+      </quark-form-item>
+    </quark-form>
   </div>
 </template>
 
@@ -188,6 +199,7 @@ export default createDemo({
             basic: "基础用法",
             rule: "自定义校验规则",
             items: "表单项大全",
+            slots: "使用插槽",
           },
           label: {
             name: "姓名",
@@ -230,6 +242,7 @@ export default createDemo({
             basic: "Basic Usage",
             rule: "Custom Rules",
             items: "Form Items",
+            slots: "Use slots",
           },
           label: {
             name: "Name",

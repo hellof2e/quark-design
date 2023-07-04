@@ -199,6 +199,8 @@ export default {
 </quark-form>
 ```
 
+### 使用插槽
+
 ```js
 export default {
   data() {
@@ -274,3 +276,10 @@ export default {
 | labelwidth           | 表单域标签的的宽度，例如 '50px'。                                            | `string`  |         |
 | hidemessage          | 是否隐藏校验错误信息                                                         | `boolean` | `false` |
 | hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号                                         | `boolean` | `false` |
+
+### FormItem Slots
+
+| 名称   | 说明             |
+| ------ | ---------------- |
+| label  | 自定义左侧 label |
+| suffix | 自定义右侧后缀   |
