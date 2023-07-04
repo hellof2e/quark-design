@@ -24,18 +24,18 @@ import "quarkd/lib/popup";
 <script>
 import  'quarkd/lib/popup';
 export default {
-    data() {
-        return {
-            open: false
-        }
+  data() {
+    return {
+      open: false
+    }
+  },
+  methods: {
+    showPopup() {
+      this.open = true;
     },
-    methods: {
-        showPopup() {
-            this.open = true;
-        },
-        handleClose() {
-            this.open = false;
-        }
+    handleClose() {
+      this.open = false;
+    }
   }
 }
 </script>
