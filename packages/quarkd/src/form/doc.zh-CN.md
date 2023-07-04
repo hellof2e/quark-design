@@ -71,6 +71,8 @@ export default {
 
 ### 自定义校验规则
 
+自定义校验 callback 必须被调用。 更多高级用法可参考 [async-validator](https://github.com/yiminghe/async-validator)。
+
 ```html
 <quark-form ref="ruleFormRef" labelwidth="70px">
   <quark-form-item
