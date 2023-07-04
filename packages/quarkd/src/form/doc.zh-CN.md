@@ -8,35 +8,65 @@
 
 ```tsx
 import "quarkd/lib/form";
+import "quarkd/lib/form-item";
 ```
 
 ### 基本用法
 
-配合 name 字段，设置表单项的值
+配合 prop 字段，设置表单项的值
 
 ```html
-<quark-form ref="form1">
-  <quark-field name="name" label="姓名"></quark-field>
-  <div class="line" />
-  <quark-field type="password" name="password" label="密码" />
-  <div class="submit-wrap">
-    <div @click="submit1" class="submit">提交</div>
-  </div>
+<quark-form ref="formRef" labelwidth="70px">
+  <quark-form-item
+    prop="name"
+    label="姓名"
+    :rules="[{ required: true, message: '请输入姓名' }]"
+  >
+    <quark-field v-model="form.name" placeholder="请输入姓名"></quark-field>
+  </quark-form-item>
+  <quark-form-item
+    prop="password"
+    label="密码"
+    :rules="[{ required: true, message: '请输入密码' }]"
+  >
+    <quark-field
+      v-model="form.password"
+      type="password"
+      placeholder="请输入密码"
+    />
+  </quark-form-item>
 </quark-form>
+
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
+  <quark-button size="big" @click="reset"> 重置 </quark-button>
+</div>
 ```
 
 ```js
-this.$refs.form1.setRules = ([
-    { name: 'name', required: true },
-    { name: 'password', required: true, type: 'password' }
-  ]);
- submit1() {
-    this.$refs.form1.submit().then((value) => {
-       console.log(value, '当前表单所有的值');
-    }).catch(err => {
-        Toast.text(err)
-    });
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        password: "",
+      },
+    };
   },
+  mounted() {
+    this.$refs.formRef.setModel(this.form);
+  },
+  methods: {
+    submit() {
+      this.$refs.formRef.validate((valid, errorMsg) => {
+        console.log("submit", valid, errorMsg);
+      });
+    },
+    reset() {
+      this.$refs.formRef.resetFields();
+    },
+  },
+};
 ```
 
 ### 自定义校验规则
@@ -44,148 +74,203 @@ this.$refs.form1.setRules = ([
 只对 field 组件有用，支持 required 、validator 自定义事件
 
 ```html
-<quark-form ref="form2">
-  <quark-field placeholder="请输入文本" name="age" label="年龄"></quark-field>
-  <div class="line" />
-  <quark-field type="number" value="123" max="11" name="phone" label="手机号" />
-  <div class="submit-wrap">
-    <div @click="submit2" class="submit">提交</div>
-  </div>
+<quark-form ref="ruleFormRef" labelwidth="70px">
+  <quark-form-item
+    prop="name"
+    label="姓名"
+    :rules="[
+      { required: true, message: '请输入正确内容', pattern: /\w{6}/ },
+    ]"
+  >
+    <quark-field placeholder="正则校验"></quark-field>
+  </quark-form-item>
+  <quark-form-item
+    prop="password"
+    label="密码"
+    :rules="[{ required: true, validator: validatorPassword }]"
+  >
+    <quark-field placeholder="函数校验" />
+  </quark-form-item>
+  <quark-form-item
+    prop="age"
+    name="年龄"
+    :rules="[{ required: true, asyncValidator: asyncValidator }]"
+  >
+    <quark-field v-model.number="ruleForm.age" placeholder="异步校验" />
+  </quark-form-item>
 </quark-form>
+
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit">
+    {{ translate("submit") }}
+  </quark-button>
+</div>
 ```
 
 ```js
- this.$refs.form2.setRules([
-  {
-    name: 'age',
-    required: true,
-    message: '不能小于18岁',
-    validator: (value) => value >= 18
-  },
-  {
-    name: 'phone',
-    required: true,
-    message: '请输正确的手机号',
-    validator: (value) => /^1[3456789]\d{9}$/g.test(value)
-  }
-  ]);
-
-  submit2() {
-    this.$refs.form2.submit().then((value) => {
-       console.log(value, '当前表单所有的值');
-    }).catch(err => {
-        Toast.text(err)
+export default {
+  const validatorPassword = (rule, val, callback) => {
+    if (!val) {
+      callback(new Error("请输入密码"));
+    } else if (val === "123456") {
+      callback(new Error("密码不能为123456"));
+    } else {
+      callback();
+    }
+  };
+  const asyncValidator = (rule, value) => {
+    return new Promise((resolve, reject) => {
+      if (value < 18) {
+        reject("不能小于18岁");
+      } else {
+        resolve();
+      }
     });
+  };
+  data() {
+    return {
+      ruleForm: {
+        name: "",
+        password: "",
+        age: "",
+      },
+      validatorPassword,
+      asyncValidator,
+    }
   },
+  mounted() {
+    this.$refs.ruleForm.setModel(this.ruleForm);
+  },
+  methods: {
+    submit() {
+      this.$refs.ruleForm.validate((valid, errorMsg) => {
+        console.log("submit", valid, errorMsg);
+      });
+    },
+  }
+}
 ```
 
 ### 表单项大全
 
 ```html
-<quark-form ref="form3">
-  <quark-field
-    placeholder="请输入文本"
-    name="field"
-    label="年龄"
-    :value="field"
-  ></quark-field>
-  <div class="line" />
-  <div class="form-item">
-    <quark-textarea name="textarea" :value="textarea" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>蔬菜:</span>
-    <quark-checkbox name="checkbox1" shape="square" :checked="checkbox1"
-      >黄瓜</quark-checkbox
-    >
-    <quark-checkbox name="checkbox2" shape="square" :checked="checkbox2"
-      >生姜</quark-checkbox
-    >
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>水果:</span>
-    <quark-radio-group name="radio" :value="radio">
-      <quark-radio name="apple">苹果</quark-radio>
-      <quark-radio name="blue">香蕉</quark-radio>
+<quark-form>
+  <quark-form-item label="复选框">
+    <quark-checkbox-group :value="formData.checkbox" @change="onCheckboxChange">
+      <quark-checkbox name="apple">苹果</quark-checkbox>
+      <quark-checkbox name="banana">香蕉</quark-checkbox>
+    </quark-checkbox-group>
+  </quark-form-item>
+  <quark-form-item label="单选框">
+    <quark-radio-group :value="formData.radio" @change="onRadioChange">
+      <quark-radio name="square">方形</quark-radio>
+      <quark-radio name="circle">圆形</quark-radio>
     </quark-radio-group>
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>开灯:</span>
-    <quark-switch name="switch" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>打分:</span>
-    <quark-rate name="rate" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>步进器:</span>
-    <quark-stepper name="step" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>上传:</span>
-    <quark-uploader name="uploader" iconcolor="#ccc" preview />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>picker 选择器</span>
-    <quark-cell :title="datepicker" isLink @click="click"></quark-cell>
+  </quark-form-item>
+  <quark-form-item label="开关">
+    <quark-switch :checked="formData.switch"></quark-switch>
+  </quark-form-item>
+  <quark-form-item label="评分">
+    <quark-rate></quark-rate>
+  </quark-form-item>
+  <quark-form-item label="步进器">
+    <quark-stepper min="0" max="99" />
+  </quark-form-item>
+  <quark-form-item label="文本域">
+    <quark-textarea autosize />
+  </quark-form-item>
+  <quark-form-item label="文件上传">
+    <quark-uploader></quark-uploader>
+  </quark-form-item>
+  <quark-form-item label="picker" islink>
+    <quark-field
+      :value="formData.picker"
+      readonly
+      @click="pickerVisible = true"
+    />
     <quark-picker
-      title="请选择时间"
+      title="请选择城市"
       ref="pickerRef"
-      :open="open"
+      :open="pickerVisible"
       @close="close"
       @confirm="confirm"
-      name="picker"
     />
-  </div>
-  <div class="line" />
-  <div class="submit-wrap">
-    <div class="submit" @click="submit3">提交</div>
-  </div>
+  </quark-form-item>
 </quark-form>
 ```
 
 ```js
-  submit3() {
-      this.$refs.form3.submit().then((value) => {
-        Toast.text('请在控制台查看表单值');
-        console.log(value, '当前表单所有的值');
-      });
+export default {
+  data() {
+    return {
+      pickerVisible: false,
+      form: {
+        checkbox: []
+        radio: '',
+        switch: false,
+        rate: "",
+        stepper: "",
+        textarea: "",
+        uploader: [],
+        picker: "",
+      },
+    }
+  },
+  mounted() {
+    this.$refs.pickerRef.setColumns([
+      {
+        defaultIndex: 0,
+        values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
+      },
+    ]);
+  },
+  methods: {
+    onCheckboxChange({ detail }) {
+      this.formData.checkbox = detail.value;
     },
-    click() {
-      this.open = true;
-    },
-    close() {
-      this.open = false;
+    onRadioChange({ detail }) {
+      this.formData.radio = detail.value;
     },
     confirm({ detail }) {
-      this.datepicker = detail.value.map((i) => i.value).join(' ');
-      this.open = false;
+      this.form.picker = detail.value.map((i) => i.value).join(" ");
+      this.pickerVisible = false;
+    },
+    close() {
+      this.pickerVisible = false;
     }
+  }
+}
 ```
 
 ## API
 
-### Method
+### Form Props
 
-| 名称     | 说明                               | 类型                          |
-| -------- | ---------------------------------- | ----------------------------- |
-| submit   | 提交并校验表单获取所有组件的 value | `() => Promise<value: any[]>` |
-| setRules | 只对 field 组件有效                | `(rule: Rule[])=>void`        |
+| 参数                 | 说明                                     | 类型            | 默认值  |
+| -------------------- | ---------------------------------------- | --------------- | ------- |
+| validatefirst        | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
+| hidemessage          | 是否隐藏校验错误信息                     | `boolean`       | `false` |
+| hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
+| labelwidth           | 默认 value 值                            | `string`        | -       |
+| labelsuffix          | 表单域标签的后缀                         | `string`        |         |
+| labelposition        | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
 
-### 类型定义
+### Form Methods
 
-```js
-type Rule = {
-  name: string // 需要校验的 field 组件的 name 属性
-  required?: boolean // 是否必填
-  message?: string // 错误信息
-  validator?: (value: string | number) => boolean; // 校验规则
-};
-```
+| 名称          | 说明                                                                                                                                                                 | 类型                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| validate      | 对整个表单进行校验的方法，参数为一个回调函数。该回调函数会在校验结束后被调用，并传入两个参数：是否校验成功和未通过校验的字段。若不传入回调函数，则会返回一个 promise | `Function(callback: Function(boolean, object))`                              |
+| validateField | 对部分表单字段进行校验的方法                                                                                                                                         | `Function(props: array \| string, callback: Function(errorMessage: string))` |
+| resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                           |                                                                              |
+| clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                             | `Function(props: array \| string)`                                           |
+| setModel      | 设置表单数据对象                                                                                                                                                     | `(model: object) => void`                                                    |
+
+### FormItem Props
+
+| 参数                 | 说明                                                                         | 类型      | 默认值  |
+| -------------------- | ---------------------------------------------------------------------------- | --------- | ------- |
+| prop                 | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | `string`  |         |
+| label                | 标签文本                                                                     | `string`  | `false` |
+| labelwidth           | 表单域标签的的宽度，例如 '50px'。                                            | `string`  |         |
+| hidemessage          | 是否隐藏校验错误信息                                                         | `boolean` | `false` |
+| hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号                                         | `boolean` | `false` |

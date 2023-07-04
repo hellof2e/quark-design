@@ -21,11 +21,11 @@ export interface Rule {
 }
 
 interface IFormProps {
-  hiderequiredasterisk: boolean;
-  hidemessage: boolean;
-  labelwidth: string;
-  labelsuffix: string;
-  labelposition: "left" | "right";
+  hideRequiredAsterisk: boolean;
+  hideMessage: boolean;
+  labelWidth: string;
+  labelSuffix: string;
+  labelPosition: "left" | "right";
 }
 
 @customElement({
@@ -40,7 +40,7 @@ class QuarkFormItem extends QuarkElement {
   label = "";
 
   @property({ type: String })
-  labelwidth = "";
+  labelWidth = "";
 
   @property({ type: Boolean })
   islink = false;
@@ -50,9 +50,6 @@ class QuarkFormItem extends QuarkElement {
 
   @property({ type: Boolean })
   hiderequiredasterisk: false; // 是否隐藏必填 *
-
-  @property({ type: Boolean })
-  required: false;
 
   formRef: any = createRef();
 
@@ -72,13 +69,14 @@ class QuarkFormItem extends QuarkElement {
 
   @state()
   formProps: IFormProps = {
-    hiderequiredasterisk: false,
-    hidemessage: false,
-    labelwidth: "",
-    labelsuffix: "",
-    labelposition: "left",
+    hideRequiredAsterisk: false,
+    hideMessage: false,
+    labelWidth: "",
+    labelSuffix: "",
+    labelPosition: "left",
   };
 
+  @state()
   formModel = null;
 
   defaultSlotRef: any = createRef();
@@ -208,16 +206,11 @@ class QuarkFormItem extends QuarkElement {
   };
 
   onFieldChange = debounce(() => {
-    console.log("onFieldChange-1");
     if (this.validateDisabled) return;
-    console.log("onFieldChange-2");
     this.validate();
   }, 200);
 
   onFieldBlur() {
-    console.log("onFieldBlur-1");
-    if (this.validateDisabled) return;
-    console.log("onFieldBlur-2");
     this.validate();
   }
 
@@ -226,7 +219,6 @@ class QuarkFormItem extends QuarkElement {
       this.prop &&
       this.rules &&
       Array.isArray(this.rules) &&
-      this.rules.length > 0 &&
       this.rules.some((rule) => rule.required)
     );
   }
@@ -238,15 +230,18 @@ class QuarkFormItem extends QuarkElement {
       ? classNames.push("is-validating")
       : null;
 
-    if (this.formProps.hiderequiredasterisk) {
+    if (this.formProps.hideRequiredAsterisk) {
       classNames.push("is-no-asterisk");
+    }
+    if (this.isRequired()) {
+      classNames.push("is-required");
     }
     return classNames.join(" ");
   }
 
   errorMessageRender() {
     return (
-      !this.formProps.hidemessage &&
+      !this.formProps.hideMessage &&
       !this.hidemessage &&
       this.validateState === "error" &&
       this.validateMessage && (
@@ -256,9 +251,9 @@ class QuarkFormItem extends QuarkElement {
   }
   labelStyle() {
     const ret: any = {};
-    if (this.formProps.labelwidth) {
-      ret.width = this.labelwidth || this.formProps.labelwidth;
-      ret.textAlign = this.formProps.labelposition;
+    if (this.formProps.labelWidth) {
+      ret.width = this.labelWidth || this.formProps.labelWidth;
+      ret.textAlign = this.formProps.labelPosition;
     }
     return ret;
   }
@@ -285,13 +280,11 @@ class QuarkFormItem extends QuarkElement {
     return (
       <div class={this.itemClass()}>
         <div class="quark-form-item__wrapper">
-          <div class="quark-form-item__prefix">
-            <div class="quark-form-item__label" style={this.labelStyle()}>
-              <slot name="label">
-                {this.label}
-                {this.formProps.labelsuffix}
-              </slot>
-            </div>
+          <div class="quark-form-item__label" style={this.labelStyle()}>
+            <slot name="label">
+              <span>{this.label}</span>
+              <span>{this.formProps.labelSuffix}</span>
+            </slot>
           </div>
           <div class="quark-form-item__main">
             <div class="quark-form-item__main-content">

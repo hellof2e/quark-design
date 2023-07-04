@@ -48,7 +48,7 @@ class QuarkForm extends QuarkElement {
 
   model: { [key: string]: any } | null = null;
 
-  handleRightSlotChange = () => {
+  onSlotChange = () => {
     if (this.slotRef.current) {
       this.formItems = this.slotRef.current
         .assignedNodes()
@@ -59,11 +59,11 @@ class QuarkForm extends QuarkElement {
           el.setFormModel(this.model);
         }
         el.setFormProps({
-          hidemessage: this.hidemessage,
-          labelwidth: this.labelwidth,
-          hiderequiredasterisk: this.hiderequiredasterisk,
-          labelsuffix: this.labelsuffix,
-          labelposition: this.labelposition,
+          hideMessage: this.hidemessage,
+          labelWidth: this.labelwidth,
+          hideRequiredAsterisk: this.hiderequiredasterisk,
+          labelSuffix: this.labelsuffix,
+          labelPosition: this.labelposition,
         });
       });
     }
@@ -124,13 +124,27 @@ class QuarkForm extends QuarkElement {
     });
   };
 
-  clearValidate() {
+  clearValidate(props: string[] | string = "") {
     this.formItems.forEach((item) => {
-      item.clearValidate();
+      if (props) {
+        if (Array.isArray(props) && props.indexOf(item.prop) > -1) {
+          item.clearValidate();
+        }
+        if (item.prop === props) {
+          item.clearValidate();
+        }
+      } else {
+        item.clearValidate();
+      }
     });
   }
 
   resetFields() {
+    if (!this.model) {
+      console.warn("[Quark Warn]please setModel!");
+      return;
+    }
+
     this.formItems.forEach((item) => {
       item.resetField();
     });
@@ -140,17 +154,10 @@ class QuarkForm extends QuarkElement {
     this.model = model;
   };
 
-  componentDidMount(): void {
-    console.log("componentDidMount");
-  }
-
   render() {
     return (
       <form ref={this.formRef}>
-        <slot
-          ref={this.slotRef}
-          onslotchange={this.handleRightSlotChange}
-        ></slot>
+        <slot ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
       </form>
     );
   }

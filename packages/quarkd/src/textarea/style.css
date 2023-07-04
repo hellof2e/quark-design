@@ -3,7 +3,7 @@
 }
 
 :host .quark-textarea {
-  padding: 12px;
+  /* padding: 12px; */
   background: rgb(255, 255, 255);
   border: 1px solid var(--textarea-border-color);
   display: block;
