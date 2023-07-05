@@ -257,7 +257,7 @@ class QuarkFormItem extends QuarkElement {
   labelStyle() {
     const ret: any = {};
     if (this.formProps.labelWidth) {
-      ret.width = this.labelWidth || this.formProps.labelWidth;
+      ret.width = this.labelwidth || this.formProps.labelWidth;
       ret.textAlign = this.formProps.labelPosition;
     }
     return ret;
