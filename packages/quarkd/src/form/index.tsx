@@ -8,14 +8,7 @@ import {
 
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
-import { RuleItem } from "async-validator";
-
-export interface Rule {
-  name: string; // 需要校验的 field 组件的 name 属性
-  required?: boolean; // 是否必填
-  message?: string; // 错误信息
-  validator?: (value: string | number) => boolean; // 校验规则
-}
+import { Rules } from "async-validator";
 
 @customElement({
   tag: "quark-form",
@@ -49,7 +42,7 @@ class QuarkForm extends QuarkElement {
 
   model: { [key: string]: any } | null = null;
 
-  rules: RuleItem | null = null;
+  rules: Rules | null = null;
 
   onSlotChange = () => {
     if (this.slotRef.current) {
@@ -156,7 +149,7 @@ class QuarkForm extends QuarkElement {
     });
   }
 
-  setRules(rules) {
+  setRules(rules: Rules) {
     this.rules = rules;
   }
 
@@ -166,9 +159,9 @@ class QuarkForm extends QuarkElement {
 
   render() {
     return (
-      <form ref={this.formRef}>
+      <div class="quark-form" ref={this.formRef}>
         <slot ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
-      </form>
+      </div>
     );
   }
 }

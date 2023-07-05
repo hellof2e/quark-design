@@ -18,14 +18,10 @@ import "quarkd/lib/form-item";
 ```html
 <quark-form ref="formRef" labelwidth="70px">
   <quark-form-item prop="name" label="姓名">
-    <quark-field v-model="form.name" placeholder="请输入姓名" />
+    <quark-field v-model="form.name" placeholder="姓名" />
   </quark-form-item>
   <quark-form-item prop="password" label="密码">
-    <quark-field
-      v-model="form.password"
-      type="password"
-      placeholder="请输入密码"
-    />
+    <quark-field v-model="form.password" type="password" placeholder="密码" />
   </quark-form-item>
 </quark-form>
 
@@ -78,7 +74,7 @@ export default {
     <quark-field placeholder="函数校验" />
   </quark-form-item>
   <quark-form-item prop="age" name="年龄">
-    <quark-field v-model.number="ruleForm.age" placeholder="异步校验" />
+    <quark-field v-model="ruleForm.age" placeholder="异步校验" />
   </quark-form-item>
 </quark-form>
 

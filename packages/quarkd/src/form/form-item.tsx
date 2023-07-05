@@ -5,19 +5,12 @@ import {
   QuarkElement,
   state,
 } from "quarkc";
-import AsyncValidator, { RuleItem } from "async-validator";
+import AsyncValidator, { Rule, Rules } from "async-validator";
 import "../cell";
 
 import style from "./form-item.css";
 import { formTagNamesMap, getPropByPath, noop } from "./utils";
 import { debounce } from "../../utils/index";
-
-export interface Rule {
-  name: string; // 需要校验的 field 组件的 name 属性
-  required?: boolean; // 是否必填
-  message?: string; // 错误信息
-  validator?: (value: string | number) => boolean; // 校验规则
-}
 
 interface IFormProps {
   hideRequiredAsterisk: boolean;
@@ -39,7 +32,7 @@ class QuarkFormItem extends QuarkElement {
   label = "";
 
   @property({ type: String })
-  labelWidth = "";
+  labelwidth = "";
 
   @property({ type: Boolean })
   islink = false;
@@ -49,8 +42,6 @@ class QuarkFormItem extends QuarkElement {
 
   @property({ type: Boolean })
   hiderequiredasterisk: false; // 是否隐藏必填 *
-
-  formRef: any = createRef();
 
   @state()
   validateState = "";
@@ -65,7 +56,7 @@ class QuarkFormItem extends QuarkElement {
   itemNode = null;
 
   @state()
-  rules: RuleItem | null = null;
+  rules: Rules | null = null;
 
   @state()
   formProps: IFormProps = {
@@ -79,9 +70,10 @@ class QuarkFormItem extends QuarkElement {
   @state()
   formModel = null;
 
-  defaultSlotRef: any = createRef();
-
+  @state() // 记录表单初始值，用于reset
   initialValue = null;
+
+  defaultSlotRef: any = createRef();
 
   setFormProps(props: IFormProps) {
     this.formProps = props;
@@ -93,7 +85,7 @@ class QuarkFormItem extends QuarkElement {
     this.initialValue = getPropByPath(model, this.prop, true).v;
   }
 
-  setRule(rule) {
+  setRule(rule: Rule) {
     this.rules = { [this.prop]: rule };
   }
 

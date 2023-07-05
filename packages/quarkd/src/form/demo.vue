@@ -50,17 +50,6 @@
 
     <h2>{{ translate("title.items") }}</h2>
     <quark-form>
-      <!-- <quark-form-item
-        prop="captcha"
-        :label="translate('labels')[3]"
-        :rules="[{ required: true, message: '请输入验证码' }]"
-      >
-        <div slot="label">验证码</div>
-        <quark-field />
-        <div slot="suffix">
-          <quark-button type="primary" size="small">发送验证码</quark-button>
-        </div>
-      </quark-form-item> -->
       <quark-form-item :label="translate('label.checkbox')">
         <quark-checkbox-group
           :value="formData.checkbox"
@@ -138,7 +127,6 @@ import "./index";
 export default createDemo({
   setup() {
     const formData = ref({
-      captcha: "1234",
       checkbox: ["apple"],
       radio: "",
       rate: "",
@@ -315,12 +303,6 @@ export default createDemo({
       pickerVisible.value = false;
     };
 
-    const validateField = () => {
-      formRef.value.validateField(["name", "password"], (errorMsg) => {
-        console.log(errorMsg);
-      });
-    };
-
     const ruleFormSubmit = async () => {
       const valid = await ruleFormRef.value.validate();
       console.log(valid);
@@ -354,7 +336,6 @@ export default createDemo({
       onCheckboxChange,
       pickerVisible,
       onRadioChange,
-      validateField,
       submit,
       reset,
       form,
