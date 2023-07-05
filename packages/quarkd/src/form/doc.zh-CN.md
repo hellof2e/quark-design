@@ -17,18 +17,10 @@ import "quarkd/lib/form-item";
 
 ```html
 <quark-form ref="formRef" labelwidth="70px">
-  <quark-form-item
-    prop="name"
-    label="姓名"
-    :rules="[{ required: true, message: '请输入姓名' }]"
-  >
-    <quark-field v-model="form.name" placeholder="请输入姓名"></quark-field>
+  <quark-form-item prop="name" label="姓名">
+    <quark-field v-model="form.name" placeholder="请输入姓名" />
   </quark-form-item>
-  <quark-form-item
-    prop="password"
-    label="密码"
-    :rules="[{ required: true, message: '请输入密码' }]"
-  >
+  <quark-form-item prop="password" label="密码">
     <quark-field
       v-model="form.password"
       type="password"
@@ -55,6 +47,10 @@ export default {
   },
   mounted() {
     this.$refs.formRef.setModel(this.form);
+    this.$refs.formRef.setRules({
+      name: [{ required: true, message: "请输入姓名" }],
+      password: { required: true, message: "请输入密码" },
+    });
   },
   methods: {
     submit() {
@@ -75,27 +71,13 @@ export default {
 
 ```html
 <quark-form ref="ruleFormRef" labelwidth="70px">
-  <quark-form-item
-    prop="name"
-    label="姓名"
-    :rules="[
-      { required: true, message: '请输入正确内容', pattern: /\w{6}/ },
-    ]"
-  >
-    <quark-field placeholder="正则校验"></quark-field>
+  <quark-form-item prop="name" label="姓名">
+    <quark-field placeholder="正则校验" />
   </quark-form-item>
-  <quark-form-item
-    prop="password"
-    label="密码"
-    :rules="[{ required: true, validator: validatorPassword }]"
-  >
+  <quark-form-item prop="password" label="密码">
     <quark-field placeholder="函数校验" />
   </quark-form-item>
-  <quark-form-item
-    prop="age"
-    name="年龄"
-    :rules="[{ required: true, asyncValidator: asyncValidator }]"
-  >
+  <quark-form-item prop="age" name="年龄">
     <quark-field v-model.number="ruleForm.age" placeholder="异步校验" />
   </quark-form-item>
 </quark-form>
@@ -132,12 +114,15 @@ export default {
         password: "",
         age: "",
       },
-      validatorPassword,
-      asyncValidator,
+      rules: {
+        name: [{ required: true, validator: validatorPassword }],
+        password: [{ required: true, validator: validatorPassword }],
+        age: [{ required: true, asyncValidator: asyncValidator }]
+      }
     }
   },
   mounted() {
-    this.$refs.ruleForm.setModel(this.ruleForm);
+    this.$refs.ruleForm.setRules(this.rules);
   },
   methods: {
     submit() {
@@ -251,7 +236,7 @@ export default {
 | validatefirst        | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
 | hidemessage          | 是否隐藏校验错误信息                     | `boolean`       | `false` |
 | hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
-| labelwidth           | 默认 value 值                            | `string`        | -       |
+| labelwidth           | 表单域标签的宽度，例如 '50px'。          | `string`        | -       |
 | labelsuffix          | 表单域标签的后缀                         | `string`        |         |
 | labelposition        | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
 
@@ -264,6 +249,7 @@ export default {
 | resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                           |                                                                              |
 | clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                             | `Function(props: array \| string)`                                           |
 | setModel      | 设置表单数据对象                                                                                                                                                     | `(model: object) => void`                                                    |
+| setRules      | 设置表单验证规则                                                                                                                                                     | `(rules: RuleItem) => void`                                                  |
 
 ### FormItem Props
 

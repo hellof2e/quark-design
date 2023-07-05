@@ -5,11 +5,10 @@ import {
   QuarkElement,
   state,
 } from "quarkc";
-import AsyncValidator from "async-validator";
+import AsyncValidator, { RuleItem } from "async-validator";
 import "../cell";
 
 import style from "./form-item.css";
-import { IRuleItem } from "./type";
 import { formTagNamesMap, getPropByPath, noop } from "./utils";
 import { debounce } from "../../utils/index";
 
@@ -53,8 +52,6 @@ class QuarkFormItem extends QuarkElement {
 
   formRef: any = createRef();
 
-  rules: IRuleItem[] = [];
-
   @state()
   validateState = "";
 
@@ -66,6 +63,9 @@ class QuarkFormItem extends QuarkElement {
 
   @state()
   itemNode = null;
+
+  @state()
+  rules: RuleItem | null = null;
 
   @state()
   formProps: IFormProps = {
@@ -93,27 +93,39 @@ class QuarkFormItem extends QuarkElement {
     this.initialValue = getPropByPath(model, this.prop, true).v;
   }
 
-  validate(callBack = noop) {
+  setRule(rule) {
+    this.rules = { [this.prop]: rule };
+  }
+
+  getRules() {
+    if (!this.rules) return null;
+    let formRules = this.rules;
+    const prop = getPropByPath(formRules, this.prop || "", true);
+    formRules = formRules ? prop.o[this.prop || ""] || prop.v : [];
+    return [].concat(formRules || []);
+  }
+
+  validate(callback = noop) {
     this.validateDisabled = false;
     if (!this.prop) return;
-    if (!Array.isArray(this.rules)) {
-      throw new Error("rules need array");
-    }
 
-    if (this.rules.length === 0) {
-      return;
+    const rules = this.getRules();
+
+    if (!rules || rules.length === 0) {
+      callback();
+      return true;
     }
 
     this.validateState = "validating";
 
-    const validator = new AsyncValidator({ [this.prop]: this.rules });
+    const validator = new AsyncValidator({ [this.prop]: rules });
     validator.validate(
       { [this.prop]: this.getValue() },
       { firstFields: true },
       (errors, invalidFields) => {
         this.validateState = !errors ? "success" : "error";
         this.validateMessage = errors ? errors[0].message : "";
-        callBack(this.validateMessage, invalidFields);
+        callback(this.validateMessage, invalidFields);
       }
     );
   }
@@ -215,11 +227,12 @@ class QuarkFormItem extends QuarkElement {
   }
 
   isRequired() {
+    const rules = this.getRules();
     return (
       this.prop &&
-      this.rules &&
-      Array.isArray(this.rules) &&
-      this.rules.some((rule) => rule.required)
+      rules &&
+      Array.isArray(rules) &&
+      rules.some((rule) => rule.required)
     );
   }
 

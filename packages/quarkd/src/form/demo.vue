@@ -2,21 +2,13 @@
   <div class="demo scoped-form">
     <h2>{{ translate("title.basic") }}</h2>
     <quark-form ref="formRef" labelwidth="70px">
-      <quark-form-item
-        prop="name"
-        :label="translate('label.name')"
-        :rules="[{ required: true, message: translate('error.name') }]"
-      >
+      <quark-form-item prop="name" :label="translate('label.name')">
         <quark-field
           v-model="form.name"
           :placeholder="translate('label.name')"
         ></quark-field>
       </quark-form-item>
-      <quark-form-item
-        prop="password"
-        :label="translate('label.password')"
-        :rules="[{ required: true, message: translate('error.password') }]"
-      >
+      <quark-form-item prop="password" :label="translate('label.password')">
         <quark-field
           v-model="form.password"
           type="password"
@@ -36,34 +28,16 @@
 
     <h2>{{ translate("title.rule") }}</h2>
     <quark-form ref="ruleFormRef" labelwidth="70px">
-      <quark-form-item
-        prop="name"
-        :label="translate('label.name')"
-        :rules="[
-          {
-            required: true,
-            message: translate('error.errorMsg'),
-            pattern: /\w{6}/,
-          },
-        ]"
-      >
+      <quark-form-item prop="name" :label="translate('label.name')">
         <quark-field :placeholder="translate('placeholders.pattern')" />
       </quark-form-item>
-      <quark-form-item
-        prop="password"
-        :label="translate('label.password')"
-        :rules="[{ required: true, validator: validatorPassword }]"
-      >
+      <quark-form-item prop="password" :label="translate('label.password')">
         <quark-field
           value="123456"
           :placeholder="translate('placeholders.validator')"
         />
       </quark-form-item>
-      <quark-form-item
-        prop="age"
-        :label="translate('label.age')"
-        :rules="[{ required: true, asyncValidator: asyncValidator }]"
-      >
+      <quark-form-item prop="age" :label="translate('label.age')">
         <quark-field :placeholder="translate('placeholders.asyncValidator')" />
       </quark-form-item>
     </quark-form>
@@ -160,7 +134,6 @@ const { createDemo, translate } = createComponent("form");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 import { ref, onMounted, onBeforeMount } from "vue";
 import "./index";
-import Toast from "../toast";
 
 export default createDemo({
   setup() {
@@ -182,6 +155,13 @@ export default createDemo({
     const formRef = ref(null);
     const pickerRef = ref(null);
 
+    const ruleFormRef = ref(null);
+    const ruleForm = ref({
+      name: "",
+      password: "",
+      age: "",
+    });
+
     onMounted(() => {
       const picker = pickerRef.value;
       picker.setColumns([
@@ -191,6 +171,22 @@ export default createDemo({
         },
       ]);
       formRef.value?.setModel(form.value);
+      formRef.value?.setRules({
+        name: [{ required: true, message: translate("error.name") }],
+        password: { required: true, message: translate("error.password") },
+      });
+
+      ruleFormRef.value?.setRules({
+        name: [
+          {
+            required: true,
+            message: translate("error.errorMsg"),
+            pattern: /\w{6}/,
+          },
+        ],
+        password: [{ required: true, validator: validatorPassword }],
+        age: [{ required: true, asyncValidator: asyncValidator }],
+      });
     });
     onBeforeMount(() => {
       useTranslate({
@@ -325,13 +321,6 @@ export default createDemo({
       });
     };
 
-    const ruleFormRef = ref(null);
-    const ruleForm = ref({
-      name: "",
-      password: "",
-      age: "",
-    });
-
     const ruleFormSubmit = async () => {
       const valid = await ruleFormRef.value.validate();
       console.log(valid);
@@ -372,8 +361,6 @@ export default createDemo({
       ruleFormRef,
       ruleForm,
       ruleFormSubmit,
-      validatorPassword,
-      asyncValidator,
     };
   },
 });

@@ -8,6 +8,7 @@ import {
 
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
+import { RuleItem } from "async-validator";
 
 export interface Rule {
   name: string; // 需要校验的 field 组件的 name 属性
@@ -48,6 +49,8 @@ class QuarkForm extends QuarkElement {
 
   model: { [key: string]: any } | null = null;
 
+  rules: RuleItem | null = null;
+
   onSlotChange = () => {
     if (this.slotRef.current) {
       this.formItems = this.slotRef.current
@@ -57,6 +60,9 @@ class QuarkForm extends QuarkElement {
       this.formItems.forEach((el) => {
         if (this.model) {
           el.setFormModel(this.model);
+        }
+        if (this.rules && el.prop && this.rules[el.prop]) {
+          el.setRule(this.rules[el.prop]);
         }
         el.setFormProps({
           hideMessage: this.hidemessage,
@@ -148,6 +154,10 @@ class QuarkForm extends QuarkElement {
     this.formItems.forEach((item) => {
       item.resetField();
     });
+  }
+
+  setRules(rules) {
+    this.rules = rules;
   }
 
   setModel = (model) => {
