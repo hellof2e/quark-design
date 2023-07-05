@@ -121,10 +121,9 @@ export default {
     this.$refs.ruleForm.setRules(this.rules);
   },
   methods: {
-    submit() {
-      this.$refs.ruleForm.validate((valid, errorMsg) => {
-        console.log("submit", valid, errorMsg);
-      });
+    async submit() {
+      const valid = await this.$refs.ruleForm.validate();
+      console.log(valid)
     },
   }
 }
