@@ -87,7 +87,7 @@ export default {
 export default {
   const validatorPassword = (rule, val, callback) => {
     if (!val) {
-      callback(new Error("请输入密码"));
+      callback(new Error("请输入正确内容"));
     } else if (val === "123456") {
       callback(new Error("密码不能为123456"));
     } else {
@@ -111,7 +111,7 @@ export default {
         age: "",
       },
       rules: {
-        name: [{ required: true, validator: validatorPassword }],
+        name: [{ required: true, pattern: /\w{6}/, message: "请输入正确内容" }],
         password: [{ required: true, validator: validatorPassword }],
         age: [{ required: true, asyncValidator: asyncValidator }]
       }
@@ -245,7 +245,7 @@ export default {
 | resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                           |                                                                              |
 | clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                             | `Function(props: array \| string)`                                           |
 | setModel      | 设置表单数据对象                                                                                                                                                     | `(model: object) => void`                                                    |
-| setRules      | 设置表单验证规则                                                                                                                                                     | `(rules: RuleItem) => void`                                                  |
+| setRules      | 设置表单验证规则                                                                                                                                                     | `(rules: Rules) => void`                                                     |
 
 ### FormItem Props
 
