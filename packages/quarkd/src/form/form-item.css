@@ -1,6 +1,11 @@
 :host {
   display: block;
   background-color: #fff;
+  --textarea-padding: 0;
+  --field-padding: 0;
+  --textarea-line-height: 24px;
+  --radio-label-height: 24px;
+  --checkbox-label-height: 24px;
 }
 
 .quark-form-item__wrapper {
@@ -13,17 +18,15 @@
   flex-shrink: 0;
   display: flex;
   margin-right: 12px;
-  /* white-space: var(--cell-title-white-space, wrap);
-  font-weight: var(--cell-title-font-weight);
-  text-overflow: var(--cell-title-text-overflow); */
   font-size: var(--cell-title-font-size, 14px);
-  color: #5A6066;
+  color: #5a6066;
   line-height: 24px;
 }
 
 .quark-form-item__label span {
   display: inline-block;
 }
+
 .is-required .quark-form-item__label::before {
   content: '*';
   color: #f00;
@@ -40,8 +43,8 @@
 
 .quark-form-item__main-content {
   min-height: 24px;
-  /* display: flex; */
-  /* align-items: center; */
+  /* display: flex;
+  align-items: center; */
 }
 
 .quark-form-item_error-msg {
