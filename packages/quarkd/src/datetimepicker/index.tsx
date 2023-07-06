@@ -46,10 +46,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkDatetimePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 
