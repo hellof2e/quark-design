@@ -107,10 +107,14 @@
     <h2>{{ translate("title.slots") }}</h2>
     <quark-form>
       <quark-form-item>
-        <div slot="label">自定义label</div>
+        <div slot="label">
+          {{ translate("customLabel") }}
+        </div>
         <quark-field />
         <div slot="suffix">
-          <quark-button type="primary" size="small">发送验证码</quark-button>
+          <quark-button type="primary" size="small">
+            {{ translate("search") }}
+          </quark-button>
         </div>
       </quark-form-item>
     </quark-form>
@@ -220,6 +224,8 @@ export default createDemo({
             square: "方形",
             circle: "圆形",
           },
+          customLabel: "自定义label",
+          search: "搜索",
         },
         "en-US": {
           title: {
@@ -270,6 +276,8 @@ export default createDemo({
             square: "square",
             circle: "circle",
           },
+          customLabel: "Custom Label",
+          search: "Search",
         },
       });
     });
@@ -299,7 +307,8 @@ export default createDemo({
     };
 
     const confirm = ({ detail }) => {
-      formData.value.picker = detail.value.map((i) => i.value).join(" ");
+      console.log(detail.value);
+      formData.value.picker = detail.value.map((i) => i.value).join("");
       pickerVisible.value = false;
     };
 

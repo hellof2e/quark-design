@@ -6,7 +6,6 @@ import {
   state,
 } from "quarkc";
 import AsyncValidator, { Rule, Rules } from "async-validator";
-import "../cell";
 
 import style from "./form-item.css";
 import { formTagNamesMap, getPropByPath, noop } from "./utils";

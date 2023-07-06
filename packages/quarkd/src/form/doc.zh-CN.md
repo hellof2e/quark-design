@@ -26,8 +26,8 @@ import "quarkd/lib/form-item";
 </quark-form>
 
 <div class="flex-box">
-  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
-  <quark-button size="big" @click="reset"> 重置 </quark-button>
+  <quark-button type="primary" size="big" @click="submit">提交</quark-button>
+  <quark-button size="big" @click="reset">重置</quark-button>
 </div>
 ```
 
@@ -79,7 +79,7 @@ export default {
 </quark-form>
 
 <div class="flex-box">
-  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
+  <quark-button type="primary" size="big" @click="submit">提交</quark-button>
 </div>
 ```
 
@@ -111,7 +111,9 @@ export default {
         age: "",
       },
       rules: {
-        name: [{ required: true, pattern: /\w{6}/, message: "请输入正确内容" }],
+        name: [
+          { required: true, pattern: /\w{6}/, message: "请输入正确内容" }
+        ],
         password: [{ required: true, validator: validatorPassword }],
         age: [{ required: true, asyncValidator: asyncValidator }]
       }
@@ -160,7 +162,7 @@ export default {
   <quark-form-item label="文件上传">
     <quark-uploader></quark-uploader>
   </quark-form-item>
-  <quark-form-item label="picker" islink>
+  <quark-form-item label="选择器" islink>
     <quark-field
       :value="formData.picker"
       readonly
@@ -179,47 +181,16 @@ export default {
 
 ### 使用插槽
 
-```js
-export default {
-  data() {
-    return {
-      pickerVisible: false,
-      form: {
-        checkbox: []
-        radio: '',
-        switch: false,
-        rate: "",
-        stepper: "",
-        textarea: "",
-        uploader: [],
-        picker: "",
-      },
-    }
-  },
-  mounted() {
-    this.$refs.pickerRef.setColumns([
-      {
-        defaultIndex: 0,
-        values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
-      },
-    ]);
-  },
-  methods: {
-    onCheckboxChange({ detail }) {
-      this.formData.checkbox = detail.value;
-    },
-    onRadioChange({ detail }) {
-      this.formData.radio = detail.value;
-    },
-    confirm({ detail }) {
-      this.form.picker = detail.value.map((i) => i.value).join(" ");
-      this.pickerVisible = false;
-    },
-    close() {
-      this.pickerVisible = false;
-    }
-  }
-}
+```html
+<quark-form>
+  <quark-form-item>
+    <div slot="label">自定义label</div>
+    <quark-field />
+    <div slot="suffix">
+      <quark-button type="primary" size="small">发送验证码</quark-button>
+    </div>
+  </quark-form-item>
+</quark-form>
 ```
 
 ## API

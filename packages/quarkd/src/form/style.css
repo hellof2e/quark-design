@@ -2,9 +2,6 @@
 
 }
 
-::slotted(quark-form-item) {
-  position: relative;
-}
 ::slotted(quark-form-item)::after {
   content: '';
   display: block;

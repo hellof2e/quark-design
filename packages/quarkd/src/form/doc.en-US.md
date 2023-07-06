@@ -8,11 +8,12 @@ Form
 
 ```tsx
 import "quarkd/lib/form";
+import "quarkd/lib/form-item";
 ```
 
 ### Basic Usage
 
-Set value of form items, used with `name` prop.
+Set value of form items, used with `prop` prop.
 
 ```html
 <quark-form ref="form1">
@@ -23,179 +24,274 @@ Set value of form items, used with `name` prop.
     <div @click="submit1" class="submit">Submit</div>
   </div>
 </quark-form>
+<quark-form ref="formRef" labelwidth="70px">
+  <quark-form-item prop="name" label="Name">
+    <quark-field v-model="form.name" placeholder="Name" />
+  </quark-form-item>
+  <quark-form-item prop="password" label="Password">
+    <quark-field
+      v-model="form.password"
+      type="password"
+      placeholder="Password"
+    />
+  </quark-form-item>
+</quark-form>
+
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit">Submit</quark-button>
+  <quark-button size="big" @click="reset">Reset</quark-button>
+</div>
 ```
 
 ```js
-this.$refs.form1.setRules = ([
-  { name: 'name', required: true },
-  { name: 'password', required: true, type: 'password' }
-]);
-submit1() {
-  this.$refs.form1.submit().then((value) => {
-    console.log(value, 'current form values');
-  }).catch(err => {
-    Toast.text(err)
-  });
-},
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        password: "",
+      },
+    };
+  },
+  mounted() {
+    this.$refs.formRef.setModel(this.form);
+    this.$refs.formRef.setRules({
+      name: [{ required: true, message: "Name is required" }],
+      password: { required: true, message: "Password is required" },
+    });
+  },
+  methods: {
+    submit() {
+      this.$refs.formRef.validate((valid, errorMsg) => {
+        console.log("submit", valid, errorMsg);
+      });
+    },
+    reset() {
+      this.$refs.formRef.resetFields();
+    },
+  },
+};
 ```
 
 ### Validate Rules
 
-Only useful for field components, supports required and validator custom events.
+Custom validate callback function must be called. See more advanced usage at [async-validator](https://github.com/yiminghe/async-validator).
 
 ```html
-<quark-form ref="form2">
-  <quark-field
-    placeholder="Please enter text"
-    name="age"
-    label="age"
-  ></quark-field>
-  <div class="line" />
-  <quark-field
-    type="number"
-    value="123"
-    max="11"
-    name="phone"
-    label="phone number"
-  />
-  <div class="submit-wrap">
-    <div @click="submit2" class="submit">Submit</div>
-  </div>
+<quark-form ref="ruleFormRef" labelwidth="70px">
+  <quark-form-item prop="name" label="Name">
+    <quark-field placeholder="Use pattern" />
+  </quark-form-item>
+  <quark-form-item prop="password" label="Password">
+    <quark-field placeholder="Use validator" />
+  </quark-form-item>
+  <quark-form-item prop="age" name="Age">
+    <quark-field v-model="ruleForm.age" placeholder="Use async validator" />
+  </quark-form-item>
 </quark-form>
+
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit">Submit</quark-button>
+</div>
 ```
 
 ```js
- this.$refs.form2.setRules([
-  {
-    name: 'age',
-    required: true,
-    message: 'older than 18 years old',
-    validator: (value) => value >= 18
-  },
-  {
-    name: 'phone',
-    required: true,
-    message: 'Please enter the correct phone number',
-    validator: (value) => /^1[3456789]\d{9}$/g.test(value)
-  }
-  ]);
-
-  submit2() {
-    this.$refs.form2.submit().then((value) => {
-      console.log(value, 'current form values');
-    }).catch(err => {
-      Toast.text(err)
+export default {
+  const validatorPassword = (rule, val, callback) => {
+    if (!val) {
+      callback(new Error("Error message"));
+    } else if (val === "123456") {
+      callback(new Error("Password can not be 123456"));
+    } else {
+      callback();
+    }
+  };
+  const asyncValidator = (rule, value) => {
+    return new Promise((resolve, reject) => {
+      if (value < 18) {
+        reject("Must not be younger than 18");
+      } else {
+        resolve();
+      }
     });
+  };
+  data() {
+    return {
+      ruleForm: {
+        name: "",
+        password: "",
+        age: "",
+      },
+      rules: {
+        name: [
+          { required: true, pattern: /\w{6}/, message: "Error message" }
+        ],
+        password: [{ required: true, validator: validatorPassword }],
+        age: [{ required: true, asyncValidator: asyncValidator }]
+      }
+    }
   },
+  mounted() {
+    this.$refs.ruleForm.setRules(this.rules);
+  },
+  methods: {
+    async submit() {
+      const valid = await this.$refs.ruleForm.validate();
+      console.log(valid)
+    },
+  }
+}
 ```
 
 ### Form Items
 
 ```html
-<quark-form ref="form3">
-  <quark-field
-    placeholder="Please enter text"
-    name="field"
-    label="age"
-    :value="field"
-  ></quark-field>
-  <div class="line" />
-  <div class="form-item">
-    <quark-textarea name="textarea" :value="textarea" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Vegetables:</span>
-    <quark-checkbox name="checkbox1" shape="square" :checked="checkbox1"
-      >Cucumber</quark-checkbox
-    >
-    <quark-checkbox name="checkbox2" shape="square" :checked="checkbox2"
-      >Ginger</quark-checkbox
-    >
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Fruits:</span>
-    <quark-radio-group name="radio" :value="radio">
-      <quark-radio name="apple">Apple</quark-radio>
-      <quark-radio name="blue">Banana</quark-radio>
+<quark-form>
+  <quark-form-item label="Checkbox">
+    <quark-checkbox-group :value="formData.checkbox" @change="onCheckboxChange">
+      <quark-checkbox name="apple">apple</quark-checkbox>
+      <quark-checkbox name="banana">banana</quark-checkbox>
+    </quark-checkbox-group>
+  </quark-form-item>
+  <quark-form-item label="Radio">
+    <quark-radio-group :value="formData.radio" @change="onRadioChange">
+      <quark-radio name="square">square</quark-radio>
+      <quark-radio name="circle">circle</quark-radio>
     </quark-radio-group>
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Switch on:</span>
-    <quark-switch name="switch" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Rate:</span>
-    <quark-rate name="rate" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Stepper:</span>
-    <quark-stepper name="step" />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Uploader:</span>
-    <quark-uploader name="uploader" iconcolor="#ccc" preview />
-  </div>
-  <div class="line" />
-  <div class="form-item">
-    <span>Picker:</span>
-    <quark-cell :title="datepicker" isLink @click="click"></quark-cell>
+  </quark-form-item>
+  <quark-form-item label="Switch">
+    <quark-switch :checked="formData.switch"></quark-switch>
+  </quark-form-item>
+  <quark-form-item label="Rate">
+    <quark-rate></quark-rate>
+  </quark-form-item>
+  <quark-form-item label="Stepper">
+    <quark-stepper min="0" max="99" />
+  </quark-form-item>
+  <quark-form-item label="Textarea">
+    <quark-textarea autosize />
+  </quark-form-item>
+  <quark-form-item label="Uploader">
+    <quark-uploader></quark-uploader>
+  </quark-form-item>
+  <quark-form-item label="Picker" islink>
+    <quark-field
+      :value="formData.picker"
+      readonly
+      @click="pickerVisible = true"
+    />
     <quark-picker
+      title="Please choose city"
       ref="pickerRef"
-      title="Please choose time"
-      name="picker"
-      :open="open"
+      :open="pickerVisible"
       @close="close"
       @confirm="confirm"
     />
-  </div>
-  <div class="line" />
-  <div class="submit-wrap">
-    <div class="submit" @click="submit3">Submit</div>
-  </div>
+  </quark-form-item>
 </quark-form>
 ```
 
 ```js
-  submit3() {
-      this.$refs.form3.submit().then((value) => {
-        Toast.text('Please check form value in the console');
-        console.log(value, 'current form values');
-      });
+export default {
+  data() {
+    return {
+      pickerVisible: false,
+      form: {
+        checkbox: []
+        radio: '',
+        switch: false,
+        rate: "",
+        stepper: "",
+        textarea: "",
+        uploader: [],
+        picker: "",
+      },
+    }
+  },
+  mounted() {
+    this.$refs.pickerRef.setColumns([
+      {
+        defaultIndex: 0,
+        values: [
+            "Hangzhou",
+            "Jiaxing",
+            "Shaoxing",
+            "Ningbo",
+            "Huzhou",
+            "Qiandaohu",
+          ],
+      },
+    ]);
+  },
+  methods: {
+    onCheckboxChange({ detail }) {
+      this.formData.checkbox = detail.value;
     },
-    click() {
-      this.open = true;
-    },
-    close() {
-      this.open = false;
+    onRadioChange({ detail }) {
+      this.formData.radio = detail.value;
     },
     confirm({ detail }) {
-      this.datepicker = detail.value.map((i) => i.value).join(' ');
-      this.open = false;
+      this.form.picker = detail.value.map((i) => i.value).join("");
+      this.pickerVisible = false;
+    },
+    close() {
+      this.pickerVisible = false;
     }
+  }
+}
+```
+
+### Use slots
+
+```html
+<quark-form>
+  <quark-form-item>
+    <div slot="label">Custom Label</div>
+    <quark-field />
+    <div slot="suffix">
+      <quark-button type="primary" size="small">Search</quark-button>
+    </div>
+  </quark-form-item>
+</quark-form>
 ```
 
 ## API
 
-### Method
+### Form Props
 
-| Name     | Description                                              | Type                          |
-| -------- | -------------------------------------------------------- | ----------------------------- |
-| submit   | Submit and validate the form to get all form items value | `() => Promise<value: any[]>` |
-| setRules | Only valid for field component                           | `(rule: Rule[])=>void`        |
+| Attribute            | Description                                                             | Type         | Default |
+| -------------------- | ----------------------------------------------------------------------- | ------------ | ------- |
+| validatefirst        | Whether to stop the validation when a rule fails                        | `boolean`    | `false` |
+| hidemessage          | whether to hide the error message                                       | `boolean`    | `false` |
+| hiderequiredasterisk | whether to hide a red asterisk (star) next to the required field label. | `boolean`    | `false` |
+| labelwidth           | width of label, e.g. '50px'.                                            | `string`     | -       |
+| labelsuffix          | suffix of the label                                                     | `string`     |         |
+| labelposition        | position of label. `label-width` prop is required                       | `letf/right` | `left`  |
 
-### Type definition
+### Form Method
 
-```js
-type Rule = {
-  name: string // `Name` prop of field component that needs to be validated
-  required?: boolean // Whether to be required
-  message?: string // Error text
-  validator?: (value: string | number) => boolean; // Custom validator function
-};
-```
+| Name          | Description                                                                                                                                                                                                                                                                      | Type                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| validate      | validate the whole form. Takes a callback as a param. After validation, the callback will be executed with two params: a boolean indicating if the validation has passed, and an object containing all fields that fail the validation. Returns a promise if callback is omitted | `Function(callback: Function(boolean, object))`                              |
+| validateField | validate one or several form items                                                                                                                                                                                                                                               | `Function(props: array \| string, callback: Function(errorMessage: string))` |
+| resetFields   | reset all the fields and remove validation result                                                                                                                                                                                                                                |                                                                              |
+| clearValidate | clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared                                                     | `Function(props: array \| string)`                                           |
+| setModel      | set data of form component.                                                                                                                                                                                                                                                      | `(model: object) => void`                                                    |
+| setRules      | set validation rules of form                                                                                                                                                                                                                                                     | `(rules: Rules) => void`                                                     |
+
+### FormItem Props
+
+| Attribute            | Description                                                                                | Type      | Default |
+| -------------------- | ------------------------------------------------------------------------------------------ | --------- | ------- |
+| prop                 | a key of `model`. In the use of validate and resetFields method, the attribute is required | `string`  |         |
+| label                | label                                                                                      | `string`  | `false` |
+| labelwidth           | width of label, e.g. '50px'.                                                               | `string`  |         |
+| hidemessage          | whether to hide the error message                                                          | `boolean` | `false` |
+| hiderequiredasterisk | whether to hide a red asterisk (star) next to the required field label.                    | `boolean` | `false` |
+
+### FormItem Slots
+
+| Name   | Description   |
+| ------ | ------------- |
+| label  | custom label  |
+| suffix | custom suffix |
