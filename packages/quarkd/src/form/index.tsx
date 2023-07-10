@@ -8,7 +8,7 @@ import {
 
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
-import { Rules } from "async-validator";
+import { Rules, labelPosition } from "./type";
 
 @customElement({
   tag: "quark-form",
@@ -22,7 +22,7 @@ class QuarkForm extends QuarkElement {
   hidemessage: false;
 
   @property({ type: Boolean })
-  hiderequiredasterisk: false; // 是否隐藏必填 *
+  hideasterisk: false; // 是否隐藏必填 *
 
   @property({ type: String })
   labelwidth: "";
@@ -30,8 +30,8 @@ class QuarkForm extends QuarkElement {
   @property({ type: String })
   labelsuffix: "";
 
-  @property({ type: String })
-  labelposition: "left";
+  @property()
+  labelposition: labelPosition = "left";
 
   formRef: any = createRef();
 
@@ -46,9 +46,21 @@ class QuarkForm extends QuarkElement {
 
   onSlotChange = () => {
     if (this.slotRef.current) {
-      this.formItems = this.slotRef.current
+      const allFormItes = this.slotRef.current
         .assignedNodes()
-        .filter((item) => item.tagName === "QUARK-FORM-ITEM" && item.prop);
+        .filter((item) => item.tagName === "QUARK-FORM-ITEM");
+
+      this.formItems = allFormItes.filter((item) => item.prop);
+
+      allFormItes.forEach((item) => {
+        item.setFormProps({
+          hideMmessage: this.hidemessage,
+          labelwidth: this.labelwidth,
+          hideasterisk: this.hideasterisk,
+          labelsuffix: this.labelsuffix,
+          labelposition: this.labelposition,
+        });
+      });
 
       this.formItems.forEach((el) => {
         if (this.model) {
@@ -57,18 +69,11 @@ class QuarkForm extends QuarkElement {
         if (this.rules && el.prop && this.rules[el.prop]) {
           el.setRule(this.rules[el.prop]);
         }
-        el.setFormProps({
-          hideMessage: this.hidemessage,
-          labelWidth: this.labelwidth,
-          hideRequiredAsterisk: this.hiderequiredasterisk,
-          labelSuffix: this.labelsuffix,
-          labelPosition: this.labelposition,
-        });
       });
     }
   };
 
-  validate = (callback) => {
+  validate = (callback): Promise<boolean> | void => {
     let promise;
     if (typeof callback !== "function" && window.Promise) {
       promise = new window.Promise((resolve, reject) => {

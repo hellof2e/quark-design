@@ -241,6 +241,53 @@ export default {
 }
 ```
 
+### Form Attributes
+
+```html
+<quark-form
+  ref="formRef"
+  labelwidth="60px"
+  labelposition="right"
+  labelsuffix="："
+>
+  <quark-form-item prop="name" label="Name" labelwidth="70px">
+    <quark-field v-model="attrsForm.name" placeholder="Name" />
+  </quark-form-item>
+  <quark-form-item prop="password" label="Password" hideasterisk>
+    <quark-field
+      v-model="attrsForm.password"
+      type="password"
+      placeholder="Password"
+    />
+  </quark-form-item>
+  <quark-form-item prop="age" label="Age" hidemessage>
+    <quark-field v-model="attrsForm.age" placeholder="Age" />
+  </quark-form-item>
+</quark-form>
+```
+
+```js
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        password: "",
+        age: "",
+      },
+    };
+  },
+  mounted() {
+    this.$refs.formRef.setModel(this.form);
+    this.$refs.formRef.setRules({
+      name: [{ required: true, message: "Name is required" }],
+      password: { required: true, message: "Password is required" },
+      age: { required: true, message: "Age is required" },
+    });
+  },
+};
+```
+
 ### Use slots
 
 ```html
@@ -259,14 +306,14 @@ export default {
 
 ### Form Props
 
-| Attribute            | Description                                                             | Type         | Default |
-| -------------------- | ----------------------------------------------------------------------- | ------------ | ------- |
-| validatefirst        | Whether to stop the validation when a rule fails                        | `boolean`    | `false` |
-| hidemessage          | whether to hide the error message                                       | `boolean`    | `false` |
-| hiderequiredasterisk | whether to hide a red asterisk (star) next to the required field label. | `boolean`    | `false` |
-| labelwidth           | width of label, e.g. '50px'.                                            | `string`     | -       |
-| labelsuffix          | suffix of the label                                                     | `string`     |         |
-| labelposition        | position of label. `label-width` prop is required                       | `letf/right` | `left`  |
+| Attribute     | Description                                                             | Type         | Default |
+| ------------- | ----------------------------------------------------------------------- | ------------ | ------- |
+| validatefirst | whether to stop the validation when a rule fails                        | `boolean`    | `false` |
+| hidemessage   | whether to hide the error message                                       | `boolean`    | `false` |
+| hideasterisk  | whether to hide a red asterisk (star) next to the required field label. | `boolean`    | `false` |
+| labelwidth    | width of label, e.g. '50px'.                                            | `string`     | -       |
+| labelsuffix   | suffix of the label                                                     | `string`     |         |
+| labelposition | position of label. `label-width` prop is required                       | `letf/right` | `left`  |
 
 ### Form Method
 
@@ -281,13 +328,14 @@ export default {
 
 ### FormItem Props
 
-| Attribute            | Description                                                                                | Type      | Default |
-| -------------------- | ------------------------------------------------------------------------------------------ | --------- | ------- |
-| prop                 | a key of `model`. In the use of validate and resetFields method, the attribute is required | `string`  |         |
-| label                | label                                                                                      | `string`  | `false` |
-| labelwidth           | width of label, e.g. '50px'.                                                               | `string`  |         |
-| hidemessage          | whether to hide the error message                                                          | `boolean` | `false` |
-| hiderequiredasterisk | whether to hide a red asterisk (star) next to the required field label.                    | `boolean` | `false` |
+| Attribute    | Description                                                                                | Type      | Default |
+| ------------ | ------------------------------------------------------------------------------------------ | --------- | ------- |
+| prop         | a key of `model`. In the use of validate and resetFields method, the attribute is required | `string`  |         |
+| label        | label                                                                                      | `string`  | `false` |
+| labelwidth   | width of label, e.g. '50px'.                                                               | `string`  |         |
+| hidemessage  | whether to hide the error message                                                          | `boolean` | `false` |
+| hideasterisk | whether to hide a red asterisk (star) next to the required field label.                    | `boolean` | `false` |
+| islink       | whether to show right arrow                                                                | `boolean` | `false` |
 
 ### FormItem Slots
 

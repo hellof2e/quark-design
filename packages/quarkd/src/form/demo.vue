@@ -27,7 +27,7 @@
     </div>
 
     <h2>{{ translate("title.rule") }}</h2>
-    <quark-form ref="ruleFormRef" labelwidth="70px">
+    <quark-form ref="ruleFormRef" labelwidth="90px">
       <quark-form-item prop="name" :label="translate('label.name')">
         <quark-field :placeholder="translate('placeholders.pattern')" />
       </quark-form-item>
@@ -50,7 +50,7 @@
 
     <h2>{{ translate("title.items") }}</h2>
     <quark-form>
-      <quark-form-item :label="translate('label.checkbox')">
+      <quark-form-item labelwidth="70px" :label="translate('label.checkbox')">
         <quark-checkbox-group
           :value="formData.checkbox"
           @change="onCheckboxChange"
@@ -100,6 +100,42 @@
           :open="pickerVisible"
           @close="close"
           @confirm="confirm"
+        />
+      </quark-form-item>
+    </quark-form>
+
+    <h2>{{ translate("title.attrs") }}</h2>
+    <quark-form
+      ref="formAttrRef"
+      labelwidth="60px"
+      labelposition="right"
+      labelsuffix="："
+    >
+      <quark-form-item
+        prop="name"
+        :label="translate('label.name')"
+        labelwidth="70px"
+      >
+        <quark-field
+          v-model="attrsForm.name"
+          :placeholder="translate('label.name')"
+        ></quark-field>
+      </quark-form-item>
+      <quark-form-item
+        prop="password"
+        hideasterisk
+        :label="translate('label.password')"
+      >
+        <quark-field
+          v-model="attrsForm.password"
+          type="password"
+          :placeholder="translate('label.password')"
+        />
+      </quark-form-item>
+      <quark-form-item prop="age" :label="translate('label.age')" hidemessage>
+        <quark-field
+          v-model="attrsForm.age"
+          :placeholder="translate('label.age')"
         />
       </quark-form-item>
     </quark-form>
@@ -154,6 +190,13 @@ export default createDemo({
       age: "",
     });
 
+    const formAttrRef = ref();
+    const attrsForm = ref({
+      name: "",
+      password: "",
+      age: "",
+    });
+
     onMounted(() => {
       const picker = pickerRef.value;
       picker.setColumns([
@@ -166,6 +209,13 @@ export default createDemo({
       formRef.value?.setRules({
         name: [{ required: true, message: translate("error.name") }],
         password: { required: true, message: translate("error.password") },
+      });
+
+      formRef.value?.setModel(attrsForm.value);
+      formAttrRef.value?.setRules({
+        name: [{ required: true, message: translate("error.name") }],
+        password: { required: true, message: translate("error.password") },
+        age: { required: true, message: translate("error.age1") },
       });
 
       ruleFormRef.value?.setRules({
@@ -188,6 +238,7 @@ export default createDemo({
             rule: "自定义校验规则",
             items: "表单项类型",
             slots: "使用插槽",
+            attrs: "表单属性",
           },
           label: {
             name: "姓名",
@@ -213,6 +264,7 @@ export default createDemo({
           error: {
             name: "请输入姓名",
             password: "请输入密码",
+            age1: "请输入年龄",
             age: "不能小于18岁",
             errorMsg: "请输入正确内容",
             errorPwd: "密码不能为123456",
@@ -233,6 +285,7 @@ export default createDemo({
             rule: "Custom Rules",
             items: "Form Items",
             slots: "Use slots",
+            attrs: "Form Attributes",
           },
           label: {
             name: "Name",
@@ -266,6 +319,7 @@ export default createDemo({
             name: "Name is required",
             password: "Password is required",
             age: "Must not be younger than 18",
+            age1: "Age is required",
             errorMsg: "Error message",
             errorPwd: "Password can not be 123456",
           },
@@ -351,6 +405,8 @@ export default createDemo({
       ruleFormRef,
       ruleForm,
       ruleFormSubmit,
+      formAttrRef,
+      attrsForm,
     };
   },
 });

@@ -6,6 +6,7 @@
   --textarea-line-height: 24px;
   --radio-label-height: 24px;
   --checkbox-label-height: 24px;
+  position: relative;
 }
 
 .quark-form-item__wrapper {
@@ -14,17 +15,17 @@
   margin: 0 16px;
 }
 
-.quark-form-item__label {
+.quark-form-item__label-wrapper {
   flex-shrink: 0;
-  display: flex;
   margin-right: 12px;
   font-size: var(--cell-title-font-size, 14px);
   color: #5a6066;
   line-height: 24px;
 }
 
-.quark-form-item__label span {
+.quark-form-item__label-wrapper .quark-form-item__label {
   display: inline-block;
+  width: 100%;
 }
 
 .is-required .quark-form-item__label::before {

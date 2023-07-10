@@ -1,17 +1,22 @@
 import { FC } from "react";
 import reactify from "@quarkd/reactify";
 import "quarkd/lib/form";
-import { Rule } from "quarkd/lib/form";
-import { componentBaseInterface } from "../type";
+import { Rules, IFormProps } from "quarkd/lib/form/type";
+import { componentBaseInterface, ReactifyProps } from "../type";
 
-interface FormProps extends componentBaseInterface {}
+type FormProps = componentBaseInterface & ReactifyProps<IFormProps, {}>;
+type FormType = FC<FormProps>;
 
 interface Ref {
-  getValues: () => Promise<any[]>;
-  setRules: (rule: Rule[]) => void;
+  validate: (callback: any) => Promise<boolean> | void;
+  validateField: (props: string | string[], callback: any) => void;
+  clearValidate(props?: string[] | string): void;
+  resetFields(): void;
+  setRules(rules: Rules): void;
+  setModel: (model: any) => void;
 }
+
 type FormRef = Ref & HTMLElement;
-type FormType = FC<FormProps>;
 const Form = reactify("quark-form") as FormType;
 export { FormRef };
 export default Form;

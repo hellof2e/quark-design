@@ -179,6 +179,53 @@ export default {
 </quark-form>
 ```
 
+### 表单属性
+
+```html
+<quark-form
+  ref="formRef"
+  labelwidth="60px"
+  labelposition="right"
+  labelsuffix="："
+>
+  <quark-form-item prop="name" label="姓名" labelwidth="70px">
+    <quark-field v-model="attrsForm.name" placeholder="请输入姓名" />
+  </quark-form-item>
+  <quark-form-item prop="password" label="密码" hideasterisk>
+    <quark-field
+      v-model="attrsForm.password"
+      type="password"
+      placeholder="请输入密码"
+    />
+  </quark-form-item>
+  <quark-form-item prop="age" label="年龄" hidemessage>
+    <quark-field v-model="attrsForm.age" placeholder="请输入年龄" />
+  </quark-form-item>
+</quark-form>
+```
+
+```js
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        password: "",
+        age: "",
+      },
+    };
+  },
+  mounted() {
+    this.$refs.formRef.setModel(this.form);
+    this.$refs.formRef.setRules({
+      name: [{ required: true, message: "请输入姓名" }],
+      password: { required: true, message: "请输入密码" },
+      age: { required: true, message: "请输入年龄" },
+    });
+  },
+};
+```
+
 ### 使用插槽
 
 ```html
@@ -197,14 +244,14 @@ export default {
 
 ### Form Props
 
-| 参数                 | 说明                                     | 类型            | 默认值  |
-| -------------------- | ---------------------------------------- | --------------- | ------- |
-| validatefirst        | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
-| hidemessage          | 是否隐藏校验错误信息                     | `boolean`       | `false` |
-| hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
-| labelwidth           | 表单域标签的宽度，例如 '50px'。          | `string`        | -       |
-| labelsuffix          | 表单域标签的后缀                         | `string`        |         |
-| labelposition        | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
+| 参数          | 说明                                     | 类型            | 默认值  |
+| ------------- | ---------------------------------------- | --------------- | ------- |
+| validatefirst | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
+| hidemessage   | 是否隐藏校验错误信息                     | `boolean`       | `false` |
+| hideasterisk  | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
+| labelwidth    | 表单域标签的宽度，例如 '50px'。          | `string`        | -       |
+| labelsuffix   | 表单域标签的后缀                         | `string`        |         |
+| labelposition | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
 
 ### Form Methods
 
@@ -219,13 +266,14 @@ export default {
 
 ### FormItem Props
 
-| 参数                 | 说明                                                                         | 类型      | 默认值  |
-| -------------------- | ---------------------------------------------------------------------------- | --------- | ------- |
-| prop                 | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | `string`  |         |
-| label                | 标签文本                                                                     | `string`  | `false` |
-| labelwidth           | 表单域标签的的宽度，例如 '50px'。                                            | `string`  |         |
-| hidemessage          | 是否隐藏校验错误信息                                                         | `boolean` | `false` |
-| hiderequiredasterisk | 是否隐藏必填字段的标签旁边的红色星号                                         | `boolean` | `false` |
+| 参数         | 说明                                                                         | 类型      | 默认值  |
+| ------------ | ---------------------------------------------------------------------------- | --------- | ------- |
+| prop         | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | `string`  |         |
+| label        | 标签文本                                                                     | `string`  | `false` |
+| labelwidth   | 表单域标签的的宽度，例如 '50px'。                                            | `string`  |         |
+| hidemessage  | 是否隐藏校验错误信息                                                         | `boolean` | `false` |
+| hideasterisk | 是否隐藏必填字段的标签旁边的红色星号                                         | `boolean` | `false` |
+| islink       | 是否展示右侧箭头                                                             | `boolean` | `false` |
 
 ### FormItem Slots
 

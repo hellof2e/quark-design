@@ -12,6 +12,7 @@ import Dialog from "./dialog";
 import Empty from "./empty";
 import Field, { FieldRef } from "./field";
 import Form, { FormRef } from "./form";
+import FormItem from "./form-item";
 import Grid from "./grid";
 import GridItem from "./grid-item";
 import Image from "./image";
@@ -74,6 +75,7 @@ export {
   FieldRef,
   Form,
   FormRef,
+  FormItem,
   Grid,
   GridItem,
   Image,
