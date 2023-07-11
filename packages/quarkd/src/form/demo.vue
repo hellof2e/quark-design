@@ -6,7 +6,7 @@
         <quark-field
           v-model="form.name"
           :placeholder="translate('label.name')"
-        ></quark-field>
+        />
       </quark-form-item>
       <quark-form-item prop="password" :label="translate('label.password')">
         <quark-field
@@ -15,10 +15,16 @@
           :placeholder="translate('label.password')"
         />
       </quark-form-item>
+      <quark-form-item prop="other.age" :label="translate('label.age')">
+        <quark-field
+          v-model="form.other.age"
+          :placeholder="translate('label.age')"
+        />
+      </quark-form-item>
     </quark-form>
     <br />
     <div class="flex-box">
-      <quark-button type="primary" size="big" @click="submit">
+      <quark-button type="primary" size="big" @click="submit(formRef)">
         {{ translate("submit") }}
       </quark-button>
       <quark-button size="big" @click="reset">
@@ -49,8 +55,8 @@
     </div>
 
     <h2>{{ translate("title.items") }}</h2>
-    <quark-form>
-      <quark-form-item labelwidth="70px" :label="translate('label.checkbox')">
+    <quark-form ref="formItemsRef">
+      <quark-form-item prop="checkbox" :label="translate('label.checkbox')">
         <quark-checkbox-group
           :value="formData.checkbox"
           @change="onCheckboxChange"
@@ -63,7 +69,7 @@
           </quark-checkbox>
         </quark-checkbox-group>
       </quark-form-item>
-      <quark-form-item :label="translate('label.radio')">
+      <quark-form-item prop="radio" :label="translate('label.radio')">
         <quark-radio-group :value="formData.radio" @change="onRadioChange">
           <quark-radio name="square">
             {{ translate("enum.square") }}
@@ -73,22 +79,22 @@
           </quark-radio>
         </quark-radio-group>
       </quark-form-item>
-      <quark-form-item :label="translate('label.switch')">
+      <quark-form-item prop="swich" :label="translate('label.switch')">
         <quark-switch :checked="formData.switch"></quark-switch>
       </quark-form-item>
-      <quark-form-item :label="translate('label.rate')">
+      <quark-form-item prop="rate" :label="translate('label.rate')">
         <quark-rate></quark-rate>
       </quark-form-item>
-      <quark-form-item :label="translate('label.stepper')">
+      <quark-form-item prop="stepper" :label="translate('label.stepper')">
         <quark-stepper min="0" max="99" />
       </quark-form-item>
-      <quark-form-item :label="translate('label.textarea')">
+      <quark-form-item prop="textarea" :label="translate('label.textarea')">
         <quark-textarea autosize />
       </quark-form-item>
-      <quark-form-item :label="translate('label.uploader')">
-        <quark-uploader></quark-uploader>
+      <quark-form-item prop="uploader" :label="translate('label.uploader')">
+        <quark-uploader v-model="formData.uploader" preview></quark-uploader>
       </quark-form-item>
-      <quark-form-item :label="translate('label.picker')" islink>
+      <quark-form-item prop="picker" :label="translate('label.picker')" islink>
         <quark-field
           :value="formData.picker"
           readonly
@@ -103,6 +109,12 @@
         />
       </quark-form-item>
     </quark-form>
+    <br />
+    <div class="flex-box">
+      <quark-button type="primary" size="big" @click="getValues(formItemsRef)">
+        {{ translate("submit") }}
+      </quark-button>
+    </div>
 
     <h2>{{ translate("title.attrs") }}</h2>
     <quark-form
@@ -119,12 +131,13 @@
         <quark-field
           v-model="attrsForm.name"
           :placeholder="translate('label.name')"
-        ></quark-field>
+        />
       </quark-form-item>
       <quark-form-item
         prop="password"
         hideasterisk
         :label="translate('label.password')"
+        :rules="[{ required: true, message: translate('error.password') }]"
       >
         <quark-field
           v-model="attrsForm.password"
@@ -154,6 +167,33 @@
         </div>
       </quark-form-item>
     </quark-form>
+
+    <h2>动态表单</h2>
+    <quark-form ref="dynamicFormRef">
+      <template v-for="(item, index) in dynamicFormData.user" :key="index">
+        <quark-form-item
+          :label="`姓名${index}`"
+          :prop="`user.${index}.name`"
+          :rules="[{ required: true, message: translate('error.name') }]"
+        >
+          <quark-field v-model="item.name" />
+        </quark-form-item>
+        <quark-form-item
+          :label="`年龄${index}`"
+          :prop="`user.${index}.age`"
+          :rules="[{ required: true, message: translate('error.age1') }]"
+        >
+          <quark-field v-model="item.age" />
+        </quark-form-item>
+        <br />
+      </template>
+    </quark-form>
+    <div class="flex-box">
+      <quark-button type="primary" size="big" @click="submit(dynamicFormRef)">
+        {{ translate("submit") }}
+      </quark-button>
+      <quark-button size="big" @click="addDynamicForm">添加</quark-button>
+    </div>
   </div>
 </template>
 
@@ -176,9 +216,13 @@ export default createDemo({
       uploader: [],
       picker: "",
     });
+
     const form = ref({
       name: "",
       password: "",
+      other: {
+        age: 18,
+      },
     });
     const formRef = ref(null);
     const pickerRef = ref(null);
@@ -197,6 +241,22 @@ export default createDemo({
       age: "",
     });
 
+    const formItemsRef = ref();
+
+    const dynamicFormData = ref({
+      user: [
+        { name: "", age: "" },
+        { name: "", age: "" },
+      ],
+    });
+    const addDynamicForm = () => {
+      dynamicFormData.value.user.push({ name: "", age: "" });
+    };
+    const dynamicRules = {
+      name: [{ required: true, message: translate("error.name") }],
+      age: [{ required: true, message: translate("error.age1") }],
+    };
+
     onMounted(() => {
       const picker = pickerRef.value;
       picker.setColumns([
@@ -209,12 +269,17 @@ export default createDemo({
       formRef.value?.setRules({
         name: [{ required: true, message: translate("error.name") }],
         password: { required: true, message: translate("error.password") },
+        other: {
+          age: [{ required: true, message: translate("error.age1") }],
+        },
       });
 
-      formRef.value?.setModel(attrsForm.value);
+      formItemsRef.value?.setModel(formData.value);
+
+      formAttrRef.value?.setModel(attrsForm.value);
       formAttrRef.value?.setRules({
         name: [{ required: true, message: translate("error.name") }],
-        password: { required: true, message: translate("error.password") },
+        // password: { required: true, message: translate("error.password") },
         age: { required: true, message: translate("error.age1") },
       });
 
@@ -229,6 +294,8 @@ export default createDemo({
         password: [{ required: true, validator: validatorPassword }],
         age: [{ required: true, asyncValidator: asyncValidator }],
       });
+
+      dynamicFormRef.value?.setModel(dynamicFormData.value);
     });
     onBeforeMount(() => {
       useTranslate({
@@ -336,14 +403,19 @@ export default createDemo({
       });
     });
 
-    const submit = () => {
-      formRef.value.validate((valid, errorMsg) => {
+    const submit = (ref) => {
+      ref.validate((valid, errorMsg) => {
         console.log("submit", valid, errorMsg);
       });
     };
 
     const reset = () => {
       formRef.value.resetFields();
+    };
+
+    const getValues = (ref) => {
+      const values = ref.getValues();
+      console.log(values);
     };
 
     const onCheckboxChange = ({ detail }) => {
@@ -389,6 +461,8 @@ export default createDemo({
       });
     };
 
+    const dynamicFormRef = ref();
+
     return {
       formRef,
       formData,
@@ -407,6 +481,12 @@ export default createDemo({
       ruleFormSubmit,
       formAttrRef,
       attrsForm,
+      formItemsRef,
+      getValues,
+      addDynamicForm,
+      dynamicRules,
+      dynamicFormData,
+      dynamicFormRef,
     };
   },
 });

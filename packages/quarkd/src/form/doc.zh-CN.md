@@ -38,6 +38,9 @@ export default {
       form: {
         name: "",
         password: "",
+        other: {
+          age: 18,
+        },
       },
     };
   },
@@ -46,6 +49,9 @@ export default {
     this.$refs.formRef.setRules({
       name: [{ required: true, message: "请输入姓名" }],
       password: { required: true, message: "请输入密码" },
+      other: {
+        age: [{ required: true, message: "请输入年龄" }],
+      },
     });
   },
   methods: {
@@ -71,10 +77,10 @@ export default {
     <quark-field placeholder="正则校验" />
   </quark-form-item>
   <quark-form-item prop="password" label="密码">
-    <quark-field placeholder="函数校验" />
+    <quark-field v-model="ruleForm.password" placeholder="函数校验" />
   </quark-form-item>
   <quark-form-item prop="age" name="年龄">
-    <quark-field v-model="ruleForm.age" placeholder="异步校验" />
+    <quark-field placeholder="异步校验" />
   </quark-form-item>
 </quark-form>
 
@@ -107,7 +113,7 @@ export default {
     return {
       ruleForm: {
         name: "",
-        password: "",
+        password: "123456",
         age: "",
       },
       rules: {

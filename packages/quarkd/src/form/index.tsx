@@ -9,6 +9,7 @@ import {
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
 import { Rules, labelPosition } from "./type";
+import { convertToNestedObject, getPropByPath } from "./utils";
 
 @customElement({
   tag: "quark-form",
@@ -40,7 +41,7 @@ class QuarkForm extends QuarkElement {
   @state()
   formItems: QuarkFormItem[] = [];
 
-  model: { [key: string]: any } | null = null;
+  model: Record<string, any> | null = null;
 
   rules: Rules | null = null;
 
@@ -61,13 +62,20 @@ class QuarkForm extends QuarkElement {
           labelposition: this.labelposition,
         });
       });
-
       this.formItems.forEach((el) => {
         if (this.model) {
           el.setFormModel(this.model);
         }
-        if (this.rules && el.prop && this.rules[el.prop]) {
-          el.setRule(this.rules[el.prop]);
+
+        if (this.rules && el.prop) {
+          let prop = el.prop;
+          if (el.prop.indexOf(".") > -1) {
+            prop = el.prop.split(".").shift();
+          }
+          const rule = getPropByPath(this.rules, prop, true);
+          el.setRule({
+            [prop]: rule.v,
+          });
         }
       });
     }
@@ -99,12 +107,12 @@ class QuarkForm extends QuarkElement {
 
       if (this.validatefirst && !valid) {
         if (typeof callback === "function") {
-          callback(valid, invalidFields);
+          callback(valid, valid ? this.getValues() : invalidFields);
         }
         break;
       }
       if (typeof callback === "function" && ++count === this.formItems.length) {
-        callback(valid, invalidFields);
+        callback(valid, valid ? this.getValues() : invalidFields);
       }
     }
 
@@ -128,18 +136,17 @@ class QuarkForm extends QuarkElement {
     });
   };
 
-  clearValidate(props: string[] | string = "") {
-    this.formItems.forEach((item) => {
-      if (props) {
-        if (Array.isArray(props) && props.indexOf(item.prop) > -1) {
-          item.clearValidate();
-        }
-        if (item.prop === props) {
-          item.clearValidate();
-        }
+  clearValidate(props?: string[] | string) {
+    let fields = this.formItems;
+    if (props) {
+      if (Array.isArray(props)) {
+        fields = this.formItems.filter((item) => props.indexOf(item.prop) > -1);
       } else {
-        item.clearValidate();
+        fields = this.formItems.filter((item) => props === item.prop);
       }
+    }
+    fields.forEach((item) => {
+      item.clearValidate();
     });
   }
 
@@ -158,9 +165,23 @@ class QuarkForm extends QuarkElement {
     this.rules = rules;
   }
 
-  setModel = (model) => {
+  setModel = (model: Record<string, any>) => {
     this.model = model;
   };
+
+  getValues(): Record<string, any> {
+    console.log(this.model);
+    const values = {};
+    this.formItems.forEach((item) => {
+      const value = item.getValue();
+      if (item.prop.indexOf(".") > -1) {
+        convertToNestedObject(item.prop, value, values);
+      } else {
+        values[item.prop] = value;
+      }
+    });
+    return values;
+  }
 
   render() {
     return (

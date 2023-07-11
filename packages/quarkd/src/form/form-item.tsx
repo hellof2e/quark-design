@@ -10,7 +10,7 @@ import AsyncValidator from "async-validator";
 import style from "./form-item.css";
 import { formTagNamesMap, getPropByPath, noop } from "./utils";
 import { debounce } from "../../utils/index";
-import { FormRule, IFormProps, Rules } from "./type";
+import { IFormProps, Rules } from "./type";
 
 @customElement({
   tag: "quark-form-item",
@@ -48,6 +48,8 @@ class QuarkFormItem extends QuarkElement {
   itemNode = null;
 
   @state()
+  formRules: Rules | null = null;
+
   rules: Rules | null = null;
 
   @state()
@@ -77,21 +79,22 @@ class QuarkFormItem extends QuarkElement {
     this.initialValue = getPropByPath(model, this.prop, true).v;
   }
 
-  setRule(rule: FormRule) {
-    this.rules = { [this.prop]: rule };
+  setRule(rule: Rules) {
+    this.formRules = rule;
   }
 
   getRules(): Rules[] {
-    if (!this.rules) return null;
-    let formRules = this.rules;
-    const prop = getPropByPath(formRules, this.prop || "", true);
-    formRules = formRules ? prop.o[this.prop || ""] || prop.v : [];
-    return [].concat(formRules || []);
+    const selfRules = this.rules;
+    let formRules = this.formRules;
+    if (formRules) {
+      const prop = getPropByPath(formRules, this.prop || "", true);
+      formRules = formRules ? prop.o[this.prop || ""] || prop.v : [];
+    }
+    return [].concat(selfRules || formRules || []);
   }
 
   validate(callback = noop) {
     this.validateDisabled = false;
-    if (!this.prop) return;
 
     const rules = this.getRules();
 
@@ -161,16 +164,14 @@ class QuarkFormItem extends QuarkElement {
       }
     }
     if (this.formModel) {
-      this.formModel[this.prop] = value;
-
       const prop = getPropByPath(this.formModel, this.prop, true);
-
       if (Array.isArray(value)) {
         prop.o[prop.k] = [].concat(value);
       } else {
         prop.o[prop.k] = value;
       }
     }
+    console.log(this.prop, value);
     return value;
   };
 
@@ -207,6 +208,7 @@ class QuarkFormItem extends QuarkElement {
   }, 200);
 
   onFieldBlur() {
+    if (this.validateDisabled) return;
     this.validate();
   }
 
@@ -290,7 +292,7 @@ class QuarkFormItem extends QuarkElement {
               <slot
                 ref={this.defaultSlotRef}
                 onslotchange={this.defaultSlotChange}
-              ></slot>
+              />
             </div>
             {this.errorMessageRender()}
           </div>

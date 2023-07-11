@@ -49,3 +49,31 @@ export const formTagNamesMap = {
   [textarea]: textarea,
   [uploader]: uploader,
 };
+
+function convertStringToNestedObject(str, value) {
+  const keys = str.split(".");
+  const key = keys.shift();
+  const obj = {
+    [key]: keys.length
+      ? convertStringToNestedObject(keys.join("."), value)
+      : value,
+  };
+  return obj;
+}
+
+export function convertToNestedObject(str, value, obj = {}) {
+  const nestedObj = convertStringToNestedObject(str, value);
+  Object.keys(nestedObj).forEach((key) => {
+    const subKeys = key.split(".");
+    let currentObj = obj;
+    subKeys.forEach((subKey, index) => {
+      if (index === subKeys.length - 1) {
+        currentObj[subKey] = nestedObj[key];
+      } else {
+        currentObj[subKey] = currentObj[subKey] || {};
+        currentObj = currentObj[subKey];
+      }
+    });
+  });
+  return obj;
+}

@@ -149,6 +149,7 @@ class QuarkUploader extends QuarkElement {
       }
       this.values = this.preview ? this.tasks.slice(0, this.maxcount) : [];
       this.$emit("afterread", { detail: items });
+      this.$emit("change", { detail: this.values });
     } else {
       this.$emit("oversize", {
         detail: {
