@@ -170,17 +170,14 @@ class QuarkForm extends QuarkElement {
   };
 
   getValues(): Record<string, any> {
-    console.log(this.model);
-    const values = {};
+    if (!this.model) {
+      console.warn("[Quark Warn]please setModel!");
+      return;
+    }
     this.formItems.forEach((item) => {
-      const value = item.getValue();
-      if (item.prop.indexOf(".") > -1) {
-        convertToNestedObject(item.prop, value, values);
-      } else {
-        values[item.prop] = value;
-      }
+      item.getValue();
     });
-    return values;
+    return this.model;
   }
 
   render() {

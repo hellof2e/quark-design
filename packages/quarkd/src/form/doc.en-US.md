@@ -302,6 +302,61 @@ export default {
 </quark-form>
 ```
 
+### Add form items dynamically
+
+```html
+<quark-form ref="dynamicFormRef">
+  <template v-for="(item, index) in form.user" :key="index">
+    <quark-form-item
+      :label="`Name${index}`"
+      :prop="`user.${index}.name`"
+      :rules="[{ required: true, message: 'Name is required' }]"
+    >
+      <quark-field v-model="item.name" placeholder="Name" />
+    </quark-form-item>
+    <quark-form-item
+      :label="`Age${index}`"
+      :prop="`user.${index}.age`"
+      :rules="[{ required: true, message: 'Age is required' }]"
+    >
+      <quark-field v-model="item.age" placeholder="Age" />
+    </quark-form-item>
+    <br />
+  </template>
+</quark-form>
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit">
+    Submit
+  </quark-button>
+  <quark-button size="big" @click="addUser"> Add </quark-button>
+</div>
+```
+
+```js
+export default {
+  data() {
+    return {
+      form: {
+        user: [{ name: "", age: "" }],
+      },
+    };
+  },
+  mounted() {
+    this.$refs.dynamicFormRef.setModel(this.form);
+  },
+  methods: {
+    submit() {
+      this.$refs.dynamicFormRef.validate((valid, res) => {
+        console.log("submit", valid, res);
+      });
+    },
+    addUser() {
+      this.form.user.push({ name: "", age: "" });
+    },
+  },
+};
+```
+
 ## API
 
 ### Form Props
@@ -317,21 +372,23 @@ export default {
 
 ### Form Method
 
-| Name          | Description                                                                                                                                                                                                                                                                      | Type                                                                         |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| validate      | validate the whole form. Takes a callback as a param. After validation, the callback will be executed with two params: a boolean indicating if the validation has passed, and an object containing all fields that fail the validation. Returns a promise if callback is omitted | `Function(callback: Function(boolean, object))`                              |
-| validateField | validate one or several form items                                                                                                                                                                                                                                               | `Function(props: array \| string, callback: Function(errorMessage: string))` |
-| resetFields   | reset all the fields and remove validation result                                                                                                                                                                                                                                |                                                                              |
-| clearValidate | clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared                                                     | `Function(props: array \| string)`                                           |
-| setModel      | set data of form component.                                                                                                                                                                                                                                                      | `(model: object) => void`                                                    |
-| setRules      | set validation rules of form                                                                                                                                                                                                                                                     | `(rules: Rules) => void`                                                     |
+| Name          | Description                                                                                                                                                                                                                                                                                                                      | Type                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| validate      | validate the whole form. Takes a callback as a param. After validation, the callback will be executed with two params: a boolean indicating if the validation has passed, and an object containing all fields that fail the validation, if the validation has passed, return the model. Returns a promise if callback is omitted | `Function(callback: Function(boolean, object))`                              |
+| validateField | validate one or several form items                                                                                                                                                                                                                                                                                               | `Function(props: array \| string, callback: Function(errorMessage: string))` |
+| resetFields   | reset all the fields and remove validation result                                                                                                                                                                                                                                                                                |                                                                              |
+| clearValidate | clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared                                                                                                     | `Function(props: array \| string)`                                           |
+| setModel      | set data of form component.                                                                                                                                                                                                                                                                                                      | `(model: object) => void`                                                    |
+| setRules      | set validation rules of form                                                                                                                                                                                                                                                                                                     | `(rules: Rules) => void`                                                     |
+| getValues     | get the form data, the premise must be set to set the model                                                                                                                                                                                                                                                                      |                                                                              |
 
 ### FormItem Props
 
 | Attribute    | Description                                                                                | Type      | Default |
 | ------------ | ------------------------------------------------------------------------------------------ | --------- | ------- |
 | prop         | a key of `model`. In the use of validate and resetFields method, the attribute is required | `string`  |         |
-| label        | label                                                                                      | `string`  | `false` |
+| label        | label                                                                                      | `string`  |         |
+| rules        | validation rules of form                                                                   | `object`  |         |
 | labelwidth   | width of label, e.g. '50px'.                                                               | `string`  |         |
 | hidemessage  | whether to hide the error message                                                          | `boolean` | `false` |
 | hideasterisk | whether to hide a red asterisk (star) next to the required field label.                    | `boolean` | `false` |

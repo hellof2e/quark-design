@@ -246,6 +246,59 @@ export default {
 </quark-form>
 ```
 
+### 动态增加表单项
+
+```html
+<quark-form ref="dynamicFormRef">
+  <template v-for="(item, index) in form.user" :key="index">
+    <quark-form-item
+      :label="`姓名${index}`"
+      :prop="`user.${index}.name`"
+      :rules="[{ required: true, message: '请输入姓名' }]"
+    >
+      <quark-field v-model="item.name" placeholder="姓名" />
+    </quark-form-item>
+    <quark-form-item
+      :label="`年龄${index}`"
+      :prop="`user.${index}.age`"
+      :rules="[{ required: true, message: '请输入年龄' }]"
+    >
+      <quark-field v-model="item.age" placeholder="年龄" />
+    </quark-form-item>
+    <br />
+  </template>
+</quark-form>
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
+  <quark-button size="big" @click="addUser"> 添加 </quark-button>
+</div>
+```
+
+```js
+export default {
+  data() {
+    return {
+      form: {
+        user: [{ name: "", age: "" }],
+      },
+    };
+  },
+  mounted() {
+    this.$refs.dynamicFormRef.setModel(this.form);
+  },
+  methods: {
+    submit() {
+      this.$refs.dynamicFormRef.validate((valid, res) => {
+        console.log("submit", valid, res);
+      });
+    },
+    addUser() {
+      this.form.user.push({ name: "", age: "" });
+    },
+  },
+};
+```
+
 ## API
 
 ### Form Props
@@ -261,25 +314,27 @@ export default {
 
 ### Form Methods
 
-| 名称          | 说明                                                                                                                                                                 | 类型                                                                         |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| validate      | 对整个表单进行校验的方法，参数为一个回调函数。该回调函数会在校验结束后被调用，并传入两个参数：是否校验成功和未通过校验的字段。若不传入回调函数，则会返回一个 promise | `Function(callback: Function(boolean, object))`                              |
-| validateField | 对部分表单字段进行校验的方法                                                                                                                                         | `Function(props: array \| string, callback: Function(errorMessage: string))` |
-| resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                           |                                                                              |
-| clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                             | `Function(props: array \| string)`                                           |
-| setModel      | 设置表单数据对象                                                                                                                                                     | `(model: object) => void`                                                    |
-| setRules      | 设置表单验证规则                                                                                                                                                     | `(rules: Rules) => void`                                                     |
+| 名称          | 说明                                                                                                                                                                                         | 类型                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| validate      | 对整个表单进行校验的方法，参数为一个回调函数。该回调函数会在校验结束后被调用，并传入两个参数：是否校验成功和未通过校验的字段，若校验通过则返回 model。若不传入回调函数，则会返回一个 promise | `Function(callback: Function(boolean, object))`                              |
+| validateField | 对部分表单字段进行校验的方法                                                                                                                                                                 | `Function(props: array \| string, callback: Function(errorMessage: string))` |
+| resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                                                   |                                                                              |
+| clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                                                     | `Function(props: array \| string)`                                           |
+| setModel      | 设置表单数据对象                                                                                                                                                                             | `(model: object) => void`                                                    |
+| setRules      | 设置表单验证规则                                                                                                                                                                             | `(rules: Rules) => void`                                                     |
+| getValues     | 获取表单数据，前提需设置 model                                                                                                                                                               |                                                                              |
 
 ### FormItem Props
 
-| 参数         | 说明                                                                         | 类型      | 默认值  |
-| ------------ | ---------------------------------------------------------------------------- | --------- | ------- |
-| prop         | 表单域 model 字段，在使用 validate、resetFields 方法的情况下，该属性是必填的 | `string`  |         |
-| label        | 标签文本                                                                     | `string`  | `false` |
-| labelwidth   | 表单域标签的的宽度，例如 '50px'。                                            | `string`  |         |
-| hidemessage  | 是否隐藏校验错误信息                                                         | `boolean` | `false` |
-| hideasterisk | 是否隐藏必填字段的标签旁边的红色星号                                         | `boolean` | `false` |
-| islink       | 是否展示右侧箭头                                                             | `boolean` | `false` |
+| 参数         | 说明                                                                                    | 类型      | 默认值  |
+| ------------ | --------------------------------------------------------------------------------------- | --------- | ------- |
+| prop         | 表单域 model 字段，在使用 validate、resetFields、getValues 方法的情况下，该属性是必填的 | `string`  |         |
+| label        | 标签文本                                                                                | `string`  |         |
+| rules        | 表单验证规则                                                                            | `object`  |         |
+| labelwidth   | 表单域标签的的宽度，例如 '50px'。                                                       | `string`  |         |
+| hidemessage  | 是否隐藏校验错误信息                                                                    | `boolean` | `false` |
+| hideasterisk | 是否隐藏必填字段的标签旁边的红色星号                                                    | `boolean` | `false` |
+| islink       | 是否展示右侧箭头                                                                        | `boolean` | `false` |
 
 ### FormItem Slots
 

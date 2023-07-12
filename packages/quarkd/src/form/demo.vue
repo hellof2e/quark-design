@@ -168,22 +168,28 @@
       </quark-form-item>
     </quark-form>
 
-    <h2>动态表单</h2>
+    <h2>{{ translate("title.dynamic") }}</h2>
     <quark-form ref="dynamicFormRef">
       <template v-for="(item, index) in dynamicFormData.user" :key="index">
         <quark-form-item
-          :label="`姓名${index}`"
+          :label="`${translate('label.name')}${index}`"
           :prop="`user.${index}.name`"
           :rules="[{ required: true, message: translate('error.name') }]"
         >
-          <quark-field v-model="item.name" />
+          <quark-field
+            v-model="item.name"
+            :placeholder="translate('label.name')"
+          />
         </quark-form-item>
         <quark-form-item
-          :label="`年龄${index}`"
+          :label="`${translate('label.age')}${index}`"
           :prop="`user.${index}.age`"
           :rules="[{ required: true, message: translate('error.age1') }]"
         >
-          <quark-field v-model="item.age" />
+          <quark-field
+            v-model="item.age"
+            :placeholder="translate('label.age')"
+          />
         </quark-form-item>
         <br />
       </template>
@@ -192,7 +198,9 @@
       <quark-button type="primary" size="big" @click="submit(dynamicFormRef)">
         {{ translate("submit") }}
       </quark-button>
-      <quark-button size="big" @click="addDynamicForm">添加</quark-button>
+      <quark-button size="big" @click="addDynamicForm">
+        {{ translate("add") }}
+      </quark-button>
     </div>
   </div>
 </template>
@@ -244,10 +252,7 @@ export default createDemo({
     const formItemsRef = ref();
 
     const dynamicFormData = ref({
-      user: [
-        { name: "", age: "" },
-        { name: "", age: "" },
-      ],
+      user: [{ name: "", age: "" }],
     });
     const addDynamicForm = () => {
       dynamicFormData.value.user.push({ name: "", age: "" });
@@ -306,6 +311,7 @@ export default createDemo({
             items: "表单项类型",
             slots: "使用插槽",
             attrs: "表单属性",
+            dynamic: "动态增加表单项",
           },
           label: {
             name: "姓名",
@@ -328,6 +334,7 @@ export default createDemo({
           cities: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
           submit: "提交",
           reset: "重置",
+          add: "添加",
           error: {
             name: "请输入姓名",
             password: "请输入密码",
@@ -353,6 +360,7 @@ export default createDemo({
             items: "Form Items",
             slots: "Use slots",
             attrs: "Form Attributes",
+            dynamic: "Add form items dynamically",
           },
           label: {
             name: "Name",
@@ -382,6 +390,7 @@ export default createDemo({
           ],
           submit: "Submit",
           reset: "Reset",
+          add: "Add",
           error: {
             name: "Name is required",
             password: "Password is required",
@@ -433,7 +442,6 @@ export default createDemo({
     };
 
     const confirm = ({ detail }) => {
-      console.log(detail.value);
       formData.value.picker = detail.value.map((i) => i.value).join("");
       pickerVisible.value = false;
     };

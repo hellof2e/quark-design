@@ -22,4 +22,5 @@ export interface IFormItemProps {
   hidemessage?: boolean;
   hideasterisk?: boolean;
   islink?: boolean;
+  rules?: FormRule;
 }

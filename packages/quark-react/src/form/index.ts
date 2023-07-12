@@ -13,7 +13,8 @@ interface Ref {
   clearValidate(props?: string[] | string): void;
   resetFields(): void;
   setRules(rules: Rules): void;
-  setModel: (model: any) => void;
+  setModel: (model: Record<string, any>) => void;
+  getValues(): Record<string, any>;
 }
 
 type FormRef = Ref & HTMLElement;

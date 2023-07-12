@@ -171,7 +171,6 @@ class QuarkFormItem extends QuarkElement {
         prop.o[prop.k] = value;
       }
     }
-    console.log(this.prop, value);
     return value;
   };
 
