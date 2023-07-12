@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://quark.hellobike.com/">
+  <a href="https://quarkc.hellobike.com/">
     <img width="120" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
   </a>
 </p>

@@ -1,10 +1,9 @@
 <p align="center">
-  <a href="https://quark.hellobike.com/">
+  <a href="https://quarkc.hellobike.com/">
 <!--     <img width="120" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png"> -->
     <img src="https://github.com/hellof2e/quark-design/assets/14307551/45ca3969-3f92-49a1-84fa-a4e6160cb7f4" />
   </a>
 </p>
-
 
 <h2 align="center">Quark Design</h2>
 
@@ -38,7 +37,8 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit 
+For full documentation, visit
+
 - [Vue Doc](https://vue-quarkdesign.hellobike.com)
 - [React Doc](https://react-quarkdesign.hellobike.com)
 - [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkdesign.hellobike.com)
@@ -46,15 +46,17 @@ For full documentation, visit
 - [Svelte Doc(work in progress...)](https://svelte-quarkdesign.hellobike.com)
 
 ## Install
+
 ```bash
 npm install quarkd
 ```
 
 ## Usage
-```js
-import 'quarkd/lib/button'
 
-<quark-button type="primary">Button</quark-button>
+```js
+import "quarkd/lib/button";
+
+<quark-button type="primary">Button</quark-button>;
 ```
 
 ## Community
