@@ -57,7 +57,7 @@ export default () => {
 ```html
 <Rate
   value="2"
-  imgicon="https://vue-quarkdesign.hellobike.com/assets/quark-logo.f9a6a307.png"
+  imgicon="https://vue-quarkd.hellobike.com/assets/quark-logo.f9a6a307.png"
 ></Rate>
 ```
 

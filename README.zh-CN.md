@@ -42,11 +42,11 @@
 
 更多介绍，请访问
 
-- [Vue Doc](https://vue-quarkdesign.hellobike.com)
-- [React Doc](https://react-quarkdesign.hellobike.com)
-- [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkdesign.hellobike.com)
-- [Angular Doc(work in progress...)](https://angular-quarkdesign.hellobike.com)
-- [Svelte Doc(work in progress...)](https://svelte-quarkdesign.hellobike.com)
+- [Vue Doc](https://vue-quarkd.hellobike.com)
+- [React Doc](https://react-quarkd.hellobike.com)
+- [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkd.hellobike.com)
+- [Angular Doc(work in progress...)](https://angular-quarkd.hellobike.com)
+- [Svelte Doc(work in progress...)](https://svelte-quarkd.hellobike.com)
 
 ## 社区交流
 
