@@ -39,10 +39,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkCascadePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 

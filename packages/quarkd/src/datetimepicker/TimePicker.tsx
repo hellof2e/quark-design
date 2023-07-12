@@ -13,10 +13,6 @@ type TimeType = "time";
   style,
 })
 class QuarkTimePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 
