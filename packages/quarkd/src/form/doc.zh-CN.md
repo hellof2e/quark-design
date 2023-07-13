@@ -23,10 +23,13 @@ import "quarkd/lib/form-item";
   <quark-form-item prop="password" label="密码">
     <quark-field v-model="form.password" type="password" placeholder="密码" />
   </quark-form-item>
+  <quark-form-item prop="other.age" label="年龄">
+    <quark-field v-model="form.other.age" placeholder="年龄" />
+  </quark-form-item>
 </quark-form>
 
 <div class="flex-box">
-  <quark-button type="primary" size="big" @click="submit">提交</quark-button>
+  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
   <quark-button size="big" @click="reset">重置</quark-button>
 </div>
 ```
@@ -56,8 +59,8 @@ export default {
   },
   methods: {
     submit() {
-      this.$refs.formRef.validate((valid, errorMsg) => {
-        console.log("submit", valid, errorMsg);
+      this.$refs.formRef.validate((valid, res) => {
+        console.log("submit", valid, res);
       });
     },
     reset() {
@@ -72,12 +75,12 @@ export default {
 自定义校验 callback 必须被调用。 更多高级用法可参考 [async-validator](https://github.com/yiminghe/async-validator)。
 
 ```html
-<quark-form ref="ruleFormRef" labelwidth="70px">
+<quark-form ref="formRef" labelwidth="70px">
   <quark-form-item prop="name" label="姓名">
     <quark-field placeholder="正则校验" />
   </quark-form-item>
   <quark-form-item prop="password" label="密码">
-    <quark-field v-model="ruleForm.password" placeholder="函数校验" />
+    <quark-field v-model="form.password" placeholder="函数校验" />
   </quark-form-item>
   <quark-form-item prop="age" name="年龄">
     <quark-field placeholder="异步校验" />
@@ -85,7 +88,7 @@ export default {
 </quark-form>
 
 <div class="flex-box">
-  <quark-button type="primary" size="big" @click="submit">提交</quark-button>
+  <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
 </div>
 ```
 
@@ -111,7 +114,7 @@ export default {
   };
   data() {
     return {
-      ruleForm: {
+      form: {
         name: "",
         password: "123456",
         age: "",
@@ -126,11 +129,11 @@ export default {
     }
   },
   mounted() {
-    this.$refs.ruleForm.setRules(this.rules);
+    this.$refs.formRef.setRules(this.rules);
   },
   methods: {
     async submit() {
-      const valid = await this.$refs.ruleForm.validate();
+      const valid = await this.$refs.formRef.validate();
       console.log(valid)
     },
   }
@@ -140,40 +143,36 @@ export default {
 ### 表单项类型
 
 ```html
-<quark-form>
-  <quark-form-item label="复选框">
-    <quark-checkbox-group :value="formData.checkbox" @change="onCheckboxChange">
+<quark-form ref="formRef">
+  <quark-form-item label="复选框" prop="checkbox">
+    <quark-checkbox-group :value="form.checkbox" @change="onCheckboxChange">
       <quark-checkbox name="apple">苹果</quark-checkbox>
       <quark-checkbox name="banana">香蕉</quark-checkbox>
     </quark-checkbox-group>
   </quark-form-item>
-  <quark-form-item label="单选框">
-    <quark-radio-group :value="formData.radio" @change="onRadioChange">
+  <quark-form-item label="单选框" prop="radio">
+    <quark-radio-group :value="form.radio" @change="onRadioChange">
       <quark-radio name="square">方形</quark-radio>
       <quark-radio name="circle">圆形</quark-radio>
     </quark-radio-group>
   </quark-form-item>
-  <quark-form-item label="开关">
-    <quark-switch :checked="formData.switch"></quark-switch>
+  <quark-form-item label="开关" prop="switch">
+    <quark-switch :checked="form.switch"></quark-switch>
   </quark-form-item>
-  <quark-form-item label="评分">
+  <quark-form-item label="评分" prop="rate">
     <quark-rate></quark-rate>
   </quark-form-item>
-  <quark-form-item label="步进器">
+  <quark-form-item label="步进器" prop="stepper">
     <quark-stepper min="0" max="99" />
   </quark-form-item>
-  <quark-form-item label="文本域">
+  <quark-form-item label="文本域" prop="textarea">
     <quark-textarea autosize />
   </quark-form-item>
-  <quark-form-item label="文件上传">
-    <quark-uploader></quark-uploader>
+  <quark-form-item label="文件上传" prop="uploader">
+    <quark-uploader preview></quark-uploader>
   </quark-form-item>
-  <quark-form-item label="选择器" islink>
-    <quark-field
-      :value="formData.picker"
-      readonly
-      @click="pickerVisible = true"
-    />
+  <quark-form-item label="选择器" prop="picker" islink>
+    <quark-field :value="form.picker" readonly @click="pickerVisible = true" />
     <quark-picker
       title="请选择城市"
       ref="pickerRef"
@@ -183,6 +182,60 @@ export default {
     />
   </quark-form-item>
 </quark-form>
+
+<div class="flex-box">
+  <quark-button type="primary" size="big" @click="getValues">
+    提交
+  </quark-button>
+</div>
+```
+
+```js
+export default {
+  data() {
+    return {
+      pickerVisible: false,
+      form: {
+        checkbox: ["apple"],
+        radio: "",
+        rate: "",
+        stepper: "",
+        switch: false,
+        textarea: "",
+        uploader: [],
+        picker: "",
+      },
+    };
+  },
+  mounted() {
+    this.$refs.formRef.setModel(this.form);
+    this.$refs.pickerRef.setColumns([
+      {
+        defaultIndex: 0,
+        values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
+      },
+    ]);
+  },
+  methods: {
+    getValues() {
+      const values = this.$refs.formRef.getValues();
+      console.log(values);
+    },
+    onCheckboxChange({ detail }) {
+      this.form.checkbox = detail.value;
+    },
+    onRadioChange({ detail }) {
+      this.form.radio = detail.value;
+    },
+    confirm({ detail }) {
+      this.form.picker = detail.value.map((i) => i.value).join("");
+      this.pickerVisible = false;
+    },
+    close() {
+      this.pickerVisible = false;
+    },
+  },
+};
 ```
 
 ### 表单属性
@@ -195,17 +248,18 @@ export default {
   labelsuffix="："
 >
   <quark-form-item prop="name" label="姓名" labelwidth="70px">
-    <quark-field v-model="attrsForm.name" placeholder="请输入姓名" />
+    <quark-field v-model="form.name" placeholder="姓名" />
   </quark-form-item>
-  <quark-form-item prop="password" label="密码" hideasterisk>
-    <quark-field
-      v-model="attrsForm.password"
-      type="password"
-      placeholder="请输入密码"
-    />
+  <quark-form-item
+    prop="password"
+    label="密码"
+    hideasterisk
+    :rules="[{ required: true, message: "请输入密码" }]"
+  >
+    <quark-field type="password" placeholder="密码" />
   </quark-form-item>
   <quark-form-item prop="age" label="年龄" hidemessage>
-    <quark-field v-model="attrsForm.age" placeholder="请输入年龄" />
+    <quark-field placeholder="年龄" />
   </quark-form-item>
 </quark-form>
 ```
@@ -225,7 +279,6 @@ export default {
     this.$refs.formRef.setModel(this.form);
     this.$refs.formRef.setRules({
       name: [{ required: true, message: "请输入姓名" }],
-      password: { required: true, message: "请输入密码" },
       age: { required: true, message: "请输入年龄" },
     });
   },
@@ -240,7 +293,7 @@ export default {
     <div slot="label">自定义label</div>
     <quark-field />
     <div slot="suffix">
-      <quark-button type="primary" size="small">发送验证码</quark-button>
+      <quark-button type="primary" size="small">搜索</quark-button>
     </div>
   </quark-form-item>
 </quark-form>
@@ -270,7 +323,7 @@ export default {
 </quark-form>
 <div class="flex-box">
   <quark-button type="primary" size="big" @click="submit"> 提交 </quark-button>
-  <quark-button size="big" @click="addUser"> 添加 </quark-button>
+  <quark-button size="big" @click="addUser">添加</quark-button>
 </div>
 ```
 
@@ -308,7 +361,7 @@ export default {
 | validatefirst | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
 | hidemessage   | 是否隐藏校验错误信息                     | `boolean`       | `false` |
 | hideasterisk  | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
-| labelwidth    | 表单域标签的宽度，例如 '50px'。          | `string`        | -       |
+| labelwidth    | 表单域标签的宽度，例如 '50px'。          | `string`        |         |
 | labelsuffix   | 表单域标签的后缀                         | `string`        |         |
 | labelposition | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
 

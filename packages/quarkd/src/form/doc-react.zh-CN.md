@@ -7,98 +7,146 @@
 ### 安装使用
 
 ```tsx
-import { Form, FormRef } from "@quarkd/quark-react";
+import { Form, FormRef, FormItem } from "@quarkd/quark-react";
 ```
 
 ### 基本用法
 
-配合 name 字段，设置表单项的值
+配合 prop 字段，设置表单项的值
 
 ```tsx
 export default () => {
-  const form1 = useRef<FormRef>(null);
+  const [form, setForm] = useState({
+    name: '',
+    password: '',
+    other: {
+      age: 18
+    }
+  });
+  const formRef = useRef<FormRef>(null);
 
   useEffect(() => {
-    form1.current.setRules([
-      { name: "name", required: true },
-      { name: "password", required: true, type: "password" },
+    formRef.setModel(form);
+    formRef.current.setRules([
+      name: [{ required: true, message: "请输入姓名" }],
+      password: { required: true, message: "请输入密码" },
+      other: {
+        age: [{ required: true, message: "请输入年龄" }],
+      },
     ]);
   }, []);
 
-  const submit1 = () => {
-    form1.current
-      .getValues()
-      .then((value) => {
-        console.log(value, "22");
-      })
-      .catch((e) => {
-        console.log(e, "e");
-        Toast.error(e.message || "请检查表单项");
-      });
+  const submit = () => {
+    formRef.current.validate((valid. res) => {
+      console.log("submit", valid, res);
+    })
+  };
+
+  const reset = () => {
+    formRef.current.resetFields();
   };
 
   return (
-    <Form ref={form1}>
-      <Field name="name" label="姓名" />
-      <div className="line" />
-      <Field type="password" name="password" label="密码" />
-      <div className="submit-wrap">
-        <Button type="primary" onClick={submit1} class="submit">
+    <Fragment>
+      <Form ref={formRef}>
+        <FormItem prop="name" label="姓名">
+          <Field placoholder="姓名" />
+        </FormItem>
+        <FormItem prop="password" label="密码">
+          <Field placoholder="密码" type="password" />
+        </FormItem>
+        <FormItem prop="other.age" label="年龄">
+          <Field value={form.other.age} placoholder="年龄" />
+        </FormItem>
+      </Form>
+      <div class="flex-box">
+        <Button
+          type="primary"
+          size="big"
+          onClick={submit}
+        >
           提交
         </Button>
+        <Button size="big" onClick={reset}>重置</Button>
       </div>
-    </Form>
+    </Fragment>
   );
 };
 ```
 
 ### 自定义校验规则
 
-只对 field 组件有用，支持 required 、validator 自定义事件
+自定义校验 callback 必须被调用。 更多高级用法可参考 [async-validator](https://github.com/yiminghe/async-validator)。
 
 ```tsx
 export default () => {
-  const form2 = useRef<FormRef>(null);
-
-  const submit2 = () => {
-    form2.current
-      .getValues()
-      .then((value) => {
-        console.log(value, "22");
-      })
-      .catch((e) => {
-        Toast.error(e.message || "请检查表单项");
-      });
-  };
+  const [form, setForm] = useState({
+    name: '',
+    password: "123456",
+    age: 18
+  });
+  const formRef = useRef<FormRef>(null);
 
   useEffect(() => {
-    form2.current.setRules([
-      {
-        name: "age",
-        required: true,
-        message: "不能小于18岁",
-        validator: (value) => value >= 18,
-      },
-      {
-        name: "phone",
-        required: true,
-        message: "请输正确的手机号",
-        validator: (value) => /^1[3456789]\d{9}$/g.test(value),
-      },
-    ]);
+    const validatorPassword = (rule, val, callback) => {
+      if (!val) {
+        callback(new Error("请输入正确内容"));
+      } else if (val === "123456") {
+        callback(new Error("密码不能为123456"));
+      } else {
+        callback();
+      }
+    };
+    const asyncValidator = (rule, value) => {
+      return new Promise((resolve, reject) => {
+        if (value < 18) {
+          reject("不能小于18岁");
+        } else {
+          resolve();
+        }
+      });
+    };
+    formRef.current.setRules({
+      name: [
+        { required: true, pattern: /\w{6}/, message: "请输入正确内容" }
+      ],
+      password: [{ required: true, validator: validatorPassword }],
+      age: [{ required: true, asyncValidator: asyncValidator }]
+    });
   }, []);
 
+  const submit = async () => {
+    const valid = await formRef.current.validate();
+    console.log(valid);
+  };
+
   return (
-    <From ref={form2}>
-      <Field placeholder="请输入文本" name="age" label="年龄" />
-      <div class="line" />
-      <Field type="number" value="123" max="11" name="phone" label="手机号" />
-      <div class="submit-wrap">
-        <div onClick="submit2" class="submit">
+    <Fragment>
+      <Form ref={formRef}>
+        <FormItem prop="name" label="姓名">
+          <Field placoholder="正则校验" />
+        </FormItem>
+        <FormItem prop="password" label="密码">
+          <Field
+            value={form.password}
+            type="password"
+            placoholder="函数校验"
+          />
+        </FormItem>
+        <FormItem prop="age" label="年龄">
+          <Field  placoholder="异步校验" />
+        </FormItem>
+      </Form>
+      <div class="flex-box">
+        <Button
+          type="primary"
+          size="big"
+          onClick={submit}
+        >
           提交
-        </div>
-      </div>
-    </From>
+        </Button>
+      <div/>
+    </Fragment>
   );
 };
 ```
@@ -107,128 +155,296 @@ export default () => {
 
 ```tsx
 export default () => {
+  const formRef = useRef<FormRef>();
   const [open, setOpen] = useState(false);
-  const [pickerStr, setStr] = useState("请选择时间");
-  const form3 = useRef<FormRef>();
   const picker = useRef();
 
-  const submit3 = () => {
-    form3.current.getValues().then((value) => {
-      Toast.text("请在控制台查看表单值");
-      console.log(value, "22");
-    });
-  };
-  const click = () => {
+  const [form, setForm] = useState({
+    checkbox: ["apple"],
+    radio: "",
+    rate: "",
+    stepper: "",
+    switch: false,
+    textarea: "",
+    uploader: [],
+    picker: "",
+  });
+  const openPicker = () => {
     setOpen(true);
   };
-  const close = () => {
+  const closePicker = () => {
     setOpen(false);
   };
   const confirm = ({ detail }) => {
-    const datepickerStr = detail.value.map((i) => i.value).join(" ");
+    const pickerValue = detail.value.map((i) => i.value).join("");
     setOpen(false);
-    setStr(datepickerStr);
+    setForm({
+      ...form,
+      picker: pickerValue
+    });
   };
-
   useEffect(() => {
+    formRef.setModel(form)
     picker.current.setColumns([
       {
         defaultIndex: 0,
-        values: ["星期一", "星期二", "星期三", "星期四", "星期五"],
-      },
-      {
-        defaultIndex: 1,
-        values: ["上午", "下午"],
+        values: ["杭州", "嘉兴", "绍兴", "宁波", "湖州", "千岛湖"],
       },
     ]);
   }, []);
+  const onCheckboxChange = ({ detail }) => {
+    setForm({
+      ...form,
+      checkbox: detail.value
+    })
+  };
+  const onRadioChange = ({ detail }) => {
+    setForm({
+      ...form,
+      radio: detail.value
+    })
+  };
+  const getValues = () => {
+    const values = formRef.getValues();
+    console.log(values);
+  };
   return (
-    <div className="demo scoped-form">
-      <Form ref={form3}>
-        <Field placeholder="请输入文本" name="field" label="年龄" />
-        <div className="line" />
-        <div className="form-item">
-          <Textarea name="textarea" />
-        </div>
-        <div className="form-item">
-          <span>蔬菜:</span>
-          <div className="right">
-            <Checkbox name="checkbox1" shape="square" checked={false}>
-              黄瓜
-            </Checkbox>
-            <Checkbox name="checkbox2" shape="square" checked={false}>
-              生姜
-            </Checkbox>
-            <div className="line" />
-          </div>
-        </div>
-        <div className="form-item">
-          <span>水果:</span>
-          <RadioGroup name="radio" value="apple">
-            <Radio name="apple">苹果</Radio>
-            <Radio name="blue">香蕉</Radio>
+    <Fragment>
+      <Form ref={formRef}>
+        <FormItem prop="checkbox" label="复选框">
+          <CheckboxGroup value={form.checkbox} onChange="onCheckboxChange">
+            <Checkbox name="apple">苹果</Checkbox>
+            <Checkbox name="banana">香蕉</Checkbox>
+          </CheckboxGroup>
+        </FormItem>
+        <FormItem prop="radio" label="单选框">
+          <RadioGroup value={form.radio} onChange="onRadioChange">
+            <Radio name="square">方形</Radio>
+            <Radio name="circle">圆形</Radio>
           </RadioGroup>
-        </div>
-        <div className="line" />
-        <div className="form-item">
-          <span>开灯:</span>
-          <Switch name="switch" />
-        </div>
-        <div className="line" />
-        <div className="form-item">
-          <span>打分:</span>
-          <Rate name="rate" />
-        </div>
-        <div className="line" />
-        <div className="form-item">
-          <span>步进器:</span>
-          <Stepper name="step" />
-        </div>
-        <div className="line" />
-        <div className="form-item">
-          <span>上传:</span>
-          <Uploader name="uploader" iconcolor="#ccc" preview />
-        </div>
-        <div className="line" />
-        <div className="form-item">
-          <span>picker 选择器</span>
-          <Cell title={pickerStr} isLink onClick={click}></Cell>
+        </FormItem>
+        <FormItem prop="switch" label="开关">
+          <Switch checked={form.switch} />
+        </FormItem>
+        <FormItem prop="rate" label="评分">
+          <Rate />
+        </FormItem>
+        <FormItem prop="stepper" label="步进器">
+          <Stepper min="0" max="99" />
+        </FormItem>
+        <FormItem prop="textarea" label="文本域">
+          <Textarea autosize />
+        </FormItem>
+        <FormItem prop="uploader" label="文件上传">
+          <Uploader preview />
+        </FormItem>
+        <FormItem prop="picker" label="选择器" islink>
+          <Field value={form.picker} readonly onClick={openPicker}>
           <Picker
-            title="请选择时间"
+            title="请选择城市"
             ref={picker}
             open={open}
-            onClose={close}
+            onClose={closePicker}
             onConfirm={confirm}
-            name="picker"
           />
-        </div>
-        <div className="line" />
-        <div className="submit-wrap">
-          <Button type="primary" class="submit" onClick={submit3}>
-            提交
-          </Button>
-        </div>
+        </FormItem>
       </Form>
-      <div className="line" />
-    </div>
+      <div class="flex-box">
+        <Button
+          type="primary"
+          size="big"
+          onClick={getValues}
+        >
+          提交
+        </Button>
+      </div>
+    </Fragment>
   );
 };
 ```
 
-### 方法
+### 表单属性
 
-| 名称     | 说明                               | 类型                   |
-| -------- | ---------------------------------- | ---------------------- |
-| submit   | 提交并校验表单获取所有组件的 value | `() => Promise<any[]>` |
-| setRules | 只对 field 组件有效                | `(rule: Rule[])=>void` |
+```tsx
+export default () => {
+  const formRef = useRef<FormRef>();
+  const [form, setForm] = useState({
+    name: "",
+    password: "",
+    age: "",
+  });
 
-### 类型定义
+  useEffect(() => {
+    formRef.setModel(form);
+    formRef.setRules({
+      name: [{ required: true, message: "请输入姓名" }],
+      age: { required: true, message: "请输入年龄" },
+    });
+  }, []);
 
-```js
-type Rule = {
-  name: string // 需要校验的 field 组件的 name 属性
-  required?: boolean // 是否必填
-  message?: string // 错误信息
-  validator?: (value: string | number) => boolean; // 校验规则
+  return (
+    <Form
+      ref={formRef}
+      labelwidth="60px"
+      labelposition="right"
+      labelsuffix="："
+    >
+      <FormItem prop="name" label="姓名" labelwidth="70px">
+        <Field placeholder="姓名" />
+      </FormItem>
+      <FormItem
+        prop="password"
+        label="密码"
+        hideasterisk
+        rules={[{ required: true, message: "请输入密码" }]}
+      >
+        <Field type="password" placeholder="密码" />
+      </FormItem>
+      <FormItem prop="age" label="年龄" hidemessage>
+        <Field placeholder="年龄" />
+      </FormItem>
+    </Form>
+  );
 };
 ```
+
+### 使用插槽
+
+```tsx
+export default () => {
+  const formRef = useRef<FormRef>();
+  const [form, setForm] = useState({
+    name: "",
+    password: "",
+    age: "",
+  });
+
+  useEffect(() => {
+    formRef.setModel(form);
+    formRef.setRules({
+      name: [{ required: true, message: "请输入姓名" }],
+      age: { required: true, message: "请输入年龄" },
+    });
+  }, []);
+
+  return (
+    <Form>
+      <FormItem>
+        <div slot="label">自定义label</div>
+        <Field />
+        <div slot="suffix">
+          <Button type="primary" size="small">
+            搜索
+          </Button>
+        </div>
+      </FormItem>
+    </Form>
+  );
+};
+```
+
+### 动态增加表单项
+
+```tsx
+export default () => {
+  const formRef = useRef<FormRef>();
+  const [form, setForm] = useState({
+    user: [{ name: "", age: "" }],
+  });
+
+  useEffect(() => {
+    formRef.setModel(form);
+  }, []);
+
+  const submit = () => {
+    formRef.validate((valid, res) => {
+      console.log("submit", valid, res);
+    });
+  };
+
+  const addUser = () => {
+    form.user.push({ name: "", age: "" });
+    setForm(form);
+  };
+
+  return (
+    <Fragment>
+      <Form>
+        {form.user.map((item, index) => {
+          return (
+            <Fragment>
+              <FormItem
+                prop={`user.${index}.name`}
+                label={`姓名${index}`}
+                rules={[{ required: true, message: "请输入姓名" }]}
+              >
+                <Field placeholder="姓名" />
+              </FormItem>
+
+              <FormItem
+                prop={`user.${index}.age`}
+                label={`年龄${index}`}
+                rules={[{ required: true, message: "请输入年龄" }]}
+              >
+                <Field placeholder="年龄" />
+              </FormItem>
+            </Fragment>
+          );
+        })}
+      </Form>
+      <div class="flex-box">
+        <Button type="primary" size="big" onClick={submit}>
+          提交
+        </Button>
+        <Button size="big" onClick={addUser}>
+          添加
+        </Button>
+      </div>
+    </Fragment>
+  );
+};
+```
+
+## API
+
+### Form Props
+
+| 参数          | 说明                                     | 类型            | 默认值  |
+| ------------- | ---------------------------------------- | --------------- | ------- |
+| validatefirst | 是否在某一项校验不通过时停止校验         | `boolean`       | `false` |
+| hidemessage   | 是否隐藏校验错误信息                     | `boolean`       | `false` |
+| hideasterisk  | 是否隐藏必填字段的标签旁边的红色星号     | `boolean`       | `false` |
+| labelwidth    | 表单域标签的宽度，例如 '50px'。          | `string`        |         |
+| labelsuffix   | 表单域标签的后缀                         | `string`        |         |
+| labelposition | 表单域标签的位置，则需要设置 label-width | `letf \| right` | `left`  |
+
+### Form Methods
+
+| 名称          | 说明                                                                                                                                                                                         | 类型                                                                         |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| validate      | 对整个表单进行校验的方法，参数为一个回调函数。该回调函数会在校验结束后被调用，并传入两个参数：是否校验成功和未通过校验的字段，若校验通过则返回 model。若不传入回调函数，则会返回一个 promise | `Function(callback: Function(boolean, object))`                              |
+| validateField | 对部分表单字段进行校验的方法                                                                                                                                                                 | `Function(props: array \| string, callback: Function(errorMessage: string))` |
+| resetFields   | 对整个表单进行重置，将所有字段值重置为初始值并移除校验结果                                                                                                                                   |                                                                              |
+| clearValidate | 移除表单项的校验结果。传入待移除的表单项的 prop 属性或者 prop 组成的数组，如不传则移除整个表单的校验结果                                                                                     | `Function(props: array \| string)`                                           |
+| setModel      | 设置表单数据对象                                                                                                                                                                             | `(model: object) => void`                                                    |
+| setRules      | 设置表单验证规则                                                                                                                                                                             | `(rules: Rules) => void`                                                     |
+| getValues     | 获取表单数据，前提需设置 model                                                                                                                                                               |                                                                              |
+
+### FormItem Props
+
+| 参数         | 说明                                                                                    | 类型      | 默认值  |
+| ------------ | --------------------------------------------------------------------------------------- | --------- | ------- |
+| prop         | 表单域 model 字段，在使用 validate、resetFields、getValues 方法的情况下，该属性是必填的 | `string`  |         |
+| label        | 标签文本                                                                                | `string`  |         |
+| rules        | 表单验证规则                                                                            | `object`  |         |
+| labelwidth   | 表单域标签的的宽度，例如 '50px'。                                                       | `string`  |         |
+| hidemessage  | 是否隐藏校验错误信息                                                                    | `boolean` | `false` |
+| hideasterisk | 是否隐藏必填字段的标签旁边的红色星号                                                    | `boolean` | `false` |
+| islink       | 是否展示右侧箭头                                                                        | `boolean` | `false` |
+
+### FormItem Slots
+
+| 名称   | 说明             |
+| ------ | ---------------- |
+| label  | 自定义左侧 label |
+| suffix | 自定义右侧后缀   |

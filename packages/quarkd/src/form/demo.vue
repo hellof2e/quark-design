@@ -128,10 +128,7 @@
         :label="translate('label.name')"
         labelwidth="70px"
       >
-        <quark-field
-          v-model="attrsForm.name"
-          :placeholder="translate('label.name')"
-        />
+        <quark-field :placeholder="translate('label.name')" />
       </quark-form-item>
       <quark-form-item
         prop="password"
@@ -140,7 +137,6 @@
         :rules="[{ required: true, message: translate('error.password') }]"
       >
         <quark-field
-          v-model="attrsForm.password"
           type="password"
           :placeholder="translate('label.password')"
         />
@@ -284,7 +280,6 @@ export default createDemo({
       formAttrRef.value?.setModel(attrsForm.value);
       formAttrRef.value?.setRules({
         name: [{ required: true, message: translate("error.name") }],
-        // password: { required: true, message: translate("error.password") },
         age: { required: true, message: translate("error.age1") },
       });
 
