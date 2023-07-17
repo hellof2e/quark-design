@@ -7,7 +7,10 @@
       />
     </div>
     <h2>{{ translate("fit") }}</h2>
-    <div class="quark-cell">
+    <div
+      class="quark-cell"
+      style="display: grid; grid-template-columns: repeat(auto-fill, 33.33%)"
+    >
       <div class="quark-cell-item">
         <quark-image
           src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"

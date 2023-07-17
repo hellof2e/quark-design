@@ -32,6 +32,7 @@
   display: inline-flex;
   height: var(--checkbox-size, 16px);
   width: var(--checkbox-size, 16px);
+  flex-shrink: 0;
 }
 
 :host .quark-checkbox-icon {

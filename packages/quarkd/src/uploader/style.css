@@ -11,14 +11,15 @@
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  margin: 0 var(--uploader-margin, 6px) var(--uploader-margin, 6px) 0;
 }
-
+:host .quark-uploader-mg {
+  /* margin-right: var(--uploader-margin, 6px); */
+}
 :host .quark-uploader-icon {
   box-sizing: border-box;
   width: var(--uploader-width, 93px);
   height: var(--uploader-height, 93px);
-  background: var(--uploader-background);
+  background: var(--uploader-background, #f7f8fa);
   border-width: var(--uploader-border-width, 1px);
   border-color: var(--uploader-border-color, #e1e6eb);
   border-style: var(--uploader-border-style, dashed);
@@ -63,15 +64,15 @@
   border-radius: inherit;
 }
 
-:host .quark-uploader-remove {
+:host .quark-uploader-preview-item .quark-uploader-remove {
   display: inline-block;
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: var(--uploader-delete-top, 1px);
+  right: var(--uploader-delete-right, 1px);
   width: var(--uploader-delete-wrap-width, 14px);
   height: var(--uploader-delete-wrap-height, 14px);
   background: var(--uploader-delete-background, rgb(0 0 0));
-  border-bottom-left-radius: 12px;
+  border-bottom-left-radius:  var(--uploader-delete-left-radius, 12px);
   display: flex;
   justify-content: flex-end;
   cursor: pointer;

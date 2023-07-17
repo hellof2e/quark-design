@@ -56,7 +56,7 @@ class QuarkPopupExtra extends QuarkElement {
   subtitle: string;
 
   @property()
-  zindex: number | string | undefined = undefined;
+  zindex?: number | string = undefined;
 
   @state()
   contentClassNames = "";
@@ -150,14 +150,16 @@ class QuarkPopupExtra extends QuarkElement {
               this.title || this.subtitle ? "quark-popup-extra-header" : ""
             }
           >
-            <div className="quark-popup-extra-toper">
-              <slot name="title">
+            <slot name="title">
+              <div className="quark-popup-extra-toper">
                 <div className="quark-popup-extra-title">{this.title}</div>
-              </slot>
-            </div>
-            {this.subtitle && (
-              <div className="quark-popup-extra-subtitle">{this.subtitle}</div>
-            )}
+              </div>
+              {this.subtitle && (
+                <div className="quark-popup-extra-subtitle">
+                  {this.subtitle}
+                </div>
+              )}
+            </slot>
           </header>
           <div
             className={this.contentClassNames}

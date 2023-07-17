@@ -1,6 +1,6 @@
 {
   "name": "quarkd",
-  "version": "1.0.60",
+  "version": "1.0.70",
   "description": "Mobile UI Components built on Web Components.",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -61,6 +61,7 @@
     "cross-env": "^7.0.3",
     "deepmerge": "^3.2.0",
     "fs-extra": "^9.1.0",
+    "husky": "^8.0.3",
     "postcss": "8.4.16",
     "postcss-px-to-viewport": "^1.1.1",
     "rimraf": "3.0.2",

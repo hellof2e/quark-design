@@ -7,6 +7,9 @@
   .flex {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    quark-button {
+      margin: 4px;
+    }
   }
 }

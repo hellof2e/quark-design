@@ -1,14 +1,77 @@
 # 更新日志
-### [1.0.60](https://github.com/hellof2e/quark-design/compare/v1.0.59...v1.0.60) (2023-06-05)
+### [1.0.70](https://github.com/hellof2e/quark-design/compare/v1.0.69...v1.0.70) (2023-07-07)
+
+### [1.0.68](https://github.com/hellof2e/quark-design/compare/v1.0.67...v1.0.68) (2023-06-21)
 
 
 ### 🎉 Features
 
-* optimize button & tooltip ([c0239af](https://github.com/hellof2e/quark-design/commit/c0239af30237232f9542e8589b6e5934b68368bc))
-* update demo ([de6d98e](https://github.com/hellof2e/quark-design/commit/de6d98e19bd539098422c69be4d19da2963193e7))
-* update quarkc dependence ([b11d3a5](https://github.com/hellof2e/quark-design/commit/b11d3a533f1f8826d6625b347553cdfab4959146))
-* update quarkd ([8e10a6c](https://github.com/hellof2e/quark-design/commit/8e10a6c0b896bbf1d8b75c3826e520432e6c8628))
-* 新文档链接 update ([5268651](https://github.com/hellof2e/quark-design/commit/5268651449110602f1f219f2847b8a38db5de2de))
+* update quarkd ([b502aef](https://github.com/hellof2e/quark-design/commit/b502aefc7edad6bb76c1b3c2bc712127d9ba8352))
+* uploader 样式优化以及上传同事位置调整 ([3206e5e](https://github.com/hellof2e/quark-design/commit/3206e5e62fc08e402215b1c155e8cd0729400265))
+
+### [1.0.67](https://github.com/hellof2e/quark-design/compare/v1.0.66...v1.0.67) (2023-06-21)
+
+### 🎉 Features
+
+- code optimize ([d95bd29](https://github.com/hellof2e/quark-design/commit/d95bd29277e85cafaa85889cff525f458e7a27dd))
+- code optimize ([4314138](https://github.com/hellof2e/quark-design/commit/43141386f4b11ae7e9e047e194affc35f19b7c6f))
+- update button demo ([c9b9e13](https://github.com/hellof2e/quark-design/commit/c9b9e13c10ab6613e89ec7b4948955fe3e38369d))
+- update dialog readme ([635a1dd](https://github.com/hellof2e/quark-design/commit/635a1dd612b84e9bec7b7e6ec6df2f280eb569f9))
+
+### 🐞 Bug Fixes
+
+- 修复 checkbox,radio 样式问题 ([33d66b3](https://github.com/hellof2e/quark-design/commit/33d66b35fd90535294e9d76b68c0b1cb63f04955))
+
+### [1.0.66](https://github.com/hellof2e/quark-design/compare/v1.0.65...v1.0.66) (2023-06-16)
+
+### [1.0.65](https://github.com/hellof2e/quark-design/compare/v1.0.64...v1.0.65) (2023-06-16)
+
+### 🎉 Features
+
+- upload 增加自定义删除 icon 功能 ([b5136f9](https://github.com/hellof2e/quark-design/commit/b5136f986a900d050b841b381ab8aac6ed7c4612))
+
+### [1.0.64](https://github.com/hellof2e/quark-design/compare/v1.0.63...v1.0.64) (2023-06-13)
+
+### 🎉 Features
+
+- uploader 组件新增 failed 状态 及示例 ([faca121](https://github.com/hellof2e/quark-design/commit/faca121f5e2f3e9af22b082384189d50ef8c980f))
+
+### [1.0.63](https://github.com/hellof2e/quark-design/compare/v1.0.62...v1.0.63) (2023-06-12)
+
+### 🎉 Features
+
+- radio optimize ([4214825](https://github.com/hellof2e/quark-design/commit/42148252bc4703e9681e6136748df36e302ce914))
+- radio optimize ([44ad7c4](https://github.com/hellof2e/quark-design/commit/44ad7c47af7af8c3ff24c97ea2389862fc222e2e))
+- radio optimize ([74d7ce5](https://github.com/hellof2e/quark-design/commit/74d7ce505bcc7368c25297b0731a951214823551))
+- radio optimize ([f780bf7](https://github.com/hellof2e/quark-design/commit/f780bf7eda47a772c6409ee1d342ca811479b14e))
+- radio optimize ([4c45d82](https://github.com/hellof2e/quark-design/commit/4c45d82e039fbd4d874d73b600a0afc47919e7b0))
+
+### 🐞 Bug Fixes
+
+- uploader doc err ([9d69eaf](https://github.com/hellof2e/quark-design/commit/9d69eaf6fe2cbc8740ee50e67ae10959e20252e8))
+
+### [1.0.62](https://github.com/hellof2e/quark-design/compare/v1.0.61...v1.0.62) (2023-06-09)
+
+### 🎉 Features
+
+- optimize radio ([9fe1d7f](https://github.com/hellof2e/quark-design/commit/9fe1d7f549e00dea77a8354e97f7826fe1de6a2b))
+
+### [1.0.61](https://github.com/hellof2e/quark-design/compare/v1.0.60...v1.0.61) (2023-06-09)
+
+### 🎉 Features
+
+- update ([282df05](https://github.com/hellof2e/quark-design/commit/282df052ffb991fb119e6f81a439597a67d2e21c))
+- update quarkd version ([b8bfc05](https://github.com/hellof2e/quark-design/commit/b8bfc0538dba7942fda15b34da252cc486c148d6))
+
+### [1.0.60](https://github.com/hellof2e/quark-design/compare/v1.0.59...v1.0.60) (2023-06-05)
+
+### 🎉 Features
+
+- optimize button & tooltip ([c0239af](https://github.com/hellof2e/quark-design/commit/c0239af30237232f9542e8589b6e5934b68368bc))
+- update demo ([de6d98e](https://github.com/hellof2e/quark-design/commit/de6d98e19bd539098422c69be4d19da2963193e7))
+- update quarkc dependence ([b11d3a5](https://github.com/hellof2e/quark-design/commit/b11d3a533f1f8826d6625b347553cdfab4959146))
+- update quarkd ([8e10a6c](https://github.com/hellof2e/quark-design/commit/8e10a6c0b896bbf1d8b75c3826e520432e6c8628))
+- 新文档链接 update ([5268651](https://github.com/hellof2e/quark-design/commit/5268651449110602f1f219f2847b8a38db5de2de))
 
 ### [1.0.59](https://github.com/hellof2e/quark-design/compare/v1.0.58...v1.0.59) (2023-05-23)
 

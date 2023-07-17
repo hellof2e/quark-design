@@ -21,6 +21,6 @@ jobs:
           branch : main # action 应该部署到的分支 。
           folder : site_docs # 操作应该部署的文件夹 。
           clean: false
-          repository-name: hellof2e/vue-quarkdesign.hellobike.com
+          repository-name: hellof2e/vue-quarkd.hellobike.com
           token: ${{ secrets.GIT_ACTION }}
           target-folder: src/docs_vue

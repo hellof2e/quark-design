@@ -42,10 +42,6 @@ BScroll.use(Wheel);
   style,
 })
 class QuarkPicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 

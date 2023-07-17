@@ -73,7 +73,7 @@ export default () => {
 
 ### 上传前置
 
-setBeforeUpload 返回 Boolean, false 阻止上传.
+beforeUpload 返回 Boolean, false 阻止上传.
 
 ```tsx
 export default () => {
@@ -89,7 +89,7 @@ export default () => {
   };
 
   useEffect(() => {
-    before.current.setBeforeUpload(beforeUpload);
+    before.current.beforeUpload = beforeUpload;
   }, []);
 
   return <Uploader preview ref={before} />;
@@ -124,7 +124,8 @@ export default () => {
 | hidedelete  | 隐藏删除图标                                      | `boolean`                                  | `false`            |
 | readonly    | 只读模式                                          | `boolean`                                  | `false`            |
 | onAfterread | 上传后回调                                        | `(file: file or file[]) => void`           |                    |
-| onOversize  | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |                    |
+| onOversize  | 配合 maxsize 使用，超过大小回调函数               | `(items: fiel[], maxsize: string) => void` |
+| onRemove    | 需配合 beforeDelete 不可单独使用                  | `(items: file[]) => void`                  |                    |
 
 ### slot
 
@@ -134,12 +135,12 @@ export default () => {
 
 ### 方法
 
-| 名称            | 说明                                           | 类型                              |
-| --------------- | ---------------------------------------------- | --------------------------------- |
-| setBeforeUpload | 上传前置，用法 uploader.setBeforeUpload(fn)    | `(fn: () => boolean) => void`     |
-| setPreview      | 初始化预览数据，用法 uploader.setPreview(data) | `(url: string[]) => void`         |
-| beforeDelete    | 删除前置，用法 uploader.beforeDelete(fn)       | `(file, {index: number}) => void` |
-| closePreview    | 关闭预览弹窗                                   |                                   |
+| 名称         | 说明                                           | 类型                              |
+| ------------ | ---------------------------------------------- | --------------------------------- |
+| beforeUpload | 上传前置，用法 uploader.beforeUpload = fn      | `(fn: () => boolean) => void`     |
+| setPreview   | 初始化预览数据，用法 uploader.setPreview(data) | `(url: string[]) => void`         |
+| beforeDelete | 删除前置，用法 uploader.beforeDelet = fn       | `(file, {index: number}) => void` |
+| closePreview | 关闭预览弹窗                                   |                                   |
 
 ## 样式变量
 

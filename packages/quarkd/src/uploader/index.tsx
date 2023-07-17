@@ -81,6 +81,10 @@ class QuarkUploader extends QuarkElement {
   // 25M
   maxsize = "26214400";
 
+  @property()
+  // 25M
+  closeimg = "";
+
   @state()
   tasks: any[] = [];
 
@@ -264,12 +268,16 @@ class QuarkUploader extends QuarkElement {
 
   // 设置状态
   setStatus(file: UploaderFileListItem) {
-    this.tasks = this.tasks.map((i) => {
-      if (i.id === file.id) {
-        Object.assign(i, file);
-      }
-      return i;
-    });
+    if (file.status === "failed") {
+      this.tasks = this.tasks.filter((i) => i.id !== file.id);
+    } else {
+      this.tasks = this.tasks.map((i) => {
+        if (i.id === file.id) {
+          Object.assign(i, file);
+        }
+        return i;
+      });
+    }
   }
 
   closePreview() {
@@ -280,11 +288,44 @@ class QuarkUploader extends QuarkElement {
     const { capture, accept, multiple, name, id, disabled } = this;
     const hiddenUpload = this.tasks.length >= Number(this.maxcount);
     const showTasks = this.preview ? this.tasks.slice(0, this.maxcount) : [];
+    const uploaderClasses = [
+      "quark-uploader",
+      disabled && "uploader-disabled",
+      this.preview && showTasks.length && "quark-uploader-mg",
+    ];
     return (
       <Fragment>
+        {showTasks.map((item, index, n) => (
+          <div class="quark-uploader-preview-item" key={item.id}>
+            {item.status === "uploading" && (
+              <div class="uploading" slot="uploading">
+                <quark-loading type="circular" color="#fff" />
+                <span class="uploading-text">{item.message}</span>
+              </div>
+            )}
+            <img
+              src={item.url || item.content}
+              onClick={() => this.myImagePreview(n, index)}
+            />
+            {!this.hidedelete && !this.readonly && this.closeimg ? (
+              <img
+                onClick={(e) => this.onRemove(e, item, index)}
+                src={this.closeimg}
+                class="quark-uploader-remove"
+              />
+            ) : (
+              <span
+                class="quark-uploader-remove"
+                onClick={(e) => this.onRemove(e, item, index)}
+              >
+                <quark-icon-close />
+              </span>
+            )}
+          </div>
+        ))}
         {!this.readonly && (
           <div
-            class={`quark-uploader ${disabled && "uploader-disabled"}`}
+            class={uploaderClasses.join(" ")}
             style={{ display: !hiddenUpload ? "block" : "none" }}
           >
             <slot name="uploader">
@@ -305,29 +346,6 @@ class QuarkUploader extends QuarkElement {
             />
           </div>
         )}
-        {showTasks.map((item, index, n) => (
-          <div
-            class="quark-uploader-preview-item"
-            key={item.id}
-            onClick={() => this.myImagePreview(n, index)}
-          >
-            {item.status === "uploading" && (
-              <div class="uploading" slot="uploading">
-                <quark-loading type="circular" color="#fff" />
-                <span class="uploading-text">{item.message}</span>
-              </div>
-            )}
-            <img src={item.url || item.content} />
-            {!this.hidedelete && !this.readonly && (
-              <span
-                class="quark-uploader-remove"
-                onClick={(e) => this.onRemove(e, item, index)}
-              >
-                <quark-icon-close />
-              </span>
-            )}
-          </div>
-        ))}
       </Fragment>
     );
   }

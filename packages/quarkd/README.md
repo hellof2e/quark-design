@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://quark.hellobike.com/">
+  <a href="https://quarkc.hellobike.com/">
     <img src="https://github.com/hellof2e/quark-design/assets/14307551/45ca3969-3f92-49a1-84fa-a4e6160cb7f4" />
   </a>
 </p>
@@ -34,7 +34,7 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit [quark.hellobike.com](https://quark.hellobike.com)
+For full documentation, visit [quarkc.hellobike.com](https://quarkc.hellobike.com)
 
 ## Community
 

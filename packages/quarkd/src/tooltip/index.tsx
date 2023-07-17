@@ -67,7 +67,7 @@ class QuarkTooltip extends QuarkElement {
   @property()
   size = "";
 
-  timer: number | undefined = undefined;
+  timer?: number = undefined;
 
   tipsRef: any = createRef();
 

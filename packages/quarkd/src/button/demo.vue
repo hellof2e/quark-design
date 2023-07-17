@@ -71,7 +71,7 @@
     </div>
 
     <h2>{{ translate("title.loading") }}</h2>
-    <div class="demo-buttons flex">
+    <div class="flex">
       <quark-button loading loadtype="circular" type="danger">{{
         translate("loading")
       }}</quark-button>

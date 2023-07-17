@@ -9,9 +9,14 @@
     </div>
     <h2>{{ translate("preview") }}</h2>
     <div class="flex">
+      <quark-uploader @afterread="afterRead" ref="preview" preview>
+      </quark-uploader>
+    </div>
+    <h2>{{ translate("status") }}</h2>
+    <div class="flex">
       <quark-uploader
-        @afterread="afterRead"
-        ref="preview"
+        @afterread="afterReadStatus"
+        ref="uploadStatus"
         preview
       ></quark-uploader>
     </div>
@@ -31,6 +36,15 @@
         <quark-button type="primary" slot="uploader" icon="home">{{
           translate("file")
         }}</quark-button>
+      </quark-uploader>
+    </div>
+    <h2>{{ translate("customPreviewIcon") }}</h2>
+    <div class="flex closeimg">
+      <quark-uploader
+        preview
+        ref="customPreviewIcon"
+        closeimg="https://m.hellobike.com/resource/helloyun/15697/dEYF0_round_close_fill.png?x-oss-process=image/quality,q_80"
+      >
       </quark-uploader>
     </div>
     <h2>{{ translate("before") }}</h2>
@@ -54,11 +68,13 @@ import Toast from "../toast";
 
 export default createDemo({
   setup() {
-    const isPreview = ref(false);
+    const isPreview = ref(null);
     const preview = ref(null);
     const preview2 = ref(null);
     const before = ref(null);
-    const oversizeRef = ref(false);
+    const uploadStatus = ref(null);
+    const oversizeRef = ref(null);
+    const customPreviewIcon = ref(null);
     const previewUrls = [
       "https://m.hellobike.com/resource/helloyun/15697/9VgwC_Screenshot_20220215_191457_com.jingyao.easybike.jpg?x-oss-process=image/quality,q_80",
       "https://m.hellobike.com/resource/helloyun/15697/iWS-0QI6QV.png",
@@ -68,10 +84,12 @@ export default createDemo({
         "zh-CN": {
           basic: "基础用法",
           preview: "文件预览",
+          status: "上传状态",
           previewMode: "预览模式",
           limit: "限制上传数量",
           size: "限制上传大小",
           custom: "自定义上传样式",
+          customPreviewIcon: "自定义预览删除 icon",
           file: "上传文件",
           before: "上传前置",
           disabled: "禁止上传",
@@ -83,10 +101,12 @@ export default createDemo({
         "en-US": {
           basic: "Basic Usage",
           preview: "File Preview",
+          status: "upload status",
           previewMode: "File Preview Mode",
           limit: "Limit Uploads Number",
           size: "Limit Uploads Size",
           custom: "Custom Upload Style",
+          customPreviewIcon: "Custom predictive deletion icon",
           file: "Upload File",
           before: "Before Uploading",
           disabled: "Disabled",
@@ -100,6 +120,17 @@ export default createDemo({
     onMounted(() => {
       preview.value.setPreview(previewUrls);
       preview2.value.setPreview(previewUrls);
+      uploadStatus.value.setPreview(previewUrls);
+      customPreviewIcon.value.setPreview(previewUrls);
+      const tasks = uploadStatus.value.tasks;
+      tasks.forEach((i, index) => {
+        if (!index) {
+          uploadStatus.value.setStatus({
+            ...i,
+            status: "uploading",
+          });
+        }
+      });
       before.value.beforeUpload = beforeUpload;
     });
     const sleep = (time) => {
@@ -121,7 +152,7 @@ export default createDemo({
       console.log(items, maxsize);
       Toast.text(`${translate("toast.overSize")}`);
     };
-    const uploadAction = async (item) => {
+    const uploadAction = async (item, status = "done") => {
       preview.value.setStatus({
         ...item,
         status: "uploading",
@@ -130,7 +161,7 @@ export default createDemo({
       await sleep(2000);
       preview.value.setStatus({
         ...item,
-        status: "done",
+        status,
       });
       Toast.success("上传成功");
     };
@@ -142,11 +173,25 @@ export default createDemo({
       if (Array.isArray(file)) {
         for (let i = 0; i < file.length; i++) {
           const item = file[i];
-          uploadAction(item);
+          if (i === 0) uploadAction(item);
+          else uploadAction(item);
         }
       } else {
         uploadAction(file);
       }
+    };
+    const afterReadStatus = async ({ detail: file }) => {
+      uploadStatus.value.setStatus({
+        ...file,
+        status: "uploading",
+        message: "上传中",
+      });
+      await sleep(2000);
+      uploadStatus.value.setStatus({
+        ...file,
+        status: "failed",
+      });
+      Toast.success(`${file.file.name}上传失败`);
     };
     onBeforeRouteLeave(() => {
       const nodes = document.querySelectorAll("quark-image-preview ");
@@ -157,11 +202,14 @@ export default createDemo({
       preview,
       preview2,
       before,
+      uploadStatus,
       beforeUpload,
       oversize,
       oversizeRef,
       afterRead,
       translate,
+      afterReadStatus,
+      customPreviewIcon,
     };
   },
 });

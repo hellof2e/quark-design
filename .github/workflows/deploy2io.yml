@@ -10,7 +10,7 @@ on:
 
 jobs:
   copy:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       # 会有很多 npm 包在外层，link 使用
@@ -18,12 +18,12 @@ jobs:
       - run: yarn
       - run: yarn run link
       - run: yarn push2io
-      - name : Sync 
-        uses : JamesIves/github-pages-deploy-action@4.1.7 
+      - name : Sync
+        uses : JamesIves/github-pages-deploy-action@4.1.7
         with :
           branch : main # action 应该部署到的分支。
           folder : dist # 操作应该部署的文件夹。
           clean: false
-          repository-name: hellof2e/quarkdesign-demo.github.io
+          repository-name: hellof2e/quarkd-demo.github.io
           token: ${{ secrets.GIT_ACTION }}
           target-folder: demo # 部署到 demo 目录下
