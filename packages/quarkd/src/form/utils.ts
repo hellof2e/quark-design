@@ -1,48 +1,79 @@
-import { IRuleItem } from "./type";
+export const noop = (...agrs) => {};
 
-const isEmpty = (value?: string) => Boolean(value);
+export function getPropByPath(obj, path, strict) {
+  let tempObj = obj;
+  path = path.replace(/\[(\w+)\]/g, ".$1");
+  path = path.replace(/^\./, "");
 
-export default (rules: IRuleItem[]) => (callBack: any) => {
-  try {
-    for (let i = 0; i < rules.length; i += 1) {
-      let validateStatus = true;
-      const { validator, value, required } = rules[i];
-      // 自定义校验函数
-      if (validator) {
-        validateStatus = validator(value);
-      } else if (required) {
-        validateStatus = isEmpty(value);
+  const keyArr = path.split(".");
+  let i = 0;
+  for (let len = keyArr.length; i < len - 1; ++i) {
+    if (!tempObj && !strict) break;
+    const key = keyArr[i];
+    if (key in tempObj) {
+      tempObj = tempObj[key];
+    } else {
+      if (strict) {
+        throw new Error("please transfer a valid prop path to form item!");
       }
-      rules[i].validateStatus = validateStatus;
-      if (typeof callBack === "function" && !validateStatus) callBack(rules[i]);
+      break;
     }
-  } catch (error) {
-    console.error(error);
-    console.warn(`
-     所属值类型------
-     value：所需校验值
-     message: 错误信息,
-     required: 是否必填,
-   `);
   }
-  return rules.filter((i) => !i.validateStatus).length === 0;
-};
+  return {
+    o: tempObj,
+    k: keyArr[i],
+    v: tempObj ? tempObj[keyArr[i]] : null,
+  };
+}
 
-const arrayEmpty = (arr: any[]) => {
-  if (!Array.isArray(arr)) return true;
-  return arr.length !== 0;
-};
-
-export const filterSymbol = (data: any) =>
-  Object.keys(data)
-    .filter((key) => typeof data[key] !== "symbol" && arrayEmpty(data[key]))
-    .reduce((acc, key) => ({ ...acc, [key]: data[key] }), {});
-
-export const booleanTagNames = [
-  "QUARK-CHECKBOX",
-  "QUARK-SWITCH",
-  "QUARK-RADIO",
-];
 export const radio = "QUARK-RADIO";
-
 export const radioGroup = "QUARK-RADIO-GROUP";
+export const field = "QUARK-FIELD";
+export const checkbox = "QUARK-CHECKBOX";
+export const checkboxGroup = "QUARK-CHECKBOX-GROUP";
+export const swicth = "QUARK-SWITCH";
+export const rate = "QUARK-RATE";
+export const stepper = "QUARK-STEPPER";
+export const textarea = "QUARK-TEXTAREA";
+export const uploader = "QUARK-UPLOADER";
+
+export const formTagNamesMap = {
+  [checkboxGroup]: checkboxGroup,
+  [checkbox]: checkbox,
+  [radioGroup]: radioGroup,
+  [radio]: radio,
+  [field]: field,
+  [swicth]: swicth,
+  [rate]: rate,
+  [stepper]: stepper,
+  [textarea]: textarea,
+  [uploader]: uploader,
+};
+
+function convertStringToNestedObject(str, value) {
+  const keys = str.split(".");
+  const key = keys.shift();
+  const obj = {
+    [key]: keys.length
+      ? convertStringToNestedObject(keys.join("."), value)
+      : value,
+  };
+  return obj;
+}
+
+export function convertToNestedObject(str, value, obj = {}) {
+  const nestedObj = convertStringToNestedObject(str, value);
+  Object.keys(nestedObj).forEach((key) => {
+    const subKeys = key.split(".");
+    let currentObj = obj;
+    subKeys.forEach((subKey, index) => {
+      if (index === subKeys.length - 1) {
+        currentObj[subKey] = nestedObj[key];
+      } else {
+        currentObj[subKey] = currentObj[subKey] || {};
+        currentObj = currentObj[subKey];
+      }
+    });
+  });
+  return obj;
+}

@@ -3,7 +3,7 @@
 }
 
 :host .quark-textarea {
-  padding: 12px;
+  padding: var(--textarea-padding, 12px);
   background: rgb(255, 255, 255);
   border: 1px solid var(--textarea-border-color);
   display: block;
@@ -21,7 +21,7 @@
   margin: 0;
   color: var(--textarea-color, quark-textBaseColor);
   font-size: var(--textarea-font-size, quark-fontSizeBase);
-  line-height: 1.5;
+  line-height: var(--textarea-line-height, 1.5);
   background: 0 0;
   border: 0;
   outline: none;

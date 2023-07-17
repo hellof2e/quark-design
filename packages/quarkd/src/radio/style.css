@@ -157,3 +157,16 @@
 :host input[type="radio"i] {
   margin: 0;
 }
+
+.quark-radio-group-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+quark-radio-group quark-radio {
+  margin-right: var(--radio-group-margin, quark-hSpacingSm);
+}
+
+quark-radio-group quark-radio:last-child {
+  margin-right: 0;
+}

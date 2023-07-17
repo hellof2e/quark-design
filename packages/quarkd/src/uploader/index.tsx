@@ -153,6 +153,7 @@ class QuarkUploader extends QuarkElement {
       }
       this.values = this.preview ? this.tasks.slice(0, this.maxcount) : [];
       this.$emit("afterread", { detail: items });
+      this.$emit("change", { detail: this.values });
     } else {
       this.$emit("oversize", {
         detail: {
@@ -208,6 +209,7 @@ class QuarkUploader extends QuarkElement {
   };
 
   onChange = async (e: Event) => {
+    console.log("uploader on change");
     const target = e.target as HTMLInputElement;
     const { files: rawFiles } = target;
     if (this.disabled || !rawFiles) return;
@@ -224,6 +226,7 @@ class QuarkUploader extends QuarkElement {
     this.readFile(file);
     // @ts-ignore
     e.target.value = "";
+    this.$emit("change", { detail: file });
   };
 
   // 设置初始化预览数据
@@ -250,6 +253,7 @@ class QuarkUploader extends QuarkElement {
       this.tasks = newData;
       this.values = newData;
       this.$emit("onremove", { detail: item });
+      this.$emit("change", { detail: item });
     }
   };
 
@@ -337,7 +341,7 @@ class QuarkUploader extends QuarkElement {
               accept={accept}
               multiple={multiple}
               capture={capture}
-              onchange={this.onChange}
+              onChange={this.onChange}
               disabled={disabled}
             />
           </div>

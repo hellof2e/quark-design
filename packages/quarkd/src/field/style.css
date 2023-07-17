@@ -5,7 +5,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   box-sizing: border-box;
-  padding: 16px;
+  padding: var(--field-padding, 16px);
   overflow: hidden;
   background: #fff;
   font-family: quark-sFontFamily;
@@ -71,7 +71,7 @@
 }
 
 :host input[readonly] {
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
 }
 
 :host input::placeholder {

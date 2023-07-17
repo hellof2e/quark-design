@@ -68,7 +68,9 @@ onChange({ detail }) {
 <quark-radio checked="true" disabled>已选-禁用</quark-radio>
 <quark-radio checked="false" disabled>未选-禁用</quark-radio>
 <quark-radio checked="true" shape="square" disabled>方形-已选-禁用</quark-radio>
-<quark-radio checked="false" shape="square" disabled>方形-未选-禁用</quark-radio>
+<quark-radio checked="false" shape="square" disabled
+  >方形-未选-禁用</quark-radio
+>
 ```
 
 ### 单选框风格

@@ -3,22 +3,20 @@ import "quarkd/lib/form";
 
 let el;
 
-describe("<quark-progress>", async () => {
+describe("<quark-form>", async () => {
   before(async () => {
-    el = await fixture(
-      `<quark-form
-      >
-      </quark-form>`
-    );
+    el = await fixture(`<quark-form></quark-form>`);
   });
 
   it("quark-form exist", async () => {
-    const form = el.shadowRoot.querySelector("form");
+    const form = el.shadowRoot.querySelector(".quark-form");
     expect(form).to.exist;
   });
 
   it("slot ", async () => {
-    const slot = `<quark-field name="age"></quark-field>`;
+    const slot = `<quark-form-item>
+      <quark-field name="age"></quark-field>
+    </quark-form-item>`;
     el = await fixture(`<quark-form>${slot}</quark-form>`);
     const descE = el.shadowRoot.querySelector("slot");
     const slotResult = descE.assignedNodes()[0];

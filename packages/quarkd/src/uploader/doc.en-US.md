@@ -122,7 +122,7 @@ beforeUpload(files) {
 | ------------ | ------------------------------------------------------------------ | --------------------------------- |
 | beforeUpload | Before upload, can be used as uploader.beforeUpload = fn           | `(fn: () => boolean) => void`     |
 | setPreview   | Initialize preview data, can be used as uploader.setPreview.(data) | `(url: string[]) => void`         |
-| beforeDelete | Before delete uploader.beforeDelete = fn                            | `(file, {index: number}) => void` |
+| beforeDelete | Before delete uploader.beforeDelete = fn                           | `(file, {index: number}) => void` |
 | closePreview | close preview modal                                                |
 
 ## CSS Variables
@@ -141,5 +141,5 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--uploader-delete-wrap-width`  | Preview delete button width             | `14px`         |
 | `--uploader-delete-wrap-height` | Preview delete button height            | `14px`         |
 | `--uploader-delete-background`  | Delete component background color       | `rgb(0, 0, 0)` |
-| `--uploader-delete-color`       | Delete component icon color             | `#fff`        |
+| `--uploader-delete-color`       | Delete component icon color             | `#fff`         |
 | `--uploader-delete-size`        | Delete component icon size              | `10px`         |

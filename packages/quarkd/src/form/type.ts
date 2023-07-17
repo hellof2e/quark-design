@@ -1,18 +1,26 @@
-export interface IRuleItem {
-  el: any;
-  name: string;
-  value?: string;
-  message?: string;
-  required?: boolean;
-  validator?: (value: any) => boolean;
-  validateStatus?: boolean;
+import { Rule } from "async-validator";
+
+export type FormRule = Rule;
+
+export type Rules = Record<string, Rule>;
+
+export type labelPosition = "left" | "right";
+
+export interface IFormProps {
+  validatefirst?: boolean;
+  hidemessage?: boolean;
+  hideasterisk?: boolean;
+  labelwidth?: string;
+  labelsuffix?: string;
+  labelposition?: labelPosition;
 }
 
-export interface IFormItem {
-  value?: string;
-  checked?: boolean;
-  values?: any[]; // 兼容 picker uploader
-  name: string;
-  tagName: string;
-  parentNode: Element;
+export interface IFormItemProps {
+  prop?: string;
+  label?: string;
+  labelwidth?: string;
+  hidemessage?: boolean;
+  hideasterisk?: boolean;
+  islink?: boolean;
+  rules?: FormRule;
 }

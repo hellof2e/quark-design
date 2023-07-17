@@ -1,133 +1,189 @@
-import { property, customElement, createRef, QuarkElement } from "quarkc";
+import {
+  property,
+  customElement,
+  createRef,
+  QuarkElement,
+  state,
+} from "quarkc";
 
 import style from "./style.css";
-import { IFormItem, IRuleItem } from "./type";
-import validateAll, {
-  filterSymbol,
-  booleanTagNames,
-  radio,
-  radioGroup,
-} from "./utils";
-export interface Rule {
-  name: string; // 需要校验的 field 组件的 name 属性
-  required?: boolean; // 是否必填
-  message?: string; // 错误信息
-  validator?: (value: string | number) => boolean; // 校验规则
-}
+import QuarkFormItem from "./form-item";
+import { Rules, labelPosition } from "./type";
+import { convertToNestedObject, getPropByPath } from "./utils";
+
 @customElement({
   tag: "quark-form",
   style,
 })
 class QuarkForm extends QuarkElement {
-  @property()
-  value = "";
+  @property({ type: Boolean })
+  validatefirst: false;
 
   @property({ type: Boolean })
-  showtext = false;
+  hidemessage: false;
+
+  @property({ type: Boolean })
+  hideasterisk: false; // 是否隐藏必填 *
+
+  @property({ type: String })
+  labelwidth: "";
+
+  @property({ type: String })
+  labelsuffix: "";
+
+  @property()
+  labelposition: labelPosition = "left";
 
   formRef: any = createRef();
 
-  rules: IRuleItem[] = [];
+  slotRef: any = createRef();
 
-  child: IFormItem[] = [];
+  @state()
+  formItems: QuarkFormItem[] = [];
 
-  booleanEle: string[] = [];
+  model: Record<string, any> | null = null;
 
-  getFormData = () => {
-    const data: any = {};
-    this.child.forEach((i: IFormItem) => {
-      if (booleanTagNames.includes(i.tagName)) {
-        // 兼容 radio 成组出现问题，只取  group 的 value
-        if (i.tagName === radio && i.parentNode.tagName === radioGroup) {
-          data[i.name] = Symbol("radio");
-        } else {
-          // 兼容 布尔为 false 时候
-          data[i.name] = Boolean(i.value || i.checked);
-        }
-      } else {
-        // 兼容引用类型数据
-        data[i.name] = i.value || i.values;
-      }
-    });
-    return data;
-  };
+  rules: Rules | null = null;
 
-  setInit = () => {
-    const { current } = this.formRef;
-    if (this.shadowRoot && current) {
-      const el = current.querySelector("slot");
-      const formChildren = el?.assignedNodes();
-      let nodes = formChildren;
-      formChildren.forEach((node: Element) => {
-        if (node.querySelectorAll) {
-          const includesNameNode = node.querySelectorAll(`[name]`) || [];
-          // @ts-ignore
-          nodes = [...nodes, ...includesNameNode];
-        }
-      });
-      this.child = nodes.filter((i: IFormItem) => i.name);
-    }
-  };
+  onSlotChange = () => {
+    if (this.slotRef.current) {
+      const allFormItes = this.slotRef.current
+        .assignedNodes()
+        .filter((item) => item.tagName === "QUARK-FORM-ITEM");
 
-  setRules = (rules: IRuleItem[]) => {
-    this.setInit();
-    if (!Array.isArray(rules)) throw new Error("rules need array");
-    const values = this.getFormData();
-    if (values) {
-      Object.keys(values).forEach((c: string) => {
-        this.rules = rules.map((i: IRuleItem) => {
-          if (i.name === c) {
-            i.value = values[c];
-            if (this.formRef.current) {
-              i.el = this.child.find((i) => i.name === c);
-            }
-            this.setFieldMsg(i);
-          }
-          return i;
+      this.formItems = allFormItes.filter((item) => item.prop);
+
+      allFormItes.forEach((item) => {
+        item.setFormProps({
+          hideMmessage: this.hidemessage,
+          labelwidth: this.labelwidth,
+          hideasterisk: this.hideasterisk,
+          labelsuffix: this.labelsuffix,
+          labelposition: this.labelposition,
         });
       });
+      this.formItems.forEach((el) => {
+        if (this.model) {
+          el.setFormModel(this.model);
+        }
+
+        if (this.rules && el.prop) {
+          let prop = el.prop;
+          if (el.prop.indexOf(".") > -1) {
+            prop = el.prop.split(".").shift();
+          }
+          const rule = getPropByPath(this.rules, prop, true);
+          el.setRule({
+            [prop]: rule.v,
+          });
+        }
+      });
     }
   };
 
-  handleRightSlotChange = () => {
-    this.setInit();
-  };
-
-  validate = (rules: IRuleItem[]) => {
-    return validateAll(rules)(this.setErrorMsg);
-  };
-
-  setFieldMsg = (ruleItem: IRuleItem) => {
-    const { el, message, required, validator } = ruleItem;
-    if (!el) return;
-    if (el.localName !== "quark-field") return;
-    el.required = required;
-    el.setRules([{ required, validator, message }]);
-  };
-
-  setErrorMsg = (ruleItem: IRuleItem) => {
-    const { el } = ruleItem;
-    if (!el) return;
-    if (el.validRules) el.validRules();
-  };
-
-  getValues = () => {
-    const values = this.getFormData();
-    // 这里把最新的表单值塞进去
-    this.setRules(this.rules);
-    const validateStatus = this.validate(this.rules);
-    if (validateStatus) {
-      const formData = filterSymbol(values);
-      return Promise.resolve(formData);
+  validate = (callback): Promise<boolean> | void => {
+    let promise;
+    if (typeof callback !== "function" && window.Promise) {
+      promise = new window.Promise((resolve, reject) => {
+        callback = function (valid, invalidFields) {
+          valid ? resolve(valid) : reject(invalidFields);
+        };
+      });
     }
-    const r = this.rules.find((r) => r.validateStatus === false);
-    return Promise.reject(r);
+    let valid = true;
+    let count = 0;
+    if (this.formItems.length === 0) {
+      callback(true);
+    }
+    let invalidFields = {};
+
+    for (let i = 0; i < this.formItems.length; i++) {
+      this.formItems[i].validate((message, field) => {
+        if (message) {
+          valid = false;
+        }
+        invalidFields = { ...invalidFields, ...field };
+      });
+
+      if (this.validatefirst && !valid) {
+        if (typeof callback === "function") {
+          callback(valid, valid ? this.getValues() : invalidFields);
+        }
+        break;
+      }
+      if (typeof callback === "function" && ++count === this.formItems.length) {
+        callback(valid, valid ? this.getValues() : invalidFields);
+      }
+    }
+
+    if (promise) {
+      return promise;
+    }
   };
+
+  validateField = (props: string | string[], callback) => {
+    const _props = [].concat(props);
+    const fields = this.formItems.filter(
+      (field) => _props.indexOf(field.prop) !== -1
+    );
+    if (!fields.length) {
+      console.warn("[Quark Warn]please pass correct props!");
+      return;
+    }
+
+    fields.forEach((field) => {
+      field.validate(callback);
+    });
+  };
+
+  clearValidate(props?: string[] | string) {
+    let fields = this.formItems;
+    if (props) {
+      if (Array.isArray(props)) {
+        fields = this.formItems.filter((item) => props.indexOf(item.prop) > -1);
+      } else {
+        fields = this.formItems.filter((item) => props === item.prop);
+      }
+    }
+    fields.forEach((item) => {
+      item.clearValidate();
+    });
+  }
+
+  resetFields() {
+    if (!this.model) {
+      console.warn("[Quark Warn]please setModel!");
+      return;
+    }
+
+    this.formItems.forEach((item) => {
+      item.resetField();
+    });
+  }
+
+  setRules(rules: Rules) {
+    this.rules = rules;
+  }
+
+  setModel = (model: Record<string, any>) => {
+    this.model = model;
+  };
+
+  getValues(): Record<string, any> {
+    if (!this.model) {
+      console.warn("[Quark Warn]please setModel!");
+      return;
+    }
+    this.formItems.forEach((item) => {
+      item.getValue();
+    });
+    return this.model;
+  }
 
   render() {
     return (
-      <form ref={this.formRef}>
-        <slot onslotchange={this.handleRightSlotChange}></slot>
+      <form class="quark-form" ref={this.formRef}>
+        <slot ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
       </form>
     );
   }
