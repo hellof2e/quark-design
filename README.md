@@ -64,6 +64,9 @@ For help, discussion about best practices, or any other conversation that would 
 
 [Discuss Quark design on Github](https://github.com/hellof2e/quark-design/discussions)
 
+## GitHub Stargazaers
+
+[![Stargazers repo roster for @hellof2e/quark-design](https://reporoster.com/stars/hellof2e/quark-design)](https://github.com/hellof2e/quark-design/stargazers)
 ## Contributing
 
 If you're interested in contributing to quark design, please read our [contributing docs](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
