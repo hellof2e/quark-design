@@ -9,7 +9,7 @@ import {
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
 import { Rules, labelPosition } from "./type";
-import { convertToNestedObject, getPropByPath } from "./utils";
+import { getPropByPath } from "./utils";
 
 @customElement({
   tag: "quark-form",

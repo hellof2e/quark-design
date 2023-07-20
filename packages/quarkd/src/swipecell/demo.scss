@@ -1,0 +1,24 @@
+.demo-cell {
+  quark-cell-group quark-cell {
+    margin: 0;
+  }
+
+  .quark-cell {
+    padding: 13px 16px;
+    background: #fff;
+    box-shadow: 0 1px 7px #edeef1;
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 20px;
+  }
+
+  .my-cell {
+    --cell-title-white-space: nowrap;
+    --cell-title-text-overflow: ellipsis;
+  }
+}

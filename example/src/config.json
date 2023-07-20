@@ -330,6 +330,16 @@
 					"show": true,
 					"desc": "文字提示",
 					"author": "allan"
+				},
+				{
+					"version": "0.0.1",
+					"name": "Swipecell",
+					"sort": 1,
+					"cName": "滑动单元格",
+					"type": "component",
+					"show": true,
+					"desc": "滑动单元格",
+					"author": "yunxia"
 				}
 			]
 		},
