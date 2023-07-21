@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  font-size: 14px;
+  background: #fff;
+}
+
+:host .quark-swipe-cell {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+
+:host .quark-swipe-cell-wrap {
+  transition-timing-function: ease-in-out;
+  transition-property: transform;
+}
+
+:host .quark-swipe-cell-wrap .quark-swipe-cell-left,
+:host .quark-swipe-cell-wrap .quark-swipe-cell-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+:host .quark-swipe-cell-wrap .quark-swipe-cell-left {
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+:host .quark-swipe-cell-wrap .quark-swipe-cell-right {
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+}
