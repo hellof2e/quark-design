@@ -1,7 +1,12 @@
 <template>
   <div class="demo no-padding swipe-cell-demo">
     <h2>{{ translate("CellTitle.basicUsage") }}</h2>
-    <quark-swipe-cell @click="onClick" @open="onOpen" @close="onClose">
+    <quark-swipe-cell
+      ref="swipeCellRef"
+      @click="onClick"
+      @open="onOpen"
+      @close="onClose"
+    >
       <quark-cell :title="translate('title')" :desc="translate('desc')" />
       <div class="left" slot="left">
         <quark-button type="primary" shape="square" @click="leftClick">
@@ -26,15 +31,15 @@
 import { createComponent } from "@/utils/create";
 const { createDemo, translate } = createComponent("cell");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
-import { ref, onBeforeMount } from "vue";
+import { ref, onBeforeMount, onMounted } from "vue";
 
 export default createDemo({
   setup() {
     const onClick = ({ detail }) => {
-      console.log(1111, detail);
+      // console.log(1111, detail);
     };
     const leftClick = () => {
-      console.log("left click");
+      // console.log("left click");
     };
     onBeforeMount(() => {
       useTranslate({
@@ -75,18 +80,37 @@ export default createDemo({
     });
 
     const onOpen = ({ detail }) => {
-      console.log("opened", detail.position);
+      // console.log("opened", detail.position);
     };
 
     const onClose = ({ detail }) => {
-      console.log("closed", detail.position);
+      // console.log("closed", detail.position);
     };
+
+    const swipeCellRef = ref();
+    onMounted(() => {
+      swipeCellRef.value.setBeforeClose((position) => {
+        switch (position) {
+          case "left":
+          case "cell":
+          case "outside":
+            return true;
+          case "right":
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve(true);
+              }, 500);
+            });
+        }
+      });
+    });
     return {
       translate,
       onClick,
       leftClick,
       onOpen,
       onClose,
+      swipeCellRef,
     };
   },
 });

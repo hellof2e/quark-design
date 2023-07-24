@@ -9,13 +9,15 @@ import "@quarkd/icons/lib/arrow-right";
 import style from "./style.css";
 import { Touch } from "../../utils/touch";
 import { clamp } from "../../utils";
-import { getElementRect } from "../../utils/util";
+import { getRect, isPromise } from "../../utils/util";
 
 export interface Props {
   disabled?: boolean;
 }
 
-type beforeClose = Promise<boolean> | boolean | undefined | void;
+type beforeClose = (
+  ...args: any[]
+) => Promise<boolean> | boolean | undefined | void;
 
 const touch = new Touch();
 
@@ -27,15 +29,24 @@ class QuarkSwipeCell extends QuarkElement {
   @property({ type: Boolean })
   disabled = false;
 
+  @property({
+    type: Number,
+    attribute: "left-width",
+  })
+  leftWidth = 0;
+
+  @property({
+    type: Number,
+    attribute: "right-width",
+  })
+  rightWidth = 0;
+
   root = createRef();
   leftRef = createRef();
   rightRef = createRef();
   defaultSlotRef = createRef();
   leftSlotRef = createRef();
   rightSlotRef = createRef();
-
-  letfWidth = 0;
-  rightWidth = 0;
 
   @state()
   offset = 0;
@@ -46,10 +57,17 @@ class QuarkSwipeCell extends QuarkElement {
   @state()
   opened = false;
 
+  @state()
+  leftWrapWidth = 0;
+
+  @state()
+  rightWrapWidth = 0;
+
   startOffset = 0;
+
   lockClick = false;
 
-  beforeClose: beforeClose = undefined;
+  beforeClose: beforeClose | undefined = undefined;
 
   setBeforeClose(fn: beforeClose) {
     this.beforeClose = fn;
@@ -76,8 +94,8 @@ class QuarkSwipeCell extends QuarkElement {
 
       this.offset = clamp(
         deltaX + this.startOffset,
-        -this.rightWidth,
-        this.letfWidth
+        -this.rightWrapWidth,
+        this.leftWrapWidth
       );
     }
   };
@@ -94,7 +112,7 @@ class QuarkSwipeCell extends QuarkElement {
   };
 
   open(side) {
-    this.offset = side === "left" ? this.letfWidth : -this.rightWidth;
+    this.offset = side === "left" ? this.leftWrapWidth : -this.rightWrapWidth;
     if (!this.opened) {
       this.opened = true;
       this.$emit("open", {
@@ -117,7 +135,7 @@ class QuarkSwipeCell extends QuarkElement {
 
   toggle = (side: "left" | "right") => {
     const offset = Math.abs(this.offset);
-    const width = side === "left" ? this.letfWidth : this.rightWidth;
+    const width = side === "left" ? this.leftWrapWidth : this.rightWrapWidth;
     const THRESHOLD = 0.15;
     const threshold = this.opened ? 1 - THRESHOLD : THRESHOLD;
 
@@ -128,10 +146,25 @@ class QuarkSwipeCell extends QuarkElement {
     }
   };
 
-  onClick = (position = "outside") => {
+  onClick = async (position = "outside") => {
     this.$emit("click", { detail: { position } });
+
     if (this.opened && !this.lockClick) {
-      this.close(position);
+      if (this.beforeClose) {
+        const returnVal = this.beforeClose(position);
+        if (isPromise(returnVal)) {
+          returnVal.then((value) => {
+            if (value) this.close(position);
+          });
+        } else if (returnVal) {
+          console.log("returnVal", returnVal);
+          this.close(position);
+        } else {
+          console.log("returnVal else", returnVal);
+        }
+      } else {
+        this.close(position);
+      }
     }
   };
 
@@ -177,11 +210,9 @@ class QuarkSwipeCell extends QuarkElement {
         passive: false,
       }
     );
-    console.log(getElementRect(this.leftRef.current));
-    console.log(this.leftRef.current.offsetWidth);
-    console.log(this.leftRef.current.clientWidth);
-    this.letfWidth = this.leftRef.current.offsetWidth;
-    this.rightWidth = this.rightRef.current.offsetWidth;
+    this.leftWrapWidth = this.leftWidth || getRect(this.leftRef.current).width;
+    this.rightWrapWidth =
+      this.rightWidth || getRect(this.rightRef.current).width;
   }
 
   componentWillUnmount(): void {

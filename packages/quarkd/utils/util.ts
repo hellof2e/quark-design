@@ -1,5 +1,3 @@
-import { QuarkElement } from "quarkc";
-
 export const objectToString = Object.prototype.toString;
 export const toTypeString = (value: unknown): string =>
   objectToString.call(value);
@@ -15,6 +13,7 @@ export const isSet = (val: unknown): val is Set<any> =>
   toTypeString(val) === "[object Set]";
 
 export const isDate = (val: unknown): val is Date => val instanceof Date;
+
 export const isFunction = (val: unknown): val is Function =>
   typeof val === "function";
 export const isString = (val: unknown): val is string =>
@@ -79,7 +78,7 @@ export const pxToVw = (
   return value;
 };
 
-export const getElementRect = (el: HTMLElement) => {
+export const getRect = (el: HTMLElement) => {
   if (el?.getBoundingClientRect) {
     return el.getBoundingClientRect();
   }
