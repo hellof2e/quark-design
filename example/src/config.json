@@ -333,7 +333,7 @@
 				},
 				{
 					"version": "0.0.1",
-					"name": "Swipecell",
+					"name": "SwipeCell",
 					"sort": 1,
 					"cName": "滑动单元格",
 					"type": "component",

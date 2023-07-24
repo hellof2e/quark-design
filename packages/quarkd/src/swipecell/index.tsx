@@ -7,12 +7,16 @@ import {
 } from "quarkc";
 import "@quarkd/icons/lib/arrow-right";
 import style from "./style.css";
+import { Touch } from "../../utils/touch";
+import { clamp } from "../../utils";
+
 export interface Props {
   disabled?: boolean;
 }
 
-const clamp = (num: number, min: number, max: number): number =>
-  Math.min(Math.max(num, min), max);
+type beforeClose = Promise<boolean> | boolean | undefined | void;
+
+const touch = new Touch();
 
 @customElement({
   tag: "quark-swipe-cell",
@@ -22,9 +26,12 @@ class QuarkSwipeCell extends QuarkElement {
   @property({ type: Boolean })
   disabled = false;
 
-  swipeCellRef = createRef();
+  root = createRef();
   leftRef = createRef();
   rightRef = createRef();
+  defaultSlotRef = createRef();
+  leftSlotRef = createRef();
+  rightSlotRef = createRef();
 
   letfWidth = 0;
   rightWidth = 0;
@@ -43,25 +50,38 @@ class QuarkSwipeCell extends QuarkElement {
   startOffset = 0;
   lockClick = false;
 
+  beforeClose: beforeClose = undefined;
+
+  setBeforeClose(fn: beforeClose) {
+    this.beforeClose = fn;
+  }
+
   onTouchStart = (ev: TouchEvent) => {
     if (this.disabled) return;
     this.startOffset = this.offset;
     this.startX = ev.touches[0].clientX;
+    touch.start(ev);
   };
 
   onTouchMove = (ev: TouchEvent) => {
     if (this.disabled) return;
-    const touch = ev.touches[0];
-    const deltaX = (touch.clientX > 0 ? touch.clientX : 0) - this.startX;
 
-    this.dragging = true;
-    this.lockClick = true;
+    const deltaX = touch.deltaX;
+    touch.move(ev);
+    if (touch.isHorizontal()) {
+      this.dragging = true;
+      this.lockClick = true;
+      const isEdge = !this.opened || deltaX * this.startOffset < 0;
+      if (isEdge) {
+        ev.preventDefault();
+      }
 
-    this.offset = clamp(
-      deltaX + this.startOffset,
-      -this.rightWidth,
-      this.letfWidth
-    );
+      this.offset = clamp(
+        deltaX + this.startOffset,
+        -this.rightWidth,
+        this.letfWidth
+      );
+    }
   };
 
   onTouchEnd = () => {
@@ -79,13 +99,21 @@ class QuarkSwipeCell extends QuarkElement {
     this.offset = side === "left" ? this.letfWidth : -this.rightWidth;
     if (!this.opened) {
       this.opened = true;
+      this.$emit("open", {
+        detail: {
+          position: side,
+        },
+      });
     }
   }
 
-  close() {
+  close(position) {
     this.offset = 0;
     if (this.opened) {
       this.opened = false;
+      this.$emit("close", {
+        detail: { position },
+      });
     }
   }
 
@@ -98,15 +126,14 @@ class QuarkSwipeCell extends QuarkElement {
     if (width && offset > width * threshold) {
       this.open(side);
     } else {
-      this.close();
+      this.close(side);
     }
   };
 
   onClick = (position = "outside") => {
-    console.log("onclick", position);
-
+    this.$emit("click", { detail: { position } });
     if (this.opened && !this.lockClick) {
-      this.close();
+      this.close(position);
     }
   };
 
@@ -125,37 +152,55 @@ class QuarkSwipeCell extends QuarkElement {
   }
 
   componentDidMount(): void {
-    this.swipeCellRef.current.addEventListener("touchstart", this.onTouchStart);
-    this.swipeCellRef.current.addEventListener("touchend", this.onTouchEnd);
-    this.swipeCellRef.current.addEventListener("touchmove", this.onTouchMove);
+    this.root.current.addEventListener("touchstart", this.onTouchStart);
+    this.root.current.addEventListener("touchend", this.onTouchEnd);
+    this.root.current.addEventListener("touchmove", this.onTouchMove);
 
-    document.addEventListener("click", () => {
-      this.onClick("outside");
-    });
+    const targets = [
+      ...this.defaultSlotRef.current.assignedNodes(),
+      ...this.leftSlotRef.current.assignedNodes(),
+      ...this.rightSlotRef.current.assignedNodes(),
+      this.root.current,
+    ];
+
+    document.addEventListener(
+      "touchstart",
+      (e) => {
+        const clickAway = targets.every((item) => {
+          return item && !item.contains(e.target);
+        });
+
+        if (clickAway) {
+          this.onClick("outside");
+        }
+      },
+      {
+        capture: false,
+        passive: false,
+      }
+    );
 
     this.letfWidth = this.leftRef.current.offsetWidth;
     this.rightWidth = this.rightRef.current.offsetWidth;
   }
 
   componentWillUnmount(): void {
-    this.swipeCellRef.current.removeEventListener(
+    this.root.current.removeEventListener("touchstart", this.onTouchStart);
+    this.root.current.removeEventListener("touchend", this.onTouchEnd);
+    this.root.current.removeEventListener("touchmove", this.onTouchMove);
+    document.removeEventListener(
       "touchstart",
-      this.onTouchStart
+      () => {
+        this.onClick("outside");
+      },
+      false
     );
-    this.swipeCellRef.current.removeEventListener("touchend", this.onTouchEnd);
-    this.swipeCellRef.current.removeEventListener(
-      "touchmove",
-      this.onTouchMove
-    );
-    document.removeEventListener("click", () => {
-      this.onClick("outside");
-    });
   }
 
   render() {
     return (
       <div
-        ref={this.swipeCellRef}
+        ref={this.root}
         class="quark-swipe-cell"
         onClick={this.getClickHandler("cell", this.lockClick)}
       >
@@ -165,15 +210,15 @@ class QuarkSwipeCell extends QuarkElement {
             class="quark-swipe-cell__left"
             onClick={this.getClickHandler("left", true)}
           >
-            <slot name="left" />
+            <slot name="left" ref={this.leftSlotRef} />
           </div>
-          <slot></slot>
+          <slot ref={this.defaultSlotRef}></slot>
           <div
             ref={this.rightRef}
             class="quark-swipe-cell__right"
             onClick={this.getClickHandler("right", true)}
           >
-            <slot name="right" />
+            <slot name="right" ref={this.rightSlotRef} />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
   position: relative;
   background: #fff;
   overflow: hidden;
+  cursor: grab;
 }
 
 .quark-swipe-cell__wrapper {
@@ -19,11 +20,9 @@
 :host .quark-swipe-cell__left {
   left: 0;
   transform: translate3d(-100%, 0, 0);
-  background-color: #f00;
 }
 
 :host .quark-swipe-cell__right {
   right: 0;
   transform: translate3d(100%, 0, 0);
-  background-color: #08f;
 }

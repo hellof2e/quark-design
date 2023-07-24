@@ -1,22 +1,25 @@
 <template>
-  <div class="demo no-padding demo-cell">
+  <div class="demo no-padding swipe-cell-demo">
     <h2>{{ translate("CellTitle.basicUsage") }}</h2>
-    <quark-swipe-cell>
+    <quark-swipe-cell @click="onClick" @open="onOpen" @close="onClose">
       <quark-cell :title="translate('title')" :desc="translate('desc')" />
-      <div slot="left">
-        <div>quark-swipe-cell__lefe</div>
+      <div class="left" slot="left">
+        <quark-button type="primary" shape="square" @click="leftClick">
+          选择
+        </quark-button>
       </div>
-      <div slot="right">
-        <div>quark-swipe-cell__right</div>
+      <div class="right" slot="right">
+        <quark-button type="danger" shape="square"> 删除 </quark-button>
+        <quark-button type="primary" shape="square"> 收藏 </quark-button>
       </div>
     </quark-swipe-cell>
     <br />
-    <!-- <quark-swipe-cell disabled>
-      <quark-cell :title="translate('title')" :desc="translate('desc')" />
-      <div slot="right">
-        <div>quark-swipe-cell__right</div>
+    <quark-swipe-cell>
+      <quark-empty title="暂无数据" desc="快去添加数据吧~" type="local" />
+      <div class="right" slot="right">
+        <quark-button type="primary" shape="square">添加</quark-button>
       </div>
-    </quark-swipe-cell> -->
+    </quark-swipe-cell>
   </div>
 </template>
 <script>
@@ -27,9 +30,11 @@ import { ref, onBeforeMount } from "vue";
 
 export default createDemo({
   setup() {
-    const fruit = ref("apple");
-    const onChange = ({ detail }) => {
-      fruit.value = detail.value;
+    const onClick = ({ detail }) => {
+      console.log(1111, detail);
+    };
+    const leftClick = () => {
+      console.log("left click");
     };
     onBeforeMount(() => {
       useTranslate({
@@ -69,10 +74,19 @@ export default createDemo({
       });
     });
 
+    const onOpen = ({ detail }) => {
+      console.log("opened", detail.position);
+    };
+
+    const onClose = ({ detail }) => {
+      console.log("closed", detail.position);
+    };
     return {
-      fruit,
       translate,
-      onChange,
+      onClick,
+      leftClick,
+      onOpen,
+      onClose,
     };
   },
 });
