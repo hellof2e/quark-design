@@ -330,7 +330,20 @@ class QuarkSwipe extends QuarkElement {
     return (360 * Math.atan(Y / X)) / (2 * Math.PI);
   }
 
+  resetNodesTrans = () => {
+    const { current } = this.slotWrapRef;
+    if (!current) return;
+    const nodes = slotAssignedElements(current.assignedNodes());
+    if (!nodes || nodes.length <= 0) return;
+    nodes.forEach((node) => {
+      node.style.transitionDuration = null;
+      node.style.transform = null;
+    });
+  };
+
   handleRightSlotChange = () => {
+    this.changeContainerTranX(true);
+    this.resetNodesTrans();
     const { current } = this.slotWrapRef;
     if (current) {
       const nodes = slotAssignedElements(current.assignedNodes());
