@@ -1,13 +1,12 @@
 :host {
   display: block;
-  position: relative;
   background: #fff;
-  overflow: hidden;
-  cursor: grab;
 }
 
-.quark-swipe-cell__wrapper {
-  /* overflow: hidden; */
+:host .quark-swipe-cell {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
 }
 
 :host .quark-swipe-cell__left,

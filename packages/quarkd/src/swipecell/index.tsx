@@ -9,6 +9,7 @@ import "@quarkd/icons/lib/arrow-right";
 import style from "./style.css";
 import { Touch } from "../../utils/touch";
 import { clamp } from "../../utils";
+import { getElementRect } from "../../utils/util";
 
 export interface Props {
   disabled?: boolean;
@@ -39,8 +40,6 @@ class QuarkSwipeCell extends QuarkElement {
   @state()
   offset = 0;
 
-  startX = 0;
-
   @state()
   dragging = false;
 
@@ -59,7 +58,6 @@ class QuarkSwipeCell extends QuarkElement {
   onTouchStart = (ev: TouchEvent) => {
     if (this.disabled) return;
     this.startOffset = this.offset;
-    this.startX = ev.touches[0].clientX;
     touch.start(ev);
   };
 
@@ -179,7 +177,9 @@ class QuarkSwipeCell extends QuarkElement {
         passive: false,
       }
     );
-
+    console.log(getElementRect(this.leftRef.current));
+    console.log(this.leftRef.current.offsetWidth);
+    console.log(this.leftRef.current.clientWidth);
     this.letfWidth = this.leftRef.current.offsetWidth;
     this.rightWidth = this.rightRef.current.offsetWidth;
   }

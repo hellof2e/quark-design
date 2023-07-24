@@ -1,3 +1,5 @@
+import { QuarkElement } from "quarkc";
+
 export const objectToString = Object.prototype.toString;
 export const toTypeString = (value: unknown): string =>
   objectToString.call(value);
@@ -75,4 +77,15 @@ export const pxToVw = (
     return result;
   }
   return value;
+};
+
+export const getElementRect = (el: HTMLElement) => {
+  if (el?.getBoundingClientRect) {
+    return el.getBoundingClientRect();
+  }
+
+  return {
+    width: 0,
+    height: 0,
+  };
 };
