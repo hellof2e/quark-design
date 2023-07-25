@@ -950,6 +950,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.22.5":
+  version "7.22.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.6.tgz#57d64b9ae3cff1d67eb067ae117dac087f5bd438"
+  integrity sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
 "@babel/standalone@^7.17.11":
   version "7.18.9"
   resolved "https://registry.npmjs.org/@babel%2fstandalone/-/standalone-7.18.9.tgz"
@@ -10159,10 +10166,12 @@ qs@~6.5.2:
   resolved "https://registry.npmjs.org/qs/-/qs-6.5.3.tgz"
   integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
-quarkc@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmmirror.com/quarkc/-/quarkc-1.0.5.tgz#da1be1a156ef6db12435a381057d4338f0dd1c69"
-  integrity sha512-/caPNwe+m08v8EyqZVEby4dt6iUkRBaatTlVqXEw6HMy9wOCp8+a+m58YlvxAQ3WBAUk6jSCOA/s2iwYufSH/g==
+quarkc@^1.0.5:
+  version "1.0.38"
+  resolved "https://registry.yarnpkg.com/quarkc/-/quarkc-1.0.38.tgz#9fbb9357608102fb12a8395cb541056389147d79"
+  integrity sha512-6jfzXOqWZQ/2WR0g+BFjQZMIq0PbptlJBDnkIg3DXk7ob7uCL2RTCvUAZ6izch4MF5gvuJMMfIF34kRHCFHdig==
+  dependencies:
+    "@babel/runtime" "^7.22.5"
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -10361,6 +10370,11 @@ regenerate@^1.4.2:
   version "1.4.2"
   resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz"
   integrity sha1-uTRtiCfo9aMve6KWN9OYtpAUhIo=
+
+regenerator-runtime@^0.13.11:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
 regenerator-runtime@^0.13.3, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7, regenerator-runtime@^0.13.9:
   version "0.13.9"
