@@ -41,10 +41,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkPopover extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   placement = "bottom";
 

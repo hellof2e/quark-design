@@ -23,10 +23,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkOverlay extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })

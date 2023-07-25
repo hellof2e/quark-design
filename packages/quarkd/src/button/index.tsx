@@ -20,10 +20,6 @@ export interface Props {
   style,
 })
 class QuarkButton extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })

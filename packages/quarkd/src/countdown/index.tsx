@@ -13,10 +13,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkButton extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   time = "0";
 

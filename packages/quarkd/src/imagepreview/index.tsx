@@ -20,9 +20,6 @@ export interface Props {
   style,
 })
 class QuarkImagePreview extends QuarkElement {
-  constructor() {
-    super();
-  }
   @property({
     type: Boolean,
   })

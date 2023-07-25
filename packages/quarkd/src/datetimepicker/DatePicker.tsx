@@ -23,10 +23,6 @@ const currentYear = new Date().getFullYear();
   style,
 })
 class QuarkDatePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 

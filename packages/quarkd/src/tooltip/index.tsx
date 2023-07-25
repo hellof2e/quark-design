@@ -28,10 +28,6 @@ export interface CustomEvent {
 }
 @customElement({ tag: "quark-tooltip", style })
 class QuarkTooltip extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   placement = "bottom";
 
