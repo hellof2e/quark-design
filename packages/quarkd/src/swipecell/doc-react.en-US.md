@@ -2,105 +2,95 @@
 
 ### Intro
 
-The cell is a single display item in the list.
+Used for cell components that can slide left and right to display operation buttons.
 
 ### Install
 
 ```tsx
-import { Cell } from "@quarkd/quark-react";
+import { SwipeCell, SwipeCellRef } from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
 
-```tsx
-import { Cell } from '@quarkd/quark-react';
-
-export default () => {
-  return (
-    <Cell title="Cell title" />
-    <Cell title="Cell title" islink />
-    <Cell title="Cell title" desc="Content" />
-    <Cell title="Cell title" desc="Content" islink />
-  )
-}
-```
-
-### Router
+The component provides two slots, left and right, to define the contents of the sliding area on both sides
 
 ```tsx
-import { Cell } from '@quarkd/quark-react';
-
 export default () => {
   return (
-    <Cell title="Router" to="#/button" islink />
-    <Cell title="URL" to="https://baidu.com" islink />
-  )
-}
-```
-
-### Icon
-
-```tsx
-import { Cell } from "@quarkd/quark-react";
-
-export default () => {
-  return (
-    <Cell
-      title="Cell title"
-      icon="https://m.hellobike.com/resource/helloyun/18625/WUu02_img.png"
-      islink
-    />
+    <SwipeCell>
+      <Cell title="Cell Title" desc="Description" />
+      <div slot="left">
+        <Button type="primary" shape="square">
+          Select
+        </Button>
+      </div>
+      <div slot="right">
+        <Button type="danger" shape="square">
+          Delete
+        </Button>
+        <Button type="primary" shape="square">
+          Collect
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
 
-### Inset Grouped
+### Custom Content
+
+`SwipeCell` can nest anything you want.
 
 ```tsx
-import { Cell, CellGroup } from "@quarkd/quark-react";
-
 export default () => {
   return (
-    <CellGroup>
-      <Cell title="Cell title" islink />
-      <Cell title="Cell title" islink />
-    </CellGroup>
+    <SwipeCell>
+      <Empty title="No Data" desc="Go to add data." type="local" />
+      <div slot="right">
+        <Button type="primary" shape="square">
+          Add
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
 
-### Custom
+### Async Close
 
-Set the maximum width of the title, show ellipsis
-
-```tsx
-import { Cell } from "@quarkd/quark-react";
-
-export default () => {
-  return <Cell title="The title is very very very long" />;
-};
-```
-
-```css
-/** CSS show ellipsis **/
-.my-cell {
-  --cell-title-white-space: nowrap;
-  --cell-title-text-overflow: ellipsis;
-}
-```
-
-### Customize right description
-
-The description on the right can be customized through Slot (the content of the `Cell` package).
+You can customize the behavior when the two sides sliding content is closed by using `setBeforeClose` to set the callback function.
 
 ```tsx
-import { Cell } from "@quarkd/quark-react";
-
 export default () => {
+  const swipeCellRef = useRef<SwipeCellRef>(null);
+
+  useEffect(() => {
+    const { current } = swipeCellRef;
+    current.setBeforeClose((position: SwipeCellPosition) => {
+      if (position === "right") {
+        return new Promise((resolve) => {
+          const toast = Toast.loading("loading...");
+          setTimeout(() => {
+            toast.hide();
+            Toast.success("successfully deleted");
+            resolve(true);
+          }, 1000);
+        });
+      } else {
+        return true;
+      }
+    });
+  }, []);
+
   return (
-    <Cell title="Cell title">
-      <div>Custom content</div>
-    </Cell>
+    <SwipeCell ref={swipeCellRef}>
+      <Cell title="Cell Title" desc="Description" />
+      <div slot="right">
+        <Button type="primary" shape="square">
+          Delete
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
@@ -109,41 +99,41 @@ export default () => {
 
 ### Props
 
-| Attribute | Description                       | Type       | Default |
-| --------- | --------------------------------- | ---------- | ------- |
-| title     | Title                             | `string`   | -       |
-| desc      | description                       | `string`   | -       |
-| to        | Target route of the link          | `string`   | -       |
-| islink    | Whether to show link icon         | `boolean ` | `false` |
-| icon      | Left Icon(can be set to url link) | `string `  | -       |
+| Attribute  | Description                       | Type                                                         | Default |
+| ---------- | --------------------------------- | ------------------------------------------------------------ | ------- |
+| name       | Unique identifiers                | `number \| string`                                           | `''`    |
+| leftwidth  | Width of the left swipe area      | `number`                                                     | `auto`  |
+| rightwidth | Width of the right swipe area     | `number`                                                     | `auto`  |
+| disabled   | Whether to disabled swipe         | `boolean `                                                   | `false` |
+| onClick    | Emitted when SwipeCell is clicked | `(args: { detail: { positon: SwipeCellPosition } }) => void` |
+| onOpen     | Emitted when SwipeCell is opened  | `(args: Params) => void`                                     |
+| onClose    | Emitted when SwipeCell is closed  | `(args: Params) => void`                                     |
 
 ### Slots
 
-| Name            | Description       |
-| --------------- | ----------------- |
-| slot            | Custom right info |
-| slot name=title | Custom title      |
-| slot name=icon  | Custom left icon  |
+| Name    | Description                      |
+| ------- | -------------------------------- |
+| default | Custom content                   |
+| left    | Content of left scrollable area  |
+| right   | Content of right scrollable area |
 
-## CSS Variables
+### Methods
 
-The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
+| Name           | Description                        | Type                                                       |
+| -------------- | ---------------------------------- | ---------------------------------------------------------- |
+| open           | open SwipeCell                     | `(args: SwipeCellSide) => void`                            |
+| close          | close SwipeCell                    | `() => void`                                               |
+| setBeforeClose | set callback function before close | `(args: SwipeCellPosition) => boolean \| Promise<boolean>` |
 
-| Name                       | Description                    | Default                           |
-| -------------------------- | ------------------------------ | --------------------------------- |
-| `--cell-title-font-size`   | Title font size                | `14px`                            |
-| `--cell-title-color`       | Title font color               | `#666`                            |
-| `--cell-title-width`       | Title font max width           |
-| `--cell-title-font-weight` | Title font weight              |
-| `--cell-title-font-family` | Title font family              | `PingFangSC-Regular, PingFang SC` |
-| `--cell-title-white-space` | Whether the title change line  | `nowrap`                          |
-| `--cell-desc-font-size`    | Desc font size                 |
-| `--cell-desc-color`        | Desc font color                | `#969799`                         |
-| `--cell-desc-width`        | Desc font max width            | `14px`                            |
-| `--cell-desc-white-space`  | Whether the desc change line   | `nowrap`                          |
-| `--cell-desc-font-weight`  | Desc font weight               |
-| `--cell-desc-font-family`  | Desc font family               | `PingFangSC-Regular, PingFang SC` |
-| `--cell-icon-font-size`    | Icon size                      | `16px`                            |
-| `--cell-quark-icon-color`  | Icon color                     | `#969799`                         |
-| `--cell-hspacing`          | left and right padding of cell | `16px`                            |
-| `--cell-vspacing`          | top and bottom padding of cell | `13px`                            |
+### Data Structure of Action
+
+```ts
+type SwipeCellSide = "left" | "right";
+type SwipeCellPosition = SwipeCellSide | "cell" | "outside";
+type Params = {
+  detail: {
+    name: string | number;
+    position: SwipeCellPosition;
+  };
+};
+```

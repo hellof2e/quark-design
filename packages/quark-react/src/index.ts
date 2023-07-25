@@ -45,6 +45,7 @@ import StepItem from "./step-item";
 import Sticky from "./sticky";
 import Swipe from "./swipe";
 import SwipeItem from "./swipe-item";
+import SwipeCell from "./swipecell";
 import Switch from "./switch";
 import Tabs from "./tabs";
 import TabContent from "./tab-content";
@@ -112,6 +113,7 @@ export {
   Sticky,
   Swipe,
   SwipeItem,
+  SwipeCell,
   Switch,
   Tabs,
   TabContent,

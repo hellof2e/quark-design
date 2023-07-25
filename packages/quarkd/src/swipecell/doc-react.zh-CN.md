@@ -2,105 +2,95 @@
 
 ### 介绍
 
-列表项，可组成列表。
+可以左右滑动来展示操作按钮的单元格组件。
 
 ### 安装使用
 
 ```tsx
-import { Cell } from "@quarkd/quark-react";
+import { SwipeCell, SwipeCellRef } from "@quarkd/quark-react";
 ```
 
 ### 基本用法
 
-```tsx
-import { Cell } from '@quarkd/quark-react';
-
-export default () => {
-  return (
-    <Cell title="这是标题" />
-    <Cell title="这是标题" islink />
-    <Cell title="这是标题" desc="描述文字" />
-    <Cell title="这是标题" desc="描述文字" islink />
-  )
-}
-```
-
-### 链接跳转
+`SwipeCell` 组件提供了 left 和 right 两个插槽，用于定义两侧滑动区域的内容。
 
 ```tsx
-import { Cell } from '@quarkd/quark-react';
-
 export default () => {
   return (
-    <Cell title="路由跳转" to="#/button" islink />
-    <Cell title="链接跳转" to="https://baidu.com" islink />
-  )
-}
-```
-
-### 图标展示
-
-```tsx
-import { Cell } from "@quarkd/quark-react";
-
-export default () => {
-  return (
-    <Cell
-      title="这是标题"
-      icon="https://m.hellobike.com/resource/helloyun/18625/WUu02_img.png"
-      islink
-    />
+    <SwipeCell>
+      <Cell title="这是标题" desc="描述文字" />
+      <div slot="left">
+        <Button type="primary" shape="square">
+          选择
+        </Button>
+      </div>
+      <div slot="right">
+        <Button type="danger" shape="square">
+          删除
+        </Button>
+        <Button type="primary" shape="square">
+          收藏
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
 
-### 分组用法
+### 自定义内容
+
+`SwipeCell` 可以嵌套任意内容。
 
 ```tsx
-import { Cell, CellGroup } from "@quarkd/quark-react";
-
 export default () => {
   return (
-    <CellGroup>
-      <Cell title="这是标题" islink />
-      <Cell title="这是标题" islink />
-    </CellGroup>
+    <SwipeCell>
+      <Empty title="暂无数据" desc="快去添加数据吧~" type="local" />
+      <div slot="right">
+        <Button type="primary" shape="square">
+          添加
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
 
-### 自定义样式
+### 异步关闭
 
-设置标题最大宽度，省略号展示
-
-```tsx
-import { Cell } from "@quarkd/quark-react";
-
-export default () => {
-  return <Cell title="这是标题很长长长长长长长长长长长长长长长长长长" />;
-};
-```
-
-```css
-/* CSS 省略号展示 */
-.my-cell {
-  --cell-title-white-space: nowrap;
-  --cell-title-text-overflow: ellipsis;
-}
-```
-
-### 自定义右侧描述
-
-通过 Slot（`Cell` 包裹的内容）可以自定义右侧描述。
+通过`setBeforeClose`方法，设置回调函数，可以自定义两侧滑动内容关闭时的行为。
 
 ```tsx
-import { Cell } from "@quarkd/quark-react";
-
 export default () => {
+  const swipeCellRef = useRef<SwipeCellRef>(null);
+
+  useEffect(() => {
+    const { current } = swipeCellRef;
+    current.setBeforeClose((position: SwipeCellPosition) => {
+      if (position === "right") {
+        return new Promise((resolve) => {
+          const toast = Toast.loading("请求中");
+          setTimeout(() => {
+            toast.hide();
+            Toast.success("删除成功");
+            resolve(true);
+          }, 1000);
+        });
+      } else {
+        return true;
+      }
+    });
+  }, []);
+
   return (
-    <Cell title="标题">
-      <div>自定义内容</div>
-    </Cell>
+    <SwipeCell ref={swipeCellRef}>
+      <Cell title="这是标题" desc="描述文字" />
+      <div slot="right">
+        <Button type="primary" shape="square">
+          删除
+        </Button>
+      </div>
+    </SwipeCell>
   );
 };
 ```
@@ -109,41 +99,41 @@ export default () => {
 
 ### Props
 
-| 方法名 | 说明                      | 类型       | 默认值  |
-| ------ | ------------------------- | ---------- | ------- |
-| title  | 标题                      | `string`   | -       |
-| desc   | 描述文字                  | `string`   | -       |
-| to     | 链接跳转                  | `string`   | -       |
-| islink | 是否显示右侧箭头          | `boolean ` | `false` |
-| icon   | 左侧图标(支持传 url 链接) | `string `  | -       |
+| 方法名     | 说明                 | 类型                                                         | 默认值  |
+| ---------- | -------------------- | ------------------------------------------------------------ | ------- |
+| name       | 唯一标识符           | `number \| string`                                           | `''`    |
+| leftwidth  | 指定左侧滑动区域宽度 | `number`                                                     | `auto`  |
+| rightwidth | 指定右侧滑动区域宽度 | `number`                                                     | `auto`  |
+| disabled   | 是否禁用滑动         | `boolean `                                                   | `false` |
+| onClick    | 点击时触发           | `(args: { detail: { positon: SwipeCellPosition } }) => void` |
+| onOpen     | 打开时触发           | `(args: Params) => void`                                     |
+| onClose    | 关闭时触发           | `(args: Params) => void`                                     |
 
 ### Slots
 
-| 名称            | 说明            |
-| --------------- | --------------- |
-| slot            | 自定义右侧信息  |
-| slot name=title | 自定义标题      |
-| slot name=icon  | 自定义左侧 icon |
+| 名称    | 说明               |
+| ------- | ------------------ |
+| default | 默认显示的内容     |
+| left    | 左侧滑动区域的内容 |
+| right   | 右侧滑动区域的内容 |
 
-## 样式变量
+### Methods
 
-组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+| 名称           | 说明                                                          | 类型                                                       |
+| -------------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
+| open           | 打开单元格侧边栏                                              | `(args: SwipeCellSide) => void`                            |
+| close          | 收起单元格侧边栏                                              | `() => void`                                               |
+| setBeforeClose | 设置关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise | `(args: SwipeCellPosition) => boolean \| Promise<boolean>` |
 
-| 名称                       | 说明             | 默认值                            |
-| -------------------------- | ---------------- | --------------------------------- |
-| `--cell-title-font-size`   | 标题字体大小     | `14px`                            |
-| `--cell-title-color`       | 标题字体颜色     | `#666`                            |
-| `--cell-title-width`       | 标题字体最大宽度 |
-| `--cell-title-font-weight` | 标题字重         |
-| `--cell-title-font-family` | 标题字体         | `PingFangSC-Regular, PingFang SC` |
-| `--cell-title-white-space` | 标题是否换行     | `nowrap`                          |
-| `--cell-desc-font-size`    | 描述字体大小     |
-| `--cell-desc-color`        | 描述字体颜色     | `#969799`                         |
-| `--cell-desc-width`        | 描述字体最大宽度 | `14px`                            |
-| `--cell-desc-white-space`  | 描述是否换行     | `nowrap`                          |
-| `--cell-desc-font-weight`  | 描述字重         |
-| `--cell-desc-font-family`  | 描述字体         | `PingFangSC-Regular, PingFang SC` |
-| `--cell-icon-font-size`    | 图标大小         | `16px`                            |
-| `--cell-quark-icon-color`  | 图标颜色         | `#969799`                         |
-| `--cell-hspacing`          | cell 左右内边距  | `16px`                            |
-| `--cell-vspacing`          | cell 上下内边距  | `13px`                            |
+### 类型定义
+
+```ts
+type SwipeCellSide = "left" | "right";
+type SwipeCellPosition = SwipeCellSide | "cell" | "outside";
+type Params = {
+  detail: {
+    name: string | number;
+    position: SwipeCellPosition;
+  };
+};
+```
