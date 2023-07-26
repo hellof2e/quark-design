@@ -25,6 +25,9 @@ export interface GroupCustomEvent {
 })
 class QuarkRadio extends QuarkElement {
   @property()
+  radiohost = true;
+
+  @property()
   shape = "round";
 
   @property()
@@ -71,6 +74,8 @@ class QuarkRadio extends QuarkElement {
   };
 
   handleCheck = () => {
+    console.log(22);
+
     if (this.disabled || this.checked) {
       return;
     }
@@ -130,10 +135,13 @@ export default QuarkRadio;
 })
 class QuarkRadioGroup extends QuarkElement {
   @property()
-  value = "";
+  radiogrouphost = true;
 
   @property()
-  direction: "vertical" | "horizontal" = "vertical";
+  value = "";
+
+  // @property()
+  // direction: "vertical" | "horizontal" = "vertical";
 
   slotRef: any = createRef();
 
