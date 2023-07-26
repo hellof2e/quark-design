@@ -1,27 +1,33 @@
-:host {
+:host([radiogrouphost]) {
   font-size: var(--radio-font-size, 16px);
   color: var(--radio-color, #333);
+  display: block;
 }
 
-:host([name]) {
+:host([radiohost]) {
   display: flex;
   align-items: center;
+}
+
+:host([radiohost]) * {
   cursor: pointer;
 }
 
-:host([direction="horizontal"]) .quark-radio-group-wrapper {
+:host([radiogrouphost][direction="horizontal"]) .quark-radio-group-wrapper {
   display: flex;
   gap: var(--radio-horizontal-gap, 20px)
 }
 
-:host .quark-radio {
+:host([radiohost]) .quark-radio {
   display: flex;
   align-items: center;
-  gap: var(--radio-label-gap, 8px)
+  gap: var(--radio-label-gap, 8px);
+  cursor: pointer;
+  width: 100%;
 }
 
 
-:host([name][direction="horizontal"]) {
+:host([radiohost][name][direction="horizontal"]) {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
@@ -32,7 +38,6 @@
   align-items: center;
   height: var(--radio-label-height, 100%);
   line-height: var(--radio-label-height, 100%);
-  cursor: pointer;
 }
 
 :host label.quark-radio-hide {
@@ -70,7 +75,6 @@
   left: 0;
   opacity: 0;
   z-index: 1;
-  cursor: pointer;
 }
 
 :host .quark-radio-container span {
@@ -156,17 +160,4 @@
 
 :host input[type="radio"i] {
   margin: 0;
-}
-
-.quark-radio-group-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-quark-radio-group quark-radio {
-  margin-right: var(--radio-group-margin, quark-hSpacingSm);
-}
-
-quark-radio-group quark-radio:last-child {
-  margin-right: 0;
 }
