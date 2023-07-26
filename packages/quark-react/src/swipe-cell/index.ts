@@ -5,7 +5,7 @@ import {
   Props,
   SwipeCellSide,
   SwipeCellPosition,
-  BeforeCloseFunc,
+  BeforeCloseFunc as SwipeCellBeforeClose,
 } from "quarkd/lib/swipecell/type";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
@@ -17,7 +17,7 @@ type SwipeCellType = FC<SwipeCellProps>;
 interface Ref {
   open(side: SwipeCellPosition): void;
   close(position: SwipeCellPosition): void;
-  setBeforeClose(fn: BeforeCloseFunc): void;
+  setBeforeClose(fn: SwipeCellBeforeClose): void;
 }
 
 type SwipeCellRef = Ref & HTMLElement;
@@ -28,7 +28,7 @@ export {
   SwipeCellRef,
   SwipeCellSide,
   SwipeCellPosition,
-  BeforeCloseFunc,
+  SwipeCellBeforeClose,
   SwipeCellProps,
   SwipeCellType,
 };
