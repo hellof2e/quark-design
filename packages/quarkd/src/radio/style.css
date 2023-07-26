@@ -64,6 +64,11 @@
   transition-property: visibility, opacity;
 }
 
+:host([size="normal"]) .quark-radio-container {
+  height: var(--radio-size, 16px);
+  width: var(--radio-size, 16px);
+}
+
 :host([size="big"]) .quark-radio-container {
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
