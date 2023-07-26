@@ -32,9 +32,7 @@
         @change="onChange2"
         class="radio-group-2"
       >
-        <quark-radio name="apple" shape="square">{{
-          translate("type.round")
-        }}</quark-radio>
+        <quark-radio name="apple">{{ translate("type.round") }}</quark-radio>
         <quark-radio name="banana" shape="square">{{
           translate("type.square")
         }}</quark-radio>
