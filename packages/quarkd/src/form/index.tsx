@@ -49,7 +49,7 @@ class QuarkForm extends QuarkElement {
   onSlotChange = () => {
     if (this.slotRef.current) {
       const allFormItes = slotAssignedElements(
-        this.slotRef.current.assignedNodes()
+        this.slotRef.current?.assignedNodes()
       ).filter((item) => item.tagName === "QUARK-FORM-ITEM");
 
       this.formItems = allFormItes.filter((item) => item.prop);
