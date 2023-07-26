@@ -99,14 +99,6 @@ class QuarkImagePreview extends QuarkElement {
     if (this.slide) this.slide.destroy();
     this.slide = null;
   }
-  // componentDidUpdate(propName: string, oldValue: string, newValue: string): void {
-  //   if (propName === 'open') {
-  //     if (!newValue) {
-  //         // if (this.slide) this.slide.destroy();
-  //         // this.slide = null;
-  //     }
-  //   }
-  // }
   setData = ({
     images,
     startPosition,

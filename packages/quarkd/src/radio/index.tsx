@@ -57,7 +57,9 @@ class QuarkRadio extends QuarkElement {
     oldValue: string,
     newValue: string
   ): void {
-    this.dealClass();
+    if (oldValue !== newValue) {
+      this.dealClass();
+    }
   }
 
   dealClass = () => {
@@ -129,6 +131,9 @@ export default QuarkRadio;
 class QuarkRadioGroup extends QuarkElement {
   @property()
   value = "";
+
+  @property()
+  direction: "vertical" | "horizontal" = "vertical";
 
   slotRef: any = createRef();
 
