@@ -74,8 +74,6 @@ class QuarkRadio extends QuarkElement {
   };
 
   handleCheck = () => {
-    console.log(22);
-
     if (this.disabled || this.checked) {
       return;
     }
@@ -139,9 +137,6 @@ class QuarkRadioGroup extends QuarkElement {
 
   @property()
   value = "";
-
-  // @property()
-  // direction: "vertical" | "horizontal" = "vertical";
 
   slotRef: any = createRef();
 
