@@ -346,6 +346,7 @@ export default () => {
 | showtoolbar       | Whether to show toolbar                                                                                                          | `boolean`                                       | `false`    |
 | confirmbuttontext | Text of confirm button                                                                                                           | `string`                                        | `Confirm`  |
 | cancelbuttontext  | Text of cancel button                                                                                                            | `string`                                        | `Cancel`   |
+| forbidmaskclick   | Whether forbid mask click                                                                                                        | `boolean`                                       | `false`    |
 | onClose           | Emitted when click mask or cancel button.                                                                                        | `() => void `                                   |
 | onConfirm         | Emitted when click confirm button.                                                                                               | `e: {detail:{value: Date \| string }}）=> void` |
 | onChange          | Emitted when current option changed.                                                                                             | `e: {detail:{value: Date \| string }}）=> void` |

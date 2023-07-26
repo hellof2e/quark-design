@@ -10,13 +10,13 @@
       ></quark-cell>
     </quark-cell-group>
     <quark-picker
+      ref="pickerRef"
       :open="open"
-      @close="close(0)"
       :title="translate('selectedTime')"
       :confirmtext="translate('confirmText')"
-      @confirm="confirm"
-      ref="pickerRef"
       @change="change"
+      @close="close(0)"
+      @confirm="confirm"
     />
     <h2>{{ translate("head") }}</h2>
     <quark-cell-group>
@@ -34,13 +34,13 @@
       bottomhidden
     >
       <div slot="header" class="head-container">
-        <span class="cancel" @click="close(1)">{{
-          translate("custom.cancel")
-        }}</span>
+        <span class="cancel" @click="close(1)">
+          {{ translate("custom.cancel") }}
+        </span>
         <span class="picker-title">{{ translate("custom.title") }}</span>
-        <span class="ensure" @click="customConfirm">{{
-          translate("custom.confirm")
-        }}</span>
+        <span class="ensure" @click="customConfirm">
+          {{ translate("custom.confirm") }}
+        </span>
       </div>
     </quark-picker>
   </div>

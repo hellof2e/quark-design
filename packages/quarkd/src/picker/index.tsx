@@ -25,6 +25,7 @@ export interface Props {
   title?: string;
   confirmtext?: string;
   bottomhidden?: boolean;
+  forbidmaskclick?: boolean;
 }
 export interface CustomEvent {
   close: () => void;
@@ -44,6 +45,9 @@ BScroll.use(Wheel);
 class QuarkPicker extends QuarkElement {
   @property({ type: Boolean })
   open = false;
+
+  @property({ type: Boolean })
+  forbidmaskclick = false;
 
   @property()
   name = "";
@@ -103,12 +107,8 @@ class QuarkPicker extends QuarkElement {
     });
   }
 
-  popupClose = () => {
-    this.restorePosition();
-    this.$emit("close");
-  };
-
   confirm = () => {
+    console.log("confirm");
     const selectValues = this.getValues();
     this.values = selectValues;
     this.$emit("confirm", { detail: { value: selectValues } });
@@ -168,6 +168,15 @@ class QuarkPicker extends QuarkElement {
     });
     return wheels;
   };
+  popupClose = () => {
+    this.restorePosition();
+    this.$emit("close");
+  };
+
+  // popupClosed = () => {
+  //   this.restorePosition();
+  //   this.$emit("closed");
+  // };
 
   render() {
     return (
@@ -176,7 +185,9 @@ class QuarkPicker extends QuarkElement {
         position="bottom"
         safearea
         round
-        onclosed={this.popupClose}
+        forbidmaskclick={this.forbidmaskclick}
+        onclose={this.popupClose}
+        // onclosed={this.popupClosed}
       >
         <div class="quark-picker-container">
           <div class="quark-picker-header">
