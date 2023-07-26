@@ -10,6 +10,7 @@ import { Touch } from "../../utils/touch";
 import { clamp } from "../../utils";
 import { getRect, isPromise } from "../../utils/util";
 import { BeforeCloseFunc, SwipeCellPosition, SwipeCellSide } from "./type";
+import { slotAssignedElements } from "../../utils/public";
 
 const touch = new Touch();
 
@@ -177,21 +178,34 @@ class QuarkSwipeCell extends QuarkElement {
   }
 
   componentDidMount(): void {
-    this.root.current.addEventListener("touchstart", this.onTouchStart);
-    this.root.current.addEventListener("touchend", this.onTouchEnd);
-    this.root.current.addEventListener("touchmove", this.onTouchMove);
+    this.root.current?.addEventListener("touchstart", this.onTouchStart);
+    this.root.current?.addEventListener("touchend", this.onTouchEnd);
+    this.root.current?.addEventListener("touchmove", this.onTouchMove);
 
-    const targets = [
-      ...this.defaultSlotRef.current.assignedNodes(),
-      ...this.leftSlotRef.current.assignedNodes(),
-      ...this.rightSlotRef.current.assignedNodes(),
+    const defaultSlotNodes = slotAssignedElements(
+      this.defaultSlotRef.current?.assignedNodes()
+    );
+
+    const leftSlotNodes = slotAssignedElements(
+      this.leftSlotRef.current?.assignedNodes()
+    );
+
+    const rightSlotNodes = slotAssignedElements(
+      this.rightSlotRef.current?.assignedNodes()
+    );
+
+    // 获取swipe-cell 内部dom 用于判断点击位置
+    const targetNodes = [
+      ...defaultSlotNodes,
+      ...leftSlotNodes,
+      ...rightSlotNodes,
       this.root.current,
     ];
     if (!this.attached) {
       document.addEventListener(
         "touchstart",
         (e) => {
-          const isClickAway = targets.every((item) => {
+          const isClickAway = targetNodes.every((item) => {
             return item && !item.contains(e.target);
           });
 
@@ -209,9 +223,9 @@ class QuarkSwipeCell extends QuarkElement {
   }
 
   componentWillUnmount(): void {
-    this.root.current.removeEventListener("touchstart", this.onTouchStart);
-    this.root.current.removeEventListener("touchend", this.onTouchEnd);
-    this.root.current.removeEventListener("touchmove", this.onTouchMove);
+    this.root.current?.removeEventListener("touchstart", this.onTouchStart);
+    this.root.current?.removeEventListener("touchend", this.onTouchEnd);
+    this.root.current?.removeEventListener("touchmove", this.onTouchMove);
     document.removeEventListener(
       "touchstart",
       () => {
