@@ -164,6 +164,7 @@ class QuarkCascadePicker extends QuarkElement {
   }
 
   popupClose = () => {
+    debugger;
     this.restorePosition();
     this.$emit("close");
   };

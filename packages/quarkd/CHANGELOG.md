@@ -1,5 +1,16 @@
 # 更新日志
 
+### [1.1.2](https://github.com/hellof2e/quark-design/compare/v1.1.1...v1.1.2) (2023-07-26)
+
+### 🎉 Features
+
+- form demo 文档修改 ([93b703a](https://github.com/hellof2e/quark-design/commit/93b703a37324a04b8510a902846249d38e23f657))
+- normal size 样式补充 ([e97512d](https://github.com/hellof2e/quark-design/commit/e97512df9265aa6e513ee07dd3cbcda2b78aa1ba))
+- radio demo css 修改 ([21568af](https://github.com/hellof2e/quark-design/commit/21568af1f74e0235d36a057f2f8783bcb80e9914))
+- update quarkc ([47543c2](https://github.com/hellof2e/quark-design/commit/47543c2139a88b0a4ac9c41a0f76ab618c673291))
+- update quarkd ([3916171](https://github.com/hellof2e/quark-design/commit/39161711b552c1dc47c252af3718ba216470b137))
+- 重构 radio ([91585b3](https://github.com/hellof2e/quark-design/commit/91585b391dca4769cb172400e888b13399dc499c))
+
 ### [1.1.1](https://github.com/hellof2e/quark-design/compare/v1.1.0...v1.1.1) (2023-07-24)
 
 ### 🐞 Bug Fixes
