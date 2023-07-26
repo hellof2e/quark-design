@@ -70,7 +70,11 @@
         </quark-checkbox-group>
       </quark-form-item>
       <quark-form-item prop="radio" :label="translate('label.radio')">
-        <quark-radio-group :value="formData.radio" @change="onRadioChange">
+        <quark-radio-group
+          :value="formData.radio"
+          direction="horizontal"
+          @change="onRadioChange"
+        >
           <quark-radio name="square">
             {{ translate("enum.square") }}
           </quark-radio>

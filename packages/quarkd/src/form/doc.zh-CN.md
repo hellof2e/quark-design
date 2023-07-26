@@ -151,7 +151,11 @@ export default {
     </quark-checkbox-group>
   </quark-form-item>
   <quark-form-item label="单选框" prop="radio">
-    <quark-radio-group :value="form.radio" @change="onRadioChange">
+    <quark-radio-group
+      :value="form.radio"
+      direction="horizontal"
+      @change="onRadioChange"
+    >
       <quark-radio name="square">方形</quark-radio>
       <quark-radio name="circle">圆形</quark-radio>
     </quark-radio-group>

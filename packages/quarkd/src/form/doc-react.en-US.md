@@ -225,7 +225,11 @@ export default () => {
           </CheckboxGroup>
         </FormItem>
         <FormItem prop="radio" label="Radio">
-          <RadioGroup value={form.radio} onChange="onRadioChange">
+          <RadioGroup
+            value={form.radio}
+            direction="horizontal"
+            onChange="onRadioChange"
+          >
             <Radio name="square">square</Radio>
             <Radio name="circle">circle</Radio>
           </RadioGroup>
