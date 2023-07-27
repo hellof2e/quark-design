@@ -14,10 +14,6 @@ export interface Props {
   style,
 })
 class QuarkEmpty extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   title = "";
 

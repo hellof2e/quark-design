@@ -27,10 +27,6 @@ export interface Props {
   style,
 })
 class QuarkShareSheet extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })
