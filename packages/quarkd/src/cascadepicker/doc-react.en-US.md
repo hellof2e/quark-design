@@ -179,14 +179,15 @@ export default () => {
 
 ### Props
 
-| Attribute    | Description                                             | Type                                                | Default   |
-| ------------ | ------------------------------------------------------- | --------------------------------------------------- | --------- |
-| open         | Whether to show Picker                                  | `boolean `                                          | `require` |
-| title        | Title                                                   | `string `                                           |
-| bottomhidden | Whether to show bottom button (use with custom header） | `boolean`                                           | `false`   |
-| onClose      | Emitted when click mask or cancel button.               | `() => void`                                        |
-| onConfirm    | Emitted when click confirm button.                      | `（e: {detail:{value: SelectedColumn[]}}）=> void`  |
-| onChange     | Emitted when current option changed.                    | `（e: {detail:{value: SelectedColumn[]}}）=> void ` |
+| Attribute       | Description                                             | Type                                                | Default   |
+| --------------- | ------------------------------------------------------- | --------------------------------------------------- | --------- |
+| open            | Whether to show Picker                                  | `boolean `                                          | `require` |
+| title           | Title                                                   | `string `                                           |
+| bottomhidden    | Whether to show bottom button (use with custom header） | `boolean`                                           | `false`   |
+| forbidmaskclick | Whether forbid mask click                               | `boolean`                                           | `false`   |
+| onClose         | Emitted when click mask or cancel button.               | `() => void`                                        |
+| onConfirm       | Emitted when click confirm button.                      | `（e: {detail:{value: SelectedColumn[]}}）=> void`  |
+| onChange        | Emitted when current option changed.                    | `（e: {detail:{value: SelectedColumn[]}}）=> void ` |
 
 ### Slot
 

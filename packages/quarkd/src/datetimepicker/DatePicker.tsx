@@ -50,6 +50,9 @@ class QuarkDatePicker extends QuarkElement {
   @property({ type: String })
   cancelbuttontext = "";
 
+  @property({ type: Boolean })
+  forbidmaskclick = false;
+
   pickerRef: any = createRef();
 
   originColumns: { defaultIndex: number; type: string; values: string[] }[] =
@@ -280,6 +283,7 @@ class QuarkDatePicker extends QuarkElement {
         title={this.title}
         bottomhidden={this.showtoolbar}
         open={this.open}
+        forbidmaskclick={this.forbidmaskclick}
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}

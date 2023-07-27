@@ -141,12 +141,13 @@ export default {
 
 ### Props
 
-| Attribute    | Description                                            | Type      | Default   |
-| ------------ | ------------------------------------------------------ | --------- | --------- |
-| open         | Whether to show picker                                 | `boolean` | `require` |
-| title        | Title                                                  | `string`  | -         |
-| confirmtext  | Text of the ok button                                  | `string`  | `Confirm` |
-| bottomhidden | Whether to show bottom button (use with custom header) | `boolean` | `false`   |
+| Attribute       | Description                                            | Type      | Default   |
+| --------------- | ------------------------------------------------------ | --------- | --------- |
+| open            | Whether to show picker                                 | `boolean` | `require` |
+| title           | Title                                                  | `string`  | -         |
+| confirmtext     | Text of the ok button                                  | `string`  | `Confirm` |
+| bottomhidden    | Whether to show bottom button (use with custom header) | `boolean` | `false`   |
+| forbidmaskclick | Whether forbid mask click                              | `boolean` | `false`   |
 
 ### Events
 

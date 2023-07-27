@@ -27,6 +27,7 @@ export interface Props {
   name?: string;
   title?: string;
   bottomhidden?: boolean;
+  forbidmaskclick?: boolean;
 }
 
 export interface CustomEvent {
@@ -50,6 +51,9 @@ class QuarkCascadePicker extends QuarkElement {
 
   @property({ type: Boolean })
   bottomhidden = false;
+
+  @property({ type: Boolean })
+  forbidmaskclick = false;
 
   @state()
   pickerData: string[][] = [];
@@ -164,7 +168,6 @@ class QuarkCascadePicker extends QuarkElement {
   }
 
   popupClose = () => {
-    debugger;
     this.restorePosition();
     this.$emit("close");
   };
@@ -222,7 +225,8 @@ class QuarkCascadePicker extends QuarkElement {
         position="bottom"
         safearea
         round
-        onclosed={this.popupClose}
+        forbidmaskclick={this.forbidmaskclick}
+        onclose={this.popupClose}
       >
         <div class="quark-cascade-picker">
           <div class="quark-cascade-picker-header">
