@@ -1,6 +1,6 @@
 :host([radiogrouphost]) {
   font-size: var(--radio-font-size, 16px);
-  color: var(--radio-color, #333);
+  color: var(--radio-color, #242729);
   display: block;
 }
 

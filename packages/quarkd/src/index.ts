@@ -47,6 +47,7 @@ import Grid from "./grid";
 import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
 import Collapse from "./collapse";
+import Swipecell from "./swipecell";
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -109,4 +110,5 @@ export default {
   Countdown,
   NativeUploader,
   Collapse,
+  Swipecell,
 };

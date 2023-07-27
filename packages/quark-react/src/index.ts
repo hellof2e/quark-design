@@ -11,7 +11,7 @@ import CountDown from "./count-down";
 import Dialog from "./dialog";
 import Empty from "./empty";
 import Field, { FieldRef } from "./field";
-import Form, { FormRef } from "./form";
+import Form, { FormRef, FormProps, FormType, Rules } from "./form";
 import FormItem from "./form-item";
 import Grid from "./grid";
 import GridItem from "./grid-item";
@@ -45,6 +45,14 @@ import StepItem from "./step-item";
 import Sticky from "./sticky";
 import Swipe from "./swipe";
 import SwipeItem from "./swipe-item";
+import SwipeCell, {
+  SwipeCellRef,
+  SwipeCellSide,
+  SwipeCellPosition,
+  SwipeCellProps,
+  SwipeCellType,
+  SwipeCellBeforeClose,
+} from "./swipe-cell";
 import Switch from "./switch";
 import Tabs from "./tabs";
 import TabContent from "./tab-content";
@@ -75,6 +83,9 @@ export {
   FieldRef,
   Form,
   FormRef,
+  FormProps,
+  FormType,
+  Rules,
   FormItem,
   Grid,
   GridItem,
@@ -112,6 +123,13 @@ export {
   Sticky,
   Swipe,
   SwipeItem,
+  SwipeCell,
+  SwipeCellRef,
+  SwipeCellSide,
+  SwipeCellPosition,
+  SwipeCellProps,
+  SwipeCellType,
+  SwipeCellBeforeClose,
   Switch,
   Tabs,
   TabContent,

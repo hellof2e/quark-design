@@ -13,6 +13,7 @@ export const isSet = (val: unknown): val is Set<any> =>
   toTypeString(val) === "[object Set]";
 
 export const isDate = (val: unknown): val is Date => val instanceof Date;
+
 export const isFunction = (val: unknown): val is Function =>
   typeof val === "function";
 export const isString = (val: unknown): val is string =>
@@ -75,4 +76,15 @@ export const pxToVw = (
     return result;
   }
   return value;
+};
+
+export const getRect = (el: HTMLElement) => {
+  if (el?.getBoundingClientRect) {
+    return el.getBoundingClientRect();
+  }
+
+  return {
+    width: 0,
+    height: 0,
+  };
 };

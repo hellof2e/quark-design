@@ -9,7 +9,8 @@ import {
 import style from "./style.css";
 import QuarkFormItem from "./form-item";
 import { Rules, labelPosition } from "./type";
-import { convertToNestedObject, getPropByPath } from "./utils";
+import { getPropByPath } from "./utils";
+import { slotAssignedElements } from "../../utils/public";
 
 @customElement({
   tag: "quark-form",
@@ -47,9 +48,9 @@ class QuarkForm extends QuarkElement {
 
   onSlotChange = () => {
     if (this.slotRef.current) {
-      const allFormItes = this.slotRef.current
-        .assignedNodes()
-        .filter((item) => item.tagName === "QUARK-FORM-ITEM");
+      const allFormItes = slotAssignedElements(
+        this.slotRef.current?.assignedNodes()
+      ).filter((item) => item.tagName === "QUARK-FORM-ITEM");
 
       this.formItems = allFormItes.filter((item) => item.prop);
 
