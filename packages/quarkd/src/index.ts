@@ -8,6 +8,7 @@ import Tag from "./tag";
 import Badge from "./badge";
 import CheckBox from "./checkbox";
 import Cell from "./cell";
+import Circle from "./circle";
 import Tab from "./tab";
 import Steps from "./steps";
 import Rate from "./rate";
@@ -57,6 +58,7 @@ export default {
   TextArea,
   Button,
   Cell,
+  Circle,
   Loading,
   Icon,
   Tab,

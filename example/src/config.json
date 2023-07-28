@@ -132,6 +132,16 @@
 				},
 				{
 					"version": "0.0.1",
+					"name": "Circle",
+					"sort": 1,
+					"cName": "环形进度条",
+					"type": "component",
+					"show": true,
+					"desc": "环形进度条",
+					"author": "yunxia"
+				},
+				{
+					"version": "0.0.1",
 					"name": "Skeleton",
 					"sort": 1,
 					"cName": "骨架屏",
