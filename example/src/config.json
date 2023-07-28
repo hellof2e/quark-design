@@ -389,6 +389,16 @@
 				},
 				{
 					"version": "0.0.1",
+					"name": "Calendar",
+					"sort": 1,
+					"cName": "日历",
+					"type": "component",
+					"show": true,
+					"desc": "日历",
+					"author": "nieyt"
+				},
+				{
+					"version": "0.0.1",
 					"name": "Picker",
 					"sort": 1,
 					"cName": "选择器",
