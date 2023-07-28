@@ -22,7 +22,7 @@ class QuarkButton extends QuarkElement {
   @state()
   totalTime = 0;
 
-  timeCounter: any = null;
+  timeCounter: ReturnType<typeof setTimeout> | null = null;
 
   setUnit = (val) => {
     return val < 10 ? `0${val}` : val;

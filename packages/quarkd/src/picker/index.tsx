@@ -115,7 +115,7 @@ class QuarkPicker extends QuarkElement {
   };
 
   debounce(fn, wait) {
-    let timer = null;
+    let timer: ReturnType<typeof setTimeout> | null = null;
     return function () {
       if (timer !== null) {
         clearTimeout(timer);
