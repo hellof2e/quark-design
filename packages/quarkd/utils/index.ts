@@ -89,7 +89,7 @@ export function classNames(...rest: any): string {
 }
 
 export function debounce(func, delay) {
-  let timerId;
+  let timerId: ReturnType<typeof setTimeout> | null;
   return (...args) => {
     clearTimeout(timerId);
     timerId = setTimeout(() => func(...args), delay);
