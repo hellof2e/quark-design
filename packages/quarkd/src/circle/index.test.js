@@ -1,41 +1,28 @@
 import { expect, fixture } from "@open-wc/testing";
-import "quarkd/lib/cell";
+import "quarkd/lib/circle";
 
 const data = {
-  title: "标题",
-  desc: "描述",
-  to: "#/button",
+  size: 80,
+  color: "#02b357",
+  strokewidth: 5,
 };
 let el;
 
-describe("<quark-cell>", async () => {
+describe("<quark-circle>", async () => {
   it("to attribute", async () => {
-    el = await fixture(
-      `<quark-cell 
-        to=${data.to}
-        >
-        </quark-cell>`
-    );
-    expect(el.to).to.be.equal(data.to);
+    el = await fixture(`<quark-circle size=${data.size}></quark-circle>`);
+    expect(el.size).to.be.equal(data.size);
   });
 
   it("title attribute", async () => {
-    el = await fixture(
-      `<quark-cell title=${data.title}>
-        </quark-cell>`
-    );
-    const titleE = el.shadowRoot.querySelector("#title");
-    expect(titleE.innerHTML).to.equal(data.title);
-    expect(el.title).to.equal(data.title);
+    el = await fixture(`<quark-circle color=${data.color}></quark-circle>`);
+    expect(el.color).to.equal(data.color);
   });
 
   it("desc attribute", async () => {
     el = await fixture(
-      `<quark-cell desc=${data.desc}>
-        </quark-cell>`
+      `<quark-circle strokewidth=${data.strokewidth}></quark-circle>`
     );
-    const descE = el.shadowRoot.querySelector("#desc");
-    expect(descE.innerHTML).to.equal(data.desc);
-    expect(el.desc).to.equal(data.desc);
+    expect(el.strokewidth).to.equal(data.strokewidth);
   });
 });
