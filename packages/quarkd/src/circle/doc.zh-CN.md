@@ -85,7 +85,6 @@ export default {
 ```
 
 ```css
-/* CSS 省略号展示 */
 .custom {
   --quark-circle-transition: all linear 0.3s;
 }

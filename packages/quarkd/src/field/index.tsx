@@ -98,7 +98,7 @@ class QuarkField extends QuarkElement {
       return;
     e.stopPropagation();
     const { value } = this.inputRef.current;
-    // this.value = value;
+    this.value = value;
     this.$emit(type, { detail: { value } });
     if (type === "blur" || type === "change") {
       this.validRules();

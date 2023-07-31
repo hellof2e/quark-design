@@ -13,14 +13,14 @@ const ROTATE_ANGLE_MAP: Record<CircleStartPosition, number> = {
 };
 
 export interface Props {
-  rate: number;
-  strokewidth: number;
-  size: number;
-  color: string;
-  layercolor: string;
-  fill: string;
-  strokelinecap: StrokeLinecap;
-  anticlockwise: boolean;
+  rate?: number;
+  strokewidth?: number;
+  size?: number;
+  color?: string;
+  layercolor?: string;
+  fill?: string;
+  strokelinecap?: StrokeLinecap;
+  anticlockwise?: boolean;
 }
 let uid = 0;
 

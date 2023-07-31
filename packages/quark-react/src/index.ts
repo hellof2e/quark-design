@@ -64,6 +64,12 @@ import Toast from "./toast";
 import Tooltip from "./tooltip";
 import Collapse from "./collapse";
 import Uploader, { UploaderRef } from "./uploader";
+import Circle, {
+  CircleRef,
+  CircleStartPosition,
+  CircleType,
+  StrokeLinecap,
+} from "./circle";
 
 export {
   ActionSheet,
@@ -142,4 +148,8 @@ export {
   Uploader,
   UploaderRef,
   Collapse,
+  Circle,
+  CircleRef,
+  CircleStartPosition,
+  StrokeLinecap,
 };
