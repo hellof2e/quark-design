@@ -35,7 +35,7 @@
       :rate="rate"
       size="100"
     >
-      {{ translate("size") }}
+      {{ translate("gradient") }}
     </quark-circle>
     <h2>{{ translate("CellTitle.position") }}</h2>
     <quark-circle :rate="rate" startposition="right">
