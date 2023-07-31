@@ -66,7 +66,8 @@ class QuarkCircle extends QuarkElement {
   }
 
   renderLayer() {
-    const PERIMETER = (314 * this.size) / 100;
+    // 计算周长
+    const PERIMETER = Math.PI * (+this.size - +this.strokewidth);
     const layerStyle = {
       fill: "none",
       stroke: this.layercolor,
@@ -89,7 +90,7 @@ class QuarkCircle extends QuarkElement {
   }
 
   renderHover() {
-    const PERIMETER = (314 * this.size) / 100;
+    const PERIMETER = Math.PI * (+this.size - +this.strokewidth);
     const rate = Math.min(100, Math.max(0, +this.rate));
     const color = isObject(this.gradientColor)
       ? `url(#${this.stokeId})`
