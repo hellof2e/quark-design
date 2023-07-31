@@ -80,9 +80,9 @@ export default {
 ### Start Position
 
 ```html
-<quark-circle :rate="rate" startposition="right"> Right </quark-circle>
-<quark-circle :rate="rate" startposition="bottom"> Bottom </quark-circle>
-<quark-circle :rate="rate" startposition="left"> Left </quark-circle>
+<quark-circle :rate="rate" startposition="right">Right</quark-circle>
+<quark-circle :rate="rate" startposition="bottom">Bottom</quark-circle>
+<quark-circle :rate="rate" startposition="left"> Left</quark-circle>
 ```
 
 ## API
@@ -124,6 +124,7 @@ type CircleStartPosition = "left" | "right" | "top" | "bottom";
 
 The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties), which can be used to customize styles. Please refer to [ConfigProvider component](#/zh-CN/guide/theme).
 
-| Name                        | Description | Default                      |
-| --------------------------- | ----------- | ---------------------------- |
-| `--quark-circle-transition` | -           | `transition: all linear 1s;` |
+| Name                             | Description         | Default                      |
+| -------------------------------- | ------------------- | ---------------------------- |
+| `--quark-circle-transition`      | progress transition | `transition: all linear 1s;` |
+| `--quark--circle-text-font-size` | text font size      | `14px`                       |

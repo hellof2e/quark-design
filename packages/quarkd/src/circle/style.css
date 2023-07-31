@@ -2,6 +2,7 @@
   display: inline-block;
 
   --quark-circle-transition: all linear 1s;
+  --quark-circle-text-font-size: 14px;
 }
 
 .circle-wrapper {
@@ -25,5 +26,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: var(--quark-circle-text-font-size);
 }

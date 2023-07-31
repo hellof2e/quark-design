@@ -96,9 +96,9 @@ export default {
 进度条默认从顶部开始，可以通过 `startposition` 属性设置起始位置。
 
 ```html
-<quark-circle :rate="rate" startposition="right"> 右侧 </quark-circle>
-<quark-circle :rate="rate" startposition="bottom"> 下侧 </quark-circle>
-<quark-circle :rate="rate" startposition="left"> 左侧 </quark-circle>
+<quark-circle :rate="rate" startposition="right">右侧</quark-circle>
+<quark-circle :rate="rate" startposition="bottom">下侧</quark-circle>
+<quark-circle :rate="rate" startposition="left">左侧</quark-circle>
 ```
 
 ## API
@@ -140,6 +140,7 @@ type CircleStartPosition = "left" | "right" | "top" | "bottom";
 
 组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-| 名称                        | 说明           | 默认值                       |
-| --------------------------- | -------------- | ---------------------------- |
-| `--quark-circle-transition` | 进度条运动动画 | `transition: all linear 1s;` |
+| 名称                             | 说明           | 默认值                       |
+| -------------------------------- | -------------- | ---------------------------- |
+| `--quark-circle-transition`      | 进度条运动动画 | `transition: all linear 1s;` |
+| `--quark--circle-text-font-size` | 内容文字大小   | `14px`                       |
