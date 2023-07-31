@@ -2,8 +2,8 @@ import { property, customElement, QuarkElement, state } from "quarkc";
 import style from "./style.css";
 import { isObject } from "../../utils/util";
 
-type StrokeLinecap = "round" | "square" | "butt";
-type CircleStartPosition = "left" | "right" | "top" | "bottom";
+export type StrokeLinecap = "round" | "square" | "butt";
+export type CircleStartPosition = "left" | "right" | "top" | "bottom";
 
 const ROTATE_ANGLE_MAP: Record<CircleStartPosition, number> = {
   right: 0,
