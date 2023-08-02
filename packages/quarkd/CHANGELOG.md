@@ -1,5 +1,11 @@
 # 更新日志
 
+### [1.2.3](https://github.com/hellof2e/quark-design/compare/v1.2.2...v1.2.3) (2023-08-02)
+
+### 🎉 Features
+
+- update quarkd ([05aea0a](https://github.com/hellof2e/quark-design/commit/05aea0a704ecb081acc4d968259ae86c198915cd))
+
 ### [1.2.2](https://github.com/hellof2e/quark-design/compare/v1.2.1...v1.2.2) (2023-08-02)
 
 ### 🐞 Bug Fixes
