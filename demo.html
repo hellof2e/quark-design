@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="telephone=no" name="format-detection" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1.0,user-scalable=0"
-    />
-    <title>Quark Design - 下一代前端组件库</title>
-    <style>
-      body::-webkit-scrollbar { display: none; }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./example/src/sites/mobile-vue/main.ts"></script>
-    <script type="module" src="./packages/quarkd/src/index.ts"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1.0,user-scalable=0" />
+  <title>Quark Design - 下一代前端组件库</title>
+  <style>
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Reset general styles */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    li,
+    pre,
+    code,
+    blockquote,
+    figure,
+    hr {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Reset font styles */
+    body,
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    /* Reset list styles */
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    /* Reset form styles */
+    button,
+    input,
+    select,
+    textarea {
+      appearance: none;
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    /* Reset link styles */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Additional resets for specific elements */
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* Add your own additional resets as needed */
+  </style>
+</head>
+
+<body>
+
+  <div id="app"></div>
+  <script type="module" src="./example/src/sites/mobile-vue/main.ts"></script>
+  <script type="module" src="./packages/quarkd/src/index.ts"></script>
+</body>
+
 </html>
