@@ -1,5 +1,16 @@
 # 更新日志
 
+### [1.2.2](https://github.com/hellof2e/quark-design/compare/v1.2.1...v1.2.2) (2023-08-02)
+
+### 🐞 Bug Fixes
+
+- use ReturnType<typeof setTimeout> replace any ([#292](https://github.com/hellof2e/quark-design/issues/292)) ([d254f73](https://github.com/hellof2e/quark-design/commit/d254f7384886b04940948b65bf1dc53e5481aafc))
+
+### 🎉 Features
+
+- **pullrefresh:** support background customization ([#294](https://github.com/hellof2e/quark-design/issues/294)) ([5e7af1e](https://github.com/hellof2e/quark-design/commit/5e7af1e4536ef0f49ab2465f91595bf8510e8bd7))
+- update quarkd ([4616e21](https://github.com/hellof2e/quark-design/commit/4616e21f4a3cb05c214c4a7a35f0cc18af700003))
+
 ### [1.2.1](https://github.com/hellof2e/quark-design/compare/v1.2.0...v1.2.1) (2023-07-27)
 
 ### 🎉 Features
