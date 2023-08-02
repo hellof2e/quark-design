@@ -3,7 +3,7 @@
   "displayName": "quarkd-vscode-extension",
   "description": "quark design extension for vscode",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
 	"icon": "src/quarkd.png",
   "engines": {
     "vscode": "^1.67.0"

@@ -45,8 +45,10 @@ class QuarkBadge extends QuarkElement {
     this.dealClass();
   }
 
-  componentDidUpdate(): void {
-    this.dealClass();
+  componentDidUpdate(propName: string, oldValue: string, newValue: string) {
+    if (oldValue !== newValue) {
+      this.dealClass();
+    }
   }
 
   dealClass = () => {

@@ -1,41 +1,101 @@
 # 更新日志
-## [1.1.0](https://github.com/hellof2e/quark-design/compare/v1.0.70...v1.1.0) (2023-07-17)
 
+### [1.2.2](https://github.com/hellof2e/quark-design/compare/v1.2.1...v1.2.2) (2023-08-02)
+
+### 🐞 Bug Fixes
+
+- use ReturnType<typeof setTimeout> replace any ([#292](https://github.com/hellof2e/quark-design/issues/292)) ([d254f73](https://github.com/hellof2e/quark-design/commit/d254f7384886b04940948b65bf1dc53e5481aafc))
 
 ### 🎉 Features
 
-* 采用setRules方法设置规则 ([3590338](https://github.com/hellof2e/quark-design/commit/3590338bfcd3c03d4d33d6918e2b657cfbf22b7b))
-* 动态表单开发 ([7d9d5cc](https://github.com/hellof2e/quark-design/commit/7d9d5cc030541b8aa6638f807c8d679aac3a42f3))
-* 删除form 备份 ([48fdab1](https://github.com/hellof2e/quark-design/commit/48fdab100725ca495dc3747c3cfde49c82514d4c))
-* 文档补充 ([979381b](https://github.com/hellof2e/quark-design/commit/979381b54c2812430cb182fcd3ec2b5dc03d32cb))
-* 文档校验修改 ([0c8042e](https://github.com/hellof2e/quark-design/commit/0c8042e9112f82e163f6ca8234ee47f60194aace))
-* 文档修改 ([ed55fd6](https://github.com/hellof2e/quark-design/commit/ed55fd6206775293e2fb8bfecb6f6862ce07a8ca))
-* 文档修改 ([c4deee8](https://github.com/hellof2e/quark-design/commit/c4deee89fdf82739e7cb2792e7e6205d4d3b426a))
-* 文档与demo 保持一致 ([5097512](https://github.com/hellof2e/quark-design/commit/5097512ce130c8894d3006e835b7d82cd8de6bbb))
-* 文档与demo一致性修改 ([5aa5101](https://github.com/hellof2e/quark-design/commit/5aa51017e0352219089fe63581fe7527cfd5a614))
-* 英文文档翻译 ([a8868ca](https://github.com/hellof2e/quark-design/commit/a8868ca3e5020f79e78fd6d90a61e13ddafd27d0))
-* 自定义规则补充说明 ([f726b8e](https://github.com/hellof2e/quark-design/commit/f726b8eab8b6647ecb47ba3c1df8716736fae419))
-* demo修改 ([86f09b8](https://github.com/hellof2e/quark-design/commit/86f09b8043dd8d2ebfc5e3f79c3fb18d6cf907cf))
-* form 开发 ([be379b2](https://github.com/hellof2e/quark-design/commit/be379b2016f6a97ee02043f9f93e627b9b80a730))
-* form 样式调整 ([25c3b04](https://github.com/hellof2e/quark-design/commit/25c3b044dedf8a6801a479082fd35ed881c480a5))
-* form表单补充完善 ([2c588ce](https://github.com/hellof2e/quark-design/commit/2c588ce54a5efb06b248201deaefa2f819a10efa))
-* form表单部分开发 ([5904ff3](https://github.com/hellof2e/quark-design/commit/5904ff3b5a44469e5fd819bd2de6b08e5d41e0b2))
-* form表单开发 ([a81838c](https://github.com/hellof2e/quark-design/commit/a81838c8a6ae06c46aad90e128585277d8325507))
-* form表单开发 ([a7c914c](https://github.com/hellof2e/quark-design/commit/a7c914c357811d5ceed557ffc064b0d496e7a1fd))
-* form开发 ([4b8fa3f](https://github.com/hellof2e/quark-design/commit/4b8fa3fcfc03d92169be7dbd38f51f5284ed1138))
-* form开发 ([062a08a](https://github.com/hellof2e/quark-design/commit/062a08a87e224016885cdd768904a0e45c40069e))
-* form开发 ([075c825](https://github.com/hellof2e/quark-design/commit/075c825272fe0ce7509b788940dd12c6be220918))
-* form开发修改 ([328ed68](https://github.com/hellof2e/quark-design/commit/328ed6841baf271caca8ab0a3f7e9ad271b6805c))
-* form类型定义 quark-react form 开发 ([f8a9a56](https://github.com/hellof2e/quark-design/commit/f8a9a56cdf16f155056ba95fb2ee1051e826dd50))
-* labelwidth 大小写修改 ([1b296ed](https://github.com/hellof2e/quark-design/commit/1b296ed780dd0dd4bb5bb70579d579cd0d82fcdc))
-* pooup 文档调整 ([00fa767](https://github.com/hellof2e/quark-design/commit/00fa767491eec8cdad6e4d0c9f75aface41094d5))
-* rule类型定义修改 ([7cbd909](https://github.com/hellof2e/quark-design/commit/7cbd909b281c3befe5f755ec04236bc5b7254d59))
-* update 域名 ([5183e44](https://github.com/hellof2e/quark-design/commit/5183e440908512167f146123fb41ab8b7db22bea))
-* update 域名 ([c51744a](https://github.com/hellof2e/quark-design/commit/c51744a65111ab64864f20efd70be1b0960899a9))
-* update 域名 ([49eef85](https://github.com/hellof2e/quark-design/commit/49eef853cbb39bb3d16894d10042fde4dacbd7a5))
-* update quarkd ([200b9e3](https://github.com/hellof2e/quark-design/commit/200b9e3a98ef2d0a00a693cb8472be17dc7650ab))
-* update website url ([eb37738](https://github.com/hellof2e/quark-design/commit/eb37738fa4f8b16d553bf3dfe35a5fcec6ba66ea))
-* website update ([84cd2e9](https://github.com/hellof2e/quark-design/commit/84cd2e983f4b46439a01538ad790dea2f39986f4))
+- **pullrefresh:** support background customization ([#294](https://github.com/hellof2e/quark-design/issues/294)) ([5e7af1e](https://github.com/hellof2e/quark-design/commit/5e7af1e4536ef0f49ab2465f91595bf8510e8bd7))
+- update quarkd ([4616e21](https://github.com/hellof2e/quark-design/commit/4616e21f4a3cb05c214c4a7a35f0cc18af700003))
+
+### [1.2.1](https://github.com/hellof2e/quark-design/compare/v1.2.0...v1.2.1) (2023-07-27)
+
+### 🎉 Features
+
+- update quarkd ([46ddb2c](https://github.com/hellof2e/quark-design/commit/46ddb2c49b9ef05e9c15f9a59d1ca2e4d1ecab27))
+
+### 🐞 Bug Fixes
+
+- switch ([4d3d651](https://github.com/hellof2e/quark-design/commit/4d3d651e419c80a0a85195cb121e4643a4b7bb44))
+
+## [1.2.0](https://github.com/hellof2e/quark-design/compare/v1.1.2...v1.2.0) (2023-07-27)
+
+### 🎉 Features
+
+- code review 问题修复 ([eabf8c6](https://github.com/hellof2e/quark-design/commit/eabf8c63802a0aa1a5116f11ffc24c59c916d7f8))
+- form slot crrent 判空 ([698a7d6](https://github.com/hellof2e/quark-design/commit/698a7d692e23ea2922da83acbe1076d5969763d5))
+- picker datetime-picker cascader-picker 支持点击遮罩关闭 ([69acd57](https://github.com/hellof2e/quark-design/commit/69acd57fac101963b53a34e13f2c276edd743bbc))
+- swipe-cell cr ([bbf441d](https://github.com/hellof2e/quark-design/commit/bbf441d69a5b9172b3729c2c87e728d87ed0c9ef))
+- swipe-cell 开发 ([69d7a10](https://github.com/hellof2e/quark-design/commit/69d7a10baef104299107899575777fca1d5a7a7d))
+- swipe-cell 开发 ([61fbbc2](https://github.com/hellof2e/quark-design/commit/61fbbc21b67b11e254fb980e6c4248454067baee))
+- swipe-cell 异步返回开发 ([5402848](https://github.com/hellof2e/quark-design/commit/54028482cd10bf67bad4129af816f3d1b4ce6304))
+- swipe-cell 开发 ([95b70d9](https://github.com/hellof2e/quark-design/commit/95b70d995cfe59da05a6c4b9e25398b342a4cd72))
+- swipe-cell 开发 ([2795032](https://github.com/hellof2e/quark-design/commit/279503267921378cdbd152420eb61a8d6f3da175))
+- update ([02fa178](https://github.com/hellof2e/quark-design/commit/02fa1785ccc72bfc138746871bc9a71ff60b7189))
+- update radio remove console ([344a493](https://github.com/hellof2e/quark-design/commit/344a4939cdb97e07e080d661f307d041d52570e2))
+- 单测删除 ([0c7fa93](https://github.com/hellof2e/quark-design/commit/0c7fa93f5f961d992c4091ea5368a9dac680842b))
+- 补充单测 ([54a94ec](https://github.com/hellof2e/quark-design/commit/54a94ec3548cf847272dd1446f1bbf38eeb07994))
+
+### 🐞 Bug Fixes
+
+- swpie indicator ([84e1cba](https://github.com/hellof2e/quark-design/commit/84e1cba7b95b68c9be9e79f8f1379f00c0f0903a))
+
+### [1.1.2](https://github.com/hellof2e/quark-design/compare/v1.1.1...v1.1.2) (2023-07-26)
+
+### 🎉 Features
+
+- form demo 文档修改 ([93b703a](https://github.com/hellof2e/quark-design/commit/93b703a37324a04b8510a902846249d38e23f657))
+- normal size 样式补充 ([e97512d](https://github.com/hellof2e/quark-design/commit/e97512df9265aa6e513ee07dd3cbcda2b78aa1ba))
+- radio demo css 修改 ([21568af](https://github.com/hellof2e/quark-design/commit/21568af1f74e0235d36a057f2f8783bcb80e9914))
+- update quarkc ([47543c2](https://github.com/hellof2e/quark-design/commit/47543c2139a88b0a4ac9c41a0f76ab618c673291))
+- update quarkd ([3916171](https://github.com/hellof2e/quark-design/commit/39161711b552c1dc47c252af3718ba216470b137))
+- 重构 radio ([91585b3](https://github.com/hellof2e/quark-design/commit/91585b391dca4769cb172400e888b13399dc499c))
+
+### [1.1.1](https://github.com/hellof2e/quark-design/compare/v1.1.0...v1.1.1) (2023-07-24)
+
+### 🐞 Bug Fixes
+
+- swipe ([d455a7c](https://github.com/hellof2e/quark-design/commit/d455a7cbf735fc4ded32a84ccb7c0b195af520b3))
+
+## [1.1.0](https://github.com/hellof2e/quark-design/compare/v1.0.70...v1.1.0) (2023-07-17)
+
+### 🎉 Features
+
+- 采用 setRules 方法设置规则 ([3590338](https://github.com/hellof2e/quark-design/commit/3590338bfcd3c03d4d33d6918e2b657cfbf22b7b))
+- 动态表单开发 ([7d9d5cc](https://github.com/hellof2e/quark-design/commit/7d9d5cc030541b8aa6638f807c8d679aac3a42f3))
+- 删除 form 备份 ([48fdab1](https://github.com/hellof2e/quark-design/commit/48fdab100725ca495dc3747c3cfde49c82514d4c))
+- 文档补充 ([979381b](https://github.com/hellof2e/quark-design/commit/979381b54c2812430cb182fcd3ec2b5dc03d32cb))
+- 文档校验修改 ([0c8042e](https://github.com/hellof2e/quark-design/commit/0c8042e9112f82e163f6ca8234ee47f60194aace))
+- 文档修改 ([ed55fd6](https://github.com/hellof2e/quark-design/commit/ed55fd6206775293e2fb8bfecb6f6862ce07a8ca))
+- 文档修改 ([c4deee8](https://github.com/hellof2e/quark-design/commit/c4deee89fdf82739e7cb2792e7e6205d4d3b426a))
+- 文档与 demo 保持一致 ([5097512](https://github.com/hellof2e/quark-design/commit/5097512ce130c8894d3006e835b7d82cd8de6bbb))
+- 文档与 demo 一致性修改 ([5aa5101](https://github.com/hellof2e/quark-design/commit/5aa51017e0352219089fe63581fe7527cfd5a614))
+- 英文文档翻译 ([a8868ca](https://github.com/hellof2e/quark-design/commit/a8868ca3e5020f79e78fd6d90a61e13ddafd27d0))
+- 自定义规则补充说明 ([f726b8e](https://github.com/hellof2e/quark-design/commit/f726b8eab8b6647ecb47ba3c1df8716736fae419))
+- demo 修改 ([86f09b8](https://github.com/hellof2e/quark-design/commit/86f09b8043dd8d2ebfc5e3f79c3fb18d6cf907cf))
+- form 开发 ([be379b2](https://github.com/hellof2e/quark-design/commit/be379b2016f6a97ee02043f9f93e627b9b80a730))
+- form 样式调整 ([25c3b04](https://github.com/hellof2e/quark-design/commit/25c3b044dedf8a6801a479082fd35ed881c480a5))
+- form 表单补充完善 ([2c588ce](https://github.com/hellof2e/quark-design/commit/2c588ce54a5efb06b248201deaefa2f819a10efa))
+- form 表单部分开发 ([5904ff3](https://github.com/hellof2e/quark-design/commit/5904ff3b5a44469e5fd819bd2de6b08e5d41e0b2))
+- form 表单开发 ([a81838c](https://github.com/hellof2e/quark-design/commit/a81838c8a6ae06c46aad90e128585277d8325507))
+- form 表单开发 ([a7c914c](https://github.com/hellof2e/quark-design/commit/a7c914c357811d5ceed557ffc064b0d496e7a1fd))
+- form 开发 ([4b8fa3f](https://github.com/hellof2e/quark-design/commit/4b8fa3fcfc03d92169be7dbd38f51f5284ed1138))
+- form 开发 ([062a08a](https://github.com/hellof2e/quark-design/commit/062a08a87e224016885cdd768904a0e45c40069e))
+- form 开发 ([075c825](https://github.com/hellof2e/quark-design/commit/075c825272fe0ce7509b788940dd12c6be220918))
+- form 开发修改 ([328ed68](https://github.com/hellof2e/quark-design/commit/328ed6841baf271caca8ab0a3f7e9ad271b6805c))
+- form 类型定义 quark-react form 开发 ([f8a9a56](https://github.com/hellof2e/quark-design/commit/f8a9a56cdf16f155056ba95fb2ee1051e826dd50))
+- labelwidth 大小写修改 ([1b296ed](https://github.com/hellof2e/quark-design/commit/1b296ed780dd0dd4bb5bb70579d579cd0d82fcdc))
+- pooup 文档调整 ([00fa767](https://github.com/hellof2e/quark-design/commit/00fa767491eec8cdad6e4d0c9f75aface41094d5))
+- rule 类型定义修改 ([7cbd909](https://github.com/hellof2e/quark-design/commit/7cbd909b281c3befe5f755ec04236bc5b7254d59))
+- update 域名 ([5183e44](https://github.com/hellof2e/quark-design/commit/5183e440908512167f146123fb41ab8b7db22bea))
+- update 域名 ([c51744a](https://github.com/hellof2e/quark-design/commit/c51744a65111ab64864f20efd70be1b0960899a9))
+- update 域名 ([49eef85](https://github.com/hellof2e/quark-design/commit/49eef853cbb39bb3d16894d10042fde4dacbd7a5))
+- update quarkd ([200b9e3](https://github.com/hellof2e/quark-design/commit/200b9e3a98ef2d0a00a693cb8472be17dc7650ab))
+- update website url ([eb37738](https://github.com/hellof2e/quark-design/commit/eb37738fa4f8b16d553bf3dfe35a5fcec6ba66ea))
+- website update ([84cd2e9](https://github.com/hellof2e/quark-design/commit/84cd2e983f4b46439a01538ad790dea2f39986f4))
 
 ### [1.0.70](https://github.com/hellof2e/quark-design/compare/v1.0.69...v1.0.70) (2023-07-07)
 

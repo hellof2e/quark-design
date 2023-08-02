@@ -46,12 +46,11 @@ class QuarkSwitch extends QuarkElement {
     if (this.disabled || this.loading) {
       return;
     }
-
-    this.checked = !this.checked;
-    // 注册 change 函数，供外部使用 <quark-switch @change={} />
+    // 完全受控组件，内部不需要更改this.check
+    const newValue = !this.checked;
     this.$emit("change", {
       detail: {
-        value: this.checked,
+        value: newValue,
       },
     });
   };

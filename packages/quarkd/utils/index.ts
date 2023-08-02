@@ -89,9 +89,12 @@ export function classNames(...rest: any): string {
 }
 
 export function debounce(func, delay) {
-  let timerId;
+  let timerId: ReturnType<typeof setTimeout> | null;
   return (...args) => {
     clearTimeout(timerId);
     timerId = setTimeout(() => func(...args), delay);
   };
 }
+
+export const clamp = (num: number, min: number, max: number): number =>
+  Math.min(Math.max(num, min), max);

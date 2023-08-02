@@ -25,6 +25,9 @@ export interface GroupCustomEvent {
 })
 class QuarkRadio extends QuarkElement {
   @property()
+  radiohost = true;
+
+  @property()
   shape = "round";
 
   @property()
@@ -57,7 +60,9 @@ class QuarkRadio extends QuarkElement {
     oldValue: string,
     newValue: string
   ): void {
-    this.dealClass();
+    if (oldValue !== newValue) {
+      this.dealClass();
+    }
   }
 
   dealClass = () => {
@@ -127,6 +132,9 @@ export default QuarkRadio;
   style,
 })
 class QuarkRadioGroup extends QuarkElement {
+  @property()
+  radiogrouphost = true;
+
   @property()
   value = "";
 

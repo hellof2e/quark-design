@@ -31,6 +31,7 @@ export interface Props {
   showtoolbar?: boolean;
   confirmbuttontext?: string;
   cancelbuttontext?: string;
+  forbidmaskclick?: boolean;
 }
 export interface CustomEvent {
   close: () => void;
@@ -84,6 +85,9 @@ class QuarkDatetimePicker extends QuarkElement {
 
   @property({ type: String })
   cancelbuttontext: string = Locale.current.cancel;
+
+  @property({ type: Boolean })
+  forbidmaskclick = false;
 
   datePickerRef: any = createRef();
   timePickerRef: any = createRef();
@@ -143,6 +147,7 @@ class QuarkDatetimePicker extends QuarkElement {
         showtoolbar={this.showtoolbar}
         confirmbuttontext={this.confirmbuttontext}
         cancelbuttontext={this.cancelbuttontext}
+        forbidmaskclick={this.forbidmaskclick}
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}
@@ -161,6 +166,7 @@ class QuarkDatetimePicker extends QuarkElement {
         showtoolbar={this.showtoolbar}
         confirmbuttontext={this.confirmbuttontext}
         cancelbuttontext={this.cancelbuttontext}
+        forbidmaskclick={this.forbidmaskclick}
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}

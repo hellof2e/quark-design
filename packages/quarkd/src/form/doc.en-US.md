@@ -159,7 +159,11 @@ export default {
     </quark-checkbox-group>
   </quark-form-item>
   <quark-form-item label="Radio" prop="radio">
-    <quark-radio-group :value="form.radio" @change="onRadioChange">
+    <quark-radio-group
+      :value="form.radio"
+      direction="horizontal"
+      @change="onRadioChange"
+    >
       <quark-radio name="square">square</quark-radio>
       <quark-radio name="circle">circle</quark-radio>
     </quark-radio-group>

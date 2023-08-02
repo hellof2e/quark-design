@@ -12,10 +12,6 @@ export interface Props {
 }
 @customElement({ tag: "quark-tag", style })
 class QuarkTag extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   type = "";
 
