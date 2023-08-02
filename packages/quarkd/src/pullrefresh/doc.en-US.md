@@ -91,3 +91,13 @@ Use slots to custom tips.
 | pulling | Content of head when at pulling |
 | loosing | Content of head when at loosing |
 | loading | Content of head when at loading |
+
+## CSS Variables
+
+The component provides the following[CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties),which can be used to customize styles. Please refer to[Theme customization](#/zh-CN/guide/theme)。
+
+| Name                      | Description                                                                                                               | Default Value |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `--pull-refresh-bg-light` | background under light mode                                                                                               | transparent   |
+| `--pull-refresh-bg-dark`  | background under dark mode                                                                                                | #0088ff       |
+| `--pull-refresh-bg`       | background，will be overridden by `--pull-refresh-bg-light` under light mode and `--pull-refresh-bg-dark` under dark mode | 无            |
