@@ -91,3 +91,13 @@ onFresh() {
 | pulling | 下拉过程中的顶部提示信息 |
 | loosing | 释放过程中的顶部提示信息 |
 | loading | 加载过程中的顶部提示信息 |
+
+## 样式变量
+
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+
+| 名称                      | 说明                                                                                             | 默认值      |
+| ------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| `--pull-refresh-bg-light` | light 模式下拉背景                                                                               | transparent |
+| `--pull-refresh-bg-dark`  | dark 模式下拉背景                                                                                | #0088ff     |
+| `--pull-refresh-bg`       | 下拉背景，在 light 和 dark 模式下会分别被`--pull-refresh-bg-light`和`--pull-refresh-bg-dark`覆盖 | 无          |

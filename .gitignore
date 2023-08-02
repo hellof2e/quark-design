@@ -19,3 +19,5 @@ tsc
 dist
 site_docs
 types
+
+*.tgz
