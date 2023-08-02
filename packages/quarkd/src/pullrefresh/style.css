@@ -14,7 +14,7 @@
 .quark-pull-refresh-container {
   position: relative;
   transition-property: transform;
-  background-color: #fff;
+  background: var(--pull-refresh-container-bg, #fff);
 }
 
 .quark-pull-refresh-head {
