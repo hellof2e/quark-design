@@ -41,7 +41,7 @@
   min-height: var(--popup-min-height);
   max-height: var(--popup-max-height);
   overflow-y: auto;
-  background: var(--quark-bg, quark-fillBaseColor);
+  background: var(--popup-bg, quark-fillBaseColor);
   opacity: 1;
   transition: transform quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
