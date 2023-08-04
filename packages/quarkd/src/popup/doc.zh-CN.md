@@ -104,6 +104,9 @@ export default {
 | ----------------------- | ------------------------------------------------------------------- | -------------------- |
 | `--popup-mask-color`    | 蒙层背景                                                            | `rgba(0, 0, 0, 0.7)` |
 | `--popup-z-index`       | 组件层级                                                            | `999`                |
+| `--popup-bg`            | popup 内容区域背景                                                  | `#fff`               |
+| `--popup-width`         | popup 内容区域宽度                                                  | `auto`               |
+| `--popup-height`        | popup 内容区域高度                                                  | `auto`               |
 | `--popup-max-width`     | popup 内容区域最大宽度                                              | `90%`                |
 | `--popup-min-width`     | popup 内容区域最小宽度                                              | -                    |
 | `--popup-max-height`    | popup 内容区域最大高度                                              | `90%`                |
