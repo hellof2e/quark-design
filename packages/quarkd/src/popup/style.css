@@ -39,7 +39,7 @@
   max-width: var(--popup-max-width);
   height: var(--popup-height);
   min-height: var(--popup-min-height);
-  max-width: var(--popup-max-height);
+  max-height: var(--popup-max-height);
   overflow-y: auto;
   background: var(--quark-bg, quark-fillBaseColor);
   opacity: 1;
