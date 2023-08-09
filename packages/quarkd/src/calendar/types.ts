@@ -20,3 +20,9 @@ export type CalendarDayItem = {
   className?: unknown;
   bottomInfo?: string;
 };
+
+export type EventType = {
+  detail: {
+    value: Date | Date[];
+  };
+};

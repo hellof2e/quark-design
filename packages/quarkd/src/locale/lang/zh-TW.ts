@@ -24,6 +24,6 @@ export default {
     title: "日期選擇",
     weekdays: ["日", "一", "二", "三", "四", "五", "六"],
     monthTitle: (year: number, month: number) => `${year}年${month}月`,
-    rangePrompt: (maxRange: number) => `最多選擇 ${maxRange} 天`,
+    rangePrompt: (maxRange: number | string) => `最多選擇 ${maxRange} 天`,
   },
 };

@@ -1,40 +1,51 @@
 :host {
   width: 100%;
   display: block;
+  background: var(--calendar-background-color, quark-fillBaseColor);
+  font-family: var(--calendar-font-family, quark-sFontFamily);
+  -webkit-tap-highlight-color: transparent;
 }
 
 :host .quark-calendar {
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  background: var(--calendar-background-color, quark-fillBaseColor);
+  height: 80vh;
+  height: var(--calendar-height, 80vh);
 }
 
 :host .quark-calendar-header {
   flex-shrink: 0;
-}
-
-:host .quark-calendar-month-title,
-:host .quark-calendar-header-title,
-:host .quark-calendar-header-subtitle {
-  color: var(--quark-calendar-text-color, quark-textBaseColor);
-  height: 44px;
-  font-weight: 500;
-  line-height: 44px;
-  text-align: center;
-}
-
-
-:host .quark-calendar-header-title {
-  font-size: 16px;
-}
-
-:host .quark-calendar-header-subtitle {
-  font-size: 16px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 10px 5px 5px red;
+  box-shadow: 0 2px 10px rgba(125, 126, 128, 0.16);
 }
 
 :host .quark-calendar-month-title {
-  font-size: 16px;
+  color: var(--calendar-month-title-color, quark-textBaseColor); 
+  height: var(--calendar-month-title-row-height, 44px);
+  line-height: var(--calendar-month-title-row-height, 44px);
+  font-weight: var(--calendar-month-title-font-weight, 500);
+  font-size: var(--calendar-month-title-font-size, 14px);
+  text-align: center;
+}
+
+:host .quark-calendar-header-title {
+  color: var(--calendar-title-color, quark-textBaseColor); 
+  height: var(--calendar-title-row-height, 44px);
+  line-height: var(--calendar-title-row-height, 44px);
+  font-weight: var(--calendar-title-font-weight, 500);
+  font-size:  var(--calendar-title-font-size, 16px);
+  text-align: center;
+}
+
+:host .quark-calendar-header-subtitle {
+  color: var(--calendar-subtitle-color, quark-textBaseColor); 
+  height: var(--calendar-subtitle-row-height, 44px);
+  line-height: var(--calendar-subtitle-row-height, 44px);
+  font-weight: var(--calendar-subtitle-font-weight, 500);
+  font-size: var(--calendar-subtitle-font-size, 14px);
+  text-align: center;
 }
 
 :host .quark-calendar-weekdays {
@@ -43,7 +54,7 @@
 
 :host .quark-calendar-weekday {
   flex: 1;
-  font-size: 12px;
+  font-size: var(--calendar-weekday-font-size, 12px);
   line-height: 30px;
   text-align: center;
 }
@@ -52,6 +63,10 @@
   flex: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+:host .quark-calendar-body::-webkit-scrollbar {
+  display: none;
 }
 
 :host .quark-calendar-days {
@@ -83,8 +98,8 @@
 :host .quark-calendar-day {
   position: relative;
   width: 14.285%;
-  height: 64px;
-  font-size: 16px;
+  height: var(--calendar-day-row-height, 64px);
+  font-size: var(--calendar-day-font-size, 16px);
   margin-bottom: 4px;
   cursor: pointer;
 }
@@ -94,21 +109,21 @@
 :host .quark-calendar-day-start-end,
 :host .quark-calendar-day-multiple-middle,
 :host .quark-calendar-day-multiple-selected {
-  color: quark-textWhiteColor;
+  color: var(--calendar-day-selected-color, quark-textWhiteColor);
   background: var(--calendar-theme-color, quark-primaryColor);
 }
 
 :host .quark-calendar-day-start {
-  border-radius: quark-radiusMd 0 0 quark-radiusMd;
+  border-radius: var(--calendar-day-border-radius, quark-radiusMd) 0 0 var(--calendar-day-border-radius, quark-radiusMd);
 }
 
 :host .quark-calendar-day-end {
-  border-radius: 0 quark-radiusMd quark-radiusMd 0;
+  border-radius: 0 var(--calendar-day-border-radius, quark-radiusMd) var(--calendar-day-border-radius, quark-radiusMd) 0;
 }
 
 :host .quark-calendar-day-start-end,
 :host .quark-calendar-day-multiple-selected {
-  border-radius: quark-radiusMd;
+  border-radius: var(--calendar-day-border-radius, quark-radiusMd);
 }
 
 :host .quark-calendar-day-middle {
@@ -127,7 +142,7 @@
 }
 
 :host .quark-calendar-day-disabled {
-  color: var(--var-qq, quark-textDisabledColor);
+  color: var(--calendar-day-disabled-color, quark-textDisabledColor);
   cursor: default;
 }
 
@@ -155,19 +170,14 @@
 :host .quark-calendar-selected-day {
   width: 54px;
   height: 54px;
-  color: var(quark-textWhiteColor);
-  background: var(quark-primaryColor);
-  border-radius: var(quark-radiusMd);
+  color: var(--calendar-day-selected-color, quark-textWhiteColor);
+  background: var(--calendar-theme-color, quark-primaryColor);
+  border-radius: var(--calendar-day-border-radius, quark-radiusMd);
 }
 
 :host .quark-calendar-footer {
   flex-shrink: 0;
-  padding-left: var(quark-vSpacingMd);
-  padding-right: var(quark-vSpacingMd);
-}
-
-:host .quark-calendar-confirm {
-  height: 36px;
-  margin: 7px 0;
-}
+  margin: 8px 0;
+  padding-left: var(--calendar-footer-padding, 16px);
+  padding-right: var(--calendar-footer-padding, 16px);
 }

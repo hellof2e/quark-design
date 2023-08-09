@@ -24,6 +24,7 @@ export default {
     title: "Calendar",
     weekdays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     monthTitle: (year: number, month: number) => `${year}/${month}`,
-    rangePrompt: (maxRange: number) => `Choose no more than ${maxRange} days`,
+    rangePrompt: (maxRange: number | string) =>
+      `Choose no more than ${maxRange} days`,
   },
 };

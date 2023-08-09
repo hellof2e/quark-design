@@ -24,7 +24,7 @@ export default {
     title: "Kalender",
     weekdays: ["minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
     monthTitle: (year: number, month: number) => `${year}/${month}`,
-    rangePrompt: (maxRange: number) =>
+    rangePrompt: (maxRange: number | string) =>
       `Pilih tidak lebih dari ${maxRange} hari`,
   },
 };
