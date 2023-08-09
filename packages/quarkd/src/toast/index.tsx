@@ -83,7 +83,10 @@ class QuarkToast extends QuarkElement {
   }
 
   hide = () => {
-    document.body.removeChild(this);
+    const el = document.querySelector("quark-toast");
+    if (el) {
+      document.body.removeChild(this);
+    }
     if (this.type === "loading") clearAllBodyScrollLocks();
   };
 
@@ -269,6 +272,7 @@ export default {
   },
 
   hide: function () {
+    console.log(toast, "toast");
     if (toast) toast.hide();
   },
 
