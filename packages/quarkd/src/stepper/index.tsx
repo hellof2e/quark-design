@@ -24,10 +24,6 @@ export interface CustomEvent {
 }
 @customElement({ tag: "quark-stepper", style })
 class QuarkStepper extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Number,
   })

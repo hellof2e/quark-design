@@ -1,0 +1,30 @@
+:host {
+  display: inline-block;
+
+  --quark-circle-transition: all linear 1s;
+  --quark-circle-text-font-size: 14px;
+}
+
+.circle-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.circle-wrapper-hover {
+  /* transform: rotate(270deg); */
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: var(--quark-circle-transition);
+}
+
+.circle-wrapper-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--quark-circle-text-font-size);
+}

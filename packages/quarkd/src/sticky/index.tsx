@@ -8,10 +8,6 @@ export interface Props {
 }
 @customElement({ tag: "quark-sticky", style })
 class QuarkSticky extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   offsettop = "0vw";
 

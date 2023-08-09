@@ -418,6 +418,7 @@ export default {
 | showtoolbar       | 是否显示顶部栏                                                                                        | `boolean` | `false`    |
 | confirmbuttontext | 顶部栏确认按钮文字                                                                                    | `string`  | `确认`     |
 | cancelbuttontext  | 顶部栏取消按钮文字                                                                                    | `string`  | `取消`     |
+| forbidmaskclick   | 是否禁止遮罩层点击                                                                                    | `boolean` | `false`    |
 
 ### DatePicker Props
 

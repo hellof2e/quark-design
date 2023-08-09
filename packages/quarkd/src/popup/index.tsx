@@ -32,10 +32,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkPopup extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })

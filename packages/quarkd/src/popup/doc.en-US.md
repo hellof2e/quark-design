@@ -107,6 +107,9 @@ The component provides the following[CSS variables](https://developer.mozilla.or
 | ----------------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
 | `--popup-mask-color`    | Mask background                                                                                     | `rgba(0, 0, 0, 0.7)` |
 | `--popup-z-index`       | z-index                                                                                             | `999`                |
+| `--popup-bg`            | popup content area background                                                                       | `#fff`               |
+| `--popup-width`         | popup content area width                                                                            | `auto`               |
+| `--popup-height`        | popup content area height                                                                           | `auto`               |
 | `--popup-max-width`     | Popup content area max width                                                                        | `90%`                |
 | `--popup-min-width`     | Popup content area min width                                                                        | -                    |
 | `--popup-max-height`    | Popup content area max height                                                                       | `90%`                |

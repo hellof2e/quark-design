@@ -404,6 +404,7 @@ export default {
 | showtoolbar       | Whether to show toolbar                                                                                                          | `boolean` | `false`    |
 | confirmbuttontext | Text of confirm button                                                                                                           | `string`  | `Confirm`  |
 | cancelbuttontext  | Text of cancel button                                                                                                            | `string`  | `Cancel`   |
+| forbidmaskclick   | Whether forbid mask click                                                                                                        | `boolean` | `false`    |
 
 ### DatePicker Props
 

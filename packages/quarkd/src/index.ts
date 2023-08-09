@@ -8,6 +8,7 @@ import Tag from "./tag";
 import Badge from "./badge";
 import CheckBox from "./checkbox";
 import Cell from "./cell";
+import Circle from "./circle";
 import Tab from "./tab";
 import Steps from "./steps";
 import Rate from "./rate";
@@ -48,6 +49,8 @@ import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
 import Collapse from "./collapse";
 import Calendar from "./calendar";
+import Swipecell from "./swipecell";
+
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -57,6 +60,7 @@ export default {
   TextArea,
   Button,
   Cell,
+  Circle,
   Loading,
   Icon,
   Tab,
@@ -111,4 +115,5 @@ export default {
   NativeUploader,
   Collapse,
   Calendar,
+  Swipecell,
 };

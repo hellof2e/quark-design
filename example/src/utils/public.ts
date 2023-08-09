@@ -25,7 +25,7 @@ export const addUnit = (value?: string | number): string | undefined => {
 };
 
 export const throttle = (func: Function, delay = 0, atleast = 200) => {
-	let timer: any = null;
+	let timer: ReturnType<typeof setTimeout> | null = null;
 	let lastRun = 0;
 	return (...args: any) => {
 		const now = +new Date();

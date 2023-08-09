@@ -1,5 +1,61 @@
 # 更新日志
 
+### [1.2.4](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.4) (2023-08-04)
+
+### 🎉 Features
+
+- update quarkd ([c47c9ec](https://github.com/hellof2e/quark-design/commit/c47c9ec04b3ed89e0e5f8788c6d6e7f2e4d95510))
+- update quarkd ([a0f80a8](https://github.com/hellof2e/quark-design/commit/a0f80a8a545c4dbeab769aa6db7d33406ff42b2d))
+
+### [1.2.3](https://github.com/hellof2e/quark-design/compare/v1.2.2...v1.2.3) (2023-08-02)
+
+### 🎉 Features
+
+- update quarkd ([05aea0a](https://github.com/hellof2e/quark-design/commit/05aea0a704ecb081acc4d968259ae86c198915cd))
+
+### [1.2.2](https://github.com/hellof2e/quark-design/compare/v1.2.1...v1.2.2) (2023-08-02)
+
+### 🐞 Bug Fixes
+
+- use ReturnType<typeof setTimeout> replace any ([#292](https://github.com/hellof2e/quark-design/issues/292)) ([d254f73](https://github.com/hellof2e/quark-design/commit/d254f7384886b04940948b65bf1dc53e5481aafc))
+
+### 🎉 Features
+
+- **pullrefresh:** support background customization ([#294](https://github.com/hellof2e/quark-design/issues/294)) ([5e7af1e](https://github.com/hellof2e/quark-design/commit/5e7af1e4536ef0f49ab2465f91595bf8510e8bd7))
+- update quarkd ([4616e21](https://github.com/hellof2e/quark-design/commit/4616e21f4a3cb05c214c4a7a35f0cc18af700003))
+
+### [1.2.1](https://github.com/hellof2e/quark-design/compare/v1.2.0...v1.2.1) (2023-07-27)
+
+### 🎉 Features
+
+- update quarkd ([46ddb2c](https://github.com/hellof2e/quark-design/commit/46ddb2c49b9ef05e9c15f9a59d1ca2e4d1ecab27))
+
+### 🐞 Bug Fixes
+
+- switch ([4d3d651](https://github.com/hellof2e/quark-design/commit/4d3d651e419c80a0a85195cb121e4643a4b7bb44))
+
+## [1.2.0](https://github.com/hellof2e/quark-design/compare/v1.1.2...v1.2.0) (2023-07-27)
+
+### 🎉 Features
+
+- code review 问题修复 ([eabf8c6](https://github.com/hellof2e/quark-design/commit/eabf8c63802a0aa1a5116f11ffc24c59c916d7f8))
+- form slot crrent 判空 ([698a7d6](https://github.com/hellof2e/quark-design/commit/698a7d692e23ea2922da83acbe1076d5969763d5))
+- picker datetime-picker cascader-picker 支持点击遮罩关闭 ([69acd57](https://github.com/hellof2e/quark-design/commit/69acd57fac101963b53a34e13f2c276edd743bbc))
+- swipe-cell cr ([bbf441d](https://github.com/hellof2e/quark-design/commit/bbf441d69a5b9172b3729c2c87e728d87ed0c9ef))
+- swipe-cell 开发 ([69d7a10](https://github.com/hellof2e/quark-design/commit/69d7a10baef104299107899575777fca1d5a7a7d))
+- swipe-cell 开发 ([61fbbc2](https://github.com/hellof2e/quark-design/commit/61fbbc21b67b11e254fb980e6c4248454067baee))
+- swipe-cell 异步返回开发 ([5402848](https://github.com/hellof2e/quark-design/commit/54028482cd10bf67bad4129af816f3d1b4ce6304))
+- swipe-cell 开发 ([95b70d9](https://github.com/hellof2e/quark-design/commit/95b70d995cfe59da05a6c4b9e25398b342a4cd72))
+- swipe-cell 开发 ([2795032](https://github.com/hellof2e/quark-design/commit/279503267921378cdbd152420eb61a8d6f3da175))
+- update ([02fa178](https://github.com/hellof2e/quark-design/commit/02fa1785ccc72bfc138746871bc9a71ff60b7189))
+- update radio remove console ([344a493](https://github.com/hellof2e/quark-design/commit/344a4939cdb97e07e080d661f307d041d52570e2))
+- 单测删除 ([0c7fa93](https://github.com/hellof2e/quark-design/commit/0c7fa93f5f961d992c4091ea5368a9dac680842b))
+- 补充单测 ([54a94ec](https://github.com/hellof2e/quark-design/commit/54a94ec3548cf847272dd1446f1bbf38eeb07994))
+
+### 🐞 Bug Fixes
+
+- swpie indicator ([84e1cba](https://github.com/hellof2e/quark-design/commit/84e1cba7b95b68c9be9e79f8f1379f00c0f0903a))
+
 ### [1.1.2](https://github.com/hellof2e/quark-design/compare/v1.1.1...v1.1.2) (2023-07-26)
 
 ### 🎉 Features

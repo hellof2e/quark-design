@@ -11,10 +11,6 @@ export interface Props {
   style,
 })
 class QuarkLoading extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   type: "spinner" | "circular" | "pullrefresh" = "spinner";
 
