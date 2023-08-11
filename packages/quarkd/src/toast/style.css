@@ -24,15 +24,11 @@
   width: var(--toast-width, 120px);
   height: var(--toast-height, 120px);
   text-align: center;
-  transition: transform opacity 3s ease-in;
+  transition: opacity var(--toast-transition-fade-in, 0.3s) ease-in;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 :host([position="top"]) .quark-toast {
   top: var(--toast-position-top-distance, 20%);
@@ -91,5 +87,5 @@ quark-icon-whitewarning-o {
 
 :host .quark-toast-leave {
   opacity: 0;
-  transition: transform opacity 3s ease-out;
+  transition: opacity var(--toast-transition-fade-out, 0.3s) ease-out;
 }

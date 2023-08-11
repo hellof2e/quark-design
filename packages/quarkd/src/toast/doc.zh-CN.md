@@ -136,3 +136,5 @@ toast2.hide();
 | `--toast-loading-bottom`        | loading 图标底部边距 | 垂直 loading 为 `14px`；水平 loading 为 `0`                      |
 | `--toast-loading-right`         | loading 图标右边边距 | 垂直 loading 为 `0`；水平 loading 为 `8px`                       |
 | `--toast-position-top-distance` | 提示距顶部距离       | position 为`top`时 值为 `20%`， position 值为`botton`时值为`80%` |
+| `--toast-transition-fade-in` | 淡入动画持续时间       |  `0.3s`  设为0则关闭动画 |
+| `--toast-transition-fade-out` | 淡出动画持续时间       |  `0.3s`  设为0则关闭动画 |
