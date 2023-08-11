@@ -1,4 +1,11 @@
 # 更新日志
+### [1.2.6](https://github.com/hellof2e/quark-design/compare/v1.2.5...v1.2.6) (2023-08-11)
+
+
+### 🎉 Features
+
+*  toast 增加淡入淡出动画 ([bec0093](https://github.com/hellof2e/quark-design/commit/bec00934e9983a57305004c26daf1b37b82fc73e))
+
 ### [1.2.5](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.5) (2023-08-09)
 
 
