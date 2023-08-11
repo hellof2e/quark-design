@@ -209,7 +209,6 @@ class QuarkUploader extends QuarkElement {
   };
 
   onChange = async (e: Event) => {
-    console.log("uploader on change");
     const target = e.target as HTMLInputElement;
     const { files: rawFiles } = target;
     if (this.disabled || !rawFiles) return;

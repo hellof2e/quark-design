@@ -274,7 +274,6 @@ export default {
   },
 
   hide: function () {
-    console.log(toast, "toast");
     if (toast) toast.hide();
   },
 
