@@ -1,24 +1,28 @@
 # 更新日志
-### [1.2.6](https://github.com/hellof2e/quark-design/compare/v1.2.5...v1.2.6) (2023-08-11)
 
-
-### 🎉 Features
-
-*  toast 增加淡入淡出动画 ([bec0093](https://github.com/hellof2e/quark-design/commit/bec00934e9983a57305004c26daf1b37b82fc73e))
-
-### [1.2.5](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.5) (2023-08-09)
-
-
-### 🎉 Features
-
-* update quarkd ([40ec501](https://github.com/hellof2e/quark-design/commit/40ec5018faa539cc95f725d643efb612ac6df433))
-* update quarkd ([c47c9ec](https://github.com/hellof2e/quark-design/commit/c47c9ec04b3ed89e0e5f8788c6d6e7f2e4d95510))
-* update quarkd ([a0f80a8](https://github.com/hellof2e/quark-design/commit/a0f80a8a545c4dbeab769aa6db7d33406ff42b2d))
-
+### [1.2.7](https://github.com/hellof2e/quark-design/compare/v1.2.6...v1.2.7) (2023-08-16)
 
 ### 🐞 Bug Fixes
 
-* 修复 toast hide 判空问题 ([d721a96](https://github.com/hellof2e/quark-design/commit/d721a96aeaaf6e93cacd3f539668a6247f4d85b5))
+- popup ([4698e02](https://github.com/hellof2e/quark-design/commit/4698e02252655e2650f6a9ee33147addae2e7e50))
+
+### [1.2.6](https://github.com/hellof2e/quark-design/compare/v1.2.5...v1.2.6) (2023-08-11)
+
+### 🎉 Features
+
+- toast 增加淡入淡出动画 ([bec0093](https://github.com/hellof2e/quark-design/commit/bec00934e9983a57305004c26daf1b37b82fc73e))
+
+### [1.2.5](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.5) (2023-08-09)
+
+### 🎉 Features
+
+- update quarkd ([40ec501](https://github.com/hellof2e/quark-design/commit/40ec5018faa539cc95f725d643efb612ac6df433))
+- update quarkd ([c47c9ec](https://github.com/hellof2e/quark-design/commit/c47c9ec04b3ed89e0e5f8788c6d6e7f2e4d95510))
+- update quarkd ([a0f80a8](https://github.com/hellof2e/quark-design/commit/a0f80a8a545c4dbeab769aa6db7d33406ff42b2d))
+
+### 🐞 Bug Fixes
+
+- 修复 toast hide 判空问题 ([d721a96](https://github.com/hellof2e/quark-design/commit/d721a96aeaaf6e93cacd3f539668a6247f4d85b5))
 
 ### [1.2.4](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.4) (2023-08-04)
 
