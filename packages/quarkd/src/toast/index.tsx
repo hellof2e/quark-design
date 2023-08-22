@@ -53,9 +53,11 @@ class QuarkToast extends QuarkElement {
   componentDidMount(): void {
     this.dRemove = false;
     const el = this.toastRef.current;
-    if (el) {
-      el.addEventListener("transitionend", function () {
-        document.body.removeChild(el);
+    if (this.show) {
+      el.addEventListener("transitionend", () => {
+        if (el && el.parentNode && !this.show) {
+          el.parentNode.removeChild(el);
+        }
       });
     }
   }
