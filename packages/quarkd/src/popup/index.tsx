@@ -130,12 +130,12 @@ class QuarkPopup extends QuarkElement {
       <Fragment>
         <div class="quark-popup" ref={this.wrap}>
           {this.closeable && this.position === "bottom" && (
-            <button
+            <div
               class="quark-popup-close-btn"
               onClick={this.handleCloseBtnClick}
             >
               <quark-icon-close size="24" />
-            </button>
+            </div>
           )}
           <slot></slot>
         </div>
