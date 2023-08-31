@@ -1,6 +1,7 @@
 # 更新日志
 ## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
-
+### 🎉 Features
+*  [新增 pickerview 组件](https://github.com/hellof2e/quark-design/tree/feature/pickview/packages/quarkd/src/pickerview）)
 
 ### 🐞 Bug Fixes
 
