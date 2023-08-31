@@ -70,6 +70,7 @@ import Circle, {
   CircleType,
   StrokeLinecap,
 } from "./circle";
+import PickerView, { PickerViewRef } from "./pickerview";
 
 export {
   ActionSheet,
@@ -153,4 +154,6 @@ export {
   CircleStartPosition,
   StrokeLinecap,
   CircleType,
+  PickerView,
+  PickerViewRef,
 };

@@ -49,7 +49,7 @@ import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
 import Collapse from "./collapse";
 import Swipecell from "./swipecell";
-import QuarkPickerView from "./pickerview";
+import PickerView from "./pickerview";
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -114,5 +114,5 @@ export default {
   NativeUploader,
   Collapse,
   Swipecell,
-  QuarkPickerView,
+  PickerView,
 };
