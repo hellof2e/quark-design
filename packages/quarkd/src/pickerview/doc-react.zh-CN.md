@@ -2,7 +2,7 @@
 
 ### 介绍
 
-提供多个选项集合供用户选择，支持单列选择和多列选择，级联选择请使用 CascadePicker
+PickerView 是 Picker 的内容区域
 
 ### 安装使用
 
@@ -131,11 +131,11 @@ export default () => {
 | 参数            | 说明                                       | 类型                                             | 默认值     |
 | --------------- | ------------------------------------------ | ------------------------------------------------ | ---------- |
 | open            | picker 是否显示                            | `boolean`                                        | `require`  |
-| title           | 标题                                       | `string `                                        |
+| title           | 标题                                       | `string`                                        |
 | confirmtext     | 确定按钮的文字                             | `string`                                         | `确认`     |
 | bottomhidden    | 是否隐藏底部按钮（通常配合自定义头部使用） | `boolean`                                        | `false`    |
 | forbidmaskclick | 是否禁止遮罩层点击                         | `boolean`                                        | `false`    |
-| onClose         | 点击遮罩或者取消按钮                       | `() => void`                                     | `require ` |
+| onClose         | 点击遮罩或者取消按钮                       | `() => void`                                     | `require` |
 | onConfirm       | 确定按钮点击回调                           | `（e: {detail:{value: SelectColumn[]}}）=> void` | `require`  |
 | onChange        | picker 改变回调                            | `（e: {detail:{value: SelectColumn[]}}）=> void` | -          |
 

@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Provides a collection of options for the user to choose from. Supports single-column and multi-column selections. For cascading selections, please use CascadePicker.
+The PickerView is the content area of the Picker.
 
 ### Installation and Usage
 

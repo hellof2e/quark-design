@@ -2,7 +2,7 @@
 
 ### 介绍
 
-提供多个选项集合供用户选择，支持单列选择和多列选择，级联选择请使用 CascadePicker
+PickerView 是 Picker 的内容区域
 
 ### 安装使用
 
