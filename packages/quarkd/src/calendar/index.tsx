@@ -82,7 +82,7 @@ class QuarkCalendar extends QuarkElement {
   type = "single";
 
   @property()
-  title = "日期选择";
+  title = Locale.current.calendar.title;
 
   @property({
     type: Boolean,
@@ -599,6 +599,7 @@ class QuarkCalendar extends QuarkElement {
       return (
         <slot name="footer">
           <quark-button
+            class="quark-calendar-button"
             type="primary"
             size="big"
             disabled={disabled}
@@ -666,6 +667,7 @@ class QuarkCalendar extends QuarkElement {
     if (!this.tiled) {
       return (
         <quark-popup
+          class="quark-calendar-pop-up"
           position={this.position}
           round={!this.square}
           closeable={!this.hidetitle || !this.hidesubtitle}

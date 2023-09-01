@@ -71,19 +71,33 @@
         islink
         @click="open('range', 'customConfirm')"
       ></quark-cell>
-      <!-- <quark-cell
+      <quark-cell
         type="primary"
-        :title="translate('cellTitle.customPosition')"
-        :desc="formatFullDate(state.date.customPosition)"
+        :title="translate('cellTitle.customDayText')"
+        :desc="formatRange(state.date.customDayText)"
         islink
-        @click="open('single', 'customPosition')"
-      ></quark-cell> -->
+        @click="open('range', 'customDayText')"
+      ></quark-cell>
       <quark-cell
         type="primary"
         :title="translate('cellTitle.weekFirstDay')"
         :desc="formatFullDate(state.date.weekFirstDay)"
         islink
         @click="open('single', 'weekFirstDay')"
+      ></quark-cell>
+      <quark-cell
+        type="primary"
+        :title="translate('cellTitle.customPosition')"
+        :desc="formatFullDate(state.date.customPosition)"
+        islink
+        @click="open('single', 'customPosition')"
+      ></quark-cell>
+      <quark-cell
+        type="primary"
+        :title="translate('cellTitle.customCss')"
+        :desc="formatFullDate(state.date.customCss)"
+        islink
+        @click="open('single', 'customCss')"
       ></quark-cell>
     </quark-cell-group>
     <h2>{{ translate("title.tiled") }}</h2>
@@ -96,6 +110,7 @@
     >
     </quark-calendar>
     <quark-calendar
+      :class="state.isCss ? 'custom-css' : ''"
       ref="calendarRef"
       :open="state.visible"
       :type="state.type"
@@ -137,21 +152,23 @@ export default createDemo({
             single: "选择单个日期",
             multiple: "选择多个日期",
             range: "选择日期区间",
-            customDefault: "自定义默认值",
+            customDefault: "自定义选中值",
             customMaxRange: "日期区间最大范围",
             customRange: "自定义日期范围",
             customConfirm: "自定义按钮文字",
             customDayText: "自定义日期文案",
             customPosition: "自定义弹出位置",
+            customCss: "自定义样式",
             weekFirstDay: "自定义周起始日",
           },
           otherText: {
             multiple: "个日期",
             confirmText: "完成",
             confirmDisabledText: "请选择",
-            laborDay: "劳动节",
-            youthDay: "青年节",
+            midAutumn: "中秋节",
+            nationalDday: "国庆节",
             today: "今天",
+            rest: "休",
             in: "入店",
             out: "离店",
           },
@@ -161,14 +178,31 @@ export default createDemo({
             basic: "Basic Usage",
             quick: "Quick Select",
             custom: "Custom Calendar",
+            tiled: "Tiled display",
           },
           cellTitle: {
             single: "Select Single Date",
-            multiple: "Select Multiple Date'",
+            multiple: "Select Multiple Date",
             range: "Select Date Range",
+            customDefault: "Custom Selected Value",
+            customMaxRange: "Custom The Maximum Number Of Selected Days",
+            customRange: "Custom Date Range",
+            customConfirm: "Custom Confirm Text",
+            customDayText: "Custom Day Text",
+            customPosition: "Custom Pop Position",
+            customCss: "Custom CSS",
+            weekFirstDay: "Custom First Day Of Week",
           },
           otherText: {
             multiple: "Dates",
+            confirmText: "OK",
+            confirmDisabledText: "Please Select",
+            midAutumn: "Mid-Autumn",
+            nationalDday: "National Day",
+            today: "Today",
+            rest: "Rest",
+            in: "In",
+            out: "Out",
           },
         },
       });
@@ -188,14 +222,16 @@ export default createDemo({
         customDayText: [],
         weekFirstDay: null,
         customPosition: null,
+        customCss: null,
       },
+      isCss: false,
       visible: false,
       type: "single",
       round: true,
       minDate: undefined,
       maxDate: undefined,
-      tiledMinDate: "2022-08-01",
-      tiledMaxDate: "2022-10-31",
+      tiledMinDate: "2023-09-01",
+      tiledMaxDate: "2023-10-31",
       maxRange: undefined,
       position: undefined,
       formatter: undefined,
@@ -218,6 +254,7 @@ export default createDemo({
       state.confirmText = undefined;
       state.confirmDisabledText = undefined;
       state.weekFirstDay = 0;
+      state.isCss = false;
       calendarRef.value.setValue(null);
     };
     const dayFormatter = (day) => {
@@ -228,13 +265,24 @@ export default createDemo({
       const month = day.date.getMonth() + 1;
       const date = day.date.getDate();
 
-      if (month === 5) {
+      if (month === 9) {
+        if (date === 29) {
+          day.topInfo = translate("otherText.midAutumn");
+        }
+        if (date === 10) {
+          day.topInfo = translate("otherText.today");
+        }
+        if (date > 28) {
+          day.bottomInfo = translate("otherText.rest");
+        }
+      }
+
+      if (month === 10) {
         if (date === 1) {
-          day.topInfo = translate("otherText.laborDay");
-        } else if (date === 4) {
-          day.topInfo = translate("otherText.youthDay");
-        } else if (date === 11) {
-          day.text = translate("otherText.today");
+          day.topInfo = translate("otherText.nationalDday");
+        }
+        if (date < 7) {
+          day.bottomInfo = translate("otherText.rest");
         }
       }
 
@@ -271,8 +319,8 @@ export default createDemo({
           state.maxDate = "2022-1-31";
           break;
         case "customDayText":
-          state.minDate = "2022-5-1";
-          state.maxDate = "2022-5-31";
+          state.minDate = "2023-9-15";
+          state.maxDate = "2023-10-15";
           calendarRef.value.setFormatter(dayFormatter);
           break;
         case "customPosition":
@@ -284,6 +332,9 @@ export default createDemo({
           break;
         case "weekFirstDay":
           state.weekFirstDay = 1;
+          break;
+        case "customCss":
+          state.isCss = true;
           break;
       }
     };

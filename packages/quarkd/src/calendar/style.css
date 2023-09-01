@@ -1,7 +1,6 @@
 :host {
   width: 100%;
   display: block;
-  background: var(--calendar-background-color, quark-fillBaseColor);
   font-family: var(--calendar-font-family, quark-sFontFamily);
   -webkit-tap-highlight-color: transparent;
 }
@@ -9,15 +8,26 @@
 :host .quark-calendar {
   display: flex;
   flex-direction: column;
-  height: 80vh;
   height: var(--calendar-height, 80vh);
+  background: var(--calendar-background-color, quark-fillBaseColor);
+}
+
+:host([position="left"]) .quark-calendar {
+  height: var(--calendar-height, 100%);
+}
+
+:host([position="right"]) .quark-calendar {
+  height: var(--calendar-height, 100%);
+}
+
+:host([tiled]) .quark-calendar {
+  height: var(--calendar-height, auto);
 }
 
 :host .quark-calendar-header {
   flex-shrink: 0;
   z-index: 2;
   position: relative;
-  box-shadow: 10px 5px 5px red;
   box-shadow: 0 2px 10px rgba(125, 126, 128, 0.16);
 }
 
@@ -153,7 +163,9 @@
   left: 0;
   font-size: 10px;
   line-height: 14px;
-
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
   @media (max-width: 350px) {
     font-size: 9px;
   }
@@ -180,4 +192,12 @@
   margin: 8px 0;
   padding-left: var(--calendar-footer-padding, 16px);
   padding-right: var(--calendar-footer-padding, 16px);
+}
+
+:host .quark-calendar-button {
+  --quark-theme-color: var(--calendar-theme-color, quark-primaryColor);
+}
+
+:host .quark-calendar-pop-up  {
+  --popup-max-width: 100%;
 }
