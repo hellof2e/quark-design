@@ -128,15 +128,16 @@ export default () => {
 
 ### Props
 
-| 参数         | 说明                                       | 类型                                             | 默认值     |
-| ------------ | ------------------------------------------ | ------------------------------------------------ | ---------- |
-| open         | picker 是否显示                            | `boolean`                                        | `require`  |
-| title        | 标题                                       | `string `                                        |
-| confirmtext  | 确定按钮的文字                             | `string`                                         | `确认`     |
-| bottomhidden | 是否隐藏底部按钮（通常配合自定义头部使用） | `boolean`                                        | `false`    |
-| onClose      | 点击遮罩或者取消按钮                       | `() => void`                                     | `require ` |
-| onConfirm    | 确定按钮点击回调                           | `（e: {detail:{value: SelectColumn[]}}）=> void` | `require`  |
-| onChange     | picker 改变回调                            | `（e: {detail:{value: SelectColumn[]}}）=> void` | -          |
+| 参数            | 说明                                       | 类型                                             | 默认值     |
+| --------------- | ------------------------------------------ | ------------------------------------------------ | ---------- |
+| open            | picker 是否显示                            | `boolean`                                        | `require`  |
+| title           | 标题                                       | `string `                                        |
+| confirmtext     | 确定按钮的文字                             | `string`                                         | `确认`     |
+| bottomhidden    | 是否隐藏底部按钮（通常配合自定义头部使用） | `boolean`                                        | `false`    |
+| forbidmaskclick | 是否禁止遮罩层点击                         | `boolean`                                        | `false`    |
+| onClose         | 点击遮罩或者取消按钮                       | `() => void`                                     | `require ` |
+| onConfirm       | 确定按钮点击回调                           | `（e: {detail:{value: SelectColumn[]}}）=> void` | `require`  |
+| onChange        | picker 改变回调                            | `（e: {detail:{value: SelectColumn[]}}）=> void` | -          |
 
 ### Slot
 

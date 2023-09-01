@@ -13,10 +13,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkButton extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   time = "0";
 
@@ -26,7 +22,7 @@ class QuarkButton extends QuarkElement {
   @state()
   totalTime = 0;
 
-  timeCounter: any = null;
+  timeCounter: ReturnType<typeof setTimeout> | null = null;
 
   setUnit = (val) => {
     return val < 10 ? `0${val}` : val;

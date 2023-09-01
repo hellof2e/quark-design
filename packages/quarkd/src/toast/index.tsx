@@ -52,6 +52,14 @@ class QuarkToast extends QuarkElement {
 
   componentDidMount(): void {
     this.dRemove = false;
+    const el = this.toastRef.current;
+    if (el) {
+      el.addEventListener("transitionend", () => {
+        if (el && el.parentNode && !this.show) {
+          el.parentNode.removeChild(el);
+        }
+      });
+    }
   }
 
   // 删除 toast dom
@@ -75,7 +83,6 @@ class QuarkToast extends QuarkElement {
           current.classList.remove("quark-toast-leave");
         } else {
           current.classList.add("quark-toast-leave");
-          this.transitionendChange();
         }
       }
     }
@@ -83,7 +90,7 @@ class QuarkToast extends QuarkElement {
   }
 
   hide = () => {
-    document.body.removeChild(this);
+    this.show = false;
     if (this.type === "loading") clearAllBodyScrollLocks();
   };
 

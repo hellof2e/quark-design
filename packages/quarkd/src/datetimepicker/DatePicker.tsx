@@ -23,10 +23,6 @@ const currentYear = new Date().getFullYear();
   style,
 })
 class QuarkDatePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({ type: Boolean })
   open = false;
 
@@ -53,6 +49,9 @@ class QuarkDatePicker extends QuarkElement {
 
   @property({ type: String })
   cancelbuttontext = "";
+
+  @property({ type: Boolean })
+  forbidmaskclick = false;
 
   pickerRef: any = createRef();
 
@@ -284,6 +283,7 @@ class QuarkDatePicker extends QuarkElement {
         title={this.title}
         bottomhidden={this.showtoolbar}
         open={this.open}
+        forbidmaskclick={this.forbidmaskclick}
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}

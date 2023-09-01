@@ -104,7 +104,7 @@ export default defineComponent({
 
 	#nav {
 		position: fixed;
-		z-index: 10;
+		z-index: 9999;
 		left: 0;
 		right: 0;
 		height: 57px;

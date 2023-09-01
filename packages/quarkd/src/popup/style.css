@@ -34,8 +34,14 @@
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
+  width: var(--popup-width);
+  min-width: var(--popup-min-width);
+  max-width: var(--popup-max-width);
+  height: var(--popup-height);
+  min-height: var(--popup-min-height);
+  max-height: var(--popup-max-height);
   overflow-y: auto;
-  background-color: quark-fillBaseColor;
+  background: var(--popup-bg, quark-fillBaseColor);
   opacity: 1;
   transition: transform quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
@@ -70,6 +76,7 @@
   cursor: pointer;
   z-index: 999;
 }
+
 :host .quark-popup-close-btn :hover {
   color: #bcc4cc;
 }

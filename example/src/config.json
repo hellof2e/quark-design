@@ -132,6 +132,16 @@
 				},
 				{
 					"version": "0.0.1",
+					"name": "Circle",
+					"sort": 1,
+					"cName": "环形进度条",
+					"type": "component",
+					"show": true,
+					"desc": "环形进度条",
+					"author": "yunxia"
+				},
+				{
+					"version": "0.0.1",
 					"name": "Skeleton",
 					"sort": 1,
 					"cName": "骨架屏",
@@ -330,6 +340,16 @@
 					"show": true,
 					"desc": "文字提示",
 					"author": "allan"
+				},
+				{
+					"version": "0.0.1",
+					"name": "SwipeCell",
+					"sort": 1,
+					"cName": "滑动单元格",
+					"type": "component",
+					"show": true,
+					"desc": "滑动单元格",
+					"author": "yunxia"
 				}
 			]
 		},
@@ -406,6 +426,16 @@
 					"show": true,
 					"desc": "选择器",
 					"author": "MrZhaoCn"
+				},
+        {
+					"version": "0.0.1",
+					"name": "PickerView",
+					"sort": 1,
+					"cName": "选择器视图",
+					"type": "component",
+					"show": true,
+					"desc": "选择器",
+					"author": "yhy"
 				},
 				{
 					"version": "0.0.1",

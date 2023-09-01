@@ -12,10 +12,6 @@ export interface Props {
   style,
 })
 class Collapse extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })

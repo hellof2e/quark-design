@@ -19,5 +19,5 @@ interface Ref {
 
 type FormRef = Ref & HTMLElement;
 const Form = reactify("quark-form") as FormType;
-export { FormRef };
+export { FormRef, FormProps, FormType, Rules };
 export default Form;

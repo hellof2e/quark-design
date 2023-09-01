@@ -133,6 +133,7 @@
       id="popup-closeable"
       position="bottom"
       closeable
+      round
       :open="openCloseable"
       @close="closeCloseablePopup"
     >

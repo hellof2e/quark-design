@@ -223,11 +223,12 @@ export default {
 
 ### Props
 
-| Attribute    | Description                                             | Type       | Default   |
-| ------------ | ------------------------------------------------------- | ---------- | --------- |
-| open         | Whether to show Picker                                  | `boolean ` | `require` |
-| title        | Title                                                   | `string `  |
-| bottomhidden | Whether to show bottom button (use with custom header） | `boolean`  | `false`   |
+| Attribute       | Description                                             | Type       | Default   |
+| --------------- | ------------------------------------------------------- | ---------- | --------- |
+| open            | Whether to show Picker                                  | `boolean ` | `require` |
+| title           | Title                                                   | `string `  |
+| bottomhidden    | Whether to show bottom button (use with custom header） | `boolean`  | `false`   |
+| forbidmaskclick | Whether forbid mask click                               | `boolean`  | `false`   |
 
 ### Events
 

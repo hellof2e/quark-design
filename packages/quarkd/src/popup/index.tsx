@@ -32,10 +32,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkPopup extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })
@@ -134,12 +130,12 @@ class QuarkPopup extends QuarkElement {
       <Fragment>
         <div class="quark-popup" ref={this.wrap}>
           {this.closeable && (
-            <button
+            <div
               class="quark-popup-close-btn"
               onClick={this.handleCloseBtnClick}
             >
               <quark-icon-close size="24" />
-            </button>
+            </div>
           )}
           <slot></slot>
         </div>

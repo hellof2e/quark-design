@@ -10,6 +10,7 @@ import AsyncValidator from "async-validator";
 import style from "./form-item.css";
 import { formTagNamesMap, getPropByPath, noop } from "./utils";
 import { debounce } from "../../utils/index";
+import { slotAssignedElements } from "../../utils/public";
 import { IFormProps, Rules } from "./type";
 
 @customElement({
@@ -176,7 +177,9 @@ class QuarkFormItem extends QuarkElement {
 
   defaultSlotChange = () => {
     if (!this.defaultSlotRef.current) return;
-    const slotNodes = this.defaultSlotRef.current.assignedNodes();
+    const slotNodes = slotAssignedElements(
+      this.defaultSlotRef.current?.assignedNodes()
+    );
     if (slotNodes.length > 0) {
       const formNode = slotNodes.find((node) => {
         return !!formTagNamesMap[node.tagName];

@@ -360,6 +360,9 @@ class QuarkSwipe extends QuarkElement {
   };
 
   renderIndicators() {
+    if (this.count <= 1) {
+      return null;
+    }
     const indicators = [];
     for (let i = 0; i < this.count; i += 1) {
       const indicator = (

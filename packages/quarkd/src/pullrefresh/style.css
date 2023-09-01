@@ -8,12 +8,13 @@
 
 .quark-pull-refresh {
   width: 100%;
+  background: var(--pull-refresh-bg-light, var(--pull-refresh-bg, transparent));
 }
 
 .quark-pull-refresh-container {
   position: relative;
   transition-property: transform;
-  background-color: #fff;
+  background: var(--pull-refresh-container-bg, #fff);
 }
 
 .quark-pull-refresh-head {
@@ -40,7 +41,7 @@
 }
 
 :host([dark]) .quark-pull-refresh {
-  background-color: quark-primaryColor;
+  background: var(--pull-refresh-bg-dark, var(--pull-refresh-bg, quark-primaryColor));
 }
 
 :host([dark]) .quark-pull-refresh-text {

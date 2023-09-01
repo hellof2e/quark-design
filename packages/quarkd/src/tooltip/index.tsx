@@ -28,10 +28,6 @@ export interface CustomEvent {
 }
 @customElement({ tag: "quark-tooltip", style })
 class QuarkTooltip extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property()
   placement = "bottom";
 
@@ -67,7 +63,7 @@ class QuarkTooltip extends QuarkElement {
   @property()
   size = "";
 
-  timer?: number = undefined;
+  timer?: ReturnType<typeof setTimeout> | null = undefined;
 
   tipsRef: any = createRef();
 
