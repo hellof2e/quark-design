@@ -48,6 +48,7 @@ import Grid from "./grid";
 import Locale, { zhCN, zhTW, enUS, thTH, idID } from "./locale";
 import Countdown from "./countdown";
 import Collapse from "./collapse";
+import Calendar from "./calendar";
 import Swipecell from "./swipecell";
 import PickerView from "./pickerview";
 
@@ -113,6 +114,7 @@ export default {
   Countdown,
   NativeUploader,
   Collapse,
+  Calendar,
   Swipecell,
   PickerView,
 };

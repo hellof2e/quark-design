@@ -64,6 +64,7 @@ import Toast from "./toast";
 import Tooltip from "./tooltip";
 import Collapse from "./collapse";
 import Uploader, { UploaderRef } from "./uploader";
+import Calendar, { CalendarRef } from "./calendar";
 import Circle, {
   CircleRef,
   CircleStartPosition,
@@ -149,6 +150,8 @@ export {
   Uploader,
   UploaderRef,
   Collapse,
+  Calendar,
+  CalendarRef,
   Circle,
   CircleRef,
   CircleStartPosition,

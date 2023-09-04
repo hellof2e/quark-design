@@ -16,10 +16,7 @@ import "quarkd/lib/pickerview";
 <template>
   <div>
     <h2>基础用法</h2>
-    <quark-pickerview
-      ref="pickervieRef"
-      @change="change"
-    />
+    <quark-pickerview ref="pickervieRef" @change="change" />
   </div>
 </template>
 ```
@@ -97,9 +94,9 @@ export default {
     }
   }
 };
-```  
+```
 
-建议都设置成 ``picker-item-hieght`` 的 ``n`` 倍
+建议都设置成 `picker-item-hieght` 的 `n` 倍
 
 ```css
 .custom-pickerview {
@@ -115,9 +112,9 @@ export default {
 
 ### Events
 
-| 名称    | 说明                 | 类型                                             |
-| ------- | -------------------- | ------------------------------------------------ |
-| change  | picker 改变回调      | `（e: {detail:{value: SelectColumn[]}}）=> void` |
+| 名称   | 说明            | 类型                                             |
+| ------ | --------------- | ------------------------------------------------ |
+| change | picker 改变回调 | `（e: {detail:{value: SelectColumn[]}}）=> void` |
 
 ### 方法
 
@@ -142,18 +139,18 @@ type SelectColumn = {
 
 ## 样式变量
 
-组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。  
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
 
-### 注意  
+### 注意
 
 **自定义变量的时候建议设置为 pickerview-item-height 的 n 倍**
-| 变量名                     | 说明|默认值            |
-| ------------------------  | ----------------  |----------------|
-| --pickerview-item-height  |每行的高度的|`34px`||
-| --pickerview-height       | 容器高度| `170px`            |
-| --pickerview-row-top-mask-height| 顶部透明遮罩层高度|`68px`           |
-| --pickerview-row-bottom-mask-height| 底部透明遮罩层高度|`68px`           |
-| --pickerview-border       | 默认选中的边框|`1px solid #eee`   |
-| --pickerview-item-font-size |每行的字体大小| `16px`            |
-| --pickerview-item-color   | 每行的字体颜色|`#242729` |
-| --pickerview-current-top| 当前选中的行的位置, 2倍高度 + 上下边框|`70px`|
+| 变量名 | 说明|默认值 |
+| ------------------------ | ---------------- |----------------|
+| --pickerview-item-height |每行的高度的|`34px`||
+| --pickerview-height | 容器高度| `170px` |
+| --pickerview-row-top-mask-height| 顶部透明遮罩层高度|`68px` |
+| --pickerview-row-bottom-mask-height| 底部透明遮罩层高度|`68px` |
+| --pickerview-border | 默认选中的边框|`1px solid #eee` |
+| --pickerview-item-font-size |每行的字体大小| `16px` |
+| --pickerview-item-color | 每行的字体颜色|`#242729` |
+| --pickerview-current-top| 当前选中的行的位置, 2 倍高度 + 上下边框|`70px`|

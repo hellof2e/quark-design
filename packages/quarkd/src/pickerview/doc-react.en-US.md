@@ -1,4 +1,3 @@
-
 # Picker Selector
 
 ### Introduction
@@ -17,7 +16,7 @@ import { Picker, PickerRef } from "@quarkd/quark-react";
 import { useRef, useState, useEffect } from "react";
 export default () => {
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<PickerRef>(null);
+  const pickerRef = useRef < PickerRef > null;
 
   const handleClose = () => setOpen(false);
 
@@ -71,7 +70,7 @@ export default () => {
 import { useRef, useState, useEffect } from "react";
 export default () => {
   const [open, setOpen] = useState(false);
-  const pickerRef = useRef<PickerRef>(null);
+  const pickerRef = useRef < PickerRef > null;
 
   const handleClose = () => setOpen(false);
 
@@ -129,41 +128,41 @@ export default () => {
 
 ### Props
 
-| Property        | Description                                      | Type                                             | Default    |
-| --------------- | ------------------------------------------------- | ------------------------------------------------ | ---------- |
-| open            | Whether the picker is displayed                   | `boolean`                                        | `require`  |
-| title           | Title                                             | `string`                                         |
-| confirmtext     | Text for the confirm button                       | `string`                                         | `Confirm`  |
-| bottomhidden    | Whether to hide the bottom button (usually used with custom header) | `boolean`                             | `false`    |
-| forbidmaskclick | Whether to prevent mask click                     | `boolean`                                        | `false`    |
-| onClose         | Called when clicking on the mask or cancel button | `() => void`                                      | `require`  |
-| onConfirm       | Confirm button click callback                     | `(e: { detail: { value: SelectColumn[] }}) => void` | `require`  |
-| onChange        | Picker change callback                            | `(e: { detail: { value: SelectColumn[] }}) => void`  | -         |
+| Property        | Description                                                         | Type                                                | Default   |
+| --------------- | ------------------------------------------------------------------- | --------------------------------------------------- | --------- |
+| open            | Whether the picker is displayed                                     | `boolean`                                           | `require` |
+| title           | Title                                                               | `string`                                            |
+| confirmtext     | Text for the confirm button                                         | `string`                                            | `Confirm` |
+| bottomhidden    | Whether to hide the bottom button (usually used with custom header) | `boolean`                                           | `false`   |
+| forbidmaskclick | Whether to prevent mask click                                       | `boolean`                                           | `false`   |
+| onClose         | Called when clicking on the mask or cancel button                   | `() => void`                                        | `require` |
+| onConfirm       | Confirm button click callback                                       | `(e: { detail: { value: SelectColumn[] }}) => void` | `require` |
+| onChange        | Picker change callback                                              | `(e: { detail: { value: SelectColumn[] }}) => void` | -         |
 
 ### Slot
 
-| Name        | Description     |
-| ----------- | --------------- |
-| name=header | Custom Header   |
+| Name        | Description   |
+| ----------- | ------------- |
+| name=header | Custom Header |
 
 ### Methods
 
-| Method      | Description                                         | Type                                  |
-| ----------- | ---------------------------------------------------- | ------------------------------------- |
-| setColumns  | Used to set the picker data                          | `(columns: PickerColumn[]) => void`   |
-| getValues   | Get the currently selected data, usually used with custom header | `() => SelectColumn[]`             |
+| Method     | Description                                                      | Type                                |
+| ---------- | ---------------------------------------------------------------- | ----------------------------------- |
+| setColumns | Used to set the picker data                                      | `(columns: PickerColumn[]) => void` |
+| getValues  | Get the currently selected data, usually used with custom header | `() => SelectColumn[]`              |
 
 ### Type Definitions
 
 ```js
 type PickerColumn = {
-  values: string[];
-  defaultIndex: number;
+  values: string[],
+  defaultIndex: number,
 };
 
 type SelectColumn = {
-  value: string;
-  index: number;
+  value: string,
+  index: number,
 };
 ```
 
@@ -171,11 +170,11 @@ type SelectColumn = {
 
 The component provides the following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), which can be used for custom styling. Please refer to [Theme Customization](#/en-US/guide/theme) for usage.
 
-| Name                         | Description        | Default Value                      |
-| ---------------------------- | -------------------| -----------------------------------|
-| `--picker-title-font-size`   | Title font size    | `18px`                             |
-| `--picker-title-color`       | Title color        | `#242729`                          |
-| `--picker-title-font-weight` | Title font weight  | `500`                              |
-| `--picker-title-font-family` | Title font family  | `PingFangSC-Medium, PingFang SC`   |
+| Name                         | Description       | Default Value                    |
+| ---------------------------- | ----------------- | -------------------------------- |
+| `--picker-title-font-size`   | Title font size   | `18px`                           |
+| `--picker-title-color`       | Title color       | `#242729`                        |
+| `--picker-title-font-weight` | Title font weight | `500`                            |
+| `--picker-title-font-family` | Title font family | `PingFangSC-Medium, PingFang SC` |
 
 ---

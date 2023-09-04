@@ -18,4 +18,13 @@ export default {
   actionSheet: {
     shareTitle: "แชร์ไปที่",
   },
+  calendar: {
+    end: "จบ",
+    start: "เริ่ม",
+    title: "การเลือกวันที่",
+    weekdays: ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"],
+    monthTitle: (year: number, month: number) => `${year}ปี${month}เดือน`,
+    rangePrompt: (maxRange: number | string) =>
+      `จำนวนวันที่เลือกต้องไม่เกิน ${maxRange} วัน`,
+  },
 };

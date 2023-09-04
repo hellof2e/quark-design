@@ -16,10 +16,7 @@ import "quarkd/lib/pickerview";
 <template>
   <div>
     <h2>Basic Usage</h2>
-    <quark-pickerview
-      ref="pickerviewRef"
-      @change="change"
-    />
+    <quark-pickerview ref="pickerviewRef" @change="change" />
   </div>
 </template>
 ```
@@ -117,16 +114,16 @@ It is recommended to set all dimensions to multiples of `picker-item-height`.
 
 ### Events
 
-| Name    | Description         | Type                                               |
-| ------- | --------------------| -------------------------------------------------- |
-| change  | Picker change callback | `(e: {detail: {value: SelectColumn[]}}) => void`  |
+| Name   | Description            | Type                                             |
+| ------ | ---------------------- | ------------------------------------------------ |
+| change | Picker change callback | `(e: {detail: {value: SelectColumn[]}}) => void` |
 
 ### Methods
 
-| Name       | Description                                  | Type                                 |
-| ---------- | ---------------------------------------------| ------------------------------------ |
-| setColumns | Used to set the selector data                | `(columns: PickerColumn[]) => void` |
-| getValues  | Get the selected data from the picker, usually used when customizing the header | `() => SelectColumn[]`  |
+| Name       | Description                                                                     | Type                                |
+| ---------- | ------------------------------------------------------------------------------- | ----------------------------------- |
+| setColumns | Used to set the selector data                                                   | `(columns: PickerColumn[]) => void` |
+| getValues  | Get the selected data from the picker, usually used when customizing the header | `() => SelectColumn[]`              |
 
 ### Type Definitions
 
@@ -149,13 +146,13 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 ### Note
 
 **When customizing variables, it is recommended to set them to multiples of `picker-item-height`.**
-| Variable Name                   | Description          | Default Value        |
+| Variable Name | Description | Default Value |
 | -------------------------------| ---------------------| ---------------------|
-| --pickerview-item-height        | Height of each row   | `34px`                |
-| --pickerview-height             | Container height     | `170px`               |
-| --pickerview-row-top-mask-height| Top transparent mask layer height | `68px`  |
+| --pickerview-item-height | Height of each row | `34px` |
+| --pickerview-height | Container height | `170px` |
+| --pickerview-row-top-mask-height| Top transparent mask layer height | `68px` |
 | --pickerview-row-bottom-mask-height| Bottom transparent mask layer height | `68px`|
-| --pickerview-border             | Default selected border | `1px solid #eee`     |
-| --pickerview-item-font-size     | Font size for each row | `16px`               |
-| --pickerview-item-color         | Font color for each row | `#242729`           |
-| --pickerview-current-top        | Position of the current selected row, 2x height + top and bottom borders | `70px`|
+| --pickerview-border | Default selected border | `1px solid #eee` |
+| --pickerview-item-font-size | Font size for each row | `16px` |
+| --pickerview-item-color | Font color for each row | `#242729` |
+| --pickerview-current-top | Position of the current selected row, 2x height + top and bottom borders | `70px`|
