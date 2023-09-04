@@ -69,10 +69,6 @@ export interface CustomEvent {
   style,
 })
 class QuarkCalendar extends QuarkElement {
-  constructor() {
-    super();
-  }
-
   @property({
     type: Boolean,
   })

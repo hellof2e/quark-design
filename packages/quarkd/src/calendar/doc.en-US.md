@@ -160,10 +160,10 @@ export default {
 
 #### Quick Select
 
-Set `show-confirm` to `false` to hide the confirm button. In this case, the `confirm` event will be emitted immediately after the selection is completed.
+Set `hide-confirm` to `true` to hide the confirm button. In this case, the `confirm` event will be emitted immediately after the selection is completed.
 
 ```html
-<quark-calendar :hide-confirm="true" />
+<quark-calendar :hideconfirm="true" />
 ```
 
 #### Custom Selected Value

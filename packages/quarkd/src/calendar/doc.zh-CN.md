@@ -109,7 +109,7 @@ export default {
 
 #### 选择日期区间
 
-设置 `type` 为 `range` 后可以选择多个日期，此时 `confirm` 事件返回的 date 为数组结构，数组第一项为开始时间，第二项为结束时间。默认情况下，日期区间的起止时间不能为同一天，可以通过设置 `allow-same-day` 属性来允许选择同一天。
+设置 `type` 为 `range` 后可以选择多个日期，此时 `confirm` 事件返回的 date 为数组结构，数组第一项为开始时间，第二项为结束时间。默认情况下，日期区间的起止时间不能为同一天，可以通过设置 `allowsameday` 属性来允许选择同一天。
 
 ```html
 <template>
@@ -156,10 +156,10 @@ export default {
 
 #### 快捷选择
 
-将 `hide-confirm` 设置为 `true` 可以隐藏确认按钮，这种情况下选择完成后会立即触发 `confirm` 事件。
+将 `hideconfirm` 设置为 `true` 可以隐藏确认按钮，这种情况下选择完成后会立即触发 `confirm` 事件。
 
 ```html
-<quark-calendar :hide-confirm="true" />
+<quark-calendar :hideconfirm="true" />
 ```
 
 #### 自定义选中值
@@ -180,7 +180,7 @@ export default {
 
 #### 自定义日期范围
 
-通过 `mindate` 和 `maxdate` 定义日历的范围。可以是`yyyy-MM-dd`字符串类型或时间戳数值。
+通过 `mindate` 和 `maxdate` 定义日历的范围。可以是`yyyy-MM-dd`字符串类型或毫秒时间戳数值。
 
 ```html
 <quark-calendar mindate="minDate" :maxdate="maxDate" />
@@ -316,22 +316,22 @@ export default {
 
 ### Props
 
-| 参数                | 说明                                         | 类型                       | 默认值             |
-| ------------------- | -------------------------------------------- | -------------------------- | ------------------ |
-| type                | 类型，可选值为 `single`、`multiple`、`range` | `string`                   | `single`           |
-| title               | 日历标题                                     | `string`                   | `日期选择`         |
-| readonly            | 日历是否为只读状态，只读状态下不能选择日期   | `boolean`                  | `false`            |
-| tiled               | 日历是否平铺                                 | `boolean`                  | `false`            |
-| mindate             | 可选择的最小日期                             | `yyyy-MM-dd` 或 时间戳数值 | 当前日期           |
-| maxdate             | 可选择的最大日期                             | `yyyy-MM-dd` 或 时间戳数值 | 当前日期的六个月后 |
-| hidemark            | 是否隐藏月份背景水印                         | `boolean`                  | `false`            |
-| hidetitle           | 是否隐藏标题                                 | `boolean`                  | `false`            |
-| hidesubtitle        | 是否隐藏副标题                               | `boolean`                  | `false`            |
-| hideconfirm         | 是否隐藏确认按钮                             | `boolean`                  | `false`            |
-| eagerrender         | 是否渴望加载，若为`true`则关闭懒加载功能     | `boolean`                  | `false`            |
-| confirmtext         | 确认按钮的文字                               | `string`                   | `确定`             |
-| confirmdisabledtext | 确认按钮处于禁用状态时的文字                 | `string`                   | `确定`             |
-| weekfirstday        | 设置周起始日                                 | `0-6`                      | `0`                |
+| 参数                | 说明                                         | 类型                           | 默认值             |
+| ------------------- | -------------------------------------------- | ------------------------------ | ------------------ |
+| type                | 类型，可选值为 `single`、`multiple`、`range` | `string`                       | `single`           |
+| title               | 日历标题                                     | `string`                       | `日期选择`         |
+| readonly            | 日历是否为只读状态，只读状态下不能选择日期   | `boolean`                      | `false`            |
+| tiled               | 日历是否平铺                                 | `boolean`                      | `false`            |
+| mindate             | 可选择的最小日期                             | `yyyy-MM-dd` 或 毫秒时间戳数值 | 当前日期           |
+| maxdate             | 可选择的最大日期                             | `yyyy-MM-dd` 或 毫秒时间戳数值 | 当前日期的六个月后 |
+| hidemark            | 是否隐藏月份背景水印                         | `boolean`                      | `false`            |
+| hidetitle           | 是否隐藏标题                                 | `boolean`                      | `false`            |
+| hidesubtitle        | 是否隐藏副标题                               | `boolean`                      | `false`            |
+| hideconfirm         | 是否隐藏确认按钮                             | `boolean`                      | `false`            |
+| eagerrender         | 是否渴望加载，若为`true`则关闭懒加载功能     | `boolean`                      | `false`            |
+| confirmtext         | 确认按钮的文字                               | `string`                       | `确定`             |
+| confirmdisabledtext | 确认按钮处于禁用状态时的文字                 | `string`                       | `确定`             |
+| weekfirstday        | 设置周起始日                                 | `0-6`                          | `0`                |
 
 ### Calendar tiled false Props
 
@@ -366,13 +366,13 @@ export default {
 
 ### Events
 
-| 名称      | 说明                                                                  | 类型                                                |
-| --------- | --------------------------------------------------------------------- | --------------------------------------------------- |
-| close     | 点击遮罩或者取消按钮                                                  | `() => void `                                       |
-| confirm   | 日期选择完成后触发，若 `show-confirm` 为 `true`，则点击确认按钮后触发 | `（e: {detail:{value: Date \|  Date[] }}）=> void ` |
-| select    | 点击并选中任意日期时触发                                              | `（e: {detail:{value: Date \|  Date[] }}）=> void`  |
-| unselect  | 当日历组件的 `type` 为 `multiple` 时，取消选中日期时触发              | `（e: {detail:{value: Date \|  Date[] }}）=> void`  |
-| overrange | 范围选择超过最多可选天数时触发                                        | `() => void `                                       |
+| 名称      | 说明                                                                   | 类型                                                |
+| --------- | ---------------------------------------------------------------------- | --------------------------------------------------- |
+| close     | 点击遮罩或者取消按钮                                                   | `() => void `                                       |
+| confirm   | 日期选择完成后触发，若 `hide-confirm` 为 `false`，则点击确认按钮后触发 | `（e: {detail:{value: Date \|  Date[] }}）=> void ` |
+| select    | 点击并选中任意日期时触发                                               | `（e: {detail:{value: Date \|  Date[] }}）=> void`  |
+| unselect  | 当日历组件的 `type` 为 `multiple` 时，取消选中日期时触发               | `（e: {detail:{value: Date \|  Date[] }}）=> void`  |
+| overrange | 范围选择超过最多可选天数时触发                                         | `() => void `                                       |
 
 ### Slots
 
