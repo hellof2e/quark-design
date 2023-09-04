@@ -1,22 +1,30 @@
 # 更新日志
-## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
+## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
 
 
 ### 🐞 Bug Fixes
 
 * 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
 
-### [1.2.8](https://github.com/hellof2e/quark-design/compare/v1.2.7...v1.2.8) (2023-08-22)
-
+## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
 
 ### 🎉 Features
 
-* update quarkd ([a0305d5](https://github.com/hellof2e/quark-design/commit/a0305d5a4970be2eb74c20d17e24d64f687c1f1b))
-
+- [新增 pickerview 组件](https://github.com/hellof2e/quark-design/tree/feature/pickview/packages/quarkd/src/pickerview）)
 
 ### 🐞 Bug Fixes
 
-* 修复错误问题 ([eb73997](https://github.com/hellof2e/quark-design/commit/eb73997d415cf1439618a622bad6aad53fc54e12))
+- 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
+
+### [1.2.8](https://github.com/hellof2e/quark-design/compare/v1.2.7...v1.2.8) (2023-08-22)
+
+### 🎉 Features
+
+- update quarkd ([a0305d5](https://github.com/hellof2e/quark-design/commit/a0305d5a4970be2eb74c20d17e24d64f687c1f1b))
+
+### 🐞 Bug Fixes
+
+- 修复错误问题 ([eb73997](https://github.com/hellof2e/quark-design/commit/eb73997d415cf1439618a622bad6aad53fc54e12))
 
 ### [1.2.7](https://github.com/hellof2e/quark-design/compare/v1.2.6...v1.2.7) (2023-08-16)
 

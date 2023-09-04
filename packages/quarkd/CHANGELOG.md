@@ -1,5 +1,11 @@
 # 更新日志
 
+## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
+
+### 🐞 Bug Fixes
+
+- 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
+
 ## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
 
 ### 🎉 Features

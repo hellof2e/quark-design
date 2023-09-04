@@ -2,7 +2,7 @@ import reactify from "@quarkd/reactify";
 import "quarkd/lib/datetimepicker";
 import { FC } from "react";
 import { Props, CustomEvent } from "quarkd/lib/calendar";
-import { CalendarDayItem } from "quarkd/lib/calendar/type";
+import { CalendarDayItem } from "quarkd/lib/calendar/types";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
 type CalendarProps = componentBaseInterface & ReactifyProps<Props, CustomEvent>;
