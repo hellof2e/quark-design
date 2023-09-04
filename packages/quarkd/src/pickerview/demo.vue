@@ -87,7 +87,7 @@ export default createDemo({
             values: translate("values"),
           },
         ]);
-      }, 1000);
+      }, 0);
     });
     const click = () => {
       open.value = true;
