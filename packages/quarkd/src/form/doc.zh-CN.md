@@ -8,7 +8,6 @@
 
 ```tsx
 import "quarkd/lib/form";
-import "quarkd/lib/form-item";
 ```
 
 ### 基本用法
