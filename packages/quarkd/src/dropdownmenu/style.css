@@ -1,0 +1,19 @@
+:host {
+
+}
+
+.quark-dropdown-menu {
+
+}
+
+.quark-dropdown-menu__bar {
+  position: relative;
+  display: flex;
+  height: 48px;
+  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+  background: #fff;
+}
+
+:host .quark-dropdown-item {
+  flex: 1;
+}
