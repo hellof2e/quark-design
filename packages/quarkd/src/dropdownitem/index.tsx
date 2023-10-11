@@ -34,6 +34,9 @@ class QuarkDropdownItem extends QuarkElement {
   @property()
   value = "";
 
+  @state()
+  currentValue = "";
+
   @property({
     type: String,
     attribute: "active-color",
@@ -51,11 +54,18 @@ class QuarkDropdownItem extends QuarkElement {
 
   options: DropdownItemOption[] = [
     { text: "全部商品", value: 0 },
-    { text: "新款商品", value: "1" },
+    { text: "新款商品", value: 1 },
     { text: "活动商品", value: 2 },
   ];
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.currentValue = this.value;
+    // document.addEventListener("click", (e) => {
+    //   console.log(this.root.current);
+    //   console.log("target", e.target);
+    //   console.log(this.root.current.contains(e.target));
+    // });
+  }
 
   componentWillUnmount() {
     clearAllBodyScrollLocks();
@@ -65,15 +75,31 @@ class QuarkDropdownItem extends QuarkElement {
     if (this.title) {
       return this.title;
     }
-    const match = this.options.find((item) => item.value === this.value);
+
+    const match = this.options.find((item) => {
+      return item.value == this.currentValue;
+    });
+    return match ? match.text : "请选择";
+  }
+
+  getTitle() {
+    if (this.title) {
+      return this.title;
+    }
+
+    const match = this.options.find((item) => {
+      return item.value == this.currentValue;
+    });
     return match ? match.text : "请选择";
   }
 
   titleCSS = () => {
-    const classList = ["quark-dropdown-item__title"];
-    const style = {};
+    const classList = ["quark-dropdown-menu__title"];
+    const style: any = {};
     if (this.showPopup) {
-      classList.push("quark-dropdown-item-down quark-dropdown-item--active");
+      classList.push(
+        "quark-dropdown-menu__title--down quark-dropdown-menu__title--active"
+      );
       style.color = this.activeColor;
     }
     return {
@@ -83,7 +109,7 @@ class QuarkDropdownItem extends QuarkElement {
   };
 
   onTitleClick = () => {
-    this.showPopup = !this.showPopup;
+    this.toggle();
     if (this.showPopup) {
       disableBodyScroll(this.root.current);
     } else {
@@ -91,24 +117,58 @@ class QuarkDropdownItem extends QuarkElement {
     }
   };
 
-  onOptionItemClick = () => {
-    this.showPopup = false;
+  onOptionClick = (item) => {
+    this.toggle();
+    if (this.currentValue == item.value) {
+      return;
+    }
+    this.currentValue = item.value;
+    this.$emit("change", {
+      detail: {
+        value: this.currentValue,
+      },
+    });
   };
 
   renderOption = (item) => {
     return (
-      <quark-cell title={item.text} onClick={this.onOptionItemClick}>
+      <quark-cell
+        onClick={() => {
+          this.onOptionClick(item);
+        }}
+      >
+        <div
+          slot="title"
+          class={
+            item.value == this.currentValue
+              ? "quark-dropdown-item__option--active"
+              : ""
+          }
+        >
+          {item.text}
+        </div>
         <quark-icon-success size="26" />
       </quark-cell>
     );
   };
 
   style1 = () => {
-    console.log("style1");
     return {
       top: `${this.root.current.offsetTop + 48}px`,
       "animation-duration": "0.2s",
     };
+  };
+
+  toggle = (show = !this.showPopup) => {
+    if (show === this.showPopup) {
+      return;
+    }
+    this.showPopup = show;
+    if (show) {
+      this.$emit("open");
+    } else {
+      this.$emit("close");
+    }
   };
 
   render() {
@@ -123,14 +183,14 @@ class QuarkDropdownItem extends QuarkElement {
         </div>
 
         {this.showPopup && (
-          <div class="quark-dropdown-content" style={this.style1()}>
-            <slot>
-              <div style="position: relative;z-index: 11">
+          <div class="quark-dropdown-item__content" style={this.style1()}>
+            <div style="position: relative; z-index: 11">
+              <slot>
                 <quark-cell-group>
                   {this.options.map(this.renderOption)}
                 </quark-cell-group>
-              </div>
-            </slot>
+              </slot>
+            </div>
             <div class="mask"></div>
           </div>
         )}

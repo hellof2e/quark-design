@@ -3,17 +3,16 @@
     <h2>{{ translate("basic") }}</h2>
     <quark-dropdown-menu>
       <quark-dropdown-item title="title1"></quark-dropdown-item>
-      <quark-dropdown-item value="1"></quark-dropdown-item>
+      <quark-dropdown-item :value="value"></quark-dropdown-item>
+      <quark-dropdown-item></quark-dropdown-item>
       <!-- <quark-dropdown-item></quark-dropdown-item> -->
       <!-- <div>11111</div> -->
     </quark-dropdown-menu>
 
-    <quark-dropdown-menu>
+    <!-- <quark-dropdown-menu>
       <quark-dropdown-item title="title1"></quark-dropdown-item>
       <quark-dropdown-item value="1"></quark-dropdown-item>
-      <!-- <quark-dropdown-item></quark-dropdown-item> -->
-      <!-- <div>11111</div> -->
-    </quark-dropdown-menu>
+    </quark-dropdown-menu> -->
 
     <h2>{{ translate("customStyle") }}</h2>
   </div>
@@ -21,7 +20,7 @@
 
 <script>
 import { createComponent } from "@/utils/create";
-import { onBeforeMount } from "vue";
+import { onBeforeMount, ref } from "vue";
 const { createDemo, translate } = createComponent("dropdownmenu");
 import { useTranslate } from "@/sites/assets/util/useTranslate";
 
@@ -57,8 +56,11 @@ export default createDemo({
       });
     });
 
+    const value = ref(1);
+
     return {
       translate,
+      value: value,
     };
   },
 });
