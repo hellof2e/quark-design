@@ -62,7 +62,17 @@ class QuarkDropdownItem extends QuarkElement {
   options: DropdownItemOption[] = [
     { text: "全部商品", value: 0 },
     { text: "新款商品", value: 1 },
-    { text: "活动商品", value: 2 },
+    { text: "活动商品1", value: 11 },
+    { text: "活动商品2", value: 12 },
+    { text: "活动商品3", value: 13 },
+    { text: "活动商品4", value: 14 },
+    { text: "活动商品5", value: 15 },
+    { text: "活动商品6", value: 16 },
+    { text: "活动商品7", value: 17 },
+    { text: "活动商品8", value: 18 },
+    { text: "活动商品9", value: 19 },
+    { text: "活动商品10", value: 20 },
+    { text: "活动商品11", value: 21 },
   ];
 
   // 监听点击组件外部
@@ -211,24 +221,33 @@ class QuarkDropdownItem extends QuarkElement {
     };
 
     const contentCSS = () => {
-      const { bottom, top } = this.root.current.getBoundingClientRect();
-
-      const offset = window.innerHeight - bottom;
-
-      const wrapperStyle: any = {};
-
       const contentStyle: any = {
         zIndex: this.zIndex + 1,
       };
 
       const maskStyle: any = {
         zIndex: this.zIndex,
+        animationDuration: "0.2s",
       };
+
+      if (!this.root.current) {
+        return {
+          wrapperStyle: {},
+          contentStyle,
+          maskStyle,
+        };
+      }
+
+      const { bottom, top } = this.root.current.getBoundingClientRect();
+
+      const offset = window.innerHeight - bottom;
+
+      const wrapperStyle: any = {};
 
       if (this.direction === "up") {
         contentStyle.bottom = 0;
         wrapperStyle.bottom = window.innerHeight - top + "px";
-        wrapperStyle.height = window.innerHeight - top + "px";
+        wrapperStyle.height = top + "px";
       } else if (this.direction === "down") {
         contentStyle.top = 0;
         wrapperStyle.top = bottom + "px";
