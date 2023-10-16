@@ -1,7 +1,7 @@
 <template>
   <div class="demo no-padding action-sheet-demo">
     <h2>{{ translate("basic") }}</h2>
-    <quark-dropdown-menu active-color="#f00">
+    <quark-dropdown-menu>
       <quark-dropdown-item title="title1"></quark-dropdown-item>
       <quark-dropdown-item :value="value"></quark-dropdown-item>
       <!-- <quark-dropdown-item> 12321312312312 </quark-dropdown-item> -->
@@ -16,17 +16,17 @@
     </quark-dropdown-menu>
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <quark-dropdown-menu direction="up">
       <quark-dropdown-item></quark-dropdown-item>
       <quark-dropdown-item value="1"></quark-dropdown-item>
     </quark-dropdown-menu>
 
     <h2>{{ translate("customStyle") }}</h2>
+
+    <quark-dropdown-menu>
+      <quark-dropdown-item disabled :value="value"></quark-dropdown-item>
+      <quark-dropdown-item disabled :value="value"></quark-dropdown-item>
+    </quark-dropdown-menu>
   </div>
 </template>
 

@@ -14,13 +14,7 @@ import style from "./style.css";
 import "../popup";
 import "../cell";
 import "../../../quark-icons/lib/success";
-
-type Direction = "down" | "up";
-
-export interface Props {
-  title?: string;
-  zIndex?: number;
-}
+import { Props } from "../dropdownmenu";
 
 export interface DropdownItemOption {
   text: string;
@@ -42,21 +36,22 @@ class QuarkDropdownItem extends QuarkElement {
   @property({ type: Boolean })
   disabled: false;
 
-  activeColor = "#08f";
-
   root: any = createRef();
   titleRef: any = createRef();
 
-  zIndex = 10;
+  @state()
+  props: Props = {
+    activeColor: "#08f",
+    zIndex: 10,
+    overlay: true,
+    direction: "down",
+  };
 
   @state()
   showPopup = false;
 
   @state()
   currentValue = "";
-
-  @state()
-  direction: Direction = "down";
 
   @state()
   options: DropdownItemOption[] = [
@@ -77,6 +72,7 @@ class QuarkDropdownItem extends QuarkElement {
 
   // 监听点击组件外部
   clickAway = (e) => {
+    if (this.disabled) return;
     const targetNodes = [this.root.current, this.titleRef.current];
     const target =
       e.target.tagName === "QUARK-DROPDOWN-ITEM"
@@ -103,20 +99,12 @@ class QuarkDropdownItem extends QuarkElement {
     document.removeEventListener("click", this.clickAway);
   }
 
-  setActiveColor = (color) => {
-    this.activeColor = color;
-  };
-
-  setZIndex = (zIndex) => {
-    this.zIndex = zIndex;
-  };
-
   setOption = (option: DropdownItemOption[]) => {
     this.options = option;
   };
 
-  setDirection = (direction: Direction) => {
-    this.direction = direction;
+  setProps = (props) => {
+    this.props = props;
   };
 
   renderTitle() {
@@ -146,7 +134,7 @@ class QuarkDropdownItem extends QuarkElement {
 
       if (item.value == this.currentValue) {
         classList.push("quark-dropdown-item__option--active");
-        style.color = this.activeColor || "#08f";
+        style.color = this.props.activeColor || "#08f";
       }
 
       return {
@@ -178,13 +166,15 @@ class QuarkDropdownItem extends QuarkElement {
           {item.text}
         </div>
         {item.value == this.currentValue && (
-          <quark-icon-success size="18" color={this.activeColor} />
+          <quark-icon-success size="18" color={this.props.activeColor} />
         )}
       </quark-cell>
     );
   };
 
   toggle = (show = !this.showPopup) => {
+    if (this.disabled) return;
+
     if (show === this.showPopup) {
       return;
     }
@@ -201,17 +191,20 @@ class QuarkDropdownItem extends QuarkElement {
       const style: any = {};
 
       if (this.showPopup) {
-        style.color = this.activeColor;
+        style.color = this.props.activeColor;
       }
 
       const classObj = {
         title: true,
-        "title--down": this.showPopup === (this.direction === "down"),
+        "title--down": this.showPopup === (this.props.direction === "down"),
         "title--active": this.showPopup,
+        "title--disabled": this.disabled,
       };
 
       const classStr = Object.keys(classObj)
-        .map((key) => classObj[key] && "quark-dropdown-menu__" + key)
+        .map((key) => {
+          if (classObj[key]) return "quark-dropdown-menu__" + key;
+        })
         .join(" ");
 
       return {
@@ -221,13 +214,14 @@ class QuarkDropdownItem extends QuarkElement {
     };
 
     const contentCSS = () => {
+      const { zIndex, direction } = this.props;
       const contentStyle: any = {
-        zIndex: this.zIndex + 1,
+        zIndex: zIndex + 1,
       };
 
       const maskStyle: any = {
-        zIndex: this.zIndex,
-        animationDuration: "0.2s",
+        zIndex: zIndex,
+        opacity: this.showPopup ? 1 : 0,
       };
 
       if (!this.root.current) {
@@ -244,15 +238,17 @@ class QuarkDropdownItem extends QuarkElement {
 
       const wrapperStyle: any = {};
 
-      if (this.direction === "up") {
+      if (direction === "up") {
         contentStyle.bottom = 0;
         wrapperStyle.bottom = window.innerHeight - top + "px";
         wrapperStyle.height = top + "px";
-      } else if (this.direction === "down") {
+      } else if (direction === "down") {
         contentStyle.top = 0;
         wrapperStyle.top = bottom + "px";
         wrapperStyle.height = offset + "px";
       }
+
+      wrapperStyle.display = this.showPopup ? "block" : "none";
 
       return {
         wrapperStyle,
@@ -271,28 +267,28 @@ class QuarkDropdownItem extends QuarkElement {
         >
           {this.renderTitle()}
         </div>
-        {this.showPopup && (
+        <div
+          class="quark-dropdown-item__content--wrapper"
+          style={contentCSS().wrapperStyle}
+        >
           <div
-            class="quark-dropdown-item__content--wrapper"
-            style={contentCSS().wrapperStyle}
+            class="quark-dropdown-item__content"
+            style={contentCSS().contentStyle}
           >
-            <div
-              class="quark-dropdown-item__content"
-              style={contentCSS().contentStyle}
-            >
+            <div class="quark-dropdown-item__content--inner">
               <slot>
                 <quark-cell-group>
                   {this.options.map(this.renderOption)}
                 </quark-cell-group>
               </slot>
             </div>
-            <div
-              class="quark-dropdown-item__content--mask"
-              style={contentCSS().maskStyle}
-              onClick={() => this.toggle(false)}
-            />
           </div>
-        )}
+          <div
+            class="quark-dropdown-item__content--mask"
+            style={contentCSS().maskStyle}
+            onClick={() => this.toggle(false)}
+          />
+        </div>
       </div>
     );
   }
