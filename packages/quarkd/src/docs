@@ -1,10 +1,23 @@
 # 更新日志
-## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
+### [1.4.1](https://github.com/hellof2e/quark-design/compare/v1.4.0...v1.4.1) (2023-10-19)
+
+
+### 🎉 Features
+
+* form文档修改 ([#303](https://github.com/hellof2e/quark-design/issues/303)) ([50311d0](https://github.com/hellof2e/quark-design/commit/50311d0e601ce849dc0a5c88521d94fd18a322fb))
+* update demo ([a3644bf](https://github.com/hellof2e/quark-design/commit/a3644bfd1381624c7626d04512bf41e4d64cfcea))
+* update quarkd ([6477a77](https://github.com/hellof2e/quark-design/commit/6477a77cd43165a4ece4b08545f17911f25a3e95))
 
 
 ### 🐞 Bug Fixes
 
-* 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
+* 修复 toast loading 动画消失文字和图标不同步问题 ([ae83fc8](https://github.com/hellof2e/quark-design/commit/ae83fc894fcd610275bdbb8241e746990a9c1e3a))
+
+## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
+
+### 🐞 Bug Fixes
+
+- 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
 
 ## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
 
