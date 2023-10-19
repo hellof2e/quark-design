@@ -48,26 +48,34 @@ class QuarkToast extends QuarkElement {
 
   toastRef: any = createRef();
 
+  loadingtRef: any = createRef();
+
   static allowMultiple = false;
 
   componentDidMount(): void {
-    this.dRemove = false;
     const el = this.toastRef.current;
     if (el) {
       el.addEventListener("transitionend", () => {
+        this.dRemove = false;
+        // 有两次动画开始和借宿，结束的时候在移除节点
+        if (!el.classList.contains("quark-toast-leave")) return;
         if (el && el.parentNode && !this.show) {
-          el.parentNode.removeChild(el);
+          try {
+            // document.body.removeChild(this);
+          } catch (error) {
+            // todo something
+          }
         }
       });
     }
   }
 
-  // 删除 toast dom
-  transitionendChange = () => {
-    if (!this.show && this.dRemove) {
-      document.body.removeChild(this);
-    }
-  };
+  // // 删除 toast dom
+  // transitionendChange = () => {
+  //   if (!this.show && this.dRemove) {
+  //     document.body.removeChild(this);
+  //   }
+  // };
 
   shouldComponentUpdate(
     propName: string,
@@ -75,6 +83,7 @@ class QuarkToast extends QuarkElement {
     newValue: string | boolean
   ): boolean {
     if (propName === "show") {
+      const { current: loadingtCurrent } = this.loadingtRef;
       if (this.toastRef && this.toastRef.current) {
         const { current } = this.toastRef;
         // 设置退出过渡动画
@@ -82,6 +91,8 @@ class QuarkToast extends QuarkElement {
           // 由关闭到打开
           current.classList.remove("quark-toast-leave");
         } else {
+          if (loadingtCurrent)
+            loadingtCurrent.classList.add("quark-loading-leave");
           current.classList.add("quark-toast-leave");
         }
       }
@@ -131,7 +142,7 @@ class QuarkToast extends QuarkElement {
         >
           {this.type !== "text" && this.renderIcon()}
           <quark-loading
-            class="loading"
+            ref={this.loadingtRef}
             size={this.iconSize}
             color="#ffffff"
             type="circular"

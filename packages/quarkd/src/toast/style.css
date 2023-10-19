@@ -64,19 +64,23 @@ quark-icon-whitewarning-o {
 }
 
 :host quark-loading {
-  display: none;
+  display: block;
+  margin-right: var(--toast-loading-right, 0);
+  margin-bottom: var(--toast-loading-bottom, 14px);
+}
+:host([type="loading"]) .quark-toast--horizontal quark-loading {
+  margin-bottom: var(--toast-loading-bottom) !important;
+  margin-right: var(--toast-loading-right, 18px) !important;
 }
 
 :host([show][type="loading"]) quark-loading {
+  opacity: 1;
   display: block;
-  margin-bottom: var(--toast-loading-bottom, 14px);
-  margin-right: var(--toast-loading-right, 0);
 }
 
 :host([show][type="loading"]) .quark-toast--horizontal quark-loading {
+  opacity: 1;
   display: block;
-  margin-bottom: var(--toast-loading-bottom, 0);
-  margin-right: var(--toast-loading-right, 8px);
 }
 
 :host(:not([type="text"])) quark-icon-whitesuccess-o,
@@ -88,4 +92,8 @@ quark-icon-whitewarning-o {
 :host .quark-toast-leave {
   opacity: 0;
   transition: opacity var(--toast-transition-fade-out, 0.3s) ease-out;
+}
+:host .quark-loading-leave {
+  opacity: 0;
+  transition: opacity var(--toast-transition-fade-out, 0.4s) ease-out;
 }
