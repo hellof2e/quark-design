@@ -27,7 +27,7 @@ import "quarkd/lib/switch";
 可以通过 `size` 或修改元素 `font-size` 来控制大小。
 
 ```html
-<quark-switch size="26px"></quark-switch>
+<quark-switch size="26"></quark-switch>
 <quark-switch style="font-size: 26px"></quark-switch>
 ```
 
