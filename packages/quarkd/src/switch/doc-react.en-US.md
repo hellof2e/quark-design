@@ -27,7 +27,7 @@ import { Switch } from "@quarkd/quark-react";
 TO change switch size, set `size` prop on the Switch or alter `font-size` value of `style` prop.
 
 ```html
-<Switch size="26px"></Switch> <Switch style="font-size: 26px"></Switch>
+<Switch size="26"></Switch> <Switch style="font-size: 26px"></Switch>
 ```
 
 ### Custom Color
