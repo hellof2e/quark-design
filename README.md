@@ -68,6 +68,3 @@ For help, discussion about best practices, or any other conversation that would 
 
 If you're interested in contributing to quark design, please read our [contributing docs](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
 
-## GitHub Stargazaers
-
-![stargazers](https://starchart.cc/hellof2e/quark-design.svg)
