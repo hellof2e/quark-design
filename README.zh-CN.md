@@ -38,15 +38,25 @@
 
 ---
 
-## 文档
+## 文档（组件库源码只有一份！技术栈不同，给出如下文档示例）
 
-更多介绍，请访问
+> 组件库源码只有一份！技术栈不同，给出如下文档说明
+
+更多介绍，请访问。
 
 - [Vue Doc](https://vue-quarkd.hellobike.com)
 - [React Doc](https://react-quarkd.hellobike.com)
 - [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkd.hellobike.com)
 - [Angular Doc(work in progress...)](https://angular-quarkd.hellobike.com)
 - [Svelte Doc(work in progress...)](https://svelte-quarkd.hellobike.com)
+
+## 使用示例
+```
+import "quarkd/lib/button";
+
+// 就像一个普通的 div 标签 `<div>xx</div>`, 可以在任何浏览器被使用
+<quark-button type="primary">Button</quark-button>;
+```
 
 ## 社区交流
 
