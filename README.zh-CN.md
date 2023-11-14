@@ -51,13 +51,14 @@
 - [Svelte Doc(work in progress...)](https://svelte-quarkd.hellobike.com)
 
 ## 使用示例
-```html
-import "quarkd/lib/button";
+```js
+import "quarkd/lib/button"
 
 // 就像一个普通的 div 标签 `<div>xx</div>`, 可以在任何浏览器被使用
-<quark-button type="primary">Button</quark-button>;
+<quark-button type="primary">Button</quark-button>
+```
 
-
+```html
 // react
 <quark-button type="primary" onClick="onClick">Button</quark-button>
 
