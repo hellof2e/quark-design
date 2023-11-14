@@ -46,7 +46,7 @@ npm install quarkd
 
 ## Usage example
 
-```html
+```jsx
 import "quarkd/lib/button";
 
 // like a normal div tag `<div>xx</div>`, can be used in any browser.
