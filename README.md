@@ -36,7 +36,7 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit [DOCS](https://vue-quarkd.hellobike.com).
+For full documentation, visit [Docs](https://vue-quarkd.hellobike.com).
 
 ## Install
 
@@ -44,11 +44,12 @@ For full documentation, visit [DOCS](https://vue-quarkd.hellobike.com).
 npm install quarkd
 ```
 
-## Usage
+## Usage example
 
 ```js
 import "quarkd/lib/button";
 
+// like a normal div tag `<div>xx</div>`, can be used in any browser.
 <quark-button type="primary">Button</quark-button>;
 ```
 
