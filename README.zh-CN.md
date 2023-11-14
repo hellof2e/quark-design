@@ -72,6 +72,11 @@ import "quarkd/lib/button"
 <quark-button type="primary" (click)="onClick">Button</quark-button>
 ```
 
+
+## Vs Code 插件
+
+[Visual Studio | Marketplace](https://marketplace.visualstudio.com/items?itemName=quarkd.quarkd-vscode-extension)
+
 ## 社区交流
 
 如需帮助、讨论最佳实践或任何其他可从可搜索中获益的对话：
