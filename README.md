@@ -57,13 +57,13 @@ import "quarkd/lib/button";
 // react
 <quark-button type="primary" onClick="onClick">Button</quark-button>
 
-<!-- vue -->
+// vue
 <quark-button type="primary" @click="onClick">Button</quark-button>
 
-<!-- svelte -->
+// svelte
 <quark-button type="primary" on:click={onClick}>Button</quark-button>
 
-<!-- angular -->
+// angular
 <quark-button type="primary" (click)="onClick">Button</quark-button>
 ```
 
