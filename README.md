@@ -67,6 +67,10 @@ import "quarkd/lib/button";
 <quark-button type="primary" (click)="onClick">Button</quark-button>
 ```
 
+## Vs Code plugin
+
+[Visual Studio | Marketplace](https://marketplace.visualstudio.com/items?itemName=quarkd.quarkd-vscode-extension)
+
 ## Community
 
 For help, discussion about best practices, or any other conversation that would benefit from being searchable:
