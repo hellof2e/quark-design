@@ -50,7 +50,21 @@ npm install quarkd
 import "quarkd/lib/button";
 
 // like a normal div tag `<div>xx</div>`, can be used in any browser.
-<quark-button type="primary">Button</quark-button>;
+<quark-button type="primary" onclick="onClick">Button</quark-button>;
+
+
+
+// react
+<quark-button type="primary" onClick="onClick">Button</quark-button>
+
+<!-- vue -->
+<quark-button type="primary" @click="onClick">Button</quark-button>
+
+<!-- svelte -->
+<quark-button type="primary" on:click={onClick}>Button</quark-button>
+
+<!-- angular -->
+<quark-button type="primary" (click)="onClick">Button</quark-button>
 ```
 
 ## Community
