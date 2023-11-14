@@ -46,14 +46,14 @@ npm install quarkd
 
 ## Usage example
 
-```js
+```html
 import "quarkd/lib/button";
 
 // like a normal div tag `<div>xx</div>`, can be used in any browser.
 <quark-button type="primary" onclick="onClick">Button</quark-button>;
+```
 
-
-
+```html
 // react
 <quark-button type="primary" onClick="onClick">Button</quark-button>
 
