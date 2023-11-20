@@ -179,6 +179,15 @@ class QuarkTabs extends QuarkElement {
     }
   };
 
+  emitChange = (active) => {
+    this.$emit("change", {
+      detail: {
+        name: active.name,
+        label: active.label || "",
+      },
+    });
+  };
+
   // 右滑
   prevSlider = () => {
     const active = this.tabPos[this.activekey];
@@ -188,6 +197,7 @@ class QuarkTabs extends QuarkElement {
     const keys = Object.keys(this.tabPos);
     if (active.index <= 0 && keys.length > 0) {
       this.activekey = keys[keys.length - 1];
+      this.emitChange(this.tabPos[this.activekey]);
       return;
     }
     const preIndex = active.index - 1;
@@ -210,6 +220,7 @@ class QuarkTabs extends QuarkElement {
       return;
     }
     this.activekey = activeKey;
+    this.emitChange(this.tabPos[this.activekey]);
   };
 
   // 左滑
@@ -221,6 +232,7 @@ class QuarkTabs extends QuarkElement {
     const keys = Object.keys(this.tabPos);
     if (active.index >= keys.length - 1) {
       this.activekey = keys[0];
+      this.emitChange(this.tabPos[this.activekey]);
       return;
     }
     const nextIndex = active.index + 1;
@@ -238,11 +250,11 @@ class QuarkTabs extends QuarkElement {
       this.nextSlider();
       return;
     }
-    // console.log(nextItem);
     if (!activeKey) {
       return;
     }
     this.activekey = activeKey;
+    this.emitChange(this.tabPos[this.activekey]);
   };
 
   angle = (start: any, end: any) => {
@@ -323,12 +335,7 @@ class QuarkTabs extends QuarkElement {
       return;
     }
     this.handleChange(item.name);
-    this.$emit("change", {
-      detail: {
-        name: item.name,
-        label: item.label || "",
-      },
-    });
+    this.emitChange(item);
   };
 
   renderTabNav = () => {

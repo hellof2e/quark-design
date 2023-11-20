@@ -64,7 +64,7 @@ import { Tabs, TabContent } from "@quarkd/quark-react";
 </Tabs>
 ```
 
-### 点击事件
+### 切换事件
 
 ```js
 export default () => {
