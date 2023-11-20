@@ -82,7 +82,7 @@ data() {
 </quark-tabs>
 ```
 
-### 点击事件
+### 切换事件
 
 ```html
 <quark-tabs :activekey="activeName1" @change="onChange">

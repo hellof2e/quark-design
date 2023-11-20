@@ -64,7 +64,7 @@ Horizontal scrolling is automatically supported when the length exceeds the view
 </Tabs>
 ```
 
-### Click Tab Event
+### Change Tab Event
 
 ```js
 export default () => {

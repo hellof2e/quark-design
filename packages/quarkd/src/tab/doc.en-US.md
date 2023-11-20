@@ -82,7 +82,7 @@ Horizontal scrolling is automatically supported when the length exceeds the view
 </quark-tabs>
 ```
 
-### Click Tab Event
+### Change Tab Event
 
 ```html
 <quark-tabs :activekey="activeName1" @change="onChange">
