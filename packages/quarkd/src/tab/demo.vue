@@ -154,7 +154,7 @@ export default createDemo({
             dark: "深色模式",
             name: "通过名称匹配",
             scroll: "横向滚动",
-            click: "点击事件",
+            click: "切换事件",
             sticky: "吸顶效果",
           },
           selected: "当前选择：",
