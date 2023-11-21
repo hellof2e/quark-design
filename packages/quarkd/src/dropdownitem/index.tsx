@@ -15,6 +15,7 @@ import "../popup";
 import "../cell";
 import "../../../quark-icons/lib/success";
 import { Props } from "../dropdownmenu";
+import { slotAssignedElements } from "../../utils/public";
 
 export interface DropdownItemOption {
   text: string;
@@ -43,7 +44,7 @@ class QuarkDropdownItem extends QuarkElement {
   props: Props = {
     activeColor: "#08f",
     zIndex: 10,
-    overlay: true,
+    hideOverlay: true,
     direction: "down",
   };
 
@@ -55,30 +56,24 @@ class QuarkDropdownItem extends QuarkElement {
 
   @state()
   options: DropdownItemOption[] = [
-    { text: "全部商品", value: 0 },
-    { text: "新款商品", value: 1 },
-    { text: "活动商品1", value: 11 },
-    { text: "活动商品2", value: 12 },
-    { text: "活动商品3", value: 13 },
-    { text: "活动商品4", value: 14 },
-    { text: "活动商品5", value: 15 },
-    { text: "活动商品6", value: 16 },
-    { text: "活动商品7", value: 17 },
-    { text: "活动商品8", value: 18 },
-    { text: "活动商品9", value: 19 },
-    { text: "活动商品10", value: 20 },
-    { text: "活动商品11", value: 21 },
+    // { text: "全部商品", value: 0 },
+    // { text: "新款商品", value: 1 },
+    // { text: "活动商品", value: 2 },
   ];
+
+  @state()
+  selfNodes = [];
+
+  contentSlotRef: any = createRef();
 
   // 监听点击组件外部
   clickAway = (e) => {
     if (this.disabled) return;
-    const targetNodes = [this.root.current, this.titleRef.current];
     const target =
       e.target.tagName === "QUARK-DROPDOWN-ITEM"
         ? e.target.root.current
         : e.target;
-    const isClickAway = targetNodes.every((item) => {
+    const isClickAway = this.selfNodes.every((item) => {
       return item && !item.contains(target);
     });
     if (isClickAway) {
@@ -88,6 +83,7 @@ class QuarkDropdownItem extends QuarkElement {
 
   componentDidMount() {
     this.currentValue = this.value;
+    this.selfNodes = [this.root.current, this.titleRef.current];
     document.addEventListener("click", this.clickAway, {
       capture: false,
       passive: false,
@@ -99,8 +95,8 @@ class QuarkDropdownItem extends QuarkElement {
     document.removeEventListener("click", this.clickAway);
   }
 
-  setOption = (option: DropdownItemOption[]) => {
-    this.options = option;
+  setOptions = (options: DropdownItemOption[]) => {
+    this.options = options;
   };
 
   setProps = (props) => {
@@ -185,6 +181,14 @@ class QuarkDropdownItem extends QuarkElement {
       this.$emit("close");
     }
   };
+  onContentSlotChange = () => {
+    if (this.contentSlotRef.current) {
+      const allItems = slotAssignedElements(
+        this.contentSlotRef.current?.assignedNodes()
+      );
+      this.selfNodes = this.selfNodes.concat(allItems);
+    }
+  };
 
   render() {
     const titleCSS = () => {
@@ -219,24 +223,26 @@ class QuarkDropdownItem extends QuarkElement {
         zIndex: zIndex + 1,
       };
 
+      const wrapperStyle: any = {
+        zIndex: zIndex,
+      };
+
       const maskStyle: any = {
         zIndex: zIndex,
         opacity: this.showPopup ? 1 : 0,
+        visibility: this.showPopup ? "visible" : "hidden",
       };
 
       if (!this.root.current) {
         return {
-          wrapperStyle: {},
+          wrapperStyle,
           contentStyle,
-          maskStyle,
         };
       }
 
       const { bottom, top } = this.root.current.getBoundingClientRect();
 
       const offset = window.innerHeight - bottom;
-
-      const wrapperStyle: any = {};
 
       if (direction === "up") {
         contentStyle.bottom = 0;
@@ -248,7 +254,15 @@ class QuarkDropdownItem extends QuarkElement {
         wrapperStyle.height = offset + "px";
       }
 
-      wrapperStyle.display = this.showPopup ? "block" : "none";
+      if (this.showPopup) {
+        wrapperStyle.visibility = "visible";
+        wrapperStyle.opacity = 1;
+        contentStyle.maxHeight = "80%";
+      } else {
+        wrapperStyle.visibility = "hidden";
+        wrapperStyle.opacity = 0;
+        contentStyle.maxHeight = 0;
+      }
 
       return {
         wrapperStyle,
@@ -276,18 +290,23 @@ class QuarkDropdownItem extends QuarkElement {
             style={contentCSS().contentStyle}
           >
             <div class="quark-dropdown-item__content--inner">
-              <slot>
+              <slot
+                ref={this.contentSlotRef}
+                onslotchange={this.onContentSlotChange}
+              >
                 <quark-cell-group>
                   {this.options.map(this.renderOption)}
                 </quark-cell-group>
               </slot>
             </div>
           </div>
-          <div
-            class="quark-dropdown-item__content--mask"
-            style={contentCSS().maskStyle}
-            onClick={() => this.toggle(false)}
-          />
+          {!this.props.hideOverlay && (
+            <div
+              class="quark-dropdown-item__content--mask"
+              style={contentCSS().maskStyle}
+              onClick={() => this.toggle(false)}
+            />
+          )}
         </div>
       </div>
     );

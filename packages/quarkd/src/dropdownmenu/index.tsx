@@ -6,7 +6,7 @@ import style from "./style.css";
 
 export interface Props {
   zIndex?: number;
-  overlay?: boolean;
+  hideOverlay?: boolean;
   activeColor?: string;
   direction?: "up" | "down";
 }
@@ -27,8 +27,8 @@ class QuarkDropdownMenu extends QuarkElement {
   @property({ type: String })
   direction: Direction = "down";
 
-  @property({ type: Boolean })
-  overlay = true;
+  @property({ type: Boolean, attribute: "hide-overlay" })
+  hideOverlay = false;
 
   root: any = createRef();
   rootSlotRef: any = createRef();
@@ -46,7 +46,7 @@ class QuarkDropdownMenu extends QuarkElement {
         item.setProps({
           activeColor: this.activeColor,
           zIndex: this.zIndex,
-          overlay: this.overlay,
+          hideOverlay: this.hideOverlay,
           direction: this.direction,
         });
       });
