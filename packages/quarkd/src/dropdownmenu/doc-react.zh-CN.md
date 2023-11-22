@@ -203,14 +203,20 @@ export default () => {
 ### 类型定义
 
 ```ts
-type Direction = "down" | "up";
+type DropdownMenuDirection = "down" | "up";
 
 type DropdownMenuProps = {
   zIndex?: number;
   hideOverlay?: boolean;
   activeColor?: string;
-  direction?: Direction;
+  direction?: DropdownMenuDirection;
   swipeThreshold?: number;
+};
+
+type DropdownItemProps = {
+  value?: string;
+  title?: string;
+  disabled?: boolean;
 };
 
 type DropdownItemOption = {

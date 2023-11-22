@@ -8,9 +8,9 @@ import {
 } from "quarkd/lib/dropdownitem";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
-type DropDownItemProps = componentBaseInterface &
+type DropdownItemProps = componentBaseInterface &
   ReactifyProps<IDropdownItemProps, CustomEvent>;
-type DropdownItemType = FC<DropDownItemProps>;
+type DropdownItemType = FC<DropdownItemProps>;
 
 interface Ref {
   setOptions(options: DropdownItemOption[]): void;
@@ -19,5 +19,5 @@ interface Ref {
 
 type DropdownItemInstance = Ref & HTMLElement;
 const DropdownItem = reactify("quark-dropdown-item") as DropdownItemType;
-export { DropdownItemInstance, DropDownItemProps, DropdownItemOption };
+export { DropdownItemInstance, DropdownItemProps, DropdownItemOption };
 export default DropdownItem;

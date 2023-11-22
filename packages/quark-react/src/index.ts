@@ -79,7 +79,7 @@ import DropdownMenu, {
 import DropdownItem, {
   DropdownItemInstance,
   DropdownItemOption,
-  DropDownItemProps,
+  DropdownItemProps,
 } from "./dropdown-item";
 
 export {
@@ -174,5 +174,5 @@ export {
   DropdownItem,
   DropdownItemInstance,
   DropdownItemOption,
-  DropDownItemProps,
+  DropdownItemProps,
 };

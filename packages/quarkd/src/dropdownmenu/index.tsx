@@ -4,13 +4,13 @@ import { slotAssignedElements } from "../../utils/public";
 
 import style from "./style.css";
 
-export type Direction = "down" | "up";
+export type DropdownMenuDirection = "down" | "up";
 
 export interface IDropdownMenuProps {
   zIndex?: number;
   hideOverlay?: boolean;
   activeColor?: string;
-  direction?: Direction;
+  direction?: DropdownMenuDirection;
   swipeThreshold?: number;
 }
 
@@ -26,7 +26,7 @@ class QuarkDropdownMenu extends QuarkElement {
   activeColor = "#08f";
 
   @property({ type: String })
-  direction: Direction = "down";
+  direction: DropdownMenuDirection = "down";
 
   @property({ type: Boolean, attribute: "hide-overlay" })
   hideOverlay = false;

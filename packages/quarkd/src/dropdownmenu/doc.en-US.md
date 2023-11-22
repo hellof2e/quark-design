@@ -194,14 +194,20 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 ### Type Definition
 
 ```ts
-type Direction = "down" | "up";
+type DropdownMenuDirection = "down" | "up";
 
 type DropdownMenuProps = {
   zIndex?: number;
   hideOverlay?: boolean;
   activeColor?: string;
-  direction?: Direction;
+  direction?: DropdownMenuDirection;
   swipeThreshold?: number;
+};
+
+type DropdownItemProps = {
+  value?: string;
+  title?: string;
+  disabled?: boolean;
 };
 
 type DropdownItemOption = {
