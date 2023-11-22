@@ -5,9 +5,6 @@
       <quark-dropdown-item
         ref="dropdownItemRef1"
         :value="value1"
-        @change="onChange"
-        @open="onOpen"
-        @close="onClose"
       ></quark-dropdown-item>
       <quark-dropdown-item
         ref="dropdownItemRef2"
@@ -15,20 +12,20 @@
       ></quark-dropdown-item>
     </quark-dropdown-menu>
 
-    <h2>自定义菜单内容</h2>
+    <h2>{{ translate("customContent") }}</h2>
     <quark-dropdown-menu>
       <quark-dropdown-item
         ref="dropdownItemRef3"
         value="0"
       ></quark-dropdown-item>
-      <quark-dropdown-item ref="dropdownItemRef4" title="筛选">
-        <quark-cell title="包邮">
+      <quark-dropdown-item ref="dropdownItemRef4" :title="translate('title')">
+        <quark-cell :title="translate('title1')">
           <quark-switch
             :checked="switch1"
             @change="onSwitch1Change"
           ></quark-switch>
         </quark-cell>
-        <quark-cell title="团购">
+        <quark-cell :title="translate('title2')">
           <quark-switch
             :checked="switch2"
             @change="onSwitch2Change"
@@ -36,13 +33,13 @@
         </quark-cell>
         <div style="padding: 5px 16px">
           <quark-button type="primary" size="big" @click="onConfirm">
-            确定
+            {{ translate("confirm") }}
           </quark-button>
         </div>
       </quark-dropdown-item>
     </quark-dropdown-menu>
 
-    <h2>自定义选中态颜色</h2>
+    <h2>{{ translate("customContent") }}</h2>
     <quark-dropdown-menu active-color="#f00">
       <quark-dropdown-item
         ref="dropdownItemRef5"
@@ -68,8 +65,8 @@
       ></quark-dropdown-item>
     </quark-dropdown-menu>
 
-    <h2>向上展开</h2>
-    <quark-dropdown-menu direction="up">
+    <h2>{{ translate("direction") }}</h2>
+    <quark-dropdown-menu direction="up" hide-overlay>
       <quark-dropdown-item
         ref="dropdownItemRef9"
         value="0"
@@ -95,27 +92,45 @@ export default createDemo({
       useTranslate({
         "zh-CN": {
           basic: "基本用法",
+          title: "筛选",
+          title1: "包邮",
+          title2: "团购",
+          confirm: "确认",
+          customContent: "自定义菜单内容",
+          customColor: "自定义选中状态颜色",
           disabled: "禁用菜单",
-          title: "带标题",
-          cancel: "带取消按钮",
-          titleStyle: "标题样式",
-          optionStyle: "选项样式",
-          cancelStyle: "取消按钮样式",
-          options: ["选项一", "选项二", "选项三"],
-          titleTxt: "我是标题信息",
-          maskClick: "蒙版点击",
+          direction: "向上展开",
+          option1: [
+            { text: "全部商品", value: "0" },
+            { text: "新款商品", value: "1 " },
+            { text: "活动商品", value: "2 " },
+          ],
+          option2: [
+            { text: "默认排序", value: "a" },
+            { text: "好评排序", value: "b" },
+            { text: "销量排序", value: "c" },
+          ],
         },
         "en-US": {
           basic: "Basic Usage",
-          disabled: "Disabled",
           title: "Title",
-          cancel: "Cancel",
-          titleStyle: "Title Style",
-          optionStyle: "Option Style",
-          cancelStyle: "Cancel Style",
-          options: ["Option 1", "Option 2", "Option 3"],
-          titleTxt: "Title Message",
-          maskClick: "Mask Click",
+          title1: "Title",
+          title2: "Title",
+          customContent: "Custom Content",
+          customColor: "Custom Active Color",
+          confirm: "Confirm",
+          disabled: "Disabled",
+          direction: "Expand Direction",
+          option1: [
+            { text: "Option 0", value: "0" },
+            { text: "Option 1", value: "1 " },
+            { text: "Option 2", value: "2 " },
+          ],
+          option2: [
+            { text: "Option A", value: "a" },
+            { text: "Option B", value: "b" },
+            { text: "Option C", value: "c" },
+          ],
         },
       });
     });
@@ -125,16 +140,6 @@ export default createDemo({
     const value2 = ref("a");
     const switch1 = ref(true);
     const switch2 = ref(false);
-    const option1 = [
-      { text: "全部商品", value: "0" },
-      { text: "新款商品", value: "1 " },
-      { text: "活动商品", value: "2 " },
-    ];
-    const option2 = [
-      { text: "默认排序", value: "a" },
-      { text: "好评排序", value: "b" },
-      { text: "销量排序", value: "c" },
-    ];
     const onSwitch1Change = (e) => {
       switch1.value = e.detail.value;
     };
@@ -154,31 +159,19 @@ export default createDemo({
     const dropdownItemRef10 = ref(null);
 
     onMounted(() => {
-      dropdownItemRef1.value.setOptions(option1);
-      dropdownItemRef2.value.setOptions(option2);
-      dropdownItemRef3.value.setOptions(option1);
-      dropdownItemRef5.value.setOptions(option1);
-      dropdownItemRef6.value.setOptions(option2);
-      dropdownItemRef7.value.setOptions(option1);
-      dropdownItemRef8.value.setOptions(option2);
-      dropdownItemRef9.value.setOptions(option1);
-      dropdownItemRef10.value.setOptions(option2);
+      dropdownItemRef1.value.setOptions(translate("option1"));
+      dropdownItemRef2.value.setOptions(translate("option2"));
+      dropdownItemRef3.value.setOptions(translate("option1"));
+      dropdownItemRef5.value.setOptions(translate("option1"));
+      dropdownItemRef6.value.setOptions(translate("option2"));
+      dropdownItemRef7.value.setOptions(translate("option1"));
+      dropdownItemRef8.value.setOptions(translate("option2"));
+      dropdownItemRef9.value.setOptions(translate("option1"));
+      dropdownItemRef10.value.setOptions(translate("option2"));
     });
 
     const onConfirm = () => {
       dropdownItemRef4.value.toggle();
-    };
-
-    const onChange = (e) => {
-      console.log("on change", e);
-    };
-
-    const onOpen = () => {
-      console.log("on open");
-    };
-
-    const onClose = () => {
-      console.log("on close");
     };
 
     return {
@@ -201,9 +194,6 @@ export default createDemo({
       dropdownItemRef8,
       dropdownItemRef9,
       dropdownItemRef10,
-      onChange,
-      onOpen,
-      onClose,
     };
   },
 });

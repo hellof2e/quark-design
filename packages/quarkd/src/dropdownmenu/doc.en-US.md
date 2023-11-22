@@ -1,221 +1,184 @@
-# ActionSheet
+# DropdownMenu
 
 ### Intro
 
-The pop-up modal panel at the bottom contains multiple options related to the current situation.
+The menu list that pops down downwards.
 
 ### Install
 
-```ts
-import ActionSheet from "quarkd/lib/action-sheet";
+```tsx
+import DropdownMenu from "quarkd/lib/dropdownmenu";
 ```
 
 ### Basic Usage
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-dropdown-menu>
+  <quark-dropdown-item ref="item1" :value="value1"></quark-dropdown-item>
+  <quark-dropdown-item ref="item2" :value="value2"></quark-dropdown-item>
+</quark-dropdown-menu>
 ```
 
 ```js
 export default {
-  methods: {
-    showActionSheet() {
-      const actionSheet = ActionSheet({
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
+  data() {
+    return {
+      value1: "0",
+      value2: "a",
+    };
+  },
+  mounted() {
+    this.$refs.item1.setOptions([
+      { text: "Option1", value: "0" },
+      { text: "Option2", value: "1 " },
+      { text: "Option3", value: "2 " },
+    ]);
+    this.$refs.item2.setOptions([
+      { text: "Option A", value: "a" },
+      { text: "Option B", value: "b" },
+      { text: "Option C", value: "c" },
+    ]);
   },
 };
 ```
 
-### Show Title
+### Custom Content
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-dropdown-menu>
+  <quark-dropdown-item ref="item1" :value="value1"></quark-dropdown-item>
+  <quark-dropdown-item ref="item2" title="Title">
+    <quark-cell title="Title">
+      <quark-switch :checked="switch1" @change="onSwitch1Change"></quark-switch>
+    </quark-cell>
+    <quark-cell title="Title">
+      <quark-switch :checked="switch2" @change="onSwitch2Change"></quark-switch>
+    </quark-cell>
+    <div style="padding: 5px 16px">
+      <quark-button type="primary" size="big" @click="onConfirm">
+        Confirm
+      </quark-button>
+    </div>
+  </quark-dropdown-item>
+</quark-dropdown-menu>
 ```
 
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
 export default {
+  data() {
+    return {
+      value1: "0",
+      value2: "a",
+      switch1: true,
+      switch2: false,
+    };
+  },
+  mounted() {
+    this.$refs.item1.setOptions([
+      { text: "Option1", value: "0" },
+      { text: "Option2", value: "1 " },
+      { text: "Option3", value: "2 " },
+    ]);
+    this.$refs.item2.setOptions([
+      { text: "Option A", value: "a" },
+      { text: "Option B", value: "b" },
+      { text: "Option C", value: "c" },
+    ]);
+  },
   methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
+    onSwitch1Change(e) {
+      this.switch1 = e.detail.value;
+    },
+    onSwitch2Change(e) {
+      this.switch2 = e.detail.value;
+    },
+    onConfirm() {
+      this.$refs.item2.toggle();
     },
   },
 };
 ```
 
-### Show Cancel Button
+### Custom Active Color
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-dropdown-menu active-color="#f00">
+  <quark-dropdown-item></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
+</quark-dropdown-menu>
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
-
-### Custom Title Style
+### Disabled
 
 ```html
-<div @click="showActionSheet()">Click</div>
+<quark-dropdown-menu>
+  <quark-dropdown-item disabled></quark-dropdown-item>
+  <quark-dropdown-item disabled></quark-dropdown-item>
+</quark-dropdown-menu>
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
-
-### Custom Options Style
+### Expand Direction
 
 ```html
-<div @click="showActionSheet()">Click</div>
-```
-
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1", color: "#999", fontSize: 20 },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
-
-### Custom Cancel Button Style
-
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        cancelTextColor: "red",
-        cancelTextFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+<quark-dropdown-menu direction="up">
+  <quark-dropdown-item></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
+</quark-dropdown-menu>
 ```
 
 ## API
 
-### Props
+### DropdownMenu Props
 
-| Attribute          | Description                  | Type                                      | Default   |
-| ------------------ | ---------------------------- | ----------------------------------------- | --------- |
-| title              | Title                        | `string`                                  |           |
-| actions            | Options                      | `Action []`                               | `require` |
-| cancelText         | Text of cancel button        | `string `                                 |
-| titleColor         | Title color                  | `string `                                 | `#969799` |
-| titleFontSize      | Title font size              | `number `                                 | `14`      |
-| cancelTextColor    | Text color of cancel button  | `string `                                 | `#646566` |
-| cancelTextFontSize | Font size of cancel button   | `number`                                  | `16`      |
-| zIndex             | actionsheet z-index          | `number `                                 | `999`     |
-| select             | Selected callback            | `(index: number, action: Action) => void` |           |
-| cancel             | Cancel button click callback | `() => void `                             |           |
-| close              | Mask click callback          | `() => void`                              |           |
+| Attribute    | Description                      | Type         | Default |
+| ------------ | -------------------------------- | ------------ | ------- |
+| active-color | Active color of title and option | `string`     | `#08f`  |
+| direction    | Expand direction                 | `up`、`down` | `down`  |
+| z-index      | z-index of menu item             | `number`     | `10`    |
+| hide-overlay | Whether to hide overlay          | `boolean`    | `false` |
 
-### Data Structure of Action
+### DropdownMenuItem Props
 
-```js
-type Action = {
-  name: string,
-  color?: string,
-  fontSize?: number,
+| Attribute | Description                      | Type      | Default                 |
+| --------- | -------------------------------- | --------- | ----------------------- |
+| value     | Value of current option          | `string`  |                         |
+| title     | Item title                       | `string`  | Text of selected option |
+| disabled  | Whether to disable dropdown item | `boolean` | `false`                 |
+
+### DropdownItem Events
+
+| Event  | Description                             | Arguments                                    |
+| ------ | --------------------------------------- | -------------------------------------------- |
+| change | Emitted select option and value changed | `e: ({ detail: { value: string } }) => void` |
+| open   | Emitted when opening menu               | -                                            |
+| close  | Emitted when closing menu               | -                                            |
+
+### DropdownItem Slots
+
+| Name    | Description |
+| ------- | ----------- |
+| default | Content     |
+
+### DropdownItem Methods
+
+| Name   | Description    | Attribute        | Return value |
+| ------ | -------------- | ---------------- | ------------ |
+| toggle | Toggle display | `show?: boolean` | -            |
+
+### Type Definition
+
+```ts
+type Direction = "down" | "up";
+
+type DropdownMenuProps = {
+  zIndex?: number;
+  hideOverlay?: boolean;
+  activeColor?: string;
+  direction?: Direction;
 };
 
-type ActionParams = {
-  title?: string,
-  actions: Action[],
-  cancelText?: string,
-  titleColor?: string,
-  titleFontSize?: number,
-  cancelTextColor?: string,
-  cancelTextFontSize?: number,
-  select: (index: number, action: Action) => void,
-  cancel?: () => void,
-  close?: () => void,
-  zIndex?: number,
+type DropdownItemOption = {
+  text: string;
+  value: string;
 };
 ```

@@ -1,146 +1,190 @@
-# ActionSheet
+# DropdownMenu
 
 ### Intro
 
-The pop-up modal panel at the bottom contains multiple options related to the current situation.
+The menu list that pops down downwards.
 
 ### Install
 
 ```tsx
-import { ActionSheet } from "@quarkd/quark-react";
+import {
+  DropdownMenu,
+  DropdownItem,
+  DropdownItemInstance,
+} from "@quarkd/quark-react";
 ```
 
 ### Basic Usage
 
 ```js
 export default () => {
-  const showBase = () => {
-    ActionSheet({
-      actions: [{ name: 'Option 1' }, { name: 'Option 2' }, { name: 'Option 3' }],
-      select: (index, action) => {
-        console.log.(action.name);
-      },
-    });
-  };
+  const [value1, setValue1] = useState("0");
+  const [value2, setValue2] = useState("a");
+  const item1 = useRef < DropdownItemInstance > null;
+  const item2 = useRef < DropdownItemInstance > null;
+
+  useEffect(() => {
+    item1.current.setOptions([
+      { text: "Option1", value: "0" },
+      { text: "Option2", value: "1 " },
+      { text: "Option3", value: "2 " },
+      ,
+    ]);
+
+    item2.current.setOptions([
+      { text: "Option A", value: "a" },
+      { text: "Option B", value: "b" },
+      { text: "Option C", value: "c" },
+    ]);
+  }, []);
 
   return (
-    <div>
-      <div onClick={showBase} title="Basic Usage"></div>
-    </div>
+    <DropdownMenu>
+      <DropdownItem ref={item1} value={value1} />
+      <DropdownItem ref={item2} value={value2} />
+    </DropdownMenu>
   );
-}
+};
 ```
 
-### Show Title
+### Custom Content
 
 ```js
-ActionSheet({
-  title: "This is title message",
-  actions: [{ name: "Option 1" }, { name: "Option 2" }, { name: "Option 3" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+export default () => {
+  const [value1, setValue1] = useState("0");
+  const item1 = useRef < DropdownItemInstance > null;
+  const item2 = useRef < DropdownItemInstance > null;
+  const [switch1, setSwitch1] = useState(true);
+  const [switch2, setSwitch2] = useState(false);
+
+  const onSwitch1Change = (e) => {
+    setSwitch1(() => e.detail.value);
+  };
+
+  const onSwitch2Change = (e) => {
+    setSwitch2(() => e.detail.value);
+  };
+
+  const onConfirm = () => {
+    item2.current.toggle();
+  };
+
+  useEffect(() => {
+    item1.current.setOptions([
+      { text: "Option1", value: "0" },
+      { text: "Option2", value: "1 " },
+      { text: "Option3", value: "2 " },
+    ]);
+  }, []);
+
+  return (
+    <DropdownMenu>
+      <DropdownItem ref={item1} value={value1} />
+      <DropdownItem ref={item2} title="Title">
+        <quark-cell title="Title">
+          <quark-switch checked={switch1} onChange={onSwitch1Change} />
+        </quark-cell>
+        <quark-cell title="Title">
+          <quark-switch checked={switch2} onChange={onSwitch2Change} />
+        </quark-cell>
+        <div style="padding: 5px 16px">
+          <quark-button type="primary" size="big" onClick={onConfirm}>
+            Confirm
+          </quark-button>
+        </div>
+      </DropdownItem>
+    </DropdownMenu>
+  );
+};
 ```
 
-### Show Cancel Button
+### Custom Active Color
 
 ```js
-ActionSheet({
-  title: "This is title message",
-  cancelText: "Cancel",
-  actions: [{ name: "Option 1" }, { name: "Option 2" }, { name: "Option 3" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+export default () => {
+  return (
+    <DropdownMenu active-color="#f00">
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+    </DropdownMenu>
+  );
+};
 ```
 
-### Custom Title Style
+### Disabled
 
 ```js
-ActionSheet({
-  title: "This is title message",
-  titleColor: "red",
-  titleFontSize: 20,
-  actions: [{ name: "Option 1" }, { name: "Option 2" }, { name: "Option 3" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+export default () => {
+  return (
+    <DropdownMenu>
+      <DropdownItem disabled></DropdownItem>
+      <DropdownItem disabled></DropdownItem>
+    </DropdownMenu>
+  );
+};
 ```
 
-### Custom Options Style
+### Expand Direction
 
 ```js
-ActionSheet({
-  title: "This is title message",
-  titleColor: "red",
-  titleFontSize: 20,
-  actions: [
-    { name: "Option 1", color: "#999", fontSize: 20 },
-    { name: "Option 2" },
-    { name: "Option 3" },
-  ],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
-```
-
-### Custom Cancel Button Style
-
-```js
-ActionSheet({
-  title: "This is title message",
-  cancelText: "Cancel",
-  cancelTextColor: "red",
-  cancelTextFontSize: 20,
-  actions: [{ name: "Option 1" }, { name: "Option 2" }, { name: "Option 3" }],
-  select: (index, action) => {},
-  cancel: () => {},
-  close: () => {},
-});
+export default () => {
+  return (
+    <DropdownMenu direction="up">
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+    </DropdownMenu>
+  );
+};
 ```
 
 ## API
 
-### Props
+### DropdownMenu Props
 
-| Attribute          | Description                  | Type                                      | Default   |
-| ------------------ | ---------------------------- | ----------------------------------------- | --------- |
-| title              | Title                        | `string`                                  |           |
-| actions            | Options                      | `Action []`                               | `require` |
-| cancelText         | Text of cancel button        | `string `                                 |
-| titleColor         | Title color                  | `string `                                 | `#969799` |
-| titleFontSize      | Title font size              | `number `                                 | `14`      |
-| cancelTextColor    | Text color of cancel button  | `string `                                 | `#646566` |
-| cancelTextFontSize | Font size of cancel button   | `number `                                 | `16`      |
-| zIndex             | actionsheet z-index          | `number `                                 | `999`     |
-| select             | Selected callback            | `(index: number, action: Action) => void` |           |
-| cancel             | Cancel button click callback | `() => void `                             |           |
-| close              | Mask click callback          | `() => void `                             |           |
+| Attribute    | Description                      | Type         | Default |
+| ------------ | -------------------------------- | ------------ | ------- |
+| active-color | Active color of title and option | `string`     | `#08f`  |
+| direction    | Expand direction                 | `up`、`down` | `down`  |
+| z-index      | z-index of menu item             | `number`     | `10`    |
+| hide-overlay | Whether to hide overlay          | `boolean`    | `false` |
 
-### Data Structure of Action
+### DropdownMenuItem Props
 
-```js
-type Action = {
-  name: string,
-  color?: string,
-  fontSize?: number,
+| Attribute | Description                             | Type                                         | Default                 |
+| --------- | --------------------------------------- | -------------------------------------------- | ----------------------- |
+| value     | Value of current option                 | `string`                                     |                         |
+| title     | Item title                              | `string`                                     | Text of selected option |
+| disabled  | Whether to disable dropdown item        | `boolean`                                    | `false`                 |
+| change    | Emitted select option and value changed | `e: ({ detail: { value: string } }) => void` |                         |
+| open      | Emitted when opening menu               | `() => void`                                 |                         |
+| close     | Emitted when closing menu               | `() => void`                                 |                         |
+
+### DropdownItem Slots
+
+| Name    | Description |
+| ------- | ----------- |
+| default | Content     |
+
+### DropdownItem Methods
+
+| Name   | Description    | Attribute        | Return value |
+| ------ | -------------- | ---------------- | ------------ |
+| toggle | Toggle display | `show?: boolean` | -            |
+
+### Type Definition
+
+```ts
+type Direction = "down" | "up";
+
+type DropdownMenuProps = {
+  zIndex?: number;
+  hideOverlay?: boolean;
+  activeColor?: string;
+  direction?: Direction;
 };
 
-type ActionParams = {
-  title?: string,
-  actions: Action[],
-  cancelText?: string,
-  titleColor?: string,
-  titleFontSize?: number,
-  cancelTextColor?: string,
-  cancelTextFontSize?: number,
-  select: (index: number, action: Action) => void,
-  cancel?: () => void,
-  close?: () => void,
-  zIndex?: number,
+type DropdownItemOption = {
+  text: string;
+  value: string;
 };
 ```

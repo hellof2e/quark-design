@@ -69,25 +69,28 @@
   box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
   visibility: hidden;
   opacity: 0;
-  transition: all quark-animationDurationBase;
+  transition: opacity quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
 }
-
-/* .quark-dropdown-item__content--wrapper-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-} */
 
 .quark-dropdown-item__content {
   position: absolute;
   left: 0;
   z-index: 10;
-  right: -17px;
-  padding-right: 17px;
+  right: 0;
+  /* right: -17px; */
+  /* padding-right: 17px; */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #fff;
   transition: all quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
+}
+
+.quark-dropdown-item__content::-webkit-scrollbar {
+  display: none;
 }
 
 .quark-dropdown-item__option--active {

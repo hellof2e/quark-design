@@ -103,8 +103,8 @@ export default {
 
 ```html
 <quark-dropdown-menu active-color="#f00">
-  <quark-dropdown-item ref="item1" :value="value1"></quark-dropdown-item>
-  <quark-dropdown-item ref="item2" :value="value2"></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
 </quark-dropdown-menu>
 ```
 
@@ -112,16 +112,8 @@ export default {
 
 ```html
 <quark-dropdown-menu>
-  <quark-dropdown-item
-    ref="item1"
-    disabled
-    :value="value1"
-  ></quark-dropdown-item>
-  <quark-dropdown-item
-    ref="item2"
-    disabled
-    :value="value2"
-  ></quark-dropdown-item>
+  <quark-dropdown-item disabled></quark-dropdown-item>
+  <quark-dropdown-item disabled></quark-dropdown-item>
 </quark-dropdown-menu>
 ```
 
@@ -129,8 +121,8 @@ export default {
 
 ```html
 <quark-dropdown-menu direction="up">
-  <quark-dropdown-item ref="item1" :value="value1"></quark-dropdown-item>
-  <quark-dropdown-item ref="item2" :value="value2"></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
+  <quark-dropdown-item></quark-dropdown-item>
 </quark-dropdown-menu>
 ```
 
@@ -138,11 +130,12 @@ export default {
 
 ### DropdownMenu Props
 
-| 参数         | 说明                       | 类型         | 默认值 |
-| ------------ | -------------------------- | ------------ | ------ |
-| active-color | 菜单标题和选项的选中态颜色 | `string`     | `#08f` |
-| direction    | 菜单展开方向               | `up`、`down` | `down` |
-| z-index      | 菜单栏 z-index 层级        | `number`     | `10`   |
+| 参数         | 说明                       | 类型         | 默认值  |
+| ------------ | -------------------------- | ------------ | ------- |
+| active-color | 菜单标题和选项的选中态颜色 | `string`     | `#08f`  |
+| direction    | 菜单展开方向               | `up`、`down` | `down`  |
+| z-index      | 菜单栏 z-index 层级        | `number`     | `10`    |
+| hide-overlay | 是否隐藏遮罩层             | `boolean`    | `false` |
 
 ### DropdownMenuItem Props
 
@@ -171,3 +164,21 @@ export default {
 | 名称   | 说明                                                             | 参数             | 返回值 |
 | ------ | ---------------------------------------------------------------- | ---------------- | ------ |
 | toggle | 切换菜单展示状态，传 `true` 为显示，`false` 为隐藏，不传参为取反 | `show?: boolean` | -      |
+
+### 类型定义
+
+```ts
+type Direction = "down" | "up";
+
+type DropdownMenuProps = {
+  zIndex?: number;
+  hideOverlay?: boolean;
+  activeColor?: string;
+  direction?: Direction;
+};
+
+type DropdownItemOption = {
+  text: string;
+  value: string;
+};
+```

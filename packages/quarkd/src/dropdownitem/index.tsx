@@ -14,13 +14,24 @@ import style from "./style.css";
 import "../popup";
 import "../cell";
 import "../../../quark-icons/lib/success";
-import { Props } from "../dropdownmenu";
+import { IDropdownMenuProps } from "../dropdownmenu";
 import { slotAssignedElements } from "../../utils/public";
 
-export interface DropdownItemOption {
+export interface IDropdownItemProps {
+  value?: string;
+  title?: string;
+  disabled?: boolean;
+}
+
+export type DropdownItemOption = {
   text: string;
-  value: number | string | boolean;
-  icon?: string;
+  value: string;
+};
+
+export interface CustomEvent {
+  change: (e: { detail: { value: string } }) => void;
+  open: () => void;
+  close: () => void;
 }
 
 @customElement({
@@ -28,7 +39,7 @@ export interface DropdownItemOption {
   style,
 })
 class QuarkDropdownItem extends QuarkElement {
-  @property()
+  @property({ type: String })
   value = "";
 
   @property({ type: String })
@@ -41,7 +52,7 @@ class QuarkDropdownItem extends QuarkElement {
   titleRef: any = createRef();
 
   @state()
-  props: Props = {
+  props: IDropdownMenuProps = {
     activeColor: "#08f",
     zIndex: 10,
     hideOverlay: true,
@@ -55,11 +66,7 @@ class QuarkDropdownItem extends QuarkElement {
   currentValue = "";
 
   @state()
-  options: DropdownItemOption[] = [
-    // { text: "全部商品", value: 0 },
-    // { text: "新款商品", value: 1 },
-    // { text: "活动商品", value: 2 },
-  ];
+  options: DropdownItemOption[] = [];
 
   @state()
   selfNodes = [];
@@ -177,10 +184,13 @@ class QuarkDropdownItem extends QuarkElement {
     this.showPopup = show;
     if (show) {
       this.$emit("open");
+      disableBodyScroll(this.root.current);
     } else {
       this.$emit("close");
+      enableBodyScroll(this.root.current);
     }
   };
+
   onContentSlotChange = () => {
     if (this.contentSlotRef.current) {
       const allItems = slotAssignedElements(

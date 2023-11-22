@@ -4,14 +4,14 @@ import { slotAssignedElements } from "../../utils/public";
 
 import style from "./style.css";
 
-export interface Props {
+export type Direction = "down" | "up";
+
+export interface IDropdownMenuProps {
   zIndex?: number;
   hideOverlay?: boolean;
   activeColor?: string;
-  direction?: "up" | "down";
+  direction?: Direction;
 }
-
-export type Direction = "down" | "up";
 
 @customElement({
   tag: "quark-dropdown-menu",
@@ -32,10 +32,6 @@ class QuarkDropdownMenu extends QuarkElement {
 
   root: any = createRef();
   rootSlotRef: any = createRef();
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
 
   onSlotChange = () => {
     if (this.rootSlotRef.current) {
