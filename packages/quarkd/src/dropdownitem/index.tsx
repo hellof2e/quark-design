@@ -287,12 +287,6 @@ class QuarkDropdownItem extends QuarkElement {
         maskStyle,
       };
     };
-    const { swipeThreshold } = this.props;
-
-    const minWidth =
-      typeof swipeThreshold === "number" && swipeThreshold !== 0
-        ? `${100 / swipeThreshold}%`
-        : 0;
 
     return (
       <div class="quark-dropdown-item" ref={this.root}>
