@@ -136,16 +136,34 @@ export default () => {
 };
 ```
 
+### 横向滚动
+
+```js
+export default () => {
+  return (
+    <DropdownMenu swipe-threshold={4}>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+    </DropdownMenu>
+  );
+};
+```
+
 ## API
 
 ### DropdownMenu Props
 
-| 参数         | 说明                       | 类型         | 默认值  |
-| ------------ | -------------------------- | ------------ | ------- |
-| active-color | 菜单标题和选项的选中态颜色 | `string`     | `08f`   |
-| direction    | 菜单展开方向               | `up`、`down` | `down`  |
-| z-index      | 菜单栏 z-index 层级        | `number`     | `10`    |
-| hide-overlay | 是否隐藏遮罩层             | `boolean`    | `false` |
+| 参数            | 说明                                                             | 类型         | 默认值  |
+| --------------- | ---------------------------------------------------------------- | ------------ | ------- |
+| active-color    | 菜单标题和选项的选中态颜色                                       | `string`     | `08f`   |
+| direction       | 菜单展开方向                                                     | `up`、`down` | `down`  |
+| z-index         | 菜单栏 z-index 层级                                              | `number`     | `10`    |
+| hide-overlay    | 是否隐藏遮罩层                                                   | `boolean`    | `false` |
+| swipe-threshold | 滚动阈值，选项数量超过阈值且总宽度超过菜单栏宽度时，可以横向滚动 | `number`     | `0`     |
 
 ### DropdownMenuItem Props
 
@@ -170,6 +188,18 @@ export default () => {
 | ------ | ---------------------------------------------------------------- | ---------------- | ------ |
 | toggle | 切换菜单展示状态，传 `true` 为显示，`false` 为隐藏，不传参为取反 | `show?: boolean` | -      |
 
+### 样式变量
+
+组件提供了以下[CSS 变量](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/guide/theme)。
+
+| 名称                                           | 默认值    | 说明 |
+| ---------------------------------------------- | --------- | ---- |
+| `--quark-dropdown-menu-height`                 | `48px`    | -    |
+| `--quark-dropdown-menu-title-background-color` | `#fff`    | -    |
+| `--quark-dropdown-menu-title-color`            | `#242729` | -    |
+| `--quark-dropdown-menu-title-font-size`        | `14px`    | -    |
+| `--quark-dropdown-menu-title-padding`          | `8px`     | -    |
+
 ### 类型定义
 
 ```ts
@@ -180,6 +210,7 @@ type DropdownMenuProps = {
   hideOverlay?: boolean;
   activeColor?: string;
   direction?: Direction;
+  swipeThreshold?: number;
 };
 
 type DropdownItemOption = {

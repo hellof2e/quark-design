@@ -39,7 +39,7 @@
       </quark-dropdown-item>
     </quark-dropdown-menu>
 
-    <h2>{{ translate("customContent") }}</h2>
+    <h2>{{ translate("customColor") }}</h2>
     <quark-dropdown-menu active-color="#f00">
       <quark-dropdown-item
         ref="dropdownItemRef5"
@@ -76,6 +76,22 @@
         value="a"
       ></quark-dropdown-item>
     </quark-dropdown-menu>
+
+    <h2>{{ translate("swipeItems") }}</h2>
+    <quark-dropdown-menu :swipe-threshold="4">
+      <quark-dropdown-item
+        ref="dropdownItemRef11"
+        value="0"
+      ></quark-dropdown-item>
+      <quark-dropdown-item
+        ref="dropdownItemRef12"
+        value="a"
+      ></quark-dropdown-item>
+      <quark-dropdown-item disabled></quark-dropdown-item>
+      <quark-dropdown-item disabled></quark-dropdown-item>
+      <quark-dropdown-item disabled></quark-dropdown-item>
+      <quark-dropdown-item disabled></quark-dropdown-item>
+    </quark-dropdown-menu>
   </div>
 </template>
 
@@ -110,6 +126,7 @@ export default createDemo({
             { text: "好评排序", value: "b" },
             { text: "销量排序", value: "c" },
           ],
+          swipeItems: "横向滚动",
         },
         "en-US": {
           basic: "Basic Usage",
@@ -131,6 +148,7 @@ export default createDemo({
             { text: "Option B", value: "b" },
             { text: "Option C", value: "c" },
           ],
+          swipeItems: "Swipe Items",
         },
       });
     });
@@ -157,6 +175,8 @@ export default createDemo({
     const dropdownItemRef8 = ref(null);
     const dropdownItemRef9 = ref(null);
     const dropdownItemRef10 = ref(null);
+    const dropdownItemRef11 = ref(null);
+    const dropdownItemRef12 = ref(null);
 
     onMounted(() => {
       dropdownItemRef1.value.setOptions(translate("option1"));
@@ -168,6 +188,8 @@ export default createDemo({
       dropdownItemRef8.value.setOptions(translate("option2"));
       dropdownItemRef9.value.setOptions(translate("option1"));
       dropdownItemRef10.value.setOptions(translate("option2"));
+      dropdownItemRef11.value.setOptions(translate("option1"));
+      dropdownItemRef12.value.setOptions(translate("option2"));
     });
 
     const onConfirm = () => {
@@ -194,6 +216,8 @@ export default createDemo({
       dropdownItemRef8,
       dropdownItemRef9,
       dropdownItemRef10,
+      dropdownItemRef11,
+      dropdownItemRef12,
     };
   },
 });

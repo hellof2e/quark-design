@@ -78,19 +78,13 @@
   left: 0;
   z-index: 10;
   right: 0;
-  /* right: -17px; */
-  /* padding-right: 17px; */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  right: -17px;
+  padding-right: 17px;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   background-color: #fff;
   transition: all quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
-}
-
-.quark-dropdown-item__content::-webkit-scrollbar {
-  display: none;
 }
 
 .quark-dropdown-item__option--active {

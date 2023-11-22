@@ -1,10 +1,29 @@
 :root {
   --quark-dropdown-menu-height: 48px;
+  --quark-dropdown-menu-title-background-color: #fff
 }
 
 .quark-dropdown-menu__bar {
+  width: 100%;
+  height: var(--quark-dropdown-menu-height);
+  position: relative;
+  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+  overflow: hidden;
+}
+
+.quark-dropdown-menu__bar-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -17px;
+  padding-bottom: 17px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background: var(--quark-dropdown-menu-title-background-color);
+}
+
+.quark-dropdown-menu__bar-content {
   display: flex;
   height: var(--quark-dropdown-menu-height);
-  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
-  background: #fff;
 }

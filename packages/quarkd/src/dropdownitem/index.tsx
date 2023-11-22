@@ -57,6 +57,7 @@ class QuarkDropdownItem extends QuarkElement {
     zIndex: 10,
     hideOverlay: true,
     direction: "down",
+    swipeThreshold: 0,
   };
 
   @state()
@@ -108,6 +109,12 @@ class QuarkDropdownItem extends QuarkElement {
 
   setProps = (props) => {
     this.props = props;
+    const { swipeThreshold } = this.props;
+    const minWidth =
+      typeof swipeThreshold === "number" && swipeThreshold !== 0
+        ? `${100 / swipeThreshold}%`
+        : "0";
+    this.style.minWidth = minWidth;
   };
 
   renderTitle() {
@@ -280,6 +287,12 @@ class QuarkDropdownItem extends QuarkElement {
         maskStyle,
       };
     };
+    const { swipeThreshold } = this.props;
+
+    const minWidth =
+      typeof swipeThreshold === "number" && swipeThreshold !== 0
+        ? `${100 / swipeThreshold}%`
+        : 0;
 
     return (
       <div class="quark-dropdown-item" ref={this.root}>

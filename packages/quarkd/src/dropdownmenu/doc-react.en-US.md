@@ -129,7 +129,28 @@ export default () => {
 ```js
 export default () => {
   return (
-    <DropdownMenu direction="up">
+    <DropdownMenu swipe-threshold={4}>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+    </DropdownMenu>
+  );
+};
+```
+
+### Swipe Items
+
+```js
+export default () => {
+  return (
+    <DropdownMenu swipe-threshold={4}>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
+      <DropdownItem></DropdownItem>
       <DropdownItem></DropdownItem>
       <DropdownItem></DropdownItem>
     </DropdownMenu>
@@ -141,12 +162,13 @@ export default () => {
 
 ### DropdownMenu Props
 
-| Attribute    | Description                      | Type         | Default |
-| ------------ | -------------------------------- | ------------ | ------- |
-| active-color | Active color of title and option | `string`     | `#08f`  |
-| direction    | Expand direction                 | `up`、`down` | `down`  |
-| z-index      | z-index of menu item             | `number`     | `10`    |
-| hide-overlay | Whether to hide overlay          | `boolean`    | `false` |
+| Attribute       | Description                                                                                                                       | Type         | Default |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------- |
+| active-color    | Active color of title and option                                                                                                  | `string`     | `#08f`  |
+| direction       | Expand direction                                                                                                                  | `up`、`down` | `down`  |
+| z-index         | z-index of menu item                                                                                                              | `number`     | `10`    |
+| hide-overlay    | Whether to hide overlay                                                                                                           | `boolean`    | `false` |
+| swipe-threshold | Horizontal scrolling is allowed when the number of items exceeds the threshold and the total width exceeds the width of the menu. | `number`     | `0`     |
 
 ### DropdownMenuItem Props
 
@@ -171,6 +193,18 @@ export default () => {
 | ------ | -------------- | ---------------- | ------------ |
 | toggle | Toggle display | `show?: boolean` | -            |
 
+### CSS Variables
+
+The component provides the following [CSS variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties),which can be used to customize styles. Please refer to [theme customization](#/zh-CN/guide/theme).
+
+| 名称                                           | 默认值    | 说明 |
+| ---------------------------------------------- | --------- | ---- |
+| `--quark-dropdown-menu-height`                 | `48px`    | -    |
+| `--quark-dropdown-menu-title-background-color` | `#fff`    | -    |
+| `--quark-dropdown-menu-title-color`            | `#242729` | -    |
+| `--quark-dropdown-menu-title-font-size`        | `14px`    | -    |
+| `--quark-dropdown-menu-title-padding`          | `8px`     | -    |
+
 ### Type Definition
 
 ```ts
@@ -181,6 +215,7 @@ type DropdownMenuProps = {
   hideOverlay?: boolean;
   activeColor?: string;
   direction?: Direction;
+  swipeThreshold?: number;
 };
 
 type DropdownItemOption = {
