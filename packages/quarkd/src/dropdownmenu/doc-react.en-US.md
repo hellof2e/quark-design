@@ -129,11 +129,7 @@ export default () => {
 ```js
 export default () => {
   return (
-    <DropdownMenu swipe-threshold={4}>
-      <DropdownItem></DropdownItem>
-      <DropdownItem></DropdownItem>
-      <DropdownItem></DropdownItem>
-      <DropdownItem></DropdownItem>
+    <DropdownMenu direction="up">
       <DropdownItem></DropdownItem>
       <DropdownItem></DropdownItem>
     </DropdownMenu>
