@@ -3,13 +3,13 @@ import reactify from "@quarkd/reactify";
 import "quarkd/lib/dropdownitem";
 import {
   DropdownItemOption,
-  IDropdownItemProps,
+  DropdownItemProps as Props,
   CustomEvent,
 } from "quarkd/lib/dropdownitem";
 import { componentBaseInterface, ReactifyProps } from "../type";
 
 type DropdownItemProps = componentBaseInterface &
-  ReactifyProps<IDropdownItemProps, CustomEvent>;
+  ReactifyProps<Props, CustomEvent>;
 type DropdownItemType = FC<DropdownItemProps>;
 
 interface Ref {

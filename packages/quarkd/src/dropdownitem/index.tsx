@@ -17,11 +17,11 @@ import "../../../quark-icons/lib/success";
 import { IDropdownMenuProps } from "../dropdownmenu";
 import { slotAssignedElements } from "../../utils/public";
 
-export interface IDropdownItemProps {
+export type DropdownItemProps = {
   value?: string;
   title?: string;
   disabled?: boolean;
-}
+};
 
 export type DropdownItemOption = {
   text: string;
