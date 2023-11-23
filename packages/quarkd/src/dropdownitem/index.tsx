@@ -46,7 +46,7 @@ class QuarkDropdownItem extends QuarkElement {
   title = "";
 
   @property({ type: Boolean })
-  disabled: false;
+  disabled = false;
 
   root: any = createRef();
   titleRef: any = createRef();
@@ -207,104 +207,104 @@ class QuarkDropdownItem extends QuarkElement {
     }
   };
 
-  render() {
-    const titleCSS = () => {
-      const style: any = {};
+  titleCSS = () => {
+    const style: any = {};
 
-      if (this.showPopup) {
-        style.color = this.props.activeColor;
-      }
+    if (this.showPopup) {
+      style.color = this.props.activeColor;
+    }
 
-      const classObj = {
-        title: true,
-        "title--down": this.showPopup === (this.props.direction === "down"),
-        "title--active": this.showPopup,
-        "title--disabled": this.disabled,
-      };
-
-      const classStr = Object.keys(classObj)
-        .map((key) => {
-          if (classObj[key]) return "quark-dropdown-menu__" + key;
-        })
-        .join(" ");
-
-      return {
-        class: classStr,
-        style,
-      };
+    const classObj = {
+      title: true,
+      "title--down": this.showPopup === (this.props.direction === "down"),
+      "title--active": this.showPopup,
+      "title--disabled": this.disabled,
     };
 
-    const contentCSS = () => {
-      const { zIndex, direction } = this.props;
-      const contentStyle: any = {
-        zIndex: zIndex + 1,
-      };
+    const classStr = Object.keys(classObj)
+      .map((key) => {
+        if (classObj[key]) return "quark-dropdown-menu__" + key;
+      })
+      .join(" ");
 
-      const wrapperStyle: any = {
-        zIndex: zIndex,
-      };
+    return {
+      class: classStr,
+      style,
+    };
+  };
 
-      const maskStyle: any = {
-        zIndex: zIndex,
-        opacity: this.showPopup ? 1 : 0,
-        visibility: this.showPopup ? "visible" : "hidden",
-      };
+  contentCSS = () => {
+    const { zIndex, direction } = this.props;
+    const contentStyle: any = {
+      zIndex: zIndex + 1,
+    };
 
-      if (!this.root.current) {
-        return {
-          wrapperStyle,
-          contentStyle,
-        };
-      }
+    const wrapperStyle: any = {
+      zIndex: zIndex,
+    };
 
-      const { bottom, top } = this.root.current.getBoundingClientRect();
+    const maskStyle: any = {
+      zIndex: zIndex,
+      opacity: this.showPopup ? 1 : 0,
+      visibility: this.showPopup ? "visible" : "hidden",
+    };
 
-      const offset = window.innerHeight - bottom;
-
-      if (direction === "up") {
-        contentStyle.bottom = 0;
-        wrapperStyle.bottom = window.innerHeight - top + "px";
-        wrapperStyle.height = top + "px";
-      } else if (direction === "down") {
-        contentStyle.top = 0;
-        wrapperStyle.top = bottom + "px";
-        wrapperStyle.height = offset + "px";
-      }
-
-      if (this.showPopup) {
-        wrapperStyle.visibility = "visible";
-        wrapperStyle.opacity = 1;
-        contentStyle.maxHeight = "80%";
-      } else {
-        wrapperStyle.visibility = "hidden";
-        wrapperStyle.opacity = 0;
-        contentStyle.maxHeight = 0;
-      }
-
+    if (!this.root.current) {
       return {
         wrapperStyle,
         contentStyle,
-        maskStyle,
       };
-    };
+    }
 
+    const { bottom, top } = this.root.current.getBoundingClientRect();
+
+    const offset = window.innerHeight - bottom;
+
+    if (direction === "up") {
+      contentStyle.bottom = 0;
+      wrapperStyle.bottom = window.innerHeight - top + "px";
+      wrapperStyle.height = top + "px";
+    } else if (direction === "down") {
+      contentStyle.top = 0;
+      wrapperStyle.top = bottom + "px";
+      wrapperStyle.height = offset + "px";
+    }
+
+    if (this.showPopup) {
+      wrapperStyle.visibility = "visible";
+      wrapperStyle.opacity = 1;
+      contentStyle.maxHeight = "80%";
+    } else {
+      wrapperStyle.visibility = "hidden";
+      wrapperStyle.opacity = 0;
+      contentStyle.maxHeight = 0;
+    }
+
+    return {
+      wrapperStyle,
+      contentStyle,
+      maskStyle,
+    };
+  };
+
+  render() {
     return (
       <div class="quark-dropdown-item" ref={this.root}>
         <div
           ref={this.titleRef}
-          class={titleCSS().class}
-          style={titleCSS().style}
+          class={this.titleCSS().class}
+          style={this.titleCSS().style}
           onClick={this.onTitleClick}
         >
           {this.renderTitle()}
         </div>
         <div
           class="quark-dropdown-item__content--wrapper"
-          style={contentCSS().wrapperStyle}
+          style={this.contentCSS().wrapperStyle}
         >
           <div
             class="quark-dropdown-item__content"
-            style={contentCSS().contentStyle}
+            style={this.contentCSS().contentStyle}
           >
             <div class="quark-dropdown-item__content--inner">
               <slot
@@ -320,7 +320,7 @@ class QuarkDropdownItem extends QuarkElement {
           {!this.props.hideOverlay && (
             <div
               class="quark-dropdown-item__content--mask"
-              style={contentCSS().maskStyle}
+              style={this.contentCSS().maskStyle}
               onClick={() => this.toggle(false)}
             />
           )}
