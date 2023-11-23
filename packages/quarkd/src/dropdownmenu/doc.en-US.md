@@ -7,7 +7,7 @@ The menu list that pops down downwards.
 ### Install
 
 ```tsx
-import DropdownMenu from "quarkd/lib/dropdownmenu";
+import "quarkd/lib/dropdownmenu";
 ```
 
 ### Basic Usage
@@ -190,28 +190,3 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--quark-dropdown-menu-title-color`            | `#242729` | -    |
 | `--quark-dropdown-menu-title-font-size`        | `14px`    | -    |
 | `--quark-dropdown-menu-title-padding`          | `8px`     | -    |
-
-### Type Definition
-
-```ts
-type DropdownMenuDirection = "down" | "up";
-
-type DropdownMenuProps = {
-  zIndex?: number;
-  hideOverlay?: boolean;
-  activeColor?: string;
-  direction?: DropdownMenuDirection;
-  swipeThreshold?: number;
-};
-
-type DropdownItemProps = {
-  value?: string;
-  title?: string;
-  disabled?: boolean;
-};
-
-type DropdownItemOption = {
-  text: string;
-  value: string;
-};
-```

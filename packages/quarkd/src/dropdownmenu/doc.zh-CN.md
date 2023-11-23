@@ -7,7 +7,7 @@
 ### 安装使用
 
 ```tsx
-import DropdownMenu from "quarkd/lib/dropdownmenu";
+import "quarkd/lib/dropdownmenu";
 ```
 
 ### 基本用法
@@ -190,28 +190,3 @@ export default {
 | `--quark-dropdown-menu-title-color`            | `#242729` | -    |
 | `--quark-dropdown-menu-title-font-size`        | `14px`    | -    |
 | `--quark-dropdown-menu-title-padding`          | `8px`     | -    |
-
-### 类型定义
-
-```ts
-type DropdownMenuDirection = "down" | "up";
-
-type DropdownMenuProps = {
-  zIndex?: number;
-  hideOverlay?: boolean;
-  activeColor?: string;
-  direction?: DropdownMenuDirection;
-  swipeThreshold?: number;
-};
-
-type DropdownItemProps = {
-  value?: string;
-  title?: string;
-  disabled?: boolean;
-};
-
-type DropdownItemOption = {
-  text: string;
-  value: string;
-};
-```
