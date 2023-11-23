@@ -72,6 +72,15 @@ import Circle, {
   StrokeLinecap,
 } from "./circle";
 import PickerView, { PickerViewRef } from "./pickerview";
+import DropdownMenu, {
+  DropdownMenuProps,
+  DropdownMenuDirection,
+} from "./dropdown-menu";
+import DropdownItem, {
+  DropdownItemInstance,
+  DropdownItemOption,
+  DropdownItemProps,
+} from "./dropdown-item";
 
 export {
   ActionSheet,
@@ -159,4 +168,11 @@ export {
   CircleType,
   PickerView,
   PickerViewRef,
+  DropdownMenu,
+  DropdownMenuDirection,
+  DropdownMenuProps,
+  DropdownItem,
+  DropdownItemInstance,
+  DropdownItemOption,
+  DropdownItemProps,
 };

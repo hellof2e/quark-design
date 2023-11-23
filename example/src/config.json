@@ -242,6 +242,16 @@
 					"author": "MrZhao"
 				},
 				{
+					"version": "0.0.1",
+					"name": "DropdownMenu",
+					"sort": 1,
+					"cName": "下拉菜单",
+					"type": "component",
+					"show": true,
+					"desc": "下拉菜单",
+					"author": "yunxia"
+				},
+				{
 					"version": "1.0.29",
 					"name": "Collapse",
 					"sort": 1,

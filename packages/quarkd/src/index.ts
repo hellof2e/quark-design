@@ -51,6 +51,7 @@ import Collapse from "./collapse";
 import Calendar from "./calendar";
 import Swipecell from "./swipecell";
 import PickerView from "./pickerview";
+import DropdownMenu from "./dropdownmenu";
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -117,4 +118,5 @@ export default {
   Calendar,
   Swipecell,
   PickerView,
+  DropdownMenu,
 };

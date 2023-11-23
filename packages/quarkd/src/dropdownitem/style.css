@@ -1,0 +1,105 @@
+:root {
+  --quark-dropdown-menu-option-active-color: quark-primaryColor;
+}
+
+:host {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.quark-dropdown-item {
+  cursor: pointer;
+  height: 100%;
+}
+
+.quark-dropdown-menu__title {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 100%;
+  color: var(--quark-dropdown-menu-title-color, quark-textBaseColor);
+  font-size: var(--quark-dropdown-menu-title-font-size, quark-fontSizeBase);
+  padding: var(--quark-dropdown-menu-title-padding, quark-hSpacingMd);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.quark-dropdown-menu__title--disabled {
+  color: quark-textSecondaryColor;
+}
+
+.quark-dropdown-menu__title::after {
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  margin-top: -5px;
+  border: 3px solid;
+  border-color: transparent transparent var(--quark-dropdown-menu-title-color, quark-textBaseColor) var(--quark-dropdown-menu-title-color, quark-textBaseColor);
+  transform: rotate(-45deg);
+  opacity: 0.8;
+  content: '';
+}
+
+.quark-dropdown-menu__title--disabled::after {
+  border-color: transparent transparent quark-textSecondaryColor quark-textSecondaryColor;
+}
+
+.quark-dropdown-menu__title--active {
+  color: var(--quark-dropdown-menu-title-active-text-color);
+}
+
+.quark-dropdown-menu__title--active::after {
+  border-color: transparent transparent currentColor currentColor;
+}
+
+.quark-dropdown-menu__title--down::after {
+  margin-top: -1px;
+  transform: rotate(135deg);
+}
+
+.quark-dropdown-item__content--wrapper {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity quark-animationDurationBase;
+  transition-timing-function: quark-animationTimingEnter;
+}
+
+.quark-dropdown-item__content {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  right: 0;
+  right: -17px;
+  padding-right: 17px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #fff;
+  transition: all quark-animationDurationBase;
+  transition-timing-function: quark-animationTimingEnter;
+}
+
+.quark-dropdown-item__option--active {
+  color: var(--quark-dropdown-menu-option-active-color);
+}
+
+.quark-dropdown-item__content--mask {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  opacity: 0;
+  transition: all quark-animationDurationBase;
+  transition-timing-function: quark-animationTimingEnter;
+}
