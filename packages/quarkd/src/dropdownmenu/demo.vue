@@ -118,8 +118,8 @@ export default createDemo({
           direction: "向上展开",
           option1: [
             { text: "全部商品", value: "0" },
-            { text: "新款商品", value: "1 " },
-            { text: "活动商品", value: "2 " },
+            { text: "新款商品", value: "1" },
+            { text: "活动商品", value: "2" },
           ],
           option2: [
             { text: "默认排序", value: "a" },
@@ -140,8 +140,8 @@ export default createDemo({
           direction: "Expand Direction",
           option1: [
             { text: "Option 0", value: "0" },
-            { text: "Option 1", value: "1 " },
-            { text: "Option 2", value: "2 " },
+            { text: "Option 1", value: "1" },
+            { text: "Option 2", value: "2" },
           ],
           option2: [
             { text: "Option A", value: "a" },

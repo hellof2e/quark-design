@@ -30,8 +30,8 @@ export default {
   mounted() {
     this.$refs.item1.setOptions([
       { text: "Option1", value: "0" },
-      { text: "Option2", value: "1 " },
-      { text: "Option3", value: "2 " },
+      { text: "Option2", value: "1" },
+      { text: "Option3", value: "2" },
     ]);
     this.$refs.item2.setOptions([
       { text: "Option A", value: "a" },
@@ -76,8 +76,8 @@ export default {
   mounted() {
     this.$refs.item1.setOptions([
       { text: "Option1", value: "0" },
-      { text: "Option2", value: "1 " },
-      { text: "Option3", value: "2 " },
+      { text: "Option2", value: "1" },
+      { text: "Option3", value: "2" },
     ]);
     this.$refs.item2.setOptions([
       { text: "Option A", value: "a" },

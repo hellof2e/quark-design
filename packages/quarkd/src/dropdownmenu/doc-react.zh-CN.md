@@ -26,8 +26,8 @@ export default () => {
   useEffect(() => {
     item1.current.setOptions([
       { text: "全部商品", value: "0" },
-      { text: "新款商品", value: "1 " },
-      { text: "活动商品", value: "2 " },
+      { text: "新款商品", value: "1" },
+      { text: "活动商品", value: "2" },
     ]);
 
     item2.current.setOptions([
@@ -71,8 +71,8 @@ export default () => {
   useEffect(() => {
     item1.current.setOptions([
       { text: "全部商品", value: "0" },
-      { text: "新款商品", value: "1 " },
-      { text: "活动商品", value: "2 " },
+      { text: "新款商品", value: "1" },
+      { text: "活动商品", value: "2" },
     ]);
   }, []);
 

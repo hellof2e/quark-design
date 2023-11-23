@@ -26,8 +26,8 @@ export default () => {
   useEffect(() => {
     item1.current.setOptions([
       { text: "Option1", value: "0" },
-      { text: "Option2", value: "1 " },
-      { text: "Option3", value: "2 " },
+      { text: "Option2", value: "1" },
+      { text: "Option3", value: "2" },
       ,
     ]);
 
@@ -72,8 +72,8 @@ export default () => {
   useEffect(() => {
     item1.current.setOptions([
       { text: "Option1", value: "0" },
-      { text: "Option2", value: "1 " },
-      { text: "Option3", value: "2 " },
+      { text: "Option2", value: "1" },
+      { text: "Option3", value: "2" },
     ]);
   }, []);
 

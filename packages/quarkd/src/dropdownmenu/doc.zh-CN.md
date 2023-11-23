@@ -30,8 +30,8 @@ export default {
   mounted() {
     this.$refs.item1.setOptions([
       { text: "全部商品", value: "0" },
-      { text: "新款商品", value: "1 " },
-      { text: "活动商品", value: "2 " },
+      { text: "新款商品", value: "1" },
+      { text: "活动商品", value: "2" },
     ]);
     this.$refs.item2.setOptions([
       { text: "默认排序", value: "a" },
@@ -76,8 +76,8 @@ export default {
   mounted() {
     this.$refs.item1.setOptions([
       { text: "全部商品", value: "0" },
-      { text: "新款商品", value: "1 " },
-      { text: "活动商品", value: "2 " },
+      { text: "新款商品", value: "1" },
+      { text: "活动商品", value: "2" },
     ]);
     this.$refs.item2.setOptions([
       { text: "默认排序", value: "a" },
