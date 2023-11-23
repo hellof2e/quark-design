@@ -1,17 +1,27 @@
 # 更新日志
-### [1.4.1](https://github.com/hellof2e/quark-design/compare/v1.4.0...v1.4.1) (2023-10-19)
 
+## [1.5.0](https://github.com/hellof2e/quark-design/compare/v1.4.1...v1.5.0) (2023-11-23)
+
+### Documentation
+
+- update switch doc ([6c8c575](https://github.com/hellof2e/quark-design/commit/6c8c575df3251a0864b6ffca4a42fac43f558068))
 
 ### 🎉 Features
 
-* form文档修改 ([#303](https://github.com/hellof2e/quark-design/issues/303)) ([50311d0](https://github.com/hellof2e/quark-design/commit/50311d0e601ce849dc0a5c88521d94fd18a322fb))
-* update demo ([a3644bf](https://github.com/hellof2e/quark-design/commit/a3644bfd1381624c7626d04512bf41e4d64cfcea))
-* update quarkd ([6477a77](https://github.com/hellof2e/quark-design/commit/6477a77cd43165a4ece4b08545f17911f25a3e95))
+- dropdown-menu 组件分支整理 ([#317](https://github.com/hellof2e/quark-design/issues/317)) ([cf80b55](https://github.com/hellof2e/quark-design/commit/cf80b55cea577d7bb3fe2c56588aaa7c8abe7121))
+- tab 滑动触发 onchange 事件修改 ([#315](https://github.com/hellof2e/quark-design/issues/315)) ([7b86e20](https://github.com/hellof2e/quark-design/commit/7b86e20df3398071bce87aec7b5708842d8feb9b))
 
+### [1.4.1](https://github.com/hellof2e/quark-design/compare/v1.4.0...v1.4.1) (2023-10-19)
+
+### 🎉 Features
+
+- form 文档修改 ([#303](https://github.com/hellof2e/quark-design/issues/303)) ([50311d0](https://github.com/hellof2e/quark-design/commit/50311d0e601ce849dc0a5c88521d94fd18a322fb))
+- update demo ([a3644bf](https://github.com/hellof2e/quark-design/commit/a3644bfd1381624c7626d04512bf41e4d64cfcea))
+- update quarkd ([6477a77](https://github.com/hellof2e/quark-design/commit/6477a77cd43165a4ece4b08545f17911f25a3e95))
 
 ### 🐞 Bug Fixes
 
-* 修复 toast loading 动画消失文字和图标不同步问题 ([ae83fc8](https://github.com/hellof2e/quark-design/commit/ae83fc894fcd610275bdbb8241e746990a9c1e3a))
+- 修复 toast loading 动画消失文字和图标不同步问题 ([ae83fc8](https://github.com/hellof2e/quark-design/commit/ae83fc894fcd610275bdbb8241e746990a9c1e3a))
 
 ## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
 
