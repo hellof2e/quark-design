@@ -1,5 +1,19 @@
 # 更新日志
 
+### [1.5.1](https://github.com/hellof2e/quark-design/compare/v1.5.0...v1.5.1) (2023-12-08)
+
+### 🎉 Features
+
+- update quarkd version ([3065c70](https://github.com/hellof2e/quark-design/commit/3065c70e2ca7ae1c1f0013013db75044c39e9a4d))
+
+### Documentation
+
+- update dropdown menu ([b618f20](https://github.com/hellof2e/quark-design/commit/b618f20c52c2a7d0a2156418b12bc48e4b6e6a57))
+
+### 🐞 Bug Fixes
+
+- toast zIndex ([1119c67](https://github.com/hellof2e/quark-design/commit/1119c672a4a5c4db0ed90bbd995d5d6f993c9d81))
+
 ## [1.5.0](https://github.com/hellof2e/quark-design/compare/v1.4.1...v1.5.0) (2023-11-23)
 
 ### Documentation
