@@ -188,6 +188,16 @@
 					"show": true,
 					"desc": "标签",
 					"author": "MrZhao"
+				},
+				{
+					"version": "0.0.1",
+					"name": "WaterMark",
+					"sort": 1,
+					"cName": "水印",
+					"type": "component",
+					"show": true,
+					"desc": "水印",
+					"author": "zcl"
 				}
 			]
 		},
