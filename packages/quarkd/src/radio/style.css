@@ -21,7 +21,6 @@
 :host([radiohost]) .quark-radio {
   display: flex;
   align-items: center;
-  gap: var(--radio-label-gap, 8px);
   cursor: pointer;
   width: 100%;
 }
@@ -49,6 +48,7 @@
   display: inline-flex;
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
+  margin-right: var(--radio-label-gap, 8px);
   flex-shrink: 0;
 }
 
