@@ -30,7 +30,7 @@ import "quarkd/lib/watermark";
 ### Adjust the watermark spacing
 
 ```html
-<quark-watermark text="quark-design" gapY="24" gapX="48" />
+<quark-watermark text="quark-design" gapy="24" gapx="48" />
 ```
 
 ### Multiline text watermark
@@ -50,8 +50,8 @@ this.$refs.watermark.setText(["quark-design", "A component library"]);
 | width     | watermark width                                                                                                                 | `string` or `number` | `120`                |
 | height    | watermark height                                                                                                                | `string` or `number` | `64`                 |
 | rotate    | The rotation angle when drawing the watermark,unit °                                                                            | `string` or `number` | `-22`                |
-| fontSize  | text size                                                                                                                       | `string` or `number` | `14`                 |
-| fontColor | text color                                                                                                                      | `string`             | `rgba(0, 0, 0, .15)` |
+| fontsize  | text size                                                                                                                       | `string` or `number` | `14`                 |
+| fontcolor | text color                                                                                                                      | `string`             | `rgba(0, 0, 0, .15)` |
 | gapx      | horizontal spacing between watermarks                                                                                           | `string` or `number` | `24`                 |
 | gapy      | vertical spacing between watermarks                                                                                             | `string` or `number` | `48`                 |
 

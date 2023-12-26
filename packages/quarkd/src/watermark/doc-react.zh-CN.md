@@ -50,8 +50,8 @@ this.$refs.watermark.setText(["quark-design", "A component library"]);
 | width     | 水印宽度                                                   | `string` or `number` | `120`                |
 | height    | 水印高度                                                   | `string` or `number` | `64`                 |
 | rotate    | 水印绘制时，旋转的角度，单位 °                             | `string` or `number` | `-22`                |
-| fontSize  | 文字大小                                                   | `string` or `number` | `14`                 |
-| fontColor | 文字颜色                                                   | `string`             | `rgba(0, 0, 0, .15)` |
+| fontsize  | 文字大小                                                   | `string` or `number` | `14`                 |
+| fontcolor | 文字颜色                                                   | `string`             | `rgba(0, 0, 0, .15)` |
 | gapx      | 水印之间的水平间距                                         | `string` or `number` | `24`                 |
 | gapy      | 水印之间的垂直间距                                         | `string` or `number` | `48`                 |
 

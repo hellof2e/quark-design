@@ -81,7 +81,7 @@ import DropdownItem, {
   DropdownItemOption,
   DropdownItemProps,
 } from "./dropdown-item";
-
+import WaterMark from "./watermark";
 export {
   ActionSheet,
   Badge,
@@ -175,4 +175,5 @@ export {
   DropdownItemInstance,
   DropdownItemOption,
   DropdownItemProps,
+  WaterMark,
 };

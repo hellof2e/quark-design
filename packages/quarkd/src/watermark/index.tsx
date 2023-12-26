@@ -12,10 +12,9 @@ export interface Props {
   width?: number | string;
   height?: number | string;
   rotate?: number;
-  zIndex?: number;
   image?: string;
-  fontSize?: number | string;
-  fontColor?: string;
+  fontsize?: number | string;
+  fontcolor?: string;
   text?: string;
   gapx?: number;
   gapy?: number;
@@ -44,10 +43,10 @@ class QuarkWaterMark extends QuarkElement {
   @property({
     type: Number,
   })
-  fontSize? = 14;
+  fontsize? = 14;
 
   @property()
-  fontColor?: string = "rgba(0, 0, 0, .15)";
+  fontcolor?: string = "rgba(0, 0, 0, .15)";
 
   @property()
   image?: string;
@@ -78,7 +77,7 @@ class QuarkWaterMark extends QuarkElement {
     const canvas = document.createElement("canvas");
     const ratio = window.devicePixelRatio;
     const ctx = canvas.getContext("2d");
-    const fontSize = this.fontSize * ratio;
+    const fontSize = this.fontsize * ratio;
 
     const canvasWidth = `${(this.gapx + this.width) * ratio}px`;
     const canvasHeight = `${(this.gapy + this.height) * ratio}px`;
@@ -116,7 +115,7 @@ class QuarkWaterMark extends QuarkElement {
         ctx.translate(markWidth / 2, markHeight / 2);
         ctx.rotate((Math.PI / 180) * this.rotate);
         ctx.font = `${fontSize}px normal normal`;
-        ctx.fillStyle = this.fontColor;
+        ctx.fillStyle = this.fontcolor;
         if (Array.isArray(this.content)) {
           this.content.forEach((item, index) =>
             ctx.fillText(item, 0, index * fontSize)
