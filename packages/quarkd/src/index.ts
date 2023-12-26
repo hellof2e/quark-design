@@ -52,6 +52,7 @@ import Calendar from "./calendar";
 import Swipecell from "./swipecell";
 import PickerView from "./pickerview";
 import DropdownMenu from "./dropdownmenu";
+import WaterMark from "./watermark";
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -119,4 +120,5 @@ export default {
   Swipecell,
   PickerView,
   DropdownMenu,
+  WaterMark,
 };
