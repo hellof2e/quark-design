@@ -15,7 +15,9 @@
 
 :host([radiogrouphost][direction="horizontal"]) .quark-radio-group-wrapper {
   display: flex;
-  gap: var(--radio-horizontal-gap, 20px)
+}
+:host([radiogrouphost][direction="horizontal"]) ::slotted(*) {
+  margin-right: var(--radio-horizontal-gap, 20px);
 }
 
 :host([radiohost]) .quark-radio {
