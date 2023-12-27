@@ -1,5 +1,11 @@
 # 更新日志
 
+### [1.5.4](https://github.com/hellof2e/quark-design/compare/v1.5.3...v1.5.4) (2023-12-27)
+
+### 🐞 Bug Fixes
+
+- radio icon 漂移 ([b2b99a2](https://github.com/hellof2e/quark-design/commit/b2b99a264ed07080b59b4177fd5ef163faeb8c8e))
+
 ### [1.5.3](https://github.com/hellof2e/quark-design/compare/v1.5.2...v1.5.3) (2023-12-26)
 
 ### 🎉 Features
