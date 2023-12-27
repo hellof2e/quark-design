@@ -1,4 +1,15 @@
 # 更新日志
+### [1.5.5](https://github.com/hellof2e/quark-design/compare/v1.5.4...v1.5.5) (2023-12-27)
+
+
+### 🎉 Features
+
+* update quarkd ([b96a90b](https://github.com/hellof2e/quark-design/commit/b96a90b503216d32e5062c36ecaf9303772a85b2))
+
+
+### 🐞 Bug Fixes
+
+* 修复 toast css max-content 不兼容问题 ([251d365](https://github.com/hellof2e/quark-design/commit/251d3652fe723b3e807daaa64960c06bae039c64))
 
 ### [1.5.4](https://github.com/hellof2e/quark-design/compare/v1.5.3...v1.5.4) (2023-12-27)
 
