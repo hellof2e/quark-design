@@ -44,11 +44,15 @@ class QuarkToast extends QuarkElement {
 
   loadingIconDirection: "horizontal" | "vertical" = "vertical";
 
+  toastWidth = "auto";
+
   iconRef: any = createRef();
 
   toastRef: any = createRef();
 
   loadingtRef: any = createRef();
+
+  textRef: any = createRef();
 
   static allowMultiple = false;
 
@@ -85,7 +89,10 @@ class QuarkToast extends QuarkElement {
     if (propName === "show") {
       const { current: loadingtCurrent } = this.loadingtRef;
       if (this.toastRef && this.toastRef.current) {
+        const rect = this.textRef.current.getBoundingClientRect();
         const { current } = this.toastRef;
+        const toastWidth = rect.width + 40;
+        this.toastWidth = toastWidth;
         // 设置退出过渡动画
         if (newValue) {
           // 由关闭到打开
@@ -148,6 +155,9 @@ class QuarkToast extends QuarkElement {
             type="circular"
             vertical
           ></quark-loading>
+          <span class="hide-content" ref={this.textRef}>
+            {this.content}
+          </span>
           <slot>{this.content}</slot>
         </div>
       </quark-overlay>
@@ -157,9 +167,22 @@ class QuarkToast extends QuarkElement {
     if (this.zIndex) {
       this.style.zIndex = `${this.zIndex}`;
     }
+    const visibility = this.toastWidth !== "auto" ? "visible" : "hidden";
     return (
-      <div class="quark-toast" ref={this.toastRef}>
+      <div
+        class="quark-toast"
+        ref={this.toastRef}
+        style={{
+          width: this.toastWidth,
+          visibility,
+          minWidth: `var(--toast-min-width, 120px)`,
+          maxWidth: `var(--toast-max-width, 240px)`,
+        }}
+      >
         {this.type !== "text" && this.renderIcon()}
+        <span class="hide-content" ref={this.textRef}>
+          {this.content}
+        </span>
         <slot>{this.content}</slot>
       </div>
     );
