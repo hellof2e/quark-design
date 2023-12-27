@@ -42,7 +42,7 @@
     <h2>{{ translate("title.size") }}</h2>
     <div class="radio-container">
       <quark-radio-group :value="data.value3" @change="onChange3">
-        <quark-radio name="apple" size="big">{{
+        <quark-radio name="apple" size="big" shape="square">{{
           translate("size.square")
         }}</quark-radio>
         <quark-radio name="banana" size="big">{{
@@ -63,10 +63,10 @@
       </quark-radio-group>
     </div>
     <div class="radio-container">
-      <quark-radio :checked="true" disabled>{{
+      <quark-radio :checked="true" disabled shape="square">{{
         translate("disabled.squareChecekd")
       }}</quark-radio>
-      <quark-radio :checked="false" disabled>{{
+      <quark-radio :checked="false" disabled shape="square">{{
         translate("disabled.squareUnchecked")
       }}</quark-radio>
     </div>

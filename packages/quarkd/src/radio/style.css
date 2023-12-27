@@ -48,6 +48,9 @@
 :host .quark-radio-container {
   position: relative;
   display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
   margin-right: var(--radio-label-gap, 8px);
@@ -55,9 +58,6 @@
 }
 
 :host .quark-radio-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   visibility: hidden;
@@ -75,42 +75,18 @@
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
 }
-
-:host .quark-radio-container input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-:host .quark-radio-container span {
+:host .quark-radio-container .quark-radio-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-}
-
-:host .quark-radio-container .quark-radio-show {
   background: #ffffff;
   border-radius: 50%;
   position: relative;
-}
-
-:host .quark-radio-container .quark-radio-show::after {
-  position: absolute;
-  box-sizing: border-box;
-  content: " ";
-  pointer-events: none;
-  top: -50%;
-  right: -50%;
-  bottom: -50%;
-  left: -50%;
-  border-radius: 50%;
   border: 1px solid quark-formPlaceholderColor;
-  transform: scale(0.5);
 }
 
 :host([disabled]) * {
@@ -142,7 +118,7 @@
   border-radius: 4px;
 }
 
-:host([shape="square"]) .quark-radio-show::after {
+:host([shape="square"]) .quark-radio-show {
   border-radius: 4px;
 }
 
@@ -154,7 +130,7 @@
   background: var(--radio-background, quark-primaryColor);
 }
 
-:host([checked]) .quark-radio-container .quark-radio-show::after {
+:host([checked]) .quark-radio-container .quark-radio-show {
   border: none;
 }
 

@@ -1,5 +1,18 @@
 # 更新日志
 
+### [1.5.3](https://github.com/hellof2e/quark-design/compare/v1.5.2...v1.5.3) (2023-12-26)
+
+### 🎉 Features
+
+- **index:** add watermark component ([#321](https://github.com/hellof2e/quark-design/issues/321)) ([a22d870](https://github.com/hellof2e/quark-design/commit/a22d87066c00f777c8d848515296c3a1bad3ecdc))
+- udpate quarkd ([505f985](https://github.com/hellof2e/quark-design/commit/505f985af5b71e027184fe3053b1c02ca750c281))
+- 水印 ([1b37564](https://github.com/hellof2e/quark-design/commit/1b375647a6faa3cdf8dd87801d9ff177e24e4f75))
+
+### 🐞 Bug Fixes
+
+- radio gap ([c474516](https://github.com/hellof2e/quark-design/commit/c47451659f4b9b40baffbffe4ecd126f699cec0e))
+- radio gap ([3072e55](https://github.com/hellof2e/quark-design/commit/3072e5552e2c127b332d7c1c1cf1a442fff7d4b3))
+
 ### [1.5.1](https://github.com/hellof2e/quark-design/compare/v1.5.0...v1.5.1) (2023-12-08)
 
 ### 🎉 Features
