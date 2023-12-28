@@ -1,22 +1,31 @@
 # 更新日志
-### [1.5.6](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.6) (2023-12-28)
 
-
-### 🎉 Features
-
-* toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
-
-### [1.5.5](https://github.com/hellof2e/quark-design/compare/v1.5.4...v1.5.5) (2023-12-27)
-
+### [1.5.7](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.7) (2023-12-28)
 
 ### 🎉 Features
 
-* update quarkd ([b96a90b](https://github.com/hellof2e/quark-design/commit/b96a90b503216d32e5062c36ecaf9303772a85b2))
-
+- toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
 
 ### 🐞 Bug Fixes
 
-* 修复 toast css max-content 不兼容问题 ([251d365](https://github.com/hellof2e/quark-design/commit/251d3652fe723b3e807daaa64960c06bae039c64))
+- radio check ([a82d54c](https://github.com/hellof2e/quark-design/commit/a82d54ccaa76dcafb7a6cd3eee65641d25b4a2bd))
+- raido checked ([b9b799e](https://github.com/hellof2e/quark-design/commit/b9b799e7eb80d56ee6cb3d69ebebb9a6f0db662c))
+
+### [1.5.6](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.6) (2023-12-28)
+
+### 🎉 Features
+
+- toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
+
+### [1.5.5](https://github.com/hellof2e/quark-design/compare/v1.5.4...v1.5.5) (2023-12-27)
+
+### 🎉 Features
+
+- update quarkd ([b96a90b](https://github.com/hellof2e/quark-design/commit/b96a90b503216d32e5062c36ecaf9303772a85b2))
+
+### 🐞 Bug Fixes
+
+- 修复 toast css max-content 不兼容问题 ([251d365](https://github.com/hellof2e/quark-design/commit/251d3652fe723b3e807daaa64960c06bae039c64))
 
 ### [1.5.4](https://github.com/hellof2e/quark-design/compare/v1.5.3...v1.5.4) (2023-12-27)
 
