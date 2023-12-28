@@ -1,4 +1,11 @@
 # 更新日志
+### [1.5.6](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.6) (2023-12-28)
+
+
+### 🎉 Features
+
+* toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
+
 ### [1.5.5](https://github.com/hellof2e/quark-design/compare/v1.5.4...v1.5.5) (2023-12-27)
 
 
