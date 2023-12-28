@@ -89,10 +89,10 @@ class QuarkToast extends QuarkElement {
     if (propName === "show") {
       const { current: loadingtCurrent } = this.loadingtRef;
       if (this.toastRef && this.toastRef.current) {
-        const rect = this.textRef.current.getBoundingClientRect();
+        // const rect = this.textRef.current.getBoundingClientRect();
         const { current } = this.toastRef;
-        const toastWidth = rect.width + 40;
-        this.toastWidth = toastWidth;
+        // const toastWidth = rect.width + 40;
+        // this.toastWidth = toastWidth;
         // 设置退出过渡动画
         if (newValue) {
           // 由关闭到打开
@@ -167,22 +167,24 @@ class QuarkToast extends QuarkElement {
     if (this.zIndex) {
       this.style.zIndex = `${this.zIndex}`;
     }
-    const visibility = this.toastWidth !== "auto" ? "visible" : "hidden";
+    // const visibility = this.toastWidth !== "auto" ? "visible" : "hidden";
     return (
       <div
         class="quark-toast"
         ref={this.toastRef}
         style={{
-          width: this.toastWidth,
-          visibility,
+          // width: this.toastWidth,
+          // visibility,
           minWidth: `var(--toast-min-width, 120px)`,
           maxWidth: `var(--toast-max-width, 240px)`,
+          padding: `var(--toast-text-padding, 16px 20px)`,
+          fontSize: `var(--toast-font-size, 14px)`,
         }}
       >
         {this.type !== "text" && this.renderIcon()}
-        <span class="hide-content" ref={this.textRef}>
+        {/* <span class="hide-content" ref={this.textRef}>
           {this.content}
-        </span>
+        </span> */}
         <slot>{this.content}</slot>
       </div>
     );
