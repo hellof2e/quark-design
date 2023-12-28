@@ -7,6 +7,7 @@
 :host([radiohost]) {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 :host([radiohost]) * {
@@ -25,6 +26,7 @@
   align-items: center;
   cursor: pointer;
   width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -46,15 +48,19 @@
 }
 
 :host .quark-radio-container {
+  box-sizing: border-box;
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: var(--radio-size, 20px);
-  width: var(--radio-size, 20px);
+  height: var(--radio-size, 16px);
+  width: var(--radio-size, 16px);
   margin-right: var(--radio-label-gap, 8px);
   flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid quark-formPlaceholderColor;
 }
 
 :host .quark-radio-icon {
@@ -75,25 +81,12 @@
   height: var(--radio-size, 20px);
   width: var(--radio-size, 20px);
 }
-:host .quark-radio-container .quark-radio-show {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 50%;
-  position: relative;
-  border: 1px solid quark-formPlaceholderColor;
-}
 
 :host([disabled]) * {
   cursor: not-allowed;
 }
 
-:host([disabled]) .quark-radio-container .quark-radio-show {
+:host([disabled]) .quark-radio-container {
   background: #f0f3f5;
 }
 
@@ -108,7 +101,7 @@
   z-index: 3;
 }
 
-:host([shape="square"]) .quark-radio-container .quark-radio-show {
+:host([shape="square"]) .quark-radio-container {
   border-radius: 4px;
 }
 
@@ -118,20 +111,13 @@
   border-radius: 4px;
 }
 
-:host([shape="square"]) .quark-radio-show {
-  border-radius: 4px;
-}
-
 :host([shape="square"][size="big"]) .quark-radio-container span {
   border-radius: 5px;
 }
 
-:host([checked]) .quark-radio-container .quark-radio-show {
+:host([checked]) .quark-radio-container {
   background: var(--radio-background, quark-primaryColor);
-}
-
-:host([checked]) .quark-radio-container .quark-radio-show {
-  border: none;
+  border: 1px solid transparent;
 }
 
 :host([checked]) .quark-radio-icon {
