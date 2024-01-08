@@ -50,7 +50,7 @@ npm install quarkd
 import "quarkd/lib/button";
 
 // like a normal div tag `<div>xx</div>`, can be used in any browser.
-<quark-button type="primary" onclick="onClick">Button</quark-button>;
+<quark-button type="primary" onclick="onClick">Button</quark-button>
 ```
 
 ```html
