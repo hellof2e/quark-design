@@ -22,7 +22,7 @@
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   pointer-events: all;
   width: var(--toast-width, 120px);
-  height: var(--toast-height, 120px);
+  min-height: var(--toast-height, 120px);
   text-align: center;
   transition: opacity var(--toast-transition-fade-in, 0.3s) ease-in;
   position: fixed;
