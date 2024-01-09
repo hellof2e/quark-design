@@ -1,4 +1,11 @@
 # 更新日志
+### [1.5.8](https://github.com/hellof2e/quark-design/compare/v1.5.7...v1.5.8) (2024-01-09)
+
+
+### 🎉 Features
+
+* toast 兼容文字过长问题 ([e1cb538](https://github.com/hellof2e/quark-design/commit/e1cb5384d452c053e97e459e4787ee64b51f3b8e))
+* update quarkd ([92bf282](https://github.com/hellof2e/quark-design/commit/92bf2823f897035a069edff1550293fdc3e066c3))
 
 ### [1.5.7](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.7) (2023-12-28)
 
