@@ -1,4 +1,11 @@
 # 更新日志
+### [1.5.9](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.9) (2024-01-11)
+
+
+### 🐞 Bug Fixes
+
+* 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+
 ### [1.5.8](https://github.com/hellof2e/quark-design/compare/v1.5.7...v1.5.8) (2024-01-09)
 
 
