@@ -65,7 +65,7 @@ class QuarkToast extends QuarkElement {
         if (!el.classList.contains("quark-toast-leave")) return;
         if (el && el.parentNode && !this.show) {
           try {
-            // document.body.removeChild(this);
+            document.body.removeChild(this);
           } catch (error) {
             // todo something
           }
@@ -146,8 +146,8 @@ class QuarkToast extends QuarkElement {
         <div
           class={`quark-toast quark-toast--${this.loadingIconDirection}`}
           ref={this.toastRef}
+          style={{ minHeight: `var(--toast-height, 120px)` }}
         >
-          {this.type !== "text" && this.renderIcon()}
           <quark-loading
             ref={this.loadingtRef}
             size={this.iconSize}
@@ -179,6 +179,10 @@ class QuarkToast extends QuarkElement {
           maxWidth: `var(--toast-max-width, 240px)`,
           padding: `var(--toast-text-padding, 16px 20px)`,
           fontSize: `var(--toast-font-size, 14px)`,
+          minHeight:
+            this.type !== "text" && this.loadingIconDirection !== "horizontal"
+              ? `var(--toast-height, 120px)`
+              : "auto",
         }}
       >
         {this.type !== "text" && this.renderIcon()}

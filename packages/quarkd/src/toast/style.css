@@ -22,7 +22,6 @@
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   pointer-events: all;
   width: var(--toast-width, 120px);
-  min-height: var(--toast-height, 120px);
   text-align: center;
   transition: opacity var(--toast-transition-fade-in, 0.3s) ease-in;
   position: fixed;
@@ -43,6 +42,7 @@
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
+  min-height: auto !important;
 }
 
 :host([show]) .quark-toast {
@@ -51,7 +51,7 @@
 
 :host([type="text"]) .quark-toast {
   padding: var(--toast-text-padding, 16px 20px);
-  width: auto;
+  width: max-content;
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
