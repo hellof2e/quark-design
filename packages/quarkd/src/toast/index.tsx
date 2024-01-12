@@ -108,7 +108,9 @@ class QuarkToast extends QuarkElement {
   }
 
   hide = () => {
-    this.show = false;
+    setTimeout(() => {
+      this.show = false;
+    });
     if (this.type === "loading") clearAllBodyScrollLocks();
   };
 
