@@ -1,4 +1,11 @@
 # 更新日志
+### [1.5.10](https://github.com/hellof2e/quark-design/compare/v1.5.9...v1.5.10) (2024-01-12)
+
+
+### 🐞 Bug Fixes
+
+* 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+
 ### [1.5.9](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.9) (2024-01-11)
 
 
