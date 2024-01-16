@@ -1,4 +1,18 @@
 # 更新日志
+### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
+
+
+### 🐞 Bug Fixes
+
+* 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+* 修复toast组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+* 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+
+
+### 🎉 Features
+
+* 国际化支持，新增法语和日语 ([#327](https://github.com/hellof2e/quark-design/issues/327)) ([db49dde](https://github.com/hellof2e/quark-design/commit/db49dde3562a884b0808347954ecf2bb9a5b6daf))
+
 ### [1.5.11](https://github.com/hellof2e/quark-design/compare/v1.5.10...v1.5.11) (2024-01-16)
 
 
