@@ -1,4 +1,11 @@
 # 更新日志
+### [1.5.11](https://github.com/hellof2e/quark-design/compare/v1.5.10...v1.5.11) (2024-01-16)
+
+
+### 🐞 Bug Fixes
+
+* 修复toast组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+
 ### [1.5.10](https://github.com/hellof2e/quark-design/compare/v1.5.9...v1.5.10) (2024-01-12)
 
 
