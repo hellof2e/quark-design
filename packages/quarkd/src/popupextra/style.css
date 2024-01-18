@@ -33,7 +33,7 @@
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
-  background-color: quark-fillBaseColor;
+  background: var(--popup-extra-background, quark-fillBaseColor);
   opacity: 1;
   transition: transform quark-animationDurationBase;
   transition-timing-function: quark-animationTimingEnter;
