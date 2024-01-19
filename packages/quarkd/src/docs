@@ -1,46 +1,52 @@
 # 更新日志
-### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
-
-
-### 🐞 Bug Fixes
-
-* 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
-* 修复toast组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
-* 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+### [1.5.13](https://github.com/hellof2e/quark-design/compare/v1.5.12...v1.5.13) (2024-01-19)
 
 
 ### 🎉 Features
 
-* 国际化支持，新增法语和日语 ([#327](https://github.com/hellof2e/quark-design/issues/327)) ([db49dde](https://github.com/hellof2e/quark-design/commit/db49dde3562a884b0808347954ecf2bb9a5b6daf))
+* update quarkd ([03db543](https://github.com/hellof2e/quark-design/commit/03db5439e202d28e92c444074499d253d5b86404))
+
+
+### 🐞 Bug Fixes
+
+* swipe bug ([463a41d](https://github.com/hellof2e/quark-design/commit/463a41db96288efd0160cfc0ecbb57dc39949c94))
+
+### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
+
+### 🐞 Bug Fixes
+
+- 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+- 修复 toast 组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+- 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+
+### 🎉 Features
+
+- 国际化支持，新增法语和日语 ([#327](https://github.com/hellof2e/quark-design/issues/327)) ([db49dde](https://github.com/hellof2e/quark-design/commit/db49dde3562a884b0808347954ecf2bb9a5b6daf))
 
 ### [1.5.11](https://github.com/hellof2e/quark-design/compare/v1.5.10...v1.5.11) (2024-01-16)
 
-
 ### 🐞 Bug Fixes
 
-* 修复toast组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+- 修复 toast 组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
 
 ### [1.5.10](https://github.com/hellof2e/quark-design/compare/v1.5.9...v1.5.10) (2024-01-12)
 
-
 ### 🐞 Bug Fixes
 
-* 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+- 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
 
 ### [1.5.9](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.9) (2024-01-11)
 
-
 ### 🐞 Bug Fixes
 
-* 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+- 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
 
 ### [1.5.8](https://github.com/hellof2e/quark-design/compare/v1.5.7...v1.5.8) (2024-01-09)
 
-
 ### 🎉 Features
 
-* toast 兼容文字过长问题 ([e1cb538](https://github.com/hellof2e/quark-design/commit/e1cb5384d452c053e97e459e4787ee64b51f3b8e))
-* update quarkd ([92bf282](https://github.com/hellof2e/quark-design/commit/92bf2823f897035a069edff1550293fdc3e066c3))
+- toast 兼容文字过长问题 ([e1cb538](https://github.com/hellof2e/quark-design/commit/e1cb5384d452c053e97e459e4787ee64b51f3b8e))
+- update quarkd ([92bf282](https://github.com/hellof2e/quark-design/commit/92bf2823f897035a069edff1550293fdc3e066c3))
 
 ### [1.5.7](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.7) (2023-12-28)
 

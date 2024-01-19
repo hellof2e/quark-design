@@ -1,5 +1,15 @@
 # 更新日志
 
+### [1.5.13](https://github.com/hellof2e/quark-design/compare/v1.5.12...v1.5.13) (2024-01-19)
+
+### 🎉 Features
+
+- update quarkd ([03db543](https://github.com/hellof2e/quark-design/commit/03db5439e202d28e92c444074499d253d5b86404))
+
+### 🐞 Bug Fixes
+
+- swipe bug ([463a41d](https://github.com/hellof2e/quark-design/commit/463a41db96288efd0160cfc0ecbb57dc39949c94))
+
 ### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
 
 ### 🐞 Bug Fixes
