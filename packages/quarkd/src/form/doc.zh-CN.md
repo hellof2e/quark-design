@@ -8,12 +8,17 @@
 
 ```tsx
 import "quarkd/lib/form";
-import "quarkd/lib/form-item";
 ```
 
 ### 基本用法
 
 配合 prop 字段，设置表单项的值
+
+```tsx
+import "quarkd/lib/form";
+import "quarkd/lib/field";
+import "quarkd/lib/button";
+```
 
 ```html
 <quark-form ref="formRef" labelwidth="70px">

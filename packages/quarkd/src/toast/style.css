@@ -22,17 +22,12 @@
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   pointer-events: all;
   width: var(--toast-width, 120px);
-  height: var(--toast-height, 120px);
   text-align: center;
-  transition: transform opacity 3s ease-in;
+  transition: opacity var(--toast-transition-fade-in, 0.3s) ease-in;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 :host([position="top"]) .quark-toast {
   top: var(--toast-position-top-distance, 20%);
@@ -47,6 +42,7 @@
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
+  min-height: auto !important;
 }
 
 :host([show]) .quark-toast {
@@ -59,6 +55,7 @@
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
+  white-space: normal;
 }
 
 quark-icon-whitesuccess-o,
@@ -68,19 +65,23 @@ quark-icon-whitewarning-o {
 }
 
 :host quark-loading {
-  display: none;
+  display: block;
+  margin-right: var(--toast-loading-right, 0);
+  margin-bottom: var(--toast-loading-bottom, 14px);
+}
+:host([type="loading"]) .quark-toast--horizontal quark-loading {
+  margin-bottom: var(--toast-loading-bottom) !important;
+  margin-right: var(--toast-loading-right, 18px) !important;
 }
 
 :host([show][type="loading"]) quark-loading {
+  opacity: 1;
   display: block;
-  margin-bottom: var(--toast-loading-bottom, 14px);
-  margin-right: var(--toast-loading-right, 0);
 }
 
 :host([show][type="loading"]) .quark-toast--horizontal quark-loading {
+  opacity: 1;
   display: block;
-  margin-bottom: var(--toast-loading-bottom, 0);
-  margin-right: var(--toast-loading-right, 8px);
 }
 
 :host(:not([type="text"])) quark-icon-whitesuccess-o,
@@ -91,5 +92,16 @@ quark-icon-whitewarning-o {
 
 :host .quark-toast-leave {
   opacity: 0;
-  transition: transform opacity 3s ease-out;
+  transition: opacity var(--toast-transition-fade-out, 0.3s) ease-out;
+}
+:host .quark-loading-leave {
+  opacity: 0;
+  transition: opacity var(--toast-transition-fade-out, 0.4s) ease-out;
+}
+:host .hide-content{
+  width: auto;
+  white-space: nowrap;
+  display: inline-block; /* 使元素根据内容调整宽度 */
+  position: absolute;
+  left: 500px;
 }

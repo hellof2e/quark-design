@@ -36,13 +36,7 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit
-
-- [Vue Doc](https://vue-quarkd.hellobike.com)
-- [React Doc](https://react-quarkd.hellobike.com)
-- [Vanilla Javascript Doc](https://vanilla-quarkd.hellobike.com)
-- [Angular Doc(work in progress...)](https://angular-quarkd.hellobike.com)
-- [Svelte Doc(work in progress...)](https://svelte-quarkd.hellobike.com)
+For full documentation, visit [Docs](https://vue-quarkd.hellobike.com).
 
 ## Install
 
@@ -50,13 +44,32 @@ For full documentation, visit
 npm install quarkd
 ```
 
-## Usage
+## Usage example
 
-```js
+```jsx
 import "quarkd/lib/button";
 
-<quark-button type="primary">Button</quark-button>;
+// like a normal div tag `<div>xx</div>`, can be used in any browser.
+<quark-button type="primary" onclick="onClick">Button</quark-button>
 ```
+
+```html
+// react
+<quark-button type="primary" onClick="onClick">Button</quark-button>
+
+// vue
+<quark-button type="primary" @click="onClick">Button</quark-button>
+
+// svelte
+<quark-button type="primary" on:click={onClick}>Button</quark-button>
+
+// angular
+<quark-button type="primary" (click)="onClick">Button</quark-button>
+```
+
+## Vs Code plugin
+
+[Visual Studio | Marketplace](https://marketplace.visualstudio.com/items?itemName=quarkd.quarkd-vscode-extension)
 
 ## Community
 
@@ -68,6 +81,3 @@ For help, discussion about best practices, or any other conversation that would 
 
 If you're interested in contributing to quark design, please read our [contributing docs](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
 
-## GitHub Stargazaers
-
-![stargazers](https://starchart.cc/hellof2e/quark-design.svg)

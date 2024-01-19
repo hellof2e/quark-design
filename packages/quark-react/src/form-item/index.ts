@@ -1,6 +1,6 @@
 import { FC } from "react";
 import reactify from "@quarkd/reactify";
-import "quarkd/lib/form/form-item";
+// import "quarkd/lib/form/form-item";
 import { IFormItemProps } from "quarkd/lib/form/type";
 import { componentBaseInterface, ReactifyProps } from "../type";
 

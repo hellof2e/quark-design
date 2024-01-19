@@ -27,7 +27,7 @@ import "quarkd/lib/switch";
 TO change switch size, set `size` prop on the Switch or alter `font-size` value of `style` prop.
 
 ```html
-<quark-switch size="26px"></quark-switch>
+<quark-switch size="26"></quark-switch>
 <quark-switch style="font-size: 26px"></quark-switch>
 ```
 

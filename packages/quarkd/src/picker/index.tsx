@@ -108,7 +108,6 @@ class QuarkPicker extends QuarkElement {
   }
 
   confirm = () => {
-    console.log("confirm");
     const selectValues = this.getValues();
     this.values = selectValues;
     this.$emit("confirm", { detail: { value: selectValues } });

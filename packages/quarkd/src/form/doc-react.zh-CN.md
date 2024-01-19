@@ -15,6 +15,10 @@ import { Form, FormRef, FormItem } from "@quarkd/quark-react";
 配合 prop 字段，设置表单项的值
 
 ```tsx
+import { Form, FormRef, FormItem, Field, Button } from "@quarkd/quark-react";
+```
+
+```tsx
 export default () => {
   const [form, setForm] = useState({
     name: '',

@@ -64,13 +64,24 @@ import Toast from "./toast";
 import Tooltip from "./tooltip";
 import Collapse from "./collapse";
 import Uploader, { UploaderRef } from "./uploader";
+import Calendar, { CalendarRef } from "./calendar";
 import Circle, {
   CircleRef,
   CircleStartPosition,
   CircleType,
   StrokeLinecap,
 } from "./circle";
-
+import PickerView, { PickerViewRef } from "./pickerview";
+import DropdownMenu, {
+  DropdownMenuProps,
+  DropdownMenuDirection,
+} from "./dropdown-menu";
+import DropdownItem, {
+  DropdownItemInstance,
+  DropdownItemOption,
+  DropdownItemProps,
+} from "./dropdown-item";
+import WaterMark from "./watermark";
 export {
   ActionSheet,
   Badge,
@@ -148,9 +159,21 @@ export {
   Uploader,
   UploaderRef,
   Collapse,
+  Calendar,
+  CalendarRef,
   Circle,
   CircleRef,
   CircleStartPosition,
   StrokeLinecap,
   CircleType,
+  PickerView,
+  PickerViewRef,
+  DropdownMenu,
+  DropdownMenuDirection,
+  DropdownMenuProps,
+  DropdownItem,
+  DropdownItemInstance,
+  DropdownItemOption,
+  DropdownItemProps,
+  WaterMark,
 };

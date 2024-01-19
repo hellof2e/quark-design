@@ -27,7 +27,7 @@ import { Switch } from "@quarkd/quark-react";
 可以通过 `size` 或修改元素 `font-size` 来控制大小。
 
 ```html
-<Switch size="26px"></Switch> <Switch style="font-size: 26px"></Switch>
+<Switch size="26"></Switch> <Switch style="font-size: 26px"></Switch>
 ```
 
 ### 自定义颜色

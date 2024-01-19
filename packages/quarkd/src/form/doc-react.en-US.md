@@ -15,6 +15,10 @@ import { Form, FormRef, FormItem } from "@quarkd/quark-react";
 Set value of form items, used with `prop` prop.
 
 ```tsx
+import { Form, FormRef, FormItem, Field, Button } from "@quarkd/quark-react";
+```
+
+```tsx
 export default () => {
   const [form, setForm] = useState({
     name: '',

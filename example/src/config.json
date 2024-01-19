@@ -188,6 +188,16 @@
 					"show": true,
 					"desc": "标签",
 					"author": "MrZhao"
+				},
+				{
+					"version": "0.0.1",
+					"name": "WaterMark",
+					"sort": 1,
+					"cName": "水印",
+					"type": "component",
+					"show": true,
+					"desc": "水印",
+					"author": "zcl"
 				}
 			]
 		},
@@ -240,6 +250,16 @@
 					"show": true,
 					"desc": "动作面板",
 					"author": "MrZhao"
+				},
+				{
+					"version": "0.0.1",
+					"name": "DropdownMenu",
+					"sort": 1,
+					"cName": "下拉菜单",
+					"type": "component",
+					"show": true,
+					"desc": "下拉菜单",
+					"author": "yunxia"
 				},
 				{
 					"version": "1.0.29",
@@ -409,6 +429,16 @@
 				},
 				{
 					"version": "0.0.1",
+					"name": "Calendar",
+					"sort": 1,
+					"cName": "日历",
+					"type": "component",
+					"show": true,
+					"desc": "日历",
+					"author": "nieyt"
+				},
+				{
+					"version": "0.0.1",
 					"name": "Picker",
 					"sort": 1,
 					"cName": "选择器",
@@ -416,6 +446,16 @@
 					"show": true,
 					"desc": "选择器",
 					"author": "MrZhaoCn"
+				},
+        {
+					"version": "0.0.1",
+					"name": "PickerView",
+					"sort": 1,
+					"cName": "选择器视图",
+					"type": "component",
+					"show": true,
+					"desc": "选择器",
+					"author": "yhy"
 				},
 				{
 					"version": "0.0.1",

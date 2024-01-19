@@ -1,5 +1,182 @@
 # 更新日志
 
+### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
+
+### 🐞 Bug Fixes
+
+- 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+- 修复 toast 组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+- 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+
+### 🎉 Features
+
+- 国际化支持，新增法语和日语 ([#327](https://github.com/hellof2e/quark-design/issues/327)) ([db49dde](https://github.com/hellof2e/quark-design/commit/db49dde3562a884b0808347954ecf2bb9a5b6daf))
+
+### [1.5.11](https://github.com/hellof2e/quark-design/compare/v1.5.10...v1.5.11) (2024-01-16)
+
+### 🐞 Bug Fixes
+
+- 修复 toast 组件函数式调用不能立即关闭的问题 ([cddfaa5](https://github.com/hellof2e/quark-design/commit/cddfaa592abd06cd93386523d6958e29b63639a4))
+
+### [1.5.10](https://github.com/hellof2e/quark-design/compare/v1.5.9...v1.5.10) (2024-01-12)
+
+### 🐞 Bug Fixes
+
+- 修复 toast 消失未移除 dom 问题 ([fd1e05e](https://github.com/hellof2e/quark-design/commit/fd1e05e3850205b6f3713a98878a6b632e353e77))
+
+### [1.5.9](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.9) (2024-01-11)
+
+### 🐞 Bug Fixes
+
+- 去除 react form-item 引入 ([822fa12](https://github.com/hellof2e/quark-design/commit/822fa127ddfb22213a94b0fa5fa0bdfdde864306))
+
+### [1.5.8](https://github.com/hellof2e/quark-design/compare/v1.5.7...v1.5.8) (2024-01-09)
+
+### 🎉 Features
+
+- toast 兼容文字过长问题 ([e1cb538](https://github.com/hellof2e/quark-design/commit/e1cb5384d452c053e97e459e4787ee64b51f3b8e))
+- update quarkd ([92bf282](https://github.com/hellof2e/quark-design/commit/92bf2823f897035a069edff1550293fdc3e066c3))
+
+### [1.5.7](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.7) (2023-12-28)
+
+### 🎉 Features
+
+- toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
+
+### 🐞 Bug Fixes
+
+- radio check ([a82d54c](https://github.com/hellof2e/quark-design/commit/a82d54ccaa76dcafb7a6cd3eee65641d25b4a2bd))
+- raido checked ([b9b799e](https://github.com/hellof2e/quark-design/commit/b9b799e7eb80d56ee6cb3d69ebebb9a6f0db662c))
+
+### [1.5.6](https://github.com/hellof2e/quark-design/compare/v1.5.5...v1.5.6) (2023-12-28)
+
+### 🎉 Features
+
+- toast 样式优化兼容 ([cc19178](https://github.com/hellof2e/quark-design/commit/cc191780d08358e4d81c773f1561c70648b2c4c0))
+
+### [1.5.5](https://github.com/hellof2e/quark-design/compare/v1.5.4...v1.5.5) (2023-12-27)
+
+### 🎉 Features
+
+- update quarkd ([b96a90b](https://github.com/hellof2e/quark-design/commit/b96a90b503216d32e5062c36ecaf9303772a85b2))
+
+### 🐞 Bug Fixes
+
+- 修复 toast css max-content 不兼容问题 ([251d365](https://github.com/hellof2e/quark-design/commit/251d3652fe723b3e807daaa64960c06bae039c64))
+
+### [1.5.4](https://github.com/hellof2e/quark-design/compare/v1.5.3...v1.5.4) (2023-12-27)
+
+### 🐞 Bug Fixes
+
+- radio icon 漂移 ([b2b99a2](https://github.com/hellof2e/quark-design/commit/b2b99a264ed07080b59b4177fd5ef163faeb8c8e))
+
+### [1.5.3](https://github.com/hellof2e/quark-design/compare/v1.5.2...v1.5.3) (2023-12-26)
+
+### 🎉 Features
+
+- **index:** add watermark component ([#321](https://github.com/hellof2e/quark-design/issues/321)) ([a22d870](https://github.com/hellof2e/quark-design/commit/a22d87066c00f777c8d848515296c3a1bad3ecdc))
+- udpate quarkd ([505f985](https://github.com/hellof2e/quark-design/commit/505f985af5b71e027184fe3053b1c02ca750c281))
+- 水印 ([1b37564](https://github.com/hellof2e/quark-design/commit/1b375647a6faa3cdf8dd87801d9ff177e24e4f75))
+
+### 🐞 Bug Fixes
+
+- radio gap ([c474516](https://github.com/hellof2e/quark-design/commit/c47451659f4b9b40baffbffe4ecd126f699cec0e))
+- radio gap ([3072e55](https://github.com/hellof2e/quark-design/commit/3072e5552e2c127b332d7c1c1cf1a442fff7d4b3))
+
+### [1.5.1](https://github.com/hellof2e/quark-design/compare/v1.5.0...v1.5.1) (2023-12-08)
+
+### 🎉 Features
+
+- update quarkd version ([3065c70](https://github.com/hellof2e/quark-design/commit/3065c70e2ca7ae1c1f0013013db75044c39e9a4d))
+
+### Documentation
+
+- update dropdown menu ([b618f20](https://github.com/hellof2e/quark-design/commit/b618f20c52c2a7d0a2156418b12bc48e4b6e6a57))
+
+### 🐞 Bug Fixes
+
+- toast zIndex ([1119c67](https://github.com/hellof2e/quark-design/commit/1119c672a4a5c4db0ed90bbd995d5d6f993c9d81))
+
+## [1.5.0](https://github.com/hellof2e/quark-design/compare/v1.4.1...v1.5.0) (2023-11-23)
+
+### Documentation
+
+- update switch doc ([6c8c575](https://github.com/hellof2e/quark-design/commit/6c8c575df3251a0864b6ffca4a42fac43f558068))
+
+### 🎉 Features
+
+- dropdown-menu 组件分支整理 ([#317](https://github.com/hellof2e/quark-design/issues/317)) ([cf80b55](https://github.com/hellof2e/quark-design/commit/cf80b55cea577d7bb3fe2c56588aaa7c8abe7121))
+- tab 滑动触发 onchange 事件修改 ([#315](https://github.com/hellof2e/quark-design/issues/315)) ([7b86e20](https://github.com/hellof2e/quark-design/commit/7b86e20df3398071bce87aec7b5708842d8feb9b))
+
+### [1.4.1](https://github.com/hellof2e/quark-design/compare/v1.4.0...v1.4.1) (2023-10-19)
+
+### 🎉 Features
+
+- form 文档修改 ([#303](https://github.com/hellof2e/quark-design/issues/303)) ([50311d0](https://github.com/hellof2e/quark-design/commit/50311d0e601ce849dc0a5c88521d94fd18a322fb))
+- update demo ([a3644bf](https://github.com/hellof2e/quark-design/commit/a3644bfd1381624c7626d04512bf41e4d64cfcea))
+- update quarkd ([6477a77](https://github.com/hellof2e/quark-design/commit/6477a77cd43165a4ece4b08545f17911f25a3e95))
+
+### 🐞 Bug Fixes
+
+- 修复 toast loading 动画消失文字和图标不同步问题 ([ae83fc8](https://github.com/hellof2e/quark-design/commit/ae83fc894fcd610275bdbb8241e746990a9c1e3a))
+
+## [1.4.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.4.0) (2023-09-04)
+
+### 🐞 Bug Fixes
+
+- 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
+
+## [1.3.0](https://github.com/hellof2e/quark-design/compare/v1.2.8...v1.3.0) (2023-08-31)
+
+### 🎉 Features
+
+- [新增 pickerview 组件](https://github.com/hellof2e/quark-design/tree/feature/pickview/packages/quarkd/src/pickerview）)
+
+### 🐞 Bug Fixes
+
+- 文档遮挡 ([#299](https://github.com/hellof2e/quark-design/issues/299)) ([c529dc3](https://github.com/hellof2e/quark-design/commit/c529dc3ac0260279689f805b1363045df2e425cd))
+
+### [1.2.8](https://github.com/hellof2e/quark-design/compare/v1.2.7...v1.2.8) (2023-08-22)
+
+### 🎉 Features
+
+- update quarkd ([a0305d5](https://github.com/hellof2e/quark-design/commit/a0305d5a4970be2eb74c20d17e24d64f687c1f1b))
+
+### 🐞 Bug Fixes
+
+- 修复错误问题 ([eb73997](https://github.com/hellof2e/quark-design/commit/eb73997d415cf1439618a622bad6aad53fc54e12))
+
+### [1.2.7](https://github.com/hellof2e/quark-design/compare/v1.2.6...v1.2.7) (2023-08-16)
+
+### 🐞 Bug Fixes
+
+- popup ([4698e02](https://github.com/hellof2e/quark-design/commit/4698e02252655e2650f6a9ee33147addae2e7e50))
+
+### [1.2.6](https://github.com/hellof2e/quark-design/compare/v1.2.5...v1.2.6) (2023-08-11)
+
+### 🎉 Features
+
+- toast 增加淡入淡出动画 ([bec0093](https://github.com/hellof2e/quark-design/commit/bec00934e9983a57305004c26daf1b37b82fc73e))
+
+### [1.2.5](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.5) (2023-08-09)
+
+### 🎉 Features
+
+- update quarkd ([40ec501](https://github.com/hellof2e/quark-design/commit/40ec5018faa539cc95f725d643efb612ac6df433))
+- update quarkd ([c47c9ec](https://github.com/hellof2e/quark-design/commit/c47c9ec04b3ed89e0e5f8788c6d6e7f2e4d95510))
+- update quarkd ([a0f80a8](https://github.com/hellof2e/quark-design/commit/a0f80a8a545c4dbeab769aa6db7d33406ff42b2d))
+
+### 🐞 Bug Fixes
+
+- 修复 toast hide 判空问题 ([d721a96](https://github.com/hellof2e/quark-design/commit/d721a96aeaaf6e93cacd3f539668a6247f4d85b5))
+
+### [1.2.4](https://github.com/hellof2e/quark-design/compare/v1.2.3...v1.2.4) (2023-08-04)
+
+### 🎉 Features
+
+- update quarkd ([c47c9ec](https://github.com/hellof2e/quark-design/commit/c47c9ec04b3ed89e0e5f8788c6d6e7f2e4d95510))
+- update quarkd ([a0f80a8](https://github.com/hellof2e/quark-design/commit/a0f80a8a545c4dbeab769aa6db7d33406ff42b2d))
+
 ### [1.2.3](https://github.com/hellof2e/quark-design/compare/v1.2.2...v1.2.3) (2023-08-02)
 
 ### 🎉 Features

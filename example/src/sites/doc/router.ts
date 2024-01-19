@@ -8,6 +8,7 @@ const pagesRouter: Array<RouteRecordRaw> = [];
 const modulesPage = import.meta.glob(
 	`../../../../packages/quarkd/src/**/doc.zh-CN.md`
 );
+
 for (const path in modulesPage) {
 	const name = (/src\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
 	pagesRouter.push({
@@ -82,8 +83,6 @@ routes.push({
 		path: "/zh-CN/component/button",
 	},
 });
-
-console.log(routes, 1);
 
 const router = createRouter({
 	history: createWebHashHistory(),

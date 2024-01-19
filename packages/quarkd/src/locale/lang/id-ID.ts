@@ -18,4 +18,13 @@ export default {
   actionSheet: {
     shareTitle: "Bagikan ke",
   },
+  calendar: {
+    end: "Akhir",
+    start: "Mulai",
+    title: "Kalender",
+    weekdays: ["minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+    monthTitle: (year: number, month: number) => `${year}/${month}`,
+    rangePrompt: (maxRange: number | string) =>
+      `Pilih tidak lebih dari ${maxRange} hari`,
+  },
 };

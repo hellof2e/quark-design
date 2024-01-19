@@ -64,7 +64,6 @@ class QuarkNativeUploader extends QuarkElement {
 
   onAfterRead = () => {
     const urls = this.tasks.map((i) => i.url);
-    console.log("click");
     this.$emit("onread", { detail: urls });
   };
   // 设置初始化预览数据

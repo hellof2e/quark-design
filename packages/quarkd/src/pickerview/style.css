@@ -1,0 +1,131 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
+:host ul {
+  list-style: none;
+  padding: 0;
+}
+
+:host .quark-picker-container {
+  width: 100%;
+  height:  var(--pickerview-height, 170px);
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+:host .quark-picker-content {
+  /* position: absolute; */
+  display: flex;
+  /* top: 56px; */
+  /* bottom: 72px; */
+  /* left: 0; */
+  /* right: 0; */
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+:host .quark-picker-mask-top {
+  z-index: 10;
+  width: 100%;
+  height: var(--pickerview-row-top-mask-height, 68px);
+  pointer-events: none;
+  transform: translateZ(0);
+}
+:host .quark-picker-mask-bottom {
+  z-index: 10;
+  width: 100%;
+  height: var(--pickerview-row-bottom-mask-height, 68px);
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+
+.quark-picker-mask-top {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+:host .quark-picker-mask-bottom {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+:host .quark-picker-current {
+  position: absolute;
+  top: var(--pickerview-current-top, 70px);
+  height: var(--pickerview-item-height, 34px);
+  width: 100%;
+  /* padding: 0 16px; */
+  box-sizing: border-box;
+}
+
+:host .quark-picker-current .quark-picker-current-mask {
+  height: 100%;
+  border: 1px solid #eee;
+  border: var(--pickerview-border, 1px solid #eee);
+  border-left: none;
+  box-sizing: border-box;
+  border-right: none;
+}
+
+:host .quark-picker-wheel-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+:host .quark-picker-wheel {
+  flex: 1;
+  width: 1%;
+  height: 100%;
+  overflow: hidden;
+}
+
+:host .quark-picker-wheel-scroll {
+  padding: 0;
+  margin-top: var(--pickerview-scroll-margin-top, 71px);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:host .quark-picker-wheel-item {
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-size: var(--pickerview-item-font-size, 16px);
+  list-style: none;
+  line-height: var(--pickerview-item-height, 34px);
+  height: var(--pickerview-item-height, 34px);
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--pickerview-item-color, quark-textBaseColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+:host([bottomhidden]) .quark-picker-picker-content {
+  bottom: 0px;
+}
+
+:host([bottomhidden]) .quark-picker-picker-container {
+  height: 266px;
+}

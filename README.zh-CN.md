@@ -38,15 +38,44 @@
 
 ---
 
-## 文档
+## 文档（组件库源码只有一份！技术栈不同，给出如下文档示例）
 
-更多介绍，请访问
+> 组件库源码只有一份！技术栈不同，给出如下文档说明
+
+更多介绍，请访问。
 
 - [Vue Doc](https://vue-quarkd.hellobike.com)
 - [React Doc](https://react-quarkd.hellobike.com)
 - [Vanilla Javascript Doc(work in progress...)](https://vanilla-quarkd.hellobike.com)
 - [Angular Doc(work in progress...)](https://angular-quarkd.hellobike.com)
 - [Svelte Doc(work in progress...)](https://svelte-quarkd.hellobike.com)
+
+## 使用示例
+```js
+import "quarkd/lib/button"
+
+// 就像一个普通的 div 标签 `<div>xx</div>`, 可以在任何浏览器被使用
+<quark-button type="primary">Button</quark-button>
+```
+
+```html
+// react
+<quark-button type="primary" onClick="onClick">Button</quark-button>
+
+// vue
+<quark-button type="primary" @click="onClick">Button</quark-button>
+
+// svelte
+<quark-button type="primary" on:click={onClick}>Button</quark-button>
+
+// angular
+<quark-button type="primary" (click)="onClick">Button</quark-button>
+```
+
+
+## Vs Code 插件
+
+[Visual Studio | Marketplace](https://marketplace.visualstudio.com/items?itemName=quarkd.quarkd-vscode-extension)
 
 ## 社区交流
 

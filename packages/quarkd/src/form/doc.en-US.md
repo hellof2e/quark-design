@@ -8,12 +8,17 @@ Form
 
 ```tsx
 import "quarkd/lib/form";
-import "quarkd/lib/form-item";
 ```
 
 ### Basic Usage
 
 Set value of form items, used with `prop` prop.
+
+```tsx
+import "quarkd/lib/form";
+import "quarkd/lib/field";
+import "quarkd/lib/button";
+```
 
 ```html
 <quark-form ref="formRef" labelwidth="70px">
