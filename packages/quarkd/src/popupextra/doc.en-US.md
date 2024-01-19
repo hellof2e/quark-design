@@ -97,6 +97,7 @@ The component provides the following [CSS variables](https://developer.mozilla.o
 | `--popup-extra-title-color`          | Title color          | `#242729`                                     |
 | `--popup-extra-subtitle-color`       | Subtitle color       | `#879099`                                     |
 | `--popup-extra-mask-color`           | Mask color           | `rgba(0, 0, 0, 0.7)`                          |
+| `--popup-extra-background`           | Popup background     | `#ffffff`                                     |
 | `--popup-extra-z-index`              | z-index              | `999`                                         |
 | `--popup-extra-max-height`           | Content max-height   | `90%`                                         |
 | `--popup-extra-min-height`           | Content min-height   | -                                             |
