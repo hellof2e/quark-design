@@ -1,5 +1,12 @@
 # 更新日志
 
+### [1.5.14](https://github.com/hellof2e/quark-design/compare/v1.5.13...v1.5.14) (2024-01-19)
+
+### 🎉 Features
+
+- update quarkd ([9e44e81](https://github.com/hellof2e/quark-design/commit/9e44e816ba5a0e726d841ac3085a0e8f10766987))
+- 修复非 loading toast zIndex 属性不生效/popup-extra 暴露背景 ([510e9cf](https://github.com/hellof2e/quark-design/commit/510e9cf20fd9e1f1aa573c3ee728c9330a0c928e))
+
 ### [1.5.13](https://github.com/hellof2e/quark-design/compare/v1.5.12...v1.5.13) (2024-01-19)
 
 ### 🎉 Features
