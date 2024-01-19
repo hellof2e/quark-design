@@ -25,10 +25,12 @@ export interface CustomEvent {
 @customElement({ tag: "quark-swipe-item", style: swipeItemStyle })
 class QuarkSwipeItem extends QuarkElement {
   componentDidMount() {
-    const parentNode = this.parentNode as QuarkSwipe;
-    if (parentNode && parentNode.moveWidth) {
-      this.style.width = `${parentNode.moveWidth}px`;
-    }
+    requestAnimationFrame(() => {
+      const parentNode = this.parentNode as QuarkSwipe;
+      if (parentNode && parentNode.moveWidth) {
+        this.style.width = `${parentNode.moveWidth}px`;
+      }
+    });
   }
 
   render() {
@@ -91,11 +93,13 @@ class QuarkSwipe extends QuarkElement {
   timer: any = null;
 
   componentDidMount() {
-    const { offsetWidth } = this;
-    this.currentIndex = this.defaultindex;
-    this.moveWidth = offsetWidth;
-    const offset = this.getOffset();
-    this.swipeChild(offset, false);
+    requestAnimationFrame(() => {
+      const { offsetWidth } = this;
+      this.currentIndex = this.defaultindex;
+      this.moveWidth = offsetWidth;
+      const offset = this.getOffset();
+      this.swipeChild(offset, false);
+    });
   }
 
   componentWillUnmount() {
