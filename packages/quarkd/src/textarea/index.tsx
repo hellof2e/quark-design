@@ -32,7 +32,7 @@ class TextArea extends QuarkElement {
   name = "";
 
   @property()
-  rows = 2;
+  rows = 1;
 
   @property({
     type: Boolean,
