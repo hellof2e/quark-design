@@ -110,6 +110,7 @@ export default {
 | maxlength    | 最大字符数                                | `number`  | `-`     |
 | showcount    | 显示字数                                  | `boolean` | `false` |
 | autocomplete | 自动补全                                  | `boolean` | `false` |
+| autosize     | 自适应高度                                | `boolean` | `false` |
 | disabled     | 是否禁用                                  | `boolean` | `false` |
 | readonly     | 是否只读                                  | `boolean` | `false` |
 | id           | textarea 元素的 id，常用来配合 label 使用 | `string`  |
