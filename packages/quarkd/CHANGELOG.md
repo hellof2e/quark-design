@@ -1,5 +1,15 @@
 # 更新日志
 
+### [1.5.15](https://github.com/hellof2e/quark-design/compare/v1.5.14...v1.5.15) (2024-01-22)
+
+### 🎉 Features
+
+- update quarkd ([50d0c78](https://github.com/hellof2e/quark-design/commit/50d0c78273930e95f447d3e32dcc94311fdfc805))
+
+### 🐞 Bug Fixes
+
+- textarea 默认 rows ([e890f2a](https://github.com/hellof2e/quark-design/commit/e890f2a3560ee207041591ee599cb17dbf12b5c6))
+
 ### [1.5.14](https://github.com/hellof2e/quark-design/compare/v1.5.13...v1.5.14) (2024-01-19)
 
 ### 🎉 Features
