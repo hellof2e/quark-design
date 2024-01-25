@@ -70,7 +70,14 @@ class TextArea extends QuarkElement {
   value = "";
 
   textAreaRef: any = createRef();
-
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      if (!this.textAreaRef && !this.textAreaRef.current) return;
+      if (!this.autosize) return;
+      const { current } = this.textAreaRef;
+      current.style.height = `${current.scrollHeight}px`;
+    });
+  }
   evenFn = (type: string) => (e: Event) => {
     if (!this.textAreaRef && !this.textAreaRef.current) return;
     e.stopPropagation();
