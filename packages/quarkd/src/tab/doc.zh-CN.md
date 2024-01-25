@@ -146,13 +146,14 @@ nav-item 在滚动时固定在屏幕上方
 
 ### Quark-tabs props
 
-| 方法名    | 说明                                                   | 类型       | 默认值  |
-| --------- | ------------------------------------------------------ | ---------- | ------- |
-| activekey | 当前激活的 tab，对应到 `quark-tab-content` 中的 `name` | `string`   | 无      |
-| sticky    | 是否吸顶                                               | `boolean ` | `false` |
-| dark      | 深色模式                                               | `boolean ` | `false` |
-| offsettop | 吸顶时与顶部的距离(单位: vw)                           | `string `  | `0vw`   |
-| linewidth | 下划线宽                                               | `string `  | `40px`  |
+| 方法名    | 说明                                                   | 类型      | 默认值  |
+| --------- | ------------------------------------------------------ | --------- | ------- |
+| activekey | 当前激活的 tab，对应到 `quark-tab-content` 中的 `name` | `string`  | 无      |
+| sticky    | 是否吸顶                                               | `boolean` | `false` |
+| dark      | 深色模式                                               | `boolean` | `false` |
+| offsettop | 吸顶时与顶部的距离(单位: vw)                           | `string`  | `0vw`   |
+| linewidth | 下划线宽                                               | `string`  | `40px`  |
+| shrink    | 是否开启左侧收缩布局                                   | `boolean` | `false` |
 
 ### Quark-tab-content props
 

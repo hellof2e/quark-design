@@ -153,6 +153,7 @@ In sticky mode, the nav-item will be fixed to top when scroll to top.
 | dark      | Whether to use dark mode                                                        | `boolean` | `false`       |
 | offsettop | Sticky offset top , supports vm                                                 | `string`  | `0vw`         |
 | linewidth | Width of tab line                                                               | `string`  | `40px`        |
+| shrink    | Whether to shrink the the tabs to the left                                      | `boolean` | `false`       |
 
 ### Quark-tab-content props
 
