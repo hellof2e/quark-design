@@ -109,6 +109,26 @@ methods: {
 }
 ```
 
+### Shrink
+
+In shrink mode, the tabs will be shrinked to the left.
+
+```html
+<quark-tabs shrink>
+  <quark-tab-content label="tab1" name="a"> tab1 content </quark-tab-content>
+  <quark-tab-content label="tab2" name="b"> tab2 content </quark-tab-content>
+  <quark-tab-content label="tab3" name="c"> tab3 content </quark-tab-content>
+  <quark-tab-content label="tab4" name="d"> tab4 content </quark-tab-content>
+</quark-tabs>
+```
+
+```css
+:root {
+  --tab-item-shrink-width: 60px;
+  --tab-item-shrink-padding: 4px;
+}
+```
+
 ### Sticky
 
 In sticky mode, the nav-item will be fixed to top when scroll to top.
@@ -163,3 +183,5 @@ The component provides the following[CSS variables](https://developer.mozilla.or
 | `--tab-active-line-color`     | `tab-item` active state `underline` color                                     | `#0088ff`                        |
 | `--tabs-background-color`     | tabs Background color                                                         | `#ffffff`                        |
 | `--tab-item-background-color` | `tab-item` Background color                                                   | `#ffffff`                        |
+| `--tab-item-shrink-width`     | In shrink mode `tab-item` width                                               | `auto`                           |
+| `--tab-item-shrink-padding`   | In shrink mode `tab-item` horizontal `padding`                                | `0`                              |
