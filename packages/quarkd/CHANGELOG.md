@@ -1,5 +1,13 @@
 # 更新日志
 
+### [1.5.17](https://github.com/hellof2e/quark-design/compare/v1.5.16...v1.5.17) (2024-01-25)
+
+### 🎉 Features
+
+- merge tab ([efc5575](https://github.com/hellof2e/quark-design/commit/efc55757c912919790017d520a7cdce49f229177))
+- tabs 新增收缩模式 ([6a8f629](https://github.com/hellof2e/quark-design/commit/6a8f6297a73c352641781449071271eada0e2b9b))
+- 文字选中设置背景色透明 ([2cf81dc](https://github.com/hellof2e/quark-design/commit/2cf81dc84963ce4ba91c939e08099daeea7a6d56))
+
 ### [1.5.15](https://github.com/hellof2e/quark-design/compare/v1.5.14...v1.5.15) (2024-01-22)
 
 ### 🎉 Features
