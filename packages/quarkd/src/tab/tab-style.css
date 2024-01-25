@@ -11,6 +11,12 @@
   background-color: var(--tab-item-background-color, #fff);
 }
 
+:host([shrink]) {
+  min-width: auto;
+  width: var(--tab-item-shrink-width, auto);
+  padding: 0 var(--tab-item-shrink-padding, 0);
+}
+
 :host([active]) {
   font-weight: 500;
   color: var(--tab-item-active-color, #333333);
@@ -21,6 +27,7 @@
   color: var(--tab-item-disabled-color, quark-formDisabledColor);
   pointer-events: none;
 }
+
 :host([disabled]) .quark-tab-nav {
   cursor: not-allowed;
 }
@@ -38,4 +45,5 @@
   width: 100%;
   text-align: center;
   cursor: pointer;
+  background-color: transparent;
 }

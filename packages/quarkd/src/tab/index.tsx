@@ -9,6 +9,7 @@ import { slotAssignedElements } from "../../utils/public";
 import "../sticky";
 import tabs from "./tabs-style.css";
 import tab from "./tab-style.css";
+
 export interface ContentProps {
   label: string;
   disabled?: boolean;
@@ -19,6 +20,8 @@ export interface Props {
   sticky?: boolean;
   offsettop?: number;
   linewidth?: number;
+  shrink?: boolean;
+  dark?: boolean;
 }
 export interface CustomEvent {
   change: (e: { detail: { label: string; name: string } }) => void;
@@ -61,6 +64,11 @@ class QuarkTabs extends QuarkElement {
     type: Boolean,
   })
   dark = false;
+
+  @property({
+    type: Boolean,
+  })
+  shrink = false;
 
   @state()
   init = false;
@@ -341,11 +349,17 @@ class QuarkTabs extends QuarkElement {
   renderTabNav = () => {
     return (
       <div class="quark-tab-nav-con">
-        <div class="quark-tab-nav" ref={this.navRef}>
+        <div
+          class={`quark-tab-nav ${
+            this.shrink ? "quark-tab-nav__shrink" : "quark-tab-nav__flex"
+          }`}
+          ref={this.navRef}
+        >
           {this.tabNavs.map((item) => (
             <quark-tab-nav
               active={item.name === this.activekey}
               disabled={item.disabled}
+              shrink={this.shrink}
               dark={item.dark}
               name={item.name}
               onClick={(e: any) => this.handleClick(e, item)}
@@ -404,6 +418,11 @@ class QuarkTabNav extends QuarkElement {
     type: Boolean,
   })
   dark = false;
+
+  @property({
+    type: Boolean,
+  })
+  shrink = false;
 
   @property()
   name: string | number = 0;

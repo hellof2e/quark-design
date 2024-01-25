@@ -95,6 +95,26 @@ export default () => {
 };
 ```
 
+### 收缩布局
+
+通过 shrink 属性可以开启收缩布局，开启后，所有的标签会向左侧收缩对齐。
+
+```html
+<Tabs shrink>
+  <TabContent label="tab1"> tab1 content </TabContent>
+  <TabContent label="tab2"> tab2 content </TabContent>
+  <TabContent label="tab3"> tab3 content </TabContent>
+  <TabContent label="tab4"> tab4 content </TabContent>
+</Tabs>
+```
+
+```css
+:root {
+  --tab-item-shrink-width: 60px;
+  --tab-item-shrink-padding: 4px;
+}
+```
+
 ### 吸顶效果
 
 nav-item 在滚动时固定在屏幕上方
@@ -144,3 +164,5 @@ nav-item 在滚动时固定在屏幕上方
 | `--tab-active-line-color`     | `tab-item` 激活态`下划线`颜色             | `#0088ff `                |
 | `--tabs-background-color`     | tabs 背景色                               | `#ffffff`                 |
 | `--tab-item-background-color` | `tab-item` 背景色                         | `#ffffff `                |
+| `--tab-item-shrink-width`     | 收缩布局下`tab-item`宽度                  | `auto`                    |
+| `--tab-item-shrink-padding`   | 收缩布局下`tab-item`左右`padding`         | `0`                       |

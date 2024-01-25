@@ -111,6 +111,24 @@
       </quark-tabs>
     </div>
 
+    <h2>{{ translate("title.shrink") }}</h2>
+    <div class="demo-item">
+      <quark-tabs shrink>
+        <quark-tab-content :label="translate('tab')[0]">
+          {{ translate("tabs")[0] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[1]">
+          {{ translate("tabs")[1] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[2]">
+          {{ translate("tabs")[2] }}
+        </quark-tab-content>
+        <quark-tab-content :label="translate('tab')[3]">
+          {{ translate("tabs")[3] }}
+        </quark-tab-content>
+      </quark-tabs>
+    </div>
+
     <h2>{{ translate("title.sticky") }}</h2>
     <div class="demo-item">
       <quark-tabs sticky offsettop="17vw">
@@ -156,6 +174,7 @@ export default createDemo({
             scroll: "横向滚动",
             click: "切换事件",
             sticky: "吸顶效果",
+            shrink: "收缩布局",
           },
           selected: "当前选择：",
           tab: [
@@ -191,6 +210,7 @@ export default createDemo({
             scroll: "Horizontal Scrolling",
             click: "Click Event",
             sticky: "Sticky Effect",
+            shrink: "Shrink",
           },
           selected: "Currently Selected: ",
           tab: [

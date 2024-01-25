@@ -18,7 +18,7 @@
   scroll-behavior: smooth;
 }
 
-.quark-tab-nav {
+.quark-tab-nav__flex {
   display: flex;
 }
 
