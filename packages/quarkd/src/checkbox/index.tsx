@@ -78,16 +78,17 @@ class QuarkCheckbox extends QuarkElement {
   render() {
     return (
       <div class="quark-checkbox-container" onClick={this.handleCheck}>
-        <span class="quark-checkbox">
+        <span class="quark-checkbox" part="checkbox">
           <input type="checkbox" />
-          <span class="quark-checkbox-show"></span>
+          <span class="quark-checkbox-show" part="checkbox-show"></span>
           <img
             class="quark-checkbox-icon"
+            part="icon"
             src="https://m.hellobike.com/resource/quark/images/Kr6fLjveFHjjvVXIfDwye.png"
           />
-          <span class="quark-checkbox-disabled"></span>
+          <span class="quark-checkbox-disabled" part="checkbox-disabled"></span>
         </span>
-        <label for="checkbox" class={this.classNames}>
+        <label for="checkbox" class={this.classNames} part="label">
           <slot ref={this.slotRef}></slot>
         </label>
       </div>

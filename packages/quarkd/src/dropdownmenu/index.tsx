@@ -42,6 +42,7 @@ class QuarkDropdownMenu extends QuarkElement {
       const allItems = slotAssignedElements(
         this.rootSlotRef.current?.assignedNodes()
       ).filter((item) => item.tagName === "QUARK-DROPDOWN-ITEM");
+
       allItems.forEach((item) => {
         item.setProps({
           activeColor: this.activeColor,
@@ -57,9 +58,13 @@ class QuarkDropdownMenu extends QuarkElement {
   render() {
     return (
       <div class="quark-dropdown-menu">
-        <div class="quark-dropdown-menu__bar">
-          <div class="quark-dropdown-menu__bar-inner">
-            <div class="quark-dropdown-menu__bar-content" ref={this.root}>
+        <div class="quark-dropdown-menu__bar" part="menu-bar">
+          <div class="quark-dropdown-menu__bar-inner" part="menu-inner">
+            <div
+              class="quark-dropdown-menu__bar-content"
+              part="menu-content"
+              ref={this.root}
+            >
               <slot
                 ref={this.rootSlotRef}
                 onslotchange={this.onSlotChange}

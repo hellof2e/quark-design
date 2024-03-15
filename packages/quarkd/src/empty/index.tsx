@@ -35,8 +35,9 @@ class QuarkEmpty extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="quark-empty">
+        <div class="quark-empty" part="empty">
           <img
+            part="image"
             style={{
               width: ~["px", "rem", "em", "vw", "vh"].indexOf(this.imagesize)
                 ? this.imagesize
@@ -50,11 +51,21 @@ class QuarkEmpty extends QuarkElement {
             }
             alt="empty-image"
           />
-          {this.title && <div class="quark-empty-title">{this.title}</div>}
-          {this.desc && <div class="quark-empty-desc">{this.desc}</div>}
+          {this.title && (
+            <div class="quark-empty-title" part="title">
+              {this.title}
+            </div>
+          )}
+          {this.desc && (
+            <div class="quark-empty-desc" part="desc">
+              {this.desc}
+            </div>
+          )}
           <slot name="footer">
             {this.buttontext && (
-              <div class="quark-empty-button">{this.buttontext}</div>
+              <div class="quark-empty-button" part="btn">
+                {this.buttontext}
+              </div>
             )}
           </slot>
         </div>

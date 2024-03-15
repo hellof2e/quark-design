@@ -48,6 +48,7 @@ class QuarkImagePreview extends QuarkElement {
   onChange: null | ((index: number) => void) = null;
 
   wrapRef = createRef() as any;
+
   init = async () => {
     if (!this.images.length) return;
     if (this.slide) return;
@@ -60,6 +61,7 @@ class QuarkImagePreview extends QuarkElement {
     this.eventBind();
     if (this.isFn) this.open = true;
   };
+
   initSlide(index: number) {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -92,10 +94,12 @@ class QuarkImagePreview extends QuarkElement {
       }, 100);
     });
   }
+
   componentWillUnmount(): void {
     if (this.slide) this.slide.destroy();
     this.slide = null;
   }
+
   setData = ({
     images,
     startPosition,
@@ -118,17 +122,20 @@ class QuarkImagePreview extends QuarkElement {
     if (this.onClose) this.onClose(this.index);
     this.open = false;
   };
+
   eventBind() {
     this.removeEvent();
     this.addEventListener("touchstart", this.handleTouchStart);
     this.addEventListener("touchmove", this.handleTouchMove);
     this.addEventListener("touchend", this.handleTouchEnd);
   }
+
   removeEvent = () => {
     this.removeEventListener("touchstart", this.handleTouchStart);
     this.removeEventListener("touchmove", this.handleTouchMove);
     this.removeEventListener("touchend", this.handleTouchEnd);
   };
+
   handleTouchStart = (e: TouchEvent) => {
     this.startX = e.changedTouches[0].clientX;
     this.startY = e.changedTouches[0].clientY;
@@ -162,15 +169,18 @@ class QuarkImagePreview extends QuarkElement {
       // console.log('左滑')
     }
   };
+
   angle(start: { X: number; Y: number }, end: { X: number; Y: number }) {
     const X = end.X - start.X;
     const Y = end.Y - start.Y;
     // 返回角度 /Math.atan()返回数字的反正切值
     return (360 * Math.atan(Y / X)) / (2 * Math.PI);
   }
+
   close() {
     this.open = false;
   }
+
   render() {
     const showIndex = `${this.index + 1}`;
     return (
@@ -180,19 +190,29 @@ class QuarkImagePreview extends QuarkElement {
           class="quark-imagepreview-indicator"
           style={{ display: this.open ? "inline-block" : "none" }}
         >
-          <p>
+          <p part="indicator-text">
             {showIndex}/{this.images.length}
           </p>
         </slot>
 
-        <quark-popup position="center" open={this.open} onclosed={this.myClose}>
-          <div class="quark-imagepreview-slide">
-            <div class="quark-imagepreview-slide-wrapper" ref={this.wrapRef}>
-              <div class="quark-imagepreview-slide-content">
+        <quark-popup
+          position="center"
+          open={this.open}
+          onclosed={this.myClose}
+          part="popup"
+        >
+          <div class="quark-imagepreview-slide" part="slide">
+            <div
+              class="quark-imagepreview-slide-wrapper"
+              part="wrapper"
+              ref={this.wrapRef}
+            >
+              <div class="quark-imagepreview-slide-content" part="content">
                 {this.images.map((item, index) => (
-                  <div key={index} class="quark-imagepreview-item">
-                    <div class="quark-preview-image">
+                  <div key={index} class="quark-imagepreview-item" part="item">
+                    <div class="quark-preview-image" part="image">
                       <img
+                        part="img"
                         src={item}
                         class="quark-img"
                         onClick={this.myClose}
@@ -215,6 +235,7 @@ interface IImagePreview {
   close?: () => void;
   change?: (index: number) => void;
 }
+
 // 函数调用
 export default function imagePreview(params: IImagePreview): QuarkImagePreview {
   const preview = document.createElement(

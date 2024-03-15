@@ -44,6 +44,7 @@ class QuarkCell extends QuarkElement {
           src={this.icon}
           class="quark-cell-icon"
           style={{ marginRight: 4 }}
+          part="img"
         />
       );
     }
@@ -54,13 +55,13 @@ class QuarkCell extends QuarkElement {
     return (
       <div class="quark-cell" onClick={this.handleNavigation}>
         <slot name="icon">{this.renderIcon()}</slot>
-        <div class="quark-cell-title" id="title">
+        <div class="quark-cell-title" part="title" id="title">
           <slot name="title">{this.title}</slot>
         </div>
 
         <slot>
           {this.desc && (
-            <div class="quark-cell-desc" id="desc">
+            <div class="quark-cell-desc" part="desc" id="desc">
               {this.desc}
             </div>
           )}

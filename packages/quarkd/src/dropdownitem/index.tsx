@@ -143,7 +143,7 @@ class QuarkDropdownItem extends QuarkElement {
       const style: any = {};
 
       if (item.value == this.currentValue) {
-        classList.push("quark-dropdown-item__option--active");
+        classList.push("quark-dropdown-item-option-active");
         style.color = this.props.activeColor || "#08f";
       }
 
@@ -170,13 +170,18 @@ class QuarkDropdownItem extends QuarkElement {
       <quark-cell onClick={onClick}>
         <div
           slot="title"
+          part="option-title"
           class={optionCSS(item).class}
           style={optionCSS(item).style}
         >
           {item.text}
         </div>
         {item.value == this.currentValue && (
-          <quark-icon-success size="18" color={this.props.activeColor} />
+          <quark-icon-success
+            part="success-icon"
+            size="18"
+            color={this.props.activeColor}
+          />
         )}
       </quark-cell>
     );
@@ -216,14 +221,14 @@ class QuarkDropdownItem extends QuarkElement {
 
     const classObj = {
       title: true,
-      "title--down": this.showPopup === (this.props.direction === "down"),
-      "title--active": this.showPopup,
-      "title--disabled": this.disabled,
+      "title-down": this.showPopup === (this.props.direction === "down"),
+      "title-active": this.showPopup,
+      "title-disabled": this.disabled,
     };
 
     const classStr = Object.keys(classObj)
       .map((key) => {
-        if (classObj[key]) return "quark-dropdown-menu__" + key;
+        if (classObj[key]) return "quark-dropdown-menu-" + key;
       })
       .join(" ");
 
@@ -295,18 +300,21 @@ class QuarkDropdownItem extends QuarkElement {
           class={this.titleCSS().class}
           style={this.titleCSS().style}
           onClick={this.onTitleClick}
+          part="title"
         >
           {this.renderTitle()}
         </div>
         <div
-          class="quark-dropdown-item__content--wrapper"
+          class="quark-dropdown-item-content-wrap"
+          part="item-content-wrap"
           style={this.contentCSS().wrapperStyle}
         >
           <div
-            class="quark-dropdown-item__content"
+            class="quark-dropdown-item-content"
+            part="item-content"
             style={this.contentCSS().contentStyle}
           >
-            <div class="quark-dropdown-item__content--inner">
+            <div part="item-content-inner">
               <slot
                 ref={this.contentSlotRef}
                 onslotchange={this.onContentSlotChange}
@@ -319,7 +327,8 @@ class QuarkDropdownItem extends QuarkElement {
           </div>
           {!this.props.hideOverlay && (
             <div
-              class="quark-dropdown-item__content--mask"
+              class="quark-dropdown-item-content-mask"
+              part="mask"
               style={this.contentCSS().maskStyle}
               onClick={() => this.toggle(false)}
             />

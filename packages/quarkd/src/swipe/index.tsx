@@ -387,14 +387,16 @@ class QuarkSwipe extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="container" ref={this.containerRef}>
+        <div class="container" ref={this.containerRef} part="container">
           <slot
             onslotchange={this.handleRightSlotChange}
             ref={this.slotWrapRef}
           ></slot>
         </div>
         <slot name="indicators">
-          <div class="indicators">{this.renderIndicators()}</div>
+          <div class="indicators" part="indicators">
+            {this.renderIndicators()}
+          </div>
         </slot>
       </Fragment>
     );

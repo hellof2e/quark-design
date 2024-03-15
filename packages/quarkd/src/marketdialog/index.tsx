@@ -47,12 +47,13 @@ class QuarkMarketDialog extends QuarkElement {
 
   render() {
     return (
-      <quark-overlay open={this.open}>
-        <div class="quark-market-container">
-          <slot name="market">
+      <quark-overlay open={this.open} part="overlay">
+        <div class="quark-market-container" part="container">
+          <slot name="market" part="market">
             {this.url && <img alt="error" src={this.url} />}
           </slot>
           <quark-icon-close-o
+            part="market-close"
             class="quark-market-close"
             size={this.size}
             color="#fff"

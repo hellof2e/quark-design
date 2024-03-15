@@ -141,6 +141,7 @@ class QuarkShareSheet extends QuarkElement {
       return (
         <div
           class="quark-sharesheet-item"
+          part="item"
           style={{
             marginLeft: itemMargin,
             marginTop: itemLength > 4 && index > 3 ? 8 : undefined,
@@ -149,8 +150,14 @@ class QuarkShareSheet extends QuarkElement {
             this.handleActionClick(index, option);
           }}
         >
-          <img src={option.icon} class="quark-sharesheet-item-icon" />
-          <div class="quark-sharesheet-item-text">{option.name}</div>
+          <img
+            src={option.icon}
+            class="quark-sharesheet-item-icon"
+            part="icon"
+          />
+          <div class="quark-sharesheet-item-text" part="text">
+            {option.name}
+          </div>
         </div>
       );
     });
@@ -182,6 +189,7 @@ class QuarkShareSheet extends QuarkElement {
       >
         <div
           class="quark-sharesheet-title"
+          part="title"
           style={{
             color: this.titleColor ? this.titleColor : undefined,
             fontSize: this.titleFontSize ? this.titleFontSize : undefined,
@@ -189,11 +197,14 @@ class QuarkShareSheet extends QuarkElement {
         >
           {Locale.current.actionSheet.shareTitle}
         </div>
-        <div class="quark-sharesheet-action">{this.renderOptions()}</div>
-        <div class="quark-sharesheet-cancel">
-          <div class="quark-sharesheet-cancel-gap"></div>
+        <div class="quark-sharesheet-action" part="action">
+          {this.renderOptions()}
+        </div>
+        <div class="quark-sharesheet-cancel" part="cancel">
+          <div class="quark-sharesheet-cancel-gap" part="gap"></div>
           <div
             class="quark-sharesheet-cancel-text"
+            part="cancel-text"
             style={{
               color: this.cancelColor ? this.cancelColor : undefined,
               fontSize: this.cancelFontSize ? this.cancelFontSize : undefined,

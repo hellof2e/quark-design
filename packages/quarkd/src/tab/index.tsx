@@ -101,12 +101,6 @@ class QuarkTabs extends QuarkElement {
 
   navRef: any = createRef();
 
-  componentDidMount(): void {
-    // this.$on('change', (e) => {
-    //   console.log(e);
-    // });
-  }
-
   componentDidUpdate(
     propName: string,
     oldValue: string,
@@ -348,15 +342,17 @@ class QuarkTabs extends QuarkElement {
 
   renderTabNav = () => {
     return (
-      <div class="quark-tab-nav-con">
+      <div class="quark-tab-nav-con" part="nav-con">
         <div
           class={`quark-tab-nav ${
             this.shrink ? "quark-tab-nav__shrink" : "quark-tab-nav__flex"
           }`}
+          part="tab-navs"
           ref={this.navRef}
         >
           {this.tabNavs.map((item) => (
             <quark-tab-nav
+              part="tab-nav"
               active={item.name === this.activekey}
               disabled={item.disabled}
               shrink={this.shrink}
@@ -368,7 +364,7 @@ class QuarkTabs extends QuarkElement {
             </quark-tab-nav>
           ))}
         </div>
-        <i class="quark-tab-line" style={this.tabLineStyle}></i>
+        <i class="quark-tab-line" part="tab-line" style={this.tabLineStyle}></i>
       </div>
     );
   };
@@ -377,21 +373,23 @@ class QuarkTabs extends QuarkElement {
     const style = {
       transform: `translateX(${-this.leftIndex * 100}%)`,
     };
+
     return (
       <div class="quark-tabs">
         {this.sticky && (
-          <quark-sticky offsettop={this.offsettop}>
+          <quark-sticky part="sticky" offsettop={this.offsettop}>
             {this.renderTabNav()}
           </quark-sticky>
         )}
         {!this.sticky && this.renderTabNav()}
         <div
           class="quark-tab-content"
+          part="content"
           ontouchstart={this.handleTouchStart}
           ontouchmove={this.handleTouchMove}
           ontouchend={this.handleTouchEnd}
         >
-          <div class="quark-tab-content-wrap" style={style}>
+          <div class="quark-tab-content-wrap" part="content-wrap" style={style}>
             <slot ref={this.slotRef} onslotchange={this.slotchange}>
               NEED CONTENT
             </slot>

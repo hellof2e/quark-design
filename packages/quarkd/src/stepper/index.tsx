@@ -194,11 +194,13 @@ class QuarkStepper extends QuarkElement {
       <div class="quark-stepper-container" id="stepper">
         <button
           type="button"
+          part="mini"
           class={miniClassName}
           onClick={this.handleMinusClick}
           ref={this.miniRef}
         ></button>
         <input
+          part="input"
           type="text"
           class={inputClassName}
           onInput={this.handleInputInput}
@@ -211,6 +213,7 @@ class QuarkStepper extends QuarkElement {
         />
         <button
           type="button"
+          part="plus"
           class={plusClassName}
           onClick={this.handlePlusClick}
           ref={this.plusRef}

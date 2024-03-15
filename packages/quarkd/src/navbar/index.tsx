@@ -58,6 +58,7 @@ class QuarkNavbar extends QuarkElement {
               size={this.iconsize}
               onClick={this.leftClick}
               class="back"
+              part="back"
             />
             {!this.closehide && (
               <quark-icon-close
@@ -65,15 +66,16 @@ class QuarkNavbar extends QuarkElement {
                 size={this.iconsize}
                 onClick={this.closeClick}
                 class="close"
+                part="close"
               />
             )}
           </slot>
         )}
-        <div class="quark-navbar-title">
-          <div>{this.title}</div>
+        <div class="quark-navbar-title" part="navbar-title">
+          <div part="title">{this.title}</div>
         </div>
         <slot name="right" class="quark-navbar-right icon">
-          <span id="right" onClick={this.rightClick}>
+          <span id="right" part="right" onClick={this.rightClick}>
             {this.righttext}
           </span>
         </slot>

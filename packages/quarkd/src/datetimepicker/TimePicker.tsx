@@ -64,6 +64,7 @@ class QuarkTimePicker extends QuarkElement {
     let [hour, minute] = value.split(":");
     hour = padZero(clamp(+hour, +this.minhour, +this.maxhour));
     minute = padZero(clamp(+minute, +this.minminute, this.maxminute));
+
     return `${hour}:${minute}`;
   }
 
@@ -88,6 +89,7 @@ class QuarkTimePicker extends QuarkElement {
       const index = values.indexOf(value);
       return index > -1 ? index : 0;
     };
+
     this.originColumns = ranges.map(({ type, range }) => {
       let values = times(range[1] - range[0] + 1, (index) =>
         padZero(range[0] + index)
@@ -95,6 +97,7 @@ class QuarkTimePicker extends QuarkElement {
       if (this.filter) {
         values = this.filter(type, values);
       }
+
       return {
         defaultIndex:
           type === "hour"
@@ -112,6 +115,7 @@ class QuarkTimePicker extends QuarkElement {
         values: values.map((value) => this.formatter(type, value)),
       };
     });
+
     this.pickerRef.current.setColumns(this.columns);
   }
 
@@ -174,12 +178,22 @@ class QuarkTimePicker extends QuarkElement {
         onconfirm={this.confirm}
       >
         {this.showtoolbar && (
-          <div slot="header" class="quark-date-picker-header">
-            <span class="quark-date-picker-close-btn" onclick={this.onClose}>
+          <div slot="header" class="quark-date-picker-header" part="header">
+            <span
+              class="quark-date-picker-close-btn"
+              part="close-btn"
+              onclick={this.onClose}
+            >
               {this.cancelbuttontext}
             </span>
-            <span class="quark-date-picker-title">{this.title}</span>
-            <span class="quark-date-picker-confirm-btn" onclick={this.confirm}>
+            <span class="quark-date-picker-title" part="title">
+              {this.title}
+            </span>
+            <span
+              class="quark-date-picker-confirm-btn"
+              part="confirm-btn"
+              onclick={this.confirm}
+            >
               {this.confirmbuttontext}
             </span>
           </div>

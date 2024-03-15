@@ -143,29 +143,34 @@ class QuarkPullRefresh extends QuarkElement {
     if (status === "loading") {
       if (dark) {
         return (
-          <div class="quark-dark-loading">
+          <div class="quark-dark-loading" part="dark-loading">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHKADAAQAAAABAAAAHAAAAABkvfSiAAADD0lEQVRIDa2WzUuUURSHncky08yilEKDKCpaCLWTdiF9uGhR0KaWEf0FQRD+BW2jXbt27SKEdtHGkr6/IQQ16FszLft0ep6ZOdN11EGdOfDMufd97zm/e9733vtOpm4Rlsvl2hi2E7bCOmiFLHyHKRiG55lM5g2+omUq3UVoB/f3wwZYUaQ+aXst7X+i34/wA/y8Nq8gQi2M7oHNYCXlYiFS7h3n+BG4grATmGVzBBFTRLFGCKHwCgRei7Y+xoSf5tplRF/hSzZLELF27hwGg9LKHDcMQ/AeJsFra6ETumAvrIQQNF67iOiLQrMQlG8j1kzjCKyGVNDHM0DQBH5BI34TN4/DPkhFXVh9xH/A52epryOgB2eQM4vq7jHwCf1FG3mc9AmISZtriDwXTGJHsQ6cS/1vwuBSxYitI6Yfdw2iSv0uNLrxBUH8bpiBEBwh8Bn9ZRmxNwi8DyFqYadMlkXZjbwGQuwP7YdQrV0lgQsrRDvQ2q6yKzPE9KPM0NOjKiPHOxIMQgjquxW0QoWsTN5CrewuiWKvKthlx72jkOVrXwquJr+vyaKGZv62ULfCsJ/RqIH/TI4QNF1e0NWZWi7tVNmORRNpsr7DaUjf4aq4WwO/kRzxFH2H43YUjLKtzi3itVrYHpKYO57amBV6RqYV+mmqlR0gUVrhYwXHQcGgmQ3aQL8qI0cnCXog3Ye3smxQT/N4jyHqIV6tnSOBEw9BD5SXVqi52dOztJEZepgvy4g9Q+AhCDF1LpksL4iy7/EbRIX6VgKX/D6JOUvseQgx/VM0buJLp4ufKE8cn7uWVusjnyTASSxoxG/jZh8cBMdGjjHax4gfxf8XtEOQ/2PaIQ2wLT/gV7GNq2uCLeBfi17ww6vFeAUdfxKxO97Q4vws9PhF1L8Y64sXIjh8HPB6r5X3Y5zeyk4jNoAvWSya0gUGWMlH8Ex1lm7aFLqzzEmbRx9tv6e95WJcq2xU2wAtRZqsHuohAzPwG6ZhCiZgEI5Wyjrnkc43mCSx4rwdi+ErbReC3IbrVPQIX9H+ATXUIAon3nomAAAAAElFTkSuQmCC" />
             {this.loadingtext}
           </div>
         );
       }
+
       return (
         <quark-loading
           type="pullrefresh"
           color={this.getTextColor()}
           size="28"
           vertical
+          part="loading"
         >
           {this.loadingtext}
         </quark-loading>
       );
     }
+
     if (status === "pulling") {
       return this.pullingtext;
     }
+
     if (status === "loosing") {
       return this.loosingtext;
     }
+
     return "";
   };
 
@@ -240,6 +245,7 @@ class QuarkPullRefresh extends QuarkElement {
     return (
       <div
         class="quark-pull-refresh-text"
+        part="text"
         style={`color: ${this.getTextColor()}`}
       >
         {this.getStatusText()}
@@ -252,10 +258,19 @@ class QuarkPullRefresh extends QuarkElement {
       transitionDuration: `${this.duration}ms`,
       transform: this.distance ? `translate3d(0,${this.distance}px, 0)` : "",
     };
+
     return (
       <div class="quark-pull-refresh">
-        <div class="quark-pull-refresh-container" style={trackStyle}>
-          <div class="quark-pull-refresh-head" style={this.getHeadStyle()}>
+        <div
+          class="quark-pull-refresh-container"
+          part="container"
+          style={trackStyle}
+        >
+          <div
+            class="quark-pull-refresh-head"
+            part="head"
+            style={this.getHeadStyle()}
+          >
             {this.renderHead()}
           </div>
           <slot name="content"></slot>

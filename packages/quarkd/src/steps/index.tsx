@@ -41,19 +41,19 @@ class QuarkStep extends QuarkElement {
   render() {
     return (
       <div class="quark-step quark-step-horizontal" ref={this.containerRef}>
-        <div class="quark-step">
-          <div class="quark-step-head">
-            <div class="quark-step-icon is-text">
-              <div class="quark-step-inner">
+        <div class="quark-step" part="step">
+          <div class="quark-step-head" part="head">
+            <div class="quark-step-icon is-text" part="icon">
+              <div class="quark-step-inner" part="inner">
                 <slot name="order">{this.order}</slot>
               </div>
             </div>
           </div>
-          <div class="quark-step-main">
-            <div class="quark-step-title">
+          <div class="quark-step-main" part="main">
+            <div class="quark-step-title" part="title">
               <slot name="title">{this.title}</slot>
             </div>
-            <div class="quark-step-content">
+            <div class="quark-step-content" part="content">
               <slot name="content">{this.content}</slot>
             </div>
           </div>

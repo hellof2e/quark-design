@@ -100,6 +100,7 @@ class QuarkField extends QuarkElement {
     const { value } = this.inputRef.current;
     this.value = value;
     this.$emit(type, { detail: { value } });
+
     if (type === "blur" || type === "change") {
       this.validRules();
     }
@@ -108,6 +109,7 @@ class QuarkField extends QuarkElement {
   validRules = () => {
     if (!this.errorRef || !this.errorRef.current) return;
     const { current } = this.errorRef;
+
     if (this.rules && this.rules.length > 0) {
       for (let i = 0; i < this.rules.length; i += 1) {
         const rule = this.rules[i];
@@ -123,9 +125,11 @@ class QuarkField extends QuarkElement {
           return;
         }
       }
+
       current.style.display = "none";
       this.errormsg = "";
     }
+
     if (this.required)
       current.style.display =
         !this.value && this.errormsg ? "inline-block" : "none";
@@ -140,14 +144,17 @@ class QuarkField extends QuarkElement {
 
   render() {
     const label = this.label ? (
-      <label class="quark-field-label">{this.label}</label>
+      <label class="quark-field-label" part="label">
+        {this.label}
+      </label>
     ) : null;
     return (
       <Fragment>
         <slot name="label">{label}</slot>
-        <div class="quark-field-input-container">
-          <div class="quark-field-input-inner">
+        <div class="quark-field-input-container" part="container">
+          <div class="quark-field-input-inner" part="inner">
             <input
+              part="input"
               ref={this.inputRef}
               name={this.name}
               value={this.value}
@@ -166,7 +173,11 @@ class QuarkField extends QuarkElement {
               onClick={this.evenFn("click")}
             />
           </div>
-          <div class="quark-field-error-msg" ref={this.errorRef}>
+          <div
+            class="quark-field-error-msg"
+            part="error-msg"
+            ref={this.errorRef}
+          >
             {this.errormsg}
           </div>
         </div>

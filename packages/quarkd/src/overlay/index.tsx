@@ -61,10 +61,14 @@ class QuarkOverlay extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="quark-overlay" ref={this.wrap}>
+        <div class="quark-overlay" part="overlay" ref={this.wrap}>
           <slot></slot>
         </div>
-        <div class="quark-overlay-mask" onClick={this.handleMaskClick} />
+        <div
+          class="quark-overlay-mask"
+          part="mask"
+          onClick={this.handleMaskClick}
+        />
       </Fragment>
     );
   }

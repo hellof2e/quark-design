@@ -133,18 +133,20 @@ class QuarkPickerView extends QuarkElement {
     return this.wheels[i];
   };
 
-  componentDidMount = () => {};
-
   renderWheel = () => {
     if (!this.columns) {
       return null;
     }
     const wheels = this.columns.map((column) => {
       return (
-        <div class="quark-picker-wheel">
-          <ul class="quark-picker-wheel-scroll">
+        <div class="quark-picker-wheel" part="wheel">
+          <ul class="quark-picker-wheel-scroll" part="wheel-scroll">
             {column.values.map((item: string) => {
-              return <li class="quark-picker-wheel-item">{item}</li>;
+              return (
+                <li class="quark-picker-wheel-item" part="wheel-item">
+                  {item}
+                </li>
+              );
             })}
           </ul>
         </div>
@@ -153,21 +155,20 @@ class QuarkPickerView extends QuarkElement {
     return wheels;
   };
 
-  // popupClosed = () => {
-  //   this.restorePosition();
-  //   this.$emit("closed");
-  // };
-
   render() {
     return (
-      <div class="quark-picker-container">
-        <div class="quark-picker-content">
-          <div class="quark-picker-mask-top"></div>
-          <div class="quark-picker-mask-bottom"></div>
-          <div class="quark-picker-current">
-            <div class="quark-picker-current-mask"></div>
+      <div part="container" class="quark-picker-container">
+        <div part="content" class="quark-picker-content">
+          <div part="mask-top" class="quark-picker-mask-top"></div>
+          <div part="mask-bottom" class="quark-picker-mask-bottom"></div>
+          <div part="current" class="quark-picker-current">
+            <div part="current-mask" class="quark-picker-current-mask"></div>
           </div>
-          <div class="quark-picker-wheel-wrapper" ref={this.wheelWrapper}>
+          <div
+            part="wheel-wrapper"
+            class="quark-picker-wheel-wrapper"
+            ref={this.wheelWrapper}
+          >
             {this.renderWheel()}
           </div>
         </div>

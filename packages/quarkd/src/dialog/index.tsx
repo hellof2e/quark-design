@@ -209,11 +209,11 @@ class QuarkDialog extends QuarkElement {
       : "quark-dialog-footer";
     return (
       <Fragment>
-        <div class="quark-dialog" ref={this.bodyRef}>
+        <div class="quark-dialog" ref={this.bodyRef} part="dialog">
           {!this.hideclose && (
             <slot name="close">
-              <div class="quark-dialog-close-btn">
-                <div onClick={this.closeIconClick}>
+              <div class="quark-dialog-close-btn" part="close-btn">
+                <div onClick={this.closeIconClick} part="close-icon">
                   <svg
                     width="16px"
                     height="16px"
@@ -221,6 +221,7 @@ class QuarkDialog extends QuarkElement {
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                    part="svg"
                   >
                     <title>切片</title>
                     <g
@@ -265,21 +266,26 @@ class QuarkDialog extends QuarkElement {
             </slot>
           )}
 
-          <div class="quark-dialog-content">
+          <div class="quark-dialog-content" part="content">
             {!this.notitle && (
               <slot name="title">
-                <p class="quark-dialog-title">{this.title}</p>
+                <p class="quark-dialog-title" part="title">
+                  {this.title}
+                </p>
               </slot>
             )}
             <slot onslotchange={this.slotChangeEvent}>
               {this.content && (
                 <div
                   class="quark-dialog-body-wrap"
+                  part="body-wrap"
                   style={{
                     marginBottom: this.content ? 20 : 0,
                   }}
                 >
-                  <div class="quark-dialog-body">{this.content}</div>
+                  <div class="quark-dialog-body" part="body">
+                    {this.content}
+                  </div>
                 </div>
               )}
             </slot>
@@ -288,9 +294,10 @@ class QuarkDialog extends QuarkElement {
                 {this.btnvertical ? (
                   this.renderBtnVertical()
                 ) : (
-                  <div class={footerClass}>
+                  <div class={footerClass} part="footer">
                     <quark-button
                       class="quark-dialog-cancel-btn"
+                      part="button cancel-btn"
                       style={{
                         display: this.type === "confirm" ? "none" : "flex",
                       }}
@@ -300,6 +307,7 @@ class QuarkDialog extends QuarkElement {
                     </quark-button>
                     <quark-button
                       class="quark-dialog-confirm-btn"
+                      part="button ok-btn"
                       type="primary"
                       onClick={this.okClick}
                     >
@@ -311,7 +319,11 @@ class QuarkDialog extends QuarkElement {
             )}
           </div>
         </div>
-        <div class="quark-dialog-mask" onClick={this.handleClickMask} />
+        <div
+          class="quark-dialog-mask"
+          part="mask"
+          onClick={this.handleClickMask}
+        />
       </Fragment>
     );
   }

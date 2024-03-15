@@ -173,20 +173,26 @@ class QuarkSearch extends QuarkElement {
     return (
       <div class={searchClass}>
         {this.showback && (
-          <div class="quark-search-back" onClick={this.backEvent}>
+          <div class="quark-search-back" part="back" onClick={this.backEvent}>
             <quark-icon-arrow-left
+              part="back-icon"
               color={this.dark ? "#fff" : this.iconcolor}
               size="24"
             />
           </div>
         )}
 
-        <div class={contentClass}>
-          <div class="quark-search-content-left-icon">
-            <quark-icon-search color="RGBA(188, 196, 204, 1)" size="12" />
+        <div class={contentClass} part="content">
+          <div class="quark-search-content-left-icon" part="content-left">
+            <quark-icon-search
+              part="content-left-icon"
+              color="RGBA(188, 196, 204, 1)"
+              size="12"
+            />
           </div>
-          <div class="quark-search-input">
+          <div class="quark-search-input" part="search-input">
             <input
+              part="input"
               disabled={this.disabled}
               readonly={this.readonly}
               autofocus={this.autofocus}
@@ -206,6 +212,7 @@ class QuarkSearch extends QuarkElement {
               <quark-icon-close
                 color="RGBA(188, 196, 204, 1)"
                 class="quark-search-field-clear"
+                part="clear-icon"
                 size="13"
                 onClick={this.clearEvent}
               />
@@ -213,7 +220,11 @@ class QuarkSearch extends QuarkElement {
           </div>
         </div>
         {!this.hideaction && this.actiontext && (
-          <div class="quark-search-action" onClick={this.actionEvent}>
+          <div
+            class="quark-search-action"
+            part="action"
+            onClick={this.actionEvent}
+          >
             <slot name="action" class="quark-search-action-slot">
               {this.actiontext}
             </slot>

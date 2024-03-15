@@ -35,8 +35,6 @@ class Skeleton extends QuarkElement {
   // @ts-ignore ,由于原生title 为 string类型，因此有冲突，所以此处使用了ignore
   title = false;
 
-  componentDidMount(): void {}
-
   getRowWidth = (index: number) => {
     let rowWidth = "100%";
     if (index === this.row - 1) {
@@ -57,14 +55,16 @@ class Skeleton extends QuarkElement {
       <Fragment>
         {!this.hide ? (
           <div class="skeleton-container">
-            {this.avatar && <div class="skeleton-avatar"></div>}
-            <div class="skeleton-content">
-              {this.title && <h3 class="skeleton-title"></h3>}
+            {this.avatar && <div class="skeleton-avatar" part="avatar"></div>}
+            <div class="skeleton-content" part="content">
+              {this.title && <h3 class="skeleton-title" part="title"></h3>}
               {new Array(+this.row).fill(1).map((_, index) => {
                 const rowWidth = this.getRowWidth(index);
+
                 return (
                   <div
                     class="skeleton-row"
+                    part="row"
                     style={{
                       width: rowWidth,
                       marginTop: index === 0 && !this.title ? "0px" : undefined,

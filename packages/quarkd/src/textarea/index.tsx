@@ -95,6 +95,7 @@ class TextArea extends QuarkElement {
       <div class="quark-textarea">
         <textarea
           class="quark-text-area"
+          part="textarea"
           ref={this.textAreaRef}
           value={this.value}
           id={this.id}
@@ -111,9 +112,9 @@ class TextArea extends QuarkElement {
           onClick={this.evenFn("click")}
         ></textarea>
         {this.showcount && (
-          <div class="quark-textarea-text-count">
+          <div class="quark-textarea-text-count" part="count">
             {this.value.length || 0}
-            {this.maxlength && <span>/{this.maxlength}</span>}
+            {this.maxlength && <span part="maxlength">/{this.maxlength}</span>}
           </div>
         )}
       </div>
