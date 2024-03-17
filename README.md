@@ -36,7 +36,7 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit [Docs](https://vue-quarkd.hellobike.com).
+For full documentation, visit [https://quark-design.hellobike.com](https://quark-design.hellobike.com/).
 
 ## Install
 
