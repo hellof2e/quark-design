@@ -128,7 +128,7 @@ class QuarkPopup extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="quark-popup" ref={this.wrap}>
+        <div class="quark-popup" ref={this.wrap} part="root">
           {this.closeable && (
             <div
               class="quark-popup-close-btn"

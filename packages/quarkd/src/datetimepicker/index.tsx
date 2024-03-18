@@ -151,6 +151,7 @@ class QuarkDatetimePicker extends QuarkElement {
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}
+        part="root"
       >
         <slot></slot>
       </quark-time-picker>
@@ -170,6 +171,7 @@ class QuarkDatetimePicker extends QuarkElement {
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.onConfirm}
+        part="root"
       >
         <slot></slot>
       </quark-date-picker>

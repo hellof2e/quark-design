@@ -439,7 +439,7 @@ class QuarkTabNav extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-tab-nav" onClick={this.handleClick}>
+      <div class="quark-tab-nav" onClick={this.handleClick} part="root">
         <slot></slot>
       </div>
     );

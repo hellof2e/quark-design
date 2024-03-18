@@ -35,7 +35,7 @@ class QuarkEmpty extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="quark-empty" part="empty">
+        <div class="quark-empty" part="root">
           <img
             part="image"
             style={{

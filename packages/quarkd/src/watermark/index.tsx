@@ -155,7 +155,9 @@ class QuarkWaterMark extends QuarkElement {
   }
 
   render() {
-    return <div ref={this.waterMarkRef} class="quark-watermark"></div>;
+    return (
+      <div ref={this.waterMarkRef} class="quark-watermark" part="root"></div>
+    );
   }
 }
 

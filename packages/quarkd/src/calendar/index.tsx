@@ -646,7 +646,7 @@ class QuarkCalendar extends QuarkElement {
   };
 
   renderCalendar = () => (
-    <div class="quark-calendar">
+    <div class="quark-calendar" part="calendar">
       {this.renderHeader()}
       <div
         ref={this.bodyRef}
@@ -676,6 +676,7 @@ class QuarkCalendar extends QuarkElement {
           forbidmaskclick={this.forbidmaskclick}
           open={this.open}
           onClose={this.closePop}
+          part="root"
         >
           {this.renderCalendar()}
         </quark-popup>

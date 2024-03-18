@@ -93,7 +93,7 @@ class QuarkButton extends QuarkElement {
 
   render() {
     return (
-      <div ref={this.slotRef} class="quark-button">
+      <div ref={this.slotRef} class="quark-button" part="root">
         {this.renderIcon()}
         <slot></slot>
       </div>

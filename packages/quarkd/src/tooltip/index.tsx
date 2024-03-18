@@ -199,9 +199,9 @@ class QuarkTooltip extends QuarkElement {
     return (
       <div
         class="quark-tooltip-tips"
-        part="tips"
         ref={this.tipsRef}
         onClick={this.handleTipsClick}
+        part="root"
       >
         <div class="quark-tooltip-triangle" part="triangle" />
         <div class="quark-tooltip-content" part="content">

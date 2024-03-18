@@ -92,7 +92,7 @@ class TextArea extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-textarea">
+      <div class="quark-textarea" part="root">
         <textarea
           class="quark-text-area"
           part="textarea"

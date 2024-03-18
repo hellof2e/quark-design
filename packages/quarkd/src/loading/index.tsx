@@ -56,7 +56,7 @@ class QuarkLoading extends QuarkElement {
         <svg
           style={{ fontSize, transform }}
           class="quark-loading-spinner"
-          part="loading-spinner"
+          part="svg"
           t="1680062076772"
           viewBox="0 0 1024 1024"
           version="1.1"

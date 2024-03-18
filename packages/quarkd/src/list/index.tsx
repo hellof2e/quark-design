@@ -164,7 +164,7 @@ class QuarkList extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-list">
+      <div class="quark-list" part="root">
         <slot name="content"></slot>
         {this.loading && !this.finished && this.renderLoading()}
         {this.finished && this.renderFinishedText()}

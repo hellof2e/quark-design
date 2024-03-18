@@ -182,6 +182,7 @@ class QuarkPicker extends QuarkElement {
         round
         forbidmaskclick={this.forbidmaskclick}
         onclose={this.popupClose}
+        part="root"
       >
         <div class="quark-picker-container" part="container">
           <div class="quark-picker-header" part="header">

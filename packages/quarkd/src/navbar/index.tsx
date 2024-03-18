@@ -58,7 +58,7 @@ class QuarkNavbar extends QuarkElement {
               size={this.iconsize}
               onClick={this.leftClick}
               class="back"
-              part="back"
+              part="back-icon"
             />
             {!this.closehide && (
               <quark-icon-close
@@ -66,7 +66,7 @@ class QuarkNavbar extends QuarkElement {
                 size={this.iconsize}
                 onClick={this.closeClick}
                 class="close"
-                part="close"
+                part="close-icon"
               />
             )}
           </slot>

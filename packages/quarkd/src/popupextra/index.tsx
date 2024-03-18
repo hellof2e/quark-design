@@ -134,7 +134,7 @@ class QuarkPopupExtra extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="quark-popup-extra">
+        <div class="quark-popup-extra" part="popup-extra">
           <button
             class="quark-popup-extra-close-btn"
             onClick={this.handleCloseBtnClick}
@@ -166,7 +166,11 @@ class QuarkPopupExtra extends QuarkElement {
           </div>
           <slot name="footer"></slot>
         </div>
-        <div class="quark-popup-extra-mask" onClick={this.handleClick} />
+        <div
+          class="quark-popup-extra-mask"
+          onClick={this.handleClick}
+          part="mask"
+        />
       </Fragment>
     );
   }

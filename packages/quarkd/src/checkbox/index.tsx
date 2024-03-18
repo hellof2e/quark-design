@@ -163,7 +163,7 @@ class QuarkCheckboxGroup extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-checkbox-group-wrapper">
+      <div class="quark-checkbox-group-wrapper" part="root">
         <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );

@@ -294,7 +294,7 @@ class QuarkDropdownItem extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-dropdown-item" ref={this.root}>
+      <div class="quark-dropdown-item" ref={this.root} part="root">
         <div
           ref={this.titleRef}
           class={this.titleCSS().class}

@@ -82,7 +82,7 @@ class QuarkMarquee extends QuarkElement {
           class={`quark-marquee-title ${
             this.paused ? "quark-marquee-paused" : ""
           }`}
-          part="title"
+          part="root"
           ref={this.titleRef}
           onTransitionend={this.transitionEnd}
         >

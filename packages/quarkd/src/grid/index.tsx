@@ -146,7 +146,7 @@ class QuarkGrid extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-grid">
+      <div class="quark-grid" part="root">
         <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );

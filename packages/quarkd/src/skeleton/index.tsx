@@ -54,7 +54,7 @@ class Skeleton extends QuarkElement {
     return (
       <Fragment>
         {!this.hide ? (
-          <div class="skeleton-container">
+          <div class="skeleton-container" part="root">
             {this.avatar && <div class="skeleton-avatar" part="avatar"></div>}
             <div class="skeleton-content" part="content">
               {this.title && <h3 class="skeleton-title" part="title"></h3>}

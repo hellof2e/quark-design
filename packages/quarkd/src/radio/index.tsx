@@ -163,7 +163,7 @@ class QuarkRadioGroup extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-radio-group-wrapper" part="wrapper">
+      <div class="quark-radio-group-wrapper" part="root">
         <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );

@@ -235,6 +235,7 @@ class QuarkCascadePicker extends QuarkElement {
         round
         forbidmaskclick={this.forbidmaskclick}
         onclose={this.popupClose}
+        part="root"
       >
         <div class="quark-cascade-picker" part="picker">
           <div class="quark-cascade-picker-header" part="picker-header">

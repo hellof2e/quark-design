@@ -260,7 +260,7 @@ class QuarkPullRefresh extends QuarkElement {
     };
 
     return (
-      <div class="quark-pull-refresh">
+      <div class="quark-pull-refresh" part="root">
         <div
           class="quark-pull-refresh-container"
           part="container"

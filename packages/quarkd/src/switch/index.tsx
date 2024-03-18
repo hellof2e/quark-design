@@ -63,7 +63,11 @@ class QuarkSwitch extends QuarkElement {
     };
 
     return (
-      <div style={inlineStyle} class={this.loading && "quark-switch-loading"}>
+      <div
+        style={inlineStyle}
+        class={this.loading && "quark-switch-loading"}
+        part="root"
+      >
         <input
           type="checkbox"
           id="quark-switch"

@@ -46,6 +46,7 @@ class QuarkTag extends QuarkElement {
       <span
         class="quark-tag"
         style={{ background: this.color, color: this.textcolor }}
+        part="root"
       >
         <slot></slot>
       </span>

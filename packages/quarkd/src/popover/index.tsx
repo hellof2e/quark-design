@@ -196,7 +196,7 @@ class QuarkPopover extends QuarkElement {
     }
 
     return (
-      <div class="quark-popover-tips" ref={this.tipsRef}>
+      <div class="quark-popover-tips" ref={this.tipsRef} part="actions">
         <div class="quark-popover-triangle" part="triangle" />
         <div class="quark-popover-content" part="content">
           <slot name="content">
@@ -227,7 +227,7 @@ class QuarkPopover extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-popover">
+      <div class="quark-popover" part="root">
         <slot></slot>
         {this.renderActions()}
       </div>

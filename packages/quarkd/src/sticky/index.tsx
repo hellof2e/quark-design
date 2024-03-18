@@ -70,7 +70,7 @@ class QuarkSticky extends QuarkElement {
 
   render() {
     return (
-      <div id="container" ref={this.containerRef}>
+      <div id="container" ref={this.containerRef} part="root">
         <div ref={this.stickyRef} part="sticky-ref">
           <slot></slot>
         </div>

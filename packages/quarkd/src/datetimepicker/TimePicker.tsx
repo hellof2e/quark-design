@@ -176,6 +176,7 @@ class QuarkTimePicker extends QuarkElement {
         onclose={this.onClose}
         onchange={this.onChange}
         onconfirm={this.confirm}
+        part="root"
       >
         {this.showtoolbar && (
           <div slot="header" class="quark-date-picker-header" part="header">

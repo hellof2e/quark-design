@@ -245,8 +245,8 @@ class QuarkSwipeCell extends QuarkElement {
       <div
         ref={this.root}
         class="quark-swipe-cell"
-        part="cell"
         onClick={this.getClickHandler("cell", this.lockClick)}
+        part="root"
       >
         <div
           class="quark-swipe-cell__wrapper"

@@ -45,7 +45,7 @@ class Collapse extends QuarkElement {
 
   render() {
     return (
-      <details ref={this.detailsEl}>
+      <details ref={this.detailsEl} part="root">
         <summary part="summary">
           <slot name="title">{this.title}</slot>
           <slot name="icon">

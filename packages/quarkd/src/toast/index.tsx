@@ -139,7 +139,7 @@ class QuarkToast extends QuarkElement {
 
   renderLoading = () => {
     return (
-      <quark-overlay open={this.show} zIndex={this.zIndex}>
+      <quark-overlay open={this.show} zIndex={this.zIndex} part="overlay">
         <div
           class={`quark-toast quark-toast--${this.loadingIconDirection}`}
           part="loading"
@@ -170,7 +170,7 @@ class QuarkToast extends QuarkElement {
     return (
       <div
         class="quark-toast"
-        part="toast"
+        part="root"
         ref={this.toastRef}
         style={{
           minWidth: `var(--toast-min-width, 120px)`,

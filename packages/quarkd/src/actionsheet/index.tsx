@@ -169,6 +169,7 @@ class QuarkActionSheet extends QuarkElement {
         class="quark-actionsheet"
         ref={this.wrap}
         onClick={this.handleContainerClick}
+        part="root"
       >
         {this.title && (
           <div

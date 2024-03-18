@@ -171,7 +171,7 @@ class QuarkSearch extends QuarkElement {
       this.value && this.clearable && !this.disabled && !this.readonly;
 
     return (
-      <div class={searchClass}>
+      <div class={searchClass} part="root">
         {this.showback && (
           <div class="quark-search-back" part="back" onClick={this.backEvent}>
             <quark-icon-arrow-left

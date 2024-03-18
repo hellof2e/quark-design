@@ -387,7 +387,7 @@ class QuarkSwipe extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="container" ref={this.containerRef} part="container">
+        <div class="container" ref={this.containerRef} part="root">
           <slot
             onslotchange={this.handleRightSlotChange}
             ref={this.slotWrapRef}

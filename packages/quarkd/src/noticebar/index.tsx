@@ -53,7 +53,10 @@ class QuarkNoticebar extends QuarkElement {
 
   render() {
     return (
-      <div style={{ backgroundColor: this.bgcolor, color: this.color }}>
+      <div
+        style={{ backgroundColor: this.bgcolor, color: this.color }}
+        part="root"
+      >
         <slot name="left" class="quark-noticebar-left">
           {!this.lefthide && <quark-icon-notify part="notify-icon" size="15" />}
         </slot>

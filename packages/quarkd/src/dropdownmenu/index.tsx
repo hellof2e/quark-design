@@ -57,7 +57,7 @@ class QuarkDropdownMenu extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-dropdown-menu">
+      <div class="quark-dropdown-menu" part="root">
         <div class="quark-dropdown-menu__bar" part="menu-bar">
           <div class="quark-dropdown-menu__bar-inner" part="menu-inner">
             <div

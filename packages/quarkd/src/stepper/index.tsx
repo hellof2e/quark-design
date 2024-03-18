@@ -190,8 +190,9 @@ class QuarkStepper extends QuarkElement {
     const inputClassName = classNames("quark-stepper-input", {
       "quark-stepper-disabled": this.disabled,
     });
+
     return (
-      <div class="quark-stepper-container" id="stepper">
+      <div class="quark-stepper-container" id="stepper" part="root">
         <button
           type="button"
           part="mini"

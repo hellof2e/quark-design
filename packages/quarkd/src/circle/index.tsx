@@ -162,7 +162,7 @@ class QuarkCircle extends QuarkElement {
       transform: `rotate(${ROTATE_ANGLE_MAP[this.startposition]}deg)`,
     };
     return (
-      <div class="circle-wrapper" style={getSizeStyle}>
+      <div class="circle-wrapper" style={getSizeStyle} part="root">
         <svg style={svgStyle} part="svg">
           {this.renderGradient()}
           {this.renderLayer()}

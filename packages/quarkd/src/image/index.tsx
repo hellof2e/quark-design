@@ -108,7 +108,7 @@ class QuarkImage extends QuarkElement {
     };
 
     return (
-      <div class="quark-image">
+      <div class="quark-image" part="root">
         {this.status === "error" && (
           <div class="quark-image-loading" part="loading">
             <slot name="error">{Locale.current.image.loadError}</slot>

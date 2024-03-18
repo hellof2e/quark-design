@@ -23,7 +23,7 @@ class QuarkProgress extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="wrap">
+        <div class="wrap" part="root">
           <div
             class="progress active"
             part="progress"

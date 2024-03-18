@@ -157,7 +157,7 @@ class QuarkPickerView extends QuarkElement {
 
   render() {
     return (
-      <div part="container" class="quark-picker-container">
+      <div part="root" class="quark-picker-container">
         <div part="content" class="quark-picker-content">
           <div part="mask-top" class="quark-picker-mask-top"></div>
           <div part="mask-bottom" class="quark-picker-mask-bottom"></div>

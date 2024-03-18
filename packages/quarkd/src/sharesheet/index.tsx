@@ -186,6 +186,7 @@ class QuarkShareSheet extends QuarkElement {
         class="quark-sharesheet"
         ref={this.wrap}
         onClick={this.handleContainerClick}
+        part="root"
       >
         <div
           class="quark-sharesheet-title"
