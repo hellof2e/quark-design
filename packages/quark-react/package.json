@@ -1,6 +1,6 @@
 {
   "name": "@quarkd/quark-react",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Web components react reactify",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
@@ -24,7 +24,7 @@
     "*.js"
   ],
   "dependencies": {
-    "quarkd": "2.0.1",
+    "quarkd": "2.0.0",
     "@quarkd/reactify": "^1.0.3"
   },
   "devDependencies": {
