@@ -1,5 +1,13 @@
 # 更新日志
 
+### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
+
+### 🎉 Features
+
+- add root part for all ([e14fc55](https://github.com/hellof2e/quark-design/commit/e14fc55362f0f8cddbccde035525991932ca2ae5))
+- add root part for all ([40a01a3](https://github.com/hellof2e/quark-design/commit/40a01a3ef87a1eeddb2f8635e56b5bbac40005ae))
+- update quarkd ([82acf21](https://github.com/hellof2e/quark-design/commit/82acf214b43f2fe165aa043fdcace5666b1ab674))
+
 ## [2.0.0](https://github.com/hellof2e/quark-design/compare/v1.5.17...v2.0.0) (2024-03-18)
 
 ### 🎉 Features

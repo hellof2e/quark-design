@@ -1,12 +1,20 @@
 # 更新日志
-## [2.0.0](https://github.com/hellof2e/quark-design/compare/v1.5.17...v2.0.0) (2024-03-18)
+### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
 
 
 ### 🎉 Features
 
-* support part pseudo-element ([62cd667](https://github.com/hellof2e/quark-design/commit/62cd667955178b167027285ebea3ff1d9767e9c4))
-* update quarkd ([fd8285b](https://github.com/hellof2e/quark-design/commit/fd8285be093acaffe05e8ffc0beecd74c4995697))
-* 文档补充 ([#329](https://github.com/hellof2e/quark-design/issues/329)) ([7a7940e](https://github.com/hellof2e/quark-design/commit/7a7940e007540a23d14d917b5910de6f0e2acf69))
+* add root part for all ([e14fc55](https://github.com/hellof2e/quark-design/commit/e14fc55362f0f8cddbccde035525991932ca2ae5))
+* add root part for all ([40a01a3](https://github.com/hellof2e/quark-design/commit/40a01a3ef87a1eeddb2f8635e56b5bbac40005ae))
+* update quarkd ([82acf21](https://github.com/hellof2e/quark-design/commit/82acf214b43f2fe165aa043fdcace5666b1ab674))
+
+## [2.0.0](https://github.com/hellof2e/quark-design/compare/v1.5.17...v2.0.0) (2024-03-18)
+
+### 🎉 Features
+
+- support part pseudo-element ([62cd667](https://github.com/hellof2e/quark-design/commit/62cd667955178b167027285ebea3ff1d9767e9c4))
+- update quarkd ([fd8285b](https://github.com/hellof2e/quark-design/commit/fd8285be093acaffe05e8ffc0beecd74c4995697))
+- 文档补充 ([#329](https://github.com/hellof2e/quark-design/issues/329)) ([7a7940e](https://github.com/hellof2e/quark-design/commit/7a7940e007540a23d14d917b5910de6f0e2acf69))
 
 ### [1.5.17](https://github.com/hellof2e/quark-design/compare/v1.5.16...v1.5.17) (2024-01-25)
 
