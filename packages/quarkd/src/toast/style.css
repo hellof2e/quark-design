@@ -1,6 +1,7 @@
 :host {
   display: flex;
   transition: quark-animationDurationBase;
+  position: relative;
 }
 
 :host quark-overlay {

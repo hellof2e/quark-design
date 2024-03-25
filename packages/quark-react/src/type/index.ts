@@ -4,6 +4,8 @@ export interface baseInterface
     HTMLElement
   > {
   name?: string;
+  className?: string;
+  key?: string | number;
 }
 export type componentBaseInterface = Omit<
   baseInterface,

@@ -67,7 +67,7 @@ class QuarkTabbar extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-tabbar">
+      <div class="quark-tabbar" part="root">
         <slot ref={this.slotRef} onslotchange={this.slotchange}></slot>
       </div>
     );

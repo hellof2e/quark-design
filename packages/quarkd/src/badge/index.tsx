@@ -73,8 +73,10 @@ class QuarkBadge extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-badge">
-        <div class={this.classNames}>{this.renderContent()}</div>
+      <div class="quark-badge" part="root">
+        <div class={this.classNames} part="content">
+          {this.renderContent()}
+        </div>
         <slot ref={this.slotRef} onslotchange={this.dealClass}></slot>
       </div>
     );

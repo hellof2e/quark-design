@@ -610,7 +610,9 @@ class QuarkCalendar extends QuarkElement {
   };
 
   renderFooter = () => (
-    <div class="quark-calendar-footer">{this.renderFooterButton()}</div>
+    <div class="quark-calendar-footer" part="footer">
+      {this.renderFooterButton()}
+    </div>
   );
 
   renderHeader = () => {
@@ -621,20 +623,22 @@ class QuarkCalendar extends QuarkElement {
       ...weekdays.slice(0, weekfirstday),
     ];
     return (
-      <div class="quark-calendar-header">
+      <div class="quark-calendar-header" part="header">
         {!this.hidetitle && (
-          <div class="quark-calendar-header-title">
+          <div class="quark-calendar-header-title" part="title">
             <slot name="title">{this.title}</slot>
           </div>
         )}
         {!this.hidesubtitle && (
-          <div class="quark-calendar-header-subtitle">
+          <div class="quark-calendar-header-subtitle" part="sub-title">
             <slot name="subtitle">{this.subtitle}</slot>
           </div>
         )}
-        <div class="quark-calendar-weekdays">
+        <div class="quark-calendar-weekdays" part="weekdays">
           {renderWeekDays.map((text) => (
-            <span class="quark-calendar-weekday">{text}</span>
+            <span class="quark-calendar-weekday" part="weekday">
+              {text}
+            </span>
           ))}
         </div>
       </div>
@@ -642,11 +646,12 @@ class QuarkCalendar extends QuarkElement {
   };
 
   renderCalendar = () => (
-    <div class="quark-calendar">
+    <div class="quark-calendar" part="calendar">
       {this.renderHeader()}
       <div
         ref={this.bodyRef}
         class="quark-calendar-body"
+        part="body"
         onScroll={this.onScroll}
       >
         {this.months.map(this.renderMonth)}
@@ -671,6 +676,7 @@ class QuarkCalendar extends QuarkElement {
           forbidmaskclick={this.forbidmaskclick}
           open={this.open}
           onClose={this.closePop}
+          part="root"
         >
           {this.renderCalendar()}
         </quark-popup>

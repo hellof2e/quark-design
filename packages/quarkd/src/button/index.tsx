@@ -67,7 +67,7 @@ class QuarkButton extends QuarkElement {
 
   renderIcon = () => {
     if (this.icon && this.icon.startsWith("http")) {
-      return <img class="quark-button-icon" src={this.icon}></img>;
+      return <img part="img" class="quark-button-icon" src={this.icon}></img>;
     }
     if (this.loading) {
       return (
@@ -93,7 +93,7 @@ class QuarkButton extends QuarkElement {
 
   render() {
     return (
-      <div ref={this.slotRef} class="quark-button">
+      <div ref={this.slotRef} class="quark-button" part="root">
         {this.renderIcon()}
         <slot></slot>
       </div>

@@ -99,6 +99,7 @@ export default {
 | `--popup-extra-title-color`          | 主标题颜色               | `#242729`                                     |
 | `--popup-extra-subtitle-color`       | 副标题颜色               | `#879099`                                     |
 | `--popup-extra-mask-color`           | 蒙层背景                 | `rgba(0, 0, 0, 0.7)`                          |
+| `--popup-extra-background`           | 浮层背景                 | `#ffffff`                                     |
 | `--popup-extra-z-index`              | 组件层级                 | `999`                                         |
 | `--popup-extra-max-height`           | popup 内容区域最大高度   | `90%`                                         |
 | `--popup-extra-min-height`           | popup 内容区域最小高度   | -                                             |

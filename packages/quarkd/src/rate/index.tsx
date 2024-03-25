@@ -94,11 +94,14 @@ class QuarkRate extends QuarkElement {
           src={this.imgicon}
           key={i.id}
           onClick={() => this.handleChange(i)}
+          part="icon"
         />
       );
     }
+
     return (
       <quark-icon-star-fill
+        part="icon"
         key={i.id}
         id={i.id}
         size={this.size}

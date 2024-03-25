@@ -183,7 +183,7 @@ class QuarkForm extends QuarkElement {
 
   render() {
     return (
-      <form class="quark-form" ref={this.formRef}>
+      <form class="quark-form" ref={this.formRef} part="root">
         <slot ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
       </form>
     );

@@ -110,6 +110,7 @@ export default {
 | maxlength    | Maxlength                    | `number`  | `-`     |
 | showcount    | Show count                   | `boolean` | `false` |
 | autocomplete | Autocomplete                 | `boolean` | `false` |
+| autosize     | Auto height                  | `boolean` | `false` |
 | disabled     | Whether to disable textarea  | `boolean` | `false` |
 | readonly     | Whether to be readonly       | `boolean` | `false` |
 | id           | Textarea id, used with label | `string`  |

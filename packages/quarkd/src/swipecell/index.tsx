@@ -240,16 +240,23 @@ class QuarkSwipeCell extends QuarkElement {
       transform: `translate3d(${this.offset}px, 0, 0)`,
       transitionDuration: this.dragging ? "0s" : ".6s",
     };
+
     return (
       <div
         ref={this.root}
         class="quark-swipe-cell"
         onClick={this.getClickHandler("cell", this.lockClick)}
+        part="root"
       >
-        <div class="quark-swipe-cell__wrapper" style={wrapperStyle}>
+        <div
+          class="quark-swipe-cell__wrapper"
+          part="cell-wrapper"
+          style={wrapperStyle}
+        >
           <div
             ref={this.leftRef}
             class="quark-swipe-cell__left"
+            part="cell-left"
             onClick={this.getClickHandler("left", true)}
           >
             <slot name="left" ref={this.leftSlotRef} />
@@ -258,6 +265,7 @@ class QuarkSwipeCell extends QuarkElement {
           <div
             ref={this.rightRef}
             class="quark-swipe-cell__right"
+            part="cell-right"
             onClick={this.getClickHandler("right", true)}
           >
             <slot name="right" ref={this.rightSlotRef} />

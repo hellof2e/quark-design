@@ -74,13 +74,6 @@ class QuarkToast extends QuarkElement {
     }
   }
 
-  // // 删除 toast dom
-  // transitionendChange = () => {
-  //   if (!this.show && this.dRemove) {
-  //     document.body.removeChild(this);
-  //   }
-  // };
-
   shouldComponentUpdate(
     propName: string,
     oldValue: string | boolean,
@@ -89,10 +82,8 @@ class QuarkToast extends QuarkElement {
     if (propName === "show") {
       const { current: loadingtCurrent } = this.loadingtRef;
       if (this.toastRef && this.toastRef.current) {
-        // const rect = this.textRef.current.getBoundingClientRect();
         const { current } = this.toastRef;
-        // const toastWidth = rect.width + 40;
-        // this.toastWidth = toastWidth;
+
         // 设置退出过渡动画
         if (newValue) {
           // 由关闭到打开
@@ -118,6 +109,7 @@ class QuarkToast extends QuarkElement {
     if (this.type === "success") {
       return (
         <quark-icon-whitesuccess-o
+          part="success"
           color={this.iconColor}
           size={this.iconSize}
           ref={this.iconRef}
@@ -126,6 +118,7 @@ class QuarkToast extends QuarkElement {
     } else if (this.type === "failure") {
       return (
         <quark-icon-whiteerror-o
+          part="failure"
           color={this.iconColor}
           size={this.iconSize}
           ref={this.iconRef}
@@ -134,6 +127,7 @@ class QuarkToast extends QuarkElement {
     } else if (this.type === "warning") {
       return (
         <quark-icon-whitewarning-o
+          part="warning"
           color={this.iconColor}
           size={this.iconSize}
           ref={this.iconRef}
@@ -142,22 +136,25 @@ class QuarkToast extends QuarkElement {
     }
     return null;
   };
+
   renderLoading = () => {
     return (
-      <quark-overlay open={this.show} zIndex={this.zIndex}>
+      <quark-overlay open={this.show} zIndex={this.zIndex} part="overlay">
         <div
           class={`quark-toast quark-toast--${this.loadingIconDirection}`}
+          part="loading"
           ref={this.toastRef}
           style={{ minHeight: `var(--toast-height, 120px)` }}
         >
           <quark-loading
             ref={this.loadingtRef}
+            part="loading"
             size={this.iconSize}
             color="#ffffff"
             type="circular"
             vertical
           ></quark-loading>
-          <span class="hide-content" ref={this.textRef}>
+          <span class="hide-content" part="content" ref={this.textRef}>
             {this.content}
           </span>
           <slot>{this.content}</slot>
@@ -165,18 +162,17 @@ class QuarkToast extends QuarkElement {
       </quark-overlay>
     );
   };
+
   renderOther = () => {
     if (this.zIndex) {
       this.style.zIndex = `${this.zIndex}`;
     }
-    // const visibility = this.toastWidth !== "auto" ? "visible" : "hidden";
     return (
       <div
         class="quark-toast"
+        part="root"
         ref={this.toastRef}
         style={{
-          // width: this.toastWidth,
-          // visibility,
           minWidth: `var(--toast-min-width, 120px)`,
           maxWidth: `var(--toast-max-width, 240px)`,
           padding: `var(--toast-text-padding, 16px 20px)`,
@@ -188,9 +184,6 @@ class QuarkToast extends QuarkElement {
         }}
       >
         {this.type !== "text" && this.renderIcon()}
-        {/* <span class="hide-content" ref={this.textRef}>
-          {this.content}
-        </span> */}
         <slot>{this.content}</slot>
       </div>
     );

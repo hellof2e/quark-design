@@ -53,13 +53,17 @@ class QuarkNoticebar extends QuarkElement {
 
   render() {
     return (
-      <div style={{ backgroundColor: this.bgcolor, color: this.color }}>
+      <div
+        style={{ backgroundColor: this.bgcolor, color: this.color }}
+        part="root"
+      >
         <slot name="left" class="quark-noticebar-left">
-          {!this.lefthide && <quark-icon-notify size="15" />}
+          {!this.lefthide && <quark-icon-notify part="notify-icon" size="15" />}
         </slot>
         <slot name="text">
           <span
             class="quark-noticebar-text"
+            part="text"
             style={{ WebkitLineClamp: this.multiple }}
           >
             {this.text}
@@ -72,7 +76,11 @@ class QuarkNoticebar extends QuarkElement {
           onslotchange={this.handleRightSlotChange}
         >
           {!this.righthide && (
-            <quark-icon-arrow-right size="15" onClick={this.handleRightClick} />
+            <quark-icon-arrow-right
+              part="arrow-right-icon"
+              size="15"
+              onClick={this.handleRightClick}
+            />
           )}
         </slot>
       </div>

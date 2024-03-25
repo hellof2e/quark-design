@@ -12,6 +12,7 @@ class QuarkIcon extends QuarkElement {
         class="quark-icon-svg"
         aria-hidden="true"
         viewBox="0 0 1024 1024"
+        part="root"
       ></svg>
     );
   }

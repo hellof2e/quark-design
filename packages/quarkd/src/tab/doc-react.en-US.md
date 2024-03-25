@@ -95,6 +95,26 @@ export default () => {
 };
 ```
 
+### Shrink
+
+In shrink mode, the tabs will be shrinked to the left.
+
+```html
+<Tabs shrink>
+  <TabContent label="tab1"> tab1 content </TabContent>
+  <TabContent label="tab2"> tab2 content </TabContent>
+  <TabContent label="tab3"> tab3 content </TabContent>
+  <TabContent label="tab4"> tab4 content </TabContent>
+</Tabs>
+```
+
+```css
+:root {
+  --tab-item-shrink-width: 60px;
+  --tab-item-shrink-padding: 4px;
+}
+```
+
 ### Sticky
 
 In sticky mode, the nav-item will be fixed to top when scroll to top.
@@ -119,6 +139,7 @@ In sticky mode, the nav-item will be fixed to top when scroll to top.
 | dark      | Whether to use dark mode                                                        | `boolean`                                                | `false`       |
 | offsettop | Sticky offset top , supports vm                                                 | `string`                                                 | `0vw`         |
 | linewidth | Width of tab line                                                               | `string`                                                 | `40px`        |
+| shrink    | Whether to shrink the the tabs to the left                                      | `boolean`                                                | `false`       |
 | onChange  | change callback                                                                 | `(e: {detail: { name: string，label: number }}) => void` | -             |
 
 ### TabContent props
@@ -144,3 +165,5 @@ The component provides the following[CSS variables](https://developer.mozilla.or
 | `--tab-active-line-color`     | `tab-item` active state `underline` color                                     | `#0088ff`                        |
 | `--tabs-background-color`     | tabs Background color                                                         | `#ffffff`                        |
 | `--tab-item-background-color` | `tab-item` Background color                                                   | `#ffffff`                        |
+| `--tab-item-shrink-width`     | In shrink mode `tab-item` width                                               | `auto`                           |
+| `--tab-item-shrink-padding`   | In shrink mode `tab-item` horizontal `padding`                                | `0`                              |

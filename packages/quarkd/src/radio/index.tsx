@@ -88,13 +88,14 @@ class QuarkRadio extends QuarkElement {
   render() {
     return (
       <div class="quark-radio" onClick={this.handleCheck}>
-        <span class="quark-radio-container">
+        <span class="quark-radio-container" part="container">
           <img
             class="quark-radio-icon"
+            part="icon"
             src="https://m.hellobike.com/resource/quark/images/Kr6fLjveFHjjvVXIfDwye.png"
           />
         </span>
-        <label class={this.classNames}>
+        <label class={this.classNames} part="label">
           <slot ref={this.slotRef} onslotchange={this.dealClass}></slot>
         </label>
       </div>
@@ -162,7 +163,7 @@ class QuarkRadioGroup extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-radio-group-wrapper">
+      <div class="quark-radio-group-wrapper" part="root">
         <slot onslotchange={this.handleSlotChange} ref={this.slotRef}></slot>
       </div>
     );

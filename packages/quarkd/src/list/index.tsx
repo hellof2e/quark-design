@@ -117,9 +117,14 @@ class QuarkList extends QuarkElement {
 
   renderLoading = () => {
     return (
-      <slot name="loading">
-        <div class="quark-list-text">
-          <quark-loading type="circular" color={this.textcolor} size="15">
+      <slot name="loading" part="loading">
+        <div class="quark-list-text" part="list-text">
+          <quark-loading
+            type="circular"
+            color={this.textcolor}
+            size="15"
+            part="loading"
+          >
             {this.loadingtext}
           </quark-loading>
         </div>
@@ -130,7 +135,11 @@ class QuarkList extends QuarkElement {
   renderFinishedText = () => {
     if (this.finishedtext) {
       return (
-        <div class="quark-list-text" style={`color: ${this.textcolor}`}>
+        <div
+          class="quark-list-text"
+          part="finished-text"
+          style={`color: ${this.textcolor}`}
+        >
           {this.finishedtext}
         </div>
       );
@@ -155,12 +164,12 @@ class QuarkList extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-list">
+      <div class="quark-list" part="root">
         <slot name="content"></slot>
         {this.loading && !this.finished && this.renderLoading()}
         {this.finished && this.renderFinishedText()}
         {this.error && this.renderErrorText()}
-        <div ref={this.placeholderRef}></div>
+        <div ref={this.placeholderRef} part="placeholder"></div>
       </div>
     );
   }

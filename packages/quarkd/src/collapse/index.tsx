@@ -45,16 +45,16 @@ class Collapse extends QuarkElement {
 
   render() {
     return (
-      <details ref={this.detailsEl}>
-        <summary>
+      <details ref={this.detailsEl} part="root">
+        <summary part="summary">
           <slot name="title">{this.title}</slot>
           <slot name="icon">
             <quark-icon-arrow-down class="collapse-icon" size="16" />
           </slot>
-          <div className="line"></div>
+          <div class="line" part="line"></div>
         </summary>
 
-        <div class="expander-content">
+        <div class="expander-content" part="content">
           <slot></slot>
         </div>
       </details>

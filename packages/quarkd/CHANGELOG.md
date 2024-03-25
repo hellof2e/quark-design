@@ -1,5 +1,56 @@
 # 更新日志
 
+### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
+
+### 🎉 Features
+
+- add root part for all ([e14fc55](https://github.com/hellof2e/quark-design/commit/e14fc55362f0f8cddbccde035525991932ca2ae5))
+- add root part for all ([40a01a3](https://github.com/hellof2e/quark-design/commit/40a01a3ef87a1eeddb2f8635e56b5bbac40005ae))
+- update quarkd ([82acf21](https://github.com/hellof2e/quark-design/commit/82acf214b43f2fe165aa043fdcace5666b1ab674))
+
+## [2.0.0](https://github.com/hellof2e/quark-design/compare/v1.5.17...v2.0.0) (2024-03-18)
+
+### 🎉 Features
+
+- support part pseudo-element ([62cd667](https://github.com/hellof2e/quark-design/commit/62cd667955178b167027285ebea3ff1d9767e9c4))
+- update quarkd ([fd8285b](https://github.com/hellof2e/quark-design/commit/fd8285be093acaffe05e8ffc0beecd74c4995697))
+- 文档补充 ([#329](https://github.com/hellof2e/quark-design/issues/329)) ([7a7940e](https://github.com/hellof2e/quark-design/commit/7a7940e007540a23d14d917b5910de6f0e2acf69))
+
+### [1.5.17](https://github.com/hellof2e/quark-design/compare/v1.5.16...v1.5.17) (2024-01-25)
+
+### 🎉 Features
+
+- merge tab ([efc5575](https://github.com/hellof2e/quark-design/commit/efc55757c912919790017d520a7cdce49f229177))
+- tabs 新增收缩模式 ([6a8f629](https://github.com/hellof2e/quark-design/commit/6a8f6297a73c352641781449071271eada0e2b9b))
+- 文字选中设置背景色透明 ([2cf81dc](https://github.com/hellof2e/quark-design/commit/2cf81dc84963ce4ba91c939e08099daeea7a6d56))
+
+### [1.5.15](https://github.com/hellof2e/quark-design/compare/v1.5.14...v1.5.15) (2024-01-22)
+
+### 🎉 Features
+
+- update quarkd ([50d0c78](https://github.com/hellof2e/quark-design/commit/50d0c78273930e95f447d3e32dcc94311fdfc805))
+
+### 🐞 Bug Fixes
+
+- textarea 默认 rows ([e890f2a](https://github.com/hellof2e/quark-design/commit/e890f2a3560ee207041591ee599cb17dbf12b5c6))
+
+### [1.5.14](https://github.com/hellof2e/quark-design/compare/v1.5.13...v1.5.14) (2024-01-19)
+
+### 🎉 Features
+
+- update quarkd ([9e44e81](https://github.com/hellof2e/quark-design/commit/9e44e816ba5a0e726d841ac3085a0e8f10766987))
+- 修复非 loading toast zIndex 属性不生效/popup-extra 暴露背景 ([510e9cf](https://github.com/hellof2e/quark-design/commit/510e9cf20fd9e1f1aa573c3ee728c9330a0c928e))
+
+### [1.5.13](https://github.com/hellof2e/quark-design/compare/v1.5.12...v1.5.13) (2024-01-19)
+
+### 🎉 Features
+
+- update quarkd ([03db543](https://github.com/hellof2e/quark-design/commit/03db5439e202d28e92c444074499d253d5b86404))
+
+### 🐞 Bug Fixes
+
+- swipe bug ([463a41d](https://github.com/hellof2e/quark-design/commit/463a41db96288efd0160cfc0ecbb57dc39949c94))
+
 ### [1.5.12](https://github.com/hellof2e/quark-design/compare/v1.5.8...v1.5.12) (2024-01-16)
 
 ### 🐞 Bug Fixes

@@ -56,6 +56,7 @@ class QuarkLoading extends QuarkElement {
         <svg
           style={{ fontSize, transform }}
           class="quark-loading-spinner"
+          part="svg"
           t="1680062076772"
           viewBox="0 0 1024 1024"
           version="1.1"
@@ -85,6 +86,7 @@ class QuarkLoading extends QuarkElement {
         <svg
           style={{ fontSize, transform }}
           class="quark-loading-spinner"
+          part="loading-spinner"
           width="24px"
           height="24px"
           viewBox="0 0 24 24"
@@ -117,6 +119,9 @@ class QuarkLoading extends QuarkElement {
 
     return (
       <svg
+        class="quark-loading-spinner"
+        part="loading-spinner-svg"
+        style={{ fontSize, transform }}
         t="1680072702745"
         viewBox="0 0 1024 1024"
         version="1.1"
@@ -124,8 +129,6 @@ class QuarkLoading extends QuarkElement {
         p-id="3310"
         width="200"
         height="200"
-        style={{ fontSize, transform }}
-        class="quark-loading-spinner"
       >
         <path
           d="M1023.99296 511.99648a50.559652 50.559652 0 0 1-50.239655 50.239655h-155.51893A50.559652 50.559652 0 0 1 767.99472 511.99648a50.559652 50.559652 0 0 1 50.239655-50.239655h155.51893A50.559652 50.559652 0 0 1 1023.99296 511.99648z"
@@ -211,7 +214,7 @@ class QuarkLoading extends QuarkElement {
     return (
       <Fragment>
         {this.renderLoadingSvg()}
-        <span class="quark-loading-text">
+        <span class="quark-loading-text" part="loading-text">
           <slot></slot>
         </span>
       </Fragment>

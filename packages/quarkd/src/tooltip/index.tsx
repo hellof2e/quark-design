@@ -163,7 +163,12 @@ class QuarkTooltip extends QuarkElement {
     if (!this.closeable) {
       return null;
     }
-    return <quark-icon-close style={{ opacity: 0.7, marginLeft: 9 }} />;
+    return (
+      <quark-icon-close
+        part="close-icon"
+        style={{ opacity: 0.7, marginLeft: 9 }}
+      />
+    );
   };
 
   renderTips = () => {
@@ -178,26 +183,29 @@ class QuarkTooltip extends QuarkElement {
       return (
         <div
           class="quark-tooltip-tips"
+          part="placement-tips"
           ref={this.tipsRef}
           onClick={this.handleTipsClick}
         >
-          <div class="quark-tooltip-content">
-            <div>{this.tips}</div>
+          <div class="quark-tooltip-content" part="placement-content">
+            <div part="placement-tips">{this.tips}</div>
             {this.renderCloseIcon()}
           </div>
-          <div class="quark-tooltip-triangle" />
+          <div class="quark-tooltip-triangle" part="placement-triangle" />
         </div>
       );
     }
+
     return (
       <div
         class="quark-tooltip-tips"
         ref={this.tipsRef}
         onClick={this.handleTipsClick}
+        part="root"
       >
-        <div class="quark-tooltip-triangle" />
-        <div class="quark-tooltip-content">
-          <div>{this.tips}</div>
+        <div class="quark-tooltip-triangle" part="triangle" />
+        <div class="quark-tooltip-content" part="content">
+          <div part="tips">{this.tips}</div>
           {this.renderCloseIcon()}
         </div>
       </div>

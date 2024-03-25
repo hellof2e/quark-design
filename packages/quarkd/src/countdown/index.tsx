@@ -27,6 +27,7 @@ class QuarkButton extends QuarkElement {
   setUnit = (val) => {
     return val < 10 ? `0${val}` : val;
   };
+
   start = () => {
     this.totalTime = Number(this.time);
     const interval = 1000;
@@ -56,6 +57,7 @@ class QuarkButton extends QuarkElement {
       this.timeCounter = setTimeout(countDownStart, interval);
     }
   };
+
   calculateShow = (value) => {
     if (this.format.length === 2) {
       return [this.format.toLocaleLowerCase()].find((i) => i === value);
@@ -65,6 +67,7 @@ class QuarkButton extends QuarkElement {
     const arr = format.split(dot).map((i) => i.toLocaleLowerCase());
     return arr.find((i) => i === value);
   };
+
   componentDidUpdate(propName: string, oldValue: string, newValue: string) {
     if (propName === "time" && newValue !== oldValue) {
       if (newValue && Number(newValue) > 0) {
@@ -72,6 +75,7 @@ class QuarkButton extends QuarkElement {
       }
     }
   }
+
   render() {
     const { totalTime } = this;
     const hours = parseInt(`${(totalTime / 1000 / 60 / 60) % 24}`, 10);
@@ -81,21 +85,34 @@ class QuarkButton extends QuarkElement {
     const countdownMin = this.setUnit(minutes);
     const countdownHour = this.setUnit(hours);
     const dot = this.format.slice(2, 3);
+
     return (
       <Fragment>
         {this.calculateShow("hh") && (
           <Fragment>
-            <span class="num">{countdownHour}</span>
-            <span class="dot">{dot}</span>
+            <span class="num" part="num">
+              {countdownHour}
+            </span>
+            <span class="dot" part="dot">
+              {dot}
+            </span>
           </Fragment>
         )}
         {this.calculateShow("mm") && (
           <Fragment>
-            <span class="num">{countdownMin}</span>
-            <span class="dot">{dot}</span>
+            <span class="num" part="num">
+              {countdownMin}
+            </span>
+            <span class="dot" part="dot">
+              {dot}
+            </span>
           </Fragment>
         )}
-        {this.calculateShow("ss") && <span class="num">{countdownSecond}</span>}
+        {this.calculateShow("ss") && (
+          <span class="num" part="num">
+            {countdownSecond}
+          </span>
+        )}
       </Fragment>
     );
   }

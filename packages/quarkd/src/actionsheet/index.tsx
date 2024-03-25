@@ -147,6 +147,7 @@ class QuarkActionSheet extends QuarkElement {
       return (
         <div
           class="quark-actionsheet-actions"
+          part="action"
           style={{
             color: action.color ? action.color : undefined,
             fontSize: action.fontSize ? `${action.fontSize}px` : undefined,
@@ -168,10 +169,12 @@ class QuarkActionSheet extends QuarkElement {
         class="quark-actionsheet"
         ref={this.wrap}
         onClick={this.handleContainerClick}
+        part="root"
       >
         {this.title && (
           <div
             class="quark-actionsheet-title"
+            part="title"
             style={{
               color: this.titleColor ? this.titleColor : undefined,
               fontSize: this.titleFontSize ? this.titleFontSize : undefined,
@@ -182,10 +185,11 @@ class QuarkActionSheet extends QuarkElement {
         )}
         <div class="quark-actionsheet-action">{this.renderActions()}</div>
         {this.cancelText && (
-          <div class="quark-actionsheet-cancel">
-            <div class="quark-actionsheet-cancel-gap"></div>
+          <div class="quark-actionsheet-cancel" part="cancel">
+            <div class="quark-actionsheet-cancel-gap" part="cancel-gap"></div>
             <div
               class="quark-actionsheet-cancel-text"
+              part="cancel-text"
               style={{
                 color: this.cancelTextColor ? this.cancelTextColor : undefined,
                 fontSize: this.cancelTextFontSize

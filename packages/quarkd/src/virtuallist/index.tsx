@@ -99,14 +99,17 @@ class QuarkVirtualList extends QuarkElement {
         class="quark-virtual-list"
         style={{ height: this.containerheight }}
         onScroll={this.handleListScroll}
+        part="root"
       >
         <div
           class="quark-virtual-list-phantom"
+          part="phantom"
           style={{ height: this.listData.length * this.itemheight }}
         ></div>
         <div
           ref={this.containerRef}
           class="quark-virtual-list-container"
+          part="container"
           style={{ transform: `translate3d(0, ${this.startOffset}px, 0)` }}
         >
           {this.renderList()}

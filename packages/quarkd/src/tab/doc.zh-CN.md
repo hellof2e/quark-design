@@ -109,6 +109,26 @@ methods: {
 }
 ```
 
+### 收缩布局
+
+通过 shrink 属性可以开启收缩布局，开启后，所有的标签会向左侧收缩对齐。
+
+```html
+<quark-tabs shrink>
+  <quark-tab-content label="tab1" name="a"> tab1 content </quark-tab-content>
+  <quark-tab-content label="tab2" name="b"> tab2 content </quark-tab-content>
+  <quark-tab-content label="tab3" name="c"> tab3 content </quark-tab-content>
+  <quark-tab-content label="tab4" name="d"> tab4 content </quark-tab-content>
+</quark-tabs>
+```
+
+```css
+:root {
+  --tab-item-shrink-width: 60px;
+  --tab-item-shrink-padding: 4px;
+}
+```
+
 ### 吸顶效果
 
 nav-item 在滚动时固定在屏幕上方
@@ -126,13 +146,14 @@ nav-item 在滚动时固定在屏幕上方
 
 ### Quark-tabs props
 
-| 方法名    | 说明                                                   | 类型       | 默认值  |
-| --------- | ------------------------------------------------------ | ---------- | ------- |
-| activekey | 当前激活的 tab，对应到 `quark-tab-content` 中的 `name` | `string`   | 无      |
-| sticky    | 是否吸顶                                               | `boolean ` | `false` |
-| dark      | 深色模式                                               | `boolean ` | `false` |
-| offsettop | 吸顶时与顶部的距离(单位: vw)                           | `string `  | `0vw`   |
-| linewidth | 下划线宽                                               | `string `  | `40px`  |
+| 方法名    | 说明                                                   | 类型      | 默认值  |
+| --------- | ------------------------------------------------------ | --------- | ------- |
+| activekey | 当前激活的 tab，对应到 `quark-tab-content` 中的 `name` | `string`  | 无      |
+| sticky    | 是否吸顶                                               | `boolean` | `false` |
+| dark      | 深色模式                                               | `boolean` | `false` |
+| offsettop | 吸顶时与顶部的距离(单位: vw)                           | `string`  | `0vw`   |
+| linewidth | 下划线宽                                               | `string`  | `40px`  |
+| shrink    | 是否开启左侧收缩布局                                   | `boolean` | `false` |
 
 ### Quark-tab-content props
 
@@ -163,3 +184,5 @@ nav-item 在滚动时固定在屏幕上方
 | `--tab-active-line-color`     | `tab-item` 激活态`下划线`颜色             | `#0088ff `                |
 | `--tabs-background-color`     | tabs 背景色                               | `#ffffff`                 |
 | `--tab-item-background-color` | `tab-item` 背景色                         | `#ffffff `                |
+| `--tab-item-shrink-width`     | 收缩布局下`tab-item`宽度                  | `auto`                    |
+| `--tab-item-shrink-padding`   | 收缩布局下`tab-item`左右`padding`         | `0`                       |

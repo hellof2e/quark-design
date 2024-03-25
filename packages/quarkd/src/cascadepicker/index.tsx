@@ -207,10 +207,18 @@ class QuarkCascadePicker extends QuarkElement {
       return null;
     }
     const wheels = this.pickerData.map((column) => (
-      <div class="quark-cascade-picker-wheel">
-        <ul class="quark-cascade-picker-wheel-scroll">
+      <div class="quark-cascade-picker-wheel" part="picker-wheel">
+        <ul
+          class="quark-cascade-picker-wheel-scroll"
+          part="picker-wheel-scroll"
+        >
           {column.map((item: string) => (
-            <li class="quark-cascade-picker-wheel-item">{item}</li>
+            <li
+              class="quark-cascade-picker-wheel-item"
+              part="picker-wheel-item"
+            >
+              {item}
+            </li>
           ))}
         </ul>
       </div>
@@ -227,31 +235,47 @@ class QuarkCascadePicker extends QuarkElement {
         round
         forbidmaskclick={this.forbidmaskclick}
         onclose={this.popupClose}
+        part="root"
       >
-        <div class="quark-cascade-picker">
-          <div class="quark-cascade-picker-header">
+        <div class="quark-cascade-picker" part="picker">
+          <div class="quark-cascade-picker-header" part="picker-header">
             <slot name="header">
-              <span class="quark-cascade-picker-title">{this.title}</span>
-              <div class="quark-cascade-picker-close-btn">
+              <span class="quark-cascade-picker-title" part="picker-title">
+                {this.title}
+              </span>
+              <div
+                class="quark-cascade-picker-close-btn"
+                part="picker-close-btn"
+              >
                 <quark-icon-close size="24" onclick={this.popupClose} />
               </div>
             </slot>
           </div>
-          <div class="quark-cascade-picker-content">
-            <div class="quark-cascade-picker-mask-top"></div>
-            <div class="quark-cascade-picker-mask-bottom"></div>
-            <div class="quark-picker-current">
-              <div class="quark-picker-current-mask"></div>
+          <div class="quark-cascade-picker-content" part="picker-content">
+            <div
+              class="quark-cascade-picker-mask-top"
+              part="picker-mask-top"
+            ></div>
+            <div
+              class="quark-cascade-picker-mask-bottom"
+              part="picker-mask-bottom"
+            ></div>
+            <div class="quark-picker-current" part="picker-current">
+              <div
+                class="quark-picker-current-mask"
+                part="picker-current-mask"
+              ></div>
             </div>
             <div
               class="quark-cascade-picker-wheel-wrapper"
+              part="picker-wheel-wrapper"
               ref={this.wheelWrapper}
             >
               {this.renderWheel()}
             </div>
           </div>
           {!this.bottomhidden && (
-            <div class="quark-cascade-picker-bottom">
+            <div class="quark-cascade-picker-bottom" part="picker-bottom">
               <quark-button type="primary" size="big" onclick={this.confirm}>
                 {Locale.current.confirm}
               </quark-button>

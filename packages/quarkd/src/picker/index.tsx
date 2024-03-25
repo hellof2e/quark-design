@@ -148,12 +148,11 @@ class QuarkPicker extends QuarkElement {
     return this.wheels[i];
   };
 
-  componentDidMount = () => {};
-
   renderWheel = () => {
     if (!this.columns) {
       return null;
     }
+
     const wheels = this.columns.map((column) => {
       return (
         <div class="quark-picker-wheel">
@@ -165,17 +164,14 @@ class QuarkPicker extends QuarkElement {
         </div>
       );
     });
+
     return wheels;
   };
+
   popupClose = () => {
     this.restorePosition();
     this.$emit("close");
   };
-
-  // popupClosed = () => {
-  //   this.restorePosition();
-  //   this.$emit("closed");
-  // };
 
   render() {
     return (
@@ -186,30 +182,45 @@ class QuarkPicker extends QuarkElement {
         round
         forbidmaskclick={this.forbidmaskclick}
         onclose={this.popupClose}
-        // onclosed={this.popupClosed}
+        part="root"
       >
-        <div class="quark-picker-container">
-          <div class="quark-picker-header">
+        <div class="quark-picker-container" part="container">
+          <div class="quark-picker-header" part="header">
             <slot name="header">
-              <span class="quark-picker-title">{this.title}</span>
-              <div class="quark-picker-header-close-btn">
-                <quark-icon-close size="24" onclick={this.popupClose} />
+              <span class="quark-picker-title" part="title">
+                {this.title}
+              </span>
+              <div class="quark-picker-header-close-btn" part="close-btn">
+                <quark-icon-close
+                  part="close-btn-icon"
+                  size="24"
+                  onclick={this.popupClose}
+                />
               </div>
             </slot>
           </div>
-          <div class="quark-picker-content">
-            <div class="quark-picker-mask-top"></div>
-            <div class="quark-picker-mask-bottom"></div>
-            <div class="quark-picker-current">
-              <div class="quark-picker-current-mask"></div>
+          <div class="quark-picker-content" part="content">
+            <div class="quark-picker-mask-top" part="mask-top"></div>
+            <div class="quark-picker-mask-bottom" part="mask-bottom"></div>
+            <div class="quark-picker-current" part="current">
+              <div class="quark-picker-current-mask" part="current-mask"></div>
             </div>
-            <div class="quark-picker-wheel-wrapper" ref={this.wheelWrapper}>
+            <div
+              class="quark-picker-wheel-wrapper"
+              part="wheel"
+              ref={this.wheelWrapper}
+            >
               {this.renderWheel()}
             </div>
           </div>
           {!this.bottomhidden && (
-            <div class="quark-picker-bottom">
-              <quark-button type="primary" size="big" onclick={this.confirm}>
+            <div class="quark-picker-bottom" part="bottom">
+              <quark-button
+                part="bottom-button"
+                type="primary"
+                size="big"
+                onclick={this.confirm}
+              >
                 {this.confirmtext || Locale.current.confirm}
               </quark-button>
             </div>

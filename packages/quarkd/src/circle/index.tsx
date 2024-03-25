@@ -81,6 +81,7 @@ class QuarkCircle extends QuarkElement {
     return (
       <circle
         class="circle-wrapper-layer"
+        part="circle-wrapper-layer"
         cx={coordinates}
         cy={coordinates}
         r={r}
@@ -111,6 +112,7 @@ class QuarkCircle extends QuarkElement {
     return (
       <circle
         class="circle-wrapper-hover"
+        part="circle-wrapper-hover"
         cx={coordinates}
         cy={coordinates}
         r={r}
@@ -130,8 +132,15 @@ class QuarkCircle extends QuarkElement {
       ));
 
     return (
-      <defs>
-        <linearGradient id={this.stokeId} x1="100%" y1="0%" x2="0%" y2="0%">
+      <defs part="defs">
+        <linearGradient
+          id={this.stokeId}
+          part="linearGradient"
+          x1="100%"
+          y1="0%"
+          x2="0%"
+          y2="0%"
+        >
           {Stops}
         </linearGradient>
       </defs>
@@ -153,13 +162,13 @@ class QuarkCircle extends QuarkElement {
       transform: `rotate(${ROTATE_ANGLE_MAP[this.startposition]}deg)`,
     };
     return (
-      <div class="circle-wrapper" style={getSizeStyle}>
-        <svg style={svgStyle}>
+      <div class="circle-wrapper" style={getSizeStyle} part="root">
+        <svg style={svgStyle} part="svg">
           {this.renderGradient()}
           {this.renderLayer()}
           {this.renderHover()}
         </svg>
-        <div class="circle-wrapper-content">
+        <div class="circle-wrapper-content" part="content">
           <slot />
         </div>
       </div>

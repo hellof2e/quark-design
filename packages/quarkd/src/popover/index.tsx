@@ -146,6 +146,7 @@ class QuarkPopover extends QuarkElement {
           src={icon}
           style={{ marginRight: 10 }}
           class="quark-popover-icon"
+          part="icon"
         />
       );
     }
@@ -163,7 +164,7 @@ class QuarkPopover extends QuarkElement {
     ) {
       return (
         <div class="quark-popover-tips" ref={this.tipsRef}>
-          <div class="quark-popover-content">
+          <div class="quark-popover-content" part="action-content">
             <slot name="content">
               {this.actions.map((action: PopoverAction, index: number) => {
                 const actionClass = classNames(
@@ -173,43 +174,48 @@ class QuarkPopover extends QuarkElement {
                       action.disabled && action.disabled === true,
                   }
                 );
+
                 return (
                   <div
                     class={actionClass}
+                    part="placement-action"
                     onClick={(e) => {
                       this.handleActionClick(e, index);
                     }}
                   >
                     {this.renderIcon(action.icon)}
-                    <div>{action.text}</div>
+                    <div part="placement-action-text">{action.text}</div>
                   </div>
                 );
               })}
             </slot>
           </div>
-          <div class="quark-popover-triangle" />
+          <div class="quark-popover-triangle" part="action-triangle" />
         </div>
       );
     }
+
     return (
-      <div class="quark-popover-tips" ref={this.tipsRef}>
-        <div class="quark-popover-triangle" />
-        <div class="quark-popover-content">
+      <div class="quark-popover-tips" ref={this.tipsRef} part="actions">
+        <div class="quark-popover-triangle" part="triangle" />
+        <div class="quark-popover-content" part="content">
           <slot name="content">
             {this.actions.map((action: PopoverAction, index: number) => {
               const actionClass = classNames("quark-popover-action-container", {
                 "quark-action-container-disable":
                   action.disabled && action.disabled === true,
               });
+
               return (
                 <div
                   class={actionClass}
+                  part="action"
                   onClick={(e) => {
                     this.handleActionClick(e, index);
                   }}
                 >
                   {this.renderIcon(action.icon)}
-                  <div>{action.text}</div>
+                  <div part="action-text">{action.text}</div>
                 </div>
               );
             })}
@@ -221,7 +227,7 @@ class QuarkPopover extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-popover">
+      <div class="quark-popover" part="root">
         <slot></slot>
         {this.renderActions()}
       </div>

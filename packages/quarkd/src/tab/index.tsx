@@ -9,6 +9,7 @@ import { slotAssignedElements } from "../../utils/public";
 import "../sticky";
 import tabs from "./tabs-style.css";
 import tab from "./tab-style.css";
+
 export interface ContentProps {
   label: string;
   disabled?: boolean;
@@ -19,6 +20,8 @@ export interface Props {
   sticky?: boolean;
   offsettop?: number;
   linewidth?: number;
+  shrink?: boolean;
+  dark?: boolean;
 }
 export interface CustomEvent {
   change: (e: { detail: { label: string; name: string } }) => void;
@@ -62,6 +65,11 @@ class QuarkTabs extends QuarkElement {
   })
   dark = false;
 
+  @property({
+    type: Boolean,
+  })
+  shrink = false;
+
   @state()
   init = false;
 
@@ -92,12 +100,6 @@ class QuarkTabs extends QuarkElement {
   slotRef: any = createRef();
 
   navRef: any = createRef();
-
-  componentDidMount(): void {
-    // this.$on('change', (e) => {
-    //   console.log(e);
-    // });
-  }
 
   componentDidUpdate(
     propName: string,
@@ -340,12 +342,20 @@ class QuarkTabs extends QuarkElement {
 
   renderTabNav = () => {
     return (
-      <div class="quark-tab-nav-con">
-        <div class="quark-tab-nav" ref={this.navRef}>
+      <div class="quark-tab-nav-con" part="nav-con">
+        <div
+          class={`quark-tab-nav ${
+            this.shrink ? "quark-tab-nav__shrink" : "quark-tab-nav__flex"
+          }`}
+          part="tab-navs"
+          ref={this.navRef}
+        >
           {this.tabNavs.map((item) => (
             <quark-tab-nav
+              part="tab-nav"
               active={item.name === this.activekey}
               disabled={item.disabled}
+              shrink={this.shrink}
               dark={item.dark}
               name={item.name}
               onClick={(e: any) => this.handleClick(e, item)}
@@ -354,7 +364,7 @@ class QuarkTabs extends QuarkElement {
             </quark-tab-nav>
           ))}
         </div>
-        <i class="quark-tab-line" style={this.tabLineStyle}></i>
+        <i class="quark-tab-line" part="tab-line" style={this.tabLineStyle}></i>
       </div>
     );
   };
@@ -363,21 +373,23 @@ class QuarkTabs extends QuarkElement {
     const style = {
       transform: `translateX(${-this.leftIndex * 100}%)`,
     };
+
     return (
       <div class="quark-tabs">
         {this.sticky && (
-          <quark-sticky offsettop={this.offsettop}>
+          <quark-sticky part="sticky" offsettop={this.offsettop}>
             {this.renderTabNav()}
           </quark-sticky>
         )}
         {!this.sticky && this.renderTabNav()}
         <div
           class="quark-tab-content"
+          part="content"
           ontouchstart={this.handleTouchStart}
           ontouchmove={this.handleTouchMove}
           ontouchend={this.handleTouchEnd}
         >
-          <div class="quark-tab-content-wrap" style={style}>
+          <div class="quark-tab-content-wrap" part="content-wrap" style={style}>
             <slot ref={this.slotRef} onslotchange={this.slotchange}>
               NEED CONTENT
             </slot>
@@ -405,6 +417,11 @@ class QuarkTabNav extends QuarkElement {
   })
   dark = false;
 
+  @property({
+    type: Boolean,
+  })
+  shrink = false;
+
   @property()
   name: string | number = 0;
 
@@ -422,7 +439,7 @@ class QuarkTabNav extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-tab-nav" onClick={this.handleClick}>
+      <div class="quark-tab-nav" onClick={this.handleClick} part="root">
         <slot></slot>
       </div>
     );

@@ -66,6 +66,7 @@ class QuarkNativeUploader extends QuarkElement {
     const urls = this.tasks.map((i) => i.url);
     this.$emit("onread", { detail: urls });
   };
+
   // 设置初始化预览数据
   setPreview = (urls: string[]) => {
     const data = urls
@@ -111,13 +112,22 @@ class QuarkNativeUploader extends QuarkElement {
   render() {
     const showUpload = this.tasks.length >= Number(this.maxcount);
     const showTasks = this.tasks.slice(0, this.maxcount);
+
     return (
       <Fragment>
         {!(this.readonly || showUpload) && (
-          <div class="quark-uploader">
+          <div class="quark-uploader" part="uploader">
             <slot name="uploader">
-              <div class="quark-uploader-icon" onClick={this.onAfterRead}>
-                <quark-icon-camera-fill size="32" color={this.iconcolor} />
+              <div
+                class="quark-uploader-icon"
+                part="uploader-icon"
+                onClick={this.onAfterRead}
+              >
+                <quark-icon-camera-fill
+                  part="uploader-icon-camera"
+                  size="32"
+                  color={this.iconcolor}
+                />
               </div>
             </slot>
           </div>
@@ -125,22 +135,30 @@ class QuarkNativeUploader extends QuarkElement {
         {showTasks.map((item, index, n) => (
           <div
             class="quark-uploader-preview-item"
+            part="item"
             key={item.id}
             onClick={() => this.myImagePreview(n, index)}
           >
             {item.status === "uploading" && (
-              <div class="uploading" slot="uploading">
-                <quark-loading type="circular" color="#fff" />
-                <span class="uploading-text">{item.message}</span>
+              <div class="uploading" slot="uploading" part="uploading">
+                <quark-loading
+                  part="uploading-icon"
+                  type="circular"
+                  color="#fff"
+                />
+                <span class="uploading-text" part="uploading-text">
+                  {item.message}
+                </span>
               </div>
             )}
-            <img src={item.url || item.content} />
+            <img src={item.url || item.content} part="img" />
             {!this.hidedelete && !this.readonly && (
               <span
                 class="quark-uploader-remove"
+                part="remove"
                 onClick={(e) => this.onRemove(e, item, index)}
               >
-                <quark-icon-close />
+                <quark-icon-close part="remove-close-icon" />
               </span>
             )}
           </div>

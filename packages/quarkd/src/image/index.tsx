@@ -108,19 +108,20 @@ class QuarkImage extends QuarkElement {
     };
 
     return (
-      <div class="quark-image">
+      <div class="quark-image" part="root">
         {this.status === "error" && (
-          <div class="quark-image-loading">
+          <div class="quark-image-loading" part="loading">
             <slot name="error">{Locale.current.image.loadError}</slot>
           </div>
         )}
         {this.status === "loading" && (
-          <div class="quark-image-loading">
+          <div class="quark-image-loading" part="loading">
             <slot name="loading">{Locale.current.loading}</slot>
           </div>
         )}
         <img
           id="quark-img"
+          part="img"
           {...attrs}
           onload={this.handleLoad}
           onerror={this.handleError}

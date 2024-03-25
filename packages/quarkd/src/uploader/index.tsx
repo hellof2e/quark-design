@@ -295,29 +295,38 @@ class QuarkUploader extends QuarkElement {
     return (
       <Fragment>
         {showTasks.map((item, index, n) => (
-          <div class="quark-uploader-preview-item" key={item.id}>
+          <div class="quark-uploader-preview-item" key={item.id} part="item">
             {item.status === "uploading" && (
-              <div class="uploading" slot="uploading">
-                <quark-loading type="circular" color="#fff" />
-                <span class="uploading-text">{item.message}</span>
+              <div class="uploading" slot="uploading" part="uploading">
+                <quark-loading
+                  type="circular"
+                  color="#fff"
+                  part="uploading-icon"
+                />
+                <span class="uploading-text" part="uploading-text">
+                  {item.message}
+                </span>
               </div>
             )}
             <img
               src={item.url || item.content}
               onClick={() => this.myImagePreview(n, index)}
+              part="img"
             />
             {!this.hidedelete && !this.readonly && this.closeimg ? (
               <img
                 onClick={(e) => this.onRemove(e, item, index)}
                 src={this.closeimg}
+                part="close-img"
                 class="quark-uploader-remove"
               />
             ) : (
               <span
                 class="quark-uploader-remove"
+                part="remove"
                 onClick={(e) => this.onRemove(e, item, index)}
               >
-                <quark-icon-close />
+                <quark-icon-close part="remove-icon" />
               </span>
             )}
           </div>
@@ -325,11 +334,16 @@ class QuarkUploader extends QuarkElement {
         {!this.readonly && (
           <div
             class={uploaderClasses.join(" ")}
+            part="uploader"
             style={{ display: !hiddenUpload ? "block" : "none" }}
           >
             <slot name="uploader">
-              <div class="quark-uploader-icon">
-                <quark-icon-camera-fill size="32" color={this.iconcolor} />
+              <div class="quark-uploader-icon" part="uploader-icon-wrap">
+                <quark-icon-camera-fill
+                  part="uploader-icon"
+                  size="32"
+                  color={this.iconcolor}
+                />
               </div>
             </slot>
             <input

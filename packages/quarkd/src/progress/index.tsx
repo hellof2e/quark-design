@@ -23,14 +23,19 @@ class QuarkProgress extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="wrap">
+        <div class="wrap" part="root">
           <div
             class="progress active"
+            part="progress"
             style={{ background: this.color, width: `${this.value}%` }}
           ></div>
         </div>
         <slot name="percent">
-          {this.showtext && <span class="value">{this.value}%</span>}
+          {this.showtext && (
+            <span class="value" part="value">
+              {this.value}%
+            </span>
+          )}
         </slot>
       </Fragment>
     );

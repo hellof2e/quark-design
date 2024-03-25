@@ -25,10 +25,12 @@ export interface CustomEvent {
 @customElement({ tag: "quark-swipe-item", style: swipeItemStyle })
 class QuarkSwipeItem extends QuarkElement {
   componentDidMount() {
-    const parentNode = this.parentNode as QuarkSwipe;
-    if (parentNode && parentNode.moveWidth) {
-      this.style.width = `${parentNode.moveWidth}px`;
-    }
+    requestAnimationFrame(() => {
+      const parentNode = this.parentNode as QuarkSwipe;
+      if (parentNode && parentNode.moveWidth) {
+        this.style.width = `${parentNode.moveWidth}px`;
+      }
+    });
   }
 
   render() {
@@ -91,11 +93,13 @@ class QuarkSwipe extends QuarkElement {
   timer: any = null;
 
   componentDidMount() {
-    const { offsetWidth } = this;
-    this.currentIndex = this.defaultindex;
-    this.moveWidth = offsetWidth;
-    const offset = this.getOffset();
-    this.swipeChild(offset, false);
+    requestAnimationFrame(() => {
+      const { offsetWidth } = this;
+      this.currentIndex = this.defaultindex;
+      this.moveWidth = offsetWidth;
+      const offset = this.getOffset();
+      this.swipeChild(offset, false);
+    });
   }
 
   componentWillUnmount() {
@@ -383,14 +387,16 @@ class QuarkSwipe extends QuarkElement {
   render() {
     return (
       <Fragment>
-        <div class="container" ref={this.containerRef}>
+        <div class="container" ref={this.containerRef} part="root">
           <slot
             onslotchange={this.handleRightSlotChange}
             ref={this.slotWrapRef}
           ></slot>
         </div>
         <slot name="indicators">
-          <div class="indicators">{this.renderIndicators()}</div>
+          <div class="indicators" part="indicators">
+            {this.renderIndicators()}
+          </div>
         </slot>
       </Fragment>
     );

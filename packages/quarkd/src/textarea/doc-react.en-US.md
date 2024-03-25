@@ -89,21 +89,22 @@ export default () => {
 
 ### Props
 
-| Attribute          | Description                                  | Type     | Default |
-| ------------------ | -------------------------------------------- | -------- | ------- |
-| value              | Input value                                  | String   |
-| placeholder        | Placeholder                                  | String   |
-| rows               | Rows number                                  | number   | 2       |
-| maxlength          | Maxlength                                    | number   | -       |
-| showcount          | Show count                                   | boolean  | false   |
-| autocomplete       | Autocomplete                                 | boolean  | false   |
-| disabled           | Whether to disable textarea                  | boolean  | false   |
-| readonly           | Whether to be readonly                       | boolean  | false   |
-| id                 | Textarea id, used with label                 | string   |
-| onInput            | Emitted when input value changed             | Function |
-| onFocus            | Emitted when input is focused                | Function |
-| onBlur             | Emitted when input is blurred                | Function |
-| onCompositionStart | Emitted when input editor starts a new input | Function |
+| Attribute          | Description                                  | Type       | Default  |
+| ------------------ | -------------------------------------------- | ---------- | -------- |
+| value              | Input value                                  | `string`   |
+| placeholder        | Placeholder                                  | `string`   |
+| rows               | Rows number                                  | `number`   | `2`      |
+| maxlength          | Maxlength                                    | `number`   | -        |
+| showcount          | Show count                                   | `boolean`  | `false`  |
+| autocomplete       | Autocomplete                                 | `boolean`  | `false`  |
+| autosize           | Auto height                                  | `boolean`  | `false`  |
+| disabled           | Whether to disable textarea                  | `boolean`  | `false ` |
+| readonly           | Whether to be readonly                       | `boolean`  | `false`  |
+| id                 | Textarea id, used with label                 | `string`   |
+| onInput            | Emitted when input value changed             | `Function` |
+| onFocus            | Emitted when input is focused                | `Function` |
+| onBlur             | Emitted when input is blurred                | `Function` |
+| onCompositionStart | Emitted when input editor starts a new input | `Function` |
 
 ## CSS Variables
 

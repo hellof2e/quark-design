@@ -63,17 +63,23 @@ class QuarkSwitch extends QuarkElement {
     };
 
     return (
-      <div style={inlineStyle} class={this.loading && "quark-switch-loading"}>
+      <div
+        style={inlineStyle}
+        class={this.loading && "quark-switch-loading"}
+        part="root"
+      >
         <input
           type="checkbox"
           id="quark-switch"
           class="quark-switch"
+          part="switch"
           onClick={this.handleChange}
         />
-        <label for="quark-switch">
+        <label for="quark-switch" part="label">
           {this.loading && (
-            <div class="quark-switch-loading-wrapper">
+            <div class="quark-switch-loading-wrapper" part="switch-loading">
               <quark-loading
+                part="loading-icon"
                 size={+this.size ? (16 * +this.size) / 30 : 16}
                 color={this.checked ? this.color : this.inactivecolor}
                 type="spinner"

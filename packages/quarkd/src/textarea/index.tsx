@@ -32,7 +32,7 @@ class TextArea extends QuarkElement {
   name = "";
 
   @property()
-  rows = 2;
+  rows = 1;
 
   @property({
     type: Boolean,
@@ -70,7 +70,14 @@ class TextArea extends QuarkElement {
   value = "";
 
   textAreaRef: any = createRef();
-
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      if (!this.textAreaRef && !this.textAreaRef.current) return;
+      if (!this.autosize) return;
+      const { current } = this.textAreaRef;
+      current.style.height = `${current.scrollHeight}px`;
+    });
+  }
   evenFn = (type: string) => (e: Event) => {
     if (!this.textAreaRef && !this.textAreaRef.current) return;
     e.stopPropagation();
@@ -85,9 +92,10 @@ class TextArea extends QuarkElement {
 
   render() {
     return (
-      <div class="quark-textarea">
+      <div class="quark-textarea" part="root">
         <textarea
           class="quark-text-area"
+          part="textarea"
           ref={this.textAreaRef}
           value={this.value}
           id={this.id}
@@ -104,9 +112,9 @@ class TextArea extends QuarkElement {
           onClick={this.evenFn("click")}
         ></textarea>
         {this.showcount && (
-          <div class="quark-textarea-text-count">
+          <div class="quark-textarea-text-count" part="count">
             {this.value.length || 0}
-            {this.maxlength && <span>/{this.maxlength}</span>}
+            {this.maxlength && <span part="maxlength">/{this.maxlength}</span>}
           </div>
         )}
       </div>
