@@ -62,6 +62,9 @@ class QuarkField extends QuarkElement {
   @property()
   maxlength = "";
 
+  @property({ type: Boolean })
+  autofocus = false;
+
   @property()
   min = "";
 
@@ -160,6 +163,7 @@ class QuarkField extends QuarkElement {
               value={this.value}
               type={this.type}
               placeholder={this.placeholder}
+              autofocus={this.autofocus}
               min={this.min}
               max={this.max}
               minlength={this.minlength}
