@@ -26,4 +26,4 @@ jobs:
           clean: false
           repository-name: quark-ecosystem/quarkd-docs # 仓库名称。
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: demo # 部署到 demo 目录下
+          target-folder: h5 # 部署到 demo 目录下
