@@ -24,6 +24,6 @@ jobs:
           branch : main # action 应该部署到的分支。
           folder : dist # 操作应该部署的文件夹。
           clean: false
-          repository-name: hellof2e/quarkd-demo.github.io
+          repository-name: quark-ecosystem/quarkd-docs # 仓库名称。
           token: ${{ secrets.GIT_ACTION }}
           target-folder: demo # 部署到 demo 目录下
