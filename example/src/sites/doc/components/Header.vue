@@ -2,12 +2,12 @@
 	<header :class="{ sticky: isHomePage() }" class="header">
 		<div>
 			<a
-				href="https://github.com/hellof2e/vue-quarkd.hellobike.com"
+				href="https://github.com/hellof2e/quarkd-docs-vue"
 				target="_blank"
 				class="top-info"
 			>
 				当前环境：development，代码 PR
-				合并后，文档会自动同步至：https://github.com/hellof2e/${framework}-quarkd.hellobike.com
+				合并后，文档会自动同步至：https://github.com/hellof2e/quarkd-docs-${framework}
 			</a>
 			<div class="container">
 				<div class="left-bar" style="">Quark design 源码调试界面</div>

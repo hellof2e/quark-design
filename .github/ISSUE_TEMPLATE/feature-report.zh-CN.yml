@@ -8,7 +8,7 @@
 #         # 欢迎你的参与 Quark Design 的新功能建议。
 
 #         在发布一个 Issue 前，请确保：
-#         - 在 [常见问题](https://quarkc.hellobike.com/#/zh-CN/guide/notice)、[更新日志](https://quarkc.hellobike.com/#/zh-CN/guide/changelog) 和 [旧Issue列表](https://github.com/hellof2e/quark-design/issues) 中搜索过你的问题。（你的问题可能已有人提出，也可能已在最新版本中被修正）
+#         - 在 [常见问题](https://quark-ecosystem.github.io/quarkc-docs/#/zh-CN/guide/notice)、[更新日志](https://quark-ecosystem.github.io/quarkc-docs/#/zh-CN/guide/changelog) 和 [旧Issue列表](https://github.com/hellof2e/quark-design/issues) 中搜索过你的问题。（你的问题可能已有人提出，也可能已在最新版本中被修正）
 #         - 如果你发现一个已经关闭的旧 Issue 在最新版本中仍然存在，不要在旧 Issue 下面留言，请建一个新的 issue。
 
 #   - type: textarea

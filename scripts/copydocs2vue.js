@@ -84,7 +84,8 @@ const copy = async () => {
     docsConfig.version = fromPkgConfig.version;
     docsConfig.nav = fromConfig.nav;
     docsConfig.docs = fromConfig.docs;
-    docsConfig.demoUrl = "https://quark-design.hellobike.com/demo/demo.html#";
+    docsConfig.demoUrl =
+      "https://quark-ecosystem.github.io/quarkd-docs/h5/demo";
     fse
       .writeJson(quarkdDocsConfigPath, docsConfig, {
         spaces: 2,

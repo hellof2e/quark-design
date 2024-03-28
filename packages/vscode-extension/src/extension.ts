@@ -3,7 +3,8 @@ import { kebabCase, bigCamelize } from "./utils";
 import { componentMap } from "./componentMap";
 import { ComponentDesc } from "./componentDesc";
 
-const VUEDOC = "https://vue-quarkd.hellobike.com/#/zh-CN/component";
+const VUEDOC =
+  "https://quark-ecosystem.github.io/quarkd-docs/vue/#/zh-CN/component/button";
 
 const LINK_REG = /(?<=<quark-)([\w-]+)/g;
 const BIG_LINK_REG = /(?<=<Quark-)([\w-])+/g;

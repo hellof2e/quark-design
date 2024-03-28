@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://quarkc.hellobike.com/">
+  <a href="https://quark-ecosystem.github.io/quarkd-docs">
     <img src="https://github.com/hellof2e/quark-design/assets/14307551/45ca3969-3f92-49a1-84fa-a4e6160cb7f4" />
   </a>
 </p>
@@ -36,7 +36,7 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ## Documentation
 
-For full documentation, visit [https://quark-design.hellobike.com](https://quark-design.hellobike.com/).
+For full documentation, visit [https://quark-ecosystem.github.io/quarkd-docs](https://quark-ecosystem.github.io/quarkd-docs).
 
 ## Install
 
@@ -50,7 +50,9 @@ npm install quarkd
 import "quarkd/lib/button";
 
 // like a normal div tag `<div>xx</div>`, can be used in any browser.
-<quark-button type="primary" onclick="onClick">Button</quark-button>
+<quark-button type="primary" onclick="onClick">
+  Button
+</quark-button>;
 ```
 
 ```html
@@ -61,7 +63,7 @@ import "quarkd/lib/button";
 <quark-button type="primary" @click="onClick">Button</quark-button>
 
 // svelte
-<quark-button type="primary" on:click={onClick}>Button</quark-button>
+<quark-button type="primary" on:click="{onClick}">Button</quark-button>
 
 // angular
 <quark-button type="primary" (click)="onClick">Button</quark-button>
@@ -80,4 +82,3 @@ For help, discussion about best practices, or any other conversation that would 
 ## Contributing
 
 If you're interested in contributing to quark design, please read our [contributing docs](https://github.com/hellof2e/quark-design/blob/main/CONTRIBUTING.md) **before submitting a pull request**.
-
