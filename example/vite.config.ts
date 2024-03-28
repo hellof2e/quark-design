@@ -89,7 +89,7 @@ export default defineConfig({
 		cssCodeSplit: true,
 		rollupOptions: {
 			input: {
-				mobile: resolve(__dirname, "../demo.html"),
+				mobile: resolve(__dirname, "./index.html"),
 			},
 		},
 		minify: false,
