@@ -8,8 +8,7 @@ export interface Props {
   rowwidths?: string;
   hide?: boolean;
 }
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore ,由于原生title 为 string类型，因此有冲突，所以此处使用了ignore
+
 @customElement({
   tag: "quark-skeleton",
   style,
@@ -30,10 +29,10 @@ class Skeleton extends QuarkElement {
   @property({ type: Boolean })
   hide = false;
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, attribute: "title" })
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore ,由于原生title 为 string类型，因此有冲突，所以此处使用了ignore
-  title = false;
+  showTitle = false;
 
   getRowWidth = (index: number) => {
     let rowWidth = "100%";
@@ -57,7 +56,7 @@ class Skeleton extends QuarkElement {
           <div class="skeleton-container" part="root">
             {this.avatar && <div class="skeleton-avatar" part="avatar"></div>}
             <div class="skeleton-content" part="content">
-              {this.title && <h3 class="skeleton-title" part="title"></h3>}
+              {this.showTitle && <h3 class="skeleton-title" part="title"></h3>}
               {new Array(+this.row).fill(1).map((_, index) => {
                 const rowWidth = this.getRowWidth(index);
 
@@ -67,7 +66,8 @@ class Skeleton extends QuarkElement {
                     part="row"
                     style={{
                       width: rowWidth,
-                      marginTop: index === 0 && !this.title ? "0px" : undefined,
+                      marginTop:
+                        index === 0 && !this.showTitle ? "0px" : undefined,
                     }}
                   ></div>
                 );

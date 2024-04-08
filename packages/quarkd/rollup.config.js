@@ -128,8 +128,8 @@ const options = [
         extensions,
       }),
       filesize(),
-      terser(),
     ],
+    external: [/@babel\/runtime/, "quarkc"],
   },
 ];
 
