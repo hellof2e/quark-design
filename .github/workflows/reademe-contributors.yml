@@ -12,7 +12,7 @@ jobs:
   contrib-readme-en-job:
     runs-on: ubuntu-latest
     name: A job to automate contrib in readme
-    if: github.repository == 'hellof2e/quark-core' 
+    if: github.repository == 'hellof2e/quark-design' 
     steps:
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.4
