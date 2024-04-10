@@ -11,6 +11,7 @@ on:
 jobs:
   copy:
     runs-on: ubuntu-latest
+    if: github.repository == 'hellof2e/quark-core' 
     steps:
       - uses: actions/checkout@v2
       # 会有很多 npm 包在外层，link 使用

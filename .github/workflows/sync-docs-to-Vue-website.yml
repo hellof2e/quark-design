@@ -11,6 +11,7 @@ on:
 jobs:
   copy:
     runs-on: ubuntu-latest
+    if: github.repository == 'hellof2e/quark-core' 
     steps:
       - uses: actions/checkout@v2
       - run: yarn install
