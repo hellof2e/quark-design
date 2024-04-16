@@ -5,6 +5,7 @@ on: [ push, delete, create ]
 jobs:
   deploy-site-sync-gitee:
     runs-on: ubuntu-latest
+    if: github.repository == 'hellof2e/quark-design' 
     steps:
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
