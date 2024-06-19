@@ -144,7 +144,6 @@ class QuarkToast extends QuarkElement {
           class={`quark-toast quark-toast--${this.loadingIconDirection}`}
           part="loading"
           ref={this.toastRef}
-          style={{ minHeight: `var(--toast-height, 120px)` }}
         >
           <quark-loading
             ref={this.loadingtRef}
@@ -168,21 +167,7 @@ class QuarkToast extends QuarkElement {
       this.style.zIndex = `${this.zIndex}`;
     }
     return (
-      <div
-        class="quark-toast"
-        part="root"
-        ref={this.toastRef}
-        style={{
-          minWidth: `var(--toast-min-width, 120px)`,
-          maxWidth: `var(--toast-max-width, 240px)`,
-          padding: `var(--toast-text-padding, 16px 20px)`,
-          fontSize: `var(--toast-font-size, 14px)`,
-          minHeight:
-            this.type !== "text" && this.loadingIconDirection !== "horizontal"
-              ? `var(--toast-height, 120px)`
-              : "auto",
-        }}
-      >
+      <div class="quark-toast" part="root" ref={this.toastRef}>
         {this.type !== "text" && this.renderIcon()}
         <slot>{this.content}</slot>
       </div>

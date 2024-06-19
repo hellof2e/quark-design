@@ -11,7 +11,7 @@
 :host .quark-toast {
   opacity: 0;
   font-size: var(--toast-font-size, 14px);
-  padding: var(--toast-padding, 0);
+  padding: var(--toast-text-padding, 16px 20px);
   box-sizing: border-box;
   display: flex;
   flex-direction: var(--toast-direction, column);
@@ -22,7 +22,9 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   pointer-events: all;
-  width: var(--toast-width, 120px);
+  width: var(--toast-width, max-content);
+  min-width: var(--toast-min-width, 120px);
+  max-width: var(--toast-max-width, 240px);
   text-align: center;
   transition: opacity var(--toast-transition-fade-in, 0.3s) ease-in;
   position: fixed;
@@ -38,12 +40,9 @@
 }
 :host .quark-toast--horizontal {
   flex-direction: row;
-  padding: var(--toast-text-padding, 16px 20px);
-  width: max-content;
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
-  min-height: auto !important;
 }
 
 :host([show]) .quark-toast {
@@ -51,8 +50,6 @@
 }
 
 :host([type="text"]) .quark-toast {
-  padding: var(--toast-text-padding, 16px 20px);
-  width: max-content;
   height: auto;
   min-width: var(--toast-min-width, 120px);
   max-width: var(--toast-max-width, 240px);
@@ -83,6 +80,11 @@ quark-icon-whitewarning-o {
 :host([show][type="loading"]) .quark-toast--horizontal quark-loading {
   opacity: 1;
   display: block;
+}
+
+:host(:not([type="text"])) .quark-toast:not(.quark-toast--horizontal) {
+  height: var(--toast-height, auto);
+  min-height: var(--toast-min-height, 120px);
 }
 
 :host(:not([type="text"])) quark-icon-whitesuccess-o,
