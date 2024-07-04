@@ -11,7 +11,7 @@ on:
 jobs:
   copy:
     runs-on: ubuntu-latest
-    if: github.repository == 'hellof2e/quark-design' 
+    if: github.repository == 'hellof2e/quark-design'
     steps:
       - uses: actions/checkout@v2
       # 会有很多 npm 包在外层，link 使用
@@ -20,7 +20,7 @@ jobs:
       - run: yarn run link
       - run: yarn push2io
       - name : Sync
-        uses : JamesIves/github-pages-deploy-action@4.1.7
+        uses : JamesIves/github-pages-deploy-action@v4
         with :
           branch : main # action 应该部署到的分支。
           folder : dist # 操作应该部署的文件夹。
