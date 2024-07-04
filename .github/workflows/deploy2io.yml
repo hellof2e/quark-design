@@ -1,4 +1,4 @@
-name: sync to github.io
+name: sync h5 demo to github.io
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
       # 会有很多 npm 包在外层，link 使用
       # - run: cd example && npm i --legacy-peer-deps && npm run build
       - run: yarn
-      - run: yarn run link
+      # - run: yarn run link
       - run: yarn push2io
       - name : Sync
         uses : JamesIves/github-pages-deploy-action@v4
