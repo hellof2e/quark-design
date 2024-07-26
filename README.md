@@ -34,6 +34,15 @@ Next-gen frontend component library, it can be used in any framework or no frame
 
 ---
 
+## Features
+
+🚀 Cross framework: Any front-end framework can be used.
+
+❤️ Lightweight: Crafted with minimalistic Code design.
+
+⚡️ Fast: Native HTML/CSS/JS build. 
+
+
 ## Documentation
 
 For full documentation, visit [https://quark-ecosystem.github.io/quarkd-docs](https://quark-ecosystem.github.io/quarkd-docs).
