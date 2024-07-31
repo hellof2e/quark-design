@@ -1,12 +1,31 @@
 # 更新日志
-### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
+### [2.0.2](https://github.com/hellof2e/quark-design/compare/v2.0.1...v2.0.2) (2024-06-19)
 
 
 ### 🎉 Features
 
-* add root part for all ([e14fc55](https://github.com/hellof2e/quark-design/commit/e14fc55362f0f8cddbccde035525991932ca2ae5))
-* add root part for all ([40a01a3](https://github.com/hellof2e/quark-design/commit/40a01a3ef87a1eeddb2f8635e56b5bbac40005ae))
-* update quarkd ([82acf21](https://github.com/hellof2e/quark-design/commit/82acf214b43f2fe165aa043fdcace5666b1ab674))
+* update quarkd ([b60d6ff](https://github.com/hellof2e/quark-design/commit/b60d6ff0415cb78748c82138dc2ee76cd988e819))
+
+
+### Documentation
+
+* migration website to quark-ecosystem ([cd7dd50](https://github.com/hellof2e/quark-design/commit/cd7dd50bf9aaccf5eabeaa27744dfef6cbdb9f8c))
+* migration website to quark-ecosystem ([a1fd820](https://github.com/hellof2e/quark-design/commit/a1fd820ada7979b30d8119d7dbdb2062dc993d7b))
+* migration website to quark-ecosystem ([3e78e05](https://github.com/hellof2e/quark-design/commit/3e78e05aeb97e9f9347662a5eab133117d037291))
+* migration website to quark-ecosystem ([1ca47e1](https://github.com/hellof2e/quark-design/commit/1ca47e13cc5da469c297ce9633f7c9309ca9064c))
+
+
+### 🐞 Bug Fixes
+
+* **toast:** max-width not working ([029d1b5](https://github.com/hellof2e/quark-design/commit/029d1b549ae866b9e79d7a0e2fef4d999f0749c9))
+
+### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
+
+### 🎉 Features
+
+- add root part for all ([e14fc55](https://github.com/hellof2e/quark-design/commit/e14fc55362f0f8cddbccde035525991932ca2ae5))
+- add root part for all ([40a01a3](https://github.com/hellof2e/quark-design/commit/40a01a3ef87a1eeddb2f8635e56b5bbac40005ae))
+- update quarkd ([82acf21](https://github.com/hellof2e/quark-design/commit/82acf214b43f2fe165aa043fdcace5666b1ab674))
 
 ## [2.0.0](https://github.com/hellof2e/quark-design/compare/v1.5.17...v2.0.0) (2024-03-18)
 
