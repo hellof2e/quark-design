@@ -1,23 +1,41 @@
 # 更新日志
-### [2.0.2](https://github.com/hellof2e/quark-design/compare/v2.0.1...v2.0.2) (2024-06-19)
 
+### [2.0.4](https://github.com/hellof2e/quark-design/compare/v2.0.3...v2.0.4) (2024-07-31)
 
-### 🎉 Features
-
-* update quarkd ([b60d6ff](https://github.com/hellof2e/quark-design/commit/b60d6ff0415cb78748c82138dc2ee76cd988e819))
-
-
-### Documentation
-
-* migration website to quark-ecosystem ([cd7dd50](https://github.com/hellof2e/quark-design/commit/cd7dd50bf9aaccf5eabeaa27744dfef6cbdb9f8c))
-* migration website to quark-ecosystem ([a1fd820](https://github.com/hellof2e/quark-design/commit/a1fd820ada7979b30d8119d7dbdb2062dc993d7b))
-* migration website to quark-ecosystem ([3e78e05](https://github.com/hellof2e/quark-design/commit/3e78e05aeb97e9f9347662a5eab133117d037291))
-* migration website to quark-ecosystem ([1ca47e1](https://github.com/hellof2e/quark-design/commit/1ca47e13cc5da469c297ce9633f7c9309ca9064c))
-
+### [2.0.3](https://github.com/hellof2e/quark-design/compare/v2.0.2...v2.0.3) (2024-07-31)
 
 ### 🐞 Bug Fixes
 
-* **toast:** max-width not working ([029d1b5](https://github.com/hellof2e/quark-design/commit/029d1b549ae866b9e79d7a0e2fef4d999f0749c9))
+- h5 demo display ([b730f2b](https://github.com/hellof2e/quark-design/commit/b730f2b22c08f07ad1bbb48387a5c9f6c7fb8f84))
+- h5 yml ([25f7809](https://github.com/hellof2e/quark-design/commit/25f7809af9b19383fd46cf2ae07a09d4a00ac978))
+- h5 yml ([a5edd55](https://github.com/hellof2e/quark-design/commit/a5edd55a6fd228fad453af0a315049c7da87b370))
+- h5 yml ([1470b31](https://github.com/hellof2e/quark-design/commit/1470b311a225bce9b082eb3aed2a297e3a42a305))
+- h5 yml ([52b0271](https://github.com/hellof2e/quark-design/commit/52b0271ed11ea418aff6f46584638fa8282008c8))
+- h5 yml ([9a33849](https://github.com/hellof2e/quark-design/commit/9a33849dc2dbfe39f540903378db2bd6edc02d7e))
+- h5 yml ([afebe94](https://github.com/hellof2e/quark-design/commit/afebe94c8318bc1b4e41df2b6e3ab2bc090adde9))
+- h5 yml ([a286e18](https://github.com/hellof2e/quark-design/commit/a286e184dd6e8e6a7bbfb15de0647afc7b60684a))
+- sites mobile-vue layout ([f1bd8e3](https://github.com/hellof2e/quark-design/commit/f1bd8e3b2fc192ffa2a9b67a7b547b15fac5ec6e))
+
+### Documentation
+
+- 版本号变更和 changelog ([#342](https://github.com/hellof2e/quark-design/issues/342)) ([0e02f5b](https://github.com/hellof2e/quark-design/commit/0e02f5b280fcb59c058f7850316786c9e8a10e57))
+
+### [2.0.2](https://github.com/hellof2e/quark-design/compare/v2.0.1...v2.0.2) (2024-06-19)
+
+### 🎉 Features
+
+- update quarkd ([b60d6ff](https://github.com/hellof2e/quark-design/commit/b60d6ff0415cb78748c82138dc2ee76cd988e819))
+
+### Documentation
+
+- migration website to quark-ecosystem ([cd7dd50](https://github.com/hellof2e/quark-design/commit/cd7dd50bf9aaccf5eabeaa27744dfef6cbdb9f8c))
+- migration website to quark-ecosystem ([a1fd820](https://github.com/hellof2e/quark-design/commit/a1fd820ada7979b30d8119d7dbdb2062dc993d7b))
+- migration website to quark-ecosystem ([3e78e05](https://github.com/hellof2e/quark-design/commit/3e78e05aeb97e9f9347662a5eab133117d037291))
+- migration website to quark-ecosystem ([1ca47e1](https://github.com/hellof2e/quark-design/commit/1ca47e13cc5da469c297ce9633f7c9309ca9064c))
+
+### 🐞 Bug Fixes
+
+- **toast:** max-width not working ([029d1b5](https://github.com/hellof2e/quark-design/commit/029d1b549ae866b9e79d7a0e2fef4d999f0749c9))
 
 ### [2.0.1](https://github.com/hellof2e/quark-design/compare/v2.0.0...v2.0.1) (2024-03-19)
 

@@ -10173,6 +10173,20 @@ quarkc@^1.0.39:
   dependencies:
     "@babel/runtime" "^7.22.5"
 
+quarkd@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/quarkd/-/quarkd-2.0.1.tgz#135745dc0ad24a889340d15101c084fbc461e510"
+  integrity sha512-W65wHX3YN0YkwKgwW8Kt9Jf88neJEs8lf/KPFoGWY4aSqzUPtR/NkNRys6f7+QBoDReepblxSJfj/VG02nOzuQ==
+  dependencies:
+    "@better-scroll/core" "^2.4.2"
+    "@better-scroll/slide" "^2.4.2"
+    "@better-scroll/wheel" "^2.4.2"
+    "@quarkd/icons" "^1.0.4"
+    async-validator "^4.2.5"
+    body-scroll-lock "3.1.5"
+    lodash.assign "^4.2.0"
+    quarkc "^1.0.39"
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
