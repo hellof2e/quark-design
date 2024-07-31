@@ -34,14 +34,11 @@ const copy = async () => {
   let configPath = path.resolve(__dirname, "../example/src/config.json");
   let configPkgPath = path.resolve(__dirname, `${quarkPath}/package.json`);
   let quarkdDocsConfigPath = `${targetBaseUrl}/config.json`;
-  // let changelogPath = `${changeLogUrl}/CHANGELOG.md`;
 
   // 判断 site_docs 文件是否存在根路径中
   const existsRoot = await fse.pathExists(targetBaseUrl);
-  // const changelogExistsRoot = await fse.pathExists(changeLogUrl);
 
   if (existsRoot) await removeFile(targetBaseUrl);
-  // if (changelogExistsRoot) await removeFile(changeLogUrl);
 
   // 复制所有组件
   const fromConfig = await fse.readJson(configPath);
@@ -99,15 +96,6 @@ const copy = async () => {
         console.log(`${fromPkgConfig.version} success!`);
       });
   });
-
-  // 复制changelog
-  // await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.md`);
-  // fse.readFile(changelogPath, (err, data) => {
-  //   if (!err) {
-  //     copyFile(changelogPath, `${changeLogUrl}/changelog.md`);
-  //   }
-  // });
-  // await fse.copyFileSync(changelogPath, `${changeLogUrl}/changelog.en-US.md`);
 };
 
 copy();

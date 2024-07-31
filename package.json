@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "",
+  "repository": "https://github.com/hellof2e/quark-design",
   "author": "hello",
   "license": "MIT",
   "type": "module",

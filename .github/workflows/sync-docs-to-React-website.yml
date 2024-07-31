@@ -11,13 +11,12 @@ on:
 jobs:
   copy:
     runs-on: ubuntu-latest
-    if: github.repository == 'hellof2e/quark-design' 
     steps:
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn copydocs2react
       - name : Sync
-        uses : JamesIves/github-pages-deploy-action@4.1.7
+        uses : JamesIves/github-pages-deploy-action@v4
         with :
           branch : main # action 应该部署到的分支 。
           folder : site_docs # 操作应该部署的文件夹 。
