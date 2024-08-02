@@ -34,6 +34,6 @@ export default defineComponent({
 	}
 }
 .fixed-class {
-	top: 20px;
+	top: 100px;
 }
 </style>
