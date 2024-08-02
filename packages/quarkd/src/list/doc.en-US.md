@@ -126,10 +126,10 @@ methods: {
 
 ### PullRefresh
 
-Can be used with `pull-refresh` component.
+Can be used with `pullrefresh` component.
 
 ```tsx
-import "quarkd/lib/pull-refresh";
+import "quarkd/lib/pullrefresh";
 ```
 
 ```html

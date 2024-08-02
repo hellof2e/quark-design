@@ -128,12 +128,12 @@ export default defineComponent({
 	}
 
 	.demo {
-		height: 100vh;
+		/* height: 100vh; */
 		background: #f5f5f9;
 		overflow-x: hidden;
 		overflow-y: auto;
-		padding: 70px 18px;
-		min-height: 668px;
+		padding: 70px 18px 20px;
+		/* min-height: 668px; */
 
 		&.no-padding {
 			padding: 57px 0 70px 0;

@@ -89,9 +89,11 @@ import "quarkd/lib/dialog";
 </quark-dialog>
 ```
 
-### 自定义标题/footer
+### 自定义标题
 
-通过 `slot='title'` 、`slot='footer'` 设置自定义 title/footer。
+通过 `slot='title'` 设置自定义 title。
+
+#### 自定义标题
 
 ```html
 <div @click="open = true">Open Dialog</div>
@@ -102,18 +104,41 @@ import "quarkd/lib/dialog";
   @close="open = false"
 >
   <div slot="title">自定义标题</div>
+</quark-dialog>
+```
+
+#### 隐藏标题
+
+通过传入 `notitle` 属性隐藏 title。
+
+```html
+<quark-dialog notitle :open="open">
+  代码是写出来给人看的，附带能在机器上运行
+</quark-dialog>
+```
+
+### 自定义底部
+
+#### 自定义底部
+
+通过 `slot='footer'` 设置自定义 footer。
+
+```html
+<quark-dialog
+  :content="translate('content')"
+  :open="open"
+  @close="open = false"
+>
   <div slot="footer">自定义footer</div>
 </quark-dialog>
 ```
 
-### 隐藏 title/footer
+#### 隐藏 footer
 
-通过传入 `notitle`、 `nofooter` 属性隐藏 title/footer。
+通过传入 `nofooter` 属性隐藏 footer。
 
 ```html
-<div @click="open = true">Open Dialog</div>
-
-<quark-dialog notitle nofooter :open="open">
+<quark-dialog nofooter :open="open">
   代码是写出来给人看的，附带能在机器上运行
 </quark-dialog>
 ```
