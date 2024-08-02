@@ -82,31 +82,53 @@ Buttons can be arranged vertically by setting the property `btnvertical`.
 </quark-dialog>
 ```
 
-### custom title/footer
+### Custom Title
 
-Set custom title/footer via `slot='title'` , `slot='footer'`.
+#### Custom title
+
+Set custom title via `slot='title'` , `slot='footer'`.
 
 ```html
-<div @click="open = true">Open Dialog</div>
-
 <quark-dialog
   :content="translate('content')"
   :open="open"
   @close="open = false"
 >
   <div slot="title">custom title</div>
-  <div slot="footer">custom footer</div>
 </quark-dialog>
 ```
 
-### Hide title/footer
+#### Hide title
 
 Hide the title/footer by passing in the `notitle`, `nofooter` properties.
 
 ```html
-<div @click="open = true">Open Dialog</div>
+<quark-dialog notitle :open="open">
+  The code is written for people to see, with the addition of running on the
+  machine
+</quark-dialog>
+```
 
-<quark-dialog notitle nofooter :open="open">
+### Custom Footer
+
+Set custom title via `slot='footer'`.
+
+```html
+<quark-dialog
+  :content="translate('content')"
+  :open="open"
+  @close="open = false"
+>
+  <div slot="footer">custom footer</div>
+</quark-dialog>
+```
+
+#### Hide footer
+
+Hide the footer by passing in the `nofooter` properties.
+
+```html
+<quark-dialog nofooter nofooter :open="open">
   The code is written for people to see, with the addition of running on the
   machine
 </quark-dialog>

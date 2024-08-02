@@ -74,9 +74,7 @@
     </quark-dialog>
     <!-- 标签用法 end -->
 
-    <!-- 自定义title start -->
-    <!-- <h2>{{ translate("customTitle") }}</h2> -->
-    <h2>Title</h2>
+    <h2>{{ translate("customTitle") }}</h2>
     <quark-cell-group>
       <quark-cell
         islink
@@ -117,7 +115,7 @@
 
     <!-- 自定义 footer start -->
     <!-- <h2>{{ translate("customFooter") }}</h2> -->
-    <h2>Footer</h2>
+    <h2>{{ translate("customFooterTitle") }}</h2>
     <quark-cell-group>
       <quark-cell
         islink
@@ -192,15 +190,16 @@ export default createDemo({
           basicDialog: "基础弹窗",
           showCloseButton: "隐藏关闭按钮",
           alignLeft: "内容居左对齐",
-          customFooter: "Footer 自定义",
-          noFooter: "Footer 隐藏",
+          customFooter: "自定义底部",
+          noFooter: "隐藏底部",
           title: "这是一句话就能说清楚的确认弹窗，所以只有标题",
           content:
             "生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。",
           text: "代码是写出来给人看的，附带能在机器上运行",
           okText: "知道了",
-          customTitle: "Title 自定义",
-          noTitle: "Title 隐藏",
+          customTitle: "自定义标题",
+          noTitle: "隐藏标题",
+          customFooterTitle: "自定义底部",
         },
         "en-US": {
           basic: "Basic use",
@@ -221,6 +220,7 @@ export default createDemo({
           okText: "Got it",
           noTitle: "Title hide",
           customTitle: "Custom title",
+          customFooterTitle: "Custom Footer",
         },
       });
     });

@@ -25,10 +25,10 @@ export default defineComponent({
 	position: fixed;
 	right: 30px;
 	top: 88px;
-	min-height: 620px;
+	/* min-height: 620px; */
 	width: 360px;
 	iframe {
-		height: 590px;
+		height: 640px;
 		width: 100%;
 		border-radius: 12px;
 	}
