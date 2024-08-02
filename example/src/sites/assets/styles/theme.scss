@@ -11,7 +11,7 @@
 	--line-light: rgba(60, 60, 67, 0.12);
 	--text-font-color-light: rgba(60, 60, 67, 0.92);
 
-	--brand-color: #646cff;
+	--brand-color: #0da6e9;
 
 	--brand-color-light: #bcc0ff; // hover color
 
@@ -122,7 +122,7 @@ html.dark {
 	--line-light: rgba(60, 60, 67, 0.12);
 	--text-font-color-light: rgba(60, 60, 67, 0.92);
 	--text-code-font-color: #c9def1;
-	--brand-color: #646cff;
+	--brand-color: #0da6e9;
 	--brand-color-light: #bcc0ff; // hover color
 	--mute-light: #313136; // tag background
 	--line-light: rgba(82, 82, 89, 0.32);
@@ -152,7 +152,7 @@ html.dark {
 	.flyout-menu .menu-link {
 		color: rgba(255, 255, 255, 0.87);
 		&:hover {
-			color: #646cff;
+			color: #0da6e9;
 		}
 	}
 
