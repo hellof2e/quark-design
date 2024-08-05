@@ -38,7 +38,7 @@ yarn run release:patch
 // 发布所有子包的中间一位版本号如 0.0.1 -> 0.1.0,
 yarn run release:minor
 
-// 发布所有子包的第一位版本号如 0.0.1 -> 1.0.0,
+// 发布所有子包的左边第一位版本号如 0.0.1 -> 1.0.0,
 yarn run release:major
 ```
 
