@@ -57,7 +57,7 @@ export default () => {
 ```html
 <Rate
   value="2"
-  imgicon="https://raw.githubusercontent.com/hellof2e/static/main/quark-logo.png"
+  imgicon="https://cdn.jsdelivr.net/npm/quark-static@latest/quark-logo.png"
 ></Rate>
 ```
 

@@ -24,7 +24,7 @@
     <div class="tag-container">
       <quark-rate
         defaultvalue="2"
-        imgicon="https://raw.githubusercontent.com/hellof2e/static/main/quark-logo.png"
+        imgicon="https://cdn.jsdelivr.net/npm/quark-static@latest/quark-logo.png"
       >
       </quark-rate>
     </div>
