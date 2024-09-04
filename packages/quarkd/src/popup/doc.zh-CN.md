@@ -12,33 +12,16 @@ import "quarkd/lib/popup";
 
 ### 基本使用
 
-```html
-<quark-popup position="bottom" :open="open" @close="handleClose">
-  <div>第一xxxxxxxxxxxxxxxxx行</div>
-  <div>第二xxxxxxxxxxxxxxxxx行</div>
+```jsx
+<quark-popup
+  position="bottom"
+  :open="open"
+  @close="open = false">
+  <div>第一行</div>
+  <div>第二行</div>
 </quark-popup>
-<div @click="showPopup">触发Popup显示</div>
-```
 
-```js
-<script>
-import  'quarkd/lib/popup';
-export default {
-  data() {
-    return {
-      open: false
-    }
-  },
-  methods: {
-    showPopup() {
-      this.open = true;
-    },
-    handleClose() {
-      this.open = false;
-    }
-  }
-}
-</script>
+<div @click="open = true">触发Popup显示</div>
 ```
 
 ### 弹窗位置
@@ -71,6 +54,27 @@ export default {
 
 ```html
 <quark-popup position="bottom" :open="open" round />
+```
+
+### 内部滚动设置
+
+通过 `scrollid` 设置指定需要滚动的元素即可。
+
+```html
+<quark-popup
+  position="center"
+  :open="openScroll"
+  @close="openScroll = false"
+  scrollid="scroll-it" // 设置需要滚动元素的id
+>
+  <div class="fix-content">Fixable content</div>
+  <!-- 以下元素可实现滚动 -->
+  <div id="scroll-it" class="scroll-list">
+    <div v-for="item in 100" :key="item">
+      {{ item }}
+    </div>
+  </div>
+</quark-popup>
 ```
 
 ## API

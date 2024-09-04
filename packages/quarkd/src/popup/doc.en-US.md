@@ -1,10 +1,10 @@
 # Popup
 
-### Intro
+### Introduction
 
-Pop-up windows
+Popup layer
 
-### Install
+### Installation
 
 ```tsx
 import "quarkd/lib/popup";
@@ -12,41 +12,21 @@ import "quarkd/lib/popup";
 
 ### Basic Usage
 
-```html
-<quark-popup position="bottom" :open="open" @close="handleClose">
-  <div>First Line</div>
-  <div>Second Line</div>
-  <div>Third Line</div>
-  <div>Forth Line</div>
-  <div>Fifth Line</div>
-  <div>Six Line</div>
+```jsx
+<quark-popup
+  position="bottom"
+  :open="open"
+  @close="open = false">
+  <div>First line</div>
+  <div>Second line</div>
 </quark-popup>
-<div @click="showPopup">Show Popup</div>
+
+<div @click="open = true">Trigger Popup display</div>
 ```
 
-```js
-<script>
-export default {
-  data() {
-    return {
-      open: false
-    }
-  },
-  methods: {
-    showPopup() {
-      this.open = true;
-    },
-    handleClose() {
-      this.open = false;
-    }
-  }
-}
-</script>
-```
+### Popup Position
 
-### Position
-
-Use position prop to set popup display position.By default, the popup is centered and can be set to top, bottom, left, right.
+Set the popup position through the position attribute. The default is centered. It can be set to top, bottom, left, or right.
 
 ```html
 <quark-popup position="top" :open="open" />
@@ -74,6 +54,27 @@ After setting the round property, the popup window will add different rounded co
 
 ```html
 <quark-popup position="bottom" :open="open" round />
+```
+
+### Internal Scroll Setting
+
+You can specify the element that needs to scroll by setting the `scrollid`.
+
+```html
+<quark-popup
+  position="center"
+  :open="openScroll"
+  @close="openScroll = false"
+  scrollid="scroll-it" // Set the id of the element that needs to scroll
+>
+  <div class="fix-content">Fixable content</div>
+  <!-- The following elements can scroll -->
+  <div id="scroll-it" class="scroll-list">
+    <div v-for="item in 100" :key="item">
+      {{ item }}
+    </div>
+  </div>
+</quark-popup>
 ```
 
 ## API

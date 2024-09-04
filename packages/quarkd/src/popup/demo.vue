@@ -32,7 +32,14 @@
         @click="showCenterPopup"
         :title="translate('centerPopup')"
       ></quark-cell>
+      <quark-cell
+        islink
+        type="primary"
+        @click="openScroll = true"
+        :title="translate('scrollPopup')"
+      ></quark-cell>
     </quark-cell-group>
+
     <quark-popup
       id="popup-top"
       position="top"
@@ -87,16 +94,27 @@
       <div>{{ translate("fifthLine") }}</div>
       <div>{{ translate("sixthLine") }}</div>
     </quark-popup>
-    <quark-popup
-      id="popup-center"
-      position="center"
-      :open="openCenter"
-      @close="closeCenterPopup"
-    >
+
+    <quark-popup position="center" :open="openCenter" @close="closeCenterPopup">
       <div>{{ translate("firstLine") }}</div>
       <div>{{ translate("secondLine") }}</div>
       <div>{{ translate("thirdLine") }}</div>
     </quark-popup>
+
+    <quark-popup
+      position="center"
+      :open="openScroll"
+      @close="openScroll = false"
+      scrollid="scroll-it"
+    >
+      <div class="fix-content">Fixable content</div>
+      <div id="scroll-it" class="scroll-list">
+        <div v-for="item in 100" :key="item">
+          {{ item }}
+        </div>
+      </div>
+    </quark-popup>
+
     <h2>{{ translate("style") }}</h2>
     <quark-cell-group>
       <quark-cell
@@ -163,6 +181,8 @@ export default createDemo({
     const openRight = ref(false);
     const openRound = ref(false);
     const openCloseable = ref(false);
+    const openScroll = ref(false);
+
     onBeforeMount(() => {
       useTranslate({
         "zh-CN": {
@@ -172,6 +192,7 @@ export default createDemo({
           leftPopup: "左侧弹框",
           rightPopup: "右侧弹窗",
           centerPopup: "居中显示",
+          scrollPopup: "可滚动区域",
           firstLine: "第一行",
           secondLine: "第二行",
           thirdLine: "第三行",
@@ -191,6 +212,7 @@ export default createDemo({
           leftPopup: "Left Popup",
           rightPopup: "Right Popup",
           centerPopup: "Center Popup",
+          scrollPopup: "Scrollable Area",
           firstLine: "First Line",
           secondLine: "Second Line",
           thirdLine: "Third Line",
@@ -235,6 +257,7 @@ export default createDemo({
     const closeTopPopup = () => {
       openTop.value = false;
     };
+
     const closedTopPopup = () => {
       console.log("closedTopPopup");
     };
@@ -265,6 +288,8 @@ export default createDemo({
     return {
       openCenter,
       openTop,
+      openScroll,
+
       openBottom,
       openLeft,
       openRight,

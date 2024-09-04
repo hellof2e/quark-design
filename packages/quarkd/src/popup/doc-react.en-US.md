@@ -40,7 +40,7 @@ export default () => {
 Use position prop to set popup display position.By default, the popup is centered and can be set to top, bottom, left, right.
 
 ```html
-<Popup position="top" :open="open" />
+<Popup position="top" open="{open}" />
 ```
 
 ### Close Icon
@@ -48,7 +48,7 @@ Use position prop to set popup display position.By default, the popup is centere
 After setting the closeable property, the close icon will be displayed in the upper right corner of the popup layer.
 
 ```html
-<Popup position="bottom" :open="open" closeable />
+<Popup position="bottom" open="{open}" closeable />
 ```
 
 ### Forbid mask click
@@ -56,7 +56,7 @@ After setting the closeable property, the close icon will be displayed in the up
 forbid mask click
 
 ```html
-<Popup position="bottom" :open="open" forbidmaskclick />
+<Popup position="bottom" open="{open}" forbidmaskclick />
 ```
 
 ### Round Corner
@@ -64,7 +64,28 @@ forbid mask click
 After setting the round property, the popup window will add different rounded corner styles according to the popup position.
 
 ```html
-<Popup position="bottom" :open="open" round />
+<Popup position="bottom" open="{open}" round />
+```
+
+### 内部滚动设置
+
+You can specify the element that needs to scroll by setting the `scrollid`.
+
+```jsx
+<quark-popup
+  position="center"
+  open={open}
+  onClose={handleClose}
+  scrollid="scroll-it" // Set the id of the element that needs to scroll
+>
+  <div class="fix-content">Fixable content</div>
+  {/* The following elements can scroll */}
+  <div id="scroll-it" class="scroll-list">
+    {new Array(100).fill(1).map((item) => (
+      <div>{{ item }}</div>
+    ))}
+  </div>
+</quark-popup>
 ```
 
 ## API
