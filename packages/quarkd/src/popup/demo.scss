@@ -8,3 +8,18 @@
     margin-bottom: 24px;
   }
 }
+
+.fix-content {
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.scroll-list {
+  max-height: 60vh;
+  overflow: auto;
+  div {
+    width: 240px;
+    display: flex;
+    justify-content: center;
+  }
+}

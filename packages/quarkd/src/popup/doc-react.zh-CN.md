@@ -39,7 +39,7 @@ export default () => {
 通过 position 属性设置弹出位置，默认居中弹出，可以设置为 top、bottom、left、right。
 
 ```html
-<Popup position="top" :open="open" />
+<Popup position="top" open="{open}" />
 ```
 
 ### 关闭图标
@@ -47,7 +47,7 @@ export default () => {
 设置 closeable 属性后，会在弹出层的右上角显示关闭图标。
 
 ```html
-<Popup position="bottom" :open="open" closeable />
+<Popup position="bottom" open="{open}" closeable />
 ```
 
 ### 禁止遮罩层点击
@@ -55,7 +55,7 @@ export default () => {
 设置 forbidmaskclick 属性后，点击遮罩层将无法自动关闭弹层。
 
 ```html
-<Popup position="bottom" :open="open" forbidmaskclick />
+<Popup position="bottom" open="{open}" forbidmaskclick />
 ```
 
 ### 圆角弹窗
@@ -63,7 +63,28 @@ export default () => {
 设置 round 属性后，弹窗会根据弹出位置添加不同的圆角样式。
 
 ```html
-<Popup position="bottom" :open="open" round />
+<Popup position="bottom" open="{open}" round />
+```
+
+### 内部滚动设置
+
+通过 `scrollid` 设置指定需要滚动的元素即可。
+
+```jsx
+<quark-popup
+  position="center"
+  open={open}
+  onClose={handleClose}
+  scrollid="scroll-it" // 设置需要滚动元素的id
+>
+  <div class="fix-content">Fixable content</div>
+  {/* 以下元素可实现滚动 */}
+  <div id="scroll-it" class="scroll-list">
+    {new Array(100).fill(1).map((item) => (
+      <div>{{ item }}</div>
+    ))}
+  </div>
+</quark-popup>
 ```
 
 ## API
