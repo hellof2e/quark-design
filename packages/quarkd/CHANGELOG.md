@@ -1,5 +1,16 @@
 # 更新日志
 
+### [2.0.5](https://github.com/hellof2e/quark-design/compare/v2.0.4...v2.0.5) (2024-09-04)
+
+### 🎉 Features
+
+- add-scroll-area-for-popup ([#346](https://github.com/hellof2e/quark-design/issues/346)) ([dd4d4cc](https://github.com/hellof2e/quark-design/commit/dd4d4cc72b7e33cf0b77df574d9feb21ff9124df))
+- optimize demo css & docs for dialog ([65d2462](https://github.com/hellof2e/quark-design/commit/65d246205922273fab78722ade0d3952e2438959))
+- optimize demo window css ([bc3790e](https://github.com/hellof2e/quark-design/commit/bc3790ea8164515a6f78eb431801f4880dc9c6df))
+- theme color change ([eb2623c](https://github.com/hellof2e/quark-design/commit/eb2623c5b5c435b5676ac94b27386bea3e66dddf))
+- update quarkd ([606f483](https://github.com/hellof2e/quark-design/commit/606f4834127a336536e1f02125b0345231903051))
+- use quark-static cdn ([78c674c](https://github.com/hellof2e/quark-design/commit/78c674c7da83bffb16ade669ef91d343fa6ed930))
+
 ### [2.0.4](https://github.com/hellof2e/quark-design/compare/v2.0.3...v2.0.4) (2024-07-31)
 
 ### [2.0.3](https://github.com/hellof2e/quark-design/compare/v2.0.2...v2.0.3) (2024-07-31)
