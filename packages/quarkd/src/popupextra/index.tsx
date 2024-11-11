@@ -137,21 +137,25 @@ class QuarkPopupExtra extends QuarkElement {
         <div class="quark-popup-extra" part="popup-extra">
           <button
             class="quark-popup-extra-close-btn"
+            part="close-btn"
             onClick={this.handleCloseBtnClick}
           >
-            <quark-icon-close size="24" />
+            <quark-icon-close size="24" part="close-btn-icon" />
           </button>
           <header
             className={
               this.title || this.subtitle ? "quark-popup-extra-header" : ""
             }
+            part="header"
           >
             <slot name="title">
               <div className="quark-popup-extra-toper">
-                <div className="quark-popup-extra-title">{this.title}</div>
+                <div className="quark-popup-extra-title" part="title">
+                  {this.title}
+                </div>
               </div>
               {this.subtitle && (
-                <div className="quark-popup-extra-subtitle">
+                <div className="quark-popup-extra-subtitle" part="subtitle">
                   {this.subtitle}
                 </div>
               )}
@@ -160,6 +164,7 @@ class QuarkPopupExtra extends QuarkElement {
           <div
             className={this.contentClassNames}
             ref={this.wrap}
+            part="content"
             onScroll={this.handleContentScroll}
           >
             <slot></slot>
