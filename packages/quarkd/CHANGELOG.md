@@ -1,5 +1,16 @@
 # 更新日志
 
+### [2.0.6](https://github.com/hellof2e/quark-design/compare/v2.0.5...v2.0.6) (2025-04-29)
+
+### 🎉 Features
+
+- **popup-extra:** 新增 part 属性 ([0a3bc46](https://github.com/hellof2e/quark-design/commit/0a3bc4621f1860d5ead8ad4967900616d074b26b))
+- update quarkd ([3a81027](https://github.com/hellof2e/quark-design/commit/3a81027c202349115af6cc0cefafb607fb2050c4))
+
+### 🐞 Bug Fixes
+
+- loading part ([cc1a158](https://github.com/hellof2e/quark-design/commit/cc1a158804ab3b079ab0db501dfff72fe00d2f27))
+
 ### [2.0.5](https://github.com/hellof2e/quark-design/compare/v2.0.4...v2.0.5) (2024-09-04)
 
 ### 🎉 Features
