@@ -142,7 +142,7 @@ class QuarkToast extends QuarkElement {
       <quark-overlay open={this.show} zIndex={this.zIndex} part="overlay">
         <div
           class={`quark-toast quark-toast--${this.loadingIconDirection}`}
-          part="loading"
+          part="loading-container"
           ref={this.toastRef}
         >
           <quark-loading
