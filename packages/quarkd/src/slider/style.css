@@ -1,0 +1,132 @@
+:host {
+  /* CSS 变量定义 */
+  --quark-slider-active-background: #1989fa;
+  --quark-slider-inactive-background: #e5e5e5;
+  --quark-slider-disabled-opacity: 0.5;
+  --quark-slider-bar-height: 2px;
+  --quark-slider-button-width: 24px;
+  --quark-slider-button-height: 24px;
+  --quark-slider-button-radius: 50%;
+  --quark-slider-button-background: #fff;
+  --quark-slider-button-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --quark-slider-padding: 8px;
+
+  display: block;
+  width: 100%;
+  user-select: none;
+  touch-action: none;
+}
+
+:host([vertical]) {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+
+.quark-slider {
+  position: relative;
+  width: 100%;
+  height: var(--quark-slider-bar-height);
+  background: var(--quark-slider-inactive-background);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* 使用伪元素扩展点击区域 */
+.quark-slider::before {
+  position: absolute;
+  top: calc(var(--quark-slider-padding) * -1);
+  right: 0;
+  bottom: calc(var(--quark-slider-padding) * -1);
+  left: 0;
+  content: '';
+}
+
+.quark-slider-bar {
+  position: absolute;
+  height: 100%;
+  background: var(--quark-slider-active-background);
+  border-radius: inherit;
+  transition: all 0.2s;
+}
+
+.quark-slider-button-wrapper {
+  position: absolute;
+  cursor: grab;
+  top: 50%;
+}
+
+.quark-slider-button-wrapper:active {
+  cursor: grabbing;
+}
+
+/* 水平方向按钮定位 */
+.quark-slider-button-wrapper-right {
+  right: 0;
+  transform: translate3d(50%, -50%, 0);
+}
+
+.quark-slider-button-wrapper-left {
+  left: 0;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.quark-slider-button {
+  width: var(--quark-slider-button-width);
+  height: var(--quark-slider-button-height);
+  background: var(--quark-slider-button-background);
+  border-radius: var(--quark-slider-button-radius);
+  box-shadow: var(--quark-slider-button-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 禁用状态 */
+.quark-slider-disabled {
+  cursor: not-allowed;
+  opacity: var(--quark-slider-disabled-opacity);
+}
+
+.quark-slider-disabled .quark-slider-button-wrapper {
+  cursor: not-allowed;
+}
+
+/* 垂直模式 */
+.quark-slider-vertical {
+  display: inline-block;
+  width: var(--quark-slider-bar-height);
+  height: 100%;
+}
+
+/* 垂直模式 bar */
+.quark-slider-vertical .quark-slider-bar {
+  width: 100%;
+  height: auto;
+}
+
+/* 垂直模式伪元素扩展点击区域 */
+.quark-slider-vertical::before {
+  top: 0;
+  right: calc(var(--quark-slider-padding) * -1);
+  bottom: 0;
+  left: calc(var(--quark-slider-padding) * -1);
+}
+
+/* 垂直模式按钮定位 */
+.quark-slider-vertical .quark-slider-button-wrapper {
+  top: auto;
+  right: 50%;
+  left: auto;
+}
+
+.quark-slider-vertical .quark-slider-button-wrapper-right {
+  bottom: 0;
+  transform: translate3d(50%, 50%, 0);
+}
+
+.quark-slider-vertical .quark-slider-button-wrapper-left {
+  top: 0;
+  bottom: auto;
+  transform: translate3d(50%, -50%, 0);
+}
