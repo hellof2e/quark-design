@@ -1,5 +1,15 @@
 # 更新日志
 
+### [2.0.7](https://github.com/hellof2e/quark-design/compare/v2.0.6...v2.0.7) (2025-12-03)
+
+### 🎉 Features
+
+- **2.0.7:** update change log ([7c15dbf](https://github.com/hellof2e/quark-design/commit/7c15dbf6563a504a4881b1628e180a08aef9dd91))
+- **slider:** add slider component ([82bf5cf](https://github.com/hellof2e/quark-design/commit/82bf5cf0d37710effcfd80ef36e36c8024f5561e))
+- **slider:** add slider test ([37710d4](https://github.com/hellof2e/quark-design/commit/37710d467711e79074936d578a9ed406dacc4c95))
+- update quarkd ([90bad6d](https://github.com/hellof2e/quark-design/commit/90bad6dfe2c37e7b2796cbc255deeea8a6e09327))
+- **version:** reverse version ([f352898](https://github.com/hellof2e/quark-design/commit/f35289833a0e8d104f7b81dab5493922af4a1972))
+
 ### 2.0.7 (2025-12-03)
 
 ### Documentation
