@@ -447,7 +447,7 @@
 					"desc": "选择器",
 					"author": "MrZhaoCn"
 				},
-        {
+				{
 					"version": "0.0.1",
 					"name": "PickerView",
 					"sort": 1,
@@ -526,6 +526,16 @@
 					"show": true,
 					"desc": "上传",
 					"author": "yhy"
+				},
+				{
+					"version": "0.0.1",
+					"name": "Slider",
+					"sort": 1,
+					"cName": "滑块",
+					"type": "component",
+					"show": true,
+					"desc": "滑块",
+					"author": "dushichen"
 				}
 			]
 		},
@@ -573,7 +583,6 @@
 					"desc": "电商秒杀专用",
 					"author": "yhy"
 				}
-				
 			]
 		}
 	]

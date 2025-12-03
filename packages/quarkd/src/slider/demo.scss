@@ -1,0 +1,44 @@
+.slider-demo {
+  user-select: none;
+
+  .demo-block {
+    padding: 0 16px 20px;
+  }
+
+  h2 {
+    padding-left: 16px;
+  }
+
+  .vertical-container {
+    height: 150px;
+    padding: 0 16px 20px;
+
+    quark-slider {
+      height: 100%;
+    }
+  }
+
+  .vertical-block {
+    display: flex;
+    height: 150px;
+    padding-left: 30px;
+
+    quark-slider {
+      height: 100%;
+    }
+
+    .vertical-range {
+      margin-left: 100px;
+    }
+  }
+
+  .custom-button {
+    width: 26px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #1989fa;
+    border-radius: 100px;
+  }
+}

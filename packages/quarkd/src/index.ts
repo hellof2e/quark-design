@@ -53,6 +53,7 @@ import Swipecell from "./swipecell";
 import PickerView from "./pickerview";
 import DropdownMenu from "./dropdownmenu";
 import WaterMark from "./watermark";
+import Slider from "./slider";
 
 //  业务组件
 import PopupExtra from "./popupextra";
@@ -121,4 +122,5 @@ export default {
   PickerView,
   DropdownMenu,
   WaterMark,
+  Slider,
 };
