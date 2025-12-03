@@ -57,8 +57,8 @@ import "quarkd/lib/slider";
 ### 自定义按钮
 
 ```html
-<quark-slider value="50">
-  <div slot="button" class="custom-button">50</div>
+<quark-slider value="60">
+  <div slot="button" class="custom-button">60</div>
 </quark-slider>
 
 <style>
